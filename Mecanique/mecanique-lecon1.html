@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotation - Mécanique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="mecanique.html" class="back-btn">
+            ← Retour aux leçons de Mécanique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 1: Cotation</h1>
+            <p class="breadcrumb">Mécanique > Leçon 1</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/607D8B/FFFFFF?text=Cotation" alt="Résumé de la cotation">
+                <div class="resume-overlay">
+                    <h3>Cotation et tolérances</h3>
+                    <p>Maîtrisez les symboles de cotation, tolérances dimensionnelles et géométriques.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/607D8B/FFFFFF?text=Cotation">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le rôle de la cotation dans la communication technique et la fabrication des pièces mécaniques</li>
+                    <li><strong>Lire et interpréter</strong> les symboles de tolérances dimensionnelles et géométriques selon les normes ISO et ASME</li>
+                    <li><strong>Appliquer</strong> les principes de cotation fonctionnelle pour concevoir des spécifications adaptées aux besoins</li>
+                    <li><strong>Différencier</strong> les tolérances dimensionnelles (IT), géométriques (GT) et de surface (Ra, Rz)</li>
+                    <li><strong>Calculer</strong> les cotes tolérancées et l'ajustement entre pièces assemblées (alésage/arbre)</li>
+                    <li><strong>Choisir</strong> le type d'ajustement approprié selon l'application (libre, incertain, serré)</li>
+                    <li><strong>Utiliser</strong> les normes ISO 286 et ISO 1101 pour le tolérancement</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Lecture et interprétation de dessins techniques (projection orthogonale, vues, sections)</li>
+                    <li>Notions de base en métrologie : instruments de mesure (pied à coulisse, micromètre, comparateur)</li>
+                    <li>Connaissance des unités SI (millimètre comme unité standard en mécanique)</li>
+                    <li>Notions élémentaires de statistiques (moyenne, dispersion, courbe de Gauss)</li>
+                    <li>Symboles des états de surface normalisés (rugosité)</li>
+                    <li>Principes fondamentaux de la lecture de plans techniques</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Introduction à la cotation fonctionnelle</h4>
+                <p>La cotation constitue le langage universel de la communication technique entre le concepteur, le fabricant et le contrôleur. Une pièce mécanique n'est jamais fabricada à une dimension exacte et mathématiquement parfaite : tout processus d'usinage génère des écarts inevitables. La cotation toléranciée permet de définir les limites acceptables de ces écarts.</p>
+                <p>On distingue trois types de cotes :</p>
+                <ul>
+                    <li><strong>La cote nominale</strong> : valeur théorique idéale de la dimension</li>
+                    <li><strong>La cote tolérancée</strong> : intervalle dans lequel doit se situer la valeur réelle</li>
+                    <li><strong>Les limites de tolérance</strong> : valeurs maximales et minimales acceptables</li>
+                </ul>
+
+                <h4>2. Tolérances dimensionnelles — Système ISO</h4>
+                <p>Le système ISO repose sur la définition d'un intervalle de tolérance (IT) exprimé en micromètres. La norme ISO 286 établit 20 qualités IT (IT01, IT0, IT1 à IT18), où les indices les plus bas correspondent aux tolérances les plus serrées.</p>
+                <p>Les symboles d'ajustement se notent sous la forme : <strong>cote nominale / qualité et position de tolérance</strong>. Exemple : Ø40H7/g6.</p>
+                <table class="plan-table">
+                    <tr><th>Symbole</th><th>Type d'ajustement</th><th>Application typique</th></tr>
+                    <tr><td>H7/g6</td><td>Avec jeu</td><td>Guidage en rotation libre</td></tr>
+                    <tr><td>H7/p6</td><td>Serré</td><td>Montage de roulements</td></tr>
+                    <tr><td>H7/js6</td><td>Incertain</td><td>Assemblage intermédiaire</td></tr>
+                </table>
+
+                <h4>3. Tolérances géométriques (tolérancement GPS)</h4>
+                <p>Au-delà des écarts dimensionnels, les défauts de forme, d'orientation, de position et de battement doivent également être spécifiés selon la norme ISO 1101.</p>
+
+                <h4>4. États de surface et rugosité</h4>
+                <p>La rugosité est quantifiée par des paramètres normalisés selon ISO 4287 : Ra (écart arithmétique moyen) et Rz (hauteur maximale du profil). Le symbole normalisé comprend la valeur Ra, le symbole de fabrication et les procédés admissibles.</p>
+
+                <h4>5. Cotation des assemblages et ajustements</h4>
+                <p>On classe les ajustements en trois catégories : avec jeu (alésage toujours supérieur à l'arbre), incertain (le jeu peut être positif ou négatif), avec serrage (arbre toujours supérieur à l'alésage).</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Cote nominale</strong> : dimension théorique de référence</li>
+                    <li><strong>Intervalle de tolérance IT</strong> : plage admissible de fabrication, dépendant de la dimension et de la qualité IT</li>
+                    <li><strong>Système ISO d'ajustements</strong> : normalisation des écarts alésage/arbre selon les qualités IT</li>
+                    <li><strong>Position de tolérance H/h</strong> : définit le décalage de l'intervalle par rapport à la cote nominale</li>
+                    <li><strong>Tolérances géométriques</strong> : contrôle de la forme, l'orientation, la position et le battement</li>
+                    <li><strong>Rugosité Ra/Rz</strong> : quantification de la texture de surface</li>
+                    <li><strong>Principe de cotation fonctionnelle</strong> : chaque cote doit être justifiée par la fonction mécanique</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Lecture de plans d'ensemble</strong> : identifier les cotes fonctionnelles critiques d'un mécanisme (réducteur, moteur)</li>
+                    <li><strong>Choix d'ajustement</strong> : déterminer le type d'ajustement adapté pour le montage d'un roulement sur un arbre</li>
+                    <li><strong>Inspection en fabrication</strong> : utiliser un micromètre et un comparateur pour vérifier une cote tolérancée</li>
+                    <li><strong>Conception de jeux fonctionnels</strong> : calculer le jeu minimal nécessaire pour un guidage en rotation</li>
+                    <li><strong>Tolérancement GPS</strong> : ajouter des tolérances de position sur un perçage pour garantir l'assemblage</li>
+                    <li><strong>Analyse de rugosité</strong> : prescrire un état de surface adapté à une surface d'étanchéité</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Soit un arbre de Ø25 mm devant être monté dans un alésage. Calculez les dimensions limites pour un ajustement H7/g6. Déterminez le jeu maximal, le jeu minimal et le jeu moyen.</li>
+                    <li><strong>Exercice 2</strong> : Sur un dessin technique donné, identifiez toutes les tolérances dimensionnelles (IT), géométriques (GT) et les états de surface. Proposez des modifications si certaines spécifications sont redondantes ou manquantes.</li>
+                    <li><strong>Exercice 3</strong> : Un roulement doit être monté serré sur un arbre. Quel ajustement recommendez-vous (ISO) ? Justifiez votre choix en fonction des charges axiales et radiales.</li>
+                    <li><strong>Exercice 4</strong> : Calculez la tolérance IT correspondante à une dimension de 80 mm en qualité IT10, puis en IT7. Comparez et interpretez.</li>
+                    <li><strong>Exercice 5</strong> : Dessinez le symbole d'état de surface pour Ra = 3,2 μm usiné par fraisage. Recherchez la désignation normalisée complète selon ISO 1302.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> La cotation toléranciée est un pilier de la construction mécanique moderne. Elle permet de définir précisément les limites acceptables des dimensions, formes et états de surface des pièces, garantissant ainsi leur interchangeabilité et leur bon fonctionnement en assemblage. Le système ISO offre un cadre normalisé pour exprimer les tolérances dimensionnelles (qualités IT, positions H/h) et géométriques. La maîtrise de la lecture et de la rédaction des cotations est une compétence fondamentale pour tout technicien ou ingénieur en mécanique.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mecanique-lecon2.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Solution de constructivité →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

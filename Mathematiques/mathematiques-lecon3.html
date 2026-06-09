@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 7 : La Géométrie dans l'Espace - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <div class="lesson-header">
+            <h1>Leçon 7 : La Géométrie dans l'Espace</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 7</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Repérage dans l'espace</a></li>
+                <li><a href="#p2">Vecteurs dans l'espace</a></li>
+                <li><a href="#p3">Droites dans l'espace</a></li>
+                <li><a href="#p4">Plans dans l'espace</a></li>
+                <li><a href="#p5">Produit scalaire dans l'espace</a></li>
+                <li><a href="#p6">Volumes : sphère, cylindre, cône</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="p1">
+            <h3>📘 1. Repérage dans l'espace</h3>
+            <p>Dans l'espace, on utilise un <strong>repère orthonormal</strong> (O, i⃗, j⃗, k⃗) avec trois axes perpendiculaires :</p>
+            <div class="formula-box">
+                <div class="formula-title">Coordonnées d'un point</div>
+                M(x, y, z) &nbsp;&nbsp;|&nbsp;&nbsp; x = abscisse &nbsp;|&nbsp; y = ordonnée &nbsp;|&nbsp; z = hauteur
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📍</span><p><strong>Plan (xOy)</strong> : z = 0</p></div>
+                <div class="key-point"><span class="icon">📍</span><p><strong>Plan (xOz)</strong> : y = 0</p></div>
+                <div class="key-point"><span class="icon">📍</span><p><strong>Plan (yOz)</strong> : x = 0</p></div>
+                <div class="key-point"><span class="icon">📍</span><p><strong>Axe (Ox)</strong> : y = z = 0</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Distance entre deux points</h4>
+                <p>A(x₁, y₁, z₁) et B(x₂, y₂, z₂)</p>
+                <p>AB = √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²]</p>
+                <p>Exemple : A(1, 2, 3) et B(4, 6, 7)</p>
+                <p>AB = √[(3)² + (4)² + (4)²] = √(9+16+16) = √41</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="p2">
+            <h3>📗 2. Vecteurs dans l'espace</h3>
+            <p>Un vecteur dans l'espace a <strong>3 composantes</strong> :</p>
+            <div class="formula-box">
+                <div class="formula-title">Coordonnées d'un vecteur</div>
+                u⃗(x, y, z) &nbsp;&nbsp;|&nbsp;&nbsp; Si A(x₁,y₁,z₁) et B(x₂,y₂,z₂), alors AB⃗ = (x₂-x₁, y₂-y₁, z₂-z₁)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Opérations sur les vecteurs</h3>
+            <div class="formula-box">
+                <div class="formula-title">Addition et multiplication par un scalaire</div>
+                u⃗(x, y, z) + v⃗(x', y', z') = (x+x', y+y', z+z') <br>
+                k × u⃗(x, y, z) = (kx, ky, kz)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Colinéarité et coplanarité</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">↗️</span><p>Deux vecteurs sont <strong>colinéaires</strong> si l'un est un multiple de l'autre : u⃗ = k × v⃗</p></div>
+                <div class="key-point"><span class="icon">⊥</span><p>Trois points A, B, C sont <strong>alignés</strong> si AB⃗ et AC⃗ sont colinéaires</p></div>
+                <div class="key-point"><span class="icon">∿</span><p>Quatre points A, B, C, D sont <strong>coplanaires</strong> si les vecteurs AB⃗, AC⃗, AD⃗ sont linéairement dépendants</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>u⃗ = (2, 4, 6) et v⃗ = (1, 2, 3)</p>
+                <p>v⃗ × 2 = u⃗ → <strong>colinéaires</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="p3">
+            <h3>📙 3. Droites dans l'espace</h3>
+            <p>Une droite est définie par un <strong>point</strong> et un <strong>vecteur directeur</strong> (non nul).</p>
+            <div class="formula-box">
+                <div class="formula-title">Représentation paramétrique d'une droite</div>
+                D : { x = x₀ + at &nbsp;&nbsp;|&nbsp;&nbsp; y = y₀ + bt &nbsp;&nbsp;|&nbsp;&nbsp; z = z₀ + ct &nbsp;&nbsp; (t ∈ ℝ)
+            </div>
+            <p>où A(x₀, y₀, z₀) est un point de D et u⃗(a, b, c) est un vecteur directeur.</p>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Droite passant par A(1, 2, 3) et de vecteur u⃗(2, -1, 4)</p>
+                <p>D : x = 1 + 2t, &nbsp; y = 2 - t, &nbsp; z = 3 + 4t &nbsp;&nbsp;(t ∈ ℝ)</p>
+                <p>Pour t = 0 → A(1,2,3), &nbsp; pour t = 1 → (3,1,7)</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Droites parallèles ou sécantes</h4>
+                <p>Deux droites dans l'espace peuvent être :</p>
+                <p>• <strong>Sécantes</strong> : un point d'intersection</p>
+                <p>• <strong>Parallèles</strong> : même direction (vecteurs directeurs colinéaires)</p>
+                <p>• <strong>Non coplanaires</strong> : ni parallèles ni sécantes — ce sont des <em>droites gauches</em></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="p4">
+            <h3>📕 4. Plans dans l'espace</h3>
+            <p>Un plan est défini par :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📐</span><p><strong>3 points non alignés</strong></p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Un point et deux vecteurs non colinéaires</strong> (base du plan)</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Un point et un vecteur normal</strong> (perpendiculaire au plan)</p></div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Équation cartésienne d'un plan</h3>
+            <div class="formula-box">
+                <div class="formula-title">Équation cartésienne</div>
+                ax + by + cz + d = 0 &nbsp;&nbsp;|&nbsp;&nbsp; n⃗(a, b, c) est un vecteur normal au plan
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Plan passant par A(1, 2, 3) et de vecteur normal n⃗(1, -2, 5)</p>
+                <p>1(x-1) - 2(y-2) + 5(z-3) = 0</p>
+                <p>x - 2y + 5z - 1 - 4 + 15 = 0 → <strong>x - 2y + 5z + 10 = 0</strong></p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Position relative droite-plan</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">∅</span><p>Droite <strong>parallèle</strong> au plan : pas d'intersection ou droite incluse dans le plan</p></div>
+                <div class="key-point"><span class="icon">·</span><p>Droite <strong>sécante</strong> au plan : un unique point d'intersection</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="p5">
+            <h3>📒 5. Produit scalaire dans l'espace</h3>
+            <p>Le <strong>produit scalaire</strong> de deux vecteurs u⃗(x, y, z) et v⃗(x', y', z') est :</p>
+            <div class="formula-box">
+                <div class="formula-title">Produit scalaire</div>
+                u⃗ · v⃗ = xx' + yy' + zz' = |u⃗| × |v⃗| × cos(u⃗, v⃗)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Applications du produit scalaire</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📐</span><p><strong>Vecteurs orthogonaux</strong> : u⃗ · v⃗ = 0</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Norme d'un vecteur</strong> : |u⃗| = √(x² + y² + z²)</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Angle entre deux vecteurs</strong> : cos θ = (u⃗ · v⃗) / (|u⃗| × |v⃗|)</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Droite perpendiculaire à un plan</strong> : parallèle au vecteur normal du plan</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>u⃗(1, 2, 2) et v⃗(2, 0, -1)</p>
+                <p>u⃗ · v⃗ = 1×2 + 2×0 + 2×(-1) = 2 - 2 = <strong>0</strong></p>
+                <p>→ u⃗ et v⃗ sont <strong>orthogonaux</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="math-content" id="p6">
+            <h3>📓 6. Volumes : sphère, cylindre, cône</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">La sphère</h3>
+            <div class="formula-box">
+                <div class="formula-title">Sphère de centre O et rayon R</div>
+                Équation : x² + y² + z² = R² &nbsp;&nbsp;|&nbsp;&nbsp; Surface = 4πR² &nbsp;&nbsp;|&nbsp;&nbsp; Volume = (4/3)πR³
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Sphère de rayon 3</h4>
+                <p>Surface = 4π × 9 = <strong>36π</strong></p>
+                <p>Volume = (4/3)π × 27 = <strong>36π</strong></p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Le cylindre</h3>
+            <div class="formula-box">
+                <div class="formula-title">Cylindre de rayon r et hauteur h</div>
+                Volume = πr²h &nbsp;&nbsp;|&nbsp;&nbsp; Surface latérale = 2πrh
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Le cône</h3>
+            <div class="formula-box">
+                <div class="formula-title">Cône de rayon r et hauteur h</div>
+                Volume = (1/3)πr²h
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Mémo des formules de volume</h4>
+                <p>🔵 <strong>Sphère</strong> : V = (4/3)πR³</p>
+                <p>🟠 <strong>Cylindre</strong> : V = πr²h</p>
+                <p>🔺 <strong>Cône</strong> : V = (1/3)πr²h</p>
+                <p>🧊 <strong>Pyramide</strong> : V = (1/3) × aire_base × h</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=Géométrie+dans+l'Espace+-+Formulaire+Complet" alt="Résumé géométrie espace">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet de géométrie dans l'espace</h3>
+                    <p>Vecteurs, droites, plans, produit scalaire, volumes des solides</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Géométrie+Espace">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques-lecon4.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Les Statistiques →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

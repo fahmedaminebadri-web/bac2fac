@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit RLC forcé - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 6: Circuit RLC forcé</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 6</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/9333EA/FFFFFF?text=Circuit+RLC+force" alt="Résumé du Circuit RLC forcé">
+                <div class="resume-overlay">
+                    <h3>Circuit RLC forcé</h3>
+                    <p>Régime sinusoïdal forcé, impédance et résonance électrique.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/9333EA/FFFFFF?text=Circuit+RLC+force">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Analyser</strong> le comportement d'un circuit RLC série en régime sinusoïdal forcé</li>
+                    <li><strong>Calculer</strong> l'impédance complexe du circuit RLC et le déphasage entre tension et courant</li>
+                    <li><strong>Définir et caractériser</strong> le phénomène de résonance électrique</li>
+                    <li><strong>Tracer et interpréter</strong> les courbes de résonance (amplitude et phase)</li>
+                    <li><strong>Appliquer</strong> le concept de résonance aux circuits électriques et électroniques</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Notions sur les circuits RC, RL et LC en régime sinusoïdal</li>
+                    <li>Connaissance de l'impédance complexe Z et des représentations complexes (jω)</li>
+                    <li>Familiarité avec les calculs de phaseurs et de diagrammes de phase</li>
+                    <li>Résolution d'équations différentielles du second ordre</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Présentation du circuit RLC série forcé</h4>
+                <p>Un circuit RLC série est alimenté par une tension sinusoïdale ve(t) = V̂·cos(ω·t). En notation complexe, l'impédance du circuit est :</p>
+                <div class="plan-highlight">
+                    <strong>Z(ω) = R + j(ω·L − 1/(ω·C))</strong><br>
+                    <strong>Module :</strong> |Z| = √(R² + (ω·L − 1/(ω·C))²)<br>
+                    <strong>Phase :</strong> tan(φ) = (ω·L − 1/(ω·C))/R
+                </div>
+
+                <h4>2. Réponse en fréquence et résonance</h4>
+                <p>Le courant dans le circuit est I = Ve/|Z|. La résonance se produit lorsque <strong>ω·L = 1/(ω·C)</strong>, soit <strong>ω₀ = 1/√(L·C)</strong>. À cette fréquence :</p>
+                <ul>
+                    <li>L'impédance est <strong>minimale et égale à R</strong></li>
+                    <li>Le courant est <strong>maximal et en phase</strong> avec la tension d'entrée (φ = 0)</li>
+                </ul>
+
+                <h4>3. Résonance en amplitude</h4>
+                <p>À la résonance, le courant I₀ = Ve/R est maximal. Les tensions aux bornes de la bobine et du condensateur peuvent être bien supérieures à la tension d'entrée, bien que leur somme vectorielle soit nulle.</p>
+                <div class="plan-highlight">
+                    <strong>Facteur de surtension :</strong> Q = (ω₀·L)/R = 1/(ω₀·R·C) = (1/R)·√(L/C)<br>
+                    <strong>Tensions à la résonance :</strong> VL = VC = Q·Ve
+                </div>
+
+                <h4>4. Diagramme d'impédance et de phase</h4>
+                <p>Pour ω << ω₀, le comportement est capacitif (Z → ∞, φ → −90°). Pour ω >> ω₀, le comportement est inductif (Z → ∞, φ → +90°). À ω₀, φ = 0.</p>
+
+                <h4>5. Bande passante et facteur de qualité</h4>
+                <p>La bande passante est définie par les deux fréquences de coupure ω₁ et ω₂ telles que |Z| = √2·R, c'est-à-dire que le courant vaut I₀/√2.</p>
+                <ul>
+                    <li><strong>Largeur de bande passante :</strong> Δω = ω₂ − ω₁ = R/L</li>
+                    <li><strong>Facteur de qualité :</strong> Q = ω₀/Δω = (1/R)·√(L/C)</li>
+                </ul>
+                <p>Un Q élevé signifie une bande passante étroite (oscillations très marquées) ; un Q faible signifie une bande passante large.</p>
+
+                <h4>6. Applications de la résonance</h4>
+                <p>Accord des радио (sélection d'une station), fours à induction, circuits d'allumage, filtres sélectifs pour éliminer une fréquence précise tout en laissant passer les autres.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Impédance complexe :</strong> Z = R + j(ω·L − 1/(ω·C))</li>
+                    <li><strong>Résonance :</strong> ω₀ = 1/√(L·C), où Z = R (minimum), I maximal, φ = 0</li>
+                    <li><strong>Facteur de qualité :</strong> Q = (1/R)·√(L/C) = ω₀·L/R</li>
+                    <li><strong>Bande passante :</strong> Δω = R/L, ω₁,₂ = (R/(2L)) ± √((R/(2L))² + ω₀²)</li>
+                    <li><strong>Courant à la résonance :</strong> I₀ = Ve/R</li>
+                    <li><strong>Surtension à la résonance :</strong> VL = VC = Q·Ve</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Récepteurs радио AM/FM</strong> : accord du circuit LC pour capter la fréquence de la station souhaitée</li>
+                    <li><strong>Fours à induction industriels</strong> : résonance pour chauffage par courants de Foucault</li>
+                    <li><strong>Capteurs à ultrasons</strong> : circuits résonants pour générer et détecter les ondes mécaniques</li>
+                    <li><strong>Alimentations à résonance</strong> : transistors MOSFET fonctionnant en commutation à zéro de tension (ZVS)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un circuit RLC série avec R = 10 Ω, L = 10 mH et C = 1 µF est alimenté par ve(t) = 10·cos(ω·t). Calculer ω₀, Q, la bande passante et le courant à ω₀ si Ve = 10 V.</li>
+                    <li><strong>Exercice 2</strong> : Tracer les courbes de |Z|(ω), φ(ω), I(ω) pour le circuit de la question 1.</li>
+                    <li><strong>Exercice 3</strong> : Calculer les tensions VL et VC à la résonance pour le circuit de la question 1. Que remarque-t-on ?</li>
+                    <li><strong>Exercice 4</strong> : Un circuit RLC série a R = 50 Ω, L = 5 mH et C = 20 nF. Calculer fc, Q, la bande passante et les fréquences de coupure.</li>
+                    <li><strong>Exercice 5</strong> : Pourquoi utilise-t-on un circuit RLC série pour sélectionner une station de радио ?</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> En régime sinusoïdal forcé, le circuit RLC série présente une réponse en fréquence caractérisée par une résonance à ω₀ = 1/√(L·C). À cette fréquence, l'impédance est minimale (Z = R), le courant est maximal et en phase avec la tension d'entrée. Le facteur de qualité Q = (1/R)·√(L/C) quantifie la острына de la résonance : plus Q est grand, plus la bande passante est étroite. Les tensions aux bornes de L et C peuvent atteindre des valeurs bien supérieures à la tension d'entrée (surtension). Le circuit RLC forcé est fondamental pour comprendre les filtres sélectifs et les circuits d'accord.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon7.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Circuit RLC amorti et non amorti →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

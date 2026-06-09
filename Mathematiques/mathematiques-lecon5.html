@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 4 : Les Suites - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <div class="lesson-header">
+            <h1>Leçon 4 : Les Suites</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 4</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Définition et modes de génération</a></li>
+                <li><a href="#p2">Suite arithmétique</a></li>
+                <li><a href="#p3">Suite géométrique</a></li>
+                <li><a href="#p4">Limites de suites</a></li>
+                <li><a href="#p5">Raisonnement par récurrence</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="p1">
+            <h3>📘 1. Définition et modes de génération</h3>
+            <p>Une <strong>suite numérique</strong> est une fonction de ℕ dans ℝ :</p>
+            <div class="formula-box">
+                <div class="formula-title">Notation</div>
+                u : ℕ → ℝ &nbsp;&nbsp;|&nbsp;&nbsp; u(n) = uₙ &nbsp;&nbsp;|&nbsp;&nbsp; La suite est notée (uₙ)ₙ∈ℕ ou simplement (uₙ)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Deux façons de définir une suite</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📝</span><p><strong>Formule explicite</strong> : uₙ = f(n) — on peut calculer directement uₙ en fonction de n</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Relation de récurrence</strong> : uₙ₊₁ = f(uₙ) — on a besoin du terme précédent pour calculer le suivant</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>Explicite : uₙ = 3n + 2 → u₀ = 2, u₁ = 5, u₂ = 8, u₃ = 11…</p>
+                <p>Récurrence : u₀ = 3, uₙ₊₁ = 2uₙ + 1 → u₁ = 7, u₂ = 15, u₃ = 31…</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="p2">
+            <h3>📗 2. Suite arithmétique</h3>
+            <p>Une suite est <strong>arithmétique</strong> si on passe d'un terme au suivant en <em>ajoutant toujours le même nombre</em> (la raison r) :</p>
+            <div class="formula-box">
+                <div class="formula-title">Suite arithmétique</div>
+                uₙ₊₁ = uₙ + r &nbsp;&nbsp;|&nbsp;&nbsp; uₙ = u₀ + n×r &nbsp;&nbsp;|&nbsp;&nbsp; uₙ = uₚ + (n-p)×r
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📐</span><p><strong>Terme général</strong> : uₙ = u₀ + n·r</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Somme des premiers termes</strong> : Sₙ = n × (u₀ + uₙ) / 2 = n × (2u₀ + (n-1)r) / 2</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Monotonicité</strong> : si r > 0 → croissante, si r < 0 → décroissante, si r = 0 → constante</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Suite arithmétique avec u₀ = 5 et r = 3</p>
+                <p>uₙ = 5 + 3n &nbsp;→&nbsp; u₀ = 5, u₁ = 8, u₂ = 11, u₃ = 14…</p>
+                <p>S₁₀ = 10 × (5 + 35) / 2 = 10 × 40 / 2 = <strong>200</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="p3">
+            <h3>📙 3. Suite géométrique</h3>
+            <p>Une suite est <strong>géométrique</strong> si on passe d'un terme au suivant en <em>multipliant toujours par le même nombre</em> (la raison q) :</p>
+            <div class="formula-box">
+                <div class="formula-title">Suite géométrique</div>
+                uₙ₊₁ = uₙ × q &nbsp;&nbsp;|&nbsp;&nbsp; uₙ = u₀ × qⁿ &nbsp;&nbsp;|&nbsp;&nbsp; uₙ = uₚ × qⁿ⁻ᵖ
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📐</span><p><strong>Terme général</strong> : uₙ = u₀ × qⁿ</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Somme des premiers termes</strong> : Sₙ = u₀ × (1 - qⁿ⁺¹) / (1 - q) &nbsp; si q ≠ 1</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Monotonicité</strong> : dépend du signe et de la valeur de q et u₀</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Suite géométrique avec u₀ = 2 et q = 3</p>
+                <p>uₙ = 2 × 3ⁿ &nbsp;→&nbsp; u₀ = 2, u₁ = 6, u₂ = 18, u₃ = 54…</p>
+                <p>S₃ = 2 × (1 - 3⁴) / (1 - 3) = 2 × (1 - 81) / (-2) = 2 × 40 = <strong>80</strong></p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Applications concrètes des suites géométriques</h4>
+                <p>• <strong>Intérêts composés</strong> : Cₙ = C₀ × (1 + t)ⁿ</p>
+                <p>• <strong>Évolution en pourcentage</strong> : une grandeur qui <em>augmente de 5%</em> chaque année → q = 1.05</p>
+                <p>• <strong>Évolution <em>décroissante</em></strong> : une population qui <em>diminue de 3%</em> → q = 0.97</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="p4">
+            <h3>📕 4. Limites de suites</h3>
+            <p>Une suite (uₙ) peut :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">➡️</span><p><strong>Converger</strong> vers un réel L : lim uₙ = L (les termes se rapprochent de L)</p></div>
+                <div class="key-point"><span class="icon">⬆️</span><p><strong>Diverger vers +∞</strong> : lim uₙ = +∞ (les termes deviennent aussi grands qu'on veut)</p></div>
+                <div class="key-point"><span class="icon">⬇️</span><p><strong>Diverger vers -∞</strong> : lim uₙ = -∞</p></div>
+                <div class="key-point"><span class="icon">↔️</span><p><strong>Ne pas avoir de limite</strong> : suite périodique ou chaotique</p></div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Limites de référence</h3>
+            <div class="formula-box">
+                <div class="formula-title">Limites fondamentales</div>
+                lim n = +∞ &nbsp;&nbsp;|&nbsp;&nbsp; lim n² = +∞ &nbsp;&nbsp;|&nbsp;&nbsp; lim qⁿ = +∞ si q > 1 &nbsp;|&nbsp; lim qⁿ = 0 si |q| < 1
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Opérations sur les limites</h3>
+            <div class="example-box">
+                <h4>💡 Formes indéterminées</h4>
+                <p>0 × ∞ &nbsp;&nbsp;|&nbsp;&nbsp; ∞ - ∞ &nbsp;&nbsp;|&nbsp;&nbsp; 0/0 &nbsp;&nbsp;|&nbsp;&nbsp; ∞/∞ &nbsp;&nbsp;|&nbsp;&nbsp; 0⁰ &nbsp;&nbsp;|&nbsp;&nbsp; 1^∞</p>
+                <p>Ces formes nécessitent un traitement spécial (factorisation, théorèmes de comparaison…)</p>
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📐</span><p><strong>Théorème des Gendarme</strong> : si uₙ ≤ vₙ ≤ wₙ et lim uₙ = lim wₙ = L → lim vₙ = L</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Suite bornée + convergence</strong> : toute suite convergente est bornée</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="p5">
+            <h3>📒 5. Raisonnement par récurrence</h3>
+            <p>Pour démontrer qu'une propriété Pₙ est vraie pour <em>tout</em> n ∈ ℕ, on fait 3 étapes :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">1️⃣</span><p><strong>Initialisation</strong> : vérifier que P₀ est vraie</p></div>
+                <div class="key-point"><span class="icon">2️⃣</span><p><strong>Hérédité</strong> : supposer Pₖ vraie, montrer que Pₖ₊₁ est vraie</p></div>
+                <div class="key-point"><span class="icon">3️⃣</span><p><strong>Conclusion</strong> : par récurrence, Pₙ est vraie pour tout n</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Démontrer que uₙ = 3ⁿ + 2 est croissante</h4>
+                <p><strong>Initialisation</strong> : u₀ = 3⁰ + 2 = 3, u₁ = 3 + 2 = 5 → u₁ > u₀ ✓</p>
+                <p><strong>Hérédité</strong> : Supposons uₖ₊₁ > uₖ</p>
+                <p>Alors 3^(k+2) + 2 = 3 × 3^(k+1) + 2 > 3 × 3^k + 2 = uₖ₊₁ + 2 > uₖ₊₁ ✓</p>
+                <p><strong>Conclusion</strong> : la suite est croissante pour tout n.</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Types de récurrence</h4>
+                <p>• <strong>Récurrence simple</strong> : on utilise Pₖ pour démontrer Pₖ₊₁</p>
+                <p>• <strong>Récurrence double</strong> : on utilise Pₖ et Pₖ₊₁ pour démontrer Pₖ₊₂</p>
+                <p>• <strong>Récurrence forte</strong> : on suppose que P₀, P₁, ..., Pₖ sont vraies pour montrer Pₖ₊₁</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=Les+Suites+-+Formulaire+Complet" alt="Résumé des suites">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet des suites</h3>
+                    <p>Suites arithmétiques, géométriques, limites et raisonnement par récurrence</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Les+Suites">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques-lecon6.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Les Intégrales →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

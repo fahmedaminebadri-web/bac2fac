@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torsion - Mécanique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="mecanique.html" class="back-btn">
+            ← Retour aux leçons de Mécanique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 3: Torsion</h1>
+            <p class="breadcrumb">Mécanique > Leçon 3</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/4A5568/FFFFFF?text=Torsion" alt="Résumé de la torsion">
+                <div class="resume-overlay">
+                    <h3>Torsion des arbres</h3>
+                    <p>Contraintes de cisaillement et déformation en torsion des pièces mécaniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/4A5568/FFFFFF?text=Torsion">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Définir</strong> le phénomène de torsion pure et identifier les éléments de structure sollicités (arbres, barres, tubes)</li>
+                    <li><strong>Énoncer</strong> les hypothèses de la théorie de torsion des arbres de section circulaire</li>
+                    <li><strong>Calculer</strong> les contraintes tangentielles de torsion à partir du couple appliqué et du moment quadratique polaire</li>
+                    <li><strong>Dimensionner</strong> un arbre de transmission en vérifiant le critère de résistance (τ ≤ Rpe) et la déformation admissible (θ ≤ θ_max)</li>
+                    <li><strong>Analyser</strong> la répartition des contraintes dans une section circulaire pleine et creuse</li>
+                    <li><strong>Appliquer</strong> le coefficient de concentration de contraintes pour les sections variables (gorges, épaulements, cannelures)</li>
+                    <li><strong>Résoudre</strong> des problèmes de torsion combinée (torsion + flexion) dans les arbres de machines</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Notions de statique et de torseur des efforts internes (moment fléchissant, moment de torsion)</li>
+                    <li>Résistance des matériaux de base : contrainte normale (σ = F/S), déformation (ε = ΔL/L)</li>
+                    <li>Propriétés géométriques des sections : aire, moment quadratique axial (I_Gz), moment quadratique polaire (I_Gx)</li>
+                    <li>Module d'élasticité transversal (G) et module d'élasticité longitudinal (E)</li>
+                    <li>Notion de limite élastique (Re) et limite pratique à l'extension (Rpe = Re / s)</li>
+                    <li>Utilisation des unités SI cohérentes (N, mm, MPa)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Introduction à la torsion</h4>
+                <p>La torsion est un mode de sollicitation mécanique caractérisé par l'application d'un moment (couple) autour de l'axe longitudinal d'une pièce. Les arbres de transmission de puissance, les vilebrequins, les barres de torsion et les ressorts hélicoïdaux sont autant d'exemples d'éléments travaillant principalement en torsion.</p>
+                <p>La théorie classique de torsion s'applique rigoureusement aux poutres de section circulaire (pleine ou creuse), pour lesquelles les sections droites restent planes et perpendiculaires à l'axe après déformation.</p>
+
+                <h4>2. Théorie de la torsion des arbres circulaires</h4>
+                <p>Sous l'action d'un moment de torsion Mt, la <strong>contrainte tangentielle de torsion</strong> en un point situé à la distance ρ de l'axe est donnée par :</p>
+                <div class="plan-highlight"><strong>τ(ρ) = Mt · ρ / Ip</strong> où Ip est le moment quadratique polaire de la section.</div>
+                <ul>
+                    <li>Section pleine de diamètre d : <strong>Ip = π·d⁴ / 32</strong></li>
+                    <li>Section creuse : <strong>Ip = π·(De⁴ - Di⁴) / 32</strong></li>
+                </ul>
+                <p>La contrainte maximale en surface (ρ = d/2) : <strong>τ_max = 16·Mt / (π·d³)</strong></p>
+
+                <h4>3. Critères de dimensionnement</h4>
+                <p><strong>Critère de résistance :</strong> τ_max ≤ Rpe_g = Re_g / s (coefficient de sécurité s, généralement entre 2 et 5).</p>
+                <p><strong>Critère de déformation :</strong> θ = Mt/(G·Ip) ≤ θ_max (valeurs typiques : 0,25 à 1°/m selon les applications).</p>
+
+                <h4>4. Arbres de section creuse et optimisation</h4>
+                <p>Pour un même poids de matériau, la rigidité torsionnelle d'un arbre creuse est supérieure à celle d'un arbre plein. Le rapport d'âme (k = Di/De) optimal se situe généralement entre 0,5 et 0,8.</p>
+
+                <h4>5. Concentration de contraintes</h4>
+                <p>Les variations de section (gorges de clavettes, épaulements de roulements, cannelures) créent des concentrations de contraintes. Le facteur K_τ multiplie la contrainte nominale : <strong>τ_max = K_τ · τ_nominale</strong></p>
+
+                <h4>6. Torsion combinée</h4>
+                <p>En pratique, les arbres sont soumis à plusieurs sollicitations simultanées. Le critère de von Mises ou de Tresca permet de combiner ces sollicitations : <strong>σ_eq = √(σ_N² + 3·τ²)</strong> ou <strong>σ_eq = √(σ_N² + 4·τ²)</strong></p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Moment de torsion Mt</strong> : couple appliqué autour de l'axe longitudinal de la pièce</li>
+                    <li><strong>Moment quadratique polaire Ip</strong> : grandeur géométrique caractérisant la rigidité en torsion (π·d⁴/32 pour un arbre plein)</li>
+                    <li><strong>Contrainte tangentielle de torsion</strong> : τ = Mt·ρ/Ip, maximale en surface</li>
+                    <li><strong>Angle de torsion unitaire</strong> : θ = Mt/(G·Ip), caractérise la rigidité de l'arbre</li>
+                    <li><strong>Rpe_g</strong> : résistance pratique à l'extension en cisaillement (Re/√3·s)</li>
+                    <li><strong>Concentration de contraintes</strong> : amplification locale de la contrainte due aux variations de section</li>
+                    <li><strong>Arbre creuse</strong> : optimisation de la rigidité torsionnelle pour un poids donné</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Dimensionnement d'un arbre de sortie de réducteur</strong> : calculer le diamètre minimal pour transmettre un couple donné</li>
+                    <li><strong>Vérification de la rigidité</strong> : calculer l'angle de torsion total d'un arbre de longueur donnée</li>
+                    <li><strong>Comparaison arbre plein/creuse</strong> : déterminer le gain de masse pour une rigidité torsionnelle équivalente</li>
+                    <li><strong>Concentration de contraintes</strong> : analyser les épaulements de montage de roulements</li>
+                    <li><strong>Arbre de machine outil</strong> : calculer la torsion combinée à la flexion pour vérifier la fiabilité</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un arbre plein de diamètre d = 40 mm et de longueur L = 800 mm transmet un couple Mt = 1 500 N·m. Calculez : a) la contrainte tangentielle maximale, b) l'angle de torsion total (G = 80 000 MPa), c) vérifiez la tenue si Rpe_g = 80 MPa et s = 3.</li>
+                    <li><strong>Exercice 2</strong> : On désire remplacer un arbre plein de Ø50 mm par un arbre creuse de même diamètre extérieur. Déterminez le diamètre intérieur minimal pour conserver la même rigidité torsionnelle. Calculez le gain de masse en %.</li>
+                    <li><strong>Exercice 3</strong> : Un arbre cannelé à 6 cannelures transmet un couple de 8 000 N·m. Calculez le diamètre minimal en négligeant puis en tenant compte de la concentration de contraintes (K_τ ≈ 2,5).</li>
+                    <li><strong>Exercice 4</strong> : Un arbre de transmission de Ø60 mm est soumis à Mt = 3 000 N·m et à un moment fléchissant Mf = 1 000 N·m. En utilisant le critère de von Mises, déterminez la contrainte équivalente.</li>
+                    <li><strong>Exercice 5</strong> : Dimensionnez completely un arbre de transmission pour une puissance de 15 kW à 1 200 tr/min, avec une charge radiale de 3 000 N appliquée à mi-portée.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> La torsion est une sollicitation fondamentale des arbres de transmission. La théorie de torsion des sections circulaires permet de calculer précisément les contraintes tangentielles (τ = Mt·ρ/Ip) et les déformations (θ = Mt/(G·Ip)). Le dimensionnement en torsion requiert la vérification simultanée des critères de résistance (τ_max ≤ Rpe_g) et de rigidité (θ ≤ θ_max). L'optimisation par utilisation de sections creuses permet des gains de masse significatifs. La concentration de contraintes aux variations de section impose l'application d'un facteur correcteur. En pratique, les arbres sont soumis à des sollicitations composées imposant l'utilisation de critères de résistance multiaxiaux.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mecanique-lecon4.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Guidage en rotation →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

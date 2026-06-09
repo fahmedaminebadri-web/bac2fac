@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexion - Mécanique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="mecanique.html" class="back-btn">
+            ← Retour aux leçons de Mécanique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 8: Flexion</h1>
+            <p class="breadcrumb">Mécanique > Leçon 8</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/8B95A1/FFFFFF?text=Flexion" alt="Résumé de la flexion">
+                <div class="resume-overlay">
+                    <h3>Flexion des poutres</h3>
+                    <p>Contraintes normales, diagrammes MEF et flexion simple et composée.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/8B95A1/FFFFFF?text=Flexion">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Définir</strong> le phénomène de flexion et identifier les poutres sollicitées en flexion</li>
+                    <li><strong>Calculer</strong> les efforts internes (moment fléchissant Mf, effort tranchant Tf) dans une poutre isostatique</li>
+                    <li><strong>Tracer</strong> les diagrammes de moment fléchissant et d'effort tranchant le long de la poutre</li>
+                    <li><strong>Calculer</strong> les contraintes normales de flexion (σ = Mf·v/I) et les contraintes de cisaillement (τ = T·S/It)</li>
+                    <li><strong>Dimensionner</strong> une poutre en flexion en vérifiant le critère de résistance (σ ≤ Rpe)</li>
+                    <li><strong>Calculer</strong> la flèche d'une poutre en flexion (formules de résistance des matériaux)</li>
+                    <li><strong>Analyser</strong> la flexion composée (flexion + traction/compression)</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Statique : résolution des réactions d'appui (appui simple, appui roulant, encastrement)</li>
+                    <li>Résistance des matériaux : contrainte, déformation, loi de Hooke (σ = E·ε)</li>
+                    <li>Propriétés géométriques des sections : moment quadratique I, module de flexion W = I/v</li>
+                    <li>Notions de torseur des efforts internes (N, T, Mf)</li>
+                    <li>Calcul intégral et différentiel pour la détermination des sollicitations</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Introduction à la flexion</h4>
+                <p>La flexion est une sollicitation dans laquelle une poutre est soumise à des charges perpendiculaires à son axe, créant un moment fléchissant dans le plan de la poutre. Les poutres en flexion sont omniprésentes : poutres de construction, arbres de transmission, rails, poutrelles métalliques.</p>
+                <p>La flexion pure se définit par un moment fléchissant non nul et un effort tranchant nul. En pratique, la flexion simple combine moment fléchissant et effort tranchant.</p>
+
+                <h4>2. Détermination des efforts internes</h4>
+                <p>Pour une poutre, on détermine d'abord les réactions aux appuis par les équations d'équilibre (ΣF = 0, ΣM = 0). Puis on calcule les efforts internes en sectionnant la poutre à une abscisse x :</p>
+                <ul>
+                    <li><strong>Moment fléchissant Mf(x)</strong> : somme des moments des forces à gauche de la section</li>
+                    <li><strong>Effort tranchant Tf(x)</strong> : somme des forces perpendiculaires à l'axe de la poutre à gauche de la section</li>
+                    <li><strong>Effort normal N(x)</strong> : somme des forces parallèles à l'axe de la poutre</li>
+                </ul>
+                <p>La relation entre effort tranchant et moment fléchissant : <strong>dMf/dx = Tf</strong></p>
+
+                <h4>3. Diagrammes de Mf et Tf</h4>
+                <p>Les diagrammes de moment fléchissant et d'effort tranchant permettent de visualiser la répartition des sollicitations le long de la poutre. Points critiques : valeurs maximales de Mf et Tf, discontinuités (charges concentrées), changement de signe.</p>
+                <p>Pour une poutre sur deux appuis avec charge uniformément répartie q (N/m) :</p>
+                <ul>
+                    <li>Réactions : Ra = Rb = q·L/2</li>
+                    <li>Moment maximal : Mf_max = q·L²/8 (à mi-portée)</li>
+                    <li>Effort tranchant : linéaire de +q·L/2 à −q·L/2</li>
+                </ul>
+
+                <h4>4. Contraintes en flexion</h4>
+                <p><strong>Contraintes normales de flexion :</strong> répartition linéaire dans la section, nulles à la fibre neutre et maximales aux fibres extrêmes.</p>
+                <div class="plan-highlight"><strong>σ(x, y) = Mf(x) · y / I_Gz</strong></div>
+                <p>où I_Gz est le moment quadratique axial de la section par rapport à l'axe neutre (Gz), et y la distance à l'axe neutre. La contrainte maximale est : <strong>σ_max = Mf_max / W</strong>, avec W = I_Gz/v (module de flexion).</p>
+                <p><strong>Contraintes de cisaillement :</strong> pour l'effort tranchant, la contrainte de cisaillement est : <strong>τ = T·S / (I_Gz·b)</strong>, où S est le moment statique de la partie de section au-dessus de la fibre considérée, et b la largeur de la section à cette hauteur.</p>
+
+                <h4>5. Dimensionnement en flexion</h4>
+                <p>Le dimensionnement vérifie deux critères :</p>
+                <ul>
+                    <li><strong>Critère de résistance</strong> : σ_max ≤ Rpe = Re/s (coefficient de sécurité)</li>
+                    <li><strong>Critère de déformation (flèche)</strong> : f_max ≤ f_admissible (typiquement L/200 à L/500)</li>
+                </ul>
+                <p>Pour une poutre sur deux appuis, charge uniformément répartie q, la flèche maximale à mi-portée est : <strong>f_max = 5·q·L⁴ / (384·E·I)</strong></p>
+
+                <h4>6. Flexion composée</h4>
+                <p>Lorsqu'une poutre est soumise simultanément à de la flexion et à un effort normal (traction ou compression), on parle de flexion composée. La contrainte normale totale est : <strong>σ = N/S ± Mf·y/I</strong></p>
+                <p>En cas de compression, attention au phénomène de <strong>flambage</strong> si le rapport L/k (élancement) est élevé (k = rayon de giration = √(I/S)).</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Moment fléchissant Mf</strong> : sollicitation qui courbe la poutre, nul à la fibre neutre, maximal aux fibres extrêmes</li>
+                    <li><strong>Effort tranchant T</strong> : force perpendiculaire à l'axe, responsable du glissement des sections</li>
+                    <li><strong>Contrainte normale de flexion</strong> : σ = Mf·y/I, répartition linéaire (nulle à l'axe neutre)</li>
+                    <li><strong>Module de flexion W</strong> : W = I/v, caractérise la résistance en flexion d'une section</li>
+                    <li><strong>Flèche</strong> : déplacement maximal de la poutre en service, limité par des valeurs admissibles</li>
+                    <li><strong>Flexion composée</strong> : combinaison de flexion et d'effort normal (traction ou compression)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Poutre de construction</strong> : calculer les sollicitations et dimensionner une poutrelle IPE pour un plancher</li>
+                    <li><strong>Arbre de transmission</strong> : vérifier la tenue en flexion d'un arbre supportant une poulie</li>
+                    <li><strong>Vérification de flèche</strong> : calculer la flèche d'une poutre en acier S235 et vérifier la conformité (L/300)</li>
+                    <li><strong>Flexion asymétrique</strong> : analyser une poutre de section rectangulaire soumise à des charges dans deux plans</li>
+                    <li><strong>Flexion + traction</strong> : calculer les contraintes dans un tirant supportant son poids propre et une charge excentrée</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Une poutre de longueur L = 3 m, sur deux appuis, supporte une charge concentrée F = 10 000 N à mi-portée. Tracez les diagrammes de Tf et Mf. Calculez σ_max pour une section rectangulaire 50×100 mm.</li>
+                    <li><strong>Exercice 2</strong> : Une poutrelle IPE 200, sur deux appuis de portée 5 m, supporte une charge répartie q = 5 000 N/m. Calculez la flèche maximale (E = 210 000 MPa, I = 1,943·10⁻⁶ m⁴) et vérifiez f ≤ L/300.</li>
+                    <li><strong>Exercice 3</strong> : Dimensionnez la section d'une poutre rectangulaire en bois (Rpe = 12 MPa) pour reprendre un moment de 15 000 N·m. Le rapport h/b = 2.</li>
+                    <li><strong>Exercice 4</strong> : Une poutre en acier de section circulaire (Ø40 mm) est soumise à Mf = 2 000 N·m et N = 20 000 N (traction). Calculez σ_max et vérifiez la tenue pour Re = 250 MPa, s = 3.</li>
+                    <li><strong>Exercice 5</strong> : Une poutre console (encastrement en A, extrémité libre en B) de longueur L = 1,5 m, supporte une charge répartie q = 3 000 N/m. Tracez Mf et Tf, calculez la flèche à l'extrémité.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> La flexion est la sollicitation la plus fréquente des poutres en construction mécanique et civile. L'analyse en flexion comprend la détermination des réactions aux appuis, le calcul du moment fléchissant Mf et de l'effort tranchant T, le tracédes diagrammes, puis le calcul des contraintes normales σ = Mf·y/I. Le dimensionnement vérifie simultanément le critère de résistance (σ_max ≤ Rpe) et le critère de déformation (flèche ≤ f_admissible). La flexion composée combine flexion et effort normal, imposant une vérification de la contrainte totale. La connaissance des formules de flexion (flèche, contraintes) est fondamentale pour tout ingénieur en construction mécanique.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mecanique-lecon9.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Accouplement et embrayage frein →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

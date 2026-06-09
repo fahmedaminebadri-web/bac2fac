@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidage en rotation - Mécanique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="mecanique.html" class="back-btn">
+            ← Retour aux leçons de Mécanique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 4: Guidage en rotation</h1>
+            <p class="breadcrumb">Mécanique > Leçon 4</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/3D4756/FFFFFF?text=Guidage+en+rotation" alt="Résumé du guidage en rotation">
+                <div class="resume-overlay">
+                    <h3>Guidage des arbres tournants</h3>
+                    <p>Paliers lisses, roulements et solutions de guidage en rotation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/3D4756/FFFFFF?text=Guidage+en+rotation">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le principe du guidage en rotation et ses exigences fonctionnelles</li>
+                    <li><strong>Différencier</strong> les solutions de guidage : paliers lisses (coussinets) et paliers roulements</li>
+                    <li><strong>Choisir</strong> le type de roulement adapté en fonction des charges, vitesses et conditions de fonctionnement</li>
+                    <li><strong>Calculer</strong> la capacité de charge dynamique et la durée de vie d'un roulement (formule ISO/ABMA)</li>
+                    <li><strong>Dimensionner</strong> un montage de roulements (disposition en X, en O, précharge, écartement)</li>
+                    <li><strong>Appliquer</strong> les règles de montage et d'ajustement des roulements (arbre, alésage, jeu interne)</li>
+                    <li><strong>Analyser</strong> les causes de défaillance des roulements et prescrire les conditions de lubrification</li>
+                    <li><strong>Concevoir</strong> un palier lisse et vérifier le critère de pression de contact (p ≤ p_max)</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Connaissance des efforts et moments dans les arbres de transmission</li>
+                    <li>Notions de tribologie : frottement, lubrification, régime hydrodynamique</li>
+                    <li>Résistance des matériaux : pression de contact, déformation locale</li>
+                    <li>Lecture de catalogues de roulements (SKF, NSK, FAG)</li>
+                    <li>Notions de tolérances dimensionnelles et géométriques (ajustements H7/g6, etc.)</li>
+                    <li>Propriétés des matériaux de palier (bronze, PTFE, fonte)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Principe du guidage en rotation</h4>
+                <p>Le guidage en rotation a pour fonction de maintenir un arbre dans une position axiale et radiale précise tout en permettant sa rotation libre. L'exigence fondamentale est de <strong>minimiser les frottements</strong> tout en <strong>supportant les charges radiales et/ou axiales</strong>.</p>
+                <p>Deux grandes familles : <strong>Paliers lisses</strong> (coussinets) et <strong>Roulements</strong> (contact roulant).</p>
+
+                <h4>2. Paliers lisses (coussinets)</h4>
+                <p>Les paliers lisses fonctionnent selon le principe de la <strong>lubrification hydrodynamique</strong>. Le critère principal est la <strong>pression de contact</strong> p = F/(d·L). Les matériaux courants sont le bronze, la fonte, le PTFE et le métal antifriction.</p>
+                <p>On vérifie également le produit <strong>p·V</strong> (V = vitesse circonférentielle) pour éviter l'échauffement excessif.</p>
+
+                <h4>3. Roulements : classification et principes</h4>
+                <table class="plan-table">
+                    <tr><th>Type de roulement</th><th>Charge radiale</th><th>Charge axiale</th><th>Rigidité</th><th>Vitesse max</th></tr>
+                    <tr><td>Roulement à billes à contact radial</td><td>++</td><td>+ (faible)</td><td>Bonne</td><td>Très haute</td></tr>
+                    <tr><td>Roulement à billes à contact oblique</td><td>++</td><td>++</td><td>Très bonne</td><td>Haute</td></tr>
+                    <tr><td>Roulement à rouleaux cylindriques</td><td>+++</td><td>0</td><td>Excellente</td><td>Haute</td></tr>
+                    <tr><td>Roulement à rouleaux coniques</td><td>+++</td><td>++</td><td>Excellente</td><td>Moyenne</td></tr>
+                </table>
+
+                <h4>4. Dimensionnement en durée de vie (ISO 281)</h4>
+                <div class="plan-highlight"><strong>L10 = (C / P)^p · (10^6 / 60·n)</strong> [heures]</div>
+                <p>où C est la capacité de charge dynamique, P la charge dynamique équivalente, p l'exposant de durée (3 pour roulements à billes, 10/3 pour rouleaux), et n la vitesse de rotation.</p>
+                <p>La charge dynamique équivalente : <strong>P = X·Fr + Y·Fa</strong></p>
+
+                <h4>5. Montage et ajustements des roulements</h4>
+                <p><strong>Ajustements recommandés :</strong> bague tournante → ajustement serré (m6, k6) ; bague fixe → ajustement avec jeu (g6, h6).</p>
+                <p><strong>Dispositions de montage :</strong> montage en X (dos à dos, rigidité axiale) et montage en O (face à face, meilleure adaptation aux défauts d'alignement). La <strong>précharge</strong> supprime le jeu interne pour améliorer la rigidité et la précision.</p>
+
+                <h4>6. Lubrification et défaillances</h4>
+                <p>La lubrification a trois fonctions : réduire le frottement, dissiper la chaleur et protéger contre la corrosion. Les défaillances courantes sont la fatigue de contact (écaillage), l'usure abrasive (contamination), le grippage (lubrification insuffisante) et la corrosion de contact.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Guidage en rotation</strong> : maintien d'un arbre dans une position radiale et axiale précise avec rotation libre</li>
+                    <li><strong>Palier lisse</strong> : guidage par contact direct润滑é, vérification de p et p·V</li>
+                    <li><strong>Roulements</strong> : contact roulant (billes/rouleaux), capacité de charge C cataloguée</li>
+                    <li><strong>Durée de vie L10</strong> : durée à 90% de fiabilité, calculée par L10 = (C/P)^p · 10^6/(60n)</li>
+                    <li><strong>Charge dynamique équivalente P</strong> : combinaison des charges radiales et axiales pondérées par X et Y</li>
+                    <li><strong>Montage en X et en O</strong> : deux dispositions pour résister aux charges axiales dans les deux sens</li>
+                    <li><strong>Précharge</strong> : élimination du jeu interne pour améliorer rigidité et précision</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Sélection de roulements</strong> : choisir le type et la dimension d'un roulement pour un arbre donné à une vitesse donnée</li>
+                    <li><strong>Montage SKF</strong> : concevoir le montage complet d'un arbre de réducteur avec roulements à rouleaux coniques</li>
+                    <li><strong>Calcul de durée de vie</strong> : calculer la durée de vie en heures d'un roulement pour une charge et une vitesse données</li>
+                    <li><strong>Palier lisse</strong> : dimensionner un palier en bronze pour un arbre donné</li>
+                    <li><strong>Diagnostic de défaillance</strong> : analyser un roulement défaillant (écaillage vs grippage vs corrosion)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un roulement à billes à contact radial 6308 est soumis à Fr = 4 000 N et Fa = 600 N. Calculez la charge dynamique équivalente P et la durée de vie L10 en heures pour n = 1 500 tr/min.</li>
+                    <li><strong>Exercice 2</strong> : Concevez le montage de roulements pour un arbre de sortie de réducteur supportant Fr = 8 000 N et Fa = 1 500 N. Choisissez le type de roulement, la disposition et les ajustements.</li>
+                    <li><strong>Exercice 3</strong> : Dimensionnez un palier lisse en bronze pour un arbre de Ø80 mm, longueur de palier 100 mm, charge radiale 25 000 N, vitesse 200 tr/min. Vérifiez p et p·V.</li>
+                    <li><strong>Exercice 4</strong> : Comparez les performances (durée de vie, encombrement, coût) de deux solutions de guidage : roulement à billes vs palier lisse.</li>
+                    <li><strong>Exercice 5</strong> : Un roulement à rouleaux coniques est monté en X avec un autre roulement identique. Déterminez les efforts axiaux induits et dimensionnez la précharge nécessaire.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le guidage en rotation est une fonction essentielle de la construction mécanique. Deux grandes familles de solutions existent : les paliers lisses (lubrification hydrodynamique, économiques pour charges élevées et vitesses modérées) et les roulements (contact roulant, haute vitesse et précision). Le dimensionnement des roulements repose sur le calcul de la durée de vie nominale L10 à partir de la capacité de charge dynamique C et de la charge équivalente P. Le montage correct (ajustements serrés/libres, disposition X/O, précharge) et la lubrification appropriée sont déterminants pour la fiabilité. La connaissance des mécanismes de défaillance permet d'optimiser la conception et la maintenance.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mecanique-lecon5.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Obtention des pièces →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 1 : Moteur à Courant Continu - Électrique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .elec-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .elec-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .elec-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid #EAB308; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: #92400E; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border-left: 4px solid #F97316; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #C2410C; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FDE68A; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: #B45309; font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="electrique.html" class="back-btn">← Retour aux leçons d'Électrique</a>
+
+        <div class="lesson-header" style="border-top: 4px solid #EAB308;">
+            <h1>Leçon 1 : Moteur à Courant Continu (MCC)</h1>
+            <p class="breadcrumb">Électrique > Leçon 1</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Principe de fonctionnement</a></li>
+                <li><a href="#p2">Constitution du MCC</a></li>
+                <li><a href="#p3">Modélisation électrique et équations</a></li>
+                <li><a href="#p4">Caractéristiques mécaniques</a></li>
+                <li><a href="#p5">Variateurs de vitesse</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="elec-content" id="p1">
+            <h3>📘 1. Principe de fonctionnement</h3>
+            <p>Un moteur à courant continu transforme l'énergie <strong>électrique</strong> en énergie <strong>mécanique</strong> grâce à l'interaction entre un champ magnétique et un courant électrique.</p>
+            <p>Le <strong>principe fondamental</strong> repose sur la force de Laplace : un conducteur traversé par un courant et placé dans un champ magnétique subit une force.</p>
+            <div class="formula-box">
+                <div class="formula-title">Force de Laplace</div>
+                F = B × I × L
+            </div>
+            <p>où B est l'induction magnétique (Tesla), I le courant (A) et L la longueur du conducteur (m).</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">⚡</span><p>Le <strong>stator</strong> (partie fixe) crée un champ magnétique</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p>Le <strong>rotor</strong> (partie tournante) porte les conducteurs parcourus par le courant</p></div>
+                <div class="key-point"><span class="icon">🔀</span><p>Le <strong>collecteur</strong> permute le sens du courant pour maintenir le couple moteur</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p>Le <strong>balai</strong>s frottent sur le collecteur pour alimenter le rotor</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="elec-content" id="p2">
+            <h3>📗 2. Constitution du MCC</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Partie fixe (Stator)</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🧲</span><p><strong>Tôles magnétiques</strong> avec des pôles principaux et auxiliaires</p></div>
+                <div class="key-point"><span class="icon">🧲</span><p><strong>Enroulement inducteur</strong> : crée le champ magnétique (aimants permanents ou bobines)</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>Balais</strong> (charbons) : assurent le contact électrique avec le collecteur</p></div>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Partie tournante (Rotor)</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">⚙️</span><p><strong>Tôles magnétiques</strong> (noyau ferromagnétique)</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>Enroulement induit</strong> : reçoit le courant via le collecteur</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Collecteur</strong> (ou commutateur) : assure la commutation du courant</p></div>
+                <div class="key-point"><span class="icon">🛞</span><p><strong>Arbre</strong> : transmet la puissance mécanique</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Types d'excitation</h4>
+                <p>• <strong>À aimants permanents</strong> : pas d'enroulement inducteur (rendement élevé, prix plus élevé)</p>
+                <p>• <strong>À excitation séparée</strong> : inducteur et induit alimentés séparément</p>
+                <p>• <strong>À excitation série</strong> : inducteur en série avec l'induit → fort couple au démarrage</p>
+                <p>• <strong>À excitation shunt</strong> : inducteur en parallèle → vitesse constante</p>
+                <p>• <strong>Compound</strong> : combinaison série + shunt</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="elec-content" id="p3">
+            <h3>📙 3. Modélisation électrique et équations</h3>
+            <p>Le modèle électrique du MCC comprend :</p>
+            <div class="formula-box">
+                <div class="formula-title">Modèle électrique de l'induit</div>
+                U = E + R × I
+            </div>
+            <p>où :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">⚡</span><p><strong>U</strong> = tension d'alimentation (V)</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>E</strong> = force contre-électromotrice (V)</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>R</strong> = résistance de l'induit (Ω)</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>I</strong> = courant d'induit (A)</p></div>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Force contre-électromotrice</h3>
+            <div class="formula-box">
+                <div class="formula-title">FCEM</div>
+                E = K × Φ × Ω
+            </div>
+            <p>où K est la constante de machine, Φ le flux inducteur et Ω la vitesse angulaire (rad/s).</p>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Couple électromagnétique</h3>
+            <div class="formula-box">
+                <div class="formula-title">Couple</div>
+                Cem = K × Φ × I
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple numérique</h4>
+                <p>MCC avec K = 50, Φ = 0.01 Wb, R = 0.5Ω, alimenté sous U = 220V</p>
+                <p>À vide : I ≈ 0 → E = U = 220V → Ω = E/(KΦ) = 220/(50×0.01) = <strong>440 rad/s</strong></p>
+                <p>En charge : I = 20A → E = 220 - (0.5×20) = 210V → Ω = 210/0.5 = <strong>420 rad/s</strong></p>
+                <p>Cem = KΦI = 50×0.01×20 = <strong>10 Nm</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="elec-content" id="p4">
+            <h3>📕 4. Caractéristiques mécaniques</h3>
+            <p>La <strong>caractéristique mécanique</strong> d'un MCC est la relation entre le couple Cem et la vitesse Ω :</p>
+            <div class="formula-box">
+                <div class="formula-title">Caractéristique mécanique</div>
+                Ω = U/(KΦ) - (R/(KΦ)²) × Cem
+            </div>
+            <p>C'est une droite légèrement descendante : la vitesse diminue légèrement quand le couple augmente.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📈</span><p><strong>À vide</strong> : Ω₀ = U/(KΦ) — vitesse maximale</p></div>
+                <div class="key-point"><span class="icon">📉</span><p><strong>En charge</strong> : la vitesse diminue proportionnellement au couple</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>Puissance électrique</strong> : P₁ = U × I</p></div>
+                <div class="key-point"><span class="icon">⚙️</span><p><strong>Puissance mécanique</strong> : Pm = Cem × Ω</p></div>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Rendement</h3>
+            <div class="formula-box">
+                <div class="formula-title">Rendement</div>
+                η = Pm/P₁ = (Cem × Ω) / (U × I)
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Pertes dans un MCC</h4>
+                <p>• <strong>Pertes cuivre</strong> (Joule) : RI² dans l'induit et l'inducteur</p>
+                <p>• <strong>Pertes fer</strong> : hystérésis et courants de Foucault dans le rotor</p>
+                <p>• <strong>Pertes mécaniques</strong> : frottements et ventilation</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="elec-content" id="p5">
+            <h3>📒 5. Variateurs de vitesse</h3>
+            <p>Pour faire varier la vitesse d'un MCC, on peut agir sur :</p>
+            <div class="formula-box">
+                <div class="formula-title">Variation de vitesse</div>
+                Ω = (U - R×I) / (KΦ)
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔧</span><p><strong>Varier U</strong> : hacheur ou variateur de tension (méthode la plus courante)</p></div>
+                <div class="key-point"><span class="icon">🔧</span><p><strong>Varier Φ</strong> : rhéostat de champ ou variation du courant d'excitation</p></div>
+                <div class="key-point"><span class="icon">🔧</span><p><strong>Varier R</strong> : rhéostat d'induit (peu utilisé, perte d'énergie)</p></div>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Démarrage</h3>
+            <p>Au démarrage : Ω = 0 → E = 0 → I_démarrage = U/R (très élevé !)</p>
+            <div class="warning-box">
+                <h4>⚠️ Démarrage direct interdit</h4>
+                <p>Le courant de démarrage Id = U/R peut atteindre 10 à 20 × Inominal</p>
+                <p>→ Risque de destruction du moteur !</p>
+                <p>Solutions : démarrage étoile-triangle, démarreur progressif, variateur électronique</p>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Variateur de vitesse</h4>
+                <p>MCC 220V, 1500 tr/min, R = 0.8Ω</p>
+                <p>Vitesse nominale : 1500 tr/min = 157 rad/s</p>
+                <p>Pour atteindre 750 tr/min (moitié) : U ≈ 110V (avec hacheur)</p>
+                <p>→ Réduction de vitesse par modulation de largeur d'impulsion (MLI/PWM)</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/EAB308/1E3A5F?text=Moteur+a+Courant+Continu+-+Schéma+et+Formules" alt="Résumé MCC">
+                <div class="resume-overlay">
+                    <h3>Schéma et formules du Moteur à Courant Continu</h3>
+                    <p>Constitution, équations électriques, couple, FCEM et variation de vitesse</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EAB308/1E3A5F?text=Video+Moteur+CC">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON SUIVANT -->
+        <a href="electrique-lecon2.html" class="next-lesson" style="background: linear-gradient(135deg, #EAB308, #CA8A04);">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Les Amplificateurs →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

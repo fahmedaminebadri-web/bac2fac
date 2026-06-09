@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmission du mouvement - Mécanique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="mecanique.html" class="back-btn">
+            ← Retour aux leçons de Mécanique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 10: Transmission du mouvement</h1>
+            <p class="breadcrumb">Mécanique > Leçon 10</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/AAB0B9/FFFFFF?text=Transmission+du+mouvement" alt="Résumé de la transmission du mouvement">
+                <div class="resume-overlay">
+                    <h3>Transmission mécanique</h3>
+                    <p>Engrenages, courroies, chaînes et poulies pour transmettre le mouvement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/AAB0B9/FFFFFF?text=Transmission+du+mouvement">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Identifier</strong> les différents moyens de transmission de puissance mécanique (engrenages, courroies, chaînes, poulies)</li>
+                    <li><strong>Calculer</strong> le rapport de transmission entre deux arbres (rapport de vitesse et de couple)</li>
+                    <li><strong>Analyser</strong> la géométrie et le fonctionnement des engrenages (droit, hélicoïdal, conique)</li>
+                    <li><strong>Dimensionner</strong> une transmission par courroies ou chaînes en fonction de la puissance à transmettre</li>
+                    <li><strong>Concevoir</strong> un système de transmission complet (réducteur, variateur) en intégrant les contraintes</li>
+                    <li><strong>Calculer</strong> le rendement global d'une chaîne de transmission</li>
+                    <li><strong>Appliquer</strong> les règles de lubrification et de maintenance des systèmes de transmission</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Notions de puissance, couple et vitesse de rotation (P = C·ω)</li>
+                    <li>Connaissance des liaisons mécaniques et de la cinématique</li>
+                    <li>Notions de résistance des matériaux et de lubrification</li>
+                    <li>Calcul trigonométrique et résolution de rapports</li>
+                    <li>Lecture de dessins techniques et de plans de transmission</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Classification des systèmes de transmission</h4>
+                <p>Les systèmes de transmission de puissance se classent selon le principe de transmission :</p>
+                <ul>
+                    <li><strong>Transmission par obstacles</strong> : engrenages, vis sans fin, crémaillères</li>
+                    <li><strong>Transmission par adhérence</strong> : courroies plates, trapézoïdales, crantées (synchronous belts)</li>
+                    <li><strong>Transmission par lien flexible</strong> : chaînes à rouleaux, courroies</li>
+                    <li><strong>Transmission hydraulique/mécanique</strong> : vérins, moteurs hydrauliques</li>
+                </ul>
+
+                <h4>2. Engrenages</h4>
+                <p>Les engrenages sont des roues dentées qui s'engrènent pour transmettre le mouvement et la puissance. <strong>Rapport de transmission :</strong> i = ω_pignon / ω_roue = Z_roue / Z_pignon (inverse du rapport des nombres de dents).</p>
+                <table class="plan-table">
+                    <tr><th>Type d'engrenage</th><th>Caractéristique</th><th>Application</th></tr>
+                    <tr><td>Droit à denture droite</td><td>Axes parallèles, denture parallèle à l'axe</td><td>Transmission simple, bon rendement</td></tr>
+                    <tr><td>Hélicoïdal</td><td>Denture inclinée, contact progressif, moins de bruit</td><td>Réducteurs, boîte de vitesses</td></tr>
+                    <tr><td>Conique</td><td>Axes concourants, transmission entre axes perpendiculaires</td><td>Differentiel automobile</td></tr>
+                    <tr><td>Vis sans fin</td><td>Transmission très réductrice (i jusqu'à 1/100)</td><td>Réducteurs慢速, mécanismes de levage</td></tr>
+                    <tr><td>Crémaillère</td><td>Roue de rayon infini, rotation → translation</td><td>Direction, avance linéaire</td></tr>
+                </table>
+                <p><strong>Géométrie de l'engrenage droit :</strong> module m (normalisé ISO : 1, 1,25, 1,5, 2, 2,5, 3...), diamètre primitif d = m·Z, hauteur de dent h = 2,25·m, entraxe a = m·(Z1+Z2)/2.</p>
+
+                <h4>3. Transmission par courroies</h4>
+                <p>Les courroies transmettent la puissance entre arbres parallèles par адhérence (courroies plates/trapézoïdales) ou par obstacle (courroies crantées). <strong>Rapport :</strong> i = D_poulie_motrice / D_poulie_réceptrice.</p>
+                <p><strong>Calcul de la puissance transmissible :</strong> P = (T1 − T2)·V, où T1 et T2 sont les tensions dans les branches tendue et lâche, et V la vitesse tangentielle.</p>
+                <p>Types de courroies : plate (simplicité), trapézoïdale (meilleure адhérence, standardisée par section SPZ, SPA, SPB), crantée (rapport constant, pas de glissement).</p>
+
+                <h4>4. Transmission par chaînes</h4>
+                <p>Les chaînes à rouleaux transmettent la puissance entre arbres parallèles par obstacle. Avantages : rapport de transmission exact (pas de glissement), bonne tenue en charge, température élevée. Inconvénients : usure, nécessité de lubrification, bruit.</p>
+                <p><strong>Calcul :</strong> rapport i = Z_pignon_moteur / Z_pignon_récepteur. La puissance transmissible dépend du pas de chaîne, du nombre de dents et de la vitesse de rotation.</p>
+
+                <h4>5. Rendement et rapport de transmission global</h4>
+                <p>Le rendement global d'une chaîne de transmission est le produit des rendements de chaque étape : η_global = η1 · η2 · ... · ηn. Rendements typiques : engrenage (0,95-0,98), courroie trapézoïdale (0,92-0,96), chaîne (0,95-0,98), vis sans fin (0,40-0,85 selon le rapport).</p>
+                <p><strong>Couple de sortie :</strong> C_sortie = C_entrée · i · η_global</p>
+
+                <h4>6. Lubrification et maintenance</h4>
+                <p>La lubrification des transmissions est essentielle pour la durée de vie. Engrenages : huile de bain ou projection (ISO VG 150-320). Courroies : inspection de la tension et de l'usure, protection contre les contaminants. Chaînes : lubrification régulière par huile de chaîne ou graisse.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Rapport de transmission i</strong> : rapport des vitesses angulaires i = ω_entrée/ω_sortie = Z_sortie/Z_entrée</li>
+                    <li><strong>Module m d'un engrenage</strong> : paramètre caractérisant la taille des dents (d = m·Z)</li>
+                    <li><strong>Couple de sortie</strong> : C_sortie = C_entrée · i · η_global</li>
+                    <li><strong>Engrenage hélicoïdal</strong> : contact progressif, réduction du bruit, charge axiale supplémentaire</li>
+                    <li><strong>Vis sans fin</strong> : rapport de réduction élevé (jusqu'à 1/100), rendement faible (40-85%)</li>
+                    <li><strong>Courroie crantée</strong> : rapport constant (pas de glissement), combine les avantages des courroies et des chaînes</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Réducteur à engrenages</strong> : concevoir un réducteur à deux étages pour transmettre 5 kW avec un rapport total de 1/25</li>
+                    <li><strong>Transmission par courroie</strong> : dimensionner une transmission par courroie trapézoïdale entre moteur (5 kW, 1 500 tr/min) et machine réceptrice (500 tr/min)</li>
+                    <li><strong>Chaîne de transmission</strong> : calculer le rapport et vérifier la puissance transmissible pour une chaîne 08B à 1 000 tr/min</li>
+                    <li><strong>Variateur de vitesse</strong> : analyser un variateur à courroie conique (rapport variable par changement de diamètre effectif)</li>
+                    <li><strong>Bilan énergétique</strong> : calculer la puissance perdue et le couple réel disponible en sortie d'un réducteur à engrenages (η = 0,95 par étage)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un moteur tourne à 1 500 tr/min et entraîne une machine à 300 tr/min via un réducteur à engrenages. Le pignon moteur a 20 dents, la roue réceptrice 100 dents. Calculez le rapport de transmission et le couple de sortie si le couple moteur est 100 N·m et le rendement 0,96.</li>
+                    <li><strong>Exercice 2</strong> : Calculez le module et les dimensions principales (diamètre primitif, diamètre de tête, diamètre de pied) d'un engrenage droit à 40 dents, module m = 2 mm.</li>
+                    <li><strong>Exercice 3</strong> : Une transmission par courroie trapézoïdale a une poulie motrice de diamètre 150 mm à 1 500 tr/min et une poulie réceptrice de 300 mm. Calculez la vitesse de sortie, le rapport de transmission et la vitesse linéaire de la courroie.</li>
+                    <li><strong>Exercice 4</strong> : Un réducteur à vis sans fin a un rapport i = 1/40. La vis a un seul filet et tourne à 1 500 tr/min. Calculez la vitesse de sortie et le couple de sortie pour une puissance d'entrée de 3 kW (η = 0,7).</li>
+                    <li><strong>Exercice 5</strong> : Comparez trois solutions de transmission entre moteur (5 kW, 1 500 tr/min) et machine (375 tr/min, i = 4) : engrenages, courroie trapézoïdale, chaîne. Discutez les avantages et inconvénients de chaque solution.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> La transmission du mouvement mécanique repose sur différents principes (obstacle, adhérence, lien flexible). Les engrenages offrent un rapport fixe et un rendement élevé, adaptés aux transmissions de puissance. Les courroies et chaînes permettent des distances inter-arbres plus importantes avec une certaine flexibilité. Le rapport de transmission i = ω_entrée/ω_sortie détermine la relation entre vitesse et couple. Le rendement global de la chaîne de transmission conditionne la puissance réellement disponible en sortie. Le choix du système dépend de la puissance, de la distance, de la précision du rapport, du coût et des conditions de service.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mecanique-lecon11.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Analyse fonctionnelle →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

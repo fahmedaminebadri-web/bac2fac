@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 6 : Les Statistiques - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+        table.stats-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+        table.stats-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; }
+        table.stats-table td { padding: 9px 14px; border-bottom: 1px solid var(--border-light); }
+        table.stats-table tr:nth-child(even) { background: var(--bg-gray-50); }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <div class="lesson-header">
+            <h1>Leçon 6 : Les Statistiques</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 6</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Vocabulaire statistique</a></li>
+                <li><a href="#p2">Mesures de position : moyenne, médiane, mode</a></li>
+                <li><a href="#p3">Mesures de dispersion : variance et écart-type</a></li>
+                <li><a href="#p4">Quartiles et diagramme en boîte</a></li>
+                <li><a href="#p5">Représentations graphiques</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="p1">
+            <h3>📘 1. Vocabulaire statistique</h3>
+            <p>La <strong>population</strong> est l'ensemble des individus étudiés. Un <strong>caractère</strong> (ou variable) est la propriété observée sur chaque individu. On distingue :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔢</span><p>Caractère <strong>quantitatif</strong> : valeurs numériques (âge, taille, note…)</p></div>
+                <div class="key-point"><span class="icon">🏷️</span><p>Caractère <strong>qualitatif</strong> : modalités non numériques (couleur, profession…)</p></div>
+                <div class="key-point"><span class="icon">1️⃣</span><p>Caractère <strong>discret</strong> : valeurs isolées (notes entières de 0 à 20)</p></div>
+                <div class="key-point"><span class="icon">📊</span><p>Caractère <strong>continu</strong> : valeurs dans un intervalle (taille en cm)</p></div>
+            </div>
+            <p>La <strong>série statistique</strong> est la liste des valeurs observées. L'<strong>effectif</strong> d'une valeur est le nombre de fois où elle apparaît. La <strong>fréquence</strong> est l'effectif divisé par l'effectif total.</p>
+            <div class="example-box">
+                <h4>💡 Exemple : Notes d'une classe de 20 élèves</h4>
+                <p>Notes : 8, 10, 12, 15, 18, 8, 12, 14, 10, 16, 12, 9, 11, 13, 15, 10, 14, 12, 11, 17</p>
+                <p>Tableau d'effectifs :</p>
+                <table class="stats-table">
+                    <tr><th>Note</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th></tr>
+                    <tr><th>Effectif</th><td>2</td><td>1</td><td>3</td><td>2</td><td>4</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td></tr>
+                    <tr><th>Fréquence</th><td>0.10</td><td>0.05</td><td>0.15</td><td>0.10</td><td>0.20</td><td>0.05</td><td>0.10</td><td>0.10</td><td>0.05</td><td>0.05</td><td>0.05</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="p2">
+            <h3>📗 2. Mesures de position</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">La moyenne arithmétique</h3>
+            <div class="formula-box">
+                <div class="formula-title">Moyenne</div>
+                x̄ = (Σ xᵢ × nᵢ) / N &nbsp;&nbsp;&nbsp; où N = effectif total et nᵢ = effectif de la valeur xᵢ
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Notes : 2×8, 1×9, 3×10, 2×11, 4×12, 1×13, 2×14, 2×15, 1×16, 1×17, 1×18</p>
+                <p>x̄ = (16+9+30+22+48+13+28+30+16+17+18) / 20 = 247/20 = <strong>12.35</strong></p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">La médiane</h3>
+            <p>La <strong>médiane Me</strong> est la valeur qui sépare la série en deux parties égales (50% en dessous, 50% au-dessus). Pour la trouver :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📌</span><p>N impair : la médiane est la valeur de rang (N+1)/2</p></div>
+                <div class="key-point"><span class="icon">📌</span><p>N pair : la médiane est la moyenne des valeurs de rang N/2 et N/2 + 1</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple (20 valeurs)</h4>
+                <p>Rang 10 = 12, &nbsp; Rang 11 = 13 &nbsp;→&nbsp; Me = (12+13)/2 = <strong>12.5</strong></p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Le mode (ou classe modale)</h3>
+            <p>Le <strong>mode</strong> est la valeur (ou la classe) de plus grand effectif. Ici, le mode = <strong>12</strong> (effectif 4).</p>
+            <div class="warning-box">
+                <h4>⚠️ Moyenne vs Médiane</h4>
+                <p>La <strong>moyenne</strong> est sensible aux valeurs extrêmes.</p>
+                <p>La <strong>médiane</strong> est plus robuste : elle n'est pas modifiée par les valeurs aberrantes.</p>
+                <p>→ En présence de valeurs extrêmes, préférer la médiane !</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="p3">
+            <h3>📙 3. Mesures de dispersion : Variance et Écart-type</h3>
+            <p>La <strong>variance</strong> mesure la dispersion des valeurs autour de la moyenne :</p>
+            <div class="formula-box">
+                <div class="formula-title">Variance (formule développée)</div>
+                V = Σ nᵢ(xᵢ - x̄)² / N &nbsp;&nbsp; ou aussi &nbsp;&nbsp; V = (Σ nᵢxᵢ² / N) - x̄²
+            </div>
+            <p>L'<strong>écart-type</strong> σ est la racine carrée de la variance :</p>
+            <div class="formula-box">
+                <div class="formula-title">Écart-type</div>
+                σ = √V
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple de calcul</h4>
+                <p>Série : 2, 4, 4, 6, 8 &nbsp;→&nbsp; Moyenne x̄ = 24/5 = 4.8</p>
+                <p>V = [(2-4.8)² + (4-4.8)² + (4-4.8)² + (6-4.8)² + (8-4.8)²] / 5</p>
+                <p>V = [7.84 + 0.64 + 0.64 + 1.44 + 10.24] / 5 = 20.8 / 5 = 4.16</p>
+                <p>σ = √4.16 ≈ <strong>2.04</strong></p>
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📏</span><p>Plus σ est <strong>grand</strong>, plus les données sont <strong>dispersées</strong></p></div>
+                <div class="key-point"><span class="icon">📏</span><p>Plus σ est <strong>petit</strong>, plus les données sont <strong>concentrées</strong> autour de la moyenne</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="p4">
+            <h3>📕 4. Quartiles et diagramme en boîte</h3>
+            <p>Les <strong>quartiles</strong> partagent la série en 4 parties égales :</p>
+            <div class="formula-box">
+                <div class="formula-title">Quartiles</div>
+                Q₁ = 1er quartile (25% des données) &nbsp;|&nbsp; Q₂ = médiane (50%) &nbsp;|&nbsp; Q₃ = 3ème quartile (75%)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Diagramme en boîte (boîte à moustaches)</h3>
+            <div class="example-box">
+                <h4>💡 Construction</h4>
+                <p>Pour la série : 8, 9, 10, 10, 10, 11, 12, 12, 12, 12, 13, 14, 14, 15, 15, 16, 17, 18</p>
+                <p>Minimum = 8, &nbsp; Q₁ = 10, &nbsp; Me = 12.5, &nbsp; Q₃ = 15, &nbsp; Maximum = 18</p>
+                <p>Le diagramme en boîte affiche :</p>
+                <p>|———[━━━━━━━]———|</p>
+                <p>  8    10   12.5  15  18</p>
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📦</span><p>La <strong>boîte</strong> va de Q₁ à Q₃</p></div>
+                <div class="key-point"><span class="icon">━</span><p>Le trait central = <strong>médiane</strong></p></div>
+                <div class="key-point"><span class="icon">|</span><p>Les <strong>moustaches</strong> vont du minimum au maximum</p></div>
+                <div class="key-point"><span class="icon">📏</span><p>L'<strong>écart interquartile</strong> = Q₃ - Q₁ mesure 50% des données centrales</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="p5">
+            <h3>📒 5. Représentations graphiques</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📊</span><p><strong>Diagramme en bâtons</strong> : pour données quantitatives discrètes</p></div>
+                <div class="key-point"><span class="icon">📊</span><p><strong>Histogramme</strong> : pour données continues (classes)</p></div>
+                <div class="key-point"><span class="icon">🥧</span><p><strong>Diagramme circulaire (camembert)</strong> : pour données qualitatives</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Courbe cumulative</strong> (ogive) : fréquences cumulées croissantes</p></div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Classes et amplitudes</h3>
+            <p>Pour les données continues, on groupe en <strong>classes</strong>. L'<strong>amplitude</strong> d'une classe est la différence entre ses bornes.</p>
+            <div class="formula-box">
+                <div class="formula-title">Fréquence d'une classe</div>
+                Fréquence = Effectif de la classe / Effectif total × 100%
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Taille de 30 élèves</h4>
+                <table class="stats-table">
+                    <tr><th>Classe (cm)</th><th>[150 ; 160[</th><th>[160 ; 170[</th><th>[170 ; 180[</th><th>[180 ; 190[</th></tr>
+                    <tr><th>Effectif</th><td>5</td><td>12</td><td>10</td><td>3</td></tr>
+                    <tr><th>Fréquence</th><td>16.7%</td><td>40%</td><td>33.3%</td><td>10%</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=Les+Statistiques+-+Formulaire+Complet" alt="Résumé des statistiques">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet des statistiques</h3>
+                    <p>Moyenne, médiane, variance, écart-type, quartiles et représentations graphiques</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Statistiques">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques-lecon5.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Les Suites →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

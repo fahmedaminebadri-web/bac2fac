@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 6 : Le Moteur Triphasé - Électrique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .elec-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .elec-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .elec-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid #EAB308; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: #92400E; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border-left: 4px solid #F97316; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #C2410C; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FDE68A; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: #B45309; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="electrique.html" class="back-btn">← Retour aux leçons d'Électrique</a>
+
+        <div class="lesson-header" style="border-top: 4px solid #EAB308;">
+            <h1>Leçon 6 : Le Moteur Triphasé</h1>
+            <p class="breadcrumb">Électrique > Leçon 6</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Principe du système triphasé</a></li>
+                <li><a href="#p2">Couplages étoile et triangle</a></li>
+                <li><a href="#p3">Principe de fonctionnement du moteur asynchrone</a></li>
+                <li><a href="#p4">Puissance et rendement</a></li>
+                <li><a href="#p5">Démarrage et variation de vitesse</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls><source src="" type="audio/mpeg"></audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="elec-content" id="p1">
+            <h3>📘 1. Principe du système triphasé</h3>
+            <p>Un système <strong>triphasé</strong> est composé de <strong>3 phases</strong> (L1, L2, L3) décalées de 120° chacune, et souvent d'un <strong>neutre</strong> (N).</p>
+            <div class="formula-box">
+                <div class="formula-title">Tensions dans un système triphasé</div>
+                Tensions simples (phase-neutre) : V₁ = V₂ = V₃ = V <br>
+                Tensions composées (phase-phase) : U = V × √3
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔌</span><p><strong>Tension simple V</strong> : entre une phase et le neutre (ex: 230V en France)</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>Tension composée U</strong> : entre deux phases (ex: 400V en France)</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Déphasage</strong> : les 3 tensions sont décalées de 120°</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Répartition en France</h4>
+                <p>Réseau domestique : V = 230V, U = 400V</p>
+                <p>Chaque phase delivers 230V, la différence entre phases = 400V</p>
+                <p>→ Les moteurs industriels fonctionnent souvent en 400V (couplage triangle)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="elec-content" id="p2">
+            <h3>📗 2. Couplages étoile (Y) et triangle (Δ)</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Couplage étoile (Y)</h3>
+            <div class="formula-box">
+                <div class="formula-title">Couplage étoile</div>
+                U = √3 × V &nbsp;&nbsp;|&nbsp;&nbsp; I_ligne = I_ph <br>
+                Chaque enroulement reçoit la tension simple V
+            </div>
+            <p>Le neutre est connecté au point étoile. Ce couplage est utilisé pour les <strong>charges不平衡es</strong>.</p>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Couplage triangle (Δ)</h3>
+            <div class="formula-box">
+                <div class="formula-title">Couplage triangle</div>
+                U = V_ligne &nbsp;&nbsp;|&nbsp;&nbsp; I_ligne = √3 × I_ph <br>
+                Chaque enroulement reçoit la tension composée U
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">⭐</span><p><strong>Étoile</strong> : tension par enroulement ÷ par √3, courant inchangé</p></div>
+                <div class="key-point"><span class="icon">🔺</span><p><strong>Triangle</strong> : tension par enroulement inchangée, courant ÷ par √3</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Moteur 230V/400V</h4>
+                <p>• Sur réseau 230V/400V : coupler en <strong>triangle</strong> (400V entre phases)</p>
+                <p>• Sur réseau 130V/230V : coupler en <strong>étoile</strong> (230V par phase)</p>
+                <p>→ La plaque signalétique indique toujours les deux tensions : 230V/400V</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Erreur de couplage dangereuse</h4>
+                <p>Si un moteur prévu pour étoile (tension enroulement = 230V) est couplé en triangle sur 400V :</p>
+                <p>→ Chaque enroulement reçoit 400V au lieu de 230V → <strong>court-circuit烧毁</strong> !</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="elec-content" id="p3">
+            <h3>📙 3. Principe du moteur asynchrone triphasé</h3>
+            <p>Le <strong>moteur asynchrone</strong> (ou induction) est le moteur industriel le plus utilisé. Il n'a pas de contact électrique entre stator et rotor.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🧲</span><p><strong>Stator</strong> : enroulements alimentés par le réseau triphasé → crée un <em>champ magnétique tournant</em></p></div>
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Rotor</strong> : cages d'écureuil (barres courtes) — le champ induit des courants → couple</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>Glissement g</strong> : différence de vitesse entre champ et rotor</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Vitesse de synchronisme</div>
+                n_s = f / p &nbsp;&nbsp;(tr/min) &nbsp;&nbsp;|&nbsp;&nbsp; f = fréquence réseau (50 Hz) <br>
+                g = (n_s - n) / n_s &nbsp;&nbsp;(glissement, sans unité)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples de vitesse</h4>
+                <p>p = 1 (1 paire de pôles) : n_s = 3000 tr/min (synchronisme)</p>
+                <p>p = 2 : n_s = 1500 tr/min → charge typique : n ≈ 1440 tr/min → g ≈ 4%</p>
+                <p>p = 3 : n_s = 1000 tr/min → charge typique : n ≈ 960 tr/min → g ≈ 4%</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="elec-content" id="p4">
+            <h3>📕 4. Puissance et rendement</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Puissance absorbée</h3>
+            <div class="formula-box">
+                <div class="formula-title">Puissance active</div>
+                P₁ = √3 × U × I × cos(φ) &nbsp;&nbsp;(en Watts) <br>
+                Q = √3 × U × I × sin(φ) &nbsp;&nbsp;(en VAR — puissance réactive) <br>
+                S = √3 × U × I &nbsp;&nbsp;(en VA — puissance apparente)
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Puissance mécanique utile</h3>
+            <div class="formula-box">
+                <div class="formula-title">Puissance mécanique</div>
+                P_u = Cm × Ω &nbsp;&nbsp;|&nbsp;&nbsp; Ω = 2πn/60 &nbsp;&nbsp;(rad/s)
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Rendement</h3>
+            <div class="formula-box">
+                <div class="formula-title">Rendement</div>
+                η = P_u / P₁ &nbsp;&nbsp;|&nbsp;&nbsp; Typique : η = 0.75 à 0.95 selon la taille du moteur
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple numérique</h4>
+                <p>Moteur triphasé : P_u = 7.5 kW, cosφ = 0.85, η = 0.9</p>
+                <p>P₁ = 7.5 / 0.9 = <strong>8.33 kW</strong></p>
+                <p>I = P₁ / (√3 × U × cosφ) = 8330 / (1.732 × 400 × 0.85) ≈ <strong>14.2 A</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="elec-content" id="p5">
+            <h3>📒 5. Démarrage et variation de vitesse</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Démarrage direct</h3>
+            <p>Le moteur démarre en <strong>direct</strong> sur le réseau. Problème : le courant de démarrage Id ≈ 6 à 8 × Inominal.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">⭐</span><p><strong>Démarrage étoile-triangle</strong> : démarre en étoile (tension ÷√3), puis passe en triangle. Id ÷ 3</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>Démarrage statorique</strong> : résistances en série au démarrage</p></div>
+                <div class="key-point"><span class="icon">🔧</span><p><strong>Variateur de fréquence</strong> : variation de vitesse par variation de f (meilleure méthode)</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Variation de vitesse</div>
+                n = (60 × f) / p × (1 - g) &nbsp;&nbsp;|&nbsp;&nbsp; On fait varier f pour varier n
+            </div>
+            <div class="example-box">
+                <h4>💡 Variateur de fréquence</h4>
+                <p>Moteur 4 pôles (p=2), glissement 4%</p>
+                <p>À 50 Hz : n = 1500 × 0.96 = 1440 tr/min</p>
+                <p>À 25 Hz : n = 750 × 0.96 = 720 tr/min</p>
+                <p>→ Variation continue de 0 à n_nominal</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Facteur de puissance</h4>
+                <p>Le cos(φ) d'un moteur asynchrone à vide est faible (~0.2)</p>
+                <p>→ Compensation d'énergie réactive par <strong>condensateurs</strong> en triangle sur le réseau</p>
+                <p>→ Obligatoire pour les installations importantes (EDF penalise si cosφ < 0.8)</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/EAB308/1E3A5F?text=Moteur+Triphasé+-+Couplages+et+Puissances" alt="Résumé moteur triphasé">
+                <div class="resume-overlay">
+                    <h3>Moteur triphasé : couplages, glissement, puissances et démarrage</h3>
+                    <p>Étoile/triangle, vitesse synchrone, puissance active/réactive/apparente</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EAB308/1E3A5F?text=Video+Moteur+Triphasé">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <a href="electrique-lecon7.html" class="next-lesson" style="background: linear-gradient(135deg, #EAB308, #CA8A04);">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">La Logique Combinatoire →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

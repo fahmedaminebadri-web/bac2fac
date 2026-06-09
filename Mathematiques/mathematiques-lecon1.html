@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 8 : Les Nombres Complexes - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.1rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 8 : Les Nombres Complexes</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 8</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">Qu'est-ce qu'un nombre complexe ?</a></li>
+                <li><a href="#partie2">Forme algébrique et opérations</a></li>
+                <li><a href="#partie3">Conjugué et module</a></li>
+                <li><a href="#partie4">Forme trigonométrique</a></li>
+                <li><a href="#partie5">Formules d'Euler et de Moivre</a></li>
+                <li><a href="#partie6">Équations dans ℂ</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="partie1">
+            <h3>📘 1. Qu'est-ce qu'un nombre complexe ?</h3>
+            <p>On dit que <strong>ℝ</strong> (l'ensemble des nombres réels) est <em>insuffisant</em> pour résoudre certaines équations. Par exemple, l'équation <strong>x² + 1 = 0</strong> n'a aucune solution réelle car aucun nombre réel élevé au carré ne donne -1.</p>
+            <p>Pour résoudre ce problème, on introduit le nombre <strong>i</strong>, appelé <em>unité imaginaire</em>, tel que :</p>
+            <div class="formula-box">
+                <div class="formula-title">Définition fondamentale</div>
+                i² = -1
+            </div>
+            <p>Un <strong>nombre complexe</strong> est un nombre de la forme :</p>
+            <div class="formula-box">
+                <div class="formula-title">Forme algébrique d'un complexe</div>
+                z = a + bi &nbsp;&nbsp;&nbsp; avec a ∈ ℝ et b ∈ ℝ
+            </div>
+            <p>où <strong>a</strong> est la <em>partie réelle</em> et <strong>b</strong> est la <em>partie imaginaire</em>.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>Si <strong>b = 0</strong> → z est un <em>nombre réel</em> (ℝ ⊂ ℂ)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>Si <strong>a = 0</strong> et <strong>b ≠ 0</strong> → z est un <em>imaginaire pur</em></p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple concret</h4>
+                <p>z₁ = 3 + 5i &nbsp;→&nbsp; Re(z₁) = 3, &nbsp; Im(z₁) = 5</p>
+                <p>z₂ = -2 + 4i &nbsp;→&nbsp; Re(z₂) = -2, &nbsp; Im(z₂) = 4</p>
+                <p>z₃ = 7 &nbsp;→&nbsp; z₃ ∈ ℝ (donc z₃ ∈ ℂ)</p>
+                <p>z₄ = 3i &nbsp;→&nbsp; z₄ est un imaginaire pur</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="partie2">
+            <h3>📗 2. Forme algébrique et opérations</h3>
+            <p>Les opérations sur les nombres complexes respectent les mêmes règles que sur les réels, avec la règle i² = -1.</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">➕ Addition et soustraction</h3>
+            <div class="formula-box">
+                <div class="formula-title">Formule</div>
+                (a + bi) + (c + di) = (a + c) + (b + d)i
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>(3 + 5i) + (-2 + 4i) = (3 - 2) + (5 + 4)i = 1 + 9i</p>
+                <p>(3 + 5i) - (-2 + 4i) = (3 + 2) + (5 - 4)i = 5 + i</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">✖️ Multiplication</h3>
+            <div class="formula-box">
+                <div class="formula-title">Formule</div>
+                (a + bi)(c + di) = (ac - bd) + (ad + bc)i
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>(2 + 3i)(1 - 4i) = 2×1 + 2×(-4i) + 3i×1 + 3i×(-4i)</p>
+                <p>= 2 - 8i + 3i - 12i² &nbsp;→&nbsp; = 2 - 5i - 12(-1) = 2 - 5i + 12 = <strong>14 - 5i</strong></p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">➗ Division</h3>
+            <p>Pour diviser deux complexes, on multiplie le numérateur et le dénominateur par le <em>conjugué</em> du dénominateur.</p>
+            <div class="formula-box">
+                <div class="formula-title">Formule</div>
+                (a + bi) / (c + di) = (a + bi)(c - di) / (c² + d²)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>(1 + 2i) / (3 - i) &nbsp;= (1 + 2i)(3 + i) / (3² + (-1)²)</p>
+                <p>= (3 + i + 6i + 2i²) / 10 = (3 + 7i - 2) / 10 = (1 + 7i) / 10 = <strong>0.1 + 0.7i</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="partie3">
+            <h3>📙 3. Conjugué et module</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Le conjugué</h3>
+            <p>Le <strong>conjugué</strong> de z = a + bi est :</p>
+            <div class="formula-box">
+                <div class="formula-title">Conjugué</div>
+                z̄ = a - bi
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>z = 3 + 5i &nbsp;→&nbsp; z̄ = 3 - 5i</p>
+                <p>z = -2 + 4i &nbsp;→&nbsp; z̄ = -2 - 4i</p>
+                <p>Propriété : z × z̄ = a² + b² &nbsp;(toujours réel positif ou nul)</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Le module</h3>
+            <p>Le <strong>module</strong> de z = a + bi est sa "distance à l'origine" :</p>
+            <div class="formula-box">
+                <div class="formula-title">Module</div>
+                |z| = √(a² + b²)
+            </div>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📐</span>
+                    <p>|z| ≥ 0 toujours, et |z| = 0 &nbsp;⇔&nbsp; z = 0</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📐</span>
+                    <p>|z|² = z × z̄ = a² + b²</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📐</span>
+                    <p>|z₁ × z₂| = |z₁| × |z₂|</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📐</span>
+                    <p>|z₁ / z₂| = |z₁| / |z₂|</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>z = 3 + 4i &nbsp;→&nbsp; |z| = √(9 + 16) = √25 = <strong>5</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="partie4">
+            <h3>📕 4. Forme trigonométrique</h3>
+            <p>Tout nombre complexe non nul peut s'écrire sous forme <em>trigonométrique</em> :</p>
+            <div class="formula-box">
+                <div class="formula-title">Forme trigonométrique</div>
+                z = r(cos θ + i sin θ) &nbsp;&nbsp;&nbsp; avec r = |z| ≥ 0 et θ = Arg(z)
+            </div>
+            <p>où <strong>θ</strong> est l'<em>argument</em> de z, noté Arg(z) : c'est l'angle que fait le vecteur OM avec l'axe des réels positifs.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔁</span>
+                    <p>Arg(z) est défini <em>à 2π près</em> : Arg(z) = θ + 2kπ, k ∈ ℤ</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔁</span>
+                    <p>Pour retrouver a et b : a = r cos θ, &nbsp; b = r sin θ</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>z = 1 + i &nbsp;→&nbsp; r = √(1+1) = √2</p>
+                <p>cos θ = 1/√2 et sin θ = 1/√2 &nbsp;→&nbsp; θ = π/4</p>
+                <p>donc : z = √2(cos(π/4) + i sin(π/4))</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="partie5">
+            <h3>📒 5. Formules d'Euler et de Moivre</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Formules d'Euler</h3>
+            <div class="formula-box">
+                <div class="formula-title">Formules d'Euler</div>
+                cos θ = (e^(iθ) + e^(-iθ)) / 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sin θ = (e^(iθ) - e^(-iθ)) / 2i
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Formule de Moivre</h3>
+            <div class="formula-box">
+                <div class="formula-title">Formule de De Moivre</div>
+                [cos θ + i sin θ]^n = cos(nθ) + i sin(nθ) &nbsp;&nbsp;&nbsp; pour tout n ∈ ℤ
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>(cos(π/3) + i sin(π/3))² = cos(2π/3) + i sin(2π/3)</p>
+                <p>= (-1/2) + i(√3/2)</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Astuce de calcul rapide</h4>
+                <p>Si z = r(cos θ + i sin θ) et z' = r'(cos θ' + i sin θ'), alors :</p>
+                <p>z × z' = rr' (cos(θ+θ') + i sin(θ+θ'))</p>
+                <p>zⁿ = rⁿ (cos(nθ) + i sin(nθ))</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="math-content" id="partie6">
+            <h3>📓 6. Équations dans ℂ</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Équations du second degré</h3>
+            <p>Soit l'équation <strong>az² + bz + c = 0</strong> avec a ≠ 0. Le discriminant Δ = b² - 4ac.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📊</span>
+                    <p>Si <strong>Δ > 0</strong> → deux solutions réelles</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📊</span>
+                    <p>Si <strong>Δ = 0</strong> → une solution réelle double</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📊</span>
+                    <p>Si <strong>Δ < 0</strong> → deux solutions complexes conjuguées</p>
+                </div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Solutions complexes</div>
+                z₁ = (-b + i√|Δ|) / 2a &nbsp;&nbsp;&nbsp;&nbsp; z₂ = (-b - i√|Δ|) / 2a
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>z² + 2z + 5 = 0 &nbsp;→&nbsp; Δ = 4 - 20 = -16</p>
+                <p>√|Δ| = √16 = 4</p>
+                <p>z₁ = (-2 + 4i) / 2 = <strong>-1 + 2i</strong></p>
+                <p>z₂ = (-2 - 4i) / 2 = <strong>-1 - 2i</strong></p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Point clé à retenir</h4>
+                <p>Quand Δ < 0, les deux solutions sont toujours <strong>conjuguées</strong> l'une de l'autre (z₁ = z̄₂). C'est une propriété fondamentale des coefficients réels.</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=Les+Nombres+Complexes+-+Formulaire+Complet" alt="Résumé des nombres complexes">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet des nombres complexes</h3>
+                    <p>Partie réelle, imaginaire, module, argument, conjugué, formules d'Euler et de Moivre</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Nombres+Complexes">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Retour au sommaire</p>
+                <p class="next-lesson-title">Toutes les leçons Mathématiques →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

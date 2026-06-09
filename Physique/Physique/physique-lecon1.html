@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit RC - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 1: Circuit RC</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 1</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/F97316/FFFFFF?text=Circuit+RC" alt="Résumé du Circuit RC">
+                <div class="resume-overlay">
+                    <h3>Circuit RC</h3>
+                    <p>Charge et décharge d'un condensateur, constante de temps τ = RC.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/F97316/FFFFFF?text=Circuit+RC">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le comportement d'un condensateur dans un circuit en régime transitoire</li>
+                    <li><strong>Maîtriser</strong> les expressions de la tension et du courant en charge et en décharge</li>
+                    <li><strong>Définir et interpréter</strong> la constante de temps τ (tau) d'un circuit RC</li>
+                    <li><strong>Analyser</strong> l'évolution énergétique d'un circuit RC</li>
+                    <li><strong>Appliquer</strong> les résultats à des circuits pratiques (timing, filtrage, mémorisation)</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Notions de base sur le courant électrique, la tension et la loi d'Ohm</li>
+                    <li>Connaissance du comportement des condensateurs (capacité C, charge Q = C·V)</li>
+                    <li>Familiarité avec les lois de Kirchhoff (loi des mailles et loi des nœuds)</li>
+                    <li>Notions élémentaires d'analyse différentielle et de résolution d'équations différentielles du premier ordre</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Structure et comportement du condensateur</h4>
+                <p>Un condensateur est un dipôle passif composé de deux armatures conductrices séparées par un isolant (diélectrique). Sa propriété principale est sa capacité C, définie par la relation <strong>Q = C·V</strong>, où Q est la charge accumulée, V la tension à ses bornes et C la capacité en farads (F). Le condensateur ne permet pas le passage d'un courant permanent en régime stationnaire ; il se comporte comme un circuit ouvert pour le courant continu. L'énergie emmagasinée dans un condensateur chargé est <strong>E = ½·C·V²</strong>.</p>
+
+                <h4>2. Charge d'un circuit RC</h4>
+                <p>Lorsqu'on ferme l'interrupteur reliant un condensateur initialement déchargé à un générateur de tension continue E à travers une résistance R, le condensateur se charge progressivement.</p>
+                <div class="plan-highlight">
+                    <strong>Équation différentielle :</strong> R·C·(duc/dt) + uc = E<br>
+                    <strong>Tension aux bornes du condensateur :</strong> uc(t) = E·(1 − e^(−t/τ)), où τ = R·C<br>
+                    <strong>Courant de charge :</strong> i(t) = (E/R)·e^(−t/τ)
+                </div>
+
+                <h4>3. Décharge d'un circuit RC</h4>
+                <p>Si l'on remplace le générateur par un court-circuit, le condensateur chargé se décharge à travers la résistance :</p>
+                <ul>
+                    <li>Tension : <strong>uc(t) = E·e^(−t/τ)</strong></li>
+                    <li>Courant : <strong>i(t) = −(E/R)·e^(−t/τ)</strong> (signe négatif = sens inverse)</li>
+                    <li>Charge : <strong>q(t) = C·E·e^(−t/τ)</strong></li>
+                </ul>
+
+                <h4>4. Constante de temps τ = R·C</h4>
+                <p>La constante de temps τ = R·C a la dimension d'un temps (secondes). Elle représente :</p>
+                <ul>
+                    <li>Le temps nécessaire pour que la tension atteigne <strong>63,2%</strong> de sa valeur finale en charge</li>
+                    <li>Le temps nécessaire pour qu'elle descende à <strong>36,8%</strong> de sa valeur initiale en décharge</li>
+                    <li>Après <strong>t = 5τ</strong>, le condensateur est considéré comme quasi-totalement chargé (~99,3%) ou quasi-totalement déchargé (~0,7%)</li>
+                </ul>
+
+                <h4>5. Aspect énergétique</h4>
+                <p>Pendant la charge, l'énergie fournie par le générateur est partiellement stockée dans le condensateur (E_c = ½·C·E²) et partiellement dissipée dans la résistance (E_R = ½·C·E² également). Le rendement énergétique de la charge est donc de 50%. En décharge, l'énergie stockée dans le condensateur est entièrement dissipée dans la résistance.</p>
+
+                <h4>6. Applications pratiques</h4>
+                <p>Les circuits RC sont omniprésents en électronique : circuits de temporisation (monostables), filtres passe-bas RC, circuits anti-rebond pour interrupteurs mécaniques, circuits de filtrage pour alimentations découplées, mémoire DRAM, circuits de différenciation et d'intégration.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Constante de temps τ = R·C</strong> caractérise la rapidité du circuit RC</li>
+                    <li><strong>En charge :</strong> uc(t) = E(1 − e^(−t/τ))</li>
+                    <li><strong>En décharge :</strong> uc(t) = E·e^(−t/τ)</li>
+                    <li><strong>Après t = 5τ</strong>, le condensateur est quasi saturé ou quasi déchargé</li>
+                    <li><strong>Énergie emmagasinée :</strong> E_condo = ½·C·V²</li>
+                    <li><strong>Condensateur en régime permanent</strong> se comporte comme un circuit ouvert (courant nul)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Circuits de temporisation</strong> : minuteries, délais dans les circuits logiques</li>
+                    <li><strong>Filtres passe-bas passifs</strong> : combinaison R-C qui atténue les hautes fréquences</li>
+                    <li><strong>Circuits anti-rebond</strong> : atténuation des oscillations mécaniques d'un interrupteur</li>
+                    <li><strong>Découplage d'alimentation</strong> : filtrage des bruits haute fréquence sur les rails d'alimentation</li>
+                    <li><strong>Mémoires DRAM</strong> : chaque bit est stocké sous forme de charge dans un condensateur</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un circuit RC avec R = 10 kΩ et C = 100 µF est chargé sous E = 12 V. Calculer τ, la tension aux bornes du condensateur après 0,5 s, 1 s et 5 s.</li>
+                    <li><strong>Exercice 2</strong> : Même circuit en décharge : calculer la tension et le courant après 0,5 s et 2 s. Tracer les allures de uc(t) et i(t).</li>
+                    <li><strong>Exercice 3</strong> : Déterminer le temps nécessaire pour que le condensateur atteigne 90% de sa charge finale.</li>
+                    <li><strong>Exercice 4</strong> : Un condensateur de 470 µF est chargé à 15 V puis déchargé à travers une résistance de 2,2 kΩ. Calculer l'énergie dissipée dans la résistance.</li>
+                    <li><strong>Exercice 5</strong> : Quelle combinaison R-C choisir pour obtenir une temporisation de 1 seconde dans un circuit déclenché par un front ?</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le circuit RC est un système du premier ordre dont la dynamique est gouvernée par la constante de temps τ = R·C. Lors de la charge, la tension aux bornes du condensateur croît exponentiellement selon uc(t) = E(1 − e^(−t/τ)), tandis qu'en décharge elle décroît selon uc(t) = E·e^(−t/τ). Le courant suit une loi exponentielle inverse. Après un temps égal à 5τ, le régime transitoire est quasi-terminé. L'énergie stockée dans le condensateur est E = ½·C·V², mais la charge complète dissipe une énergie équivalente dans la résistance. Les circuits RC constituent la base de nombreux dispositifs de temporisation et de filtrage en électronique analogique.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon2.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Circuit RL →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

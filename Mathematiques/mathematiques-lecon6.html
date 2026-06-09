@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 3 : Les Intégrales - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <div class="lesson-header">
+            <h1>Leçon 3 : Les Intégrales</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 3</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Primitive d'une fonction</a></li>
+                <li><a href="#p2">Intégrale définie et théorème fondamental</a></li>
+                <li><a href="#p3">Calculs d'intégrales et propriétés</a></li>
+                <li><a href="#p4">Intégration par parties</a></li>
+                <li><a href="#p5">Applications : aires et volumes</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="p1">
+            <h3>📘 1. Primitive d'une fonction</h3>
+            <p>Une <strong>primitive</strong> F d'une fonction f sur un intervalle I est une fonction dérivable telle que :</p>
+            <div class="formula-box">
+                <div class="formula-title">Définition</div>
+                F'(x) = f(x) &nbsp;&nbsp;&nbsp; pour tout x ∈ I
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📌</span><p>Si F est une primitive de f, alors <strong>toutes les primitives</strong> sont de la forme F + C, où C est une constante</p></div>
+                <div class="key-point"><span class="icon">📌</span><p>Une fonction continue sur un intervalle <strong>admet toujours</strong> des primitives</p></div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Primitives usuelles</h3>
+            <div class="formula-box">
+                <div class="formula-title">Table des primitives</div>
+                ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp;&nbsp;(n ≠ -1) <br>
+                ∫ 1/x dx = ln|x| + C &nbsp;&nbsp;|&nbsp;&nbsp; ∫ eˣ dx = eˣ + C &nbsp;&nbsp;|&nbsp;&nbsp; ∫ cos(x) dx = sin(x) + C <br>
+                ∫ sin(x) dx = -cos(x) + C &nbsp;&nbsp;|&nbsp;&nbsp; ∫ 1/(1+x²) dx = arctan(x) + C
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>Primitive de f(x) = 3x² : &nbsp;&nbsp; F(x) = x³ + C</p>
+                <p>Primitive de f(x) = 1/x : &nbsp;&nbsp;&nbsp; F(x) = ln|x| + C</p>
+                <p>Primitive de f(x) = e²ˣ : &nbsp;&nbsp;&nbsp; F(x) = (1/2)e²ˣ + C</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="p2">
+            <h3>📗 2. Intégrale définie et théorème fondamental</h3>
+            <p>Si F est une primitive de f sur [a, b], l'<strong>intégrale définie</strong> est :</p>
+            <div class="formula-box">
+                <div class="formula-title">Théorème fondamental de l'analyse</div>
+                ∫ₐᵇ f(x) dx = [F(x)]ₐᵇ = F(b) - F(a)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>∫₀² x² dx = [x³/3]₀² = (8/3) - 0 = <strong>8/3</strong></p>
+                <p>Graphiquement : c'est l'aire sous la courbe y = x² entre x = 0 et x = 2</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Intégrale et aire</h4>
+                <p>Si f(x) ≥ 0 sur [a, b] : ∫ₐᵇ f(x) dx = <strong>aire</strong> entre la courbe et l'axe Ox</p>
+                <p>Si f(x) ≤ 0 : l'intégrale est <strong>négative</strong> (aire algébrique)</p>
+                <p>L'aire réelle = ∫|f(x)| dx</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="p3">
+            <h3>📙 3. Propriétés des intégrales</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📐</span><p><strong>Linéarité</strong> : ∫(af + bg) dx = a∫f dx + b∫g dx</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Relation de Chasles</strong> : ∫ₐᵇ f + ∫ᵇᶜ f = ∫ₐᶜ f</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Inversion des bornes</strong> : ∫ₐᵇ f = -∫ᵇₐ f</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Positivité</strong> : si f ≥ 0 sur [a,b] alors ∫ₐᵇ f ≥ 0</p></div>
+                <div class="key-point"><span class="icon">📐</span><p><strong>Ordre</strong> : si f ≤ g alors ∫ₐᵇ f ≤ ∫ₐᵇ g</p></div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Valeur moyenne</h3>
+            <div class="formula-box">
+                <div class="formula-title">Valeur moyenne</div>
+                μ = (1/(b-a)) × ∫ₐᵇ f(x) dx
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Valeur moyenne de f(x) = x² sur [0, 2] :</p>
+                <p>μ = (1/2) × ∫₀² x² dx = (1/2) × (8/3) = <strong>4/3</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="p4">
+            <h3>📕 4. Intégration par parties</h3>
+            <p>Quand les méthodes directes ne suffisent pas, on utilise l'<strong>intégration par parties</strong> (IPP) :</p>
+            <div class="formula-box">
+                <div class="formula-title">Formule d'intégration par parties</div>
+                ∫ u(x) · v'(x) dx = u(x)·v(x) - ∫ u'(x)·v(x) dx
+            </div>
+            <p>En version définie :</p>
+            <div class="formula-box">
+                <div class="formula-title">IPP définie</div>
+                ∫ₐᵇ u(x)·v'(x) dx = [u(x)·v(x)]ₐᵇ - ∫ₐᵇ u'(x)·v(x) dx
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔑</span><p>Règle mnémotechnique : <strong>IPPT</strong> = Intégrer, Dériver, Permuter, Tester</p></div>
+                <div class="key-point"><span class="icon">🔑</span><p>À choisir en priorité pour u : logarithmes, puissances de x</p></div>
+                <div class="key-point"><span class="icon">🔑</span><p>À dériver (donc à choisir en second) : exponentielles, sinus, cosinus</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : ∫ x·eˣ dx</h4>
+                <p>Posons u = x → u' = 1 &nbsp;&nbsp;|&nbsp;&nbsp; v' = eˣ → v = eˣ</p>
+                <p>∫ x·eˣ dx = x·eˣ - ∫ eˣ dx = x·eˣ - eˣ + C = eˣ(x - 1) + C</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="p5">
+            <h3>📒 5. Applications : aires et volumes</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Aire entre deux courbes</h3>
+            <p>L'aire entre f et g entre a et b (avec f ≥ g) est :</p>
+            <div class="formula-box">
+                <div class="formula-title">Aire entre deux courbes</div>
+                A = ∫ₐᵇ |f(x) - g(x)| dx
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Volume d'un solide de révolution</h3>
+            <p>Le volume du solide obtenu par rotation de la courbe y = f(x) autour de l'axe Ox, entre x = a et x = b :</p>
+            <div class="formula-box">
+                <div class="formula-title">Volume de révolution</div>
+                V = π × ∫ₐᵇ [f(x)]² dx
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Volume d'un cône de révolution</h4>
+                <p>Un cône de rayon R et hauteur H peut être vu comme la rotation de y = (R/H)x autour de Ox.</p>
+                <p>V = π × ∫₀ᴴ (R²/H²)·x² dx = π × (R²/H²) × [x³/3]₀ᴴ</p>
+                <p>V = π × (R²/H²) × (H³/3) = <strong>(1/3)πR²H</strong> ✓</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Formules d'aires à retenir</h4>
+                <p>• Disque : A = πR²</p>
+                <p>• Couronne circulaire : A = π(R² - r²)</p>
+                <p>• Trapèze : A = ((b₁ + b₂) / 2) × h</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=Les+Intégrales+-+Formulaire+Complet" alt="Résumé des intégrales">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet des intégrales</h3>
+                    <p>Primitives, théorème fondamental, intégration par parties, aires et volumes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Intégrales">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques-lecon7.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">La Fonction Exponentielle →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

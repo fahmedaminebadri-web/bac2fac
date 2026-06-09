@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit RL - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 2: Circuit RL</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 2</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/EA580C/FFFFFF?text=Circuit+RL" alt="Résumé du Circuit RL">
+                <div class="resume-overlay">
+                    <h3>Circuit RL</h3>
+                    <p>Établissement et annihilation du courant dans un circuit RL.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EA580C/FFFFFF?text=Circuit+RL">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le comportement d'une bobine (inductance) dans un circuit électrique</li>
+                    <li><strong>Maîtriser</strong> les expressions du courant et de la tension lors de l'établissement et de la rupture du courant</li>
+                    <li><strong>Définir et utiliser</strong> la constante de temps τ = L/R d'un circuit RL</li>
+                    <li><strong>Analyser</strong> l'énergie emmagasinée dans une bobine et les phénomènes dissipatifs</li>
+                    <li><strong>Appliquer</strong> les circuits RL aux applications pratiques (relais, protection contre surtensions)</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Notions de base sur le courant électrique, la tension et la loi d'Ohm</li>
+                    <li>Connaissance du comportement des inductances (fem auto = −L·di/dt)</li>
+                    <li>Maîtrise des lois de Kirchhoff et de la résolution d'équations différentielles du premier ordre</li>
+                    <li>Notion de champ magnétique et d'induction électromagnétique (loi de Faraday)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Structure et comportement de la bobine</h4>
+                <p>Une bobine (ou inductance) est un dipôle passif constitué d'un enroulement de fil conducteur autour d'un noyau. Elle stocke l'énergie sous forme de champ magnétique. La tension à ses bornes est directement liée à la variation du courant : <strong>uL(t) = L·(di/dt)</strong>, où L est l'inductance en henrys (H). En régime permanent (courant constant), la bobine se comporte comme un court-circuit car di/dt = 0. L'énergie emmagasinée est <strong>E = ½·L·I²</strong>.</p>
+
+                <h4>2. Établissement du courant dans un circuit RL</h4>
+                <p>L'équation différentielle du circuit série RL est : L·(di/dt) + R·i = E. La solution est :</p>
+                <div class="plan-highlight">
+                    <strong>Courant :</strong> i(t) = (E/R)·(1 − e^(−t/τ)), où τ = L/R<br>
+                    <strong>Tension aux bornes de la bobine :</strong> uL(t) = E·e^(−t/τ)<br>
+                    <strong>Tension aux bornes de la résistance :</strong> uR(t) = E·(1 − e^(−t/τ))
+                </div>
+                <p>Le courant croît exponentiellement vers sa valeur finale I_max = E/R.</p>
+
+                <h4>3. Annihilation (rupture) du courant</h4>
+                <p>Lorsque le circuit est soudainement ouvert, l'énergie stockée dans la bobine crée une fem auto-induite qui tend à maintenir le courant :</p>
+                <ul>
+                    <li>Courant : <strong>i(t) = I₀·e^(−t/τ)</strong></li>
+                    <li>Tension aux bornes de la bobine : <strong>uL(t) = −R·I₀·e^(−t/τ)</strong></li>
+                </ul>
+
+                <h4>4. Phénomène de surtension lors de la coupure</h4>
+                <p>Lors de la rupture brutale du courant, la variation très rapide du courant (di/dt très grand en valeur absolue) engendre une fem auto-induite très élevée, potentiellement destructrice pour les composants électroniques. C'est pourquoi on utilise des <strong>diodes de roue libre</strong> en parallèle des bobines (relais, moteurs) ou des varistances (MOV) pour protéger les circuits.</p>
+
+                <h4>5. Aspect énergétique</h4>
+                <p>L'énergie fournie par le générateur pendant l'établissement se répartit entre l'énergie dissipée par effet Joule (E_J = ½·L·I²) et l'énergie stockée dans la bobine (E_L = ½·L·I²). Le rendement est de 50%. En annihilation, l'énergie stockée est entièrement dissipée dans la résistance.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Tension aux bornes d'une bobine :</strong> uL = L·(di/dt)</li>
+                    <li><strong>Constante de temps du circuit RL :</strong> τ = L/R</li>
+                    <li><strong>Établissement du courant :</strong> i(t) = (E/R)·(1 − e^(−t/τ))</li>
+                    <li><strong>Annihilation du courant :</strong> i(t) = I₀·e^(−t/τ)</li>
+                    <li><strong>Énergie emmagasinée dans une bobine :</strong> E_L = ½·L·I²</li>
+                    <li><strong>Bobine en régime permanent</strong> se comporte comme un court-circuit</li>
+                    <li><strong>Surtension destructrice</strong> lors de la coupure brutale d'une bobine</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Commande de relais</strong> : la bobine crée un champ magnétique qui actionne le contact</li>
+                    <li><strong>Alimentations à découpage</strong> : l'inductance lisse le courant de sortie</li>
+                    <li><strong>Circuit d'allumage automobile</strong> : la rupture du courant dans la bobine haute tension crée l'étincelle</li>
+                    <li><strong>Protection par diode de roue libre</strong> : dissiper l'énergie de la bobine de manière contrôlée</li>
+                    <li><strong>Filtres passe-bas RL</strong> : atténuation des composantes haute fréquence d'un signal</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un circuit RL avec L = 0,5 H et R = 10 Ω est connecté à une source E = 24 V. Calculer τ, le courant maximal, et le courant après 0,1 s, 0,2 s et 5τ.</li>
+                    <li><strong>Exercice 2</strong> : Même circuit, coupé brutalement alors que le courant vaut I₀ = 2 A. Calculer l'évolution du courant et de la tension aux bornes de la bobine.</li>
+                    <li><strong>Exercice 3</strong> : Calculer la surtension maximale aux bornes de la bobine lors de la coupure si le courant décroît de 2 A à 0 en 1 ms.</li>
+                    <li><strong>Exercice 4</strong> : Un relais 12 V avec une bobine de 120 mH consomme 50 mA en régime permanent. Calculer R de la bobine et τ.</li>
+                    <li><strong>Exercice 5</strong> : Pour un circuit de délai de 50 ms, choisir L et R appropriées.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le circuit RL est un système du premier ordre dont la dynamique est régie par la constante de temps τ = L/R. Lors de l'établissement du courant, celui-ci croît exponentiellement vers I_max = E/R selon i(t) = (E/R)(1 − e^(−t/τ)). Lors de l'annihilation, le courant décroît selon i(t) = I₀·e^(−t/τ) et la fem auto-induite peut créer des surtensions dangereuses. L'énergie stockée dans la bobine est E = ½·L·I². Les circuits RL sont fondamentaux pour comprendre le comportement des composants inductifs et les phénomènes de protection contre les surtensions.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon3.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Filtre passe-bas passif →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

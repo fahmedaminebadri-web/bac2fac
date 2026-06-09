@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 7 : La Logique Combinatoire - Électrique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .elec-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .elec-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .elec-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid #EAB308; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: #92400E; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border-left: 4px solid #F97316; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #C2410C; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FDE68A; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: #B45309; font-weight: 500; }
+        table.truth-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.88rem; }
+        table.truth-table th { background: #EAB308; color: white; padding: 8px 12px; }
+        table.truth-table td { padding: 7px 12px; border: 1px solid var(--border-light); text-align: center; }
+        table.truth-table tr:nth-child(even) td { background: var(--bg-gray-50); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="electrique.html" class="back-btn">← Retour aux leçons d'Électrique</a>
+
+        <div class="lesson-header" style="border-top: 4px solid #EAB308;">
+            <h1>Leçon 7 : La Logique Combinatoire</h1>
+            <p class="breadcrumb">Électrique > Leçon 7</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Variables et portes logiques</a></li>
+                <li><a href="#p2">Algèbre de Boole</a></li>
+                <li><a href="#p3">Tables de vérité</a></li>
+                <li><a href="#p4">Simplification par Karnaugh</a></li>
+                <li><a href="#p5">Circuits combinatoires usuels</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls><source src="" type="audio/mpeg"></audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="elec-content" id="p1">
+            <h3>📘 1. Variables et portes logiques</h3>
+            <p>En logique combinatoire, les variables ne prennent que <strong>2 valeurs</strong> : 0 (FAUX) ou 1 (VRAI). C'est la base de l'électronique numérique.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔌</span><p><strong>NON (NOT)</strong> : S = ā — inverse la valeur</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>ET (AND)</strong> : S = a · b — résultat = 1 si a ET b = 1</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>OU (OR)</strong> : S = a + b — résultat = 1 si a OU b = 1</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>OU Exclusif (XOR)</strong> : S = a ⊕ b — résultat = 1 si a ≠ b</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Symboles et équations</div>
+                <pre style="font-size:0.88rem; line-height:1.8; margin:4px 0">
+  ┌───┐         ┌───┐         ┌───┐         ┌───┐
+  │ 1 ├─○      │   ├─○      │ ≥1├─○      │ =1├─○
+a─┤   │ S=a̅   a─┤ & ├─○     a─┤   │S=a+b  a─┤   │S=a⊕b
+  └───┘        b─┤   │S=a·b  b─┤   │       b─┤   │
+                 └───┘        └───┘          └───┘
+   NON           ET           OU          XOR</pre>
+            </div>
+            <div class="example-box">
+                <h4>💡 Tables de vérité des 4 portes</h4>
+                <table class="truth-table" style="display:inline-table; margin-right:20px;">
+                    <tr><th>a</th><th>b</th><th>a·b</th></tr>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </table>
+                <table class="truth-table" style="display:inline-table;">
+                    <tr><th>a</th><th>b</th><th>a+b</th></tr>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="elec-content" id="p2">
+            <h3>📗 2. Algèbre de Boole</h3>
+            <p>L'<strong>algèbre de Boole</strong> définit les règles de manipulation des expressions logiques.</p>
+            <div class="formula-box">
+                <div class="formula-title">Propriétés fondamentales</div>
+                <pre style="font-size:0.88rem; line-height:1.9; margin:4px 0">
+  Identités       : a + 0 = a     | a · 1 = a
+  Élément nul     : a + 1 = 1     | a · 0 = 0
+  Idempotence     : a + a = a     | a · a = a
+  Complémentaire  : a + ā = 1     | a · ā = 0
+  Commutativité   : a + b = b + a | a · b = b · a
+  Associativité   : (a+b)+c = a+(b+c) | (a·b)·c = a·(b·c)
+  Distributivité  : a·(b+c) = a·b + a·c | a+(b·c) = (a+b)·(a+c)</pre>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Théorèmes de De Morgan</h3>
+            <div class="formula-box">
+                <div class="formula-title">Théorèmes de De Morgan</div>
+                a + b = a̅ · b̅ &nbsp;&nbsp;|&nbsp;&nbsp; a · b = a̅ + b̅
+            </div>
+            <p>→ Le complémentaire d'un OU est un ET de complémentaires, et inversement.</p>
+            <div class="example-box">
+                <h4>💡 Exemple de simplification</h4>
+                <p>S = a · (b + c) + a · b</p>
+                <p>= a · b + a · c + a · b &nbsp;&nbsp;(distributivité)</p>
+                <p>= a · b + a · c &nbsp;&nbsp;(idempotence : b + b = b)</p>
+                <p>= a · (b + c) &nbsp;&nbsp;(factorisation)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="elec-content" id="p3">
+            <h3>📙 3. Tables de vérité</h3>
+            <p>Une <strong>table de vérité</strong> liste toutes les combinaisons possibles des entrées et la sortie correspondante.</p>
+            <div class="example-box">
+                <h4>💡 Exemple : Circuit majorité (S = 1 si au moins 2 entrées = 1)</h4>
+                <table class="truth-table">
+                    <tr><th>a</th><th>b</th><th>c</th><th>S</th></tr>
+                    <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                </table>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Formes canoniques</h3>
+            <div class="formula-box">
+                <div class="formula-title">Forme canonique disjonctive (somme de produits)</div>
+                S = Σ(indices des lignes où S=1) — on écrit le ET des entrées
+            </div>
+            <div class="example-box">
+                <h4>💡 Forme canonique de la majorité</h4>
+                <p>Lignes où S=1 : 3(a̅bc), 5(ab̅c), 6(abc̅), 7(abc)</p>
+                <p>S = a̅bc + ab̅c + abc̅ + abc</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="elec-content" id="p4">
+            <h3>📕 4. Simplification par Karnaugh</h3>
+            <p>La <strong>méthode de Karnaugh</strong> est une technique图形 pour simplifier les fonctions logiques. On regroupeles "1" adjacents.</p>
+            <div class="formula-box">
+                <div class="formula-title">Règles du tableau de Karnaugh</div>
+                <pre style="font-size:0.88rem; line-height:1.8; margin:4px 0">
+  • Former des groupes de 1, 2, 4, 8, 16… cases
+  • Les groupes sont des puissances de 2
+  • Les cases aux bords sont adjacentes (torique)
+  • Les groupes doivent être les plus grands possibles
+  • Une même case peut appartenir à plusieurs groupes</pre>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Table de Karnaugh à 3 variables</h4>
+                <pre style="font-size:0.85rem; line-height:1.8; font-family:'Courier New'; margin:8px 0">
+         ab
+        00  01  11  10
+    ┌────┬────┬────┬────┐
+ c=0│ 0  │ 0  │ 1  │ 0  │
+    ├────┼────┼────┼────┤
+ c=1│ 0  │ 1  │ 1  │ 1  │
+    └────┴────┴────┴────┘
+
+  Groupe horizontal (c=1, b=1) : a = 1 → a·b
+  Groupe vertical (b=1) : a·b + bc = b·(a+c)</pre>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Méthode alternative : Quine-McCluskey</h4>
+                <p>Pour les fonctions à 4+ variables ou avec des "don't care" (X), utiliser la méthode de <strong>Quine-McCluskey</strong> (algorithmique, programmable).</p>
+                <p>Les cases marquées X peuvent être considérées comme 0 ou 1 selon ce qui arrange !</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="elec-content" id="p5">
+            <h3>📒 5. Circuits combinatoires usuels</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Multiplexeur (MUX)</h3>
+            <div class="formula-box">
+                <div class="formula-title">Multiplexeur 4→1</div>
+                4 entrées de données (D0-D3), 2 entrées de sélection (S0-S1), 1 sortie Y <br>
+                Y = D₀ si S=00, Y = D₁ si S=01, Y = D₂ si S=10, Y = D₃ si S=11
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Démultiplexeur (DEMUX)</h3>
+            <p>1 entrée → routing vers 1 parmi N sorties selon le sélecteur.</p>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Codec encodeur / décodeur</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Encodeur</strong> : N lignes d'entrée → log₂N lignes de sortie (binaire)</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Décodeur</strong> : n lignes d'entrée → 2ⁿ lignes de sortie (un seul 1 actif)</p></div>
+                <div class="key-point"><span class="icon">➕</span><p><strong>Additionneur</strong> : addition binaire (半加器, 全加器 avec retenue)</p></div>
+                <div class="key-point"><span class="icon">🔍</span><p><strong>Comparateur</strong> : compare deux mots binaires (A > B, A = B, A < B)</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Additionneur complet (Full Adder)</h4>
+                <p>Entrées : a, b, Rin (retenue entrante)</p>
+                <p>Sorties : S = a ⊕ b ⊕ Rin &nbsp;&nbsp;|&nbsp;&nbsp; Rout = (a·b) + (Rin·(a⊕b))</p>
+                <p>En cascade : addition de mots de n bits</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Circuits intégrés courants</h4>
+                <p>• <strong>74HC08</strong> : 4 portes ET à 2 entrées</p>
+                <p>• <strong>74HC32</strong> : 4 portes OU à 2 entrées</p>
+                <p>• <strong>74HC04</strong> : 6 portes NON</p>
+                <p>• <strong>74HC86</strong> : 4 portes XOR</p>
+                <p>• <strong>74HC151</strong> : multiplexeur 8→1</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/EAB308/1E3A5F?text=Logique+Combinatoire+-+Portes+et+Karnaugh" alt="Résumé logique combinatoire">
+                <div class="resume-overlay">
+                    <h3>Portes logiques, Algèbre de Boole, Tables de vérité et Karnaugh</h3>
+                    <p>Synthèse complète de la logique combinatoire</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EAB308/1E3A5F?text=Video+Logique+Combinatoire">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <a href="electrique.html" class="next-lesson" style="background: linear-gradient(135deg, #EAB308, #CA8A04);">
+            <div>
+                <p class="next-lesson-text">Retour au sommaire</p>
+                <p class="next-lesson-title">Toutes les leçons Électrique →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

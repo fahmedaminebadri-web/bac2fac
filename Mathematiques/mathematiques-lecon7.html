@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 1 : La Fonction Exponentielle - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <div class="lesson-header">
+            <h1>Leçon 1 : La Fonction Exponentielle</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 1</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Définition et notation</a></li>
+                <li><a href="#p2">Propriétés algébriques</a></li>
+                <li><a href="#p3">Étude de la fonction exp(x)</a></li>
+                <li><a href="#p4">Équations et inéquations</a></li>
+                <li><a href="#p5">Dérivée de exp(u(x))</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="p1">
+            <h3>📘 1. Définition et notation</h3>
+            <p>La fonction exponentielle, notée <strong>exp</strong> ou eˣ, est l'unique fonction f telle que :</p>
+            <div class="formula-box">
+                <div class="formula-title">Définition caractéristique</div>
+                f'(x) = f(x) &nbsp;&nbsp;&nbsp; et &nbsp;&nbsp;&nbsp; f(0) = 1
+            </div>
+            <p>Cela signifie que la dérivée de l'exponentielle est <em>égale à elle-même</em> ! C'est cette propriété extraordinaire qui la rend unique.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📌</span><p><strong>e</strong> ≈ 2.71828… est le <em>nombre d'Euler</em> (constante irrationnelle)</p></div>
+                <div class="key-point"><span class="icon">📌</span><p>exp(x) = eˣ &nbsp;→&nbsp; notation interchangeable</p></div>
+                <div class="key-point"><span class="icon">📌</span><p>exp est définie sur <strong>ℝ tout entier</strong></p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Valeurs remarquables</h4>
+                <p>e⁰ = 1 &nbsp;&nbsp;|&nbsp;&nbsp; e¹ = e ≈ 2.718 &nbsp;&nbsp;|&nbsp;&nbsp; e² ≈ 7.389 &nbsp;&nbsp;|&nbsp;&nbsp; e⁻¹ ≈ 0.368</p>
+                <p>Pour tout x, <strong>eˣ > 0</strong> (toujours positive)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="p2">
+            <h3>📗 2. Propriétés algébriques</h3>
+            <p>Pour tous réels a et b :</p>
+            <div class="formula-box">
+                <div class="formula-title">Propriétés fondamentales</div>
+                eᵃ × eᵇ = eᵃ⁺ᵇ &nbsp;&nbsp;|&nbsp;&nbsp; eᵃ / eᵇ = eᵃ⁻ᵇ &nbsp;&nbsp;|&nbsp;&nbsp; (eᵃ)ⁿ = eᵃⁿ
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔑</span><p>e⁻ˣ = 1/eˣ &nbsp;(parité)</p></div>
+                <div class="key-point"><span class="icon">🔑</span><p>eᵃ = eᵇ &nbsp;⇔&nbsp; a = b &nbsp;(injectivité)</p></div>
+                <div class="key-point"><span class="icon">🔑</span><p>Attention : <strong>eᵃᵇ ≠ eᵃ · eᵇ</strong> en général. On a eᵃᵇ = (eᵃ)ᵇ</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Simplification d'expressions</h4>
+                <p>e² × e³ = e⁵ &nbsp;&nbsp;|&nbsp;&nbsp; e⁶ / e² = e⁴ &nbsp;&nbsp;|&nbsp;&nbsp; (e²)³ = e⁶</p>
+                <p>e⁵⁻ˣ / e² = e⁵⁻ˣ⁻² = e³⁻ˣ</p>
+                <p>eˣ × e⁻ˣ = e⁰ = <strong>1</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="p3">
+            <h3>📙 3. Étude de la fonction exp(x)</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📈</span><p><strong>Domaine</strong> : ℝ (définie partout)</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Image</strong> : ]0, +∞[ (strictement positive)</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Dérivée</strong> : exp'(x) = exp(x) = eˣ</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Monotonicité</strong> : strictement <strong>croissante</strong> sur ℝ (car eˣ > 0)</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Limites</strong> : lim eˣ = +∞ quand x → +∞, &nbsp; lim eˣ = 0 quand x → -∞</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Asymptotes</strong> : l'axe Ox (y=0) est asymptote horizontale en -∞</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Tableau de variation</div>
+                <pre style="margin:8px 0">
+  x        -∞          0          +∞
+          ━━━━━━━━━━━━━━━━━━━━━━━━━━→ x
+  eˣ       ↗  1  ↗  +∞
+        0       </pre>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="p4">
+            <h3>📕 4. Équations et inéquations exponentielles</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Équations</h3>
+            <p>La fonction exp étant <em>strictement croissante</em>, on peut passer aux logarithmes :</p>
+            <div class="formula-box">
+                <div class="formula-title">Résolution</div>
+                eᵃ = eᵇ &nbsp;⇔&nbsp; a = b &nbsp;&nbsp;|&nbsp;&nbsp; eˣ = k &nbsp;⇔&nbsp; x = ln(k) &nbsp;&nbsp;(k > 0)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>e²ˣ⁻³ = e⁵ &nbsp;→&nbsp; 2x - 3 = 5 &nbsp;→&nbsp; x = <strong>4</strong></p>
+                <p>e³ˣ = 7 &nbsp;→&nbsp; 3x = ln(7) &nbsp;→&nbsp; x = <strong>ln(7)/3</strong></p>
+                <p>eˣ = 0 &nbsp;→&nbsp; <strong>impossible</strong> (eˣ > 0 toujours)</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Inéquations</h3>
+            <p>Comme exp est croissante :</p>
+            <div class="formula-box">
+                <div class="formula-title">Inéquations</div>
+                eᵃ < eᵇ &nbsp;⇔&nbsp; a < b &nbsp;&nbsp;|&nbsp;&nbsp; eᵃ > eᵇ &nbsp;⇔&nbsp; a > b
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>e²ˣ > e³ &nbsp;→&nbsp; 2x > 3 &nbsp;→&nbsp; x > <strong>3/2</strong></p>
+                <p>e⁻ˣ < 5 &nbsp;→&nbsp; -x < ln(5) &nbsp;→&nbsp; x > <strong>-ln(5)</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="p5">
+            <h3>📒 5. Dérivée de exp(u(x))</h3>
+            <p>Par composition avec la règle de dérivation :</p>
+            <div class="formula-box">
+                <div class="formula-title">Dérivée de exp(u)</div>
+                [eᵘ⁽ˣ⁾]' = u'(x) × eᵘ⁽ˣ⁾
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>[e²ˣ]' = 2e²ˣ &nbsp;&nbsp;|&nbsp;&nbsp; [eˣ²]' = 2xeˣ²</p>
+                <p>[e^(3x+1)]' = 3e^(3x+1)</p>
+                <p>[e^(-x)]' = -e^(-x) &nbsp;&nbsp;|&nbsp;&nbsp; [e^√x]' = (1/(2√x)) · e^√x</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Erreurs fréquentes à éviter</h4>
+                <p>❌ eˣ⁺ʸ = eˣ + eʸ (FAUX)</p>
+                <p>✅ eˣ⁺ʸ = eˣ × eʸ</p>
+                <p>❌ e²ˣ = 2eˣ (FAUX)</p>
+                <p>✅ e²ˣ = (eˣ)²</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=La+Fonction+Exponentielle+-+Formulaire+Complet" alt="Résumé exponentielle">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet de l'exponentielle</h3>
+                    <p>Définition, propriétés, équations, inéquations et dérivées de eˣ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Fonction+Exponentielle">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques-lecon8.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">La Fonction Logarithme →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

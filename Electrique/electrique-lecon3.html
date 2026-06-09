@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 3 : Compteurs Synchrones - Électrique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .elec-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .elec-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .elec-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid #EAB308; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: #92400E; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border-left: 4px solid #F97316; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #C2410C; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FDE68A; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: #B45309; font-weight: 500; }
+        table.flip-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.88rem; }
+        table.flip-table th { background: #EAB308; color: white; padding: 8px 12px; }
+        table.flip-table td { padding: 7px 12px; border: 1px solid var(--border-light); text-align: center; }
+        table.flip-table tr:nth-child(even) td { background: var(--bg-gray-50); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="electrique.html" class="back-btn">← Retour aux leçons d'Électrique</a>
+
+        <div class="lesson-header" style="border-top: 4px solid #EAB308;">
+            <h1>Leçon 3 : Compteurs Synchrones</h1>
+            <p class="breadcrumb">Électrique > Leçon 3</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Les bascules (élément de base)</a></li>
+                <li><a href="#p2">Compteurs asynchrones</a></li>
+                <li><a href="#p3">Compteurs synchrones</a></li>
+                <li><a href="#p4">Décompteurs et compteurs réversibles</a></li>
+                <li><a href="#p5">Diviseurs de fréquence</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls><source src="" type="audio/mpeg"></audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="elec-content" id="p1">
+            <h3>📘 1. Les bascules (élément de base)</h3>
+            <p>Une <strong>bascule</strong> est un circuit séquentiel capable de stocker 1 bit d'information. C'est l'élément fondamental des compteurs.</p>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:12px;">Bascule JK</h3>
+            <div class="formula-box">
+                <div class="formula-title">Table de vérité — Bascule JK (sur front descendant)</div>
+                <pre style="font-size:0.9rem; line-height:1.6; margin:8px 0">
+  J   K   Q(n+1)
+  0   0   Q(n)  ← mémorisation
+  0   1   0     ← mise à 0 (reset)
+  1   0   1     ← mise à 1 (set)
+  1   1   Q̄(n)  ← toggle (basculement)</pre>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Bascule D (Data/Latch)</h3>
+            <div class="formula-box">
+                <div class="formula-title">Bascule D</div>
+                Q(n+1) = D &nbsp;&nbsp;(la sortie suit l'entrée D après un front d'horloge)
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔔</span><p><strong>Horloge (CLK)</strong> : synchronise les changements d'état</p></div>
+                <div class="key-point"><span class="icon">⬆️</span><p><strong>Front montant</strong> : changement sur le passage de 0→1</p></div>
+                <div class="key-point"><span class="icon">⬇️</span><p><strong>Front descendant</strong> : changement sur le passage de 1→0</p></div>
+                <div class="key-point"><span class="icon">🔒</span><p><strong>Entrées asynchrones</strong> (Preset/Clear) : forcent l'état hors de l'horloge</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="elec-content" id="p2">
+            <h3>📗 2. Compteurs asynchrones (ripple counters)</h3>
+            <p>Dans un compteur <strong>asynchrone</strong>, seule la première bascule reçoit l'horloge. Les bascules suivantes sont pilotées par la sortie de la précédente.</p>
+            <div class="formula-box">
+                <div class="formula-title">Compteur asynchrone modulo N</div>
+                Nombre de bascules : n = ⌈log₂ N⌉
+            </div>
+            <div class="example-box">
+                <h4>💡 Compteur binaire modulo 8 (3 bascules)</h4>
+                <table class="flip-table">
+                    <tr><th>H</th><th>Q2</th><th>Q1</th><th>Q0</th><th>Décimal</th></tr>
+                    <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>2</td><td>0</td><td>1</td><td>0</td><td>2</td></tr>
+                    <tr><td>3</td><td>0</td><td>1</td><td>1</td><td>3</td></tr>
+                    <tr><td>4</td><td>1</td><td>0</td><td>0</td><td>4</td></tr>
+                    <tr><td>5</td><td>1</td><td>0</td><td>1</td><td>5</td></tr>
+                    <tr><td>6</td><td>1</td><td>1</td><td>0</td><td>6</td></tr>
+                    <tr><td>7</td><td>1</td><td>1</td><td>1</td><td>7</td></tr>
+                    <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>remise à 0</td></tr>
+                </table>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Inconvénient des compteurs asynchrones</h4>
+                <p>Propagation du signal d'horloge → <strong>délai de propagation cumulatif</strong></p>
+                <p>→ Les états intermédiaires créent des états parasites ("glitchs")</p>
+                <p>→ Limité aux basses fréquences</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="elec-content" id="p3">
+            <h3>📙 3. Compteurs synchrones</h3>
+            <p>Dans un compteur <strong>synchrone</strong>, <em>toutes les bascules</em> reçoivent le même signal d'horloge. Les entrées J et K (ou D) sont calculées pour produire la séquence désirée.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">✅</span><p><strong>Avantage</strong> : pas de délai de propagation — tous les bits changent simultanément</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>Fréquence plus élevée</strong> possible</p></div>
+                <div class="key-point"><span class="icon">🎯</span><p><strong>États parasites éliminés</strong></p></div>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Logique de commutation synchrone</h3>
+            <p>Pour un compteur binaire, les entrées J/K de chaque bascule sont :</p>
+            <div class="formula-box">
+                <div class="formula-title">Équations pour compteur binaire synchrone</div>
+                J₀ = K₀ = 1 (Q₀ bascule à chaque front — bit de poids faible) <br>
+                J₁ = K₁ = Q₀ (Q₁ bascule quand Q₀=1) <br>
+                J₂ = K₂ = Q₀·Q₁ (Q₂ bascule quand Q₀=1 ET Q₁=1)
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="elec-content" id="p4">
+            <h3>📕 4. Décompteurs et compteurs réversibles</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Décompteur</h3>
+            <p>Un <strong>décompteur</strong> compte à l'envers (7, 6, 5, 4, 3, 2, 1, 0, 7…). La différence avec un compteur :</p>
+            <div class="formula-box">
+                <div class="formula-title">Différence compteur / décompteur</div>
+                Compteur : Q₀ commute à chaque front, Q₁ commute quand Q₀ passe de 1→0 <br>
+                Décompteur : Q₁ commute quand Q₀ passe de 0→1
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Compteur-décompteur réversible</h3>
+            <div class="formula-box">
+                <div class="formula-title">Mode de fonctionnement</div>
+                UP = 1 : comptage ↑ &nbsp;&nbsp;|&nbsp;&nbsp; DOWN = 1 : décomptage ↓
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Remise à zéro et préchargement</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Clear (MR)</strong> : remise à 0 asynchrone de toutes les bascules</p></div>
+                <div class="key-point"><span class="icon">⬆️</span><p><strong>Load / Preset</strong> : précharge une valeur initiale</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="elec-content" id="p5">
+            <h3>📒 5. Diviseurs de fréquence</h3>
+            <p>Un compteur est aussi un <strong>diviseur de fréquence</strong> : la fréquence de sortie de chaque bascule est divisée par 2.</p>
+            <div class="formula-box">
+                <div class="formula-title">Division de fréquence</div>
+                f(Q0) = f_H / 2 &nbsp;&nbsp;|&nbsp;&nbsp; f(Q1) = f_H / 4 &nbsp;&nbsp;|&nbsp;&nbsp; f(Qn) = f_H / 2ⁿ
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Horloge à 1 MHz (f_H = 1 000 000 Hz)</p>
+                <p>Q0 → 500 kHz &nbsp;&nbsp;|&nbsp;&nbsp; Q1 → 250 kHz &nbsp;&nbsp;|&nbsp;&nbsp; Q2 → 125 kHz</p>
+                <p>Q3 → 62.5 kHz &nbsp;&nbsp;|&nbsp;&nbsp; Q19 → ≈ 0.95 Hz (visible à l'œil nu !)</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Compteur modulo N personnalisé</h4>
+                <p>Pour créer un compteur modulo 10 (0→9), on détecte l'état 10 (1010₂) et on active le Clear :</p>
+                <p>→ Sortie NAND des bascules 1 et 3 → vers l'entrée Clear de toutes les bascules</p>
+                <p>Circuit intégré courant : <strong>74HC90</strong> (modulo 2 et 5), <strong>74HC161</strong> (modulo 16 synchrone)</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/EAB308/1E3A5F?text=Compteurs+Synchrones+-+Bascules+et+Tables+de+Comptage" alt="Résumé compteurs">
+                <div class="resume-overlay">
+                    <h3>Bascules JK, D et tables de comptage</h3>
+                    <p>Compteurs asynchrones, synchrones, décompteurs et diviseurs de fréquence</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EAB308/1E3A5F?text=Video+Compteurs+Synchrones">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <a href="electrique-lecon4.html" class="next-lesson" style="background: linear-gradient(135deg, #EAB308, #CA8A04);">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Les Microcontrôleurs →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

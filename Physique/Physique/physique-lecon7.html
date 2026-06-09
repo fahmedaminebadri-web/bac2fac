@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit RLC amorti et non amorti - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 7: Circuit RLC amorti et non amorti</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 7</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/7C3AED/FFFFFF?text=Circuit+RLC+amorti+et+non+amorti" alt="Résumé du Circuit RLC amorti et non amorti">
+                <div class="resume-overlay">
+                    <h3>Amortissement RLC</h3>
+                    <p>Facteur de qualité, régimes apériodique, critique et pseudo-périodique.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/7C3AED/FFFFFF?text=Circuit+RLC+amorti+et+non+amorti">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Analyser</strong> les différents régimes d'oscillation d'un circuit RLC série</li>
+                    <li><strong>Maîtriser</strong> le facteur d'amortissement α et la pulsation propre ω₀</li>
+                    <li><strong>Identifier</strong> les trois régimes : apériodique, critique et pseudo-périodique</li>
+                    <li><strong>Calculer</strong> le facteur de qualité Q et comprendre sa signification</li>
+                    <li><strong>Relier</strong> le comportement temporel et fréquentiel d'un circuit RLC</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Connaissance des circuits LC (oscillations non amorties) et de leur équation différentielle</li>
+                    <li>Maîtrise des équations différentielles du second ordre et de leurs solutions</li>
+                    <li>Notions sur les nombres complexes et l'impédance</li>
+                    <li>Compréhension du phénomène de résonance (vu en leçon 6)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Équation différentielle du circuit RLC série</h4>
+                <p>L'équation de maille s'écrit : L·(di/dt) + R·i + (1/C)·∫i·dt = 0. En posant <strong>α = R/(2L)</strong> (facteur d'amortissement) et <strong>ω₀ = 1/√(L·C)</strong> (pulsation propre non amortie), l'équation devient :</p>
+                <div class="plan-highlight">
+                    <strong>d²q/dt² + 2α·(dq/dt) + ω₀²·q = 0</strong>
+                </div>
+
+                <h4>2. Régime apériodique (α > ω₀)</h4>
+                <p>Si α > ω₀ (R suffisamment grand), les deux solutions de l'équation caractéristique sont réelles et négatives. La solution est :</p>
+                <p><strong>q(t) = A·e^(s₁·t) + B·e^(s₂·t)</strong></p>
+                <p>Le condensateur se décharge sans osciller : la tension décroît monotoniquement vers zéro. Ce régime est dit « apériodique » car il n'y a pas de retournement de signe de la tension.</p>
+
+                <h4>3. Régime critique (α = ω₀)</h4>
+                <p>Si α = ω₀ (R = 2·√(L/C)), les deux solutions sont égales et réelles : s = −α (racine double). La solution est :</p>
+                <p><strong>q(t) = (A + B·t)·e^(−α·t)</strong></p>
+                <p>Ce régime est la limite entre le comportement oscillant et non oscillant, correspondant à la décroissance la plus rapide possible sans oscillation.</p>
+
+                <h4>4. Régime pseudo-périodique (α < ω₀)</h4>
+                <p>Si α < ω₀ (R suffisamment petit), les solutions sont complexes conjuguées : s = −α ± j·ω_d, où <strong>ω_d = √(ω₀² − α²)</strong> est la pulsation des oscillations amorties. La solution est :</p>
+                <p><strong>q(t) = Q₀·e^(−α·t)·cos(ω_d·t + φ)</strong></p>
+                <p>La tension oscille autour de zéro avec une amplitude décroissant exponentiellement. La pseudo-période est <strong>T_d = 2π/ω_d ≈ T₀</strong> (pour α << ω₀).</p>
+
+                <h4>5. Facteur de qualité Q</h4>
+                <p>Le facteur de qualité <strong>Q = ω₀/(2α) = (1/R)·√(L/C)</strong> est un nombre sans dimension qui caractérise le degré d'amortissement :</p>
+                <ul>
+                    <li>Q << 1 : fort amortissement (régime apériodique)</li>
+                    <li>Q ≈ ½ : amortissement critique</li>
+                    <li>Q >> 1 : faible amortissement (oscillations nombreuses)</li>
+                </ul>
+
+                <h4>6. Aspect énergétique et analogie mécanique</h4>
+                <p>L'énergie totale du circuit RLC dissipée est la somme de l'énergie stockée (C et L) et de l'énergie dissipée (R). Chaque cycle d'oscillation, l'énergie perdue par effet Joule est ΔE = E_stockée · (2π/Q). Le circuit RLC série est l'analogue direct d'un système masse-ressort-amortisseur : M ↔ L, K ↔ 1/C, amortisseur ↔ R.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Équation différentielle :</strong> d²q/dt² + 2α·(dq/dt) + ω₀²·q = 0, avec α = R/(2L), ω₀ = 1/√(L·C)</li>
+                    <li><strong>Régime apériodique :</strong> α > ω₀, q(t) = A·e^(s₁·t) + B·e^(s₂·t)</li>
+                    <li><strong>Régime critique :</strong> α = ω₀, q(t) = (A + B·t)·e^(−α·t)</li>
+                    <li><strong>Régime pseudo-périodique :</strong> α < ω₀, q(t) = Q₀·e^(−α·t)·cos(ω_d·t + φ)</li>
+                    <li><strong>Pseudo-période :</strong> T_d = 2π/ω_d = 2π/√(ω₀² − α²)</li>
+                    <li><strong>Facteur de qualité :</strong> Q = ω₀/(2α) = (1/R)·√(L/C)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Circuits d'amortissement</strong> : absorption des surtensions dans les systèmes électriques</li>
+                    <li><strong>Capteurs vibrants</strong> : les circuits RLC modélisent le comportement des accéléromètres MEMS</li>
+                    <li><strong>Oscillateurs à quartz</strong> : Q très élevé pour une stabilité de fréquence exceptionnelle</li>
+                    <li><strong>Filtres sélectifs</strong> : le facteur de qualité détermine la largeur de la bande passante</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un circuit RLC avec L = 1 H, C = 1 µF et R variable. Déterminer la valeur de R pour avoir le régime critique.</li>
+                    <li><strong>Exercice 2</strong> : Pour R = 100 Ω, L = 1 H, C = 1 µF, calculer α, ω₀, ω_d, Q et la pseudo-période. Identifier le régime.</li>
+                    <li><strong>Exercice 3</strong> : Tracer q(t) pour les trois régimes (apériodique, critique, pseudo-périodique) sur le même graphique.</li>
+                    <li><strong>Exercice 4</strong> : Un circuit RLC a Q = 50 et fc = 1 MHz. Quelle est la bande passante ? Après combien de périodes l'amplitude est-elle divisée par e ?</li>
+                    <li><strong>Exercice 5</strong> : Un circuit RLC avec R = 50 Ω, L = 5 mH, C = 10 nF. Calculer ω₀, α, Q et déterminer le type de régime.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le circuit RLC série présente trois régimes distincts selon la valeur du facteur d'amortissement α = R/(2L) par rapport à ω₀ = 1/√(L·C). Le régime apériodique (α > ω₀) correspond à un retour monotone sans oscillation. Le régime critique (α = ω₀) est la limite de retour sans oscillation le plus rapide. Le régime pseudo-périodique (α < ω₀) présente des oscillations d'amplitude décroissante avec la pseudo-période T_d = 2π/√(ω₀² − α²). Le facteur de qualité Q = (1/R)·√(L/C) caractérise l'amortissement : plus Q est grand, plus le système oscille longtemps. L'analogie avec le système masse-ressort-amortisseur permet de comprendre les oscillations mécaniques par analogie électrique.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon8.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Filtre passe-bande →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

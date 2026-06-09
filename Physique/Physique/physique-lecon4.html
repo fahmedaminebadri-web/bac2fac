@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtre passe-bas actif - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 4: Filtre passe-bas actif</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 4</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/C2410C/FFFFFF?text=Filtre+passe-bas+actif" alt="Résumé du filtre passe-bas actif">
+                <div class="resume-overlay">
+                    <h3>Filtre actif à AmplOp</h3>
+                    <p>Filtre passe-bas actif avec amplificateur opérationnel et gain.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/C2410C/FFFFFF?text=Filtre+passe-bas+actif">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> les avantages des filtres actifs par rapport aux filtres passifs</li>
+                    <li><strong>Analyser</strong> le fonctionnement d'un filtre passe-bas actif du premier ordre à amplificateur opérationnel</li>
+                    <li><strong>Déterminer</strong> la fréquence de coupure et le gain en bande passante</li>
+                    <li><strong>Tracer et interpréter</strong> le diagramme de Bode d'un filtre actif</li>
+                    <li><strong>Dimensionner</strong> les composants R et C d'un filtre actif pour des spécifications données</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Connaissance du filtre passe-bas passif (RC) et de ses caractéristiques</li>
+                    <li>Maîtrise du fonctionnement de l'amplificateur opérationnel (AOP) : mode linéaire, masses virtuelles</li>
+                    <li>Familiarité avec les montages de base de l'AOP : inverseur, non-inverseur, suiveur</li>
+                    <li>Notions sur les fonctions de transfert et les diagrammes de Bode</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Introduction aux filtres actifs</h4>
+                <p>Contrairement aux filtres passifs (RC, RL, RLC) qui ne peuvent qu'atténuer certaines bandes de fréquences, les filtres actifs intègrent des composants actifs (transistors, amplificateurs opérationnels) capables d'amplifier le signal. Avantages : gain en amplitude possible, possibilité de cascader plusieurs cellules pour obtenir des pentes plus raides, isolation entre étages, absence de pertes d'insertion en bande passante.</p>
+
+                <h4>2. Filtre actif du premier ordre : montage inverseur</h4>
+                <p>Le filtre passe-bas actif le plus simple utilise un AOP en montage inverseur. La fonction de transfert est :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = −(R₂/R₁) · (1 / (1 + jω·R₁·C₁))</strong><br>
+                    <strong>Gain DC :</strong> Av = −R₂/R₁ (configurable)<br>
+                    <strong>Fréquence de coupure :</strong> fc = 1/(2π·R₁·C₁)
+                </div>
+
+                <h4>3. Caractéristiques du filtre actif</h4>
+                <p>La fréquence de coupure est définie par fc = 1/(2π·R₁·C₁), exactement comme pour le filtre RC passif. Cependant, le gain en bande passante (pour ω << ωc) est égal à Av = −R₂/R₁, qui peut être supérieur à 1 (amplification) ou inférieur à 1 (atténuation).</p>
+
+                <h4>4. Diagramme de Bode du filtre actif</h4>
+                <p>Le diagramme de Bode d'un filtre actif du premier ordre se compose de deux asymptotes : une horizontale au gain Av (gain DC) pour ω << ωc, et une droite de pente −20 dB/décade pour ω >> ωc. En phase, on observe une variation de 180° (dû à l'inversion) pour ω << ωc, à 135° pour ω = ωc, et à 90° pour ω >> ωc.</p>
+
+                <h4>5. Comparaison avec le filtre passif</h4>
+                <table class="plan-table">
+                    <tr><th>Critère</th><th>Filtre passif RC</th><th>Filtre actif</th></tr>
+                    <tr><td>Gain en amplitude</td><td>≤ 0 dB</td><td>Configurable (supérieur ou inférieur à 0 dB)</td></tr>
+                    <tr><td>Drive de charge</td><td>Limité par R</td><td>Oui (impédance de sortie faible de l'AOP)</td></tr>
+                    <tr><td>Bande passante</td><td>Non limitée</td><td>Limitée par le produit gain-bande de l'AOP</td></tr>
+                    <tr><td>Alimentation</td><td>Non nécessaire</td><td>Oui (symétrique ou asymétrique)</td></tr>
+                </table>
+
+                <h4>6. Applications des filtres actifs passe-bas</h4>
+                <p>Conditionnement de signaux (amplification + filtrage de capteurs), filtrage anti-aliasing actif avec gain, systèmes audio (égalisation), instrumentation (rejection du bruit), filtrage avant CAN avec adaptation du niveau du signal.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Fonction de transfert :</strong> H(jω) = Av / (1 + j(ω/ωc)) avec Av = −R₂/R₁ et ωc = 1/(R₁·C₁)</li>
+                    <li><strong>Gain en bande passante</strong> configurable (différent de 0 dB)</li>
+                    <li><strong>Pente d'atténuation :</strong> −20 dB/décade (premier ordre)</li>
+                    <li><strong>Fréquence de coupure :</strong> fc = 1/(2π·R₁·C₁)</li>
+                    <li><strong>Déphasage :</strong> 180° − arctan(ω/ωc)</li>
+                    <li><strong>Filtre actif vs passif :</strong> gain amplifiable, drive de charge, nécessite alimentation</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Préamplificateurs audio</strong> : filtrage des basses fréquence parasites et amplification du signal</li>
+                    <li><strong>Capteurs de pression</strong> : amplification du signal issu du pont de Wheatstone et filtrage du bruit</li>
+                    <li><strong>Systèmes de contrôle</strong> : filtrage des signaux de commande pour éliminer les bruits HF</li>
+                    <li><strong>Convertisseurs CAN</strong> : filtrage anti-aliasing avec gain pour adapter le niveau du signal</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Concevoir un filtre passe-bas actif inverseur avec fc = 5 kHz et un gain de 10 (20 dB). Choisir R₁, R₂ et C₁.</li>
+                    <li><strong>Exercice 2</strong> : Pour le montage avec R₁ = 10 kΩ, R₂ = 47 kΩ, C₁ = 1 nF, calculer le gain DC, fc et tracer le diagramme de Bode approximatif.</li>
+                    <li><strong>Exercice 3</strong> : Un filtre actif a un gain DC de 6 dB et fc = 1 kHz. Quel est le gain à 5 kHz ? À 10 kHz ?</li>
+                    <li><strong>Exercice 4</strong> : Comparer les avantages et inconvénients d'un filtre actif du premier ordre par rapport à un filtre passif RC.</li>
+                    <li><strong>Exercice 5</strong> : Pourquoi utilise-t-on une rétroaction négative dans un filtre actif à AOP ?</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le filtre passe-bas actif combine un réseau RC avec un amplificateur opérationnel en montage inverseur pour obtenir une fonction de transfert H(jω) = Av/(1 + j(ω/ωc)). Le gain en bande passante Av = −R₂/R₁ est configurable, permettant l'amplification ou l'atténuation. La fréquence de coupure fc = 1/(2π·R₁·C₁) est définie par le réseau RC. Le diagramme de Bode présente deux asymptotes (plate puis −20 dB/décade) et un déphasage variant de 180° à 90°. Les filtres actifs offrent des performances supérieures aux filtres passifs en termes de gain et de capacité de drive de charge, mais nécessitent une alimentation.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon5.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Circuit LC →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

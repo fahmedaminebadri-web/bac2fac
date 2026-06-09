@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train épicycloïdal - Mécanique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="mecanique.html" class="back-btn">
+            ← Retour aux leçons de Mécanique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 12: Train épicycloïdal</h1>
+            <p class="breadcrumb">Mécanique > Leçon 12</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/C8D0D9/FFFFFF?text=Train+epicycloïdal" alt="Résumé du train épicycloïdal">
+                <div class="resume-overlay">
+                    <h3>Train épicycloïdal</h3>
+                    <p>Réducteurs planétaires, trains épicycloïdaux et rapports de transmission.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/C8D0D9/FFFFFF?text=Train+epicycloïdal">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Définir</strong> la structure et les composants d'un train épicycloïdal (planétaire, satellite, satellite, couronne)</li>
+                    <li><strong>Calculer</strong> le rapport de transmission d'un train épicycloïdal simple par la méthode de Willis (arrêt d'un élément)</li>
+                    <li><strong>Identifier</strong> les différents modes de fonctionnement (réducteur, multiplicateur, inverseur, blocage)</li>
+                    <li><strong>Analyser</strong> la répartition des efforts dans un train planétaire et dimensionner les éléments</li>
+                    <li><strong>Concevoir</strong> un réducteur épicycloïdal en fonction du rapport et du couple requis</li>
+                    <li><strong>Appliquer</strong> la formule de Willis et maîtriser les rapports de transmission pour chaque configuration</li>
+                    <li><strong>Distinguer</strong> les trains épicycloïdaux simples, doubles et compound</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Notions de transmission par engrenages et rapport de transmission (i = Z_sortie/Z_entrée)</li>
+                    <li>Connaissance des engrenages : géométrie, denture, module</li>
+                    <li>Notions de cinématique des mécanismes (degrés de liberté, mobilité)</li>
+                    <li>Notions de dynamique : couple, puissance, rendement</li>
+                    <li>Calcul matriciel simple pour les trains épicycloïdaux compound</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Structure du train épicycloïdal</h4>
+                <p>Le train épicycloïdal (ou réducteur planétaire) est un mécanisme à engrenages dont les axes des roues sont concentriques. Il est composé de quatre éléments principaux :</p>
+                <ul>
+                    <li><strong>Planetarium (porte-satellite)</strong> : bras qui porte les satellites et les entraîne en rotation</li>
+                    <li><strong>Satellite(s)</strong> : roues dentées qui engrènent simultanément avec le solaire et la couronne</li>
+                    <li><strong>Solaire (pignon central)</strong> : roue dentée centrale engrenant avec les satellites</li>
+                    <li><strong>Couronne (roue annulaire)</strong> : roue dentée intérieure engrenant avec les satellites</li>
+                </ul>
+                <p>Ce mécanisme offre une compacité exceptionnelle grâce à la disposition coaxiale des éléments. Un train épicycloïdal simple utilise 3 éléments mobiles (solaire, couronne, porte-satellite) et un élément fixe.</p>
+
+                <h4>2. Formule de Willis — Calcul du rapport de transmission</h4>
+                <p>La méthode de Willis permet de calculer le rapport de transmission d'un train épicycloïdal en rendant un élément fixe (le stopper). Le rapport de transmission apparent (avec porte-satellite arrêté) est :</p>
+                <div class="plan-highlight">
+                    <strong>i_0 = (−1)^n · (Z_satellite / Z_solaire) · (Z_couronne / Z_satellite) = (−1)^n · Z_couronne / Z_solaire</strong><br>
+                    où n est le nombre d'étages d'engrènement.<br>
+                    <strong>Formule générale (Willis) :</strong> i = (ω_solaire − ω_ps) / (ω_couronne − ω_ps)
+                </div>
+                <p>En posant ω_ps = 0 (porte-satellite fixe), on obtient i_0 = ω_solaire / ω_couronne (apparent). Puis on revient au rapport réel en ajoutant ω_ps.</p>
+
+                <h4>3. Configurations et modes de fonctionnement</h4>
+                <p>Le train épicycloïdal offre plusieurs configurations selon l'élément двигатель (entrée), l'élément récepteur (sortie) et l'élément fixe :</p>
+                <table class="plan-table">
+                    <tr><th>Configuration</th><th>Entrée</th><th>Sortie</th><th>Fixe</th><th>Rapport i</th></tr>
+                    <tr><td>Réducteur simple</td><td>Solaire</td><td>Couronne</td><td>Porte-satellite</td><td>−Z_couronne/Z_solaire (i > 1)</td></tr>
+                    <tr><td>Multiplicateur</td><td>Couronne</td><td>Solaire</td><td>Porte-satellite</td><td>−Z_solaire/Z_couronne (i < 1)</td></tr>
+                    <tr><td>Inverseur de sens</td><td>Solaire</td><td>Porte-satellite</td><td>Couronne</td><td>−Z_solaire/Z_couronne</td></tr>
+                    <tr><td>Blocage (différentiel)</td><td>Deux éléments</td><td> 第三 éléments entraînés</td><td>Aucun</td><td>Rotation conjuguée</td></tr>
+                </table>
+
+                <h4>4. Train épicycloïdal compound (à plusieurs trains)</h4>
+                <p>Les trains compound combinent plusieurs trains épicycloïdaux pour obtenir des rapports de transmission plus élevés ou des configurations spéciales. Le rapport global est le produit des rapports de chaque étage. Exemple : le réducteur de Differentiel automobile combine deux trains épicycloïdaux pour obtenir une répartition de couple entre les roues.</p>
+
+                <h4>5. Répartition des efforts et dimensionnement</h4>
+                <p>Dans un train épicycloïdal, les satellites transmettent le couple par engrènement avec le solaire et la couronne. Les efforts sur les dents sont équilibre radialement par le porte-satellite. Le couple sur chaque satellite est répartis équitablement (si n satellites identiques).</p>
+                <p><strong>Couple sur le solaire :</strong> C_solaire = C_entrée<br>
+                <strong>Couple sur la couronne :</strong> C_couronne = C_sortie = C_solaire · i<br>
+                <strong>Couple sur le porte-satellite :</strong> C_ps = C_solaire + C_couronne (somme vectorielle)</p>
+                <p>Le dimensionnement des satellites vérifie la résistance des dents (contrainte de flexion σ = M·c/I) et le dimensionnement des arbres.</p>
+
+                <h4>6. Applications des trains épicycloïdaux</h4>
+                <p>Les réducteurs planétaires sont utilisés là où la compacité et la rigidité sont critiques : boîte de vitesses automatique (automobile), réducteurs industriels (robotique,CNC), systèmes de vis sans fin haute performance, différentiels automobiles et machines agricoles.</p>
+                <p>Avantages : compacité (rapport puissance/volume élevé), répartition de la charge sur plusieurs satellites, coaxialité entrée-sortie, rigidité torsionnelle élevée. Inconvénients : coût plus élevé, complexité de fabrication et d'assemblage.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Train épicycloïdal</strong> : mécanisme à engrenages coaxiaux (solaire, satellites, couronne, porte-satellite)</li>
+                    <li><strong>Formule de Willis</strong> : i = (ω_solaire − ω_ps) / (ω_couronne − ω_ps)</li>
+                    <li><strong>Rapport apparent i_0</strong> : rapport calculé en rendant le porte-satellite fixe</li>
+                    <li><strong>Réducteur planétaire</strong> : solar → couronne avec porte-satellite fixe, i = Z_couronne/Z_solaire</li>
+                    <li><strong>Différentiel</strong> : aucun élément fixe, permet la rotation différentielle (somme des vitesses constante)</li>
+                    <li><strong>Compacité</strong> : le train épicycloïdal offre le rapport de réduction le plus élevé pour un encombrement minimal</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Boîte de vitesses automatique</strong> : analyser le fonctionnement planetary gearset d'une transmission automatique à 6 rapports</li>
+                    <li><strong>Réducteur industriel</strong> : dimensionner un réducteur planétaire pour transmettre 2 kW avec i = 1/10</li>
+                    <li><strong>Différentiel automobile</strong> : calculer la répartition du couple entre les deux roues d'une voiture (différentiel ouvert)</li>
+                    <li><strong>Robot industriel</strong> : intégrer un réducteur planétaire dans la chaîne cinématique d'un robot manipulateur</li>
+                    <li><strong>Wind turbine gearbox</strong> : analyser un réducteur planétaire multi-étages pour une éolienne de 2 MW</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un train épicycloïdal a Z_solaire = 20, Z_satellite = 15, Z_couronne = 50. Calculez le rapport de transmission pour les configurations : a) solaire entraîne, couronne fixe, porte-satellite sortie ; b) solaire entraîne, porte-satellite fixe, couronne sortie.</li>
+                    <li><strong>Exercice 2</strong> : Déterminez le rapport de transmission d'un réducteur planétaire avec 1 soleil de 30 dents, 3 satellites de 20 dents chacun et une couronne de 70 dents. L'entrée est le solaire, la sortie la couronne, le porte-satellite est bloqué.</li>
+                    <li><strong>Exercice 3</strong> : Un différentiel automobile a un solaire de 15 dents, des satellites de 12 dents (×2) et une couronne de 39 dents. Calculez i pour chaque configuration. Pourquoi le différentiel permet-il la rotation différentielle des roues ?</li>
+                    <li><strong>Exercice 4</strong> : Calculez le couple sur chaque élément d'un train épicycloïdal qui transmet 500 N·m en sortie (couronne). Le solaire a 25 dents, la couronne 75 dents.</li>
+                    <li><strong>Exercice 5</strong> : Concevez un réducteur planétaire pour obtenir un rapport i = −5 (réducteur) avec des nombres de dents raisonnables (Z solaire ≥ 15, Z couronne ≤ 100). Justifiez votre choix.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le train épicycloïdal (réducteur planétaire) est un mécanisme compact et performant pour la transmission de puissance. Sa structure coaxiale (solaire, satellites, couronne, porte-satellite) permet de multiples configurations selon l'élément d'entrée, de sortie et l'élément fixe. La formule de Willis i = (ω_solaire − ω_ps)/(ω_couronne − ω_ps) permet de calculer le rapport de transmission dans toutes les configurations. Les applications vont du différentiel automobile aux réducteurs industriels de haute performance. Le choix du nombre de satellites et des rapports de denture optimise le compromis entre compacité, couple et rendement.
+            </div>
+        </section>
+
+        <!-- BOUTON RETOUR À LA MATIÈRE -->
+        <a href="mecanique.html" class="next-lesson" style="background: linear-gradient(135deg, #475569, #334155);">
+            <div>
+                <p class="next-lesson-text">Retour à la matière</p>
+                <p class="next-lesson-title">Toutes les leçons de Mécanique ←</p>
+            </div>
+            <span class="next-lesson-arrow">←</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

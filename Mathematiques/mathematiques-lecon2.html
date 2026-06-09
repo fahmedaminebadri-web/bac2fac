@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 5 : Les Probabilités - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <div class="lesson-header">
+            <h1>Leçon 5 : Les Probabilités</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 5</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Vocabulaire des probabilités</a></li>
+                <li><a href="#p2">Probabilités simples et compound events</a></li>
+                <li><a href="#p3">Probabilités conditionnelles</a></li>
+                <li><a href="#p4">Indépendance d'événements</a></li>
+                <li><a href="#p5">Variable aléatoire et espérance</a></li>
+                <li><a href="#p6">Loi binomiale</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="p1">
+            <h3>📘 1. Vocabulaire des probabilités</h3>
+            <p>Une <strong>épreuve aléatoire</strong> est une expérience dont on connaît tous les résultats possibles mais dont on ne peut pas prédire lequel va se produire. L'ensemble de tous les résultats possibles s'appelle <strong>l'univers Ω</strong>.</p>
+            <p>Un <strong>événement</strong> est un sous-ensemble de Ω. On dit qu'un événement est <em>réalisé</em> quand le résultat de l'épreuve lui appartient.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">✅</span><p><strong>Événement certain</strong> : se réalise toujours (Ω lui-même)</p></div>
+                <div class="key-point"><span class="icon">❌</span><p><strong>Événement impossible</strong> : ne se réalise jamais (∅)</p></div>
+                <div class="key-point"><span class="icon">🔀</span><p><strong>Événements incompatibles</strong> : A ∩ B = ∅ (ils ne peuvent pas se produire ensemble)</p></div>
+                <div class="key-point"><span class="icon">↔️</span><p><strong>Événement contraire</strong> de A : Ā = Ω \ A</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Opérations sur les événements</div>
+                A ∪ B : "A ou B" (au moins un des deux) &nbsp;&nbsp;|&nbsp;&nbsp; A ∩ B : "A et B" (les deux)
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="p2">
+            <h3>📗 2. Probabilités simples</h3>
+            <p>On appelle <strong>probabilité</strong> une fonction P qui associe à chaque événement un nombre dans [0, 1] vérifiant :</p>
+            <div class="formula-box">
+                <div class="formula-title">Axiomes des probabilités</div>
+                P(Ω) = 1 &nbsp;&nbsp;&nbsp;&nbsp; P(∅) = 0 &nbsp;&nbsp;&nbsp;&nbsp; Si A ∩ B = ∅ alors P(A ∪ B) = P(A) + P(B)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Propriétés immédiates</h3>
+            <div class="formula-box">
+                <div class="formula-title">Conséquences</div>
+                P(Ā) = 1 - P(A) &nbsp;&nbsp;&nbsp;&nbsp; Si A ⊂ B alors P(A) ≤ P(B)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>On lance un dé équilibré à 6 faces. Ω = {1, 2, 3, 4, 5, 6}</p>
+                <p>P({2}) = 1/6, &nbsp; P({pair}) = P({2,4,6}) = 3/6 = 1/2</p>
+                <p>P({>3}) = P({4,5,6}) = 3/6 = 1/2</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Formule de la réunion</h3>
+            <div class="formula-box">
+                <div class="formula-title">Inclusion-Exclusion</div>
+                P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="p3">
+            <h3>📙 3. Probabilités conditionnelles</h3>
+            <p>La probabilité de A <em>sachant que</em> B s'est réalisé se note <strong>P_B(A)</strong> ou <strong>P(A | B)</strong>.</p>
+            <div class="formula-box">
+                <div class="formula-title">Définition</div>
+                P(A | B) = P(A ∩ B) / P(B) &nbsp;&nbsp;&nbsp; pour P(B) > 0
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple concret</h4>
+                <p>Une urne contient 3 boules rouges et 2 boules bleues. On tire 2 boules sans remise.</p>
+                <p>P(2ème rouge | 1ère rouge) = ?</p>
+                <p>Après avoir tiré une rouge, il reste 2 rouges sur 4 boules → P = 2/4 = 1/2</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Formule des probabilités composées</h3>
+            <div class="formula-box">
+                <div class="formula-title">Probabilités composées</div>
+                P(A ∩ B) = P(A) × P(B | A) = P(B) × P(A | B)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Formule des probabilités totales</h3>
+            <p>Si (B₁, B₂, ..., Bₙ) est une <em>partition</em> de Ω (ils sont deux à deux incompatibles et leur réunion est Ω) :</p>
+            <div class="formula-box">
+                <div class="formula-title">Probabilités totales</div>
+                P(A) = Σ P(Bᵢ) × P(A | Bᵢ)
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Formule de Bayes</h4>
+                <p>P(A | B) = P(B | A) × P(A) / P(B)</p>
+                <p>Très utile quand on veut "inverser" la conditionnalité.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="p4">
+            <h3>📕 4. Indépendance</h3>
+            <p>Deux événements A et B sont <strong>indépendants</strong> si la réalisation de l'un ne change pas la probabilité de l'autre :</p>
+            <div class="formula-box">
+                <div class="formula-title">Indépendance</div>
+                A et B indépendants ⇔ P(A ∩ B) = P(A) × P(B)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>On lance deux pièces équilibrées. P(1ère = Pile) = 1/2, P(2ème = Pile) = 1/2</p>
+                <p>P(les deux = Pile) = 1/4 = 1/2 × 1/2 → <strong>indépendantes</strong></p>
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">💡</span><p>Si A et B indépendants, alors A et B̄ le sont aussi, de même que Ā et B̄</p></div>
+                <div class="key-point"><span class="icon">💡</span><p>Si P(A) = 0 ou 1, A est indépendant de tout événement</p></div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="p5">
+            <h3>📒 5. Variable aléatoire et espérance</h3>
+            <p>Une <strong>variable aléatoire</strong> X est une fonction qui associe à chaque résultat de l'univers un nombre réel.</p>
+            <p>La <strong>loi de probabilité</strong> de X est la liste des valeurs xᵢ et de leurs probabilités P(X = xᵢ).</p>
+            <div class="formula-box">
+                <div class="formula-title">Espérance, Variance, Écart-type</div>
+                E(X) = Σ xᵢ × P(X = xᵢ) &nbsp;&nbsp;|&nbsp;&nbsp; V(X) = Σ (xᵢ - E(X))² × P(X = xᵢ) &nbsp;&nbsp;|&nbsp;&nbsp; σ(X) = √V(X)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Jeu de dés</h4>
+                <p>Un joueur lance un dé. S'il fait 6, il gagne 5€. Sinon, il perd 1€.</p>
+                <p>X prend les valeurs 5 (p=1/6) et -1 (p=5/6)</p>
+                <p>E(X) = 5×(1/6) + (-1)×(5/6) = (5-5)/6 = <strong>0€</strong> → jeu équitable</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="math-content" id="p6">
+            <h3>📓 6. La loi binomiale</h3>
+            <p>On répète <strong>n</strong> fois une expérience de Bernoulli (deux issues : succès avec probabilité p, échec avec probabilité 1-p), de manière <em>indépendante</em>.</p>
+            <p>La variable X = "nombre de succès" suit la <strong>loi binomiale</strong> B(n, p) :</p>
+            <div class="formula-box">
+                <div class="formula-title">Loi binomiale B(n, p)</div>
+                P(X = k) = C(n,k) × pᵏ × (1-p)^(n-k) &nbsp;&nbsp;&nbsp; pour k = 0, 1, ..., n
+            </div>
+            <p>où <strong>C(n,k)</strong> est le coefficient binomial (se lit "k parmi n") :</p>
+            <div class="formula-box">
+                <div class="formula-title">Coefficient binomial</div>
+                C(n,k) = n! / (k! × (n-k)!)
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📐</span><p>E(X) = n × p</p></div>
+                <div class="key-point"><span class="icon">📐</span><p>V(X) = n × p × (1-p)</p></div>
+                <div class="key-point"><span class="icon">📐</span><p>X ~ B(n,p) se note "X suit la loi binomiale de paramètres n et p"</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>On lance 5 fois une pièce équilibrée. Quelle est la probabilité d'obtenir exactement 3 fois "Pile" ?</p>
+                <p>X ~ B(5, 0.5)</p>
+                <p>P(X=3) = C(5,3) × (0.5)³ × (0.5)² = 10 × 1/32 = <strong>10/32 ≈ 0.3125</strong></p>
+                <p>E(X) = 5 × 0.5 = <strong>2.5</strong> (en moyenne 2.5 piles sur 5 lancers)</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Condition d'application</h4>
+                <p>La loi binomiale s'applique uniquement quand :</p>
+                <p>① L'épreuve a exactement <strong>2 issues</strong> (succès / échec)</p>
+                <p>② Les épreuves sont <strong>indépendantes</strong></p>
+                <p>③ Le nombre de répétitions <strong>n</strong> est fixe</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=Les+Probabilités+-+Formulaire+Complet" alt="Résumé des probabilités">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet des probabilités</h3>
+                    <p>Probabilités conditionnelles, formule de Bayes, indépendance, variable aléatoire et loi binomiale</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Probabilités">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques-lecon4.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Les Statistiques →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtre passe-bas passif - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 3: Filtre passe-bas passif</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 3</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/D97706/FFFFFF?text=Filtre+passe-bas+passif" alt="Résumé du filtre passe-bas passif">
+                <div class="resume-overlay">
+                    <h3>Filtre RC passe-bas</h3>
+                    <p>Fréquence de coupure, gain et diagramme de Bode d'un filtre passe-bas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/D97706/FFFFFF?text=Filtre+passe-bas+passif">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le principe de fonctionnement d'un filtre passe-bas passif</li>
+                    <li><strong>Définir</strong> la fréquence de coupure fc et le gain en tension d'un filtre RC passe-bas</li>
+                    <li><strong>Tracer et interpréter</strong> le diagramme de Bode (amplitude et phase) d'un filtre passe-bas</li>
+                    <li><strong>Déterminer</strong> les bandes passantes et les atténuations en décibels</li>
+                    <li><strong>Appliquer</strong> les filtres passe-bas à des problèmes concrets de traitement du signal</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Connaissance du circuit RC en régime sinusoïdal forcé</li>
+                    <li>Notions sur les nombres complexes et le calcul d'impédances (ZC = 1/(jωC), ZR = R)</li>
+                    <li>Familiarité avec les grandeurs logarithmiques : décibel (dB), octave, décade</li>
+                    <li>Compréhension de la notion de signal sinusoïdal et de fréquence</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Définition d'un filtre passe-bas</h4>
+                <p>Un filtre passe-bas est un circuit qui laisse passer les signaux de basse fréquence tout en atténuant les signaux de haute fréquence. Il est dit « passif » car il ne contient aucun composant actif (pas d'amplification). La fonction de transfert est <strong>H(jω) = Vs/Ve</strong>.</p>
+
+                <h4>2. Circuit RC passe-bas (configuration en tension)</h4>
+                <p>Le filtre passe-bas passif le plus simple est constitué d'un circuit RC série où la tension de sortie est prélevée aux bornes du condensateur.</p>
+                <div class="plan-highlight">
+                    <strong>Impédance totale :</strong> Z = R + 1/(jωC)<br>
+                    <strong>Fonction de transfert :</strong> H(jω) = 1 / (1 + jωRC) = 1 / (1 + j(ω/ωc))<br>
+                    <strong>Pulsation de coupure :</strong> ωc = 1/(RC)
+                </div>
+
+                <h4>3. Fréquence de coupure fc</h4>
+                <p>La fréquence de coupure <strong>fc = ωc/(2π) = 1/(2πRC)</strong> est la fréquence pour laquelle le gain en tension vaut 1/√2 ≈ 0,707 de sa valeur maximale. Cela correspond à une atténuation de <strong>−3 dB</strong>.</p>
+                <ul>
+                    <li>Pour <strong>ω << ωc</strong> : gain ≈ 1 (0 dB) — bande passante</li>
+                    <li>Pour <strong>ω >> ωc</strong> : gain décroît en <strong>−20 dB/décade</strong> (soit −6 dB/octave)</li>
+                </ul>
+
+                <h4>4. Diagramme de Bode en amplitude</h4>
+                <p>Le diagramme de Bode en amplitude représente le gain <strong>G(dB) = 20·log₁₀|H(jω)|</strong> en fonction de la fréquence (échelle logarithmique). Le diagramme peut être tracé approximativement par deux asymptotes :</p>
+                <ul>
+                    <li>Asymptote horizontale à <strong>0 dB</strong> pour ω << ωc</li>
+                    <li>Droite de pente <strong>−20 dB/décade</strong> pour ω >> ωc</li>
+                </ul>
+
+                <h4>5. Diagramme de Bode en phase</h4>
+                <p>Le déphasage φ entre la sortie et l'entrée est donné par <strong>φ = −arctan(ω/ωc)</strong>.</p>
+                <ul>
+                    <li>Pour <strong>ω << ωc</strong> : φ ≈ 0° (sortie en phase avec l'entrée)</li>
+                    <li>À <strong>ω = ωc</strong> : φ = −45°</li>
+                    <li>Pour <strong>ω >> ωc</strong> : φ → −90° (sortie en quadrature en retard)</li>
+                </ul>
+
+                <h4>6. Applications</h4>
+                <p>Filtres anti-aliasing (avant CAN), lissage d'alimentation (réduction de l'ondulation 50/60 Hz), atténuation du bruit HF, traitement audio (courbes de réponse des haut-parleurs), filtrage avant échantillonnage.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Fonction de transfert :</strong> H(jω) = 1/(1 + j(ω/ωc)) avec ωc = 1/(RC)</li>
+                    <li><strong>Fréquence de coupure fc = 1/(2πRC)</strong>, où l'atténuation est de −3 dB</li>
+                    <li><strong>Gain en bande passante :</strong> 0 dB (gain unitaire)</li>
+                    <li><strong>Pente d'atténuation :</strong> −20 dB/décade (filtre du premier ordre)</li>
+                    <li><strong>Déphasage à fc :</strong> −45°</li>
+                    <li><strong>Bande passante :</strong> [0, fc]</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Filtrage anti-aliasing</strong> : avant un convertisseur analogique-numérique (CAN), limiter la fréquence à la moitié de la fréquence d'échantillonnage</li>
+                    <li><strong>Lissage d'alimentation</strong> : les filtres RC réduisent l'ondulation résiduelle des redresseurs</li>
+                    <li><strong>Atténuation du bruit</strong> : suppression des parasites haute fréquence sur les lignes de signal</li>
+                    <li><strong>Traitement audio</strong> : les filtres passe-bas déterminent les courbes de réponse des haut-parleurs</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Concevoir un filtre passe-bas avec fc = 1 kHz, R = 10 kΩ. Calculer C et vérifier fc.</li>
+                    <li><strong>Exercice 2</strong> : Pour le filtre RC avec R = 4,7 kΩ et C = 100 nF, déterminer fc, le gain à 100 Hz, 1 kHz et 10 kHz en dB.</li>
+                    <li><strong>Exercice 3</strong> : Tracer le diagramme de Bode (amplitude et phase) approximatif d'un filtre RC avec fc = 2 kHz.</li>
+                    <li><strong>Exercice 4</strong> : Un signal d'entrée est la somme d'une composante continue de 2 V et d'un signal parasite de 5 kHz de 0,5 V. Avec fc = 1 kHz, calculer la tension de sortie à 5 kHz.</li>
+                    <li><strong>Exercice 5</strong> : Déterminer l'atténuation en dB d'un signal de 50 kHz traversant un filtre RC avec fc = 5 kHz.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le filtre passe-bas passif RC est un système du premier ordre dont la fonction de transfert est H(jω) = 1/(1 + j(ω/ωc)). La fréquence de coupure fc = 1/(2πRC) définit la limite de la bande passante, où le gain chute de 0 dB à −3 dB. Le diagramme de Bode montre une zone plate (0 dB) en basse fréquence et une atténuation de −20 dB/décade en haute fréquence. Le déphasage varie de 0° (basses fréquences) à −90° (hautes fréquences), en passant par −45° à la coupure. Ce filtre est essentiel pour le lissage des signaux et la limitation de la bande passante.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon4.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Filtre passe-bas actif →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

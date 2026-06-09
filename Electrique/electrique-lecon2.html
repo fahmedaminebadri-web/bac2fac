@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 2 : Les Amplificateurs - Électrique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .elec-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .elec-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .elec-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid #EAB308; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: #92400E; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border-left: 4px solid #F97316; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #C2410C; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FDE68A; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: #B45309; font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="electrique.html" class="back-btn">← Retour aux leçons d'Électrique</a>
+
+        <div class="lesson-header" style="border-top: 4px solid #EAB308;">
+            <h1>Leçon 2 : Les Amplificateurs</h1>
+            <p class="breadcrumb">Électrique > Leçon 2</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">L'amplificateur opérationnel (AOP)</a></li>
+                <li><a href="#p2">Montages fondamentaux</a></li>
+                <li><a href="#p3">Gain et bande passante</a></li>
+                <li><a href="#p4">Contre-réaction</a></li>
+                <li><a href="#p5">Montages pratiques</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls><source src="" type="audio/mpeg"></audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="elec-content" id="p1">
+            <h3>📘 1. L'amplificateur opérationnel (AOP)</h3>
+            <p>L'<strong>AOP</strong> est un composant actif à 5 bornes principales. C'est l'élément de base de l'électronique analogique.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔌</span><p><strong>V+</strong> : entrée non-inverseuse (+) — le signal de sortie est en phase</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>V-</strong> : entrée inverseuse (−) — le signal de sortie est déphasé de 180°</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>Vout</strong> : sortie du signal amplifié</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>VCC+ / VCC-</strong> :'alimentation symétrique (±15V typiquement)</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Modèle idéal</div>
+                Vout = A × (V+ - V-) &nbsp;&nbsp;|&nbsp;&nbsp; A → ∞ (gain infini) <br>
+                Impédances d'entrée → ∞ &nbsp;&nbsp;|&nbsp;&nbsp; Impédance de sortie → 0
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Zone de fonctionnement</h4>
+                <p>La sortie est limitée par les tensions d'alimentation :</p>
+                <p>- Si Vout = +VCC : saturation positive (+Vsat)</p>
+                <p>- Si Vout = -VCC : saturation négative (-Vsat)</p>
+                <p>En régime linéaire : |Vout| < |VCC|</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="elec-content" id="p2">
+            <h3>📗 2. Montages fondamentaux</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Montage inverseur</h3>
+            <div class="formula-box">
+                <div class="formula-title">Amplificateur inverseur</div>
+                Gain : Av = -R2/R1 &nbsp;&nbsp;|&nbsp;&nbsp; Vout = -(R2/R1) × Vin
+            </div>
+            <p>Le signal de sortie est <em>déphasé de 180°</em> par rapport à l'entrée.</p>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>R1 = 1kΩ, R2 = 10kΩ → Gain = -10</p>
+                <p>Vin = 0.5V → Vout = -5V (inversé et amplifié 10×)</p>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Montage non-inverseur</h3>
+            <div class="formula-box">
+                <div class="formula-title">Amplificateur non-inverseur</div>
+                Gain : Av = 1 + R2/R1 &nbsp;&nbsp;|&nbsp;&nbsp; Vout = (1 + R2/R1) × Vin
+            </div>
+            <p>Le signal de sortie est <em>en phase</em> avec l'entrée.</p>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>R1 = 1kΩ, R2 = 9kΩ → Gain = 1 + 9 = 10</p>
+                <p>Vin = 0.5V → Vout = 5V (même phase, amplifié 10×)</p>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Montage suiveur (buffer)</h3>
+            <div class="formula-box">
+                <div class="formula-title">Suiveur de tension</div>
+                Vout = Vin &nbsp;&nbsp;|&nbsp;&nbsp; Gain = 1
+            </div>
+            <p>Utilisé comme <strong>adaptateur d'impédance</strong> : il amplifie en courant sans modifier la tension.</p>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="elec-content" id="p3">
+            <h3>📙 3. Gain et bande passante</h3>
+            <p>Le <strong>gain en tension</strong> d'un amplificateur est le rapport entre la tension de sortie et la tension d'entrée :</p>
+            <div class="formula-box">
+                <div class="formula-title">Gain</div>
+                Av = Vout/Vin &nbsp;&nbsp;|&nbsp;&nbsp; Gain en dB : AdB = 20 × log₁₀|Av|
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📊</span><p><strong>Gain unitaire</strong> (0 dB) : Av = 1</p></div>
+                <div class="key-point"><span class="icon">📊</span><p><strong>Fréquence de coupure fc</strong> : fréquence pour laquelle le gain chute de 3 dB</p></div>
+                <div class="key-point"><span class="icon">📊</span><p><strong>Bande passante</strong> : intervalle de fréquences où le gain est supérieur à -3 dB</p></div>
+                <div class="key-point"><span class="icon">📊</span><p><strong>Produit gain-bande</strong> : GBW = Av × fc = constant (pour un AOP)</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Bande passante et produit gain-bande</h4>
+                <p>AOP avec GBW = 1 MHz</p>
+                <p>Si Gain = 100 (40 dB) → fc = 1MHz/100 = <strong>10 kHz</strong></p>
+                <p>Si Gain = 10 (20 dB) → fc = 1MHz/10 = <strong>100 kHz</strong></p>
+                <p>→ Plus le gain est élevé, plus la bande passante est étroite</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="elec-content" id="p4">
+            <h3>📕 4. Contre-réaction</h3>
+            <p>La <strong>contre-réaction</strong> (feedback) consiste à renvoyer une partie de la sortie vers l'entrée. C'est la technique la plus importante en amplification.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Contre-réaction négative</strong> : stabilise le gain, augmente la bande passante, réduit la distorsion</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Contre-réaction positive</strong> : augmente le gain mais peut rendre le montage instable (oscillations)</p></div>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Impact sur le gain</h3>
+            <div class="formula-box">
+                <div class="formula-title">Gain avec contre-réaction</div>
+                Av(CR) ≈ 1/β &nbsp;&nbsp;|&nbsp;&nbsp; où β = fraction de la sortie renvoyée à l'entrée
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Dans un montage inverseur avec R1 = 1kΩ et R2 = 10kΩ :</p>
+                <p>Sans CR : gain infini (AOP idéal)</p>
+                <p>Avec CR : gain = -R2/R1 = -10 → stable et prévisible</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="elec-content" id="p5">
+            <h3>📒 5. Montages pratiques</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;"> sommateur inverseur</h3>
+            <div class="formula-box">
+                <div class="formula-title">Sommateur</div>
+                Vout = -R × (V1/R1 + V2/R2 + ... + Vn/Rn)
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Amplificateur différentiel</h3>
+            <div class="formula-box">
+                <div class="formula-title">Différentiel</div>
+                Vout = Ad × (V+ - V-) &nbsp;&nbsp;|&nbsp;&nbsp; Amplifie la différence des deux entrées
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Intégrateur et dérivateur</h3>
+            <div class="formula-box">
+                <div class="formula-title">Intégrateur</div>
+                Vout = -(1/RC) × ∫ Vin dt &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Dérivateur</strong> : Vout = -RC × dVin/dt
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Applications courantes</h4>
+                <p>• <strong>Audio</strong> : préamplificateurs, amplis de puissance</p>
+                <p>• <strong>Instrumentation</strong> :conditionnement de capteurs</p>
+                <p>• <strong>Filtres actifs</strong> : passe-bas, passe-haut, passe-bande</p>
+                <p>• <strong>Alimentation</strong> : régulateurs de tension</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/EAB308/1E3A5F?text=Les+Amplificateurs+-+Montages+et+Formules" alt="Résumé amplificateurs">
+                <div class="resume-overlay">
+                    <h3>Montages fondamentaux et formules des Amplificateurs</h3>
+                    <p>Inverseur, non-inverseur, suiveur, gain, bande passante, contre-réaction</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EAB308/1E3A5F?text=Video+Amplificateurs">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <a href="electrique-lecon3.html" class="next-lesson" style="background: linear-gradient(135deg, #EAB308, #CA8A04);">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Compteurs Synchrones →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

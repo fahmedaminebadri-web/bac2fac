@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 4 : Les Microcontrôleurs - Électrique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .elec-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .elec-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .elec-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid #EAB308; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: #92400E; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border-left: 4px solid #F97316; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #C2410C; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FDE68A; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: #B45309; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="electrique.html" class="back-btn">← Retour aux leçons d'Électrique</a>
+
+        <div class="lesson-header" style="border-top: 4px solid #EAB308;">
+            <h1>Leçon 4 : Les Microcontrôleurs</h1>
+            <p class="breadcrumb">Électrique > Leçon 4</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Définition et architecture</a></li>
+                <li><a href="#p2">Organisation de la mémoire</a></li>
+                <li><a href="#p3">Ports d'entrée/sortie (GPIO)</a></li>
+                <li><a href="#p4">Timers et compteurs</a></li>
+                <li><a href="#p5">Interruptions et communication</a></li>
+                <li><a href="#p6">Programmation (Arduino / PIC)</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls><source src="" type="audio/mpeg"></audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="elec-content" id="p1">
+            <h3>📘 1. Définition et architecture</h3>
+            <p>Un <strong>microcontrôleur</strong> est un circuit intégré qui contient sur une même puce : processeur (CPU), mémoire, et périphériques. C'est le "cerveau" des systèmes embarqués.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🧠</span><p><strong>CPU</strong> : unité centrale — exécute les instructions</p></div>
+                <div class="key-point"><span class="icon">💾</span><p><strong>Mémoire programme</strong> : stocke le code (Flash)</p></div>
+                <div class="key-point"><span class="icon">📦</span><p><strong>Mémoire RAM</strong> : données temporaires</p></div>
+                <div class="key-point"><span class="icon">🔌</span><p><strong>Périphériques</strong> : timers, ports, CAN, UART, I2C, SPI</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples courants</h4>
+                <p>• <strong>Arduino (ATmega328P)</strong> : 8 bits, 16 MHz, 32 KB Flash, 2 KB RAM, 14 E/S</p>
+                <p>• <strong>PIC16F877A</strong> : 8 bits, 20 MHz, 14 KB Flash, 368 B RAM, 33 E/S</p>
+                <p>• <strong>STM32 (ARM Cortex)</strong> : 32 bits, jusqu'à 180 MHz, 1 MB Flash, centaines d'E/S</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="elec-content" id="p2">
+            <h3>📗 2. Organisation de la mémoire</h3>
+            <p>Un microcontrôleur possède plusieurs espaces mémoire séparés :</p>
+            <div class="formula-box">
+                <div class="formula-title">Espaces mémoire</div>
+                <pre style="font-size:0.9rem; line-height:1.8; margin:4px 0">
+  Zone programme : adressée par le PC (compteur ordinal)
+    ├── Flash / ROM : code permanent (programme)
+    
+  Zone données : adressée par le CPU
+    ├── RAM : variables, pile (stack)
+    ├── EEPROM : données persistantes
+    └── Registres spéciaux (SFR) : configuration des périphériques</pre>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Registres</h3>
+            <p>Les <strong>registres</strong> sont des cases mémoire spéciales qui pilotent le fonctionnement du microcontrôleur.</p>
+            <div class="example-box">
+                <h4>💡 Registres importants</h4>
+                <p>• <strong>PORTx</strong> : données en entrée/sortie</p>
+                <p>• <strong>DDRx</strong> : direction (entrée ou sortie)</p>
+                <p>• <strong>TCNTx</strong> : compteur d'un timer</p>
+                <p>• <strong>OCRx</strong> : valeur de comparaison d'un timer</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="elec-content" id="p3">
+            <h3>📙 3. Ports d'entrée/sortie (GPIO)</h3>
+            <p>Les <strong>GPIO</strong> (General Purpose Input/Output) permettent de lire des capteurs ou commander des actionneurs.</p>
+            <div class="formula-box">
+                <div class="formula-title">Configuration d'un port</div>
+                DDRx = 0bXXXX_XSET → bits à 1 = SORTIE <br>
+                DDRx = 0bXXXX_XCLR → bits à 0 = ENTRÉE
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">⬆️</span><p><strong>Entrée numérique</strong> : lit 0 (LOW) ou 1 (HIGH) — bouton, capteur tout-ou-rien</p></div>
+                <div class="key-point"><span class="icon">⬇️</span><p><strong>Sortie numérique</strong> : met 0V (LOW) ou Vcc (HIGH) — LED, relais, moteur</p></div>
+                <div class="key-point"><span class="icon">📊</span><p><strong>Entrée analogique (CAN)</strong> : convertit une tension en valeur numérique (0-1023 pour 10 bits)</p></div>
+                <div class="key-point"><span class="icon">🔧</span><p><strong>PWM</strong> : modulation de largeur d'impulsion — contrôle de vitesse moteur, luminosité LED</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Commander une LED</h4>
+                <p>1. Configurer le bit en sortie : DDRB |= (1 << PB0)</p>
+                <p>2. Allumer la LED : PORTB |= (1 << PB0)</p>
+                <p>3. Éteindre la LED : PORTB &= ~(1 << PB0)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="elec-content" id="p4">
+            <h3>📕 4. Timers et compteurs</h3>
+            <p>Un <strong>timer</strong> est un compteur matériel qui s'incrémente à chaque impulsion d'horloge. Il permet de :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">⏱️</span><p>Générer des <strong>bascules temporelles</strong> précises</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p>Créer des <strong>signaux PWM</strong></p></div>
+                <div class="key-point"><span class="icon">📏</span><p>Mesurer des <strong>durées</strong> entre deux événements</p></div>
+                <div class="key-point"><span class="icon">📡</span><p>Compter des <strong>impulsions externes</strong></p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Timer 8 bits (ex: ATMega328)</div>
+                Fréquence d'overflow : f_overflow = f_cpu / (256 × Prescaler) <br>
+                Résolution : 8 bits → modulo 256
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple</h4>
+                <p>Timer 8 bits, quartz 16 MHz, prescaler 1024 :</p>
+                <p>f_overflow = 16 000 000 / (256 × 1024) ≈ <strong>61 Hz</strong></p>
+                <p>→ Une interruption toutes les ~16 ms</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="elec-content" id="p5">
+            <h3>📒 5. Interruptions et communication</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Interruptions</h3>
+            <p>Une <strong>interruption</strong> est un mécanisme qui interrompt le programme principal pour exécuter un code urgent, puis reprend le programme.</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔔</span><p><strong>Timer overflow</strong> : débordement du timer</p></div>
+                <div class="key-point"><span class="icon">🔔</span><p><strong>External interrupt</strong> : changement sur une broche</p></div>
+                <div class="key-point"><span class="icon">🔔</span><p><strong>UART RX/TX</strong> : donnée reçue/envoyée sur port série</p></div>
+                <div class="key-point"><span class="icon">🔔</span><p><strong>ADC complete</strong> : conversion analogique terminée</p></div>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Communication série (UART)</h3>
+            <div class="formula-box">
+                <div class="formula-title">UART — Paramètres</div>
+                Débit (baud rate) : 9600, 115200 bauds… <br>
+                Format : 8 bits de données, 1 bit de stop, sans parité (typique)
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Autres bus de communication</h4>
+                <p>• <strong>I²C</strong> : 2 fils, communication avec capteurs, écrans (lent)</p>
+                <p>• <strong>SPI</strong> : 3-4 fils, très rapide (capteurs, mémoires SD)</p>
+                <p>• <strong>CAN</strong> : automobile, industriel, très robuste (bruit)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="elec-content" id="p6">
+            <h3>📓 6. Programmation (Arduino / PIC)</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Arduino (langage C/C++ simplifié)</h3>
+            <div class="formula-box">
+                <div class="formula-title">Structure d'un programme Arduino</div>
+                <pre style="font-size:0.85rem; line-height:1.7; margin:4px 0">
+void setup() {
+  pinMode(13, OUTPUT);  // configurer broche 13 en sortie
+}
+
+void loop() {
+  digitalWrite(13, HIGH); // allumer LED
+  delay(1000);            // attendre 1 seconde
+  digitalWrite(13, LOW);  // éteindre LED
+  delay(1000);            // attendre 1 seconde
+}</pre>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">PIC (assembleur ou C)</h3>
+            <div class="example-box">
+                <h4>💡 Exemple en C pour PIC</h4>
+                <p>TRISB = 0x00; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // PORTB en sortie</p>
+                <p>PORTB = 0xFF; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Toutes les sorties à 1</p>
+                <p>while(1) { ... } &nbsp;&nbsp;&nbsp;&nbsp; // Boucle infinie</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Bonnes pratiques</h4>
+                <p>• Toujours initialiser les ports dans <code>setup()</code></p>
+                <p>• Utiliser les interruptions pour les événements temporels critiques</p>
+                <p>• Déclarer les variables en <code>volatile</code> si utilisées en interruption</p>
+                <p>• Attention à l'overflow des compteurs (remise à zéro)</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/EAB308/1E3A5F?text=Microcontrôleurs+-+Architecture+et+Programmation" alt="Résumé microcontrôleurs">
+                <div class="resume-overlay">
+                    <h3>Architecture, GPIO, Timers et Programmation des Microcontrôleurs</h3>
+                    <p>Structure, ports, timers, interruptions et code Arduino/PIC</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EAB308/1E3A5F?text=Video+Microcontroleurs">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <a href="electrique-lecon5.html" class="next-lesson" style="background: linear-gradient(135deg, #EAB308, #CA8A04);">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Le Grafcet →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

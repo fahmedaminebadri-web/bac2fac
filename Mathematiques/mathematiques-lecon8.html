@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 2 : La Fonction Logarithme - Mathématiques</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .math-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .math-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .math-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Electrique/electrique.html">Électrique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="mathematiques.html" class="back-btn">← Retour aux leçons de Mathématiques</a>
+
+        <div class="lesson-header">
+            <h1>Leçon 2 : La Fonction Logarithme</h1>
+            <p class="breadcrumb">Mathématiques > Leçon 2</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Définition du logarithme népérien</a></li>
+                <li><a href="#p2">Propriétés algébriques de ln</a></li>
+                <li><a href="#p3">Lien entre exp et ln</a></li>
+                <li><a href="#p4">Étude de la fonction ln(x)</a></li>
+                <li><a href="#p5">Équations et inéquations logarithmiques</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="math-content" id="p1">
+            <h3>📘 1. Définition du logarithme népérien</h3>
+            <p>Le <strong>logarithme népérien</strong>, noté <strong>ln</strong>, est la fonction réciproque de l'exponentielle. ln(a) est le nombre x tel que eˣ = a.</p>
+            <div class="formula-box">
+                <div class="formula-title">Définition</div>
+                ln(a) = x &nbsp;⇔&nbsp; eˣ = a &nbsp;&nbsp;&nbsp; avec a > 0
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📌</span><p><strong>Domaine de définition</strong> : ]0, +∞[ (ln n'est défini que pour les nombres strictement positifs)</p></div>
+                <div class="key-point"><span class="icon">📌</span><p>ln(1) = 0 &nbsp;&nbsp;|&nbsp;&nbsp; ln(e) = 1</p></div>
+                <div class="key-point"><span class="icon">📌</span><p>ln est <em>la primitive de 1/x</em> sur ]0, +∞[ qui s'annule en x = 1 : &nbsp; ∫₁ᵃ (1/t) dt = ln(a)</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples concrets</h4>
+                <p>ln(e³) = 3 &nbsp;&nbsp;|&nbsp;&nbsp; ln(1) = 0 &nbsp;&nbsp;|&nbsp;&nbsp; ln(e) = 1</p>
+                <p>ln(7) ≈ 1.946 &nbsp;(car e^1.946 ≈ 7)</p>
+                <p>ln(0.5) = ln(1/2) = -ln(2) ≈ <strong>-0.693</strong></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="math-content" id="p2">
+            <h3>📗 2. Propriétés algébriques de ln</h3>
+            <p>Pour tous a > 0 et b > 0 :</p>
+            <div class="formula-box">
+                <div class="formula-title">Propriétés fondamentales</div>
+                ln(a × b) = ln(a) + ln(b) <br>
+                ln(a / b) = ln(a) - ln(b) <br>
+                ln(aⁿ) = n × ln(a) &nbsp;&nbsp;&nbsp; pour tout n ∈ ℤ
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔑</span><p>ln(1/a) = -ln(a)</p></div>
+                <div class="key-point"><span class="icon">🔑</span><p>ln(√a) = (1/2) ln(a)</p></div>
+                <div class="key-point"><span class="icon">🔑</span><p>ln(a) = ln(b) ⇔ a = b</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples de simplification</h4>
+                <p>ln(6) = ln(2×3) = ln(2) + ln(3)</p>
+                <p>ln(8) = ln(2³) = 3ln(2)</p>
+                <p>ln(e²) = 2</p>
+                <p>ln(e⁵ / e²) = ln(e³) = 3</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Erreurs fréquentes</h4>
+                <p>❌ ln(a + b) = ln(a) + ln(b) &nbsp;(FAUX — on ne peut PAS "distribuer" le ln sur une somme)</p>
+                <p>✅ ln(a × b) = ln(a) + ln(b)</p>
+                <p>❌ ln(a)² = 2ln(a) &nbsp;(FAUX — ln(a)² = ln(a) × ln(a))</p>
+                <p>✅ ln(a²) = 2ln(a)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="math-content" id="p3">
+            <h3>📙 3. Lien entre exp et ln</h3>
+            <p>exp et ln sont <strong>réciproques</strong> l'une de l'autre :</p>
+            <div class="formula-box">
+                <div class="formula-title">Réciprocité</div>
+                ln(eˣ) = x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pour tout x ∈ ℝ <br>
+                e^(ln x) = x &nbsp;&nbsp;&nbsp;&nbsp; pour tout x > 0
+            </div>
+            <p>Cela signifie que leurs graphes sont <strong>symétriques par rapport à la droite y = x</strong>.</p>
+            <div class="example-box">
+                <h4>💡 Utilisation pratique</h4>
+                <p>Pour résoudre eˣ = 5 : &nbsp; x = ln(5)</p>
+                <p>Pour résoudre ln(x) = 3 : &nbsp; x = e³</p>
+                <p>Pour calculer ln(√e) : &nbsp; = ln(e^0.5) = 0.5</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="math-content" id="p4">
+            <h3>📕 4. Étude de la fonction ln(x)</h3>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📈</span><p><strong>Domaine</strong> : ]0, +∞[</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Dérivée</strong> : ln'(x) = 1/x</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Monotonicité</strong> : strictement <strong>croissante</strong> sur ]0, +∞[</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Limites</strong> : lim ln(x) = -∞ (x→0⁺), &nbsp; lim ln(x) = +∞ (x→+∞)</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Asymptotes</strong> : l'axe Oy (x=0) est asymptote verticale</p></div>
+                <div class="key-point"><span class="icon">📈</span><p><strong>Continuité</strong> : ln est continue et dérivable sur ]0, +∞[</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Croissance comparée (résultat fondamental)</div>
+                lim (ln x) / x = 0 &nbsp;&nbsp;(quand x → +∞) <br>
+                lim x·ln x = -∞ &nbsp;&nbsp;(quand x → 0⁺)
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Dérivée de ln(u(x))</h3>
+            <div class="formula-box">
+                <div class="formula-title">Dérivée de ln(u)</div>
+                [ln(u(x))]' = u'(x) / u(x) &nbsp;&nbsp;&nbsp; (valable si u(x) > 0)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples de dérivation</h4>
+                <p>[ln(x²+1)]' = 2x/(x²+1)</p>
+                <p>[ln(2x+3)]' = 2/(2x+3)</p>
+                <p>[ln(eˣ)]' = eˣ/eˣ = 1</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="math-content" id="p5">
+            <h3>📒 5. Équations et inéquations logarithmiques</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Équations</h3>
+            <div class="formula-box">
+                <div class="formula-title">Résolution</div>
+                ln(a) = ln(b) &nbsp;⇔&nbsp; a = b &nbsp;&nbsp;(a > 0, b > 0) <br>
+                ln(a) = c &nbsp;⇔&nbsp; a = eᶜ &nbsp;&nbsp;(c ∈ ℝ, a > 0)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>ln(x) = ln(7) &nbsp;→&nbsp; x = <strong>7</strong></p>
+                <p>ln(2x - 1) = 3 &nbsp;→&nbsp; 2x - 1 = e³ &nbsp;→&nbsp; x = (e³ + 1)/2</p>
+                <p>ln(x) = -2 &nbsp;→&nbsp; x = e⁻² ≈ <strong>0.135</strong></p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Inéquations</h3>
+            <p>Comme ln est <em>strictement croissante</em> :</p>
+            <div class="formula-box">
+                <div class="formula-title">Inéquations</div>
+                ln(a) < ln(b) &nbsp;⇔&nbsp; a < b &nbsp;&nbsp;|&nbsp;&nbsp; ln(a) > c &nbsp;⇔&nbsp; a > eᶜ
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>ln(x) > 0 &nbsp;→&nbsp; x > 1 &nbsp;(car ln(1) = 0 et ln est croissante)</p>
+                <p>ln(2x) < ln(5) &nbsp;→&nbsp; 2x < 5 &nbsp;→&nbsp; x < 2.5</p>
+                <p>ln(x+3) ≥ 1 &nbsp;→&nbsp; x+3 ≥ e &nbsp;→&nbsp; x ≥ e - 3</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Conditions obligatoires</h4>
+                <p>Dans toute équation ou inéquation avec ln :</p>
+                <p>→ Chaque argument de ln doit être <strong>strictement positif</strong></p>
+                <p>→ Toujours vérifier les conditions AVANT de résoudre !</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E3A5F/FFFFFF?text=La+Fonction+Logarithme+-+Formulaire+Complet" alt="Résumé logarithme">
+                <div class="resume-overlay">
+                    <h3>Formulaire complet du logarithme népérien</h3>
+                    <p>Définition, propriétés, lien avec exp, équations, inéquations et dérivées</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/1E3A5F/FFFFFF?text=Video+Fonction+Logarithme">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="mathematiques.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Retour au sommaire</p>
+                <p class="next-lesson-title">Toutes les leçons Mathématiques →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

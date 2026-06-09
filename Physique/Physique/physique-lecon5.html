@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit LC - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 5: Circuit LC</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 5</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/B91C1C/FFFFFF?text=Circuit+LC" alt="Résumé du Circuit LC">
+                <div class="resume-overlay">
+                    <h3>Oscillations LC</h3>
+                    <p>Oscillations électriques libres dans un circuit LC, période propre.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/B91C1C/FFFFFF?text=Circuit+LC">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le mécanisme des oscillations libres dans un circuit LC idéal</li>
+                    <li><strong>Maîtriser</strong> l'équation différentielle du circuit LC et ses solutions</li>
+                    <li><strong>Définir</strong> la pulsation et la période propre des oscillations</li>
+                    <li><strong>Analyser</strong> les échanges d'énergie entre le condensateur et la bobine</li>
+                    <li><strong>Distinguer</strong> les oscillations amorties des oscillations non amorties</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Connaissance du comportement du condensateur (Q = C·V, énergie E = ½·C·V²)</li>
+                    <li>Connaissance du comportement de la bobine (uL = L·di/dt, énergie E = ½·L·I²)</li>
+                    <li>Maîtrise des lois de Kirchhoff et des équations différentielles du second ordre</li>
+                    <li>Notions de base sur le régime sinusoïdal et la fréquence</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Présentation du circuit LC</h4>
+                <p>Le circuit LC idéal est composé d'un condensateur de capacité C et d'une bobine d'inductance L, connectés en série ou en parallèle, sans aucune résistance. Ce circuit constitue le modèle fondamental des oscillateurs électriques et mécaniques. L'absence de résistance signifie qu'aucune énergie n'est dissipée : les oscillations peuvent en théorie se maintenir indéfiniment.</p>
+
+                <h4>2. Équation différentielle du circuit LC série</h4>
+                <p>L'équation de maille s'écrit : uL + uC = 0, soit <strong>L·(di/dt) + q/C = 0</strong>. Comme i = dq/dt, on obtient :</p>
+                <div class="plan-highlight">
+                    <strong>Équation différentielle :</strong> d²q/dt² + (1/(L·C))·q = 0<br>
+                    <strong>Pulsation propre :</strong> ω₀ = 1/√(L·C)<br>
+                    <strong>Période propre :</strong> T₀ = 2π·√(L·C)
+                </div>
+
+                <h4>3. Solution de l'équation différentielle</h4>
+                <p>La solution générale est :</p>
+                <ul>
+                    <li>Charge : <strong>q(t) = Q₀·cos(ω₀·t + φ)</strong></li>
+                    <li>Tension : <strong>V(t) = V₀·cos(ω₀·t + φ)</strong></li>
+                    <li>Courant : <strong>i(t) = −ω₀·Q₀·sin(ω₀·t + φ)</strong></li>
+                </ul>
+
+                <h4>4. Échanges d'énergie entre C et L</h4>
+                <p>L'énergie totale du circuit LC idéal est la somme de l'énergie électrique (condensateur) et de l'énergie magnétique (bobine) :</p>
+                <div class="plan-highlight">
+                    <strong>E_totale = E_C + E_L = (½)·C·V² + (½)·L·i² = constante</strong>
+                </div>
+                <p>Quand le condensateur est chargé au maximum (V = V_max, i = 0), E_C est maximale. Quand il est déchargé (V = 0, i = I_max), E_L est maximale. L'énergie oscille donc de manière périodique entre le condensateur et la bobine.</p>
+
+                <h4>5. Analogie avec l'oscillateur mécanique</h4>
+                <p>Le circuit LC idéal est l'analogue électrique de l'oscillateur masse-ressort horizontal sans frottement :</p>
+                <table class="plan-table">
+                    <tr><th>Électrique</th><th>Mécanique</th></tr>
+                    <tr><td>Charge q</td><td>Position x</td></tr>
+                    <tr><td>Inductance L</td><td>Masse m</td></tr>
+                    <tr><td>1/C</td><td>Raideur k</td></tr>
+                    <tr><td>Tension V</td><td>Force F = k·x</td></tr>
+                    <tr><td>½·C·V²</td><td>½·k·x² (potentielle)</td></tr>
+                    <tr><td>½·L·i²</td><td>½·m·v² (cinétique)</td></tr>
+                </table>
+
+                <h4>6. Applications pratiques</h4>
+                <p>Oscillateurs à quartz (montre, horloges numériques), circuits d'accord des радио (bandes AM, FM), oscillateurs Hartley et Colpitts, filtres à résonance (RF), circuits de démarrage pour alimentations flyback, convertisseurs de tension capacitifs.</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Équation différentielle :</strong> d²q/dt² + (1/(L·C))·q = 0</li>
+                    <li><strong>Pulsation propre :</strong> ω₀ = 1/√(L·C) (rad/s)</li>
+                    <li><strong>Période propre :</strong> T₀ = 2π·√(L·C)</li>
+                    <li><strong>Solution :</strong> q(t) = Q₀·cos(ω₀·t + φ)</li>
+                    <li><strong>Énergie totale conservée :</strong> E = ½·C·V² + ½·L·i² = constante</li>
+                    <li><strong>Analogie avec l'oscillateur mécanique :</strong> L ↔ m, 1/C ↔ k</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Oscillateurs radio</strong> : les circuits LC définissent la fréquence d'oscillation des émetteurs et récepteurs</li>
+                    <li><strong>Filtres d'accord</strong> : sélection d'une fréquence parmi plusieurs (impédance maximale à ω₀)</li>
+                    <li><strong>Horloges à quartz</strong> : le quartz est un oscillateur électromécanique dont le modèle équivalent est un circuit LC</li>
+                    <li><strong>Convertisseurs boost</strong> : l'inductance stocke l'énergie et la restitue au condensateur de sortie</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un circuit LC avec L = 10 mH et C = 1 µF a une charge initiale Q₀ = 100 µC. Calculer ω₀, T₀, V₀ et I₀.</li>
+                    <li><strong>Exercice 2</strong> : Tracer l'évolution temporelle de q(t), V(t) et i(t) pour le circuit LC, en supposant φ = 0.</li>
+                    <li><strong>Exercice 3</strong> : Montrer que l'énergie totale se conserve en calculant E_C(t) + E_L(t).</li>
+                    <li><strong>Exercice 4</strong> : Un circuit LC parallèle a L = 5 mH et C = 200 pF. Quelle est sa fréquence propre ?</li>
+                    <li><strong>Exercice 5</strong> : Pourquoi un circuit LC réel perd-il progressivement ses oscillations ? Quelles sont les causes de l'amortissement ?</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le circuit LC idéal est le siège d'oscillations électriques libres non amorties. L'équation différentielle d²q/dt² + (1/(L·C))·q = 0 admet des solutions sinusoïdales q(t) = Q₀·cos(ω₀·t + φ) avec ω₀ = 1/√(L·C). L'énergie totale est conservée et oscille entre la forme électrique (condensateur) et la forme magnétique (bobine) à la fréquence ω₀. La période propre est T₀ = 2π·√(L·C). Le circuit LC constitue l'analogue électrique de l'oscillateur harmonique mécanique, et ses propriétés sont à la base de nombreux dispositifs d'oscillation et de filtrage en électronique.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon6.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Circuit RLC forcé →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

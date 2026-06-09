@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 5 : Le Grafcet - Électrique</title>
+    <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .elec-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .elec-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .elec-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .formula-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid #EAB308; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 1.05rem; color: var(--secondary); }
+        .formula-box .formula-title { font-size: 0.85rem; color: #92400E; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FFF7ED, #FFEDD5); border-left: 4px solid #F97316; padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #C2410C; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FDE68A; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: #B45309; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
+                <a href="../Physique/physique.html">Physique</a>
+                <a href="../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../Langues/Francais/francais.html">Français</a>
+                <a href="../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../Informatique/informatique.html">Info</a>
+                <a href="../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="electrique.html" class="back-btn">← Retour aux leçons d'Électrique</a>
+
+        <div class="lesson-header" style="border-top: 4px solid #EAB308;">
+            <h1>Leçon 5 : Le Grafcet</h1>
+            <p class="breadcrumb">Électrique > Leçon 5</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#p1">Introduction et définitions</a></li>
+                <li><a href="#p2">Règles d'évolution</a></li>
+                <li><a href="#p3">Actions associées aux étapes</a></li>
+                <li><a href="#p4">Conditions de transition (réceptivités)</a></li>
+                <li><a href="#p5">Structures particulères</a></li>
+                <li><a href="#p6">Grafcet hiérarchique</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls><source src="" type="audio/mpeg"></audio>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="elec-content" id="p1">
+            <h3>📘 1. Introduction et définitions</h3>
+            <p>Le <strong>GRAFCET</strong> (GRAphe Fonctionnel de Commande Étape Transition) est un outil de modélisation graphique des systèmes automatisés séquentiels. Il a été créé en France en 1977.</p>
+            <p>Un GRAFCET est composé d'<strong>étapes</strong>, de <strong>transitions</strong> et de <strong>liaisons orientées</strong>.</p>
+            <div class="formula-box">
+                <div class="formula-title">Éléments de base</div>
+                <pre style="font-size:0.9rem; line-height:1.8; margin:4px 0">
+  ■  = Étape (state)      → représente une situation du système
+  ━━ = Liaison orientée   → relie les étapes
+  ┼  = Transition         → permet le passage d'une étape à l'autre
+  a  = Réceptivité        → condition logique de franchissement</pre>
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">📍</span><p><strong>Étape initiale</strong> : double carré ■ — état du système au démarrage</p></div>
+                <div class="key-point"><span class="icon">✅</span><p><strong>Étape active</strong> : étape en fonctionnement (marquage)</p></div>
+                <div class="key-point"><span class="icon">🔗</span><p><strong>Transition</strong> : barre horizontale — séparateur entre étapes</p></div>
+                <div class="key-point"><span class="icon">➡️</span><p><strong>Réceptivité</strong> : condition écrite près de la transition</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple simple</h4>
+                <p>□──▶┼──▶□──▶┼──▶□</p>
+                <p>  a     b</p>
+                <p>• Étape 1 active → si a=1 → on franchit la transition → étape 2 active</p>
+                <p>• Étape 2 active → si b=1 → on franchit → étape 3 active</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="elec-content" id="p2">
+            <h3>📗 2. Règles d'évolution (règles du GRAFCET)</h3>
+            <p>Le GRAFCET évolue selon <strong>5 règles fondamentales</strong> :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">1️⃣</span><p><strong>Règle 1</strong> : À un instant donné, une étape est soit active, soit inactive</p></div>
+                <div class="key-point"><span class="icon">2️⃣</span><p><strong>Règle 2</strong> : Les transitions sont franchies quand l'étape en amont est active ET la réceptivité est vraie</p></div>
+                <div class="key-point"><span class="icon">3️⃣</span><p><strong>Règle 3</strong> : Le franchissement d'une transition active l'étape en aval et désactive l'étape en amont</p></div>
+                <div class="key-point"><span class="icon">4️⃣</span><p><strong>Règle 4</strong> : Plusieurs transitions peuvent être franchies simultanément</p></div>
+                <div class="key-point"><span class="icon">5️⃣</span><p><strong>Règle 5</strong> : Si une étape doit être.active et désactivée en même temps, elle reste active</p></div>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Franchissement d'une transition</h4>
+                <p>Une transition est <strong>validée</strong> si TOUTES les étapes précédentes sont actives.</p>
+                <p>Une transition est <strong>franchie</strong> si elle est validée ET sa réceptivité est vraie.</p>
+                <p>→ Le franchissement est <strong>instantané</strong> et <strong>indissociable</strong> (atomic)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="elec-content" id="p3">
+            <h3>📙 3. Actions associées aux étapes</h3>
+            <p>Chaque étape peut être associée à une ou plusieurs <strong>actions</strong> (commandes de préactionneurs, affichages…).</p>
+            <div class="formula-box">
+                <div class="formula-title">Représentation</div>
+                <pre style="font-size:0.9rem; line-height:1.7; margin:4px 0">
+     Étape 3
+  ┌──────────┐
+  │   3      │  —  action 1
+  │  ────────│  —  action 2
+  │ KM1 = 1  │  —  ordre
+  └──────────┘</pre>
+            </div>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🔒</span><p><strong>Action continue</strong> : exécutée tant que l'étape est active (KM1=1)</p></div>
+                <div class="key-point"><span class="icon">⬆️</span><p><strong>Action impulsionnelle</strong> : exécutée brièvement au moment du franchissement</p></div>
+                <div class="key-point"><span class="icon">⏱️</span><p><strong>Temporisation</strong> : action retardée ou limitée dans le temps (ex: A /t₁/ 5s)</p></div>
+                <div class="key-point"><span class="icon">🔢</span><p><strong>Compteur</strong> : action qui incrémente/décompte un compteur</p></div>
+            </div>
+            <div class="formula-box">
+                <div class="formula-title">Syntaxe des temporisations</div>
+                A /t₁/ 5s : action A, temporisée de 5 secondes après activation de l'étape <br>
+                A /t₁/ : action A maintenue pendant la durée de l'étape
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="elec-content" id="p4">
+            <h3>📕 4. Réceptivités (conditions de transition)</h3>
+            <p>Une <strong>réceptivité</strong> est une condition logique (VRAI ou FAUX) qui permet de franchir une transition.</p>
+            <div class="formula-box">
+                <div class="formula-title">Types de réceptivités</div>
+                a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : front montant du signal a (0→1) <br>
+                /a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : front descendant (1→0) <br>
+                a.b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ET logique (a ET b) <br>
+                a+b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : OU logique (a OU b) <br>
+                /a.b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : a̅ ET b
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples de réceptivités</h4>
+                <p>S1.S2 &nbsp;&nbsp;&nbsp; → bouton Start ET fin de course S2</p>
+                <p>/S1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → front descendant de S1</p>
+                <p>cy12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → bit de transition，来自 une étape 12</p>
+                <p>t > 10s &nbsp;&nbsp; → temporisation écoulée</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="elec-content" id="p5">
+            <h3>📒 5. Structures particulières</h3>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:4px;">Séquence linéaire</h3>
+            <p>Étapes exécutées les unes après les autres : □ → □ → □ → …</p>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Saut d'étapes (Aiguillage OU)</h3>
+            <p>Selon la condition, on saute une séquence :</p>
+            <div class="formula-box">
+                <div class="formula-title">Aiguillage OU</div>
+                <pre style="font-size:0.88rem; line-height:1.8; margin:4px 0">
+         ┌─── a ───▶[3]──▶┐
+    [2]─┤                 ├─▶[5]
+         └─── b ───▶[4]───┘</pre>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Séquences simultanées (Aiguillage ET)</h3>
+            <p>Plusieurs séquences qui s'exécutent en parallèle :</p>
+            <div class="formula-box">
+                <div class="formula-title">Aiguillage ET (parallélisme)</div>
+                <pre style="font-size:0.88rem; line-height:1.8; margin:4px 0">
+              [3]
+               │
+         ┌─a─ ─ ─ ─ ┐
+    [2]─┤         ├──[5]
+         └─ ─ ─ ─ ─┘
+               │
+              [4]</pre>
+            </div>
+            <h3 style="color:#B45309; font-size:1rem; margin-top:16px;">Séquences exclusives (X OU)</h3>
+            <p>Une seule des branches s'exécute (choix entre deux séquences).</p>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="elec-content" id="p6">
+            <h3>📓 6. Grafcet hiérarchique</h3>
+            <p>Pour les systèmes complexes, on utilise la <strong>hiérarchisation</strong> :</p>
+            <div class="key-points">
+                <div class="key-point"><span class="icon">🏗️</span><p><strong>GRAFCET de niveau 1</strong> (système) : description fonctionnelle, indépendante de la technologie</p></div>
+                <div class="key-point"><span class="icon">⚡</span><p><strong>GRAFCET de niveau 2</strong> (PO) : description technologique, avec les actionneurs et capteurs réels</p></div>
+                <div class="key-point"><span class="icon">🔄</span><p><strong>Macro-étapes</strong> : représentation condensée d'une séquence</p></div>
+                <div class="key-point"><span class="icon">🔗</span><p><strong>Forçages</strong> : une étape peut forcer l'état d'un autre GRAFCET</p></div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple : Commande de moteur</h4>
+                <p>□──▶┼──▶□(KM1=1)──▶┼(dcy)──▶□(KM2=1)──▶┼──▶□</p>
+                <p>• Étape 1 :初始 → attente de démarrage (dcy)</p>
+                <p>• Étape 2 : KM1 mis sous tension (rotation droite)</p>
+                <p>• Étape 3 : KM2 mis sous tension (rotation gauche)</p>
+                <p>• Étape 4 : arrêt</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Différence Grafcet / Ladder</h4>
+                <p>• <strong>GRAFCET</strong> : modèle <em>séquentiel</em> — étapes, transitions, actions</p>
+                <p>• <strong>Ladder (API)</strong> : langage <em>grafcet-like</em> pour automates programmables</p>
+                <p>→ Le GRAFCET est d'abord un outil d'analyse et de conception</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/EAB308/1E3A5F?text=Le+Grafcet+-+Symboles+et+Règles+d'Évolution" alt="Résumé GRAFCET">
+                <div class="resume-overlay">
+                    <h3>Symboles, règles d'évolution et structures du GRAFCET</h3>
+                    <p>Étapes, transitions, réceptivités, actions, aiguillages et hiérarchie</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/EAB308/1E3A5F?text=Video+Grafcet">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <a href="electrique-lecon6.html" class="next-lesson" style="background: linear-gradient(135deg, #EAB308, #CA8A04);">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Le Moteur Triphasé →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../Shared/script.js"></script>
+</body>
+</html>

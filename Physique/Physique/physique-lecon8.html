@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtre passe-bande - Physique</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="../../Langues/Francais/francais.html">Français</a>
+                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
+                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <!-- BOUTON RETOUR -->
+        <a href="../physique.html" class="back-btn">
+            ← Retour aux leçons de Physique
+        </a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 8: Filtre passe-bande</h1>
+            <p class="breadcrumb">Physique > Partie Physique > Leçon 8</p>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'élément audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x600/6D28D9/FFFFFF?text=Filtre+passe-bande" alt="Résumé du filtre passe-bande">
+                <div class="resume-overlay">
+                    <h3>Filtre passe-bande</h3>
+                    <p>Bande passante, fréquence centrale et facteur de qualité.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/1920x1080/6D28D9/FFFFFF?text=Filtre+passe-bande">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas l'élément vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le principe d'un filtre passe-bande et sa fonction de transfert</li>
+                    <li><strong>Définir</strong> la fréquence centrale (fréquence de résonance) et la bande passante</li>
+                    <li><strong>Calculer</strong> le facteur de qualité Q et comprendre son lien avec la sélectivité</li>
+                    <li><strong>Analyser</strong> les filtres RLC série et parallèle en tant que filtres passe-bande</li>
+                    <li><strong>Tracer et interpréter</strong> le diagramme de Bode d'un filtre passe-bande</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Maîtrise du circuit RLC série en régime sinusoïdal forcé (impédance, résonance)</li>
+                    <li>Connaissance du facteur de qualité Q et de la bande passante</li>
+                    <li>Familiarité avec les diagrammes de Bode (leçons 3 et 4)</li>
+                    <li>Notions sur les fonctions de transfert et l'analyse fréquentielle</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+                <h4>1. Définition d'un filtre passe-bande</h4>
+                <p>Un filtre passe-bande est un circuit qui laisse passer les signaux dont la fréquence est comprise dans une bande特定, et qui atténue fortement les signaux en dehors de cette bande. Il est caractérisé par trois paramètres fondamentaux :</p>
+                <ul>
+                    <li><strong>Fréquence centrale f₀</strong> : fréquence pour laquelle le gain est maximal</li>
+                    <li><strong>Bande passante Δf</strong> : intervalle de fréquences à −3 dB</li>
+                    <li><strong>Facteur de qualité Q = f₀/Δf</strong> : quantifie la sélectivité</li>
+                </ul>
+                <p>La bande passante est définie par les deux fréquences de coupure f₁ et f₂ (à −3 dB), avec Δf = f₂ − f₁ et <strong>f₀ = √(f₁·f₂)</strong>.</p>
+
+                <h4>2. Filtre passe-bande RLC série</h4>
+                <p>Le circuit RLC série constitue un filtre passe-bande naturel. L'impédance du circuit est minimale à la résonance (Z = R), donc le courant et la tension aux bornes de R sont maximales à f₀.</p>
+                <div class="plan-highlight">
+                    <strong>Fonction de transfert :</strong> H(jω) = R / (R + j(ω·L − 1/(ω·C)))<br>
+                    <strong>Gain maximal :</strong> 0 dB (à ω = ω₀)<br>
+                    <strong>Fréquence centrale :</strong> ω₀ = 1/√(L·C)
+                </div>
+
+                <h4>3. Filtre passe-bande RLC parallèle</h4>
+                <p>Le circuit RLC parallèle présente une impédance maximale à la résonance. Ce comportement dual du circuit série peut aussi servir de filtre passe-bande. En pratique, le filtre passe-bande à RLC parallèle est utilisé comme circuit d'accord dans les récepteurs radio.</p>
+
+                <h4>4. Fréquence centrale et bande passante</h4>
+                <p>Pour le filtre RLC série :</p>
+                <ul>
+                    <li><strong>Fréquence centrale :</strong> f₀ = 1/(2π√(L·C))</li>
+                    <li><strong>Bande passante :</strong> Δf = f₂ − f₁ = R/(2π·L)</li>
+                    <li><strong>Facteur de qualité :</strong> Q = f₀/Δf = (1/R)·√(L/C)</li>
+                </ul>
+                <p>Plus Q est grand, plus la bande passante est étroite et le filtre sélectif.</p>
+
+                <h4>5. Diagramme de Bode du filtre passe-bande</h4>
+                <p>Le diagramme de Bode en amplitude présente un pic à f₀ (gain maximal) et une atténuation de part et d'autre. Les asymptotes se croisent à f₀. Le diagramme de phase passe par 0° à f₀, avec un déphasage variant de +90° (très basses fréquences) à −90° (très hautes fréquences).</p>
+
+                <h4>6. Applications des filtres passe-bande</h4>
+                <p>Sélection de fréquence dans les радио et télécommunications, filtrage dans les systèmes audio (equalizers), mesures de laboratoire (analyseur de spectre), circuits de moyenne fréquence (IF) dans les récepteurs radio, suppression de bruit dans les signaux biomédicaux (EEG, ECG).</p>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Filtre passe-bande</strong> : ne laisse passer que les fréquences dans [f₁, f₂]</li>
+                    <li><strong>Fréquence centrale f₀</strong> : fréquence du gain maximal, f₀ = 1/(2π√(L·C))</li>
+                    <li><strong>Bande passante Δf</strong> : f₂ − f₁, à −3 dB du gain maximal</li>
+                    <li><strong>Facteur de qualité Q = f₀/Δf</strong> : plus Q est grand, plus le filtre est sélectif</li>
+                    <li><strong>f₀ = √(f₁·f₂)</strong> : relation entre fréquence centrale et fréquences de coupure</li>
+                    <li><strong>RLC série :</strong> impédance minimale à f₀ → courant maximal → filtre passe-bande</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Récepteur radio AM</strong> : sélection de la fréquence de la station parmi les signaux reçus</li>
+                    <li><strong>Spectromètre</strong> : filtrage de bandes de fréquences spécifiques pour l'analyse du signal</li>
+                    <li><strong>Audio professionnel</strong> : filtres de correction d'égalisation dans les systèmes de sonorisation</li>
+                    <li><strong>Biomédical</strong> : extraction du signal cardiaque (ECG) du bruit ambiant</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1</strong> : Un filtre passe-bande RLC série a R = 100 Ω, L = 10 mH, C = 1 µF. Calculer f₀, Q et la bande passante Δf.</li>
+                    <li><strong>Exercice 2</strong> : Tracer le diagramme de Bode (amplitude) d'un filtre passe-bande avec f₀ = 10 kHz et Q = 20.</li>
+                    <li><strong>Exercice 3</strong> : Quel est le gain en dB à f = f₀/2 et à f = 2·f₀ pour un filtre passe-bande avec Q = 10 ?</li>
+                    <li><strong>Exercice 4</strong> : Concevoir un filtre passe-bande avec f₀ = 1 MHz et Δf = 20 kHz. Choisir R, L, C.</li>
+                    <li><strong>Exercice 5</strong> : Pourquoi le filtre RLC parallèle peut-il aussi servir de filtre passe-bande ? Comparer les deux configurations.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le filtre passe-bande laisse passer les signaux dont la fréquence est comprise dans une bande特定 [f₁, f₂], définie par la fréquence centrale f₀ = 1/(2π√(L·C)) et la bande passante Δf = f₂ − f₁. Le facteur de qualité Q = f₀/Δf quantifie la sélectivité du filtre : plus Q est grand, plus la bande passante est étroite. Le circuit RLC série constitue un filtre passe-bande naturel dont l'impédance est minimale à la résonance, maximisant le courant et le gain en sortie. Les applications couvrent les télécommunications, l'audio, la mesure et le traitement du signal biomédical.
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="physique-lecon9.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Leçon suivante</p>
+                <p class="next-lesson-title">Filtre passe-haut →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>
