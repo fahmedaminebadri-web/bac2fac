@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mécanique - Matière</title>
     <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .chapter-divider {
+            background: linear-gradient(135deg, var(--bg-white), var(--bg-gray-50));
+            border-radius: var(--radius-xl);
+            padding: 20px 28px;
+            margin: 30px 0 10px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .chapter-divider span {
+            font-size: 1.8rem;
+        }
+        .chapter-divider h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .chapter-divider p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -16,7 +40,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../index.html">Accueil</a>
-                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
                 <a href="../Physique/physique.html">Physique</a>
                 <a href="../Electrique/electrique.html">Électrique</a>
                 <a href="../Langues/Francais/francais.html">Français</a>
@@ -38,10 +62,18 @@
         <!-- HEADER MATIÈRE -->
         <div class="matiere-header mecanique">
             <h1>⚙️ Mécanique</h1>
-            <p>Explorez les machines, les mécanismes et les principes du mouvement</p>
+            <p>12 leçons complètes : Conception, Matériaux, Transmission du mouvement, Résistance des matériaux et Composants mécaniques</p>
         </div>
 
-        <!-- LISTE DES LEÇONS -->
+        <!-- CHAPITRE 1 -->
+        <div class="chapter-divider">
+            <span>📐</span>
+            <div>
+                <h3>Conception & Matériaux</h3>
+                <p>Cotation, solutions constructives et propriétés des matériaux</p>
+            </div>
+        </div>
+
         <h2 class="section-title">Leçons disponibles</h2>
         <div class="cards-grid">
             <a href="mecanique-lecon1.html" class="lesson-card">
@@ -55,53 +87,9 @@
                 </div>
             </a>
 
-            <a href="mecanique-lecon2.html" class="lesson-card">
-                <span class="lesson-number">2</span>
-                <h3>Solution de constructivité</h3>
-                <p>Conception et solutions technologiques des mécanismes</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
-            <a href="mecanique-lecon3.html" class="lesson-card">
-                <span class="lesson-number">3</span>
-                <h3>Torsion</h3>
-                <p>Déformation et contraintes dans les arbres de transmission</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
-            <a href="mecanique-lecon4.html" class="lesson-card">
-                <span class="lesson-number">4</span>
-                <h3>Guidage en rotation</h3>
-                <p>Paliers, roulements et guidage des arbres tournants</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
-            <a href="mecanique-lecon5.html" class="lesson-card">
-                <span class="lesson-number">5</span>
-                <h3>Obtention des pièces</h3>
-                <p>Procédés de fabrication et usinage des pièces mécaniques</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
             <a href="mecanique-lecon6.html" class="lesson-card">
-                <span class="lesson-number">6</span>
-                <h3>Les matériaux</h3>
+                <span class="lesson-number">2</span>
+                <h3>Les Matériaux</h3>
                 <p>Propriétés mécaniques et choix des matériaux en construction</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -110,9 +98,42 @@
                 </div>
             </a>
 
+            <a href="mecanique-lecon2.html" class="lesson-card">
+                <span class="lesson-number">3</span>
+                <h3>Solutions de Constructivité</h3>
+                <p>Conception et solutions technologiques des mécanismes</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+
+            <a href="mecanique-lecon5.html" class="lesson-card">
+                <span class="lesson-number">4</span>
+                <h3>Obtention des Pièces</h3>
+                <p>Procédés de fabrication et usinage des pièces mécaniques</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- CHAPITRE 2 -->
+        <div class="chapter-divider">
+            <span>🔄</span>
+            <div>
+                <h3>Transmission du Mouvement</h3>
+                <p>Mécanismes de conversion et transmission de mouvement</p>
+            </div>
+        </div>
+
+        <div class="cards-grid">
             <a href="mecanique-lecon7.html" class="lesson-card">
-                <span class="lesson-number">7</span>
-                <h3>Transformation de mouvement</h3>
+                <span class="lesson-number">5</span>
+                <h3>Transformation de Mouvement</h3>
                 <p>Mécanismes de conversion de mouvement (came, bielle, manivelle)</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -121,31 +142,9 @@
                 </div>
             </a>
 
-            <a href="mecanique-lecon8.html" class="lesson-card">
-                <span class="lesson-number">8</span>
-                <h3>Flexion</h3>
-                <p>Étude des poutres et contraintes en flexion simple et composée</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
-            <a href="mecanique-lecon9.html" class="lesson-card">
-                <span class="lesson-number">9</span>
-                <h3>Accouplement et embrayage frein</h3>
-                <p>Coupleurs, embrayages et systèmes de freinage mécaniques</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
             <a href="mecanique-lecon10.html" class="lesson-card">
-                <span class="lesson-number">10</span>
-                <h3>Transmission du mouvement</h3>
+                <span class="lesson-number">6</span>
+                <h3>Transmission du Mouvement</h3>
                 <p>Engrenages, courroies, chaînes et poulies de transmission</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -154,10 +153,10 @@
                 </div>
             </a>
 
-            <a href="mecanique-lecon11.html" class="lesson-card">
-                <span class="lesson-number">11</span>
-                <h3>Analyse fonctionnelle</h3>
-                <p>分析方法：分析客户需求、功能分解和系统架构</p>
+            <a href="mecanique-lecon4.html" class="lesson-card">
+                <span class="lesson-number">7</span>
+                <h3>Guidage en Rotation</h3>
+                <p>Paliers, roulements et guidage des arbres tournants</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
                     <span class="badge badge-image">Résumé</span>
@@ -166,9 +165,75 @@
             </a>
 
             <a href="mecanique-lecon12.html" class="lesson-card">
-                <span class="lesson-number">12</span>
-                <h3>Train épicycloïdal</h3>
+                <span class="lesson-number">8</span>
+                <h3>Train Épicycloïdal</h3>
                 <p>Étude des trains épicycloïdaux et réducteurs planétaires</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- CHAPITRE 3 -->
+        <div class="chapter-divider">
+            <span>🏗️</span>
+            <div>
+                <h3>Résistance des Matériaux</h3>
+                <p>Torsion, flexion et contraintes mécaniques</p>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <a href="mecanique-lecon3.html" class="lesson-card">
+                <span class="lesson-number">9</span>
+                <h3>La Torsion</h3>
+                <p>Déformation et contraintes dans les arbres de transmission</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+
+            <a href="mecanique-lecon8.html" class="lesson-card">
+                <span class="lesson-number">10</span>
+                <h3>La Flexion</h3>
+                <p>Étude des poutres et contraintes en flexion simple et composée</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- CHAPITRE 4 -->
+        <div class="chapter-divider">
+            <span>🔩</span>
+            <div>
+                <h3>Composants Mécaniques</h3>
+                <p>Accouplements, embrayages et systèmes de freinage</p>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <a href="mecanique-lecon9.html" class="lesson-card">
+                <span class="lesson-number">11</span>
+                <h3>Accouplement et Embrayage-Frein</h3>
+                <p>Coupleurs, embrayages et systèmes de freinage mécaniques</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+
+            <a href="mecanique-lecon11.html" class="lesson-card">
+                <span class="lesson-number">12</span>
+                <h3>Analyse Fonctionnelle</h3>
+                <p>Méthodes d'analyse : besoins client, décomposition fonctionnelle et architecture système</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
                     <span class="badge badge-image">Résumé</span>

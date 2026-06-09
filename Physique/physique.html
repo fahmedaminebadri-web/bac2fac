@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physique - Matière</title>
     <link rel="stylesheet" href="../Shared/style.css">
+    <style>
+        .chapter-divider {
+            background: linear-gradient(135deg, var(--bg-white), var(--bg-gray-50));
+            border-radius: var(--radius-xl);
+            padding: 20px 28px;
+            margin: 30px 0 10px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .chapter-divider span {
+            font-size: 1.8rem;
+        }
+        .chapter-divider h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .chapter-divider p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -16,7 +40,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../index.html">Accueil</a>
-                <a href="../Mathematiques/math.html">Math</a>
+                <a href="../Mathematiques/mathematiques.html">Maths</a>
                 <a href="../Electrique/electrique.html">Électrique</a>
                 <a href="../Mecanique/mecanique.html">Mécanique</a>
                 <a href="../Langues/Francais/francais.html">Français</a>
@@ -38,11 +62,19 @@
         <!-- HEADER MATIÈRE -->
         <div class="matiere-header physique">
             <h1>⚡ Physique</h1>
-            <p>Découvrez les lois qui régissent notre univers, de la mécanique à l'électricité</p>
+            <p>19 leçons complètes : Chimie organique, Réactions acido-basiques, Circuits électriques, Traitement du signal et Ondes mécaniques</p>
         </div>
 
-        <!-- PARTIE CHIMIE -->
-        <h2 class="section-title">🧪 Partie Chimie</h2>
+        <!-- CHAPITRE 1 -->
+        <div class="chapter-divider">
+            <span>🧪</span>
+            <div>
+                <h3>Chimie Organique</h3>
+                <p>Estérification, hydrolyse et équilibre chimique</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Leçons disponibles</h2>
         <div class="cards-grid">
             <a href="Chimie/chimie-lecon1.html" class="lesson-card">
                 <span class="lesson-number">1</span>
@@ -54,7 +86,18 @@
                     <span class="badge badge-video">Vidéo</span>
                 </div>
             </a>
+        </div>
 
+        <!-- CHAPITRE 2 -->
+        <div class="chapter-divider">
+            <span>⚗️</span>
+            <div>
+                <h3>Réactions Chimiques</h3>
+                <p>Acide-base, pH, électrolyse et piles galvaniques</p>
+            </div>
+        </div>
+
+        <div class="cards-grid">
             <a href="Chimie/chimie-lecon2.html" class="lesson-card">
                 <span class="lesson-number">2</span>
                 <h3>Acide-base</h3>
@@ -68,7 +111,7 @@
 
             <a href="Chimie/chimie-lecon3.html" class="lesson-card">
                 <span class="lesson-number">3</span>
-                <h3>pH</h3>
+                <h3>Le pH</h3>
                 <p>Notion de pH, mesure et applications en chimie</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -79,7 +122,7 @@
 
             <a href="Chimie/chimie-lecon4.html" class="lesson-card">
                 <span class="lesson-number">4</span>
-                <h3>Science de l'Électrolyse</h3>
+                <h3>L'Électrolyse</h3>
                 <p>Électrolyse, cellules galvaniques et lois de Faraday</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -90,7 +133,7 @@
 
             <a href="Chimie/chimie-lecon5.html" class="lesson-card">
                 <span class="lesson-number">5</span>
-                <h3>Acide basique et pile</h3>
+                <h3>Piles et oxydo-réduction</h3>
                 <p>Piles alcalines, piles кислотные et réactions d'oxydo-réduction</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -100,11 +143,18 @@
             </a>
         </div>
 
-        <!-- PARTIE PHYSIQUE -->
-        <h2 class="section-title">⚡ Partie Physique</h2>
+        <!-- CHAPITRE 3 -->
+        <div class="chapter-divider">
+            <span>🔌</span>
+            <div>
+                <h3>Circuits Électriques</h3>
+                <p>RC, RL, LC et RLC : charge, décharge et oscillations</p>
+            </div>
+        </div>
+
         <div class="cards-grid">
             <a href="Physique/physique-lecon1.html" class="lesson-card">
-                <span class="lesson-number">1</span>
+                <span class="lesson-number">6</span>
                 <h3>Circuit RC</h3>
                 <p>Circuit RC : charge, décharge et constante de temps</p>
                 <div class="lesson-badges">
@@ -115,7 +165,7 @@
             </a>
 
             <a href="Physique/physique-lecon2.html" class="lesson-card">
-                <span class="lesson-number">2</span>
+                <span class="lesson-number">7</span>
                 <h3>Circuit RL</h3>
                 <p>Circuit RL : établissement et annihilation du courant</p>
                 <div class="lesson-badges">
@@ -125,30 +175,8 @@
                 </div>
             </a>
 
-            <a href="Physique/physique-lecon3.html" class="lesson-card">
-                <span class="lesson-number">3</span>
-                <h3>Filtre passe-bas passif</h3>
-                <p>Filtre RC passe-bas : fréquence de coupure et diagramme de Bode</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
-            <a href="Physique/physique-lecon4.html" class="lesson-card">
-                <span class="lesson-number">4</span>
-                <h3>Filtre passe-bas actif</h3>
-                <p>Filtre actif à base d'amplificateur opérationnel</p>
-                <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
-                </div>
-            </a>
-
             <a href="Physique/physique-lecon5.html" class="lesson-card">
-                <span class="lesson-number">5</span>
+                <span class="lesson-number">8</span>
                 <h3>Circuit LC</h3>
                 <p>Oscillations libres dans un circuit LC</p>
                 <div class="lesson-badges">
@@ -159,8 +187,8 @@
             </a>
 
             <a href="Physique/physique-lecon6.html" class="lesson-card">
-                <span class="lesson-number">6</span>
-                <h3>Circuit RLC forcé</h3>
+                <span class="lesson-number">9</span>
+                <h3>Circuit RLC Forcé</h3>
                 <p>Circuit RLC en régime sinusoïdal forcé et résonance</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -170,9 +198,42 @@
             </a>
 
             <a href="Physique/physique-lecon7.html" class="lesson-card">
-                <span class="lesson-number">7</span>
-                <h3>Circuit RLC amorti et non amorti</h3>
+                <span class="lesson-number">10</span>
+                <h3>Circuit RLC Amorti</h3>
                 <p>Amortissement, facteur de qualité et régimes d'oscillation</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- CHAPITRE 4 -->
+        <div class="chapter-divider">
+            <span>📡</span>
+            <div>
+                <h3>Traitement du Signal</h3>
+                <p>Filtres actifs et passifs, fréquences de coupure</p>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <a href="Physique/physique-lecon3.html" class="lesson-card">
+                <span class="lesson-number">11</span>
+                <h3>Filtre Passe-bas Passif</h3>
+                <p>Filtre RC passe-bas : fréquence de coupure et diagramme de Bode</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">Podcast</span>
+                    <span class="badge badge-image">Résumé</span>
+                    <span class="badge badge-video">Vidéo</span>
+                </div>
+            </a>
+
+            <a href="Physique/physique-lecon4.html" class="lesson-card">
+                <span class="lesson-number">12</span>
+                <h3>Filtre Passe-bas Actif</h3>
+                <p>Filtre actif à base d'amplificateur opérationnel</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
                     <span class="badge badge-image">Résumé</span>
@@ -181,8 +242,8 @@
             </a>
 
             <a href="Physique/physique-lecon8.html" class="lesson-card">
-                <span class="lesson-number">8</span>
-                <h3>Filtre passe-bande</h3>
+                <span class="lesson-number">13</span>
+                <h3>Filtre Passe-bande</h3>
                 <p>Filtre passe-bande : bande passante et fréquence centrale</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -192,8 +253,8 @@
             </a>
 
             <a href="Physique/physique-lecon9.html" class="lesson-card">
-                <span class="lesson-number">9</span>
-                <h3>Filtre passe-haut</h3>
+                <span class="lesson-number">14</span>
+                <h3>Filtre Passe-haut</h3>
                 <p>Filtre passe-haut : fréquence de coupure et comportement haute fréquence</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -201,10 +262,21 @@
                     <span class="badge badge-video">Vidéo</span>
                 </div>
             </a>
+        </div>
 
+        <!-- CHAPITRE 5 -->
+        <div class="chapter-divider">
+            <span>🌊</span>
+            <div>
+                <h3>Ondes Mécaniques</h3>
+                <p>Propagation, caractéristiques et types d'ondes</p>
+            </div>
+        </div>
+
+        <div class="cards-grid">
             <a href="Physique/physique-lecon10.html" class="lesson-card">
-                <span class="lesson-number">10</span>
-                <h3>Mécanique non amortie</h3>
+                <span class="lesson-number">15</span>
+                <h3>Mécanique Non Amortie</h3>
                 <p>Oscillations mécaniques libres non amorties</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -214,8 +286,8 @@
             </a>
 
             <a href="Physique/physique-lecon11.html" class="lesson-card">
-                <span class="lesson-number">11</span>
-                <h3>Onde transversale</h3>
+                <span class="lesson-number">16</span>
+                <h3>Onde Transversale</h3>
                 <p>Propagation des ondes transversales et équation d'onde</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -225,8 +297,8 @@
             </a>
 
             <a href="Physique/physique-lecon12.html" class="lesson-card">
-                <span class="lesson-number">12</span>
-                <h3>Les ondes mécaniques progressives</h3>
+                <span class="lesson-number">17</span>
+                <h3>Ondes Mécaniques Progressives</h3>
                 <p>Onde mécanique progressive et ses caractéristiques</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -236,8 +308,8 @@
             </a>
 
             <a href="Physique/physique-lecon13.html" class="lesson-card">
-                <span class="lesson-number">13</span>
-                <h3>Onde longitudinale</h3>
+                <span class="lesson-number">18</span>
+                <h3>Onde Longitudinale</h3>
                 <p>Ondes longitudinales, compression et dilatation</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
@@ -247,8 +319,8 @@
             </a>
 
             <a href="Physique/physique-lecon14.html" class="lesson-card">
-                <span class="lesson-number">14</span>
-                <h3>L'onde sonore</h3>
+                <span class="lesson-number">19</span>
+                <h3>L'Onde Sonore</h3>
                 <p>Propagation du son, vitesse et caractéristiques des ondes sonores</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
