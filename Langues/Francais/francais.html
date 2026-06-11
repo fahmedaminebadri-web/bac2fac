@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Français - Matière</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .chapter-divider {
+            background: linear-gradient(135deg, var(--bg-white), var(--bg-gray-50));
+            border-radius: var(--radius-xl);
+            padding: 20px 28px;
+            margin: 30px 0 10px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .chapter-divider span {
+            font-size: 1.8rem;
+        }
+        .chapter-divider h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .chapter-divider p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -20,6 +44,7 @@
                 <a href="../../Physique/physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="francais.html">Français</a>
                 <a href="../Anglais/anglais.html">Anglais</a>
                 <a href="../Arabe/arabe.html">Arabe</a>
                 <a href="../../Informatique/informatique.html">Info</a>
@@ -36,9 +61,18 @@
         </a>
 
         <!-- HEADER MATIÈRE -->
-        <div class="matiere-header francais">
+        <div class="matiere-header" style="background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border: 1px solid #FBCFE8;">
             <h1>📝 Français</h1>
-            <p>Maîtrisez la langue française : grammaire, orthographe, conjugaison et littérature</p>
+            <p>Dissertation littéraire, argumentation et commentaire composé — 3 leçons pour le Bac</p>
+        </div>
+
+        <!-- CHAPITRE 1 -->
+        <div class="chapter-divider">
+            <span>✍️</span>
+            <div>
+                <h3>Expression Écrite & Analyse Littéraire</h3>
+                <p>Les techniques de la dissertation, de l'argumentation et du commentaire composé</p>
+            </div>
         </div>
 
         <!-- LISTE DES LEÇONS -->
@@ -46,8 +80,8 @@
         <div class="cards-grid">
             <a href="francais-lecon1.html" class="lesson-card">
                 <span class="lesson-number">1</span>
-                <h3>La grammaire de base</h3>
-                <p>Les parties du discours et la structure des phrases</p>
+                <h3>La Dissertation Littéraire</h3>
+                <p>Méthode complète : introduction, problématique, plan, développement et conclusion</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
                     <span class="badge badge-image">Résumé</span>
@@ -57,8 +91,8 @@
 
             <a href="francais-lecon2.html" class="lesson-card">
                 <span class="lesson-number">2</span>
-                <h3>La conjugaison</h3>
-                <p>Les temps des verbes et leur utilisation</p>
+                <h3>L'Argumentation</h3>
+                <p>Éthos, pathos, logos, procédés rhétoriques — convaincre et persuader</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
                     <span class="badge badge-image">Résumé</span>
@@ -68,8 +102,8 @@
 
             <a href="francais-lecon3.html" class="lesson-card">
                 <span class="lesson-number">3</span>
-                <h3>L'orthographe</h3>
-                <p>Les règles d'orthographe et les pièges à éviter</p>
+                <h3>Le Commentaire Composé</h3>
+                <p>Lecture analytique, axes d'analyse, structure et rédaction du commentaire</p>
                 <div class="lesson-badges">
                     <span class="badge badge-audio">Podcast</span>
                     <span class="badge badge-image">Résumé</span>
@@ -81,7 +115,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

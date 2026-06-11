@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La morale et l'éthique - Philosophie</title>
+    <title>درس 3 : السعادة - الفلسفة</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        .ph-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); text-align: right; }
+        .ph-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .ph-content p { margin-bottom: 12px; line-height: 2; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-right: 4px solid var(--success); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-right: 4px solid var(--warning); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; text-align: right; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-right: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FCD34D; text-align: right; }
+        .plan-box h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .phil-term { background: #EDE9FE; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #5B21B6; }
+        .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -15,72 +39,273 @@
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
             <nav class="nav-links">
-                <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
-                <a href="../../Physique/physique.html">Physique</a>
-                <a href="../../Electrique/electrique.html">Électrique</a>
-                <a href="../../Mecanique/mecanique.html">Mécanique</a>
-                <a href="../../Langues/Francais/francais.html">Français</a>
-                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
-                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
-                <a href="../../Informatique/informatique.html">Info</a>
-                <a href="philosophie.html">Philo</a>
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="philosophie.html">الفلسفة</a>
             </nav>
         </div>
     </header>
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="philosophie.html" class="back-btn">
-            ← Retour aux leçons de Philosophie
+        <a href="philosophie.html" class="back-btn" style="direction: ltr;">
+            → العودة إلى دروس الفلسفة
         </a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 3: La morale et l'éthique</h1>
-            <p class="breadcrumb">Philosophie > Leçon 3</p>
+            <h1>درس 3 : السعادة</h1>
+            <p class="breadcrumb">الفلسفة > الدرس 3</p>
+        </div>
+
+        <!-- ملخص -->
+        <div class="plan-box">
+            <h3>📝 ملخص الدرس</h3>
+            <p>السعادة من أقدم الموضوعات الفلسفية وأكثرها تعقيداً. يتساءل الفلاسفة : ما هي السعادة؟ كيف نحصل عليها؟ هل هي ذاتية أم موضوعية؟ هل هي غاية في ذاتها أم وسيلة؟ طرائق مختلفة للتفكير في السعادة : <strong>ال Појединаية</strong> (اللذة، إبيقور)، <strong>الفضيلة</strong> (أرسطو)، <strong>الإرادة الحرة</strong> (كانط)، و<strong>الإنجاز الذاتي</strong> (ماسلو). هذا الدرس يستعرض أهم النظريات الفلسفية حول السعادة.</p>
+        </div>
+
+        <!-- خطة الدرس -->
+        <div class="toc">
+            <h3>📋 خطة الدرس</h3>
+            <ol>
+                <li><a href="#partie1">ما هي السعادة؟ تعريف وإشكاليات</a></li>
+                <li><a href="#partie2">نظرية اللذة : أبيقور والإبيقوريين</a></li>
+                <li><a href="#partie3">نظرية الفضيلة : أرسطو</a></li>
+                <li><a href="#partie4">السعادة عند كانط : الإرادة الخيّرة</a></li>
+                <li><a href="#partie5">النفعية : أكبر سعادة لأكبر عدد</a></li>
+                <li><a href="#partie6">النقد المعاصر : جدل السعادة</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
-        <!-- SECTION RÉSUMÉ IMAGE -->
-        <section class="section-resume">
-            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
-            <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/7B1FA2/FFFFFF?text=Resume+Morale+Ethique" alt="Résumé de la morale et l'éthique">
-                <div class="resume-overlay">
-                    <h3>Le bien et le mal</h3>
-                    <p>Les fondements de la morale et de l'éthique.</p>
+        <!-- PARTIE 1 -->
+        <div class="ph-content" id="partie1">
+            <h3>📘 1. ما هي السعادة؟ تعريف وإشكاليات</h3>
+            <p><strong>السعادة</strong> (Eudaimonia / Bonheur) هي حالة من الرضا والاكتفاء يعيشها الإنسان. لكن هذا التعريف يثير إشكاليات عميقة :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>إشكالية الذات</strong> — هل السعادة شعور ذاتي (فردي) أم حقيقة موضوعية؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>إشكالية الغاية</strong> — هل السعادة غاية أم وسيلة؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>إشكالية الزمن</strong> — هل السعادة لحظية أم حالة مستدامة؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>إشكالية المعيار</strong> — كيف نقيس السعادة؟ ما هو مقياسها؟</p>
                 </div>
             </div>
+            <div class="quote-box">
+                « السعادة ليست نهاية الرحلة، بل هي الرحلة ذاتها. » — والتر وايزمان
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ph-content" id="partie2">
+            <h3>📗 2. نظرية اللذة : أبيقور والإبيقوريين</h3>
+            <p><strong>إبيقور</strong> (341-270 ق.م) يرى أن السعادة = <em>اللذة</em> (Hedone) وهدف الحياة هو تحقيق أعلى درجات اللذة وأدنى درجات الألم.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p><strong>اللذة الديناميكية</strong> — اللذة ليست فقط متعة جسدية بل راحة نفسية وغياب الألم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>حساب اللذة</strong> — يجب الموازنة بين اللذة الفورية والألم المستقبلي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🧘</span>
+                    <p><strong>ataraxie</strong> — الهدف هو هدوء النفس وسلامها (لا الاضطراب)</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 نص من أبيقور</h4>
+                <p>« اللذة هي البداية والغاية في الحياة المباركة. فإننا نعلم أنها صاحرتنا الأولى والمعيار لاختيار كل خير. وبسببها نبدأ كل فعل ولا نرجع إلى أي شيء آخر بصفته معياراً لاختيار اللذة. »</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">الانتقادات</h3>
+            <div class="warning-box">
+                <h4>⚠️ نقد نظرية اللذة</h4>
+                <p>1. اللذة عابرة ولا يمكن أن تكون أساساً لحياة ذات معنى</p>
+                <p>2. البحث عن اللذة قد يؤدي إلى الرذيلة والضرر بالآخرين</p>
+                <p>3. الخلط بين اللذة والسعادة يتجاهل قيماً كالفضيلة والمعنى</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="ph-content" id="partie3">
+            <h3>📙 3. نظرية الفضيلة : أرسطو</h3>
+            <p><strong>أرسطو</strong> يرفض اختزال السعادة في اللذة. في كتابه <em>الأخلاقيات النيقوماخية</em>، يرى أن السعادة (Eudaimonia) هي <em>نشاط للنفس وفق الفضيلة في حياة كاملة</em>.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>الفضيلة كعادة</strong> — الفضيلة ليست معرفة بل ممارسة متكررة (Le virtue is a habit)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الوسط الذهبي</strong> — الفضيلة هي الوسط بين الإفراط والتفريط (الشجاعة = بين التهور والجبن)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏛️</span>
+                    <p><strong>الحياة السياسية</strong> — السعادة الكاملة تتحقق في المشاركة في الحياة العامة</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 نص من أرسطو</h4>
+                <p>« السعادة هي أفضل وأكمل وأجمل وأحب الأشياء، وهي لا تُحسب بالقياس بل تليق بأنفسها. وهي الغاية التي لا نطلبها لأجل شيء آخر، بل كل شيء آخر نطلبه لأجلها. »</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">الفضائل الرئيسية عند أرسطو</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">💪</span>
+                    <p><strong>الشجاعة</strong> — الوسط بين التهور والجبن</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🍽️</span>
+                    <p><strong>الاعتدال</strong> — الوسط بين الشهوة旗舰 واللامبالاة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>العدالة</strong> — إعطاء كل ذي حق حقه</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🤔</span>
+                    <p><strong>الحكمة العملية</strong> — الوسط في الحكم والعمل</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="ph-content" id="partie4">
+            <h3>📕 4. السعادة عند كانط : الإرادة الخيّرة</h3>
+            <p><strong>إيمانويل كانط</strong> (1724-1804) يفصل بين السعادة والفضيلة بشكل جذري :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>الإرادة الخيّرة</strong> — الفعل الأخلاقي الحقيقي هو ما يُفعل من واجب، لا من ميل أو رغبة في السعادة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📜</span>
+                    <p><strong>الواجب الأخلاقي</strong> — يجب أن نفعل الصواب لأن واجبنا يقتضي ذلك، بغض النظر عن سعادتنا</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الامتناع عن الابتزاز</strong> — لا نستخدم الآخر كوسيلة بل كغاية في ذاته</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 نص من كانط</h4>
+                <p>« لاشيء في العالم بل حتى خارج العالم يمكن اعتباره خيراً بلا限定 إلا الإرادة الخيّرة. » — مبادئ المنطق الأخلاقي</p>
+            </div>
+            <p>لكن كانط يعترف بأن السعادة والفضيلة قد تتناقضان في هذه الحياة، لذلك يفترض <strong>الخلود</strong> و<strong>الله</strong> كضمانة لتحقيق العدالة في نهاية المطاف.</p>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ph-content" id="partie5">
+            <h3>📒 5. النفعية : أكبر سعادة لأكبر عدد</h3>
+            <p><strong>النفعية</strong> (Utilitarisme) مذهب فلسفي يرى أن الفعل الصحيح هو الذي يُعظم السعادة العامة.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">➕</span>
+                    <p><strong>معيار النفع</strong> — الحكم على الأفعال بقدرتها على إنتاج اللذة أو السعادة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👥</span>
+                    <p><strong>السعادة للجميع</strong> — لا سعادة خاصة دون مراعاة سعادة الآخرين</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📊</span>
+                    <p><strong>الحساب</strong> — يمكن نظرياً حساب اللذة والألم رياضياً (بنتام)</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 نص من جيرمي بيثام</h4>
+                <p>« الطبيعة وضعت البشرية تحت سيادة سيديّن : الألم واللذة. عليهما يرتكز كل ما نفكره، كل ما نقوله، كل ما نفعله. » — مقدمة في مبادئ الأخلاق</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ انتقادات النفعية</h4>
+                <p>1. يمكن تبرير الظلم إذا أفاد الأغلبية (مثال : تعذيب شخص بريء لإنقاذ المدينة)</p>
+                <p>2. اللذة تختلف نوعياً ولا يمكن اختزالها في كمية قابلة للقياس</p>
+                <p>3. تتجاهل كرامة الفرد وحقوق الأقليات</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ph-content" id="partie6">
+            <h3>📓 6. النقد المعاصر : جدل السعادة</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. نقد الرأسمالية والسعادة الاستهلاكية</h3>
+            <p>الفلاسفة المعاصرون (باولو فريري، هربرت ماركيوز) ينتقدون ربط السعادة بالاستهلاك : « society de consommation » تخلق احتياجات وهمية وتوهم الناس بأن السعادة في买东西.</p>
+            <div class="example-box">
+                <h4>💡 نص من هربرت ماركيوز</h4>
+                <p>« رجل واحد ذو سيارات لا يستفيد من سيارات الآخرين. » — في نقد السعادة الزائفة التي تقدمها الرأسمالية.</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. نظرية ماسلو : الهرمية الحاجات</h3>
+            <p>أبراهام ماسلو يقترح هرمية من الحاجات : الفسيولوجية ← الأمن ← الانتماء ← الاحترام ← الإنجاز الذاتي. السعادة الحقيقية تتحقق عند قمة الهرمية.</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. الخلاصة</h3>
+            <div class="quote-box">
+                « السعادة ليست محطة نصل إليها، بل هي أسلوب في السفر. » — مثل هندي
+            </div>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>السعادة ليست مجرد لذة أو رفاه مادي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>الفضيلة والمعنى والعلاقات الإنسانية جوهرية للسعادة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>السعادة الفردية ترتبط بالسعادة الجماعية</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/16A34A/FFFFFF?text=%D8%A7%D9%84%D8%B3%D8%B9%D8%A7%D8%AF%D8%A9+%D9%81%D9%8A+%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D8%A9" alt="ملخص السعادة">
+                <div class="resume-overlay">
+                    <h3>نظريات السعادة</h3>
+                    <p>اللذة، الفضيلة، الإرادة الخيّرة، النفعية</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
-            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/7B1FA2/FFFFFF?text=Video+Morale+Ethique">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
-        <!-- BOUTON RETOUR MATIÈRE -->
-        <a href="philosophie.html" class="next-lesson">
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="philosophie-lecon4.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Revenir aux leçons</p>
-                <p class="next-lesson-title">Toutes les leçons de Philosophie ←</p>
+                <p class="next-lesson-text">الدرس التالي</p>
+                <p class="next-lesson-title">الخصوصية والكونية ←</p>
             </div>
             <span class="next-lesson-arrow">←</span>
         </a>
@@ -88,7 +313,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

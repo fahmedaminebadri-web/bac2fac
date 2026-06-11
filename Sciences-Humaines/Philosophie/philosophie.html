@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophie - Matière</title>
+    <title>الفلسفة - المادة</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .chapter-divider {
+            background: linear-gradient(135deg, var(--bg-white), var(--bg-gray-50));
+            border-radius: var(--radius-xl);
+            padding: 20px 28px;
+            margin: 30px 0 10px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: right;
+        }
+        .chapter-divider span {
+            font-size: 1.8rem;
+        }
+        .chapter-divider h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .chapter-divider p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .philo-header {
+            background: linear-gradient(135deg, #7C3AED, #6D28D9);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius-2xl);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .philo-header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .philo-header p {
+            opacity: 0.9;
+            font-size: 1.05rem;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -15,15 +58,16 @@
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
             <nav class="nav-links">
-                <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
-                <a href="../../Physique/physique.html">Physique</a>
-                <a href="../../Electrique/electrique.html">Électrique</a>
-                <a href="../../Mecanique/mecanique.html">Mécanique</a>
-                <a href="../../Langues/Francais/francais.html">Français</a>
-                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
-                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
-                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Electrique/electrique.html">الكهرباء</a>
+                <a href="../../Mecanique/mecanique.html">الميكانيك</a>
+                <a href="../../Langues/Francais/francais.html">الفرنسية</a>
+                <a href="../../Langues/Anglais/anglais.html">الإنجليزية</a>
+                <a href="../../Langues/Arabe/arabe.html">العربية</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="philosophie.html">الفلسفة</a>
             </nav>
         </div>
     </header>
@@ -31,49 +75,80 @@
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
         <!-- BOUTON RETOUR -->
-        <a href="../../index.html" class="back-btn">
-            ← Retour à l'accueil
+        <a href="../../index.html" class="back-btn" style="direction: ltr;">
+            ← العودة إلى الصفحة الرئيسية
         </a>
 
         <!-- HEADER MATIÈRE -->
-        <div class="matiere-header philosophie">
-            <h1>🤔 Philosophie</h1>
-            <p>Explorez les grandes questions de l'existence et de la pensée humaine</p>
+        <div class="philo-header">
+            <h1>🏛️ الفلسفة</h1>
+            <p>5 دروس في أهم الإشكاليات الفلسفية للتحضير للبكالوريا</p>
+        </div>
+
+        <!-- CHAPITRE 1 -->
+        <div class="chapter-divider">
+            <span>🧠</span>
+            <div>
+                <h3>المعرفة والوجود</h3>
+                <p>الإشكاليات الأساسية في الفلسفة</p>
+            </div>
         </div>
 
         <!-- LISTE DES LEÇONS -->
-        <h2 class="section-title">Leçons disponibles</h2>
+        <h2 class="section-title">الدروس المتاحة</h2>
         <div class="cards-grid">
             <a href="philosophie-lecon1.html" class="lesson-card">
                 <span class="lesson-number">1</span>
-                <h3>Qu'est-ce que la philosophie?</h3>
-                <p>Introduction à la démarche philosophique</p>
+                <h3>النمذجة في الفلسفة</h3>
+                <p>التعريف، الأنواع، الإشكاليات والأمثلة التطبيقية</p>
                 <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
+                    <span class="badge badge-audio">بودكاست</span>
+                    <span class="badge badge-image">ملخص</span>
+                    <span class="badge badge-video">فيديو</span>
                 </div>
             </a>
 
             <a href="philosophie-lecon2.html" class="lesson-card">
                 <span class="lesson-number">2</span>
-                <h3>La connaissance</h3>
-                <p>Que peut-on vraiment savoir?</p>
+                <h3>الدولة</h3>
+                <p>نظريات العقد الاجتماعي، أرسطو، هوبز، لوك، روسو، الدولة الحديثة</p>
                 <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
+                    <span class="badge badge-audio">بودكاست</span>
+                    <span class="badge badge-image">ملخص</span>
+                    <span class="badge badge-video">فيديو</span>
                 </div>
             </a>
 
             <a href="philosophie-lecon3.html" class="lesson-card">
                 <span class="lesson-number">3</span>
-                <h3>La morale et l'éthique</h3>
-                <p>Qu'est-ce qui est bien ou mal?</p>
+                <h3>السعادة</h3>
+                <p>نظريات اللذة، الفضيلة، الإرادة الخيّرة، النفعية</p>
                 <div class="lesson-badges">
-                    <span class="badge badge-audio">Podcast</span>
-                    <span class="badge badge-image">Résumé</span>
-                    <span class="badge badge-video">Vidéo</span>
+                    <span class="badge badge-audio">بودكاست</span>
+                    <span class="badge badge-image">ملخص</span>
+                    <span class="badge badge-video">فيديو</span>
+                </div>
+            </a>
+
+            <a href="philosophie-lecon4.html" class="lesson-card">
+                <span class="lesson-number">4</span>
+                <h3>الخصوصية والكونية</h3>
+                <p>النسبوية الثقافية، حقوق الإنسان، الحوار بين الثقافات</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">بودكاست</span>
+                    <span class="badge badge-image">ملخص</span>
+                    <span class="badge badge-video">فيديو</span>
+                </div>
+            </a>
+
+            <a href="philosophie-lecon5.html" class="lesson-card">
+                <span class="lesson-number">5</span>
+                <h3>الأانية والغيرية</h3>
+                <p>ديكارت، ليفيناس، دريدا، مشكلة العقل الآخر</p>
+                <div class="lesson-badges">
+                    <span class="badge badge-audio">بودكاست</span>
+                    <span class="badge badge-image">ملخص</span>
+                    <span class="badge badge-video">فيديو</span>
                 </div>
             </a>
         </div>
@@ -81,7 +156,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

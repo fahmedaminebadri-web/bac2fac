@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le vocabulaire quotidien - Anglais</title>
+    <title>Leçon 3 : Everyday Vocabulary - English</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .en-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .en-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; }
+        .code-box .code-title { font-size: 0.85rem; color: #888; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
+        .code-box .keyword { color: #569CD6; }
+        .code-box .function { color: #DCDCAA; }
+        .code-box .comment { color: #6A9955; }
+        .code-box .string { color: #CE9178; }
+        .code-box .phrase-en { color: #4FC1FF; font-weight: 600; }
+        .code-box .phrase-fr { color: #B5CEA8; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #C5CAE9; }
+        .toc h3 { color: #3F51B5; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #90CAF9; }
+        .plan-box h3 { color: #1565C0; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #673AB7; color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .en-word { color: #673AB7; font-weight: 600; }
+        .vocab-table .fr-word { color: var(--text-dark); }
+        .category-box { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 1px solid #81C784; }
+        .category-box h4 { color: #2E7D32; margin-bottom: 10px; }
+        .category-box p { margin-bottom: 4px; }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -31,64 +70,499 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="anglais.html" class="back-btn">
-            ← Retour aux leçons d'Anglais
-        </a>
+        <a href="anglais.html" class="back-btn">← Retour aux leçons d'Anglais</a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 3: Le vocabulaire quotidien</h1>
+            <h1>Leçon 3 : Everyday Vocabulary</h1>
             <p class="breadcrumb">Anglais > Leçon 3</p>
+        </div>
+
+        <!-- RÉSUMÉ -->
+        <div class="plan-box">
+            <h3>📝 Résumé de la leçon</h3>
+            <p>Cette leçon présente le <strong>vocabulaire essentiel du quotidien</strong> organisé par thèmes : la famille, la maison, les achats, la nourriture, les transports et les expressions idiomatiques courantes. Enrichir son vocabulaire est la clé pour communiquer efficacement en anglais et réussir les épreuves du Bac.</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">La famille et les relations</a></li>
+                <li><a href="#partie2">La maison et les pièces</a></li>
+                <li><a href="#partie3">Les achats et l'argent</a></li>
+                <li><a href="#partie4">La nourriture et les repas</a></li>
+                <li><a href="#partie5">Les transports et les directions</a></li>
+                <li><a href="#partie6">Expressions idiomatiques utiles</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
+
+        <!-- PARTIE 1 -->
+        <div class="en-content" id="partie1">
+            <h3>📘 1. La famille et les relations</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>Anglais</th>
+                    <th>Français</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Family</td>
+                    <td class="fr-word">Famille</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Mother / Mom / Mum</td>
+                    <td class="fr-word">Mère / Maman</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Father / Dad / Daddy</td>
+                    <td class="fr-word">Père / Papa</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Parents</td>
+                    <td class="fr-word">Parents</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Brother</td>
+                    <td class="fr-word">Frère</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Sister</td>
+                    <td class="fr-word">Sœur</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Siblings</td>
+                    <td class="fr-word">Frères et sœurs</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Grandmother / Grandma</td>
+                    <td class="fr-word">Grand-mère</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Grandfather / Grandpa</td>
+                    <td class="fr-word">Grand-père</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Uncle</td>
+                    <td class="fr-word">Oncle</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Aunt</td>
+                    <td class="fr-word">Tante</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Cousin</td>
+                    <td class="fr-word">Cousin(e)</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Nephew</td>
+                    <td class="fr-word">Neveu</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Niece</td>
+                    <td class="fr-word">Nièce</td>
+                </tr>
+            </table>
+            <div class="code-box">
+                <div class="code-title">// Relations et liens familiaux</div>
+                <span class="phrase-en">"I have two brothers and one sister."</span> <span class="phrase-fr">— J'ai deux frères et une sœur.</span>
+                <br><span class="phrase-en">"She is married to John."</span> <span class="phrase-fr">— Elle est mariée avec John.</span>
+                <br><span class="phrase-en">"They have three children."</span> <span class="phrase-fr">— Ils ont trois enfants.</span>
+                <br><span class="phrase-en">"He is my best friend."</span> <span class="phrase-fr">— C'est mon meilleur ami.</span>
+            </div>
+            <div class="category-box">
+                <h4>👨‍👩‍👧‍👦 Types de familles (Family types)</h4>
+                <p>• <strong>Nuclear family</strong> — Famille nucléaire (parents + enfants)</p>
+                <p>• <strong>Extended family</strong> — Famille élargie (grands-parents, oncles, tantes…)</p>
+                <p>• <strong>Single-parent family</strong> — Famille monoparentale</p>
+                <p>• <strong>Blended family</strong> — Famille recomposée</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="en-content" id="partie2">
+            <h3>📗 2. La maison et les pièces</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>Anglais</th>
+                    <th>Français</th>
+                </tr>
+                <tr>
+                    <td class="en-word">House / Home</td>
+                    <td class="fr-word">Maison / Foyer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Apartment / Flat</td>
+                    <td class="fr-word">Appartement</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Living room</td>
+                    <td class="fr-word">Salon / Séjour</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Bedroom</td>
+                    <td class="fr-word">Chambre à coucher</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Kitchen</td>
+                    <td class="fr-word">Cuisine</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Bathroom</td>
+                    <td class="fr-word">Salle de bain</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Toilet / Restroom</td>
+                    <td class="fr-word">Toilettes</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Garden / Yard</td>
+                    <td class="fr-word">Jardin</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Roof</td>
+                    <td class="fr-word">Toit</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Door</td>
+                    <td class="fr-word">Porte</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Window</td>
+                    <td class="fr-word">Fenêtre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Floor</td>
+                    <td class="fr-word">Sol / Étage</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Stairs</td>
+                    <td class="fr-word">Escalier</td>
+                </tr>
+            </table>
+            <div class="code-box">
+                <div class="code-title">// Dans la maison</div>
+                <span class="phrase-en">"There is a big garden behind the house."</span> <span class="phrase-fr">— Il y a un grand jardin derrière la maison.</span>
+                <br><span class="phrase-en">"The bedroom is on the second floor."</span> <span class="phrase-fr">— La chambre est au deuxième étage.</span>
+                <br><span class="phrase-en">"I live in a small apartment."</span> <span class="phrase-fr">— J'habite dans un petit appartement.</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="en-content" id="partie3">
+            <h3>📙 3. Les achats et l'argent</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>Anglais</th>
+                    <th>Français</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Shop / Store</td>
+                    <td class="fr-word">Magasin</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Market</td>
+                    <td class="fr-word">Marché</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Supermarket</td>
+                    <td class="fr-word">Supermarché</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Shopping center / Mall</td>
+                    <td class="fr-word">Centre commercial</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Price</td>
+                    <td class="fr-word">Prix</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Cheap / Expensive</td>
+                    <td class="fr-word">Pas cher / Cher</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Sale / Discount</td>
+                    <td class="fr-word">Soldes / Réduction</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Money / Cash</td>
+                    <td class="fr-word">Argent / Espèces</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Credit card</td>
+                    <td class="fr-word">Carte de crédit</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Receipt</td>
+                    <td class="fr-word">Reçu</td>
+                </tr>
+                <tr>
+                    <td class="en-word">To buy / To sell</td>
+                    <td class="fr-word">Acheter / Vendre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">How much is it?</td>
+                    <td class="fr-word">Ça coûte combien ?</td>
+                </tr>
+            </table>
+            <div class="code-box">
+                <div class="code-title">// Dans un magasin</div>
+                <span class="phrase-en">"How much does this shirt cost?"</span> <span class="phrase-fr">— Combien coûte cette chemise ?</span>
+                <br><span class="phrase-en">"It's too expensive. Can I have a discount?"</span> <span class="phrase-fr">— C'est trop cher. Puis-je avoir une réduction ?</span>
+                <br><span class="phrase-en">"Can I pay by card?"</span> <span class="phrase-fr">— Puis-je payer par carte ?</span>
+                <br><span class="phrase-en">"Do you have this in another size?"</span> <span class="phrase-fr">— Avez-vous ceci dans une autre taille ?</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="en-content" id="partie4">
+            <h3>📕 4. La nourriture et les repas</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>Anglais</th>
+                    <th>Français</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Breakfast</td>
+                    <td class="fr-word">Petit-déjeuner</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Lunch</td>
+                    <td class="fr-word">Déjeuner</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Dinner / Supper</td>
+                    <td class="fr-word">Dîner / Souper</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Bread</td>
+                    <td class="fr-word">Pain</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Water</td>
+                    <td class="fr-word">Eau</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Milk</td>
+                    <td class="fr-word">Lait</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Coffee / Tea</td>
+                    <td class="fr-word">Café / Thé</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Rice / Pasta</td>
+                    <td class="fr-word">Riz / Pâtes</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Chicken / Meat / Fish</td>
+                    <td class="fr-word">Poulet / Viande / Poisson</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Vegetables / Fruits</td>
+                    <td class="fr-word">Légumes / Fruits</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Salad</td>
+                    <td class="fr-word">Salade</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Soup</td>
+                    <td class="fr-word">Soupe / Potage</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Dessert</td>
+                    <td class="fr-word">Dessert</td>
+                </tr>
+            </table>
+            <div class="code-box">
+                <div class="code-title">// Au restaurant</div>
+                <span class="phrase-en">"Can I see the menu, please?"</span> <span class="phrase-fr">— Puis-je voir le menu, s'il vous plaît ?</span>
+                <br><span class="phrase-en">"I would like to order the chicken, please."</span> <span class="phrase-fr">— Je voudrais commander le poulet, s'il vous plaît.</span>
+                <br><span class="phrase-en">"What do you recommend?"</span> <span class="phrase-fr">— Que recommandez-vous ?</span>
+                <br><span class="phrase-en">"The bill, please."</span> <span class="phrase-fr">— L'addition, s'il vous plaît.</span>
+                <br><span class="phrase-en">"I'm vegetarian."</span> <span class="phrase-fr">— Je suis végétarien(ne).</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="en-content" id="partie5">
+            <h3>📒 5. Les transports et les directions</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>Anglais</th>
+                    <th>Français</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Car / Bus / Train</td>
+                    <td class="fr-word">Voiture / Bus / Train</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Plane / Airplane</td>
+                    <td class="fr-word">Avion</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Bicycle / Bike</td>
+                    <td class="fr-word">Vélo</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Taxi</td>
+                    <td class="fr-word">Taxi</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Metro / Subway</td>
+                    <td class="fr-word">Métro</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Airport</td>
+                    <td class="fr-word">Aéroport</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Train station</td>
+                    <td class="fr-word">Gare</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Bus stop</td>
+                    <td class="fr-word">Arrêt de bus</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Left / Right</td>
+                    <td class="fr-word">Gauche / Droite</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Straight ahead</td>
+                    <td class="fr-word">Tout droit</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Near / Far</td>
+                    <td class="fr-word">Près / Loin</td>
+                </tr>
+            </table>
+            <div class="code-box">
+                <div class="code-title">// Demander son chemin</div>
+                <span class="phrase-en">"Excuse me, how do I get to the train station?"</span> <span class="phrase-fr">— Excusez-moi, comment aller à la gare ?</span>
+                <br><span class="phrase-en">"Turn left at the traffic light."</span> <span class="phrase-fr">— Tournez à gauche au feu.</span>
+                <br><span class="phrase-en">"Go straight ahead for 200 meters."</span> <span class="phrase-fr">— Continuez tout droit pendant 200 mètres.</span>
+                <br><span class="phrase-en">"Is it far from here?"</span> <span class="phrase-fr">— Est-ce loin d'ici ?</span>
+                <br><span class="phrase-en">"It's quite close."</span> <span class="phrase-fr">— C'est assez proche.</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="en-content" id="partie6">
+            <h3>📓 6. Expressions idiomatiques utiles</h3>
+            <p>Les <strong>idioms</strong> (expressions idiomatiques) sont des expressions dont le sens ne peut pas être deviné mot à mot. Elles sont essentielles pour parler comme un natif !</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>Expression</th>
+                    <th>Signification</th>
+                </tr>
+                <tr>
+                    <td class="en-word">How are you doing?</td>
+                    <td class="fr-word">Comment allez-vous ? (informel)</td>
+                </tr>
+                <tr>
+                    <td class="en-word">What's up?</td>
+                    <td class="fr-word">Quoi de neuf ? (très informel)</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Long time no see!</td>
+                    <td class="fr-word">Ça fait longtemps !</td>
+                </tr>
+                <tr>
+                    <td class="en-word">I couldn't agree more.</td>
+                    <td class="fr-word">Je suis tout à fait d'accord.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">It's a piece of cake.</td>
+                    <td class="fr-word">C'est un jeu d'enfant.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Break a leg!</td>
+                    <td class="fr-word">Bonne chance ! (avant un examen)</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Bite the bullet</td>
+                    <td class="fr-word">Prendre son courage à deux mains</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Hit the nail on the head</td>
+                    <td class="fr-word">Mettre le doigt dessus / Avoir raison</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Cost an arm and a leg</td>
+                    <td class="fr-word">Coûter les yeux de la tête</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Once in a blue moon</td>
+                    <td class="fr-word">Rarement / De temps en temps</td>
+                </tr>
+            </table>
+            <div class="example-box">
+                <h4>💡 Dialogue avec expressions idiomatiques</h4>
+                <p><strong>A :</strong> Hey! Long time no see! How's it going?</p>
+                <p><strong>B :</strong> Pretty good! I just finished my exams.</p>
+                <p><strong>A :</strong> Really? How did it go?</p>
+                <p><strong>B :</strong> It was a piece of cake! I'm so relieved!</p>
+                <p><strong>A :</strong> Great! We should celebrate. What about going to a restaurant tonight?</p>
+                <p><strong>B :</strong> Sure! That sounds awesome!</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Conseil pour enrichir votre vocabulaire</h4>
+                <p>1. Lisez des textes en anglais каждый jour (journaux, réseaux sociaux)</p>
+                <p>2. Regardez des films et séries en VO avec sous-titres anglais</p>
+                <p>3. Apprenez 5 nouveaux mots par jour et استخدم-les dans des phrases</p>
+                <p>4. Tenez un journal en anglais pour pratiquer l'écriture</p>
+            </div>
+        </div>
 
         <!-- SECTION RÉSUMÉ IMAGE -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/673AB7/FFFFFF?text=Resume+Vocabulaire+Anglais" alt="Résumé du vocabulaire anglais">
+                <img src="https://via.placeholder.com/1200x700/4527A0/FFFFFF?text=Everyday+English+Vocabulary+-+Complete" alt="Résumé vocabulaire anglais">
                 <div class="resume-overlay">
-                    <h3>Everyday words</h3>
-                    <p>Les mots essentiels pour la vie de tous les jours.</p>
+                    <h3>Vocabulaire anglais du quotidien</h3>
+                    <p>Famille, maison, achats, nourriture, transports, expressions idiomatiques</p>
                 </div>
-            </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/673AB7/FFFFFF?text=Video+Vocabulaire+Anglais">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
-        <!-- BOUTON RETOUR MATIÈRE -->
+        <!-- BOUTON LEÇON SUIVANTE -->
         <a href="anglais.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Revenir aux leçons</p>
-                <p class="next-lesson-title">Toutes les leçons d'Anglais ←</p>
+                <p class="next-lesson-text">Retour au sommaire</p>
+                <p class="next-lesson-title">Toutes les leçons Anglais →</p>
             </div>
-            <span class="next-lesson-arrow">←</span>
+            <span class="next-lesson-arrow">→</span>
         </a>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La grammaire de base - Français</title>
+    <title>Leçon 1 : La Dissertation Littéraire - Français</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .fr-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .fr-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .fr-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FBCFE8; }
+        .toc h3 { color: #9D174D; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+        .plan-box { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .plan-box h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box ol { padding-left: 22px; }
+        .plan-box li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .citation { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 14px 0; font-style: italic; color: var(--secondary); }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -31,48 +56,233 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="francais.html" class="back-btn">
-            ← Retour aux leçons de Français
-        </a>
+        <a href="francais.html" class="back-btn">← Retour aux leçons de Français</a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 1: La grammaire de base</h1>
+            <h1>Leçon 1 : La Dissertation Littéraire</h1>
             <p class="breadcrumb">Français > Leçon 1</p>
+        </div>
+
+        <!-- RÉSUMÉ -->
+        <div class="plan-box">
+            <h3>📝 Résumé de la leçon</h3>
+            <p>La dissertation littéraire est un exercice qui demande de <strong>construire une réflexion argumentée</strong> sur une question littéraire. Elle se compose de trois parties : l'<strong>introduction</strong> (présentation du sujet et annonce du plan), le <strong>développement</strong> (analyse du corpus et argumentation), et la <strong>conclusion</strong> (synthèse et ouverture). La méthode repose sur une lecture attentive du corpus, la formulation d'une <strong>problématique</strong> claire, et l'organisation logique des idées.</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">Qu'est-ce que la dissertation littéraire ?</a></li>
+                <li><a href="#partie2">L'introduction : poser le sujet</a></li>
+                <li><a href="#partie3">Le développement : analyser et argumenter</a></li>
+                <li><a href="#partie4">La conclusion : synthétiser et ouvrir</a></li>
+                <li><a href="#partie5">La problématique et le plan</a></li>
+                <li><a href="#partie6">Exemples et conseils pratiques</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
+
+        <!-- PARTIE 1 -->
+        <div class="fr-content" id="partie1">
+            <h3>📘 1. Qu'est-ce que la dissertation littéraire ?</h3>
+            <p>La dissertation littéraire est un exercice d'<strong>expression écrite</strong> qui évalue votre capacité à comprendre un texte littéraire, à formuler une réflexion structurée et à défendre une thèse argumentée.</p>
+            <p>Elle se distingue du commentaire composé par sa dimension <em>réflexive</em> : il ne s'agit pas seulement d'analyser, mais de <strong>réfléchir sur une question</strong> à partir d'un corpus de textes.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>Un corpus</strong> — un ou plusieurs textes littéraires fournis</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>Une question</strong> — le sujet sur lequel vous devez réfléchir</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>Une thèse</strong> — la position que vous allez défendre</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔨</span>
+                    <p><strong>Une argumentation</strong> — les preuves et exemples qui soutiennent votre thèse</p>
+                </div>
+            </div>
+            <div class="citation">
+                « La dissertation n'est pas un catalogue de connaissances, mais une démonstration de réflexion. » — Principe pédagogique fondamental
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="fr-content" id="partie2">
+            <h3>📗 2. L'introduction : poser le sujet</h3>
+            <p>L'introduction est cruciale : elle <strong>accroche le lecteur</strong> et présente votre approche du sujet. Elle se compose de quatre éléments :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">1️⃣</span>
+                    <p><strong>Le contexte / l'accroche</strong> — Situer le sujet dans le champ littéraire concerné</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">2️⃣</span>
+                    <p><strong>La définition des termes</strong> — Clarifier les mots-clés du sujet</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">3️⃣</span>
+                    <p><strong>La problématique</strong> — La question centrale à laquelle vous allez répondre</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">4️⃣</span>
+                    <p><strong>L'annonce du plan</strong> — Préparer le lecteur à votre progression</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple d'introduction (Sujet : le personnage de roman)</h4>
+                <p><em>« Le personnage de roman, figure centrale de toute œuvre narrative, a toujours été au cœur des débats littéraires. De Don Quichotte au Petit Prince, il cristallise les enjeux d'une époque. Mais en quoi le personnage de roman reflète-t-il la société qui l'a produit ? Nous étudierons d'abord comment le personnage incarne des valeurs sociales, puis nous analyserons son évolution face au conflit, et enfin nous examinerons sa dimension symbolique. »</em></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="fr-content" id="partie3">
+            <h3>📙 3. Le développement : analyser et argumenter</h3>
+            <p>Le développement est le <strong>cœur de la dissertation</strong>. Il contient généralement deux ou trois parties, chacune contenant :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📌</span>
+                    <p><strong>Un sous-point introductif</strong> — Présentation de l'idée générale de la partie</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p><strong>Des analyses de texte</strong> — Citations commenterées avec des figures de style, le champ lexical, la syntaxe…</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔗</span>
+                    <p><strong>Un lien logique</strong> — Transition vers la partie suivante</p>
+                </div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Les étapes de l'analyse</h3>
+            <div class="example-box">
+                <h4>💡 Méthode d'analyse d'une citation</h4>
+                <p><strong>1. Citer</strong> — Reproduire le passage pertinent entre guillemets</p>
+                <p><strong>2. Situer</strong> — « Dans ce passage, l'auteur描写… »</p>
+                <p><strong>3. Analyser</strong> — Étudier les procédés littéraires (métaphore, anaphore, rythme…)</p>
+                <p><strong>4. Interpréter</strong> — Expliquer le sens et la fonction de ces choix</p>
+                <p><strong>5. Conclure</strong> — Montrer en quoi cela répond à la problématique</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="fr-content" id="partie4">
+            <h3>📕 4. La conclusion : synthétiser et ouvrir</h3>
+            <p>La conclusion doit <strong>répondre à la problématique</strong> et montrer que vous avez tenu vos promesses. Elle se compose de deux éléments :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>Le bilan</strong> — Synthèse des idées principales, réponse claire à la problématique</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌍</span>
+                    <p><strong>L'ouverture</strong> — Prolongement vers un autre champ littéraire, une autre époque ou un autre auteur</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemple de conclusion</h4>
+                <p><em>« Ainsi, le personnage de roman ne se réduit pas à un simple individu fictif : il est le miroir de la société qui l'a vu naître, un lieu d'expérimentation des idées et des valeurs d'une époque. Comme l'a montré notre analyse, de Cervantès à Saint-Exupéry, le personnage littéraire n'a cessé d'évoluer pour refléter les préoccupations de son temps. N'est-ce pas là la preuve que la littérature, bien loin d'être un simple divertissement, est un véritable laboratoire du monde humain ? »</em></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="fr-content" id="partie5">
+            <h3>📒 5. La problématique et le plan</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Formuler la problématique</h3>
+            <p>La <strong>problématique</strong> est la question centrale de votre dissertation. Elle doit :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>Résulter d'une <strong>interrogation</strong> sur le sujet (pas une simple reformulation)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>Admettre <strong>au moins deux réponses</strong> possibles (sinon, pas de réflexion)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>Être <strong>claire et concise</strong></p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Du sujet à la problématique</h4>
+                <p><strong>Sujet :</strong> « En quoi le héros tragique est-il un personnage condamné ? »</p>
+                <p><strong>Mauvaise reformulation :</strong> « Le héros tragique est un personnage condamné. » (Ce n'est pas une question !)</p>
+                <p><strong>Bonne problématique :</strong> « En quoi la condition tragique du héros le.destine-t-elle à la destruction ? » ou « La condamnation du héros tragique est-elle méritée ou injuste ? »</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Types de plans</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>Plan dialectique</strong> — Thèse / Antithèse / Synthèse (le plus courant au Bac)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📈</span>
+                    <p><strong>Plan progressif</strong> — Du simple au complexe, de l'apparent au profond</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>Plan comparatif</strong> — Comparaison de deux œuvres ou deux aspects</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="fr-content" id="partie6">
+            <h3>📓 6. Exemples et conseils pratiques</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Exercice type Bac</h3>
+            <div class="example-box">
+                <h4>Sujet :</h4>
+                <p><em>« Les fables de La Fontaine sont-elles seulement destinées à amuser les enfants ? »</em></p>
+                <h4 style="margin-top:12px;">Plan proposé :</h4>
+                <p><strong>I.</strong> D'abord, nous montrerons que la fable semble s'adresser à un.public simple (I.1 L'apparence enfantine / I.2 Le langage accessible)</p>
+                <p><strong>II.</strong> Mais en réalité, les fables s'adressent aux adultes par leur dimension politique et morale (II.1 La satire sociale / II.2 La philosophie cachée)</p>
+                <p><strong>III.</strong> Conclusion : La fable est un art double, à plusieurs niveaux de lecture.</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Erreurs à éviter</h4>
+                <p>1. <strong>Écrire sans analyser</strong> — Citez et commentez toujours les procédés littéraires</p>
+                <p>2. <strong>Raconter l'histoire</strong> — Ne faites pas du résumé de l'œuvre</p>
+                <p>3. <strong>Négliger la problématique</strong> — Chaque partie doit répondre à la question posée</p>
+                <p>4. <strong>Oublier les transitions</strong> — Chaque partie doit être liée logiquement à la suivante</p>
+            </div>
+        </div>
 
         <!-- SECTION RÉSUMÉ IMAGE -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/E91E63/FFFFFF?text=Resume+Grammaire+Base" alt="Résumé de la grammaire de base">
+                <img src="https://via.placeholder.com/1200x700/E91E63/FFFFFF?text=Dissertation+Litteraire+-+Methode+Complete" alt="Résumé dissertation littéraire">
                 <div class="resume-overlay">
-                    <h3>Les parties du discours</h3>
-                    <p>Noms, verbes, adjectifs et leur rôle dans la phrase.</p>
+                    <h3>La dissertation littéraire en 6 étapes</h3>
+                    <p>Introduction, problématique, plan, développement, analyse, conclusion</p>
                 </div>
-            </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/E91E63/FFFFFF?text=Video+Grammaire+Base">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
@@ -80,7 +290,7 @@
         <a href="francais-lecon2.html" class="next-lesson">
             <div>
                 <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">La conjugaison →</p>
+                <p class="next-lesson-title">L'Argumentation →</p>
             </div>
             <span class="next-lesson-arrow">→</span>
         </a>
@@ -88,7 +298,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

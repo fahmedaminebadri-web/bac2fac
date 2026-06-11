@@ -3,8 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les bases de l'anglais - Anglais</title>
+    <title>Leçon 1 : The Basics of English - English</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .en-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .en-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; }
+        .code-box .code-title { font-size: 0.85rem; color: #888; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
+        .code-box .keyword { color: #569CD6; }
+        .code-box .function { color: #DCDCAA; }
+        .code-box .comment { color: #6A9955; }
+        .code-box .string { color: #CE9178; }
+        .code-box .phrase-en { color: #4FC1FF; font-weight: 600; }
+        .code-box .phrase-fr { color: #B5CEA8; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #C5CAE9; }
+        .toc h3 { color: #3F51B5; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #90CAF9; }
+        .plan-box h3 { color: #1565C0; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #673AB7; color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .en-word { color: #673AB7; font-weight: 600; }
+        .vocab-table .fr-word { color: var(--text-dark); }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -31,48 +67,322 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="anglais.html" class="back-btn">
-            ← Retour aux leçons d'Anglais
-        </a>
+        <a href="anglais.html" class="back-btn">← Retour aux leçons d'Anglais</a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 1: Les bases de l'anglais</h1>
+            <h1>Leçon 1 : The Basics of English</h1>
             <p class="breadcrumb">Anglais > Leçon 1</p>
+        </div>
+
+        <!-- RÉSUMÉ -->
+        <div class="plan-box">
+            <h3>📝 Résumé de la leçon</h3>
+            <p>Cette première leçon présente les <strong>bases fondamentales de l'anglais</strong> : les salutations, les présentations, les pronoms personnels, le verbe "to be" et le vocabulaire essentiel du quotidien. L'objectif est de permettre à l'apprenant de se présenter et de tenir une conversation simple en anglais.</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">Salutations et formules de politesse</a></li>
+                <li><a href="#partie2">Les pronoms personnels et le verbe "to be"</a></li>
+                <li><a href="#partie3">Se présenter et présenter quelqu'un</a></li>
+                <li><a href="#partie4">Les nombres et les jours de la semaine</a></li>
+                <li><a href="#partie5">Le vocabulaire fondamental</a></li>
+                <li><a href="#partie6">Exercices pratiques</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
+
+        <!-- PARTIE 1 -->
+        <div class="en-content" id="partie1">
+            <h3>📘 1. Salutations et formules de politesse</h3>
+            <p>Les <strong>salutations</strong> (Greetings) sont la première chose à maîtriser pour communiquer en anglais. Voici les expressions les plus courantes :</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>Anglais</th>
+                    <th>Français</th>
+                    <th>Contexte</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Hello!</td>
+                    <td class="fr-word">Bonjour !</td>
+                    <td>Formel / informel</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Hi!</td>
+                    <td class="fr-word">Salut !</td>
+                    <td>Informel</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Good morning!</td>
+                    <td class="fr-word">Bonjour ! (matin)</td>
+                    <td>Avant midi</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Good afternoon!</td>
+                    <td class="fr-word">Bon après-midi !</td>
+                    <td>Après midi</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Good evening!</td>
+                    <td class="fr-word">Bonsoir !</td>
+                    <td>En soirée</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Good night!</td>
+                    <td class="fr-word">Bonne nuit !</td>
+                    <td>Pour se séparer le soir</td>
+                </tr>
+            </table>
+            <div class="code-box">
+                <div class="code-title">// Réponses aux salutations</div>
+                <span class="phrase-en">"How are you?"</span> <span class="phrase-fr">— Comment allez-vous ?</span>
+                <br><span class="comment">→ I'm fine, thank you. / I'm OK. / Not bad!</span>
+
+                <br><br><span class="phrase-en">"Nice to meet you!"</span> <span class="phrase-fr">— Enchanté !</span>
+                <br><span class="comment">→ Nice to meet you too!</span>
+
+                <br><br><span class="phrase-en">"How do you do?"</span> <span class="phrase-fr">— Comment allez-vous ? (très formel)</span>
+                <br><span class="comment">→ How do you do? (réponse traditionnelle)</span>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Différence importante</h4>
+                <p><strong>Good night</strong> = pour dire au revoir le soir (jamais pour saluer le matin !)</p>
+                <p><strong>Good evening</strong> = pour saluer en soirée</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="en-content" id="partie2">
+            <h3>📗 2. Les pronoms personnels et le verbe "to be"</h3>
+            <p>Le verbe <strong>to be</strong> (être) est le verbe le plus important en anglais. Il se conjugue différemment selon le pronom :</p>
+            <div class="code-box">
+                <div class="code-title">// Conjugaison du verbe TO BE</div>
+                <span class="comment">// Forme affirmative</span>
+                <span class="keyword">I</span> <span class="function">am</span>          → I'm            <span class="comment">// Je suis</span>
+                <span class="keyword">You</span> <span class="function">are</span>         → You're         <span class="comment">// Tu es / Vous êtes</span>
+                <span class="keyword">He</span> <span class="function">is</span>           → He's           <span class="comment">// Il est</span>
+                <span class="keyword">She</span> <span class="function">is</span>          → She's          <span class="comment">// Elle est</span>
+                <span class="keyword">It</span> <span class="function">is</span>           → It's           <span class="comment">// Il/Elle est (chose/animal)</span>
+                <span class="keyword">We</span> <span class="function">are</span>          → We're          <span class="comment">// Nous sommes</span>
+                <span class="keyword">They</span> <span class="function">are</span>         → They're        <span class="comment">// Ils/Elles sont</span>
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Forme négative</div>
+                <span class="comment">// On ajoute "not" après le verbe</span>
+                I <span class="function">am not</span>       → I'm not / I aren't (informel)
+                He <span class="function">is not</span>      → He isn't
+                They <span class="function">are not</span>    → They aren't
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Forme interrogative</div>
+                <span class="comment">// On inverse le sujet et le verbe</span>
+                <span class="function">Am</span> I...?
+                <span class="function">Is</span> he...?
+                <span class="function">Are</span> you...?
+                <span class="function">Are</span> they...?
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p><strong>Affirmatif :</strong> I am a student. → I'm a student.</p>
+                <p><strong>Négatif :</strong> She is not French. → She isn't French.</p>
+                <p><strong>Question :</strong> Are you a teacher? — Yes, I am. / No, I'm not.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="en-content" id="partie3">
+            <h3>📙 3. Se présenter et présenter quelqu'un</h3>
+            <p>Voici les structures essentielles pour <strong>se présenter</strong> (Introduce yourself) et <strong>présenter quelqu'un</strong> (Introduce someone) :</p>
+            <div class="code-box">
+                <div class="code-title">// Se présenter</div>
+                <span class="phrase-en">"My name is Ahmed."</span> <span class="phrase-fr">— Je m'appelle Ahmed.</span>
+                <br><span class="phrase-en">"I'm 20 years old."</span> <span class="phrase-fr">— J'ai 20 ans.</span>
+                <br><span class="phrase-en">"I'm from Tunisia."</span> <span class="phrase-fr">— Je viens de Tunisie.</span>
+                <br><span class="phrase-en">"I'm a student."</span> <span class="phrase-fr">— Je suis étudiant.</span>
+                <br><span class="phrase-en">"I live in Tunis."</span> <span class="phrase-fr">— J'habite à Tunis.</span>
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Présenter quelqu'un</div>
+                <span class="phrase-en">"This is my friend, Sara."</span> <span class="phrase-fr">— Voici mon ami(e), Sara.</span>
+                <br><span class="phrase-en">"She is a doctor."</span> <span class="phrase-fr">— Elle est médecin.</span>
+                <br><span class="phrase-en">"Nice to meet you!"</span> <span class="phrase-fr">— Enchanté !</span>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Questions pour faire connaissance</h3>
+            <div class="code-box">
+                <div class="code-title">// Questions courantes</div>
+                <span class="phrase-en">"What is your name?"</span> <span class="phrase-fr">— Comment vous appelez-vous ?</span>
+                <br><span class="phrase-en">"Where are you from?"</span> <span class="phrase-fr">— D'où venez-vous ?</span>
+                <br><span class="phrase-en">"How old are you?"</span> <span class="phrase-fr">— Quel âge avez-vous ?</span>
+                <br><span class="phrase-en">"What do you do?"</span> <span class="phrase-fr">— Que faites-vous ? (profession)</span>
+                <br><span class="phrase-en">"Where do you live?"</span> <span class="phrase-fr">— Où habitez-vous ?</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="en-content" id="partie4">
+            <h3>📕 4. Les nombres et les jours de la semaine</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Les nombres de 1 à 20</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">1️⃣</span>
+                    <p>1 one, 2 two, 3 three, 4 four, 5 five, 6 six, 7 seven, 8 eight, 9 nine, 10 ten</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">1️⃣</span>
+                    <p>11 eleven, 12 twelve, 13 thirteen, 14 fourteen, 15 fifteen, 16 sixteen</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">1️⃣</span>
+                    <p>17 seventeen, 18 eighteen, 19 nineteen, 20 twenty</p>
+                </div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Les dizaines</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔟</span>
+                    <p>20 twenty, 30 thirty, 40 forty, 50 fifty, 60 sixty</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔟</span>
+                    <p>70 seventy, 80 eighty, 90 ninety, 100 one hundred</p>
+                </div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Les jours de la semaine</h3>
+            <div class="code-box">
+                <div class="code-title">// Days of the week</div>
+                <span class="keyword">Monday</span> (lundi) — <span class="keyword">Tuesday</span> (mardi) — <span class="keyword">Wednesday</span> (mercredi)
+                <br><span class="keyword">Thursday</span> (jeudi) — <span class="keyword">Friday</span> (vendredi) — <span class="keyword">Saturday</span> (samedi) — <span class="keyword">Sunday</span> (dimanche)
+            </div>
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>« I was born on <strong>Monday</strong>, June 15th. » — Je suis né lundi 15 juin.</p>
+                <p>« See you on <strong>Friday</strong>! » — À vendredi !</p>
+                <p>« Today is <strong>Saturday</strong>. » — Aujourd'hui c'est samedi.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="en-content" id="partie5">
+            <h3>📒 5. Le vocabulaire fondamental</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Expressions utiles du quotidien</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>Anglais</th>
+                    <th>Français</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Please</td>
+                    <td class="fr-word">S'il vous plaît</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Thank you / Thanks</td>
+                    <td class="fr-word">Merci</td>
+                </tr>
+                <tr>
+                    <td class="en-word">You're welcome</td>
+                    <td class="fr-word">De rien</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Excuse me</td>
+                    <td class="fr-word">Excusez-moi (pour attirer l'attention)</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Sorry / I'm sorry</td>
+                    <td class="fr-word">Désolé(e)</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Yes, please</td>
+                    <td class="fr-word">Oui, s'il vous plaît</td>
+                </tr>
+                <tr>
+                    <td class="en-word">No, thank you</td>
+                    <td class="fr-word">Non, merci</td>
+                </tr>
+                <tr>
+                    <td class="en-word">I don't understand</td>
+                    <td class="fr-word">Je ne comprends pas</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Can you repeat?</td>
+                    <td class="fr-word">Pouvez-vous répéter ?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">I speak a little English</td>
+                    <td class="fr-word">Je parle un peu anglais</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ Conseil de prononciation</h4>
+                <p>En anglais, la liaison n'existe pas comme en français. Chaque mot se prononce clairement. Écoutez des natifs pour améliorer votre accent !</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="en-content" id="partie6">
+            <h3>📓 6. Exercices pratiques</h3>
+            <div class="example-box">
+                <h4>💡 Exercice 1 : Conjuguez le verbe "to be"</h4>
+                <p>1. I _____ (am) a student.</p>
+                <p>2. She _____ (is) from France.</p>
+                <p>3. They _____ (are) in the classroom.</p>
+                <p>4. He _____ (is not) a teacher.</p>
+                <p>5. _____ (Are) you ready?</p>
+                <p style="margin-top:10px;"><strong>Réponses :</strong> 1. am, 2. is, 3. are, 4. isn't, 5. Are</p>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exercice 2 : Traduisez en anglais</h4>
+                <p>1. Je m'appelle Ahmed et j'ai 18 ans.</p>
+                <p>2. Enchanté de faire votre connaissance !</p>
+                <p>3. Comment vous appelez-vous ?</p>
+                <p>4. Elle est médecin et elle travaille à l'hôpital.</p>
+                <p style="margin-top:10px;"><strong>Réponses :</strong> 1. My name is Ahmed and I'm 18 years old. 2. Nice to meet you! 3. What is your name? 4. She is a doctor and she works at the hospital.</p>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exercice 3 : Dialogue</h4>
+                <p><strong>A :</strong> Hello! My name is Sara. What's your name?</p>
+                <p><strong>B :</strong> Hi Sara! I'm Ahmed. Nice to meet you!</p>
+                <p><strong>A :</strong> Nice to meet you too! Where are you from?</p>
+                <p><strong>B :</strong> I'm from Tunisia. And you?</p>
+                <p><strong>A :</strong> I'm from France. How old are you?</p>
+                <p><strong>B :</strong> I'm 20. And you?</p>
+                <p><strong>A :strong> I'm 19. Nice to talk to you!</p>
+            </div>
+        </div>
 
         <!-- SECTION RÉSUMÉ IMAGE -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/673AB7/FFFFFF?text=Resume+Bases+Anglais" alt="Résumé des bases de l'anglais">
+                <img src="https://via.placeholder.com/1200x700/673AB7/FFFFFF?text=The+Basics+of+English+-+Complete+Summary" alt="Résumé des bases de l'anglais">
                 <div class="resume-overlay">
-                    <h3>Hello, how are you?</h3>
-                    <p>Salutations et présentations pour démarrer en anglais.</p>
+                    <h3>Les bases de l'anglais</h3>
+                    <p>Salutations, verbe to be, présentations, vocabulaire fondamental</p>
                 </div>
-            </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/673AB7/FFFFFF?text=Video+Bases+Anglais">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
@@ -80,7 +390,7 @@
         <a href="anglais-lecon2.html" class="next-lesson">
             <div>
                 <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">La grammaire anglaise →</p>
+                <p class="next-lesson-title">English Grammar →</p>
             </div>
             <span class="next-lesson-arrow">→</span>
         </a>
@@ -88,7 +398,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

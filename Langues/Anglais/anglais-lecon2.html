@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La grammaire anglaise - Anglais</title>
+    <title>Leçon 2 : English Grammar - English</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .en-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .en-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; }
+        .code-box .code-title { font-size: 0.85rem; color: #888; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
+        .code-box .keyword { color: #569CD6; }
+        .code-box .function { color: #DCDCAA; }
+        .code-box .comment { color: #6A9955; }
+        .code-box .string { color: #CE9178; }
+        .code-box .phrase-en { color: #4FC1FF; font-weight: 600; }
+        .code-box .phrase-fr { color: #B5CEA8; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #C5CAE9; }
+        .toc h3 { color: #3F51B5; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #90CAF9; }
+        .plan-box h3 { color: #1565C0; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #673AB7; color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .en-word { color: #673AB7; font-weight: 600; }
+        .vocab-table .fr-word { color: var(--text-dark); }
+        .tense-box { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 11px solid #FFB74D; }
+        .tense-box h4 { color: #E65100; margin-bottom: 10px; }
+        .tense-box p { margin-bottom: 6px; }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -31,48 +70,342 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="anglais.html" class="back-btn">
-            ← Retour aux leçons d'Anglais
-        </a>
+        <a href="anglais.html" class="back-btn">← Retour aux leçons d'Anglais</a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 2: La grammaire anglaise</h1>
+            <h1>Leçon 2 : English Grammar</h1>
             <p class="breadcrumb">Anglais > Leçon 2</p>
+        </div>
+
+        <!-- RÉSUMÉ -->
+        <div class="plan-box">
+            <h3>📝 Résumé de la leçon</h3>
+            <p>Cette leçon couvre les <strong>structures grammaticales essentielles</strong> de l'anglais : les temps verbaux (Present Simple, Past Simple, Present Continuous), la formation des phrases affirmatives, négatives et interrogatives, et l'utilisation des mots interrogatifs. Une bonne maîtrise de ces bases permet de construire des phrases correctes et de se faire comprendre.</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">La structure de base d'une phrase</a></li>
+                <li><a href="#partie2">Le Present Simple (Présent simple)</a></li>
+                <li><a href="#partie3">Le Past Simple (Passé simple)</a></li>
+                <li><a href="#partie4">Le Present Continuous (Présent continu)</a></li>
+                <li><a href="#partie5">Les mots interrogatifs (Wh-questions)</a></li>
+                <li><a href="#partie6">Exercices et comparaisons</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
+
+        <!-- PARTIE 1 -->
+        <div class="en-content" id="partie1">
+            <h3>📘 1. La structure de base d'une phrase</h3>
+            <p>En anglais, la structure de base d'une phrase est très simple : <strong>Sujet + Verbe + Complément</strong> (SVO).</p>
+            <div class="code-box">
+                <div class="code-title">// Structure de base</div>
+                <span class="comment">// Sujet + Verbe + Complément</span>
+                <span class="phrase-en">I</span> <span class="keyword">love</span> <span class="string">music.</span>        <span class="phrase-fr">— J'aime la musique.</span>
+                <span class="phrase-en">She</span> <span class="keyword">studies</span> <span class="string">English.</span>   <span class="phrase-fr">— Elle étudie l'anglais.</span>
+                <span class="phrase-en">They</span> <span class="keyword">live</span> <span class="string">in Tunis.</span>   <span class="phrase-fr">— Ils habitent à Tunis.</span>
+            </div>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>En anglais, <strong>l'ordre des mots est fixe</strong> — pas d'inversion comme en français</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>Le verbe <strong>ne change pas</strong> selon le sujet (sauf pour le 3ème personne du singulier)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>Pas d'article défini перед nom neutre : <em>"the book"</em> mais pas <em>"the water"</em> pour généraliser</p>
+                </div>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Différence avec le français</h4>
+                <p>En anglais, on dit <strong>"I study English"</strong> (sans article), alors qu'en français on dit « j'étudie <strong>l'</strong>anglais ». Attention aux articles !</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="en-content" id="partie2">
+            <h3>📗 2. Le Present Simple (Présent simple)</h3>
+            <p>Le <strong>Present Simple</strong> s'utilise pour les habitudes, les vérités générales et les faits répétitifs.</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Formation</h3>
+            <div class="code-box">
+                <div class="code-title">// Formation du Present Simple</div>
+                <span class="comment">// Affirmatif : Sujet + verbe (base) + s/es à la 3ème personne sg</span>
+                I <span class="function">work</span>.         → <span class="keyword">I work.</span>
+                You <span class="function">work</span>.        → <span class="keyword">You work.</span>
+                He/She/It <span class="function">work</span>s.   → <span class="keyword">He works.</span>
+                We/They <span class="function">work</span>.     → <span class="keyword">We work.</span>
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Négatif : Sujet + do not (don't) / does not (doesn't) + verbe</div>
+                I <span class="function">don't work</span>.       <span class="comment">— Je ne travaille pas.</span>
+                He <span class="function">doesn't work</span>.     <span class="comment">— Il ne travaille pas.</span>
+                They <span class="function">don't live</span> here. <span class="comment">— Ils n'habitent pas ici.</span>
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Interrogatif : Do/Does + sujet + verbe ?</div>
+                <span class="function">Do</span> you <span class="function">work</span>?      <span class="comment">— Travaillez-vous ?</span>
+                <span class="function">Does</span> she <span class="function">live</span> here? <span class="comment">— Habite-t-elle ici ?</span>
+                <span class="function">Do</span> they <span class="function">speak</span> English? <span class="comment">— Parlent-ils anglais ?</span>
+            </div>
+            <div class="tense-box">
+                <h4>📌 Quand utiliser le Present Simple ?</h4>
+                <p>• <strong>Habitudes</strong> : I <strong>drink</strong> coffee every morning. (Je bois du café chaque matin.)</p>
+                <p>• <strong>Vérités générales</strong> : Water <strong>boils</strong> at 100°C. (L'eau bout à 100°C.)</p>
+                <p>• <strong>États permanents</strong> : She <strong>lives</strong> in Paris. (Elle habite à Paris.)</p>
+                <p>• <strong>Instructions / Instructions</strong> : You <strong>turn</strong> left, then right. (Tu tournes à gauche, puis à droite.)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="en-content" id="partie3">
+            <h3>📙 3. Le Past Simple (Passé simple)</h3>
+            <p>Le <strong>Past Simple</strong> s'utilise pour des actions terminées dans le passé, souvent avec une date ou une indication temporelle.</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Formation</h3>
+            <div class="code-box">
+                <div class="code-title">// Formation du Past Simple</div>
+                <span class="comment">// Régulier : verbe + ed</span>
+                work → worked    play → played    study → studied
+                <br><br><span class="comment">// Irrégulier : à mémoriser (voir tableau)</span>
+                go → went       see → saw       eat → ate
+                have → had      take → took     write → wrote
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Négatif : Sujet + did not (didn't) + verbe (base)</div>
+                I <span class="function">didn't go</span> to school yesterday. <span class="comment">— Je ne suis pas allé à l'école hier.</span>
+                She <span class="function">didn't see</span> the movie.         <span class="comment">— Elle n'a pas vu le film.</span>
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Interrogatif : Did + sujet + verbe (base) ?</div>
+                <span class="function">Did</span> you <span class="function">finish</span> your homework?  <span class="comment">— As-tu fini tes devoirs ?</span>
+                <span class="function">Did</span> he <span class="function">call</span> you?              <span class="comment">— T'a-t-il appelé ?</span>
+            </div>
+            <table class="vocab-table">
+                <tr>
+                    <th>Verbe (infinitif)</th>
+                    <th>Past Simple</th>
+                    <th>Français</th>
+                </tr>
+                <tr>
+                    <td class="en-word">be</td>
+                    <td class="fr-word">was / were</td>
+                    <td>être</td>
+                </tr>
+                <tr>
+                    <td class="en-word">have</td>
+                    <td class="fr-word">had</td>
+                    <td>avoir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">do</td>
+                    <td class="fr-word">did</td>
+                    <td>faire</td>
+                </tr>
+                <tr>
+                    <td class="en-word">go</td>
+                    <td class="fr-word">went</td>
+                    <td>aller</td>
+                </tr>
+                <tr>
+                    <td class="en-word">see</td>
+                    <td class="fr-word">saw</td>
+                    <td>voir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">eat</td>
+                    <td class="fr-word">ate</td>
+                    <td>manger</td>
+                </tr>
+                <tr>
+                    <td class="en-word">write</td>
+                    <td class="fr-word">wrote</td>
+                    <td>écrire</td>
+                </tr>
+                <tr>
+                    <td class="en-word">take</td>
+                    <td class="fr-word">took</td>
+                    <td>prendre</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="en-content" id="partie4">
+            <h3>📕 4. Le Present Continuous (Présent continu)</h3>
+            <p>Le <strong>Present Continuous</strong> s'utilise pour des actions en cours de réalisation au moment où l'on parle.</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Formation</h3>
+            <div class="code-box">
+                <div class="code-title">// Formation : Sujet + am/is/are + verbe-ing</div>
+                I <span class="function">am reading</span>.      → I'm reading.      <span class="comment">— Je lis (en ce moment).</span>
+                She <span class="function">is working</span>.     → She's working.    <span class="comment">— Elle travaille (en ce moment).</span>
+                They <span class="function">are playing</span>.    → They're playing.  <span class="comment">— Ils jouent (en ce moment).</span>
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Négatif : am/is/are + not + verbe-ing</div>
+                I <span class="function">am not reading</span>.    → I'm not reading.
+                He <span class="function">is not listening</span>. → He isn't listening.
+            </div>
+            <div class="code-box">
+                <div class="code-title">// Interrogatif : Am/Is/Are + sujet + verbe-ing ?</div>
+                <span class="function">Are</span> you <span class="function">listening</span>?      <span class="comment">— Écoutez-vous ?</span>
+                <span class="function">Is</span> she <span class="function">cooking</span>?         <span class="comment">— Cuisine-t-elle ?</span>
+            </div>
+            <div class="tense-box">
+                <h4>📌 Present Simple vs Present Continuous</h4>
+                <p>• <strong>Present Simple</strong> : I <strong>work</strong> at a bank. (Je travaille dans une banque — habitude)</p>
+                <p>• <strong>Present Continuous</strong> : I <strong>am working</strong> right now. (Je travaille en ce moment — action en cours)</p>
+                <p>• <strong>Present Simple</strong> : She <strong>lives</strong> in Tunis. (Elle habite à Tunis — état permanent)</p>
+                <p>• <strong>Present Continuous</strong> : She <strong>is staying</strong> at a hotel. (Elle loge à l'hôtel — temporaire)</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Règle importante : verbes non utilisés au continu</h4>
+                <p>Certains verbes (verbes d'état) ne s'utilisent <strong>PAS</strong> au Present Continuous :</p>
+                <p><strong>love, like, hate, want, need, know, understand, remember, believe, seem</strong></p>
+                <p>→ On dit : I <strong>love</strong> music. (✓) mais PAS : I <strong>am loving</strong> music. (✗)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="en-content" id="partie5">
+            <h3>📒 5. Les mots interrogatifs (Wh-questions)</h3>
+            <p>Les <strong>Wh-questions</strong> sont les questions qui commencent par un mot interrogatif :</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>Mot interrogatif</th>
+                    <th>Signification</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td class="en-word">What?</td>
+                    <td class="fr-word">Quoi ? / Quel(le) ?</td>
+                    <td>What is your name?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Who?</td>
+                    <td class="fr-word">Qui ?</td>
+                    <td>Who is she?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Where?</td>
+                    <td class="fr-word">Où ?</td>
+                    <td>Where do you live?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">When?</td>
+                    <td class="fr-word">Quand ?</td>
+                    <td>When does the class start?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Why?</td>
+                    <td class="fr-word">Pourquoi ?</td>
+                    <td>Why are you late?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">How?</td>
+                    <td class="fr-word">Comment ?</td>
+                    <td>How are you?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">How much?</td>
+                    <td class="fr-word">Combien (prix) ?</td>
+                    <td>How much is this book?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">How many?</td>
+                    <td class="fr-word">Combien (dénombrable) ?</td>
+                    <td>How many students are there?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Which?</td>
+                    <td class="fr-word">Lequel/Laquelle ?</td>
+                    <td>Which one do you prefer?</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Whose?</td>
+                    <td class="fr-word">À qui ?</td>
+                    <td>Whose book is this?</td>
+                </tr>
+            </table>
+            <div class="code-box">
+                <div class="code-title">// Structure des Wh-questions</div>
+                <span class="comment">// Wh-word + auxiliary + sujet + verbe ?</span>
+                <span class="function">What</span> do you <span class="function">do</span>?          <span class="comment">— Que faites-vous ? (profession)</span>
+                <span class="function">Where</span> does she <span class="function">live</span>?      <span class="comment">— Où habite-t-elle ?</span>
+                <span class="function">When</span> did you <span class="function">arrive</span>?      <span class="comment">— Quand êtes-vous arrivé ?</span>
+                <span class="function">Why</span> are you <span class="function">crying</span>?      <span class="comment">— Pourquoi pleurez-vous ?</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="en-content" id="partie6">
+            <h3>📓 6. Exercices et comparaisons</h3>
+            <div class="example-box">
+                <h4>💡 Exercice 1 : Present Simple ou Present Continuous ?</h4>
+                <p>1. Right now, I _____ (read) a book. → am reading</p>
+                <p>2. Every day, I _____ (drink) coffee. → drink</p>
+                <p>3. Look! The children _____ (play) in the garden. → are playing</p>
+                <p>4. She _____ (work) at a hospital. → works</p>
+                <p>5. At the moment, he _____ (sleep). → is sleeping</p>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exercice 2 : Mettez à la forme négative</h4>
+                <p>1. I like fish. → I <strong>don't like</strong> fish.</p>
+                <p>2. She works here. → She <strong>doesn't work</strong> here.</p>
+                <p>3. They went to Paris. → They <strong>didn't go</strong> to Paris.</p>
+                <p>4. He is sleeping. → He <strong>isn't sleeping</strong>.</p>
+            </div>
+            <div class="example-box">
+                <h4>💡 Exercice 3 : Transformez en question</h4>
+                <p>1. You speak English. → <strong>Do you speak</strong> English?</p>
+                <p>2. She lives in Tunis. → <strong>Does she live</strong> in Tunis?</p>
+                <p>3. They saw the movie. → <strong>Did they see</strong> the movie?</p>
+                <p>4. He is a teacher. → <strong>Is he</strong> a teacher?</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Erreurs fréquentes à éviter</h4>
+                <p>1. <strong>Don't forget the "s"</strong> à la 3ème personne du Present Simple : He likeS, not "He like"</p>
+                <p>2. <strong>Use the base form</strong> après "does/don't/doesn't/did" : Does she speak, not "Does she speaks"</p>
+                <p>3. <strong>区分 Simple vs Continuous</strong> : I work (habit) ≠ I am working (en ce moment)</p>
+            </div>
+        </div>
 
         <!-- SECTION RÉSUMÉ IMAGE -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/673AB7/FFFFFF?text=Resume+Grammaire+Anglais" alt="Résumé de la grammaire anglaise">
+                <img src="https://via.placeholder.com/1200x700/512DA8/FFFFFF?text=English+Grammar+-+Complete+Summary" alt="Résumé grammaire anglaise">
                 <div class="resume-overlay">
-                    <h3>Structure des phrases</h3>
-                    <p>Sujet, verbe, objet : la structure de base de l'anglais.</p>
+                    <h3>English Grammar</h3>
+                    <p>Present Simple, Past Simple, Present Continuous, Wh-questions</p>
                 </div>
-            </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/673AB7/FFFFFF?text=Video+Grammaire+Anglais">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
@@ -80,7 +413,7 @@
         <a href="anglais-lecon3.html" class="next-lesson">
             <div>
                 <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">Le vocabulaire quotidien →</p>
+                <p class="next-lesson-title">Everyday Vocabulary →</p>
             </div>
             <span class="next-lesson-arrow">→</span>
         </a>
@@ -88,7 +421,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

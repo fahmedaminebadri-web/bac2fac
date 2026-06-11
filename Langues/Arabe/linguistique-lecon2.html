@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درس 2 : النحو — Grammaire Arabe</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        .ar-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); text-align: right; }
+        .ar-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .ar-content p { margin-bottom: 12px; line-height: 2; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-right: 4px solid var(--success); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-right: 4px solid var(--warning); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FCD34D; text-align: right; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-right: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #93C5FD; text-align: right; }
+        .plan-box h3 { color: #1E40AF; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #7C3AED; color: white; padding: 12px; text-align: right; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .ar-word { color: #7C3AED; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="../arabe.html">العربية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="linguistique.html" class="back-btn" style="direction: ltr;">
+            → العودة إلى دروس اللغوية
+        </a>
+
+        <div class="lesson-header">
+            <h1>درس 2 : النحو — Grammaire</h1>
+            <p class="breadcrumb">اللغوية > الدرس 2</p>
+        </div>
+
+        <!-- ملخص -->
+        <div class="plan-box">
+            <h3>📝 ملخص الدرس</h3>
+            <p>النحو هو العلم الذي يبحث في <strong>أحوال الكلمات في الجملة</strong> — كيف تَرْبِطُ الكلمات ببعضها، وما إعراب كل كلمة، وكيف تتغير علامات الإعراب حسب موقعها. أسسه التي وضعها أبو الأسود الدؤلي والخليل بن أحمد سيبويه، وهيكله المنطقي يجعل العربية لغة الفلسفة والعلم.</p>
+        </div>
+
+        <!-- خطة الدرس -->
+        <div class="toc">
+            <h3>📋 خطة الدرس</h3>
+            <ol>
+                <li><a href="#partie1">تعريف النحو وأصوله</a></li>
+                <li><a href="#partie2">أنواع الجمل وأركانها</a></li>
+                <li><a href="#partie3">الإعراب والعلامات</a></li>
+                <li><a href="#partie4">أنواع المبتدأ والخبر</a></li>
+                <li><a href="#partie5">المفعولات (الأربعة)</a></li>
+                <li><a href="#partie6">التطبيقات وأسئلة البكالوريا</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
+            <div class="audio-player">
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="ar-content" id="partie1">
+            <h3>📘 1. تعريف النحو وأصوله</h3>
+            <p><strong>النحو</strong> هو العلم الذي يُبحث في <em>أحوال أواخر الكلمات</em> العربية (إعراباً أو بناءً)، وعلاقة الكلمات بعضها ببعض في الجملة. سُمّي نحواً لأنه يُوضّح طريقاً نحو الفهم الصحيح.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📜</span>
+                    <p><strong>أصل التسمية:</strong> \"نحو\" من \"الناحية\" — أي جانب الكلمة (آخرها)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔬</span>
+                    <p><strong>الفرق مع الصرف:</strong> النحو يدرس الكلمة في الجملة / الصرف يدرس بنية الكلمة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👤</span>
+                    <p><strong>أبو الأسود الدؤلي:</strong> أول من صنف في النحو العربي بأمر الحجاج بن يوسف</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>سيبويه:</strong> مؤلف \"الكتاب\" — أول نظرية نحوية منظمة في تاريخ اللغات</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 مثال: كلمة \"عَلِمْتُ\"</h4>
+                <p>• في علم الصرف: جذر ع ل م / الفعل ماضٍ مبني على السكون /最后一次</p>
+                <p>• في علم النحو: فعل ماضٍ مبني على السكون لاتصاله بتاء التثنية / والتاء ضمير متصل في محل رفع فاعل</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ar-content" id="partie2">
+            <h3>📗 2. أنواع الجمل وأركانها</h3>
+            <p>الجملة في العربية نوعان رئيسيان:</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>نوع الجملة</th>
+                    <th>التعريف</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">جملة اسمية</td>
+                    <td>تبدأ بمبتدأ (مُخْبَر عنه) + خبر (المخبر)</td>
+                    <td>العلمُ نافعٌ / الطالبُ مُجتهِدٌ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">جملة فعلية</td>
+                    <td>تبدأ بفعل + فاعل أو ما ينوب عنه</td>
+                    <td>قرأَ الطالبُ / كتبَ محمدٌ</td>
+                </tr>
+            </table>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🏗️</span>
+                    <p><strong>ركنا الجملة الاسمية:</strong> المبتدأ + الخبر</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>ركنا الجملة الفعلية:</strong> الفعل + الفاعل</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔗</span>
+                    <p><strong>الجملة الكاملة:</strong> تتكون من مبتدأ + خبر + ما يُتمم معناها</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✂️</span>
+                    <p><strong>الجملة الخبري:</strong> تُفيد خبراً / الجملة الإنشائية: تُفيد طلباً أو نداءً</p>
+                </div>
+            </div>
+            <div class="quote-box">
+                « الجملة الاسمية هي أصل كل كلام — لأن الاسم أسبق من الفعل في التفكير. » — من كتب النحو
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="ar-content" id="partie3">
+            <h3>📙 3. الإعراب والعلامات</h3>
+            <p><strong>الإعراب</strong> هو تغيير أواخر الكلمات لتبيّن موقعها في الجملة. العربية من أغنى اللغات في علامات الإعراب.</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>حالة الإعراب</th>
+                    <th>العلامة</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الرفع</td>
+                    <td>الضمة (ـُ) أو ثبوت النون</td>
+                    <td>الطالبُ يذاكرُ — الطالبُ: رفع</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">النصب</td>
+                    <td>الفتحة (ـَ) أو حذف النون</td>
+                    <td>رأيتُ الطالبَ — الطالبَ: نصب</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الجر</td>
+                    <td>الكسرة (ـِ) أو الكسرة المقدرة</td>
+                    <td>مررتُ بالطالبِ — الطالبِ: جر</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">جزم</td>
+                    <td>السكون أو حذف النون</td>
+                    <td>لم يذاكرِ الطالبُ — يذاكرِ: جزم</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ إعراب الأفعال</h4>
+                <p><strong>الفعل المضارع:</strong> يُعرب حسب موقعه (رفع = ثبوت النون، نصب = حذف النون، جزم = السكون)</p>
+                <p><strong>الفعل الماضي:</strong> مبني على السكون أو الفتح أو الضم — لا يُعرَب</p>
+                <p><strong>الفعل الأمر:</strong> مبني على السكون أو حذف النون — لا يُعرَب</p>
+            </div>
+            <div class="example-box">
+                <h4>💡 إعراب: \"الطالبُ المجتهدُ نجحَ في الامتحان\"</h4>
+                <p>• الطالبُ: مبتدأ مرفوع وعلامة رفعه الضمة</p>
+                <p>• المجتهدُ: بدل مرفوع وعلامة رفعه الضمة</p>
+                <p>• نجحَ: فعل ماضٍ مبني على الفتح</p>
+                <p>• في: حرف جر / الامتحان: اسم مجرور</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="ar-content" id="partie4">
+            <h3>📕 4. أنواع المبتدأ والخبر</h3>
+            <p>المبتدأ والخبر لهما أنواع متعددة حسب شكلهما:</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>النوع</th>
+                    <th>التعريف</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">مبتدأ مجرد</td>
+                    <td>بدون نكرة أو مضاف</td>
+                    <td>العلمُ نافعٌ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">مبتدأ نكرة</td>
+                    <td>مبتدأ نكرة (للإشارة)</td>
+                    <td>رجلٌ进来了</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">مبتدأ مضاف</td>
+                    <td>مضاف إلى اسم بعده</td>
+                    <td>علمُ الطالبِ مفيدٌ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">خبر جملة</td>
+                    <td>الخبر جملة فعلية أو اسمية</td>
+                    <td>العلمُ نورٌ — نورٌ جملة اسمية</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">خبر شبه جملة</td>
+                    <td>الخبر ظرف أو جار ومجرور</td>
+                    <td>الكتابُ على الطاولةِ</td>
+                </tr>
+            </table>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p><strong>التوابع:</strong> تلي الاسم وتبين إعرابه — تشمل: النعت (الصفة)، العطف، التوكيد، البدل</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔗</span>
+                    <p><strong>النعت:</strong> يتبع منعوته في الإعراب — \"الطالبُ المجتهدُ\" → المجتهدُ نعت</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ar-content" id="partie5">
+            <h3>📒 5. المفعولات (الأربعة)</h3>
+            <p>الفعل المتعدّي يحتاج إلى مفعول أو أكثر. المفعول الأول والثاني هما المفعول به، والثالث والرابع هما المفعول المطلق والظرف والجار والمجرور.</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>المفعول</th>
+                    <th>التعريف</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">المفعول به</td>
+                    <td>ما يقع عليه فعل الفاعل</td>
+                    <td>قرأَ الطالبُ <strong>الكتابَ</strong></td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المفعول المطلق</td>
+                    <td>مصدر منصوب يُؤكد الفعل</td>
+                    <td>قرأَ الطالبُ <strong>قراءةً</strong></td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المفعول لأجله</td>
+                    <td>سبب وقوع الفعل</td>
+                    <td>درستُ <strong>لتعلّمَ</strong></td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المفعول فيه (الظرف)</td>
+                    <td>زمان أو مكان منصوب</td>
+                    <td>سافرتُ <strong>صباحاً</strong></td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المفعول معه</td>
+                    <td>اسم منصوب يأتي بعد واو المعية</td>
+                    <td>سرتُ <strong>والصديقَ</strong></td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ أخطاء شائعة</h4>
+                <p>❌ خلط بين المفعول لأجله والجار والمجرور</p>
+                <p>❌ نسيان أن \"ظنَّ\" و\"حسبَ\" و\"خبرَ\" تأخذ مفعولين</p>
+                <p>❌ عدم التمييز بين المفعول به والمفعول المطلق</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ar-content" id="partie6">
+            <h3>📓 6. التطبيقات وأسئلة البكالوريا</h3>
+            <div class="example-box">
+                <h4>💡 تمرين: أعرب الجملة</h4>
+                <p><strong>تعلَّمَ الطالبُ العربيُّ لغتَهُ لأجل مستقبلٍ مُشرقٍ.</strong></p>
+                <p>• تعلَّمَ: فعل ماضٍ مبني على الفتح</p>
+                <p>• الطالبُ: فاعل مرفوع وعلامة رفعه الضمة</p>
+                <p>• العربيُّ: بدل مرفوع وعلامة رفعه الضمة</p>
+                <p>• لغتَهُ: مفعول به منصوب وعلامة نصبه الفتحة / والهاء ضمير</p>
+                <p>• لأجل: جار ومجرور</p>
+                <p>• مستقبلٍ: اسم مجرور وعلامة جره الكسرة</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ في امتحان البكالوريا</h4>
+                <p>• أعرب ما تحته خط في جملة</p>
+                <p>• صحّح ما فيها من خطأ إعرابي</p>
+                <p>• حدّد نوع الجملة (اسمية/فعلية)</p>
+                <p>• سمّ كل جزء من الجملة</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/7C3AED/FFFFFF?text=%D8%AF%D8%B1%D8%B3+%D8%A7%D9%84%D9%86%D8%AD%D9%88" alt="ملخص النحو">
+                <div class="resume-overlay">
+                    <h3>النحو العربي</h3>
+                    <p>الإعراب، الجمل، المبتدأ والخبر، المفعولات</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
+            <div class="video-container">
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <a href="linguistique-lecon3.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">الدرس التالي</p>
+                <p class="next-lesson-title">البلاغة ←</p>
+            </div>
+            <span class="next-lesson-arrow">←</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

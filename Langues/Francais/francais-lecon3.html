@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'orthographe - Français</title>
+    <title>Leçon 3 : Le Commentaire Composé - Français</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .fr-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .fr-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .fr-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FBCFE8; }
+        .toc h3 { color: #9D174D; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+        .plan-box { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .plan-box h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box ol { padding-left: 22px; }
+        .plan-box li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .citation { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 14px 0; font-style: italic; color: var(--secondary); }
+        .tech-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .tech-table th { background: var(--primary); color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
+        .tech-table td { padding: 12px; border-bottom: 1px solid var(--border-light); }
+        .tech-table tr:nth-child(even) { background: var(--bg-gray-50); }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -31,64 +60,273 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="francais.html" class="back-btn">
-            ← Retour aux leçons de Français
-        </a>
+        <a href="francais.html" class="back-btn">← Retour aux leçons de Français</a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 3: L'orthographe</h1>
+            <h1>Leçon 3 : Le Commentaire Composé</h1>
             <p class="breadcrumb">Français > Leçon 3</p>
+        </div>
+
+        <!-- RÉSUMÉ -->
+        <div class="plan-box">
+            <h3>📝 Résumé de la leçon</h3>
+            <p>Le commentaire composé est un exercice d'<strong>analyse littéraire</strong> qui consiste à étudier un texte en profondeur. Il ne s'agit ni de résumer ni de juger, mais d'<strong>expliquer les choix de l'auteur</strong> : structure, composition, personnages, narrateur, temps verbaux, champs lexicaux, figures de style. Le commentaire doit démontrer que chaque élément du texte est <strong>intentionnel</strong> et contribue au sens global.</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">Qu'est-ce que le commentaire composé ?</a></li>
+                <li><a href="#partie2">La lecture analytique</a></li>
+                <li><a href="#partie3">Les axes d'analyse</a></li>
+                <li><a href="#partie4">Structure et plan du commentaire</a></li>
+                <li><a href="#partie5">L'écriture du commentaire</a></li>
+                <li><a href="#partie6">Exemple complet</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
+
+        <!-- PARTIE 1 -->
+        <div class="fr-content" id="partie1">
+            <h3>📘 1. Qu'est-ce que le commentaire composé ?</h3>
+            <p>Le <strong>commentaire composé</strong> est un exercice scolaire qui consiste à <strong>analyser un texte littéraire</strong> en profondeur. Contrairement à la dissertation, on ne développe pas une thèse personnelle : on explique le texte tel qu'il est.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>Ce n'est pas</strong> un résumé — on ne raconte pas l'histoire</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>Ce n'est pas</strong> une opinion personnelle — on ne dit pas « j'aime / je n'aime pas »</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p><strong>C'est</strong> une démonstration — on prouve que chaque choix de l'auteur est significatif</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>Objectif</strong> — Montrer l'<strong>intention</strong> de l'auteur à travers ses choix formels</p>
+                </div>
+            </div>
+            <div class="citation">
+                « Il n'y a pas de texte innocent : chaque mot, chaque ponctuation, chaque rythme est un choix. » — Principe fondamental du commentaire
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="fr-content" id="partie2">
+            <h3>📗 2. La lecture analytique</h3>
+            <p>Avant d'écrire, il faut <strong>lire le texte plusieurs fois</strong> et l'annoter méthodiquement.</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Première lecture : compréhension globale</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>De quoi parle le texte ? Qui parle ? À qui ? Dans quel contexte ?</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎭</span>
+                    <p>Quel est le genre ? (poésie, roman, théâtre, essai…)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🕐</span>
+                    <p>Quelle est la période ? (siècle, mouvement littéraire)</p>
+                </div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Deuxième lecture : repérage</h3>
+            <div class="example-box">
+                <h4>💡 Annotations à faire sur le texte</h4>
+                <p>• <strong>Parties / mouvements</strong> — Repérez les changements de tons, de temps, de scène</p>
+                <p>• <strong>Champ lexical dominant</strong> — Entourez les mots d'un même domaine</p>
+                <p>• <strong>Figures de style</strong> — Soulignez métaphores, comparisons, antithèses</p>
+                <p>• <strong>Verbes</strong> — Notez les temps utilisés (présent, imparfait, passé simple…)</p>
+                <p>• <strong>Connecteurs logiques</strong> — Repérez mais, car, donc, ainsi, puis…</p>
+                <p>• <strong>Sons / rythme</strong> — Notez les allitérations, assonances, coupes</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="fr-content" id="partie3">
+            <h3>📙 3. Les axes d'analyse</h3>
+            <p>Plusieurs angles d'approche sont possibles pour analyser un texte :</p>
+            <table class="tech-table">
+                <tr>
+                    <th>Axe d'analyse</th>
+                    <th>Questions à se poser</th>
+                    <th>Éléments à observer</th>
+                </tr>
+                <tr>
+                    <td><strong>Composition / Structure</strong></td>
+                    <td>Comment le texte est-il organisé ?</td>
+                    <td>Parties, progression, symétrie, climax</td>
+                </tr>
+                <tr>
+                    <td><strong>Énonciation</strong></td>
+                    <td>Qui parle ? À qui ? D'où ?</td>
+                    <td>Pronoms, points de vue, voix narrative</td>
+                </tr>
+                <tr>
+                    <td><strong>Personnages</strong></td>
+                    <td>Qui sont les personnages ? Comment sont-ils présentés ?</td>
+                    <td>Descriptions, dialogues, actions, noms</td>
+                </tr>
+                <tr>
+                    <td><strong>Temps et espace</strong></td>
+                    <td>Où et quand se passe l'action ? Comment le temps passe-t-il ?</td>
+                    <td>Indications spatiales/temporelles, analepses, prolepses</td>
+                </tr>
+                <tr>
+                    <td><strong>Lexique</strong></td>
+                    <td>Quels champs lexicaux dominent ? Y a-t-il des variations ?</td>
+                    <td>Champs lexicaux, isotopies, connotations</td>
+                </tr>
+                <tr>
+                    <td><strong>Figures de style</strong></td>
+                    <td>Quels procédés stylistiques l'auteur utilise-t-il ?</td>
+                    <td>Métaphores, métonymies, hyperboles, etc.</td>
+                </tr>
+                <tr>
+                    <td><strong>Rythme et sonorités</strong></td>
+                    <td>Le texte est-il musical ? Quel effet cela produit-il ?</td>
+                    <td>Allitérations, assonances, mètres, rimes</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ Ne pas tout analyser !</h4>
+                <p>Un bon commentaire ne couvre pas tous les axes — il choisit <strong>2 ou 3 axes pertinents</strong> qui convergent vers une même interpretation du texte. C'est ce qu'on appelle le <strong>fil directeur</strong>.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="fr-content" id="partie4">
+            <h3>📕 4. Structure et plan du commentaire</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">L'introduction</h3>
+            <div class="example-box">
+                <h4>💡 Structure de l'introduction</h4>
+                <p><strong>1. Présentation du texte</strong> — Auteur, titre, date, genre, mouvement littéraire</p>
+                <p><strong>2. Contextualisation</strong> — D'où vient ce texte ? Quelle est sa place dans l'œuvre ?</p>
+                <p><strong>3. Problématique</strong> — Question centrale qui organise votre analyse</p>
+                <p><strong>4. Annonce du plan</strong> — Vos deux ou trois axes d'analyse</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Le développement</h3>
+            <p>Chaque partie doit contenir :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📌</span>
+                    <p><strong>Transition + idée directeur</strong> de la partie</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p><strong>Citations commenterées</strong> — Chaque affirmation doit être prouvée par le texte</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔗</span>
+                    <p><strong>Lien</strong> avec la partie suivante</p>
+                </div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">La conclusion</h3>
+            <div class="example-box">
+                <h4>💡 Structure de la conclusion</h4>
+                <p><strong>1. Synthèse</strong> — Rappelez vos conclusions sans les répéter mot pour mot</p>
+                <p><strong>2. Jugement global</strong> — Quelle est la portée du texte ? Sa force ?</p>
+                <p><strong>3. Ouverture</strong> — Lien avec une autre œuvre, un autre auteur, une question plus large</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="fr-content" id="partie5">
+            <h3>📒 5. L'écriture du commentaire</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">La formulation des idées</h3>
+            <div class="example-box">
+                <h4>💡 Modèles de phrases pour le commentaire</h4>
+                <p>• <em>« L'auteur描写… »</em> (description objective)</p>
+                <p>• <em>« On remarque que… »</em> / <em>« On constate que… »</em></p>
+                <p>• <em>« Ce verbe montre / suggère / révèle… »</em></p>
+                <p>• <em>« Par cette métaphore, l'auteur signifie que… »</em></p>
+                <p>• <em>« Ce procede a pour fonction de… »</em></p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">La formulation des transitions</h3>
+            <div class="example-box">
+                <h4>💡 Exemples de transitions</h4>
+                <p>• <em>« Après avoir étudié…, nous allons maintenant nous intéressé à… »</em></p>
+                <p>• <em>« Ce travail sur le lexique nous conduit à envisager… »</em></p>
+                <p>• <em>« Si la structure montre…, c'est parce que… »</em></p>
+                <p>• <em>« Ce premier constat en appelle un autre :… »</em></p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Erreurs fréquentes au Bac</h4>
+                <p>1. <strong>Ne pas assez citer</strong> — Chaque idée doit être illustrée par une citation</p>
+                <p>2. <strong>Résumer au lieu d'analyser</strong> — « L'auteur parle de la mer » = résumé. « Le champ lexical de l'eau, omniprésent, suggère l'ampleur des émotions » = analyse</p>
+                <p>3. <strong>Perdre le fil directeur</strong> — Chaque partie doit contribuer à répondre à la problématique</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="fr-content" id="partie6">
+            <h3>📓 6. Exemple complet</h3>
+            <p><strong>Texte :</strong> Victor Hugo, « Demain, dès l'aube… » (extrait)</p>
+            <div class="example-box">
+                <h4>💡 Exemple de problématique</h4>
+                <p><em>« Comment Hugo exprime-t-il la douleur du père endeuillé à travers la structure et le lexique du poème ? »</em></p>
+                <h4 style="margin-top:12px;">Plan proposé :</h4>
+                <p><strong>I.</strong> Une structure qui mime le déplacement et l'attente (progression temporelle, attente)</p>
+                <p><strong>II.</strong> Un lexique de la nature hostile qui reflète la souffrance intérieure (champ lexical de la nuit, du froid, du voyage)</p>
+                <p><strong>III.</strong> L'absence du fils : le texte comme prière et promesse (rôle du futur, de la destination : « le noir tableau »)</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Exemple de développement (Partie I)</h3>
+            <div class="example-box">
+                <p><em>« Le poème s'ouvre sur l'indication temporelle « demain, dès l'aube », qui place d'emblée le lecteur dans l'attente. Le choix du futur proche, « je partirai », installe un climat d'anticipation : le père ne dit pas « je pars » mais « je partirai », comme s'il voulait retarder l'instant du départ. La structure du poème, avec ses trois strophes de longueur inégale (6 vers, 4 vers, 6 vers), mime le rythme du voyage : la deuxième strophe, plus courte, correspond au moment central du trajet, suspendu entre le départ et l'arrivée. Le dernier vers de chaque strophe — « pour aller à... » — crée une attente, une suspension qui renvoie à l'impatience du père. »</em></p>
+            </div>
+        </div>
 
         <!-- SECTION RÉSUMÉ IMAGE -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/E91E63/FFFFFF?text=Resume+Orthographe" alt="Résumé de l'orthographe">
+                <img src="https://via.placeholder.com/1200x700/AD1457/FFFFFF?text=Commentaire+Compose+-+Methode+Complete" alt="Résumé commentaire composé">
                 <div class="resume-overlay">
-                    <h3>Règles et pièges</h3>
-                    <p>Les règles d'orthographe à connaître et les erreurs à éviter.</p>
+                    <h3>Le commentaire composé en 6 étapes</h3>
+                    <p>Lecture, annotation, axes, plan, rédaction, conclusion</p>
                 </div>
-            </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/E91E63/FFFFFF?text=Video+Orthographe">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
-        <!-- BOUTON RETOUR MATIÈRE -->
+        <!-- BOUTON LEÇON SUIVANTE -->
         <a href="francais.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Revenir aux leçons</p>
-                <p class="next-lesson-title">Toutes les leçons de Français ←</p>
+                <p class="next-lesson-text">Retour au sommaire</p>
+                <p class="next-lesson-title">Toutes les leçons Français →</p>
             </div>
-            <span class="next-lesson-arrow">←</span>
+            <span class="next-lesson-arrow">→</span>
         </a>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

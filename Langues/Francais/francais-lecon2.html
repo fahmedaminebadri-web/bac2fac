@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La conjugaison - Français</title>
+    <title>Leçon 2 : L'Argumentation - Français</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .fr-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .fr-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .fr-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FBCFE8; }
+        .toc h3 { color: #9D174D; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+        .plan-box { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .plan-box h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box ol { padding-left: 22px; }
+        .plan-box li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .citation { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 14px 0; font-style: italic; color: var(--secondary); }
+        .tech-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .tech-table th { background: var(--primary); color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
+        .tech-table td { padding: 12px; border-bottom: 1px solid var(--border-light); }
+        .tech-table tr:nth-child(even) { background: var(--bg-gray-50); }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -31,48 +60,287 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="francais.html" class="back-btn">
-            ← Retour aux leçons de Français
-        </a>
+        <a href="francais.html" class="back-btn">← Retour aux leçons de Français</a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 2: La conjugaison</h1>
+            <h1>Leçon 2 : L'Argumentation</h1>
             <p class="breadcrumb">Français > Leçon 2</p>
+        </div>
+
+        <!-- RÉSUMÉ -->
+        <div class="plan-box">
+            <h3>📝 Résumé de la leçon</h3>
+            <p>L'argumentation est l'art de <strong>convaincre ou persuader</strong> un auditoire. Elle repose sur trois grands types de preuves : l'<strong>éthos</strong> (crédibilité de l'orateur), le <strong>pathos</strong> (appel aux émotions) et le <strong>logos</strong> (raisonnement logique). Les procédés rhétoriques (anaphore, gradation, métaphore, antithèse…) renforcent l'effet persuasif du discours. Savoir identifier et analyser ces techniques est essentiel pour réussir l'épreuve de français au Bac.</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">Définition de l'argumentation</a></li>
+                <li><a href="#partie2">Les types de discours argumentatifs</a></li>
+                <li><a href="#partie3">Les trois preuves de la rhétorique : éthos, pathos, logos</a></li>
+                <li><a href="#partie4">Les procédés rhétoriques</a></li>
+                <li><a href="#partie5">L'argumentation écrite : la lettre et l'essai</a></li>
+                <li><a href="#partie6">Analyse d'un texte argumentatif</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
+
+        <!-- PARTIE 1 -->
+        <div class="fr-content" id="partie1">
+            <h3>📘 1. Définition de l'argumentation</h3>
+            <p>L'<strong>argumentation</strong> est l'ensemble des techniques utilisées pour <strong>convaincre</strong> ou <strong>persuader</strong> un auditoire. Elle vise à faire adopter une thèse, une opinion ou à provoquer une action.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>Convaincre</strong> — S'adresser à la raison par des arguments logiques (viser le vrai)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❤️</span>
+                    <p><strong>Persuader</strong> — Toucher les émotions et la volonté (viser l'action)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🗣️</span>
+                    <p><strong>Répondre à un contradicteur</strong> — Anticiper et réfuter les objections</p>
+                </div>
+            </div>
+            <div class="citation">
+                « L'homme est un animal politique » — Aristote, qui fonda la rhétorique comme art de la parole publique.
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Les composants du discours argumentatif</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🧱</span>
+                    <p><strong>La thèse</strong> — L'idée principale que l'on défend</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📌</span>
+                    <p><strong>Les arguments</strong> — Les raisons qui soutiennent la thèse</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💎</span>
+                    <p><strong>Les preuves / exemples</strong> — Les illustrations concrètes</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>Les procédés rhétoriques</strong> — Les figures de style qui renforcent l'effet</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="fr-content" id="partie2">
+            <h3>📗 2. Les types de discours argumentatifs</h3>
+            <table class="tech-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Objectif</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>Discours épidictique</strong></td>
+                    <td>Éloge ou blâme — renforcer les valeurs partagées</td>
+                    <td>Discours funèbre, panégyrique</td>
+                </tr>
+                <tr>
+                    <td><strong>Discours délibératif</strong></td>
+                    <td>Persuader d'agir ou ne pas agir — orientation vers le futur</td>
+                    <td>Discours politique, editorial</td>
+                </tr>
+                <tr>
+                    <td><strong>Discours judiciaire</strong></td>
+                    <td>Accuser ou défendre — jugement sur le passé</td>
+                    <td>Plaidoirie, réquisitoire</td>
+                </tr>
+            </table>
+            <div class="example-box">
+                <h4>💡 Exemples concrets</h4>
+                <p><strong>Épidictique :</strong> L'éloge de la résistance dans un discours de célébration nationale</p>
+                <p><strong>Délibératif :</strong> Un éditorial qui convainc les lecteurs de voter pour une loi</p>
+                <p><strong>Judiciaire :</strong> Un avocat qui défend un accusé devant un tribunal</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="fr-content" id="partie3">
+            <h3>📙 3. Les trois preuves de la rhétorique</h3>
+            <p>Aristote a identifié trois moyens de persuasion, qu'il appelle les trois « preuves » (pistéis) :</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">🪪 L'éthos (crédibilité)</h3>
+            <p>L'orateur construit sa <strong>propre image</strong> pour être crédible. Il montre ses compétences, sa bonne foi, son autorité morale.</p>
+            <div class="example-box">
+                <h4>💡 Exemple d'éthos</h4>
+                <p><em>« En tant que médecin depuis vingt ans, j'ai pu observer les effets de cette politique sur la santé publique… »</em></p>
+                <p>→ L'orateur établit sa compétence pour renforcer son discours.</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">❤️ Le pathos (émotion)</h3>
+            <p>L'orateur <strong>touche les émotions</strong> du public : pitié, colère, peur, espoir. Il crée une connexion affective.</p>
+            <div class="example-box">
+                <h4>💡 Exemple de pathos</h4>
+                <p><em>« Imaginez ces enfants qui meurent de faim dans le silence du monde. Que ferons-nous ? »</em></p>
+                <p>→ L'orateur éveille la pitié et la culpabilité pour persuader.</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🧠 Le logos (raison)</h3>
+            <p>L'orateur utilise des <strong>raisonnements logiques</strong> : syllogismes, exemples, analogies, causes et conséquences.</p>
+            <div class="example-box">
+                <h4>💡 Exemple de logos</h4>
+                <p><em>« Tous les hommes sont mortels. Socrate est un homme. Donc Socrate est mortel. »</em></p>
+                <p>→ Raisonnement par syllogisme, basé sur la logique formelle.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="fr-content" id="partie4">
+            <h3>📕 4. Les procédés rhétoriques</h3>
+            <p>Les <strong>figures de style</strong> sont des procédés qui renforcent l'argumentation en frappant l'imagination et les émotions.</p>
+            <table class="tech-table">
+                <tr>
+                    <th>Procédé</th>
+                    <th>Définition</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>Anaphore</strong></td>
+                    <td>Répétition d'un mot en début de phrases</td>
+                    <td>« Je veux, je veux, je veux… »</td>
+                </tr>
+                <tr>
+                    <td><strong>Gradation</strong></td>
+                    <td>Suite de termes qui progressent en intensité</td>
+                    <td>« Viens, approche, entre ! »</td>
+                </tr>
+                <tr>
+                    <td><strong>Antithèse</strong></td>
+                    <td>Opposition de deux idées contraires</td>
+                    <td>« C'est l光明 et l'ombre, la vie et la mort. »</td>
+                </tr>
+                <tr>
+                    <td><strong> Métaphore</strong></td>
+                    <td>Substitution par analogie sans « comme »</td>
+                    <td>« La mer est un miroir »</td>
+                </tr>
+                <tr>
+                    <td><strong>Hypotypose</strong></td>
+                    <td>Description vivante qui met devant les yeux</td>
+                    <td>« Je le vois, ce matin d'été… »</td>
+                </tr>
+                <tr>
+                    <td><strong>Interrogation oratoire</strong></td>
+                    <td>Question sans attendre de réponse (pour frapper)</td>
+                    <td>« Qui peut rester insensible ? »</td>
+                </tr>
+                <tr>
+                    <td><strong>Exclamation</strong></td>
+                    <td>Phrase vivement exclamée</td>
+                    <td>« Quel bonheur ! »</td>
+                </tr>
+                <tr>
+                    <td><strong>Répétition</strong></td>
+                    <td>Redite pour insister (proche de l'anaphore)</td>
+                    <td>« Il est parti, seul, abandonné. »</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ Conseil d'analyse</h4>
+                <p>Quand vous analysez un texte argumentatif au Bac, identifiez d'abord le <strong>type de discours</strong> (épidictique, délibératif, judiciaire), puis repérez les <strong>procédés rhétoriques</strong> et expliquez leur <strong>effet sur le lecteur</strong>.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="fr-content" id="partie5">
+            <h3>📒 5. L'argumentation écrite : la lettre et l'essai</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">La lettre formelle</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📧</span>
+                    <p><strong>En-tête</strong> — Vos coordonnées + destinataire + objet</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>Formule d'appel</strong> — « Monsieur le Maire, » ou « Madame, Monsieur, »</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Corps</strong> — Context, demande ou réclamation, justification</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✍️</span>
+                    <p><strong>Formule de politesse</strong> — « Je vous prie d'agréer… »</p>
+                </div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">L'essai argumentatif</h3>
+            <p>L'essai est un texte <strong>personnel et libre</strong> qui développe une réflexion argumentée sur un sujet. Il se caractérise par :</p>
+            <div class="example-box">
+                <h4>💡 Structure de l'essai</h4>
+                <p><strong>1. Introduction</strong> — Accroche, définition des termes, thèse</p>
+                <p><strong>2. Développement</strong> — Arguments + exemples + analyses (2-3 parties)</p>
+                <p><strong>3. Conclusion</strong> — Synthèse et ouverture personnelle</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ Différence lettre / essai</h4>
+                <p>La <strong>lettre</strong> a un destinataire précis et un objectif concret (réclamer, demander, protester).</p>
+                <p>L'<strong>essai</strong> est une réflexion personnelle libre, sans destinataire défini, qui vise àshares une vision du monde.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="fr-content" id="partie6">
+            <h3>📓 6. Analyse d'un texte argumentatif</h3>
+            <p>Voici la méthode pour analyser efficacement un texte argumentatif :</p>
+            <div class="example-box">
+                <h4>💡 Grille d'analyse</h4>
+                <p><strong>1. Identify the thesis</strong> — Quelle est la position de l'auteur ?</p>
+                <p><strong>2. Identify the type of discourse</strong> — Épidictique ? Délibératif ? Judiciaire ?</p>
+                <p><strong>3. Identify the proofs used</strong> — Éthos, pathos, logos ? Lequel domine ?</p>
+                <p><strong>4. Identify the rhetorical devices</strong> — Anaphores, métaphores, antithèses…</p>
+                <p><strong>5. Analyze the effect</strong> — Quel effet ces procédés produisent-ils sur le lecteur ?</p>
+                <p><strong>6. Evaluate</strong> — L'argumentation est-elle efficace ? Pourquoi ?</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Exemple d'analyse</h3>
+            <div class="example-box">
+                <h4>Texte : Extrait d'un discours de Victor Hugo contre la peine de mort</h4>
+                <p><em>« Je n'accuse pas, je ne condamne pas, je plains ! Car la société n'a pas le droit de tuer, même quand elle croit devoir le faire. »</em></p>
+                <h4 style="margin-top:10px;">Analyse :</h4>
+                <p>• <strong>Thèse :</strong> La société n'a pas le droit de tuer</p>
+                <p>• <strong>Type :</strong> Discours délibératif (orientation vers l'avenir, réforme)</p>
+                <p>• <strong>Procédés :</strong> Triplet (n'accuse pas, ne condamne pas, je plains), antithèse (condamner / plaindre)</p>
+                <p>• <strong>Pathos dominant :</strong> Le mot « je plains » crée une émotion compassionnelle</p>
+                <p>• <strong>Éthos :</strong> L'orateur se pose en figure morale supérieure</p>
+            </div>
+        </div>
 
         <!-- SECTION RÉSUMÉ IMAGE -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/E91E63/FFFFFF?text=Resume+Conjugaison" alt="Résumé de la conjugaison">
+                <img src="https://via.placeholder.com/1200x700/C2185B/FFFFFF?text=Argumentation+-+Methode+Complete" alt="Résumé argumentation">
                 <div class="resume-overlay">
-                    <h3>Les temps verbaux</h3>
-                    <p>Présent, passé, futur : quand et comment les utiliser.</p>
+                    <h3>Les clés de l'argumentation</h3>
+                    <p>Éthos, pathos, logos et procédés rhétoriques</p>
                 </div>
-            </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/E91E63/FFFFFF?text=Video+Conjugaison">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
@@ -80,7 +348,7 @@
         <a href="francais-lecon3.html" class="next-lesson">
             <div>
                 <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">L'orthographe →</p>
+                <p class="next-lesson-title">Le Commentaire Composé →</p>
             </div>
             <span class="next-lesson-arrow">→</span>
         </a>
@@ -88,7 +356,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

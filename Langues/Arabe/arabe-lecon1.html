@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'alphabet arabe - Arabe</title>
+    <title>درس 1 : في حوار الحضارات - اللغة العربية</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        .ar-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); text-align: right; }
+        .ar-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .ar-content p { margin-bottom: 12px; line-height: 2; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-right: 4px solid var(--success); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-right: 4px solid var(--warning); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FCD34D; text-align: right; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-right: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #93C5FD; text-align: right; }
+        .plan-box h3 { color: #1E40AF; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #1E40AF; color: white; padding: 12px; text-align: right; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .ar-word { color: #1E40AF; font-weight: 600; }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -15,80 +44,262 @@
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
             <nav class="nav-links">
-                <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
-                <a href="../../Physique/physique.html">Physique</a>
-                <a href="../../Electrique/electrique.html">Électrique</a>
-                <a href="../../Mecanique/mecanique.html">Mécanique</a>
-                <a href="../Francais/francais.html">Français</a>
-                <a href="../Anglais/anglais.html">Anglais</a>
-                <a href="arabe.html">Arabe</a>
-                <a href="../../Informatique/informatique.html">Info</a>
-                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="arabe.html">العربية</a>
             </nav>
         </div>
     </header>
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="arabe.html" class="back-btn">
-            ← Retour aux leçons d'Arabe
+        <a href="arabe.html" class="back-btn" style="direction: ltr;">
+            → العودة إلى دروس اللغة العربية
         </a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 1: L'alphabet arabe</h1>
-            <p class="breadcrumb">Arabe > Leçon 1</p>
+            <h1>درس 1 : في حوار الحضارات</h1>
+            <p class="breadcrumb">اللغة العربية > الدرس 1</p>
+        </div>
+
+        <!-- ملخص -->
+        <div class="plan-box">
+            <h3>📝 ملخص الدرس</h3>
+            <p>حوار الحضارات هو منهج للتعايش والتواصل بين الثقافات المختلفة على أساس الاحترام المتبادل والتفاهم. يهدف هذا الدرس إلى تعريف المتعلم بمفهوم حوار الحضارات، أهميته في العصر الحديث، شروطه نجاحه، والعوامل التي تُعيقه. كما يتناول العلاقة بين الهوية الثقافية والانفتاح على الآخر، مع أمثلة من التراث العربي الإسلامي.</p>
+        </div>
+
+        <!-- خطة الدرس -->
+        <div class="toc">
+            <h3>📋 خطة الدرس</h3>
+            <ol>
+                <li><a href="#partie1">مفهوم حوار الحضارات</a></li>
+                <li><a href="#partie2">أهمية حوار الحضارات في العصر الحديث</a></li>
+                <li><a href="#partie3">شروط نجاح حوار الحضارات</a></li>
+                <li><a href="#partie4">العوامل المعيقة لحوار الحضارات</a></li>
+                <li><a href="#partie5">تجربة الحضارة العربية الإسلامية</a></li>
+                <li><a href="#partie6">التطبيقات والنماذج</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
-        <!-- SECTION RÉSUMÉ IMAGE -->
-        <section class="section-resume">
-            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
-            <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/2E7D32/FFFFFF?text=Resume+Alphabet+Arabe" alt="Résumé de l'alphabet arabe">
-                <div class="resume-overlay">
-                    <h3>Les 28 lettres</h3>
-                    <p>L'alphabet arabe s'écrit de droite à gauche.</p>
+        <!-- PARTIE 1 -->
+        <div class="ar-content" id="partie1">
+            <h3>📘 1. مفهوم حوار الحضارات</h3>
+            <p><strong>حوار الحضارات</strong> هو عملية تواصل بين الثقافات والحضارات المختلفة بهدف التفاهم المتبادل والاحترام، وتبادل الأفكار والخبرات، وبناء جسور التعاون بدلاً من بناء الجدران.</p>
+            <p>المصطلح الإنجليزي هو <em>"Dialogue of Civilizations"</em> أو <em>"Intercultural Dialogue"</em>.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🤝</span>
+                    <p><strong>الحوار</strong> — تبادل أفكار وليس فرض رأي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏛️</span>
+                    <p><strong>الحضارات</strong> — ليس حضارة واحدة بل تعدد وتنوع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p><strong>الاحترام</strong> — الاعتراف بالآخر دون احتقار</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>التعلم</strong> — كل حضارة يمكن أن تتعلم من الأخرى</p>
                 </div>
             </div>
+            <div class="quote-box">
+                « ليس الحوار أن نفرض آراءنا على الآخرين، بل أن نستمع إليهم باحترام ونعرض عليهم ما لدينا. » — مفهوم أساسي في حوار الحضارات
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ar-content" id="partie2">
+            <h3>📗 2. أهمية حوار الحضارات في العصر الحديث</h3>
+            <p>في عالم العولمة، أصبح حوار الحضارات ضرورة وليس خياراً. الأسباب :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🌍</span>
+                    <p><strong>العولمة</strong> — العالم أصبح قرية صغيرة相互依存</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚔️</span>
+                    <p><strong>مكافحة الإرهاب</strong> — الحوار بديل عن العنف والصراع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🤝</span>
+                    <p><strong>التعايش السلمي</strong> — في مجتمعات متعددة الثقافات</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>التنمية المشتركة</strong> — تبادل الخبرات لنفع البشرية</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 أمثلة من الواقع</h4>
+                <p>• عام الحوار بين الحضارات (UNESCO 2001) — الإعلان عن حوار الحضارات كضرورة عالمية</p>
+                <p>• منتدى حوار الحضارات في نسيم — تجمع سنوي للخبراء من مختلف الثقافات</p>
+                <p>• التبادل الثقافي بين الجامعات — برامج تبادل طلابي بين الشرق والغرب</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="ar-content" id="partie3">
+            <h3>📙 3. شروط نجاح حوار الحضارات</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>الشرط</th>
+                    <th>الشرح</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الاحترام المتبادل</td>
+                    <td>الاعتراف بكرامة الآخر دون تمييز</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الإنصات الفعلي</td>
+                    <td>الاستماع بجدية لرأي الآخر وليس مجرد الانتظار للرد</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الاعتراف بالتعدد</td>
+                    <td>القبول بأن هناك أكثر من طريقة صحيحة للتفكير</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">ت avoiding مسبقات</td>
+                    <td>عدم الحكم على الآخر بناءً على أحكام مسبقة أو stereotypes</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الإرادة الصادقة</td>
+                    <td>الرغبة الحقيقية في التفاهم وليس مجرد المناورة</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المصداقية</td>
+                    <td>الالتزام بما يتفق عليه الطرفان</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ الفرق بين الحوار والجدل</h4>
+                <p><strong>الحوار</strong> : هدفه الفهم والإتقان — كل طرف مستعد لتعديل رأيه</p>
+                <p><strong>الجدل</strong> : هدفه الانتصار — كل طرف يسعى لإثبات خطأ الآخر</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="ar-content" id="partie4">
+            <h3>📕 4. العوامل المعيقة لحوار الحضارات</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>التعصب الأعمى</strong> — التمسك المطلق بآراء واحدة ورفض كل ما يخالفها</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>الاستعلاء الثقافي</strong> — اعتقاد أن ثقافتي أفضل من ثقافة الآخر</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>الاستعمار الفكري</strong> — فرض نموذج ثقافي واحد على العالم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>الإعلام المنحاز</strong> — نشر صور نمطية سلبية عن الحضارات الأخرى</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>الأحكام المسبقة</strong> — Stereo types التي تحول دون التفاهم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❌</span>
+                    <p><strong>التطرف الديني أو العلماني</strong> — رفض الآخر بدافع Ideology</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ar-content" id="partie5">
+            <h3>📒 5. تجربة الحضارة العربية الإسلامية</h3>
+            <p>قدمت الحضارة العربية الإسلامية نموذجاً فريداً في حوار الحضارات عبر التاريخ :</p>
+            <div class="example-box">
+                <h4>💡 بيت الحكمة في بغداد</h4>
+                <p>مركز علمي جمع scholars من مختلف الحضارات (يونان، هند، فارس،罗马) للترجمة والبحث. أظهر التسامح والانفتاح على الآخر.</p>
+            </div>
+            <div class="example-box">
+                <h4>💡 الأندلس ك案例</h4>
+                <p>فترة التعايش بين المسلمين والمسيحيين واليهود في الأندلس (قرون 8-15) أثبتت إمكانية الحوار والتعاون رغم الاختلاف.</p>
+            </div>
+            <div class="quote-box">
+                « لقد كانت الحضارة العربية الإسلامية جسراً بين الشرق والغرب، نقلت علوم اليونان إلى أوروبا وعادت لترد إليها ما أضافته. » — من كتب التاريخ
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ar-content" id="partie6">
+            <h3>📓 6. التطبيقات والنماذج</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">كيف يكون الحوار فعالاً؟</h3>
+            <div class="example-box">
+                <h4>💡 نصائح عملية</h4>
+                <p>1. <strong>افهم ثقافة الآخر</strong> قبل الحكم عليها — اقرأ، استمع، اسأل</p>
+                <p>2. <strong>ابحث عن المشترك</strong> وليس عن الاختلاف فقط</p>
+                <p>3. <strong>كن مستعداً للتعلم</strong> — حتى من منتقديك</p>
+                <p>4. <strong>استخدم لغة الحوار</strong> لا لغة المواجهة</p>
+                <p>5. <strong>تجنب التعميم</strong> — لا تقل "كل الغربيين كذا" أو "كل المسلمين كذا"</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ في امتحان البكالوريا</h4>
+                <p>قد يُطلب منك:</p>
+                <p>• التعريف بمفهوم حوار الحضارات</p>
+                <p>• شرح أهمية الحوار في العصر الحديث</p>
+                <p>• تحليل نص يتعلق بالحوار والتعايش</p>
+                <p>• كتابة فقرة تربط بين العولمة والحوار الحضاري</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1E40AF/FFFFFF?text=%D8%AF%D8%B1%D8%B3+%D8%AD%D9%88%D8%A7%D8%B1+%D8%A7%D9%84%D8%AD%D8%B6%D8%A7%D8%B1%D8%A7%D8%AA" alt="ملخص حوار الحضارات">
+                <div class="resume-overlay">
+                    <h3>حوار الحضارات</h3>
+                    <p>المفهوم، الأهمية، الشروط، والعوامل المعيقة</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
-            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/2E7D32/FFFFFF?text=Video+Alphabet+Arabe">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
         <!-- BOUTON LEÇON SUIVANTE -->
         <a href="arabe-lecon2.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">Les sons arabes →</p>
+                <p class="next-lesson-text">الدرس التالي</p>
+                <p class="next-lesson-title">الفكر والفن ←</p>
             </div>
-            <span class="next-lesson-arrow">→</span>
+            <span class="next-lesson-arrow">←</span>
         </a>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

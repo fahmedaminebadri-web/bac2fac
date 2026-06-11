@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درس 5 : أساليب العربية — Styles Linguistiques</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        .ar-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); text-align: right; }
+        .ar-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .ar-content p { margin-bottom: 12px; line-height: 2; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-right: 4px solid var(--success); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-right: 4px solid var(--warning); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FCD34D; text-align: right; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-right: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #93C5FD; text-align: right; }
+        .plan-box h3 { color: #1E40AF; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #D97706; color: white; padding: 12px; text-align: right; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .ar-word { color: #D97706; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="../arabe.html">العربية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="linguistique.html" class="back-btn" style="direction: ltr;">
+            → العودة إلى دروس اللغوية
+        </a>
+
+        <div class="lesson-header">
+            <h1>درس 5 : أساليب العربية — Styles</h1>
+            <p class="breadcrumb">اللغوية > الدرس 5</p>
+        </div>
+
+        <div class="plan-box">
+            <h3>📝 ملخص الدرس</h3>
+            <p>تنقسم الأساليب في اللغة العربية إلى نوعين رئيسيين: <strong>الأسلوب الخبري</strong> (يُفيد صيغة خبر عن الواقع) و<strong>الأسلوب الإنشائي</strong> (يُنشئ ما لم يكن موجوداً). الإنشائي بدوره ينقسم إلى: إنشائي طلبي (طلب — أمر، نهي، استفهام، تمنٍّ، عرض، دعاء) وإنشائي غير طلبي (تعجّب، نداء).</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 خطة الدرس</h3>
+            <ol>
+                <li><a href="#partie1">الأسلوب الخبري وأنواعه</a></li>
+                <li><a href="#partie2">الأسلوب الإنشائي الطلبي</a></li>
+                <li><a href="#partie3">الأسلوب الإنشائي غير الطلبي</a></li>
+                <li><a href="#partie4">أدوات الطلب (الأمر، النهي، الاستفهام)</a></li>
+                <li><a href="#partie5">الربط بين الأساليب في النص</a></li>
+                <li><a href="#partie6">التطبيقات وأسئلة البكالوريا</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
+            <div class="audio-player">
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="ar-content" id="partie1">
+            <h3>📘 1. الأسلوب الخبري وأنواعه</h3>
+            <p><strong>الأسلوب الخبري</strong> هو ما يُخبر به المتكلم عن شيء، سواء كان ثابتاً أو متحققاً أو ممكناً. يُسمّى \"خبرياً\" لأنّ المتكلم يُخبر عنه.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p><strong>خبري تام:</strong> جملة اسمية أو فعلية تُفيد خبراً كاملاً</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>خبري ناقص:</strong> يحتاج إلى إتمام (المبتدأ والخبر = تركيب ثنائي)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>خبري فعلي:</strong> جملة فعلية (فعل + فاعل)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🧩</span>
+                    <p><strong>خبري اسمي:</strong> جملة اسمية (مبتدأ + خبر)</p>
+                </div>
+            </div>
+            <table class="vocab-table">
+                <tr>
+                    <th>نوع الخبر</th>
+                    <th>التعريف</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">خبر مفرد</td>
+                    <td>كلمة واحدة (اسم)</td>
+                    <td>العلمُ نورٌ — نور: خبر مفرد</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">خبر جملة</td>
+                    <td>جملة فعلية أو اسمية</td>
+                    <td>العلمُ نورٌ يُنير — جملة فعلية خبر</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">خبر شبه جملة</td>
+                    <td>ظرف أو جار ومجرور</td>
+                    <td>الكتابُ على الطاولةِ — على الطاولة: شبه جملة</td>
+                </tr>
+            </table>
+            <div class="quote-box">
+                « الخبر هو روح الجملة الاسمية — بدونه لا وجود للجملة. »
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ar-content" id="partie2">
+            <h3>📗 2. الأسلوب الإنشائي الطلبي</h3>
+            <p><strong>الإنشائي</strong> هو ما يُنشئه المتكلم من طلب أو تعجّب — أي يُحدث شيئاً في الواقع (طلب فعل، طلب معرف، طلب رأي).</p>
+            <p>الإنشائي الطلبي هو الذي يتضمن طلباً من المتكلم إلى المخاطب:</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>النوع</th>
+                    <th>الأداة</th>
+                    <th>الشرح</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الأمر</td>
+                    <td>الفعل المضارع (أمر)</td>
+                    <td>طلب فعل شيء</td>
+                    <td>اِقْرَأْ، اِسْتَمِعْ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">النهي</td>
+                    <td>لا + المضارع</td>
+                    <td>طلب ترك فعل</td>
+                    <td>لا تَكْتُبْ، لا تَذْهَبْ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الاستفهام</td>
+                    <td>هل، أ، من، ما...</td>
+                    <td>طلب معرفة شيء</td>
+                    <td>هل ذَهَبْتَ؟</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">التمنّي</td>
+                    <td>ليت، عسى، لعلّ</td>
+                    <td>طلب أمر بعيد</td>
+                    <td>ليتَ الشبابَ يعودُ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">العرض</td>
+                    <td>ألا، هلاّ، ألا</td>
+                    <td>عرض فعل شيء</td>
+                    <td>ألا تَزُورُنا؟</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الدعاء</td>
+                    <td>يا + اسم</td>
+                    <td>طلب من الله أو من الناس</td>
+                    <td>يا ربّ، يا محمدُ</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="ar-content" id="partie3">
+            <h3>📙 3. الأسلوب الإنشائي غير الطلبي</h3>
+            <p>هو ما يُنشئه المتكلم دون أن يتضمن طلباً:</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">😲</span>
+                    <p><strong>التعجّب:</strong> أسلوب يُعبّر عن الدهشة — \"ما أحسنَ العلمَ!\"</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📢</span>
+                    <p><strong>النداء:</strong> طلب الإقبال — \"يا طالبُ\" — الأداة: يا، أيا، هيا</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔁</span>
+                    <p><strong>الاستغاثة:</strong> طلب المعونة — \"يا اللهَ\"</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p><strong>التحذير:</strong> تنبيه من ضرر — \"إيّاكَ والكذبَ\"</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 الفرق بين النداء والدعاء</h4>
+                <p>• <strong>النداء:</strong> طلب إقبال المخاطب — \"يا محمدُ اقعدْ\"</p>
+                <p>• <strong>الدعاء:</strong> طلب من الله — \"يا ربّ اغفر لي\"</p>
+                <p>• <strong>الاستغاثة:</strong> طلب معونة — \"يا اللهَ انصرنا\"</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="ar-content" id="partie4">
+            <h3>📕 4. أدوات الطلب (الأمر، النهي، الاستفهام)</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>الأسلوب</th>
+                    <th>الأداة</th>
+                    <th>الإعراب</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الأمر</td>
+                    <td>حذف حرف المضارعة</td>
+                    <td>فعل مضارع مجزوم (جزم طلب)</td>
+                    <td>اِكْتُبْ — جزم بالأمر</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">النهي</td>
+                    <td>لا الناهية</td>
+                    <td>فعل مضارع مجزوم (جزم النهي)</td>
+                    <td>لا تَكْتُبْ — مجزوم</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الاستفهام</td>
+                    <td>هل، أ، الهمزة، من، ما</td>
+                    <td>لا يُعرب (حرف)</td>
+                    <td>هل تذهبُ؟ — هل: حرف استفهام</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">التمنّي</td>
+                    <td>ليت، لعلّ، عسى</td>
+                    <td>فعل مضارع منصوب (بالياء)</td>
+                    <td>ليتَ العلمُ ينفعُ — ينفعُ: منصوب بالياء</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ الفرق بين ليت ولعلّ</h4>
+                <p>• <strong>ليت:</strong> تتمنّى ما هو بعيد أو مستحيل — \"ليتني كنتُ طبيباً\"</p>
+                <p>• <strong>لعلّ:</strong> توقع وترجّ lest something happens — \"لعلّ السماءَ تمطرُ\"</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ar-content" id="partie5">
+            <h3>📒 5. الربط بين الأساليب في النص</h3>
+            <p>النص الأدبي أو اللغوي قد يجمع بين أساليب مختلفة لخدمة المعنى:</p>
+            <div class="example-box">
+                <h4>💡 تحليل أسلوب نص</h4>
+                <p>قال تعالى: <strong>\" اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ \"</strong></p>
+                <p>• \"اقْرَأْ\" — <strong>أمر</strong> (إنشائي طلبي) → طلب من الله للمخاطب</p>
+                <p>• \"باسم ربّك\" — <strong>جار ومجرور</strong> (خبري توضيحي)</p>
+                <p>• \"الذي خلق\" — <strong>جملة صلة</strong> (خبري) تصف الرب</p>
+                <p>→ الأسلوب الغالب: <strong>إنشائي طلبي (أمر)</strong> لكن النص يجمع بين الأسلوبين</p>
+            </div>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p><strong>السياق يحدد:</strong> نفس الكلمة قد تكون خبراً في سياق وأمراً في سياق آخر</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>الغرض البلاغي:</strong> الأسلوب الإنشائي يُحقق تأثيراً أقوى من الخبري</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ar-content" id="partie6">
+            <h3>📓 6. التطبيقات وأسئلة البكالوريا</h3>
+            <div class="example-box">
+                <h4>💡 تمرين: حدّد الأسلوب في كل جملة</h4>
+                <p>1. <strong>\"العلمُ نورٌ\"</strong> — أسلوب خبري (جملة اسمية)</p>
+                <p>2. <strong>\"اِجتهِدْ في دراستِكَ\"</strong> — أسلوب إنشائي طلبي (أمر)</p>
+                <p>3. <strong>\"ما أجملَ العلمَ!\"</strong> — أسلوب إنشائي غير طلبي (تعجب)</p>
+                <p>4. <strong>\"هل تذهبُ إلى المدرسةِ؟\"</strong> — أسلوب إنشائي طلبي (استفهام)</p>
+                <p>5. <strong>\"لا تَكْذِبْ أبداً\"</strong> — أسلوب إنشائي طلبي (نهي)</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ في امتحان البكالوريا</h4>
+                <p>• حدّد نوع الأسلوب: خبري أم إنشائي؟</p>
+                <p>• إذا إنشائي: طلبي أم غير طلبي؟</p>
+                <p>• إذا طلبي: أيّ نوع من الطلب؟</p>
+                <p>• علّل: ما أثر هذا الأسلوب في المتلقي؟</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/D97706/FFFFFF?text=%D8%AF%D8%B1%D8%B3+%D8%A3%D8%B3%D8%A7%D9%84%D9%8A%D8%A8+%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9" alt="ملخص الأساليب">
+                <div class="resume-overlay">
+                    <h3>أساليب العربية</h3>
+                    <p>الخبري، الإنشائي الطلبي، الإنشائي غير الطلبي</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
+            <div class="video-container">
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <a href="linguistique-lecon6.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">الدرس التالي</p>
+                <p class="next-lesson-title">منهجية التحليل ←</p>
+            </div>
+            <span class="next-lesson-arrow">←</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

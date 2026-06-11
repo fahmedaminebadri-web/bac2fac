@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درس 4 : الإعراب — Analyse Grammaticale</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        .ar-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); text-align: right; }
+        .ar-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .ar-content p { margin-bottom: 12px; line-height: 2; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-right: 4px solid var(--success); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-right: 4px solid var(--warning); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FCD34D; text-align: right; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-right: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #93C5FD; text-align: right; }
+        .plan-box h3 { color: #1E40AF; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #DC2626; color: white; padding: 12px; text-align: right; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .ar-word { color: #DC2626; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="../arabe.html">العربية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="linguistique.html" class="back-btn" style="direction: ltr;">
+            → العودة إلى دروس اللغوية
+        </a>
+
+        <div class="lesson-header">
+            <h1>درس 4 : الإعراب — Analyse Grammaticale</h1>
+            <p class="breadcrumb">اللغوية > الدرس 4</p>
+        </div>
+
+        <div class="plan-box">
+            <h3>📝 ملخص الدرس</h3>
+            <p>الإعراب هو تعديل أواخر الكلمات لتبيّن <strong>دورها في الجملة</strong>. وهو من أبرز ما يُميّز العربية عن سائر اللغات. يتنوع الإعراب بين إعراب لفظي (واضح بالحركات) وإعراب تقديري (مقدر عند تعذّر ظهوره)، وبين الإعراب الحقيقي والبناء.</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 خطة الدرس</h3>
+            <ol>
+                <li><a href="#partie1">مفهوم الإعراب وأنواعه</a></li>
+                <li><a href="#partie2">علامات الإعراب الأصلية والفرعية</a></li>
+                <li><a href="#partie3">المعربات والبناءات</a></li>
+                <li><a href="#partie4">الكلمات التي تُعرب بالبناء</a></li>
+                <li><a href="#partie5">الإعراب التقديري واللفظي</a></li>
+                <li><a href="#partie6">التطبيقات وأسئلة البكالوريا</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
+            <div class="audio-player">
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="ar-content" id="partie1">
+            <h3>📘 1. مفهوم الإعراب وأنواعه</h3>
+            <p><strong>الإعراب</strong> هو تغيير يكون في <em>آخر الكلمة</em> لتبيّن موقعها من الإعراب (رفع، نصب، جر، جزم). هذا التغيير يكون بالشكل (الحركات) أو بالكلمة أو بجوهر الكلمة.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>إعراب تغيّري:</strong> تغيير آخر الكلمة بالحركة (الضمة، الفتحة، الكسرة، السكون)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>إعراب كلموي:</strong> الكلمة تُعرب بتغيير جزء منها (الفعل المعتل)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔧</span>
+                    <p><strong>إعراب حقيقي:</strong> يظهر على الكلمة المعربة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⏸️</span>
+                    <p><strong>إعراب تقديري:</strong> لا يظهر لسبب نحوي ويُقدّر</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 أمثلة</h4>
+                <p>• <strong>الرفع:</strong> الطالبُ يذاكرُ — الضمة تدل على الرفع</p>
+                <p>• <strong>النصب:</strong> رأيتُ الطالبَ — الفتحة تدل على النصب</p>
+                <p>• <strong>الجر:</strong> مررتُ بالطالبِ — الكسرة تدل على الجر</p>
+                <p>• <strong>الجزم:</strong> لم يذاكرِ الطالبُ — السكون يدل على الجزم</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ar-content" id="partie2">
+            <h3>📗 2. علامات الإعراب الأصلية والفرعية</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>حالة الإعراب</th>
+                    <th>العلامة الأصلية</th>
+                    <th>العلامة الفرعية</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الرفع</td>
+                    <td>الضمة (ـُ)</td>
+                    <td>ثبوت النون (للمضارع)</td>
+                    <td>يذهَبُ — ثبوت النون</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">النصب</td>
+                    <td>الفتحة (ـَ)</td>
+                    <td>حذف النون (للمضارع)</td>
+                    <td>لم يذهَبْ — حذف النون</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الجر</td>
+                    <td>الكسرة (ـِ)</td>
+                    <td>الكسرة المقدّرة</td>
+                    <td>في البيتِ — الكسرة</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الجزم</td>
+                    <td>السكون</td>
+                    <td>حذف النون (للمضارع)</td>
+                    <td>لم يذهَبْ — جزم</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ متّى نستخدم العلامات الفرعية؟</h4>
+                <p>• <strong>ثبوت النون:</strong> حين يكون الفعل المضارع معتل الآخر أو في اتصاله بتاء الفاعل</p>
+                <p>• <strong>حذف النون:</strong> في المضارع المعتل الآخر المنصوب أو المجزوم</p>
+                <p>• <strong>الكسرة المقدّرة:</strong> حين تتعذّر كتابة الكسرة (كلمات مثل: عَلِيّ، حُسني)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="ar-content" id="partie3">
+            <h3>📙 3. المعربات والبناءات</h3>
+            <p>الكلمات في العربية نوعان من حيث الإعراب:</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>النوع</th>
+                    <th>التعريف</th>
+                    <th>أمثلة</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">المعربات</td>
+                    <td>تتنوع آخرها حسب الموقع (رفع/نصب/جر/جزم)</td>
+                    <td>الاسم المعرب، الفعل المضارع</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">البناءات</td>
+                    <td>آخرها ثابت على حالة واحدة لا تتغير</td>
+                    <td>الفعل الماضي، الفعل الأمر، الحروف</td>
+                </tr>
+            </table>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p><strong>اسم معرب:</strong> يُعرَب إعراباً تاماً — ينون أو يُضاف أو يُعرّف</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>فعل معرب:</strong> المضارع فقط — يُعرَب بالرفع والنصب والجزم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏗️</span>
+                    <p><strong>اسم مبني:</strong> لا يتغير آخره — على السكون أو الفتح أو الكسرة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔒</span>
+                    <p><strong>فعل مبني:</strong> الماضي والأمر — ثابت الأخير</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="ar-content" id="partie4">
+            <h3>📕 4. الكلمات التي تُعرب بالبناء</h3>
+            <p>بعض الكلمات تُبنى على حالات ثابتة ولا تُعرب:</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>الكلمة</th>
+                    <th>حالة البناء</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الفعل الماضي</td>
+                    <td>مبني على الفتح</td>
+                    <td>ذَهَبَ، كَتَبَ، عَلِمَ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الفعل الأمر</td>
+                    <td>مبني على السكون</td>
+                    <td>اِكْتُبْ، اِنْطَلِقْ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الحروف</td>
+                    <td>مبنية (لا محل لها)</td>
+                    <td>في، على، أنَّ، لن</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الضمير</td>
+                    <td>مبني على الفتح في محل...</td>
+                    <td>هو، هي، أنا، نحن</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">أسماء الإشارة</td>
+                    <td>مبنية على السكون</td>
+                    <td>هذا، هذه، ذلك</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الأسماء الموصولة</td>
+                    <td>مبنية على السكون</td>
+                    <td>الذي، التي، اللذان</td>
+                </tr>
+            </table>
+            <div class="quote-box">
+                « الحروف لا تُعرب لأنها أدوات لا تُمثل بذاتها — محلها من الإعراب هو الموضع الذي تُساعد عليه. »
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ar-content" id="partie5">
+            <h3>📒 5. الإعراب التقديري واللفظي</h3>
+            <p>في بعض الحالات لا يظهر الإعراب باللفظ بل يُقدَّر:</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📌</span>
+                    <p><strong>الاسم المعتل الآخر:</strong> يُقدر عليه النصب والجر (عَلِيّ = يُنصب بالفتحة وتُقدر الكسرة في الجر)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📌</span>
+                    <p><strong>المضاف:</strong> لا ينون → يُقدر التنوين على المضاف إليه</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📌</span>
+                    <p><strong>الكلمات التي آخرها ألف:</strong> \"هذا\" مبنية على السكون — لا إعراب</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 إعراب: \"عَلِيّ مُجتهِدٌ\"</h4>
+                <p>• عَلِيّ: مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة — أو: ضمة مقدّرة على آخره منع من ظهورها التعذر</p>
+                <p>• مُجتهِدٌ: خبر مرفوع وعلامة رفعه الضمة</p>
+                <p>— note: في حالة \"عَلِيّ\" نُقدّر الضمة لأنها آخره ألف لا تقبل الحركة</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ الفرق بين \"مقدّر\" و\"محذوف\"</h4>
+                <p>• <strong>مقدّر:</strong> الحركة موجودة لكن لا تُكتب (تُقدَّر) — مثال: عَلِيّ (رفع) = ضمة مقدّرة</p>
+                <p>• <strong>محذوف:</strong> حرف موجود في الأصل لكن حُذف — مثال: ابنُ (رفع) = الباء محذوفة (ابن)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ar-content" id="partie6">
+            <h3>📓 6. التطبيقات وأسئلة البكالوريا</h3>
+            <div class="example-box">
+                <h4>💡 تمرين: أعرب الجملة الآتية</h4>
+                <p><strong>اِسْتَمَعَ الطالبُ إلى الدرسِ بكلِّ جوارحِهِ.</strong></p>
+                <p>• اِسْتَمَعَ: فعل ماضٍ مبني على الفتح</p>
+                <p>• الطالبُ: فاعل مرفوع وعلامة رفعه الضمة</p>
+                <p>• إلى: حرف جر مبني على السكون</p>
+                <p>• الدرسِ: اسم مجرور وعلامة جره الكسرة</p>
+                <p>• بكلِّ: جار ومجرور — الباء حرف جر، بكل: اسم مجرور</p>
+                <p>• جوارحِهِ: مضاف + مضاف إليه مجرور + ضمير « الهاء » في محل جر مضاف</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ في امتحان البكالوريا</h4>
+                <p>• أعرب ما تحته خط</p>
+                <p>• حدّد: معرب أو مبني؟ معرب بالبناء أم بالإعراب؟</p>
+                <p>• علّل: لماذا حُذفت حركة الإعراب أو قُدّرت؟</p>
+                <p>• صحّح: أيّهما خطأ في الإعراب؟</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/DC2626/FFFFFF?text=%D8%AF%D8%B1%D8%B3+%D8%A7%D9%84%D8%A5%D8%B9%D8%B1%D8%A7%D8%A8" alt="ملخص الإعراب">
+                <div class="resume-overlay">
+                    <h3>الإعراب العربي</h3>
+                    <p>العلامات، المعربات، البناءات، الإعراب التقديري</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
+            <div class="video-container">
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <a href="linguistique-lecon5.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">الدرس التالي</p>
+                <p class="next-lesson-title">أساليب العربية ←</p>
+            </div>
+            <span class="next-lesson-arrow">←</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>

@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La connaissance - Philosophie</title>
+    <title>درس 2 : الدولة - الفلسفة</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        .ph-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); text-align: right; }
+        .ph-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .ph-content p { margin-bottom: 12px; line-height: 2; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-right: 4px solid var(--success); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-right: 4px solid var(--warning); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; text-align: right; }
+        .toc h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-right: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FCD34D; text-align: right; }
+        .plan-box h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .phil-term { background: #EDE9FE; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #5B21B6; }
+        .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -15,80 +39,263 @@
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
             <nav class="nav-links">
-                <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
-                <a href="../../Physique/physique.html">Physique</a>
-                <a href="../../Electrique/electrique.html">Électrique</a>
-                <a href="../../Mecanique/mecanique.html">Mécanique</a>
-                <a href="../../Langues/Francais/francais.html">Français</a>
-                <a href="../../Langues/Anglais/anglais.html">Anglais</a>
-                <a href="../../Langues/Arabe/arabe.html">Arabe</a>
-                <a href="../../Informatique/informatique.html">Info</a>
-                <a href="philosophie.html">Philo</a>
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="philosophie.html">الفلسفة</a>
             </nav>
         </div>
     </header>
 
     <!-- CONTENU PRINCIPAL -->
     <main class="container">
-        <!-- BOUTON RETOUR -->
-        <a href="philosophie.html" class="back-btn">
-            ← Retour aux leçons de Philosophie
+        <a href="philosophie.html" class="back-btn" style="direction: ltr;">
+            → العودة إلى دروس الفلسفة
         </a>
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 2: La connaissance</h1>
-            <p class="breadcrumb">Philosophie > Leçon 2</p>
+            <h1>درس 2 : الدولة</h1>
+            <p class="breadcrumb">الفلسفة > الدرس 2</p>
+        </div>
+
+        <!-- ملخص -->
+        <div class="plan-box">
+            <h3>📝 ملخص الدرس</h3>
+            <p>الدولة كإشكالية فلسفية تطرح вопросы حول <strong>legitimacy du pouvoir</strong> وعلاقته بالعدالة والحرية. اختلف الفلاسفة حول أساس الدولة : هل هي <strong>طبيعية</strong> (أرسطو) أم <strong>عقدية</strong> (هوبز، لوك، روسو)؟ كما اختلفوا حول العلاقة بين الفرد والدولة : هل الفرد في خدمة الدولة أم الدولة في خدمة الفرد؟ هذا الدرس يستعرض أهم النظريات الفلسفية حول الدولة.</p>
+        </div>
+
+        <!-- خطة الدرس -->
+        <div class="toc">
+            <h3>📋 خطة الدرس</h3>
+            <ol>
+                <li><a href="#partie1">ما هي الدولة؟ التعريف والمفاهيم الأساسية</a></li>
+                <li><a href="#partie2">نظرية أرسطو : الدولة طبيعية</a></li>
+                <li><a href="#partie3">نظرية العقد الاجتماعي : هوبز، لوك، روسو</a></li>
+                <li><a href="#partie4">نقد الدولة : الفوضوية واليسارية</a></li>
+                <li><a href="#partie5">الدولة الحديثة : القانون والدستور</a></li>
+                <li><a href="#partie6">إشكالية الحرية الفردية</a></li>
+            </ol>
         </div>
 
         <!-- SECTION PODCAST -->
         <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
+            <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
             <div class="audio-player">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'élément audio.
-                </audio>
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
-        <!-- SECTION RÉSUMÉ IMAGE -->
-        <section class="section-resume">
-            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
-            <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/7B1FA2/FFFFFF?text=Resume+Connaissance" alt="Résumé de la connaissance">
-                <div class="resume-overlay">
-                    <h3>Que peut-on savoir?</h3>
-                    <p>Les limites et les sources de notre connaissance.</p>
+        <!-- PARTIE 1 -->
+        <div class="ph-content" id="partie1">
+            <h3>📘 1. ما هي الدولة؟ التعريف والمفاهيم الأساسية</h3>
+            <p><strong>الدولة</strong> (L'État) هي كيان سياسي منظم يمارس <em>السيادة</em> على إقليم معين ويتحكم في سكانه عبر مؤسسات وقوانين.</p>
+            <p>في الفلسفة السياسية، الدولة هي موضوع نقاش مركزي حول <strong>legitimacy du pouvoir</strong> وعلاقته بالعدالة.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🏛️</span>
+                    <p><strong>السيادة</strong> — حق الدولة في اتخاذ القرارات النهائية دون تدخل خارجي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الشرعية</strong> — اعتراف المحكومين بمشروعية سلطة الحاكم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👥</span>
+                    <p><strong>المواطنة</strong> — الانتماء القانوني والسياسي للفرد إلى الدولة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📜</span>
+                    <p><strong>القانون</strong> — مجموعة القواعد المنظمة للحياة collective</p>
                 </div>
             </div>
+            <div class="quote-box">
+                « الدولة هي العلاقة بين المحكومين والحاكم وفق قواعد عقلانية. » — ماكس فيبر
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ph-content" id="partie2">
+            <h3>📗 2. نظرية أرسطو : الدولة طبيعية</h3>
+            <p>أرسطو في كتابه <em>السياسة</em> يرى أن الدولة <strong>طبيعية</strong> : أي أنها ليست اختراعاً اصطناعياً بل ضرورة طبيعية تنبع من طبيعة الإنسان كائناً سياسياً (Zoon politikon).</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>التدرج الطبيعي</strong> — الفرد → العائلة → القرية → الدولة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>الهدف</strong> — الدولة目的在于 تحقيق « الحياة الجيدة » (Eudaimonia)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👑</span>
+                    <p><strong>السلطة السياسية</strong> — يجب أن تخدم الخير العام لا مصلحة الحاكم</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 نص من أرسطو</h4>
+                <p>« الدولة موجودة طبيعياً وهي سابقة لكل فرد، لأن الكل سابق للجزء... الدولة هي طبيعة الإنسان في أسمى تجلياتها. » — أرسطو، السياسة</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">أنواع الحكم عند أرسطو</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">👑</span>
+                    <p><strong>الملكية</strong> — حكم الفرد لمصلحة الجميع ← أفضلها (صحيحة)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏛️</span>
+                    <p><strong>الأرستقراطية</strong> — حكم الأفضل لمصلحة الجميع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🗳️</span>
+                    <p><strong>الجمهورية</strong> — حكم الأكثرية لمصلحة الجميع</p>
+                </div>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ خطر الطغيان</h4>
+                <p>عندما تنحرف السلطة لمصلحة الحاكم بدلاً من مصلحة المحكومين، تتحول : الملكية ← استبداد، الأرستقراطية ← oligarchie، الجمهورية ← ديمقراطية demagogie.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="ph-content" id="partie3">
+            <h3>📙 3. نظرية العقد الاجتماعي : هوبز، لوك، روسو</h3>
+            <p>نظرية العقد الاجتماعي ترى أن الدولة ليست طبيعية بل <strong>نتیجة اتفاق</strong> بين الأفراد لإخراجهم من حالة الطبيعة.</p>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">أ. توماس هوبز (1588-1679)</h3>
+            <div class="example-box">
+                <h4>الحالة الطبيعية :</h4>
+                <p>« жизнь человека — одиночество, бедность, грязь, жестокость и краткость. » (حياة الإنسان وحيدة، فقيرة، قذرة، وحشية وقصيرة)</p>
+                <h4 style="margin-top:10px;">العقد :</h4>
+                <p>يتخلى الأفراد عن جميع حقوقهم لصالح <strong>سيّد أعلى</strong> (اللفيفان) لضمان الأمن. الدولة مطلقة لضمان النظام.</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. جون لوك (1632-1704)</h3>
+            <div class="example-box">
+                <h4>الحالة الطبيعية :</h4>
+                <p>حالة طبيعية جيدة حيث يسود القانون الطبيعي (حقوق طبيعية : الحياة، الحرية، الملكية)</p>
+                <h4 style="margin-top:10px;">العقد :</h4>
+                <p>يتخلى الأفراد فقط عن حق العقاب، لا عن حقوقهم الطبيعية. الدولة محدودة لحماية الحياة والحرية والملكية. إذا خالفت الدولة العقد، يحق للفرد التمرد.</p>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. جان جاك روسو (1712-1778)</h3>
+            <div class="example-box">
+                <h4>الحالة الطبيعية :</h4>
+                <p>حالة أصلية جيدة حيث الإنسان طيب وبسيط (« l'homme est né libre »)</p>
+                <h4 style="margin-top:10px;">العقد :</h4>
+                <p>كل فرد يتخلى عن جميع حقوقه للمجتمع ككل. لا يوجد سيّد ولا عبد — الكل يطيع الإرادة العامة. العقد يجب أن يحترم الحرية الحقيقية (الطاعة للقانون الذاتي).</p>
+                <p>« الإنسان يولد حراً، وهو في كل مكان مُقیَّد بالأغلال. » — روسو</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="ph-content" id="partie4">
+            <h3>📕 4. نقد الدولة : الفوضوية واليسارية</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. النقد الفوضوي</h3>
+            <p>الفلاسفة الفوضويون (برودون، باكونين، كروبوتكين) يرون أن الدولة <strong>بطبيعتها قمعية</strong> ولا يمكن إصلاحها — يجب إلغاؤها.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p>الدولة تحمي مصالح الطبقة المهيمنة وتقمع الأغلبية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p>التنظيم الذاتي ممكن دون دولة (التعاونيات، الجمعيات)</p>
+                </div>
+            </div>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. النقد الماركسي</h3>
+            <p>ماركس يرى أن الدولة <strong>أداة سوط الطبقة المهيمنة</strong> : « الدولة هي جهاز لإدارة شؤون الطبقة المسيطرة ». الثورة proletarienne ستؤدي إلى « انحلال الدولة » وزوال الطبقات.</p>
+            <div class="quote-box">
+                « ليس للدولة أن تقرر ما إذا كانت موجودة أم لا. » — بلاشفة
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ph-content" id="partie5">
+            <h3>📒 5. الدولة الحديثة : القانون والدستور</h3>
+            <p>الدولة الحديثة تتميز بـ <strong>السيادة القانونية</strong> : سلطة الدولة مقيدة بالقانون والدستور.</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📜</span>
+                    <p><strong>الدستور</strong> — القانون الأعلى الذي يحدد تنظيم الدولة وحقوق الأفراد</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>فصل السلطات</strong> — تشريعية، تنفيذية، قضائية (مونتسكيو)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🗳️</span>
+                    <p><strong>الديمقراطية</strong> — حكم الشعب بالشعب وللشعب (لينكولن)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🛡️</span>
+                    <p><strong>حقوق الإنسان</strong> — الكرامة، الحرية، المساواة (إعلان 1789)</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 مبدأ فصل السلطات (مونتسكيو)</h4>
+                <p>« لكي لا يمكن تركز السلطة في يد شخص واحد، يجب توزيعها بين : السلطة التشريعية (وضع القوانين)، السلطة التنفيذية (تطبيق القوانين)، السلطة القضائية (تفسير Laws). »</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ph-content" id="partie6">
+            <h3>📓 6. إشكالية الحرية الفردية</h3>
+            <p>السؤال المركزي : <strong>هل الفرد حر في الدولة؟</strong></p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔴</span>
+                    <p><strong>النموذج الليبرالي</strong> (لوك، جون ستيوارت ميل) — الدولة يجب أن تكون minimaliste لتحمي حرية الفرد. التدخل excessif انتهاك للحرية.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔵</span>
+                    <p><strong>النموذج الجمهوري</strong> (روسو، هيغل) — الحرية الحقيقية هي المشاركة في الحياة السياسية والطاعة للقانون الذاتي. الفرد الحر ليس من يعصی.</p>
+                </div>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ إشكالية الحدود</h4>
+                <p>ما هي حدود سلطة الدولة على الفرد ؟ أين ينتهي حق الدولة ويبدأ حق الفرد ؟ هذا السؤال لا يزال محور جدل فلسفي وسياسي.</p>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/1D4ED8/FFFFFF?text=%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A9+%D9%81%D9%8A+%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D8%A9" alt="ملخص الدولة">
+                <div class="resume-overlay">
+                    <h3>الدولة : نظريات وتيارات</h3>
+                    <p>أرسطو، العقد الاجتماعي، النقد الماركسي، الدولة الحديثة</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
-            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
             <div class="video-container">
-                <video controls poster="https://via.placeholder.com/1920x1080/7B1FA2/FFFFFF?text=Video+Connaissance">
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas l'élément vidéo.
-                </video>
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
             </div>
         </section>
 
         <!-- BOUTON LEÇON SUIVANTE -->
         <a href="philosophie-lecon3.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">La morale et l'éthique →</p>
+                <p class="next-lesson-text">الدرس التالي</p>
+                <p class="next-lesson-title">السعادة ←</p>
             </div>
-            <span class="next-lesson-arrow">→</span>
+            <span class="next-lesson-arrow">←</span>
         </a>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 Plateforme Éducative - Tous droits réservés</p>
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>
