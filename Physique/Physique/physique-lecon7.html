@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1Fj92o1BUfklPyG-PtlPt9MSFL0werqRZ/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/7C3AED/FFFFFF?text=Circuit+RLC+amorti+et+non+amorti" alt="Résumé du Circuit RLC amorti et non amorti">
-                <div class="resume-overlay">
-                    <h3>Amortissement RLC</h3>
-                    <p>Facteur de qualité, régimes apériodique, critique et pseudo-périodique.</p>
-                </div>
+               
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1Zh8-XTcCt2sH17P7nWiYfufs21PvDCk_/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,7 +68,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1HbG9wtxpJAmyHmyfRpdfsXEBYn-hMOjk/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -104,37 +102,201 @@
 
             <div class="plan-subsection">
                 <h3>📖 Contenu détaillé</h3>
-                <h4>1. Équation différentielle du circuit RLC série</h4>
-                <p>L'équation de maille s'écrit : L·(di/dt) + R·i + (1/C)·∫i·dt = 0. En posant <strong>α = R/(2L)</strong> (facteur d'amortissement) et <strong>ω₀ = 1/√(L·C)</strong> (pulsation propre non amortie), l'équation devient :</p>
-                <div class="plan-highlight">
-                    <strong>d²q/dt² + 2α·(dq/dt) + ω₀²·q = 0</strong>
-                </div>
 
-                <h4>2. Régime apériodique (α > ω₀)</h4>
-                <p>Si α > ω₀ (R suffisamment grand), les deux solutions de l'équation caractéristique sont réelles et négatives. La solution est :</p>
-                <p><strong>q(t) = A·e^(s₁·t) + B·e^(s₂·t)</strong></p>
-                <p>Le condensateur se décharge sans osciller : la tension décroît monotoniquement vers zéro. Ce régime est dit « apériodique » car il n'y a pas de retournement de signe de la tension.</p>
-
-                <h4>3. Régime critique (α = ω₀)</h4>
-                <p>Si α = ω₀ (R = 2·√(L/C)), les deux solutions sont égales et réelles : s = −α (racine double). La solution est :</p>
-                <p><strong>q(t) = (A + B·t)·e^(−α·t)</strong></p>
-                <p>Ce régime est la limite entre le comportement oscillant et non oscillant, correspondant à la décroissance la plus rapide possible sans oscillation.</p>
-
-                <h4>4. Régime pseudo-périodique (α < ω₀)</h4>
-                <p>Si α < ω₀ (R suffisamment petit), les solutions sont complexes conjuguées : s = −α ± j·ω_d, où <strong>ω_d = √(ω₀² − α²)</strong> est la pulsation des oscillations amorties. La solution est :</p>
-                <p><strong>q(t) = Q₀·e^(−α·t)·cos(ω_d·t + φ)</strong></p>
-                <p>La tension oscille autour de zéro avec une amplitude décroissant exponentiellement. La pseudo-période est <strong>T_d = 2π/ω_d ≈ T₀</strong> (pour α << ω₀).</p>
-
-                <h4>5. Facteur de qualité Q</h4>
-                <p>Le facteur de qualité <strong>Q = ω₀/(2α) = (1/R)·√(L/C)</strong> est un nombre sans dimension qui caractérise le degré d'amortissement :</p>
+                <h4>1. Introduction : du circuit LC au circuit RLC</h4>
+                <p>Le circuit LC idéal étudié en leçon 5 produit des oscillations qui persistent indéfiniment. Mais dans la réalité, aucun circuit n'est purement réactif : la résistance des fils, la résistance série des inductances (DCR), la résistance de fuite des condensateurs, et les pertes diélectriques dissipent inévitablement de l'énergie. Le circuit RLC — qui ajoute une résistance R au circuit LC — est donc le modèle réaliste d'un circuit oscillant.</p>
+                <p>Cette résistance a un effet profond : elle <strong>amortit les oscillations</strong>, qui finissent par disparaître. Selon la valeur relative de R par rapport aux autres paramètres (L et C), on observe trois régimes qualitativement différents :</p>
                 <ul>
-                    <li>Q << 1 : fort amortissement (régime apériodique)</li>
-                    <li>Q ≈ ½ : amortissement critique</li>
-                    <li>Q >> 1 : faible amortissement (oscillations nombreuses)</li>
+                    <li>Le <strong>régime apériodique</strong> : la décharge est monotone, sans oscillation</li>
+                    <li>Le <strong>régime critique</strong> : frontière entre les deux comportements, retour à zéro le plus rapide</li>
+                    <li>Le <strong>régime pseudo-périodique</strong> : oscillations d'amplitude décroissante</li>
+                </ul>
+                <p>Ces trois régimes se retrouvent dans presque tous les systèmes physiques oscillants : suspension de voiture, oscillateurs mécaniques, circuits électroniques, systèmes acoustiques. Comprendre le circuit RLC, c'est donc acquérir une grille de lecture universelle.</p>
+
+                <h4>2. Équation différentielle du circuit RLC série</h4>
+                <p>Considérons un circuit RLC série en régime libre (sans source après t = 0). L'équation de maille s'écrit :</p>
+                <div class="plan-highlight">
+                    <strong>u_R + u_L + u_C = 0</strong><br>
+                    <strong>R · i + L · (di/dt) + q/C = 0</strong>
+                </div>
+                <p>Avec i = dq/dt, on obtient l'équation différentielle du second ordre :</p>
+                <div class="plan-highlight">
+                    <strong>L · (d²q/dt²) + R · (dq/dt) + q/C = 0</strong>
+                </div>
+                <p>On divise par L pour mettre sous la forme canonique :</p>
+                <div class="plan-highlight">
+                    <strong>d²q/dt² + (R/L) · (dq/dt) + (1/(L·C)) · q = 0</strong>
+                </div>
+                <p>On définit deux paramètres fondamentaux :</p>
+                <ul>
+                    <li><strong>α = R/(2L)</strong> : <strong>facteur d'amortissement</strong> (en s⁻¹), qui caractérise la vitesse d'amortissement</li>
+                    <li><strong>ω₀ = 1/√(L·C)</strong> : <strong>pulsation propre non amortie</strong> (en rad/s), qui est la pulsation d'oscillation en l'absence d'amortissement (R = 0)</li>
+                </ul>
+                <p>L'équation canonique devient :</p>
+                <div class="plan-highlight">
+                    <strong>d²q/dt² + 2α · (dq/dt) + ω₀² · q = 0</strong>
+                </div>
+                <p>Cette équation est formellement identique à celle d'un <strong>oscillateur mécanique masse-ressort-amortisseur</strong> : m·ẍ + c·ẋ + k·x = 0, avec m ↔ L, c ↔ R, k ↔ 1/C. Cette analogie est fondamentale : tous les systèmes oscillants du second ordre (mécaniques, électriques, acoustiques, thermiques) obéissent à la même mathématique.</p>
+
+                <h4>3. Équation caractéristique et discriminant</h4>
+                <p>L'équation caractéristique associée est :</p>
+                <div class="plan-highlight">
+                    <strong>r² + 2α · r + ω₀² = 0</strong>
+                </div>
+                <p>Ses solutions (racines) sont :</p>
+                <div class="plan-highlight">
+                    <strong>r = −α ± √(α² − ω₀²)</strong>
+                </div>
+                <p>Le signe du discriminant Δ = α² − ω₀² détermine la nature des racines et donc le régime d'oscillation :</p>
+                <ul>
+                    <li><strong>Δ > 0 (α > ω₀) :</strong> deux racines réelles négatives → régime apériodique</li>
+                    <li><strong>Δ = 0 (α = ω₀) :</strong> une racine réelle double → régime critique</li>
+                    <li><strong>Δ < 0 (α < ω₀) :</strong> deux racines complexes conjuguées → régime pseudo-périodique</li>
+                </ul>
+                <p>La condition α = ω₀ donne la valeur critique de la résistance :</p>
+                <div class="plan-highlight">
+                    <strong>R_critique = 2·√(L/C) = 2·ω₀·L</strong>
+                </div>
+                <p>Pour R > R_critique, on est en régime apériodique ; pour R < R_critique, on est en régime pseudo-périodique. Le facteur de qualité Q = ω₀/(2α) = (1/R)·√(L/C) détermine la position relative :</p>
+                <ul>
+                    <li>Q > 1/2 : régime pseudo-périodique (α < ω₀)</li>
+                    <li>Q = 1/2 : régime critique (α = ω₀)</li>
+                    <li>Q < 1/2 : régime apériodique (α > ω₀)</li>
                 </ul>
 
-                <h4>6. Aspect énergétique et analogie mécanique</h4>
-                <p>L'énergie totale du circuit RLC dissipée est la somme de l'énergie stockée (C et L) et de l'énergie dissipée (R). Chaque cycle d'oscillation, l'énergie perdue par effet Joule est ΔE = E_stockée · (2π/Q). Le circuit RLC série est l'analogue direct d'un système masse-ressort-amortisseur : M ↔ L, K ↔ 1/C, amortisseur ↔ R.</p>
+                <h4>4. Régime apériodique (α > ω₀)</h4>
+                <p>Si α > ω₀, le discriminant est positif et les deux racines r₁ et r₂ sont réelles, négatives et distinctes :</p>
+                <div class="plan-highlight">
+                    <strong>r₁ = −α + √(α² − ω₀²)</strong><br>
+                    <strong>r₂ = −α − √(α² − ω₀²)</strong>
+                </div>
+                <p>La solution générale de l'équation différentielle est :</p>
+                <div class="plan-highlight">
+                    <strong>q(t) = A · e^(r₁·t) + B · e^(r₂·t)</strong>
+                </div>
+                <p>où A et B sont des constantes fixées par les conditions initiales. Comme r₁ et r₂ sont négatifs, q(t) décroît monotonement vers zéro sans osciller. Le système est dit <strong>sur-amorti</strong> ou <strong>apériodique</strong> : il retourne à l'équilibre sans jamais changer de signe.</p>
+                <p>Physiquement, ce régime correspond à un amortissement tellement fort que l'inertie du circuit est incapable de provoquer des dépassements. C'est le cas typique d'un circuit RLC avec une forte résistance (par exemple, une bobine de mauvaise qualité).</p>
+                <p>En termes d'énergie, toute l'énergie initialement stockée est dissipée par la résistance avant que les oscillations puissent s'établir. La décroissance est caractérisée par deux temps caractéristiques : τ₁ = −1/r₁ et τ₂ = −1/r₂, le plus court dominants pour t → ∞</p>
+
+                <h4>5. Régime critique (α = ω₀)</h4>
+                <p>Si α = ω₀, le discriminant est nul et les deux racines sont confondues : r = −α. La solution générale est alors :</p>
+                <div class="plan-highlight">
+                    <strong>q(t) = (A + B·t) · e^(−α·t)</strong>
+                </div>
+                <p>Ce régime est la <strong>frontière</strong> entre les comportements apériodique et pseudo-périodique. Il représente la décroissance <strong>la plus rapide possible</strong> sans oscillation. C'est un point de fonctionnement optimal pour les systèmes qui doivent revenir rapidement à l'équilibre sans dépassement (par exemple, la suspension d'une voiture, les ports série, les vannes de régulation).</p>
+                <p>En pratique, le régime critique est difficile à obtenir exactement car il nécessite un accord précis entre R, L et C. On s'en approche généralement par conception (en ajustant R à la valeur R_critique = 2·√(L/C)).</p>
+
+                <h4>6. Régime pseudo-périodique (α < ω₀)</h4>
+                <p>Si α < ω₀, le discriminant est négatif et les racines sont complexes conjuguées :</p>
+                <div class="plan-highlight">
+                    <strong>r = −α ± j·ω_d</strong>, avec <strong>ω_d = √(ω₀² − α²)</strong>
+                </div>
+                <p>La pulsation ω_d est appelée <strong>pulsation propre amortie</strong> ou pulsation des oscillations amorties. La solution est :</p>
+                <div class="plan-highlight">
+                    <strong>q(t) = Q₀ · e^(−α·t) · cos(ω_d·t + φ)</strong>
+                </div>
+                <p>Cette solution décrit des <strong>oscillations sinusoïdales d'amplitude décroissante</strong>. L'amplitude Q₀·e^(−α·t) décroît exponentiellement avec le temps, avec un temps caractéristique τ = 1/α = 2L/R (le système perd 63% de son amplitude en un temps τ, et 99.3% en 5τ). Les passages par zéro se font avec une pseudo-période :</p>
+                <div class="plan-highlight">
+                    <strong>T_d = 2π/ω_d = 2π/√(ω₀² − α²)</strong>
+                </div>
+                <p>Pour un faible amortissement (α << ω₀), on a T_d ≈ T₀ = 2π/ω₀. La pseudo-période est légèrement plus grande que la période propre non amortie.</p>
+                <p>Le <strong>décrément logarithmique</strong> δ est une mesure pratique de l'amortissement : il caractérise la décroissance de l'amplitude entre deux passages successifs par un extremum :</p>
+                <div class="plan-highlight">
+                    <strong>δ = α · T_d = ln(A_n / A_{n+1})</strong>
+                </div>
+                <p>où A_n et A_{n+1} sont les amplitudes de deux oscillations consécutives. On peut mesurer δ expérimentalement en comptant les oscillations et en relevant l'amplitude sur un oscilloscope. Le facteur de qualité est alors :</p>
+                <div class="plan-highlight">
+                    <strong>Q = π/δ</strong>
+                </div>
+
+                <h4>7. Le facteur de qualité Q</h4>
+                <p>Le facteur de qualité est défini par :</p>
+                <div class="plan-highlight">
+                    <strong>Q = ω₀/(2α) = (1/R) · √(L/C) = ω₀ · L / R</strong>
+                </div>
+                <p>Q est un nombre sans dimension qui caractérise de manière unifiée l'amortissement du circuit. Plus Q est grand, moins le système est amorti, et plus les oscillations persistent longtemps.</p>
+                <ul>
+                    <li><strong>Q < 1/2 :</strong> régime apériodique (fort amortissement)</li>
+                    <li><strong>Q = 1/2 :</strong> régime critique</li>
+                    <li><strong>Q > 1/2 :</strong> régime pseudo-périodique</li>
+                    <li><strong>Q >> 1 :</strong> oscillations très nombreuses, faible amortissement</li>
+                    <li><strong>Q = 10⁴ à 10⁶ :</strong> oscillateurs à quartz, extrêmement peu amortis</li>
+                </ul>
+                <p>En termes d'énergie, le facteur Q relie l'énergie stockée et l'énergie dissipée par cycle :</p>
+                <div class="plan-highlight">
+                    <strong>Q = 2π · E_stockée / E_dissipée_par_cycle</strong>
+                </div>
+                <p>Cette définition est générale : elle s'applique aussi bien aux circuits électriques, aux cavités résonnantes, qu'aux systèmes mécaniques ou acoustiques.</p>
+
+                <h4>8. Lien entre le régime temporel et le régime fréquentiel</h4>
+                <p>Le circuit RLC série possède un seul et même comportement, qu'on l'analyse dans le domaine temporel (réponse à un échelon) ou dans le domaine fréquentiel (réponse à une sinusoïde). Les deux descriptions sont reliées par la <strong>transformée de Fourier</strong>.</p>
+                <p>En particulier :</p>
+                <ul>
+                    <li>En <strong>temporel</strong> : la pseudo-période T_d = 2π/√(ω₀² − α²) et le temps d'amortissement τ = 1/α</li>
+                    <li>En <strong>fréquentiel</strong> : la fréquence de résonance ω₀ = 1/√(L·C) et la bande passante Δω = 2α = R/L</li>
+                </ul>
+                <p>Le facteur Q relie les deux :</p>
+                <div class="plan-highlight">
+                    <strong>Q = ω₀/(2α) = ω₀/Δω</strong>
+                </div>
+                <p>Un Q élevé correspond à la fois à des oscillations qui persistent longtemps (domaine temporel) et à un pic de résonance étroit (domaine fréquentiel). Cette dualité est exploitée dans les filtres et les oscillateurs de haute qualité (quartz, cavités micro-ondes, lasers).</p>
+
+                <h4>9. Décroissance énergétique</h4>
+                <p>L'énergie totale stockée dans le circuit (somme des énergies dans C et L) décroît exponentiellement :</p>
+                <div class="plan-highlight">
+                    <strong>E(t) = E(0) · e^(−2α·t)</strong>
+                </div>
+                <p>Le temps de demi-vie (au bout duquel l'énergie est divisée par 2) est :</p>
+                <div class="plan-highlight">
+                    <strong>t_1/2 = ln(2) / (2α) = τ · ln(2)/2 ≈ 0,347 · τ</strong>
+                </div>
+                <p>La puissance moyenne dissipée par la résistance est :</p>
+                <div class="plan-highlight">
+                    <strong>P_moy = dE/dt = −2α · E(t)</strong>
+                </div>
+                <p>Cette décroissance exponentielle est universelle pour tout système linéaire du second ordre peu amorti.</p>
+
+                <h4>10. Comparaison temporelle des trois régimes</h4>
+                <p>Pour un même circuit (L = 1 H, C = 1 µF, ω₀ ≈ 1000 rad/s) avec différentes valeurs de R :</p>
+                <ul>
+                    <li><strong>R = 2000 Ω (régime apériodique, α = 1000) :</strong> q(t) décroît lentement, sans osciller. Retour à zéro en quelques ms.</li>
+                    <li><strong>R = 2000 Ω (régime critique, R = 2·√(L/C) = 2000) :</strong> q(t) décroît plus rapidement qu'en apériodique, sans oscillation. C'est le retour le plus rapide.</li>
+                    <li><strong>R = 100 Ω (régime pseudo-périodique, Q = 10) :</strong> q(t) oscille plusieurs fois avant de s'amortir.</li>
+                    <li><strong>R = 1 Ω (régime fortement pseudo-périodique, Q = 1000) :</strong> q(t) oscille très longtemps, avec un amortissement très lent.</li>
+                </ul>
+
+                <h4>11. Analogie avec les systèmes mécaniques</h4>
+                <p>Le circuit RLC est l'analogue exact d'un système mécanique masse-ressort-amortisseur :</p>
+                <ul>
+                    <li><strong>Masse m (kg)</strong> ↔ Inductance L (H)</li>
+                    <li><strong>Raideur k (N/m)</strong> ↔ Inverse de la capacité 1/C (F⁻¹)</li>
+                    <li><strong>Amortissement c (N·s/m)</strong> ↔ Résistance R (Ω)</li>
+                    <li><strong>Position x (m)</strong> ↔ Charge q (C)</li>
+                    <li><strong>Vitesse v (m/s)</strong> ↔ Courant i (A)</li>
+                </ul>
+                <p>L'équation mécanique m·ẍ + c·ẋ + k·x = 0 devient l'équation électrique L·q̈ + R·q̇ + q/C = 0. Tous les comportements (régimes apériodique, critique, pseudo-périodique, facteur Q) se retrouvent à l'identique en mécanique. C'est pourquoi on parle souvent d'« inertie électrique » (L) et de « raideur électrique » (1/C).</p>
+                <p>Cette analogie permet d'utiliser les circuits RLC comme <strong>simulateurs électriques de systèmes mécaniques</strong>. C'est la base des simulateurs analogiques (résolution d'équations différentielles par des circuits) et des modèles réduits en génie civil (étude des vibrations d'un pont par un circuit équivalent).</p>
+
+                <h4>12. Mesure expérimentale de l'amortissement</h4>
+                <p>Plusieurs méthodes permettent de mesurer le facteur de qualité Q ou le décrément logarithmique δ d'un circuit RLC :</p>
+                <ul>
+                    <li><strong>Méthode temporelle :</strong> on excite le circuit par un échelon de tension et on observe la réponse libre à l'oscilloscope. On compte le nombre d'oscillations visibles et on mesure la décroissance d'amplitude.</li>
+                    <li><strong>Méthode de la bande passante :</strong> on alimente le circuit avec un GBF et on relève la courbe de résonance. On mesure f₀ et Δf, d'où Q = f₀/Δf.</li>
+                    <li><strong>Méthode du décrément :</strong> on mesure directement δ = ln(A_n/A_{n+1}) sur l'oscilloscope. Plus simple et plus précise que la première méthode.</li>
+                </ul>
+
+                <h4>13. Applications pratiques détaillées</h4>
+                <p>Le circuit RLC amorti/non amorti est présent partout :</p>
+                <ul>
+                    <li><strong>Oscillateurs à quartz :</strong> un cristal de quartz est l'équivalent électromécanique d'un circuit RLC avec un Q extrêmement élevé (10⁴ à 10⁶). Cette faible dissipation permet d'obtenir des fréquences très stables, utilisées dans toutes les horloges numériques, les microcontrôleurs, les téléphones, les GPS.</li>
+                    <li><strong>Circuits d'amortissement (snubbers) :</strong> dans les alimentations à découpage et les variateurs de vitesse, on ajoute des circuits RLC pour absorber les surtensions et les oscillations parasites, protégeant les composants.</li>
+                    <li><strong>Capteurs MEMS (MicroElectroMechanical Systems) :</strong> les accéléromètres et gyroscopes MEMS sont modélisés par des circuits RLC mécaniques. Le facteur de qualité détermine la bande passante et le bruit du capteur.</li>
+                    <li><strong>Suspensions de véhicules :</strong> les systèmes de suspension passifs et actifs sont modélisés par des systèmes masse-ressort-amortisseur, équivalents à un circuit RLC. Le réglage de l'amortissement (régime critique) est crucial pour le confort et la sécurité.</li>
+                    <li><strong>Instruments de musique :</strong> les cordes, les membranes, les colonnes d'air sont des oscillateurs mécaniques avec amortissement. Le facteur Q détermine la persistance du son (les instruments à cordes ont un Q élevé, les percussions un Q faible).</li>
+                    <li><strong>Filtres sélectifs :</strong> les filtres RLC du second ordre (Butterworth, Tchebychev, Bessel) sont des cas particuliers du circuit RLC avec différentes valeurs de Q.</li>
+                    <li><strong>Convertisseurs DC-DC résonnants :</strong> dans les alimentations modernes, on utilise la résonance du circuit LC pour minimiser les pertes de commutation (ZVS, ZCS).</li>
+                    <li><strong>Diathermie et IRM :</strong> en imagerie médicale, on utilise des antennes RLC accordées à la fréquence de Larmor des noyaux d'hydrogène (IRM) ou des tissus à chauffer (diathermie).</li>
+                </ul>
             </div>
 
             <div class="plan-subsection">
@@ -144,34 +306,43 @@
                     <li><strong>Régime apériodique :</strong> α > ω₀, q(t) = A·e^(s₁·t) + B·e^(s₂·t)</li>
                     <li><strong>Régime critique :</strong> α = ω₀, q(t) = (A + B·t)·e^(−α·t)</li>
                     <li><strong>Régime pseudo-périodique :</strong> α < ω₀, q(t) = Q₀·e^(−α·t)·cos(ω_d·t + φ)</li>
+                    <li><strong>Pulsation amortie :</strong> ω_d = √(ω₀² − α²)</li>
                     <li><strong>Pseudo-période :</strong> T_d = 2π/ω_d = 2π/√(ω₀² − α²)</li>
                     <li><strong>Facteur de qualité :</strong> Q = ω₀/(2α) = (1/R)·√(L/C)</li>
+                    <li><strong>Décrément logarithmique :</strong> δ = α·T_d, Q = π/δ</li>
+                    <li><strong>R_critique = 2·√(L/C) = 2·ω₀·L</strong> (frontière entre apériodique et pseudo-périodique)</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔧 Applications pratiques</h3>
                 <ul>
-                    <li><strong>Circuits d'amortissement</strong> : absorption des surtensions dans les systèmes électriques</li>
-                    <li><strong>Capteurs vibrants</strong> : les circuits RLC modélisent le comportement des accéléromètres MEMS</li>
-                    <li><strong>Oscillateurs à quartz</strong> : Q très élevé pour une stabilité de fréquence exceptionnelle</li>
-                    <li><strong>Filtres sélectifs</strong> : le facteur de qualité détermine la largeur de la bande passante</li>
+                    <li><strong>Circuits d'amortissement</strong> : absorption des surtensions dans les systèmes électriques (snubbers)</li>
+                    <li><strong>Capteurs vibrants MEMS</strong> : accéléromètres, gyroscopes — circuits RLC mécaniques équivalents</li>
+                    <li><strong>Oscillateurs à quartz</strong> : Q très élevé pour une stabilité de fréquence exceptionnelle (horloges, GPS)</li>
+                    <li><strong>Filtres sélectifs</strong> : Butterworth (Q = 0,707), Tchebychev (Q plus élevé), Bessel (Q ≈ 0,577)</li>
+                    <li><strong>Suspensions automobiles</strong> : réglage de l'amortissement pour le compromis confort/stabilité</li>
+                    <li><strong>Instruments de musique</strong> : cordes, membranes, colonnes d'air modélisés par des RLC mécaniques</li>
+                    <li><strong>Alimentations à résonance</strong> : LLC, ZVS pour minimiser les pertes de commutation</li>
+                    <li><strong>Simulateurs analogiques</strong> : résolution d'équations différentielles par des circuits RLC</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>✏️ Exercices suggérés</h3>
                 <ol>
-                    <li><strong>Exercice 1</strong> : Un circuit RLC avec L = 1 H, C = 1 µF et R variable. Déterminer la valeur de R pour avoir le régime critique.</li>
-                    <li><strong>Exercice 2</strong> : Pour R = 100 Ω, L = 1 H, C = 1 µF, calculer α, ω₀, ω_d, Q et la pseudo-période. Identifier le régime.</li>
-                    <li><strong>Exercice 3</strong> : Tracer q(t) pour les trois régimes (apériodique, critique, pseudo-périodique) sur le même graphique.</li>
-                    <li><strong>Exercice 4</strong> : Un circuit RLC a Q = 50 et fc = 1 MHz. Quelle est la bande passante ? Après combien de périodes l'amplitude est-elle divisée par e ?</li>
-                    <li><strong>Exercice 5</strong> : Un circuit RLC avec R = 50 Ω, L = 5 mH, C = 10 nF. Calculer ω₀, α, Q et déterminer le type de régime.</li>
+                    <li><strong>Exercice 1 (régime critique) :</strong> Un circuit RLC avec L = 1 H, C = 1 µF et R variable. Déterminer la valeur de R pour avoir le régime critique. Calculer R_critique et vérifier la condition α = ω₀.</li>
+                    <li><strong>Exercice 2 (régime pseudo-périodique) :</strong> Pour R = 100 Ω, L = 1 H, C = 1 µF, calculer : (a) α, (b) ω₀, (c) ω_d, (d) Q, (e) la pseudo-période T_d, (f) identifier le régime. Tracer q(t) sur quelques pseudo-périodes.</li>
+                    <li><strong>Exercice 3 (comparaison) :</strong> Tracer q(t) pour les trois régimes (apériodique avec R = 2000 Ω, critique avec R = 2000 Ω, pseudo-périodique avec R = 100 Ω) sur le même graphique. Discuter les différences.</li>
+                    <li><strong>Exercice 4 (fréquence vs amortissement) :</strong> Un circuit RLC a Q = 50 et fc = 1 MHz. Quelle est la bande passante ? Après combien de périodes l'amplitude est-elle divisée par e ? Par 10 ?</li>
+                    <li><strong>Exercice 5 (analyse complète) :</strong> Un circuit RLC avec R = 50 Ω, L = 5 mH, C = 10 nF. Calculer : (a) ω₀, (b) α, (c) Q, (d) déterminer le type de régime, (e) tracer la réponse à un échelon, (f) calculer la fréquence de résonance et la bande passante.</li>
+                    <li><strong>Exercice 6 (décrément logarithmique) :</strong> On observe à l'oscilloscope que l'amplitude d'un circuit RLC décroît d'un facteur 3 en 5 oscillations. Calculer : (a) le décrément logarithmique δ, (b) le facteur de qualité Q, (c) le temps d'amortissement τ.</li>
+                    <li><strong>Exercice 7 (analogies) :</strong> Pour le circuit RLC avec L = 100 mH, C = 10 µF, R = 10 Ω, calculer les paramètres mécaniques équivalents d'un système masse-ressort-amortisseur : masse m, raideur k, amortissement c. Vérifier que la fréquence propre est la même.</li>
                 </ol>
             </div>
 
             <div class="plan-summary">
-                <strong>📌 Résumé :</strong> Le circuit RLC série présente trois régimes distincts selon la valeur du facteur d'amortissement α = R/(2L) par rapport à ω₀ = 1/√(L·C). Le régime apériodique (α > ω₀) correspond à un retour monotone sans oscillation. Le régime critique (α = ω₀) est la limite de retour sans oscillation le plus rapide. Le régime pseudo-périodique (α < ω₀) présente des oscillations d'amplitude décroissante avec la pseudo-période T_d = 2π/√(ω₀² − α²). Le facteur de qualité Q = (1/R)·√(L/C) caractérise l'amortissement : plus Q est grand, plus le système oscille longtemps. L'analogie avec le système masse-ressort-amortisseur permet de comprendre les oscillations mécaniques par analogie électrique.
+                <strong>📌 Résumé :</strong> Le circuit RLC série présente trois régimes distincts selon la valeur du facteur d'amortissement α = R/(2L) par rapport à ω₀ = 1/√(L·C). Le régime apériodique (α > ω₀) correspond à un retour monotone sans oscillation. Le régime critique (α = ω₀) est la limite de retour sans oscillation le plus rapide. Le régime pseudo-périodique (α < ω₀) présente des oscillations d'amplitude décroissante avec la pseudo-période T_d = 2π/√(ω₀² − α²) ≈ 2π/ω₀ pour un faible amortissement. Le facteur de qualité Q = (1/R)·√(L/C) = ω₀/(2α) caractérise l'amortissement : plus Q est grand, plus le système oscille longtemps et plus la bande passante est étroite. L'analogie avec le système masse-ressort-amortisseur permet d'unifier la compréhension des oscillations mécaniques et électriques, et d'utiliser les circuits RLC pour modéliser tous les systèmes oscillants du second ordre (suspensions, instruments de musique, capteurs MEMS, oscillateurs à quartz).
             </div>
         </section>
 

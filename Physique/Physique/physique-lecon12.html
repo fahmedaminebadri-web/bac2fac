@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les ondes mécaniques progressives - Physique</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .cours-detaille {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 35px 45px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            line-height: 1.9;
+            color: #1f2937;
+            font-size: 1.05em;
+        }
+        .cours-detaille h2 {
+            color: #4C1D95;
+            border-left: 6px solid #7C3AED;
+            padding-left: 18px;
+            margin-top: 40px;
+            font-size: 1.6em;
+        }
+        .cours-detaille h3 {
+            color: #6D28D9;
+            margin-top: 28px;
+            font-size: 1.25em;
+        }
+        .cours-detaille h4 {
+            color: #5B21B6;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .cours-detaille .definition {
+            background: #EDE9FE;
+            border-left: 5px solid #7C3AED;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .remarque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .exemple {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .formule {
+            background: #1F2937;
+            color: #FBBF24;
+            padding: 14px 22px;
+            margin: 14px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+        .cours-detaille ul, .cours-detaille ol {
+            margin-left: 28px;
+        }
+        .cours-detaille li {
+            margin: 10px 0;
+        }
+        .cours-titre {
+            text-align: center;
+            color: #3B0764;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 4px solid #7C3AED;
+        }
+        .cours-detaille p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -16,7 +96,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +126,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1vVnNSi47vZGQzz3a_n2dt0R3U-lOx4bh/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +137,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/312E81/FFFFFF?text=Ondes+mecaniques+progressives" alt="Résumé des ondes mécaniques progressives">
-                <div class="resume-overlay">
-                    <h3>Ondes mécaniques progressives</h3>
-                    <p>Propagation d'une perturbation dans un milieu matériel sans transport de matière.</p>
-                </div>
+                
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1mXJoE0cXti5YowA47JPt6XMs-fQw7BR_/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,9 +148,216 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1Yqyw80my_o-oYZnuo_ZjnafAU03-EpQ7/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
+            </div>
+        </section>
+
+        <!-- COURS DÉTAILLÉ -->
+        <section class="cours-detaille">
+            <h2 class="cours-titre">📖 Cours détaillé — Leçon 12 : Les ondes mécaniques progressives</h2>
+
+            <h2>1. Introduction et phénomène général</h2>
+            <p>Depuis l'Antiquité, les philosophes et les savants ont observé que certaines perturbations peuvent se propager d'un point à un autre d'un milieu matériel. Quand on jette un caillou dans une eau calme, on voit des rides s'éloigner du point d'impact. Quand on frappe un tambour, le son se propage dans toute la salle. Quand on touche l'extrémité d'un ressort, une compression se déplace le long du ressort.</p>
+
+            <p>Tous ces phénomènes ont un point commun : <strong>une perturbation locale se propage dans un milieu matériel</strong>. La physique moderne regroupe tous ces phénomènes sous le terme d'<strong>ondes mécaniques progressives</strong>. Le mot "progressive" insiste sur le fait que la perturbation <strong>progresse</strong>, c'est-à-dire se déplace d'un endroit à un autre au cours du temps.</p>
+
+            <h2>2. Définition précise</h2>
+            <div class="definition">
+                Une <strong>onde mécanique progressive</strong> est le phénomène de propagation d'une perturbation dans un milieu matériel élastique, <strong>sans transport de matière</strong>, mais avec <strong>transport d'énergie</strong>.
+            </div>
+
+            <p>Cette définition mérite d'être analysée en détail :</p>
+            <ul>
+                <li><strong>"Propagation d'une perturbation"</strong> : il faut qu'il y ait une source qui crée une modification locale de l'état du milieu (un déplacement, une variation de pression, une déformation…). Cette perturbation est ensuite transmise de proche en proche aux points voisins.</li>
+                <li><strong>"Milieu matériel élastique"</strong> : le milieu doit être constitué de matière (solide, liquide ou gaz) et posséder une certaine élasticité, c'est-à-dire une capacité à se déformer puis à revenir à sa forme initiale. C'est cette élasticité qui permet la transmission de la perturbation.</li>
+                <li><strong>"Sans transport de matière"</strong> : les points du milieu ne suivent pas l'onde de manière durable. Ils effectuent un mouvement local (une oscillation ou une vibration) puis reviennent à leur position d'équilibre.</li>
+                <li><strong>"Avec transport d'énergie"</strong> : bien que la matière ne se déplace pas de manière définitive, l'onde transporte de l'énergie d'un point à un autre. Par exemple, l'énergie sonore se déplace depuis la source jusqu'à l'oreille de l'auditeur.</li>
+            </ul>
+
+            <h2>3. Les trois conditions nécessaires à la propagation</h2>
+            <p>Pour qu'une onde mécanique progressive puisse exister, trois conditions doivent être remplies simultanément :</p>
+
+            <h3>3.1. Existence d'un milieu matériel</h3>
+            <p>Contrairement à la lumière, les ondes mécaniques ont <strong>absolument besoin d'un support matériel</strong> pour se propager. Ce support peut être un solide (comme une corde ou une barre d'acier), un liquide (comme l'eau) ou un gaz (comme l'air). Sans matière, il n'y a pas de milieu pour transmettre la perturbation, donc pas d'onde mécanique possible.</p>
+
+            <div class="remarque">
+                <strong>Preuve historique :</strong> Au XIXᵉ siècle, on a placé une cloche sous une cloche à vide (cloche de verre dans laquelle on a retiré l'air). On a alors constaté que la cloche ne produisait plus aucun son, bien qu'on la voie vibrer. Cela démontre que le son ne peut pas se propager dans le vide. Les astronautes, dans l'espace, ne peuvent donc pas communiquer en criant, mais ils le font par radio (ondes électromagnétiques, qui se propagent dans le vide).
+            </div>
+
+            <h3>3.2. Existence d'une source de perturbation</h3>
+            <p>Il faut une source d'énergie qui crée la perturbation initiale. Cette source peut être :</p>
+            <ul>
+                <li>Un coup frappé sur un objet (cloche, tambour, table).</li>
+                <li>Une corde qui vibre (guitare, violon).</li>
+                <li>Une membrane qui oscille (haut-parleur, microphone).</li>
+                <li>Un séisme (source naturelle d'ondes sismiques).</li>
+                <li>Le vent qui souffle sur l'eau (vagues).</li>
+            </ul>
+
+            <h3>3.3. Existence d'interactions entre les constituants du milieu</h3>
+            <p>Les différents points du milieu doivent être en interaction les uns avec les autres, par exemple par des forces de rappel élastiques. C'est ce couplage qui permet à un point de transmettre sa vibration à ses voisins, qui la transmettent à leur tour à leurs propres voisins, et ainsi de suite. C'est ce mécanisme de <strong>propagation de proche en proche</strong> qui explique le déplacement de l'onde.</p>
+
+            <h2>4. Propriétés fondamentales des ondes mécaniques</h2>
+
+            <h3>4.1. Absence de transport de matière</h3>
+            <p>C'est la propriété la plus remarquable des ondes mécaniques. Quand une onde traverse un milieu, chaque point du milieu se met à osciller, mais il ne suit pas l'onde dans son déplacement. Une fois que l'onde est passée, le point revient à sa position d'équilibre.</p>
+
+            <div class="exemple">
+                <strong>Exemple concret :</strong> Si on place un bouchon de liège à la surface d'une eau initialement calme, et qu'on jette un caillou à quelques mètres, on voit le bouchon se balancer verticalement (de haut en bas) au passage des vagues, mais il ne se déplace pas avec elles. Il reste à la même position horizontale. Cela prouve que la vague a transporté de l'énergie et de la déformation, mais pas de matière.
+            </div>
+
+            <h3>4.2. Transport d'énergie</h3>
+            <p>L'onde transporte de l'énergie mécanique d'un point à un autre. Cette énergie est d'autant plus grande que l'amplitude de l'onde est grande. C'est cette énergie qui est, par exemple, responsable de l'érosion des côtes par les vagues, ou de la casse d'un verre soumis à une onde sonore de forte intensité.</p>
+
+            <h3>4.3. Propagation à vitesse finie</h3>
+            <p>L'onde ne se propage pas instantanément. Elle met un certain temps pour parcourir une distance donnée. La vitesse de propagation est appelée <strong>célérité</strong>, notée v, et s'exprime en mètres par seconde (m/s).</p>
+
+            <div class="exemple">
+                <strong>Quelques valeurs typiques de célérité :</strong>
+                <ul>
+                    <li>Son dans l'air (à 20°C) : v ≈ 340 m/s.</li>
+                    <li>Son dans l'eau : v ≈ 1500 m/s.</li>
+                    <li>Son dans l'acier : v ≈ 5000 m/s.</li>
+                    <li>Ondes sismiques P : v ≈ 6000 à 13000 m/s.</li>
+                    <li>Ondes sismiques S : v ≈ 3500 à 7000 m/s.</li>
+                </ul>
+            </div>
+
+            <h3>4.4. La célérité dépend du milieu</h3>
+            <p>La célérité d'une onde mécanique est une <strong>propriété du milieu</strong>, et non de la source. Elle dépend de paramètres physiques du milieu comme :</p>
+            <ul>
+                <li>L'<strong>élasticité</strong> du milieu (capacité à se déformer puis à revenir à sa forme initiale).</li>
+                <li>La <strong>masse volumique</strong> du milieu (masse par unité de volume).</li>
+                <li>La <strong>température</strong> (qui modifie l'élasticité et la masse volumique).</li>
+            </ul>
+            <p>Ainsi, le son se propage plus vite dans un solide que dans un liquide, et plus vite dans un liquide que dans un gaz. Dans un milieu donné, plus la température est élevée, plus le son se propage vite.</p>
+
+            <h2>5. Les deux grands types d'ondes mécaniques</h2>
+            <p>Les ondes mécaniques progressives se divisent en deux grandes catégories, selon la direction de la perturbation par rapport à la direction de propagation :</p>
+
+            <h3>5.1. Les ondes transversales</h3>
+            <p>La perturbation est <strong>perpendiculaire</strong> à la direction de propagation. C'est le cas de l'onde sur une corde, des vagues à la surface de l'eau, et des ondes sismiques S. Ces ondes ne peuvent pas se propager à l'intérieur des fluides (liquides, gaz), car ceux-ci ne supportent pas les contraintes de cisaillement.</p>
+
+            <h3>5.2. Les ondes longitudinales</h3>
+            <p>La perturbation est <strong>parallèle</strong> à la direction de propagation. C'est le cas du son dans l'air, des ondes dans un ressort, et des ondes sismiques P. Ces ondes peuvent se propager dans tous les milieux matériels : solides, liquides et gaz.</p>
+
+            <h3>5.3. Les ondes mixtes</h3>
+            <p>Certaines ondes comportent à la fois une composante transversale et une composante longitudinale. C'est le cas des <strong>vagues à la surface de l'eau</strong> : les particules d'eau décrivent de petits cercles, ce qui correspond à un mouvement à la fois vertical (transversal) et horizontal (longitudinal). Le résultat global est donc une onde mixte.</p>
+
+            <h2>6. Dimensions de l'espace de propagation</h2>
+            <p>Selon l'espace dans lequel l'onde se propage, on distingue :</p>
+
+            <h3>6.1. Ondes à une dimension (1D)</h3>
+            <p>L'onde se propage le long d'une ligne. C'est le cas de l'onde sur une corde vibrante : la perturbation se déplace d'un bout à l'autre de la corde, mais ne s'étend pas dans tout l'espace.</p>
+
+            <h3>6.2. Ondes à deux dimensions (2D)</h3>
+            <p>L'onde se propage sur une surface. C'est le cas des vagues à la surface de l'eau : la perturbation s'étend dans toutes les directions du plan horizontal, formant des rides circulaires qui s'agrandissent. Les ondes sismiques de surface (ondes de Love et ondes de Rayleigh) se propagent aussi en deux dimensions le long de la surface terrestre.</p>
+
+            <h3>6.3. Ondes à trois dimensions (3D)</h3>
+            <p>L'onde se propage dans tout l'espace. C'est le cas du son dans l'air : à partir de la source sonore, le son se propage dans toutes les directions de l'espace, formant des "sphères" concentriques de pression qui s'agrandissent au cours du temps. La lumière, bien qu'étant une onde électromagnétique (non mécanique), se propage aussi en trois dimensions.</p>
+
+            <h2>7. Célérité et retard temporel</h2>
+
+            <h3>7.1. Définition de la célérité</h3>
+            <p>La célérité v d'une onde est la vitesse à laquelle la perturbation se déplace dans le milieu. Elle s'exprime en mètres par seconde (m/s). Si l'onde parcourt une distance d en une durée t, alors :</p>
+            <div class="formule">v = d / t</div>
+
+            <h3>7.2. Notion de retard temporel</h3>
+            <p>Quand une source S émet une perturbation à l'instant t = 0, cette perturbation ne touche pas tous les points du milieu en même temps. Un point M situé à la distance d de la source commence à bouger seulement à un instant ultérieur, qu'on appelle le <strong>retard temporel</strong> et qu'on note τ (tau) :</p>
+            <div class="formule">τ = d / v</div>
+
+            <p>Ce retard est d'autant plus grand que le point M est éloigné de la source, et d'autant plus petit que la célérité est grande dans le milieu considéré.</p>
+
+            <div class="exemple">
+                <strong>Exemple 1 :</strong> Un coup de tonnerre est produit à 1,5 km d'un observateur. Le son se propage à 340 m/s. Le retard avec lequel l'observateur entend le tonnerre est :<br>
+                τ = 1500 / 340 ≈ 4,4 s.
+            </div>
+
+            <div class="exemple">
+                <strong>Exemple 2 :</strong> Lors d'un feu d'artifice, on voit d'abord la lumière de l'explosion, puis on entend le bruit quelques secondes plus tard. Cela est dû au fait que la lumière se propage à la vitesse c = 3 × 10⁸ m/s, donc de manière quasi-instantanée, alors que le son se propage à seulement 340 m/s, donc avec un retard notable.<br>
+                Pour une explosion à 500 m : retard du son = 500 / 340 ≈ 1,5 s. La lumière, elle, nous parvient avec un retard de seulement 500 / 3×10⁸ ≈ 1,7 µs, ce qui est imperceptible.
+            </div>
+
+            <h2>8. Le double rôle du milieu : inertie et élasticité</h2>
+            <p>Pour qu'une onde mécanique se propage, le milieu doit posséder deux propriétés complémentaires :</p>
+
+            <h3>8.1. L'inertie</h3>
+            <p>Les points du milieu ont une masse, et donc une inertie. Cette inertie tend à retarder leur mise en mouvement, ce qui se traduit par une célérité d'autant plus faible que la masse volumique du milieu est grande.</p>
+
+            <h3>8.2. L'élasticité</h3>
+            <p>Le milieu oppose une "force de rappel" qui ramène les points déplacés à leur position d'équilibre. Plus cette force de rappel est grande, plus la perturbation se transmet rapidement aux points voisins, ce qui augmente la célérité.</p>
+
+            <p>Ainsi, la célérité dépend du rapport entre ces deux grandeurs : élasticité / inertie. En notant E le module d'élasticité et ρ la masse volumique, on peut écrire (pour certains types d'ondes) :</p>
+            <div class="formule">v = √(E / ρ)</div>
+
+            <h2>9. Exemples détaillés d'ondes mécaniques progressives</h2>
+
+            <h3>9.1. Le son</h3>
+            <p>Le son est l'exemple le plus familier d'onde mécanique progressive. Il s'agit d'une <strong>onde longitudinale</strong> qui se propage dans un milieu matériel (gaz, liquide ou solide) grâce à la vibration des particules du milieu. La source sonore (voix, instrument, haut-parleur) crée des variations de pression dans l'air, qui se propagent de proche en proche jusqu'à l'oreille de l'auditeur.</p>
+
+            <h3>9.2. Les vagues</h3>
+            <p>Les vagues à la surface de l'eau sont des ondes mécaniques <strong>mixtes</strong> (à la fois transversales et longitudinales). Elles se propagent en deux dimensions à la surface des océans, des lacs et des rivières. Le vent qui souffle sur l'eau est la source la plus fréquente de vagues.</p>
+
+            <h3>9.3. Les ondes sismiques</h3>
+            <p>Lors d'un tremblement de terre, l'énergie libérée au foyer se propage dans la Terre sous forme d'ondes sismiques de plusieurs types :</p>
+            <ul>
+                <li>Les <strong>ondes P</strong> (primaires) : ondes longitudinales, les plus rapides, qui se propagent dans les solides et les liquides.</li>
+                <li>Les <strong>ondes S</strong> (secondaires) : ondes transversales, un peu plus lentes, qui ne se propagent que dans les solides.</li>
+                <li>Les <strong>ondes de Love</strong> et les <strong>ondes de Rayleigh</strong> : ondes de surface, qui se propagent en deux dimensions le long de la surface terrestre.</li>
+            </ul>
+
+            <h3>9.4. Les ultrasons en médecine</h3>
+            <p>En imagerie médicale, on utilise des ondes ultrasonores (sons de fréquence supérieure à 20 kHz, inaudibles pour l'oreille humaine) pour visualiser l'intérieur du corps humain. Une sonde émet des ultrasons qui se propagent dans les tissus, se réfléchissent sur les interfaces entre les différents organes, et reviennent à la sonde. Le temps de parcours permet de calculer la profondeur des structures réfléchissantes.</p>
+
+            <h2>10. Résumé des notions essentielles</h2>
+            <div class="remarque">
+                <strong>Les points à absolument retenir :</strong>
+                <ul>
+                    <li>Une onde mécanique progressive est la propagation d'une <strong>perturbation</strong> dans un <strong>milieu matériel</strong>, sans transport de matière, mais avec transport d'énergie.</li>
+                    <li>Trois conditions : milieu matériel, source de perturbation, interactions entre points du milieu.</li>
+                    <li>Deux types : <strong>transversale</strong> (perpendiculaire) et <strong>longitudinale</strong> (parallèle).</li>
+                    <li>Propagation possible en 1D, 2D ou 3D.</li>
+                    <li>La célérité v dépend du milieu, pas de la source.</li>
+                    <li>Le retard temporel est : <strong>τ = d / v</strong>.</li>
+                    <li>La célérité augmente avec l'élasticité du milieu et diminue avec sa masse volumique.</li>
+                    <li>Une onde mécanique <strong>ne se propage pas dans le vide</strong>.</li>
+                </ul>
+            </div>
+
+            <h2>11. Exercices d'application</h2>
+
+            <h3>Exercice 1</h3>
+            <p>Un pêcheur voit la foudre tomber à 3 km de son bateau. Il entend le tonnerre 9 secondes plus tard. Calculez la vitesse du son dans l'air dans ces conditions.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                On néglige le temps de parcours de la lumière (quasi-instantané). On a d = 3 km = 3000 m et t = 9 s.<br>
+                v = d/t = 3000/9 ≈ 333 m/s.
+            </div>
+
+            <h3>Exercice 2</h3>
+            <p>Une onde mécanique se propage dans une barre d'acier avec une célérité v = 5000 m/s. Une perturbation est créée à une extrémité. Au bout de combien de temps atteindra-t-elle l'autre extrémité, située à 12 m ?</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                τ = d/v = 12 / 5000 = 0,0024 s = 2,4 ms.
+            </div>
+
+            <h3>Exercice 3</h3>
+            <p>Une corde est tendue entre deux murs distants de 20 m. On agite l'extrémité gauche verticalement, et la perturbation met 0,2 s pour atteindre l'extrémité droite. Calculez la célérité de l'onde sur cette corde.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                v = d/t = 20 / 0,2 = 100 m/s.
+            </div>
+
+            <h3>Exercice 4</h3>
+            <p>Un sonar de sous-marin émet un signal sonore vers le fond de l'océan. Le signal se propage dans l'eau à v = 1500 m/s et il est réfléchi par le fond. L'écho est reçu 0,4 s après l'émission. Calculez la profondeur de l'océan à cet endroit.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                Le son parcourt deux fois la distance (aller-retour) en 0,4 s. La distance parcourue est donc :<br>
+                d_totale = v × t = 1500 × 0,4 = 600 m.<br>
+                La profondeur est la moitié : h = 600 / 2 = 300 m.
             </div>
         </section>
 

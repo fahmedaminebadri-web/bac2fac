@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1FHd4c5KXkrTAo_h37BFPKJSdNavXaAn8/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/C2410C/FFFFFF?text=Filtre+passe-bas+actif" alt="Résumé du filtre passe-bas actif">
-                <div class="resume-overlay">
-                    <h3>Filtre actif à AmplOp</h3>
-                    <p>Filtre passe-bas actif avec amplificateur opérationnel et gain.</p>
-                </div>
+                
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1dpws9vvbmiCeKHpl8fQ57wqBku2TH3td/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,7 +68,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1EFL5PqfHjqvkqzhDqS0T_S22-iNqs4o2/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -104,71 +102,209 @@
 
             <div class="plan-subsection">
                 <h3>📖 Contenu détaillé</h3>
-                <h4>1. Introduction aux filtres actifs</h4>
-                <p>Contrairement aux filtres passifs (RC, RL, RLC) qui ne peuvent qu'atténuer certaines bandes de fréquences, les filtres actifs intègrent des composants actifs (transistors, amplificateurs opérationnels) capables d'amplifier le signal. Avantages : gain en amplitude possible, possibilité de cascader plusieurs cellules pour obtenir des pentes plus raides, isolation entre étages, absence de pertes d'insertion en bande passante.</p>
 
-                <h4>2. Filtre actif du premier ordre : montage inverseur</h4>
-                <p>Le filtre passe-bas actif le plus simple utilise un AOP en montage inverseur. La fonction de transfert est :</p>
+                <h4>1. Introduction : pourquoi des filtres actifs ?</h4>
+                <p>Le filtre passif RC étudié en leçon 3 présente une limitation majeure : son gain en bande passante est unitaire (0 dB). Cela signifie qu'il ne peut pas amplifier le signal, seulement l'atténuer. Or, dans de nombreuses applications (conditionnement de capteurs, audio, instrumentation), on a besoin à la fois de <strong>filtrer</strong> et d'<strong>amplifier</strong> le signal. Le filtre actif résout ce problème en associant un réseau passif RC à un composant actif (transistor, AOP) qui fournit du gain en puissance.</p>
+                <p>Les filtres actifs offrent plusieurs avantages décisifs par rapport aux filtres passifs :</p>
+                <ul>
+                    <li><strong>Gain en amplitude configurable</strong> : peut être supérieur, égal ou inférieur à 0 dB selon les besoins</li>
+                    <li><strong>Isolation entre étages</strong> : impédance d'entrée très élevée (≈ 10¹² Ω pour un AOP) et impédance de sortie très faible (≈ quelques ohms), ce qui permet de cascader plusieurs étages sans interaction</li>
+                    <li><strong>Possibilité d'intégrer plusieurs fonctions</strong> : amplification + filtrage + décalage de niveau en un seul circuit</li>
+                    <li><strong>Conception modulaire</strong> : le réseau passif fixe la fréquence de coupure, le gain est ajusté indépendamment</li>
+                </ul>
+                <p>Les principaux inconvénients sont :</p>
+                <ul>
+                    <li><strong>Nécessité d'une alimentation</strong> (symétrique ±V ou asymétrique)</li>
+                    <li><strong>Bande passante limitée</strong> par le produit gain-bande (GBW) de l'AOP</li>
+                    <li><strong>Bruit et distorsion</strong> introduits par les composants actifs</li>
+                    <li><strong>Coût</strong> plus élevé que le filtre passif</li>
+                </ul>
+
+                <h4>2. L'amplificateur opérationnel idéal</h4>
+                <p>L'amplificateur opérationnel (AOP, ou « op-amp » en anglais) est un circuit intégré fondamental en électronique analogique. Le premier AOP monolithique, le μA709, a été commercialisé par Fairchild en 1965, suivi par le célèbre μA741 en 1968, encore utilisé aujourd'hui. Un AOP comporte deux entrées (inverseuse « − » et non-inverseuse « + »), une sortie, et deux broches d'alimentation.</p>
+                <p>Dans le cadre de cette leçon, on considère l'AOP <strong>idéal</strong>, caractérisé par :</p>
+                <ul>
+                    <li><strong>Gain en tension en boucle ouverte A → ∞</strong> (typiquement 10⁵ à 10⁶ en pratique)</li>
+                    <li><strong>Impédance d'entrée Z_e → ∞</strong> (≈ 10¹² Ω en pratique)</li>
+                    <li><strong>Impédance de sortie Z_s → 0</strong> (≈ 10 à 100 Ω en pratique)</li>
+                    <li><strong>Bande passante infinie</strong> (en réalité, GBW ≈ 1 MHz à 1 GHz selon l'AOP)</li>
+                    <li><strong>Tension de décalage (offset) nulle</strong></li>
+                    <li><strong>Courants de polarisation nuls</strong> aux entrées</li>
+                </ul>
+                <p>En <strong>régime linéaire</strong> (boucle ouverte négative), deux propriétés essentielles découlent du gain infini :</p>
+                <ul>
+                    <li><strong>i+ = i− = 0</strong> (impédance d'entrée infinie : aucun courant ne pénètre dans l'AOP)</li>
+                    <li><strong>V+ = V−</strong> (masses virtuelles : les deux entrées sont au même potentiel)</li>
+                </ul>
+                <p>Ces deux propriétés permettent d'analyser très simplement les montages à AOP en écrivant les lois de Kirchhoff au nœud de l'entrée inverseuse.</p>
+
+                <h4>3. Filtre actif du premier ordre : montage inverseur</h4>
+                <p>Le filtre passe-bas actif le plus simple combine un réseau RC d'entrée et une résistance de contre-réaction autour d'un AOP en montage inverseur. Le circuit comprend :</p>
+                <ul>
+                    <li><strong>Z₁</strong> : impédance d'entrée entre la source V_e et l'entrée inverseuse (ici : R₁ en série avec C₁)</li>
+                    <li><strong>Z₂</strong> : impédance de contre-réaction entre la sortie V_s et l'entrée inverseuse (ici : R₂)</li>
+                </ul>
+                <p>L'impédance d'entrée est Z₁ = R₁ + 1/(jωC₁) = (1 + jωR₁C₁)/(jωC₁). L'impédance de contre-réaction est Z₂ = R₂.</p>
+                <p>En appliquant le théorème de Millman (ou en utilisant la propriété de masse virtuelle) à l'entrée inverseuse, on obtient la fonction de transfert classique du montage inverseur :</p>
                 <div class="plan-highlight">
-                    <strong>H(jω) = −(R₂/R₁) · (1 / (1 + jω·R₁·C₁))</strong><br>
-                    <strong>Gain DC :</strong> Av = −R₂/R₁ (configurable)<br>
-                    <strong>Fréquence de coupure :</strong> fc = 1/(2π·R₁·C₁)
+                    <strong>H(jω) = V_s / V_e = −Z₂ / Z₁ = −R₂ / (R₁ + 1/(jωC₁))</strong>
+                </div>
+                <p>En multipliant numérateur et dénominateur par jωC₁ :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = −(jωR₂C₁) / (1 + jωR₁C₁)</strong>
+                </div>
+                <p>Cette expression peut être réécrite sous la forme canonique d'un passe-bas inverseur :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = −(R₂/R₁) · (jωR₁C₁) / (1 + jωR₁C₁) = −A_v · (jω/ωc) / (1 + jω/ωc)</strong>
+                </div>
+                <p>où :</p>
+                <ul>
+                    <li><strong>A_v = R₂/R₁</strong> : gain en tension en boucle fermée (négatif car inverseur)</li>
+                    <li><strong>ωc = 1/(R₁C₁)</strong> : pulsation de coupure, identique au filtre passif RC</li>
+                </ul>
+                <p>On peut réécrire la fonction de transfert en faisant apparaître la constante de temps τ = R₁C₁ :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = −A_v / (1 + 1/(jωR₁C₁)) = −A_v / (1 + 1/(jωτ))</strong>
                 </div>
 
-                <h4>3. Caractéristiques du filtre actif</h4>
-                <p>La fréquence de coupure est définie par fc = 1/(2π·R₁·C₁), exactement comme pour le filtre RC passif. Cependant, le gain en bande passante (pour ω << ωc) est égal à Av = −R₂/R₁, qui peut être supérieur à 1 (amplification) ou inférieur à 1 (atténuation).</p>
+                <h4>4. Comportement en fréquence</h4>
+                <p>L'analyse du module et de la phase donne :</p>
+                <div class="plan-highlight">
+                    <strong>|H(jω)| = (R₂/R₁) / √(1 + (ω/ωc)²)</strong><br>
+                    <strong>φ(ω) = 180° − arctan(ω/ωc)</strong> (le « − » de l'inversion ajoute 180°)
+                </div>
+                <p>Comportement asymptotique :</p>
+                <ul>
+                    <li>Pour <strong>ω << ωc</strong> : |H| ≈ R₂/R₁, φ ≈ 180° (signal inversé)</li>
+                    <li>Pour <strong>ω = ωc</strong> : |H| = (R₂/R₁)/√2, soit A_v − 3 dB, φ = 180° − 45° = 135°</li>
+                    <li>Pour <strong>ω >> ωc</strong> : |H| ≈ (R₂/R₁)·(ωc/ω), qui décroît en 1/f, soit −20 dB/décade, φ → 180° − 90° = 90°</li>
+                </ul>
+                <p>On remarque que <strong>le gain en bande passante peut être choisi librement</strong> en ajustant le rapport R₂/R₁, sans modifier la fréquence de coupure (qui ne dépend que de R₁·C₁). C'est là tout l'intérêt du filtre actif : on peut avoir un gain de 10 (20 dB) en bande passante tout en conservant une fréquence de coupure de 1 kHz, par exemple.</p>
 
-                <h4>4. Diagramme de Bode du filtre actif</h4>
-                <p>Le diagramme de Bode d'un filtre actif du premier ordre se compose de deux asymptotes : une horizontale au gain Av (gain DC) pour ω << ωc, et une droite de pente −20 dB/décade pour ω >> ωc. En phase, on observe une variation de 180° (dû à l'inversion) pour ω << ωc, à 135° pour ω = ωc, et à 90° pour ω >> ωc.</p>
+                <h4>5. Le diagramme de Bode</h4>
+                <p>Le diagramme de Bode en amplitude d'un filtre passe-bas actif inverseur est constitué de :</p>
+                <ul>
+                    <li>Une asymptote horizontale au gain A_v (en dB) pour ω << ωc</li>
+                    <li>Une droite de pente −20 dB/décade pour ω >> ωc</li>
+                    <li>Un « coin » arrondi à la fréquence de coupure, avec un écart maximal de 3 dB entre la courbe réelle et l'asymptote</li>
+                </ul>
+                <p>Le diagramme de Bode en phase passe de 180° (inversion) à basses fréquences à 90° à hautes fréquences, en passant par 135° à ωc. La phase est toujours 180° plus haute que pour le filtre passif (à cause de l'inversion).</p>
 
-                <h4>5. Comparaison avec le filtre passif</h4>
+                <h4>6. Montage non-inverseur : alternative sans inversion</h4>
+                <p>Le montage non-inverseur du filtre passe-bas actif est souvent préféré car il ne crée pas d'inversion de signe (la phase de la sortie suit celle de l'entrée, modulo le déphasage du filtre). Le circuit est composé de :</p>
+                <ul>
+                    <li>Un diviseur de tension RC à l'entrée non-inverseuse : V+ = V_e · (1/(jωC₁))/(R₁ + 1/(jωC₁)) = V_e / (1 + jωR₁C₁)</li>
+                    <li>Un réseau de contre-réaction entre V+ et V− formé de R₂ et R₃</li>
+    </ul>
+    <p>La fonction de transfert du montage non-inverseur est :</p>
+    <div class="plan-highlight">
+        <strong>H(jω) = (1 + R₂/R₃) / (1 + jωR₁C₁) = A_v⁺ / (1 + jω/ωc)</strong>
+    </div>
+    <p>où A_v⁺ = 1 + R₂/R₃ ≥ 1 est le gain en tension. La fréquence de coupure est toujours ωc = 1/(R₁C₁). L'avantage principal est l'absence d'inversion de phase (gain positif) et une impédance d'entrée encore plus élevée.</p>
+
+                <h4>7. Comparaison détaillé filtre passif vs filtre actif</h4>
                 <table class="plan-table">
-                    <tr><th>Critère</th><th>Filtre passif RC</th><th>Filtre actif</th></tr>
-                    <tr><td>Gain en amplitude</td><td>≤ 0 dB</td><td>Configurable (supérieur ou inférieur à 0 dB)</td></tr>
-                    <tr><td>Drive de charge</td><td>Limité par R</td><td>Oui (impédance de sortie faible de l'AOP)</td></tr>
-                    <tr><td>Bande passante</td><td>Non limitée</td><td>Limitée par le produit gain-bande de l'AOP</td></tr>
-                    <tr><td>Alimentation</td><td>Non nécessaire</td><td>Oui (symétrique ou asymétrique)</td></tr>
+                    <tr><th>Critère</th><th>Filtre passif RC</th><th>Filtre actif (AOP)</th></tr>
+                    <tr><td>Gain en amplitude</td><td>≤ 0 dB (toujours)</td><td>Configurable (typiquement 0 à 40 dB)</td></tr>
+                    <tr><td>Drive de charge</td><td>Limité par R (atténuation)</td><td>Oui (impédance de sortie faible ≈ quelques Ω)</td></tr>
+                    <tr><td>Isolement entrée/sortie</td><td>Non (interaction entre étages)</td><td>Excellent (Z_e élevée, Z_s faible)</td></tr>
+                    <tr><td>Cascade d'étages</td><td>Problématique (charge l'étage précédent)</td><td>Facile (chaque étage est indépendant)</td></tr>
+                    <tr><td>Bande passante</td><td>Pas de limite théorique</td><td>Limitée par le GBW de l'AOP</td></tr>
+                    <tr><td>Alimentation</td><td>Non nécessaire</td><td>Oui (symétrique ±V ou asymétrique +V)</td></tr>
+                    <tr><td>Coût</td><td>Très faible (2 composants)</td><td>Moyen (AOP + composants passifs)</td></tr>
+                    <tr><td>Bruit et distorsion</td><td>Nuls (composants idéaux)</td><td>Présents (bruit de l'AOP, distorsion harmonique)</td></tr>
+                    <tr><td>Stabilité</td><td>Inconditionnellement stable</td><td>Peut osciller (compensation nécessaire)</td></tr>
                 </table>
 
-                <h4>6. Applications des filtres actifs passe-bas</h4>
-                <p>Conditionnement de signaux (amplification + filtrage de capteurs), filtrage anti-aliasing actif avec gain, systèmes audio (égalisation), instrumentation (rejection du bruit), filtrage avant CAN avec adaptation du niveau du signal.</p>
+                <h4>8. Limitation par le produit gain-bande (GBW)</h4>
+                <p>Un paramètre crucial des AOP réels est le <strong>produit gain-bande</strong> (GBW, Gain-BandWidth Product). C'est la fréquence à laquelle le gain en boucle ouverte de l'AOP tombe à 1. Pour un AOP typique comme le LM741, GBW ≈ 1 MHz. Pour des AOP plus rapides comme le TL082, GBW ≈ 3 MHz, et pour des AOP à large bande comme le OPA627, GBW ≈ 16 MHz.</p>
+                <p>La règle pratique est la suivante : la fréquence de coupure du filtre actif fc doit être <strong>au moins 10 fois inférieure</strong> au rapport GBW/A_v, où A_v est le gain en boucle fermée. Cela garantit que l'AOP fonctionne en régime linéaire avec un gain de boucle ouvert suffisant.</p>
+                <div class="plan-highlight">
+                    <strong>fc_max ≈ GBW / (10 · A_v)</strong>
+                </div>
+                <p>Par exemple, avec un LM741 (GBW = 1 MHz) et un gain de 10, fc_max ≈ 10 kHz. Pour des fréquences plus élevées, il faut utiliser un AOP plus rapide.</p>
+
+                <h4>9. Filtres actifs d'ordre supérieur (Butterworth, Tchebychev, Bessel)</h4>
+                <p>Pour des pentes plus raides que −20 dB/décade, on cascade plusieurs filtres actifs du premier ordre avec isolation parfaite (grâce à l'AOP). Les filtres d'ordre N atteignent une pente de −N·20 dB/décade. Plusieurs familles de filtres existent, optimisées selon différents critères :</p>
+                <ul>
+                    <li><strong>Filtre de Butterworth :</strong> réponse en amplitude plate en bande passante (pas d'ondulation), transition progressive vers la bande atténuée. Compromis classique pour la plupart des applications.</li>
+                    <li><strong>Filtre de Tchebychev :</strong> ondulations en bande passante, mais transition plus raide. Utilisé quand on veut une forte atténuation à une fréquence précise.</li>
+                    <li><strong>Filtre de Bessel :</strong> phase linéaire (délai de groupe constant), meilleure préservation de la forme des signaux. Idéal pour les signaux impulsionnels (vidéo, audio de qualité).</li>
+                </ul>
+                <p>Les filtres d'ordre supérieur peuvent être synthétisés en cascadant des cellules de Sallen-Key ou des structures à variables d'état (state-variable filters).</p>
+
+                <h4>10. Topologie Sallen-Key pour un filtre passe-bas du second ordre</h4>
+                <p>La cellule de Sallen-Key est un filtre actif très populaire, utilisant un seul AOP. Sa fonction de transfert est :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = K / (1 + jω(1/ωc) + (jω/ωc)²/Q + ...)</strong>
+    </div>
+    <p>Le facteur K est le gain, ωc la fréquence de coupure, et Q le facteur de qualité qui détermine l'amortissement (Q = 0,707 pour Butterworth). La cellule Sallen-Key est facile à calculer et à mettre en œuvre, ce qui en fait l'une des topologies les plus utilisées en électronique analogique.</p>
+
+                <h4>11. Critères de choix des composants</h4>
+                <p>Le dimensionnement d'un filtre actif doit prendre en compte plusieurs contraintes pratiques :</p>
+                <ul>
+                    <li><strong>Valeurs normalisées :</strong> choisir R et C dans la série E12 ou E24 (résistances : 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82) pour faciliter l'approvisionnement</li>
+                    <li><strong>Impédance de source :</strong> R₁ doit être suffisamment grande pour ne pas charger la source, mais pas trop pour éviter le bruit thermique (4·k·T·R) et les courants de fuite de l'AOP</li>
+                    <li><strong>Tension d'offset :</strong> les courants de polarisation de l'AOP créent une tension de décalage. Pour la minimiser, on utilise des AOP à entrée FET (TL082, OPA627) et des résistances équilibrées</li>
+                    <li><strong>Slew-rate :</strong> la vitesse de balayage de l'AOP (en V/µs) doit être supérieure à 2π·fc·V_out_max pour éviter la distorsion des signaux à forte amplitude</li>
+                    <li><strong>Stabilité thermique :</strong> les condensateurs céramique (C0G/NP0) sont plus stables que les condensateurs X7R ou Y5V. Les condensateurs film (polyester, polystyrène) offrent une excellente stabilité</li>
+                </ul>
+
+                <h4>12. Applications pratiques détaillées</h4>
+                <p>Les filtres actifs passe-bas sont présents dans pratiquement tous les domaines :</p>
+                <ul>
+                    <li><strong>Conditionnement de capteurs :</strong> un capteur de pression (jauge de contrainte) délivre un signal de l'ordre du millivolt, noyé dans le bruit. Un filtre passe-bas actif avec gain 100 à 1000 amplifie le signal utile et élimine le bruit HF.</li>
+                    <li><strong>Préamplificateurs audio :</strong> dans les chaînes Hi-Fi et les microphones, le filtre passe-bas actif limite la bande passante à 20 kHz (fréquence maximale audible) tout en amplifiant le signal du microphone (typiquement 40-60 dB de gain).</li>
+                    <li><strong>Systèmes d'acquisition de données :</strong> avant un CAN, le filtre anti-aliasing actif offre une pente plus raide que le filtre passif et adapte le niveau du signal à la plage d'entrée du CAN (typiquement 0-5 V).</li>
+                    <li><strong>Égaliseurs audio :</strong> les filtres actifs passe-bas à fréquence variable sont utilisés dans les tables de mixage pour atténuer les hautes fréquences d'une voie (correcteur de tonalité).</li>
+                    <li><strong>Synthétiseurs analogiques :</strong> les filtres actifs (notamment le filtre « Moog ladder » à transistors) façonnent le timbre des sons en atténuant les harmoniques hautes.</li>
+                    <li><strong>Systèmes de contrôle industriels :</strong> filtrage des signaux de capteurs de position, de température, de pression, avec amplification et isolation galvanique.</li>
+                    <li><strong>Modems et lignes de transmission :</strong> filtrage de la bande utile avant modulation et après démodulation.</li>
+                    <li><strong>Biomédical :</strong> extraction de signaux physiologiques (ECG, EEG) de faible amplitude (mV ou µV) avec filtrage et amplification.</li>
+                </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔑 Concepts clés à retenir</h3>
                 <ul>
-                    <li><strong>Fonction de transfert :</strong> H(jω) = Av / (1 + j(ω/ωc)) avec Av = −R₂/R₁ et ωc = 1/(R₁·C₁)</li>
-                    <li><strong>Gain en bande passante</strong> configurable (différent de 0 dB)</li>
+                    <li><strong>Fonction de transfert :</strong> H(jω) = Av / (1 + j(ω/ωc)) avec Av = −R₂/R₁ (inverseur) ou Av = 1 + R₂/R₃ (non-inverseur)</li>
+                    <li><strong>Fréquence de coupure ωc = 1/(R₁C₁)</strong>, identique au filtre passif</li>
+                    <li><strong>Gain en bande passante</strong> configurable par le rapport des résistances</li>
                     <li><strong>Pente d'atténuation :</strong> −20 dB/décade (premier ordre)</li>
-                    <li><strong>Fréquence de coupure :</strong> fc = 1/(2π·R₁·C₁)</li>
-                    <li><strong>Déphasage :</strong> 180° − arctan(ω/ωc)</li>
-                    <li><strong>Filtre actif vs passif :</strong> gain amplifiable, drive de charge, nécessite alimentation</li>
+                    <li><strong>Déphasage :</strong> 180° − arctan(ω/ωc) (inverseur) ou −arctan(ω/ωc) (non-inverseur)</li>
+                    <li><strong>Filtre actif vs passif :</strong> gain amplifiable, drive de charge, isolation, nécessite alimentation</li>
+                    <li><strong>Limitation GBW :</strong> fc_max ≈ GBW/(10·Av)</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔧 Applications pratiques</h3>
                 <ul>
-                    <li><strong>Préamplificateurs audio</strong> : filtrage des basses fréquence parasites et amplification du signal</li>
+                    <li><strong>Préamplificateurs audio</strong> : filtrage des basses fréquences parasites et amplification du signal</li>
                     <li><strong>Capteurs de pression</strong> : amplification du signal issu du pont de Wheatstone et filtrage du bruit</li>
                     <li><strong>Systèmes de contrôle</strong> : filtrage des signaux de commande pour éliminer les bruits HF</li>
                     <li><strong>Convertisseurs CAN</strong> : filtrage anti-aliasing avec gain pour adapter le niveau du signal</li>
+                    <li><strong>Biomédical</strong> : ECG, EEG, EMG avec amplification et filtrage de signaux faibles</li>
+                    <li><strong>Égaliseurs audio</strong> : correcteurs de tonalité dans les consoles de mixage</li>
+                    <li><strong>Synthétiseurs</strong> : filtres de timbre pour façonner les sons</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>✏️ Exercices suggérés</h3>
                 <ol>
-                    <li><strong>Exercice 1</strong> : Concevoir un filtre passe-bas actif inverseur avec fc = 5 kHz et un gain de 10 (20 dB). Choisir R₁, R₂ et C₁.</li>
-                    <li><strong>Exercice 2</strong> : Pour le montage avec R₁ = 10 kΩ, R₂ = 47 kΩ, C₁ = 1 nF, calculer le gain DC, fc et tracer le diagramme de Bode approximatif.</li>
-                    <li><strong>Exercice 3</strong> : Un filtre actif a un gain DC de 6 dB et fc = 1 kHz. Quel est le gain à 5 kHz ? À 10 kHz ?</li>
-                    <li><strong>Exercice 4</strong> : Comparer les avantages et inconvénients d'un filtre actif du premier ordre par rapport à un filtre passif RC.</li>
-                    <li><strong>Exercice 5</strong> : Pourquoi utilise-t-on une rétroaction négative dans un filtre actif à AOP ?</li>
+                    <li><strong>Exercice 1 (dimensionnement) :</strong> Concevoir un filtre passe-bas actif inverseur avec fc = 5 kHz et un gain de 10 (20 dB). Choisir R₁, R₂ et C₁ dans la série E12. Vérifier le gain et la fréquence de coupure.</li>
+                    <li><strong>Exercice 2 (analyse) :</strong> Pour le montage avec R₁ = 10 kΩ, R₂ = 47 kΩ, C₁ = 1 nF, calculer : (a) le gain DC en dB, (b) fc, (c) le gain et la phase à 100 Hz, 5 kHz et 50 kHz.</li>
+                    <li><strong>Exercice 3 (atténuation) :</strong> Un filtre actif a un gain DC de 6 dB et fc = 1 kHz. Quel est le gain à 5 kHz ? À 10 kHz ? En déduire l'atténuation par décade.</li>
+                    <li><strong>Exercice 4 (comparaison) :</strong> Comparer les avantages et inconvénients d'un filtre actif du premier ordre par rapport à un filtre passif RC dans l'application : « amplification d'un signal de microphone 1 mV vers 100 mV avec élimination du bruit HF au-dessus de 10 kHz ».</li>
+                    <li><strong>Exercice 5 (stabilité) :</strong> Un filtre actif inverseur a un gain DC de 100 (40 dB) et fc = 100 Hz. Avec un AOP GBW = 1 MHz, vérifier que l'AOP fonctionne correctement à fc. Quel est le fc_max acceptable ?</li>
+                    <li><strong>Exercice 6 (non-inverseur) :</strong> Reprendre l'exercice 1 avec un montage non-inverseur. Comparer les deux topologies en termes de bruit, impédance d'entrée et simplicité.</li>
+                    <li><strong>Exercice 7 (GBW) :</strong> Pour un filtre actif avec A_v = 20 et fc = 50 kHz, quel GBW minimum l'AOP doit-il avoir pour fonctionner correctement ? Choisir un AOP du commerce.</li>
                 </ol>
             </div>
 
             <div class="plan-summary">
-                <strong>📌 Résumé :</strong> Le filtre passe-bas actif combine un réseau RC avec un amplificateur opérationnel en montage inverseur pour obtenir une fonction de transfert H(jω) = Av/(1 + j(ω/ωc)). Le gain en bande passante Av = −R₂/R₁ est configurable, permettant l'amplification ou l'atténuation. La fréquence de coupure fc = 1/(2π·R₁·C₁) est définie par le réseau RC. Le diagramme de Bode présente deux asymptotes (plate puis −20 dB/décade) et un déphasage variant de 180° à 90°. Les filtres actifs offrent des performances supérieures aux filtres passifs en termes de gain et de capacité de drive de charge, mais nécessitent une alimentation.
+                <strong>📌 Résumé :</strong> Le filtre passe-bas actif combine un réseau RC avec un amplificateur opérationnel en montage inverseur (ou non-inverseur) pour obtenir une fonction de transfert H(jω) = A_v / (1 + j(ω/ωc)). Le gain en bande passante A_v = −R₂/R₁ (inverseur) ou A_v = 1 + R₂/R₃ (non-inverseur) est configurable, permettant l'amplification ou l'atténuation. La fréquence de coupure fc = 1/(2π·R₁·C₁) est définie par le réseau RC, indépendamment du gain. Le diagramme de Bode présente deux asymptotes (plate à A_v puis −20 dB/décade) et un déphasage variant de 180° (inverseur) à 90° à hautes fréquences. Les filtres actifs offrent des performances supérieures aux filtres passifs en termes de gain, d'isolation entre étages et de capacité de drive de charge, mais nécessitent une alimentation et sont limités en bande passante par le produit gain-bande (GBW) de l'AOP.
             </div>
         </section>
 

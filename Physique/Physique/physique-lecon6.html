@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1QKDhGkORXFLgrF4szggWxp8r67zcxhsa/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,8 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/9333EA/FFFFFF?text=Circuit+RLC+force" alt="Résumé du Circuit RLC forcé">
-                <div class="resume-overlay">
-                    <h3>Circuit RLC forcé</h3>
-                    <p>Régime sinusoïdal forcé, impédance et résonance électrique.</p>
-                </div>
-                            <br><br>
-                <a href="" download>
+                     <br><br>
+                <a href="https://drive.google.com/file/d/1ByMMFbW_okEMQU7kjCUeF9tnh4iEg2vM/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,7 +67,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1qCdA7whJtTSTHqq_AWpOfF_q5aysQeEm/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -104,78 +101,215 @@
 
             <div class="plan-subsection">
                 <h3>📖 Contenu détaillé</h3>
-                <h4>1. Présentation du circuit RLC série forcé</h4>
-                <p>Un circuit RLC série est alimenté par une tension sinusoïdale ve(t) = V̂·cos(ω·t). En notation complexe, l'impédance du circuit est :</p>
-                <div class="plan-highlight">
-                    <strong>Z(ω) = R + j(ω·L − 1/(ω·C))</strong><br>
-                    <strong>Module :</strong> |Z| = √(R² + (ω·L − 1/(ω·C))²)<br>
-                    <strong>Phase :</strong> tan(φ) = (ω·L − 1/(ω·C))/R
-                </div>
 
-                <h4>2. Réponse en fréquence et résonance</h4>
-                <p>Le courant dans le circuit est I = Ve/|Z|. La résonance se produit lorsque <strong>ω·L = 1/(ω·C)</strong>, soit <strong>ω₀ = 1/√(L·C)</strong>. À cette fréquence :</p>
+                <h4>1. Introduction au régime sinusoïdal forcé</h4>
+                <p>On parle de <strong>régime sinusoïdal forcé</strong> lorsqu'un circuit linéaire est alimenté par une source sinusoïdale de pulsation ω imposée. Après un certain temps transitoire (≈ 5τ, où τ = 2L/R est la constante de temps du circuit), le circuit atteint un <strong>régime permanent</strong> dans lequel toutes les tensions et courants sont sinusoïdaux à la même pulsation ω que la source, mais avec des amplitudes et des phases différentes.</p>
+                <p>Le régime sinusoïdal forcé est d'une importance capitale en électronique et en électrotechnique car :</p>
                 <ul>
-                    <li>L'impédance est <strong>minimale et égale à R</strong></li>
-                    <li>Le courant est <strong>maximal et en phase</strong> avec la tension d'entrée (φ = 0)</li>
+                    <li>Le <strong>réseau électrique</strong> distribue une tension sinusoïdale 50 Hz (Europe) ou 60 Hz (Amérique du Nord)</li>
+                    <li>Les <strong>signaux d'information</strong> (audio, radio, vidéo) sont sinusoïdaux ou peuvent être décomposés en sommes de sinusoïdes (séries de Fourier)</li>
+                    <li>L'analyse en fréquence (transformée de Fourier) repose sur la réponse du circuit à des sinusoïdes</li>
+                </ul>
+                <p>L'outil mathématique privilégié est l'<strong>impédance complexe</strong>, qui généralise la loi d'Ohm aux régimes variables. Pour chaque composant :</p>
+                <ul>
+                    <li>Résistance : <strong>Z_R = R</strong> (réelle)</li>
+                    <li>Bobine : <strong>Z_L = jωL</strong> (imaginaire pure positive)</li>
+                    <li>Condensateur : <strong>Z_C = 1/(jωC) = −j/(ωC)</strong> (imaginaire pure négative)</li>
                 </ul>
 
-                <h4>3. Résonance en amplitude</h4>
-                <p>À la résonance, le courant I₀ = Ve/R est maximal. Les tensions aux bornes de la bobine et du condensateur peuvent être bien supérieures à la tension d'entrée, bien que leur somme vectorielle soit nulle.</p>
+                <h4>2. Impédance complexe du circuit RLC série</h4>
+                <p>Considérons un circuit RLC série alimenté par une source de tension sinusoïdale <strong>v_e(t) = V̂ · cos(ωt + φ_e)</strong>. En notation complexe (phaseur), la tension est <strong>V_e = V̂ · e^(j(ωt+φ_e))</strong> (on garde la partie réelle). L'impédance complexe totale du circuit est la somme des impédances de chaque élément :</p>
                 <div class="plan-highlight">
-                    <strong>Facteur de surtension :</strong> Q = (ω₀·L)/R = 1/(ω₀·R·C) = (1/R)·√(L/C)<br>
-                    <strong>Tensions à la résonance :</strong> VL = VC = Q·Ve
+                    <strong>Z(ω) = R + j(ωL − 1/(ωC))</strong>
+                </div>
+                <p>Cette impédance dépend de la fréquence. On distingue :</p>
+                <ul>
+                    <li>La <strong>partie réelle</strong> R (résistance, constante)</li>
+                    <li>La <strong>partie imaginaire</strong> X(ω) = ωL − 1/(ωC), appelée <strong>réactance</strong> du circuit</li>
+                </ul>
+                <p>La réactance X combine les contributions de la bobine (positive, inductive) et du condensateur (négative, capacitive). Elle s'annule à la résonance, et domine le comportement du circuit aux basses et hautes fréquences.</p>
+                <p>Le module et la phase de l'impédance sont :</p>
+                <div class="plan-highlight">
+                    <strong>|Z(ω)| = √(R² + (ωL − 1/(ωC))²)</strong><br>
+                    <strong>φ_Z(ω) = arctan((ωL − 1/(ωC))/R)</strong>
                 </div>
 
-                <h4>4. Diagramme d'impédance et de phase</h4>
-                <p>Pour ω << ω₀, le comportement est capacitif (Z → ∞, φ → −90°). Pour ω >> ω₀, le comportement est inductif (Z → ∞, φ → +90°). À ω₀, φ = 0.</p>
+                <h4>3. Courant dans le circuit RLC série</h4>
+                <p>En appliquant la loi d'Ohm généralisée, le courant dans le circuit est :</p>
+                <div class="plan-highlight">
+                    <strong>I(ω) = V_e / Z(ω)</strong>
+                </div>
+                <p>Le module du courant est :</p>
+                <div class="plan-highlight">
+                    <strong>|I(ω)| = V̂ / |Z(ω)| = V̂ / √(R² + (ωL − 1/(ωC))²)</strong>
+                </div>
+                <p>Le courant est maximal quand |Z| est minimal, c'est-à-dire quand la réactance est nulle. Cela se produit à la <strong>fréquence de résonance</strong>.</p>
 
-                <h4>5. Bande passante et facteur de qualité</h4>
-                <p>La bande passante est définie par les deux fréquences de coupure ω₁ et ω₂ telles que |Z| = √2·R, c'est-à-dire que le courant vaut I₀/√2.</p>
+                <h4>4. La résonance électrique : définition et propriétés</h4>
+                <p>La résonance se produit lorsque la réactance du circuit est nulle, c'est-à-dire lorsque les contributions inductive et capacitive se compensent exactement :</p>
+                <div class="plan-highlight">
+                    <strong>ωL = 1/(ωC) ⇒ ω₀ = 1/√(L·C)</strong>
+                </div>
+                <p>La fréquence de résonance f₀ = 1/(2π√(L·C)) est la <strong>fréquence propre</strong> du circuit LC (identique à celle de la leçon 5). À la résonance :</p>
                 <ul>
-                    <li><strong>Largeur de bande passante :</strong> Δω = ω₂ − ω₁ = R/L</li>
-                    <li><strong>Facteur de qualité :</strong> Q = ω₀/Δω = (1/R)·√(L/C)</li>
+                    <li>L'impédance est purement réelle et minimale : <strong>Z(ω₀) = R</strong></li>
+                    <li>Le courant est maximal : <strong>I₀ = V̂/R</strong> (en phase avec la tension d'entrée)</li>
+                    <li>Le déphasage tension-courant est nul : <strong>φ(ω₀) = 0</strong></li>
                 </ul>
-                <p>Un Q élevé signifie une bande passante étroite (oscillations très marquées) ; un Q faible signifie une bande passante large.</p>
 
-                <h4>6. Applications de la résonance</h4>
-                <p>Accord des радио (sélection d'une station), fours à induction, circuits d'allumage, filtres sélectifs pour éliminer une fréquence précise tout en laissant passer les autres.</p>
+                <h4>5. Comportement hors résonance</h4>
+                <p>Le comportement de l'impédance change qualitativement selon la fréquence :</p>
+                <ul>
+                    <li><strong>ω << ω₀ (basses fréquences) :</strong> |Z_C| = 1/(ωC) >> |Z_L| = ωL. Le condensateur domine. L'impédance est grande, capacitive (X < 0). Le courant est faible et <strong>en avance</strong> sur la tension (φ_Z < 0). À la limite ω → 0, |Z| → ∞</li>
+                    <li><strong>ω = ω₀ (résonance) :</strong> |Z| = R (minimum). Le courant est maximal et en phase avec la tension.</li>
+                    <li><strong>ω >> ω₀ (hautes fréquences) :</strong> |Z_L| = ωL >> |Z_C| = 1/(ωC). La bobine domine. L'impédance est grande, inductive (X > 0). Le courant est faible et <strong>en retard</strong> sur la tension (φ_Z > 0). À la limite ω → ∞</li>
+                </ul>
+                <p>Le circuit RLC série se comporte donc comme un <strong>filtre passe-bande</strong> très sélectif centré sur ω₀, dont la bande passante dépend de R (détaillé en leçon 8).</p>
+
+                <h4>6. Facteur de surtension (facteur de qualité Q)</h4>
+                <p>À la résonance, bien que l'impédance totale soit égale à R, les tensions aux bornes de L et de C peuvent être bien supérieures à la tension d'entrée. C'est le phénomène de <strong>surtension</strong> :</p>
+                <div class="plan-highlight">
+                    <strong>V_L(ω₀) = I₀ · ω₀L = (V̂/R) · ω₀L = V̂ · (ω₀L/R)</strong><br>
+                    <strong>V_C(ω₀) = I₀ / (ω₀C) = (V̂/R) / (ω₀C) = V̂ · (1/(ω₀RC))</strong><br>
+                    <strong>Or ω₀L = 1/(ω₀C) = √(L/C), donc :</strong><br>
+                    <strong>V_L(ω₀) = V_C(ω₀) = V̂ · √(L/C)/R = V̂ · Q</strong>
+                </div>
+                <p>On définit le <strong>facteur de qualité</strong> (ou facteur de surtension) :</p>
+                <div class="plan-highlight">
+                    <strong>Q = ω₀L/R = 1/(ω₀RC) = (1/R) · √(L/C)</strong>
+                </div>
+                <p>Le facteur Q est un nombre sans dimension qui caractérise l'acuité de la résonance. Pour Q = 100, les tensions aux bornes de L et C valent 100 fois la tension d'entrée, bien que leur somme vectorielle soit nulle (elles sont en opposition de phase). Cette propriété est exploitée dans les circuits d'allumage automobile et les alimentations à résonance.</p>
+                <p>On note aussi que la largeur de bande passante est inversement proportionnelle à Q :</p>
+                <div class="plan-highlight">
+                    <strong>Δω = ω₀/Q = R/L</strong>
+                </div>
+                <p>Plus Q est grand, plus la résonance est aiguë (bande étroite), et plus la sélectivité est élevée.</p>
+
+                <h4>7. Diagramme d'impédance (diagramme de Fresnel)</h4>
+                <p>Une représentation géométrique très utile est le <strong>diagramme d'impédance</strong> (ou diagramme de Fresnel). On place les impédances vectoriellement dans le plan complexe :</p>
+                <ul>
+                    <li>Z_R = R sur l'axe réel positif</li>
+                    <li>Z_L = jωL sur l'axe imaginaire positif (vecteur vertical)</li>
+                    <li>Z_C = −j/(ωC) sur l'axe imaginaire négatif (vecteur vertical descendant)</li>
+                </ul>
+                <p>L'impédance totale Z = R + j(ωL − 1/(ωC)) est la somme vectorielle. Sa longueur représente |Z|, et son angle par rapport à l'axe réel est φ_Z. À la résonance, les deux vecteurs Z_L et Z_C s'annulent, et Z est purement réel (de valeur R).</p>
+
+                <h4>8. Courbes de résonance</h4>
+                <p>Les courbes de résonance représentent l'évolution de l'amplitude et de la phase du courant en fonction de la fréquence. On trace typiquement |I(ω)| et φ_I(ω) = −φ_Z(ω).</p>
+                <ul>
+                    <li>La courbe de |I(ω)| présente un pic aigu à ω = ω₀, de hauteur I₀ = V̂/R. La largeur du pic à mi-hauteur (à I₀/√2) est Δω = R/L = ω₀/Q.</li>
+                    <li>La courbe de phase passe de +90° (très basses fréquences, courant en avance de 90° sur la tension) à −90° (très hautes fréquences, courant en retard de 90°), en passant par 0° à la résonance.</li>
+                </ul>
+                <p>La forme des courbes de résonance dépend fortement du facteur Q :</p>
+                <ul>
+                    <li><strong>Q >> 1 :</strong> pic très aigu, transition rapide (filtre très sélectif)</li>
+                    <li><strong>Q ≈ 1 :</strong> pic modéré (filtre passe-bande classique)</li>
+                    <li><strong>Q << 1 :</strong> pic large, peu de sélectivité (système fortement amorti)</li>
+                </ul>
+
+                <h4>9. Bande passante à -3 dB</h4>
+                <p>La <strong>bande passante</strong> est définie par les deux fréquences de coupure ω₁ et ω₂ telles que le courant vaut I₀/√2 (c'est-à-dire une atténuation de −3 dB par rapport au pic). Pour le circuit RLC série, on démontre que :</p>
+                <div class="plan-highlight">
+                    <strong>ω₁ = −R/(2L) + √((R/(2L))² + 1/(LC))</strong><br>
+                    <strong>ω₂ = R/(2L) + √((R/(2L))² + 1/(LC))</strong><br>
+                    <strong>Δω = ω₂ − ω₁ = R/L</strong><br>
+                    <strong>f₀ = √(f₁ · f₂)</strong> (moyenne géométrique)
+                </div>
+                <p>La relation ω₀ = √(ω₁·ω₂) signifie que la fréquence de résonance est la <strong>moyenne géométrique</strong> des deux fréquences de coupure. Pour Q >> 1, on a ω₁ ≈ ω₀ − R/(2L) et ω₂ ≈ ω₀ + R/(2L), d'où Δω ≈ R/L et Q ≈ ω₀/Δω.</p>
+
+                <h4>10. Réponse complète : régime transitoire + régime permanent</h4>
+                <p>La solution complète du circuit RLC série forcé est la somme de deux termes :</p>
+                <ul>
+                    <li><strong>Régime permanent (régime sinusoïdal forcé) :</strong> solution particulière sinusoïdale, qui est ce que nous avons calculé</li>
+                    <li><strong>Régime transitoire :</strong> solution de l'équation homogène, qui décroît exponentiellement avec un temps caractéristique τ = 2L/R (cas du sur-amortissement, régime critique, ou pseudo-périodique selon R)</li>
+                </ul>
+                <p>Le régime transitoire disparaît après ≈ 5τ, et seul le régime permanent persiste. C'est ce dernier qui détermine le comportement en fréquence du circuit.</p>
+
+                <h4>11. Puissance et énergie dans le circuit RLC</h4>
+                <p>En régime sinusoïdal permanent, la puissance instantanée est p(t) = v(t) · i(t). La puissance moyenne (active) dissipée dans la résistance est :</p>
+                <div class="plan-highlight">
+                    <strong>P_moy = V_eff · I_eff · cos(φ) = V_eff² · R / |Z|²</strong>
+                </div>
+                <p>où cos(φ) est le facteur de puissance. À la résonance, cos(φ) = 1 et P_moy = V_eff² / R (maximum). Les éléments réactifs L et C ne dissipent pas de puissance moyenne (ils stockent et restituent l'énergie sans perte).</p>
+                <p>La puissance réactive, échangée entre L et C, est :</p>
+                <div class="plan-highlight">
+                    <strong>Q_réactif = V_eff · I_eff · sin(φ) = V_eff² · X / |Z|²</strong>
+                </div>
+                <p>Le facteur de qualité Q du circuit est aussi le rapport entre l'énergie stockée (à chaque instant) et l'énergie dissipée par cycle :</p>
+                <div class="plan-highlight">
+                    <strong>Q = 2π · E_stockée / E_dissipée_par_cycle</strong>
+                </div>
+                <p>C'est pourquoi un Q élevé signifie que l'oscillation persiste longtemps avant de s'amortir.</p>
+
+                <h4>12. Mesure expérimentale de la résonance</h4>
+                <p>Pour mesurer expérimentalement la courbe de résonance d'un circuit RLC, on procède comme suit :</p>
+                <ol>
+                    <li>On alimente le circuit RLC série avec un GBF (générateur basse fréquence) de fréquence variable</li>
+                    <li>On relève la tension aux bornes de R (proportionnelle au courant) en fonction de la fréquence</li>
+                    <li>On repère la fréquence f₀ où l'amplitude est maximale</li>
+                    <li>On relève les fréquences f₁ et f₂ où l'amplitude vaut I₀/√2</li>
+                    <li>On calcule Δf = f₂ − f₁ et Q = f₀/Δf</li>
+                </ol>
+                <p>On peut aussi mesurer la phase à l'aide d'un oscilloscope à deux voies, ou d'un phasemètre numérique.</p>
+
+                <h4>13. Applications pratiques détaillées</h4>
+                <p>La résonance électrique est exploitée dans une multitude de systèmes :</p>
+                <ul>
+                    <li><strong>Récepteurs radio AM/FM :</strong> l'antenne capte un signal composé de toutes les stations. Le circuit LC accordé du récepteur est réglé (par un condensateur variable ou une inductance variable) pour que sa fréquence de résonance corresponde à la fréquence de la station souhaitée. À la résonance, le signal de cette station est amplifié sélectivement.</li>
+                    <li><strong>Filtres sélectifs :</strong> dans les systèmes de télécommunications, on utilise des filtres RLC pour sélectionner une bande de fréquence spécifique. Plus Q est élevé, plus le filtre est sélectif (bande étroite).</li>
+                    <li><strong>Alimentations à résonance (LLC, ZVS) :</strong> dans les alimentations à découpage modernes, on utilise des circuits résonants où le transistor commute au passage par zéro de la tension (Zero Voltage Switching) ou du courant (Zero Current Switching), ce qui réduit considérablement les pertes par commutation et le bruit EMI.</li>
+                    <li><strong>Fours à induction :</strong> un circuit RLC de forte puissance alimente une bobine qui crée un champ magnétique intense. Les courants de Foucault induits dans la pièce métallique à chauffer la portent à haute température (jusqu'à 1500°C) en quelques secondes.</li>
+                    <li><strong>Circuits d'allumage automobile (Tesla coil) :</strong> la bobine d'allumage forme avec sa capacité parasite un circuit résonant. À l'ouverture du rupteur, une oscillation haute tension se produit, qui est ensuite transformée en 20-30 kV par le transformateur d'allumage pour créer l'étincelle à la bougie.</li>
+                    <li><strong>Capteurs à ultrasons :</strong> les transducteurs piézoélectriques ont un comportement électrique résonant. Le circuit d'accord RLC adapte l'impédance et maximise le transfert d'énergie à la fréquence ultrasonore (20-200 kHz).</li>
+                    <li><strong>Analyseur de spectre :</strong> l'instrument balaye une plage de fréquence et utilise un filtre RLC accordable pour mesurer l'amplitude du signal à chaque fréquence.</li>
+                    <li><strong>Magnétomètres à résonance :</strong> la fréquence de résonance d'un circuit RLC varie légèrement en fonction du champ magnétique environnant (effet de la perméabilité du milieu). Cette propriété est exploitée dans certains capteurs de champ magnétique.</li>
+                    <li><strong>Systèmes RFID :</strong> les tags RFID passifs sont des circuits LC résonants qui absorbent l'énergie du champ électromagnétique émis par le lecteur à leur fréquence propre. Le signal modulé par les données du tag est renvoyé vers le lecteur.</li>
+                </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔑 Concepts clés à retenir</h3>
                 <ul>
-                    <li><strong>Impédance complexe :</strong> Z = R + j(ω·L − 1/(ω·C))</li>
+                    <li><strong>Impédance complexe :</strong> Z(ω) = R + j(ωL − 1/(ωC))</li>
                     <li><strong>Résonance :</strong> ω₀ = 1/√(L·C), où Z = R (minimum), I maximal, φ = 0</li>
-                    <li><strong>Facteur de qualité :</strong> Q = (1/R)·√(L/C) = ω₀·L/R</li>
+                    <li><strong>Facteur de qualité :</strong> Q = (1/R)·√(L/C) = ω₀L/R = 1/(ω₀RC)</li>
                     <li><strong>Bande passante :</strong> Δω = R/L, ω₁,₂ = (R/(2L)) ± √((R/(2L))² + ω₀²)</li>
-                    <li><strong>Courant à la résonance :</strong> I₀ = Ve/R</li>
-                    <li><strong>Surtension à la résonance :</strong> VL = VC = Q·Ve</li>
+                    <li><strong>Courant à la résonance :</strong> I₀ = V̂/R</li>
+                    <li><strong>Surtension à la résonance :</strong> V_L = V_C = Q·V̂</li>
+                    <li><strong>Relation f₀ = √(f₁·f₂)</strong> (moyenne géométrique)</li>
+                    <li><strong>Comportement capacitif en basse fréquence, inductif en haute fréquence</strong></li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔧 Applications pratiques</h3>
                 <ul>
-                    <li><strong>Récepteurs радио AM/FM</strong> : accord du circuit LC pour capter la fréquence de la station souhaitée</li>
+                    <li><strong>Récepteurs radio AM/FM</strong> : accord du circuit LC pour capter la fréquence de la station souhaitée</li>
                     <li><strong>Fours à induction industriels</strong> : résonance pour chauffage par courants de Foucault</li>
                     <li><strong>Capteurs à ultrasons</strong> : circuits résonants pour générer et détecter les ondes mécaniques</li>
-                    <li><strong>Alimentations à résonance</strong> : transistors MOSFET fonctionnant en commutation à zéro de tension (ZVS)</li>
+                    <li><strong>Alimentations à résonance</strong> : transistors MOSFET fonctionnant en commutation à zéro de tension (ZVS) ou de courant (ZCS)</li>
+                    <li><strong>Circuits d'allumage automobile</strong> : surtension dans la bobine pour générer l'étincelle</li>
+                    <li><strong>Filtres sélectifs RF</strong> : sélection de bandes de fréquence en télécommunication</li>
+                    <li><strong>Systèmes RFID</strong> : circuits LC pour transfert d'énergie sans fil</li>
+                    <li><strong>Magnétomètres et capteurs</strong> : variation de la résonance en fonction du champ</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>✏️ Exercices suggérés</h3>
                 <ol>
-                    <li><strong>Exercice 1</strong> : Un circuit RLC série avec R = 10 Ω, L = 10 mH et C = 1 µF est alimenté par ve(t) = 10·cos(ω·t). Calculer ω₀, Q, la bande passante et le courant à ω₀ si Ve = 10 V.</li>
-                    <li><strong>Exercice 2</strong> : Tracer les courbes de |Z|(ω), φ(ω), I(ω) pour le circuit de la question 1.</li>
-                    <li><strong>Exercice 3</strong> : Calculer les tensions VL et VC à la résonance pour le circuit de la question 1. Que remarque-t-on ?</li>
-                    <li><strong>Exercice 4</strong> : Un circuit RLC série a R = 50 Ω, L = 5 mH et C = 20 nF. Calculer fc, Q, la bande passante et les fréquences de coupure.</li>
-                    <li><strong>Exercice 5</strong> : Pourquoi utilise-t-on un circuit RLC série pour sélectionner une station de радио ?</li>
+                    <li><strong>Exercice 1 (calculs fondamentaux) :</strong> Un circuit RLC série avec R = 10 Ω, L = 10 mH et C = 1 µF est alimenté par v_e(t) = 10·cos(ω·t). Calculer : (a) ω₀, f₀, T₀, (b) Q, (c) la bande passante Δf, (d) le courant à ω₀, (e) les tensions V_L et V_C à ω₀.</li>
+                    <li><strong>Exercice 2 (courbes) :</strong> Tracer les courbes de |Z|(ω), φ_Z(ω), I(ω) et φ_I(ω) pour le circuit de l'exercice 1. Identifier les comportements asymptotiques et le point de résonance.</li>
+                    <li><strong>Exercice 3 (surtension) :</strong> Calculer les tensions V_L et V_C à la résonance pour le circuit précédent. Que remarque-t-on ? Comparer avec V_e. Que se passe-t-il si R = 1 Ω (Q plus grand) ?</li>
+                    <li><strong>Exercice 4 (calcul de R, L, C) :</strong> Un circuit RLC série a R = 50 Ω, L = 5 mH et C = 20 nF. Calculer : (a) f₀, (b) Q, (c) la bande passante Δf, (d) les fréquences de coupure f₁ et f₂, (e) le courant à f₀ pour V_e = 5 V.</li>
+                    <li><strong>Exercice 5 (sélection de fréquence) :</strong> Pourquoi utilise-t-on un circuit RLC série pour sélectionner une station de radio ? Quel est le rôle de Q ? Donner un ordre de grandeur typique de Q pour un récepteur AM.</li>
+                    <li><strong>Exercice 6 (puissance) :</strong> Un circuit RLC série consomme 100 W à la résonance sous 230 V efficaces. Calculer R, I_eff, et la puissance réactive. En déduire le facteur de puissance et l'impédance apparente.</li>
+                    <li><strong>Exercice 7 (filtrage d'un signal composite) :</strong> Un signal composé de trois sinusoïdes de 1 V à 50 Hz, 1 kHz et 1 MHz traverse un circuit RLC série accordé à 1 kHz (R = 100 Ω, L = 1 mH). Calculer l'amplitude de chaque composante à la sortie. Que constate-t-on ?</li>
                 </ol>
             </div>
 
             <div class="plan-summary">
-                <strong>📌 Résumé :</strong> En régime sinusoïdal forcé, le circuit RLC série présente une réponse en fréquence caractérisée par une résonance à ω₀ = 1/√(L·C). À cette fréquence, l'impédance est minimale (Z = R), le courant est maximal et en phase avec la tension d'entrée. Le facteur de qualité Q = (1/R)·√(L/C) quantifie la острына de la résonance : plus Q est grand, plus la bande passante est étroite. Les tensions aux bornes de L et C peuvent atteindre des valeurs bien supérieures à la tension d'entrée (surtension). Le circuit RLC forcé est fondamental pour comprendre les filtres sélectifs et les circuits d'accord.
+                <strong>📌 Résumé :</strong> En régime sinusoïdal forcé, le circuit RLC série présente une réponse en fréquence caractérisée par une résonance à ω₀ = 1/√(L·C). À cette fréquence, l'impédance est minimale (Z = R), le courant est maximal (I₀ = V̂/R) et en phase avec la tension d'entrée (φ = 0). Le facteur de qualité Q = (1/R)·√(L/C) quantifie l'acuité de la résonance : plus Q est grand, plus la bande passante Δω = R/L est étroite. Les tensions aux bornes de L et C peuvent atteindre des valeurs Q fois supérieures à la tension d'entrée (surtension), bien que leur somme vectorielle soit nulle. Le circuit RLC forcé est fondamental pour comprendre les filtres sélectifs, les récepteurs radio, les alimentations à résonance, les fours à induction et les systèmes d'allumage automobile.
             </div>
         </section>
 

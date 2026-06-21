@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1139LKy2dsYq_D5DwE45h85PWbcTxsghr/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/6D28D9/FFFFFF?text=Filtre+passe-bande" alt="Résumé du filtre passe-bande">
-                <div class="resume-overlay">
-                    <h3>Filtre passe-bande</h3>
-                    <p>Bande passante, fréquence centrale et facteur de qualité.</p>
-                </div>
+                
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1D7MPwZG6XzKO_j5jGBJdO8STMzOn2_Xj/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,7 +68,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/12bcuOB32iM5g_XPWUIoDoVRsb8AUNKC9/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -104,40 +102,164 @@
 
             <div class="plan-subsection">
                 <h3>📖 Contenu détaillé</h3>
-                <h4>1. Définition d'un filtre passe-bande</h4>
-                <p>Un filtre passe-bande est un circuit qui laisse passer les signaux dont la fréquence est comprise dans une bande特定, et qui atténue fortement les signaux en dehors de cette bande. Il est caractérisé par trois paramètres fondamentaux :</p>
-                <ul>
-                    <li><strong>Fréquence centrale f₀</strong> : fréquence pour laquelle le gain est maximal</li>
-                    <li><strong>Bande passante Δf</strong> : intervalle de fréquences à −3 dB</li>
-                    <li><strong>Facteur de qualité Q = f₀/Δf</strong> : quantifie la sélectivité</li>
-                </ul>
-                <p>La bande passante est définie par les deux fréquences de coupure f₁ et f₂ (à −3 dB), avec Δf = f₂ − f₁ et <strong>f₀ = √(f₁·f₂)</strong>.</p>
 
-                <h4>2. Filtre passe-bande RLC série</h4>
-                <p>Le circuit RLC série constitue un filtre passe-bande naturel. L'impédance du circuit est minimale à la résonance (Z = R), donc le courant et la tension aux bornes de R sont maximales à f₀.</p>
+                <h4>1. Introduction et contexte d'utilisation</h4>
+                <p>Un filtre passe-bande est un circuit qui laisse passer une bande de fréquences spécifique, appelée <strong>bande passante</strong>, tout en atténuant fortement les fréquences en dehors de cette bande. C'est le filtre de loin le plus utilisé en électronique, car la plupart des systèmes de communication (radio, télévision, téléphonie mobile, Wi-Fi, Bluetooth) reposent sur la transmission et la réception de signaux dans des bandes de fréquences précises.</p>
+                <p>On distingue deux types fondamentaux de filtres passe-bande :</p>
+                <ul>
+                    <li><strong>Filtres à bande étroite :</strong> la bande passante est petite devant la fréquence centrale. Le facteur de qualité Q est élevé (typiquement Q > 10). Ils sont utilisés pour sélectionner une fréquence particulière (radio, instrumentation).</li>
+                    <li><strong>Filtres à bande large :</strong> la bande passante est grande devant la fréquence centrale. Le facteur Q est faible (typiquement Q < 10). Ils sont utilisés pour sélectionner une plage de fréquences (audio, télévision).</li>
+                </ul>
+                <p>Les filtres passe-bande sont omniprésents dans les récepteurs radio, les analyseurs de spectre, les systèmes d'instrumentation biomédicale (ECG, EEG, EMG), les filtres de couleur en photographie numérique, et les systèmes de communication sans fil.</p>
+
+                <h4>2. Définition d'un filtre passe-bande</h4>
+                <p>Un filtre passe-bande est caractérisé par trois paramètres fondamentaux :</p>
+                <ul>
+                    <li><strong>Fréquence centrale f₀ (ou fréquence de résonance) :</strong> fréquence pour laquelle le gain est maximal</li>
+                    <li><strong>Bande passante Δf :</strong> intervalle de fréquences [f₁, f₂] à −3 dB du gain maximal</li>
+                    <li><strong>Facteur de qualité Q = f₀/Δf :</strong> rapport entre la fréquence centrale et la bande passante, qui quantifie la sélectivité</li>
+                </ul>
+                <p>La <strong>bande passante à -3 dB</strong> est définie par les deux fréquences de coupure f₁ et f₂ telles que le gain vaut 1/√2 du gain maximal. On a :</p>
                 <div class="plan-highlight">
-                    <strong>Fonction de transfert :</strong> H(jω) = R / (R + j(ω·L − 1/(ω·C)))<br>
-                    <strong>Gain maximal :</strong> 0 dB (à ω = ω₀)<br>
-                    <strong>Fréquence centrale :</strong> ω₀ = 1/√(L·C)
+                    <strong>f₁ · f₂ = f₀²</strong> (moyenne géométrique)<br>
+                    <strong>Δf = f₂ − f₁</strong>
+                </div>
+                <p>Un filtre idéal (filtre « brick-wall » ou « mur de brique ») aurait un gain constant dans la bande passante et une atténuation infinie en dehors. Aucun filtre réel n'atteint cette perfection : la transition entre la bande passante et la bande atténuée est toujours progressive, plus ou moins rapide selon l'ordre du filtre.</p>
+
+                <h4>3. Filtre passe-bande RLC série</h4>
+                <p>Le circuit RLC série constitue un filtre passe-bande naturel. L'impédance du circuit est :</p>
+                <div class="plan-highlight">
+                    <strong>Z(ω) = R + j(ωL − 1/(ωC))</strong>
+                </div>
+                <p>À la résonance, l'impédance est minimale (Z = R), donc le courant est maximal. Si l'on prélève la tension aux bornes de la résistance, on obtient un signal proportionnel au courant :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = V_s / V_e = R / (R + j(ωL − 1/(ωC))) = 1 / (1 + jQ(ω/ω₀ − ω₀/ω))</strong>
+                </div>
+                <p>où Q = (1/R)·√(L/C) est le facteur de qualité. Le module de la fonction de transfert est :</p>
+                <div class="plan-highlight">
+                    <strong>|H(jω)| = 1 / √(1 + Q² · (ω/ω₀ − ω₀/ω)²)</strong>
+                </div>
+                <p>Le gain est maximal à ω = ω₀ (résonance), où |H| = 1. Le gain vaut 1/√2 aux fréquences de coupure ω₁ et ω₂ qui vérifient Q·|ω/ω₀ − ω₀/ω| = 1, soit :</p>
+                <div class="plan-highlight">
+                    <strong>ω₁ = −R/(2L) + √((R/(2L))² + 1/(LC))</strong><br>
+                    <strong>ω₂ = R/(2L) + √((R/(2L))² + 1/(LC))</strong><br>
+                    <strong>Δω = ω₂ − ω₁ = R/L</strong>
+                </div>
+                <p>La fréquence centrale est la moyenne géométrique :</p>
+                <div class="plan-highlight">
+                    <strong>ω₀ = √(ω₁ · ω₂) = 1/√(L·C)</strong>
                 </div>
 
-                <h4>3. Filtre passe-bande RLC parallèle</h4>
-                <p>Le circuit RLC parallèle présente une impédance maximale à la résonance. Ce comportement dual du circuit série peut aussi servir de filtre passe-bande. En pratique, le filtre passe-bande à RLC parallèle est utilisé comme circuit d'accord dans les récepteurs radio.</p>
+                <h4>4. Filtre passe-bande RLC parallèle</h4>
+                <p>Le circuit RLC parallèle présente un comportement dual : l'impédance devient maximale à la résonance. Si l'on alimente ce circuit par une source de courant (ou par une source de tension à travers une grande impédance), la tension aux bornes du circuit est maximale à ω₀. C'est le circuit d'accord classique des récepteurs radio :</p>
+                <div class="plan-highlight">
+                    <strong>Z_parallèle(ω) = (jωL · 1/(jωC)) / (jωL + 1/(jωC)) = jωL / (1 − ω²L·C)</strong>
+                </div>
+                <p>À la résonance ω₀ = 1/√(LC), on a 1 − ω²L·C = 0, et Z_parallèle → ∞ (le circuit parallèle se comporte comme un circuit ouvert). C'est l'inverse du circuit série qui devient un court-circuit. Ce dualité est exploitée dans les filtres d'accord radio et les circuits bouchons (notch filters).</p>
 
-                <h4>4. Fréquence centrale et bande passante</h4>
-                <p>Pour le filtre RLC série :</p>
+                <h4>5. Fréquence centrale, bande passante et facteur Q</h4>
+                <p>Pour le filtre RLC série, on a :</p>
+                <div class="plan-highlight">
+                    <strong>Fréquence centrale :</strong> f₀ = 1/(2π·√(L·C))<br>
+                    <strong>Bande passante :</strong> Δf = f₂ − f₁ = R/(2π·L)<br>
+                    <strong>Facteur de qualité :</strong> Q = f₀/Δf = (1/R)·√(L/C) = ω₀·L/R
+                </div>
+                <p>Le facteur Q est un indicateur crucial de la sélectivité :</p>
                 <ul>
-                    <li><strong>Fréquence centrale :</strong> f₀ = 1/(2π√(L·C))</li>
-                    <li><strong>Bande passante :</strong> Δf = f₂ − f₁ = R/(2π·L)</li>
-                    <li><strong>Facteur de qualité :</strong> Q = f₀/Δf = (1/R)·√(L/C)</li>
+                    <li><strong>Q = 1 :</strong> bande passante = f₀. Filtre très large, peu sélectif.</li>
+                    <li><strong>Q = 10 :</strong> bande passante = f₀/10. Sélectivité moyenne.</li>
+                    <li><strong>Q = 100 :</strong> bande passante = f₀/100. Filtre très sélectif.</li>
+                    <li><strong>Q = 10 000 :</strong> bande passante = f₀/10 000. Filtre extrêmement sélectif (cas des oscillateurs à quartz).</li>
                 </ul>
-                <p>Plus Q est grand, plus la bande passante est étroite et le filtre sélectif.</p>
+                <p>Pour Q >> 1, on peut écrire f₁ ≈ f₀ − Δf/2 et f₂ ≈ f₀ + Δf/2, ce qui simplifie les calculs.</p>
 
-                <h4>5. Diagramme de Bode du filtre passe-bande</h4>
-                <p>Le diagramme de Bode en amplitude présente un pic à f₀ (gain maximal) et une atténuation de part et d'autre. Les asymptotes se croisent à f₀. Le diagramme de phase passe par 0° à f₀, avec un déphasage variant de +90° (très basses fréquences) à −90° (très hautes fréquences).</p>
+                <h4>6. Sélectivité et sélectivité normalisée</h4>
+                <p>La <strong>sélectivité</strong> d'un filtre est sa capacité à rejeter les fréquences hors de la bande passante. On caractérise la sélectivité par :</p>
+                <ul>
+                    <li><strong>La pente de coupure :</strong> pour un filtre du premier ordre, la pente est de 20 dB/décade de chaque côté. Pour un filtre du second ordre, elle est de 40 dB/décade. Plus l'ordre est élevé, plus la transition est raide.</li>
+                    <li><strong>Le facteur de forme (shape factor) :</strong> rapport entre la bande passante à −60 dB et la bande passante à −3 dB. Pour un filtre idéal, ce rapport vaut 1. Pour un filtre RLC du second ordre, il vaut environ 10.</li>
+                    <li><strong>L'atténuation hors bande :</strong> niveau d'atténuation en dehors de la bande passante. Pour les récepteurs radio, on cherche des atténuations de 60 à 80 dB pour rejeter les stations adjacentes.</li>
+                </ul>
 
-                <h4>6. Applications des filtres passe-bande</h4>
-                <p>Sélection de fréquence dans les радио et télécommunications, filtrage dans les systèmes audio (equalizers), mesures de laboratoire (analyseur de spectre), circuits de moyenne fréquence (IF) dans les récepteurs radio, suppression de bruit dans les signaux biomédicaux (EEG, ECG).</p>
+                <h4>7. Diagramme de Bode du filtre passe-bande</h4>
+                <p>Le diagramme de Bode en amplitude d'un filtre passe-bande RLC série du second ordre présente une allure caractéristique en cloche :</p>
+                <ul>
+                    <li>Une <strong>asymptote ascendante</strong> de pente +20 dB/décade pour ω << ω₀ (filtre passe-haut du premier ordre)</li>
+                    <li>Un <strong>pic</strong> à ω₀, où le gain vaut 0 dB (cas du filtre sans amplification)</li>
+                    <li>Une <strong>asymptote descendante</strong> de pente −20 dB/décade pour ω >> ω₀ (filtre passe-bas du premier ordre)</li>
+                </ul>
+                <p>Ainsi, un filtre passe-bande du second ordre est l'équivalent de la mise en cascade d'un filtre passe-haut et d'un filtre passe-bas. La courbe réelle forme une cloche arrondie autour de f₀, avec un écart maximal de 3 dB par rapport aux asymptotes à f₀/2 et 2·f₀.</p>
+                <p>Le diagramme de Bode en phase passe par 0° à f₀ (le signal n'est pas déphasé à la résonance), et varie entre +90° (très basses fréquences) et −90° (très hautes fréquences). La transition est rapide autour de f₀, avec une pente maximale à f₀.</p>
+
+                <h4>8. Comparaison avec les filtres idéaux</h4>
+                <p>Un filtre passe-bande idéal aurait :</p>
+                <ul>
+                    <li>Un gain constant dans la bande passante [f₁, f₂]</li>
+                    <li>Une atténuation infinie en dehors</li>
+                    <li>Un déphasage linéaire dans la bande passante (pour éviter la distorsion des signaux modulés)</li>
+                </ul>
+                <p>Aucun filtre réel n'atteint ces performances. Les principaux compromis sont :</p>
+                <ul>
+                    <li><strong>Filtre de Butterworth :</strong> réponse en amplitude plate dans la bande passante, transition progressive. Compromis standard.</li>
+                    <li><strong>Filtre de Tchebychev :</strong> ondulations en bande passante, mais transition plus raide.</li>
+                    <li><strong>Filtre de Bessel :</strong> phase linéaire (délai de groupe constant), bonne préservation des transitoires. Idéal pour les signaux impulsionnels.</li>
+                    <li><strong>Filtre elliptique (Cauer) :</strong> ondulations en bande passante ET en bande atténuée, transition la plus raide pour un ordre donné.</li>
+                </ul>
+
+                <h4>9. Mise en cascade de filtres passe-bande</h4>
+                <p>Pour augmenter la sélectivité, on peut cascader plusieurs filtres passe-bande. Si on met N filtres identiques en cascade (avec isolation parfaite), l'ordre du filtre global est 2N, et la pente de coupure est de 2N·20 dB/décade. La bande passante globale se rétrécit et le facteur Q effectif augmente. En pratique :</p>
+                <ul>
+                    <li>2 filtres RLC en cascade → filtre du 4ème ordre (pente 80 dB/décade)</li>
+                    <li>3 filtres RLC en cascade → filtre du 6ème ordre (pente 120 dB/décade)</li>
+                </ul>
+                <p>Pour cascader correctement, il faut utiliser des <strong>amplificateurs tampons</strong> (suiveurs à AOP) entre chaque étage pour éviter l'interaction entre filtres (l'impédance de sortie d'un étage charge l'étage suivant).</p>
+
+                <h4>10. Filtres passe-bande actifs (à AOP)</h4>
+                <p>Les filtres passifs RLC ont l'inconvénient d'un gain unitaire (0 dB) au maximum, ce qui peut être insuffisant si le signal utile est faible. Les filtres actifs utilisent un amplificateur opérationnel pour fournir un gain configurable. Plusieurs topologies sont classiques :</p>
+                <ul>
+                    <li><strong>Filtre de Sallen-Key passe-bande :</strong> un seul AOP, peu de composants, bonne stabilité</li>
+                    <li><strong>Filtre à variables d'état (state-variable) :</strong> trois AOP, trois sorties simultanées (passe-bas, passe-haut, passe-bande), accordable</li>
+                    <li><strong>Filtre gyrateur :</strong> simule une inductance par un circuit actif, permet des inductances très grandes ou accordables</li>
+                    <li><strong>Biquad (biquadratique) :</strong> fonction de transfert universelle, très utilisé en audio et télécommunications</li>
+                </ul>
+                <p>Les filtres actifs permettent d'ajuster indépendamment le gain, la fréquence centrale, le facteur Q et la bande passante. En contrepartie, ils nécessitent une alimentation et sont limités en bande passante par le produit gain-bande de l'AOP.</p>
+
+                <h4>11. Filtres à capacités commutées (switched-capacitor)</h4>
+                <p>Une technique moderne très utilisée dans les circuits intégrés est le filtrage à capacités commutées. Elle consiste à simuler une résistance par un circuit comprenant un condensateur et deux interrupteurs MOSFET commandés par une horloge. La résistance équivalente est :</p>
+                <div class="plan-highlight">
+                    <strong>R_eq = 1 / (C · f_clk)</strong>
+                </div>
+                <p>En variant la fréquence d'horloge, on peut ajuster la fréquence centrale du filtre. C'est la technique utilisée dans les célèbres circuits MF10, MAX262/MAX263, et les filtres audio des téléphones portables. Le filtre est entièrement intégré en CMOS, sans aucune inductance externe.</p>
+
+                <h4>12. Filtres numériques vs analogiques</h4>
+                <p>Avec la puissance des processeurs et DSP modernes, on peut aussi réaliser des filtres passe-bande <strong>numériques</strong> par convolution, FFT, ou filtrage IIR/FIR. Les avantages des filtres numériques :</p>
+                <ul>
+                    <li>Caractéristiques parfaites (Butterworth, Tchebychev, elliptique) sans dérive des composants</li>
+                    <li>Accordabilité en temps réel par simple modification des coefficients</li>
+                    <li>Stabilité et reproductibilité absolues</li>
+                </ul>
+                <p>Les inconvénients :</p>
+                <ul>
+                    <li>Nécessitent un CAN/CNA (latence, bruit de quantification)</li>
+                    <li>Limités en fréquence par la fréquence d'échantillonnage (théorème de Shannon-Nyquist)</li>
+                    <li>Consommation énergétique plus élevée</li>
+                </ul>
+                <p>Les filtres analogiques restent indispensables pour les très hautes fréquences (RF, micro-ondes) où la numérisation est impossible.</p>
+
+                <h4>13. Applications pratiques détaillées</h4>
+                <p>Les filtres passe-bande sont au cœur d'innombrables systèmes :</p>
+                <ul>
+                    <li><strong>Récepteurs radio AM (540-1600 kHz) :</strong> un circuit LC parallèle accordé à la fréquence de la station capte le signal parmi les nombreux signaux présents à l'antenne. Le facteur Q est typiquement de 50 à 100.</li>
+                    <li><strong>Récepteurs radio FM (88-108 MHz) :</strong> circuits LC à accord variable (condensateur variable ou diode varicap). Q ≈ 50-100.</li>
+                    <li><strong>Étage FI (Fréquence Intermédiaire) des récepteurs superhétérodynes :</strong> plusieurs filtres passe-bande céramiques ou SAW (Surface Acoustic Wave) à 455 kHz (AM) ou 10,7 MHz (FM) avec Q très élevé (plusieurs milliers). Ces filtres déterminent en grande partie la sélectivité du récepteur.</li>
+                    <li><strong>Égaliseurs audio :</strong> les bandes de fréquences (31 Hz, 63 Hz, 125 Hz, 250 Hz, 500 Hz, 1 kHz, 2 kHz, 4 kHz, 8 kHz, 16 kHz) sont séparées par des filtres passe-bande. Chaque bande peut être amplifiée ou atténuée par l'utilisateur.</li>
+                    <li><strong>Analyseur de spectre audio :</strong> un banc de filtres passe-bande (typiquement 30 bandes en tiers d'octave) décompose le signal en composantes spectrales, affichées en barres verticales.</li>
+                    <li><strong>Systèmes biomédicaux :</strong> extraction des signaux physiologiques (ECG : 0,05-150 Hz, EEG : 0,5-100 Hz, EMG : 20-2000 Hz) par filtrage passe-bande pour éliminer le bruit hors bande (50 Hz secteur, dérive basse fréquence, etc.).</li>
+                    <li><strong>Modems DSL :</strong> filtres passe-bande pour séparer les canaux de transmission (upload, download, voix).</li>
+                    <li><strong>Wi-Fi, Bluetooth :</strong> filtres RF à 2,4 GHz, 5 GHz dans les téléphones et routeurs, utilisant des filtres SAW, BAW, ou céramique à très haut Q.</li>
+                    <li><strong>Imagerie hyperspectrale :</strong> des centaines de filtres passe-bande étroits sélectionnent les bandes spectrales d'intérêt (visible, proche infrarouge).</li>
+                    <li><strong>Carillon d'alarme :</strong> filtres passe-bande pour générer des notes musicales pures à partir d'un signal carré.</li>
+                </ul>
             </div>
 
             <div class="plan-subsection">
@@ -149,32 +271,40 @@
                     <li><strong>Facteur de qualité Q = f₀/Δf</strong> : plus Q est grand, plus le filtre est sélectif</li>
                     <li><strong>f₀ = √(f₁·f₂)</strong> : relation entre fréquence centrale et fréquences de coupure</li>
                     <li><strong>RLC série :</strong> impédance minimale à f₀ → courant maximal → filtre passe-bande</li>
+                    <li><strong>RLC parallèle :</strong> impédance maximale à f₀ → tension maximale → filtre passe-bande</li>
+                    <li><strong>Ordre du filtre :</strong> 1 filtre RLC = 2ème ordre, N filtres en cascade = 2N-ème ordre</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔧 Applications pratiques</h3>
                 <ul>
-                    <li><strong>Récepteur radio AM</strong> : sélection de la fréquence de la station parmi les signaux reçus</li>
+                    <li><strong>Récepteurs radio AM/FM</strong> : sélection de la fréquence de la station parmi les signaux reçus</li>
                     <li><strong>Spectromètre</strong> : filtrage de bandes de fréquences spécifiques pour l'analyse du signal</li>
                     <li><strong>Audio professionnel</strong> : filtres de correction d'égalisation dans les systèmes de sonorisation</li>
                     <li><strong>Biomédical</strong> : extraction du signal cardiaque (ECG) du bruit ambiant</li>
+                    <li><strong>Filtres FI superhétérodynes</strong> : céramiques, SAW, BAW à Q très élevé</li>
+                    <li><strong>Wi-Fi / Bluetooth</strong> : filtres RF pour les bandes 2,4 GHz et 5 GHz</li>
+                    <li><strong>Modems DSL</strong> : séparation des canaux de transmission</li>
+                    <li><strong>Analyseurs de spectre</strong> : décomposition d'un signal en bandes de fréquences</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>✏️ Exercices suggérés</h3>
                 <ol>
-                    <li><strong>Exercice 1</strong> : Un filtre passe-bande RLC série a R = 100 Ω, L = 10 mH, C = 1 µF. Calculer f₀, Q et la bande passante Δf.</li>
-                    <li><strong>Exercice 2</strong> : Tracer le diagramme de Bode (amplitude) d'un filtre passe-bande avec f₀ = 10 kHz et Q = 20.</li>
-                    <li><strong>Exercice 3</strong> : Quel est le gain en dB à f = f₀/2 et à f = 2·f₀ pour un filtre passe-bande avec Q = 10 ?</li>
-                    <li><strong>Exercice 4</strong> : Concevoir un filtre passe-bande avec f₀ = 1 MHz et Δf = 20 kHz. Choisir R, L, C.</li>
-                    <li><strong>Exercice 5</strong> : Pourquoi le filtre RLC parallèle peut-il aussi servir de filtre passe-bande ? Comparer les deux configurations.</li>
+                    <li><strong>Exercice 1 (calculs fondamentaux) :</strong> Un filtre passe-bande RLC série a R = 100 Ω, L = 10 mH, C = 1 µF. Calculer : (a) f₀, (b) Q, (c) la bande passante Δf, (d) les fréquences de coupure f₁ et f₂, (e) le gain à f = f₀/2 et f = 2·f₀.</li>
+                    <li><strong>Exercice 2 (diagramme de Bode) :</strong> Tracer le diagramme de Bode (amplitude et phase) d'un filtre passe-bande avec f₀ = 10 kHz et Q = 20. Identifier les asymptotes et le pic de résonance.</li>
+                    <li><strong>Exercice 3 (atténuation) :</strong> Quel est le gain en dB à f = f₀/2 et à f = 2·f₀ pour un filtre passe-bande avec Q = 10 ? Avec Q = 100 ? Commenter.</li>
+                    <li><strong>Exercice 4 (dimensionnement) :</strong> Concevoir un filtre passe-bande avec f₀ = 1 MHz et Δf = 20 kHz. Choisir R, L, C dans la série E12.</li>
+                    <li><strong>Exercice 5 (RLC parallèle) :</strong> Pourquoi le filtre RLC parallèle peut-il aussi servir de filtre passe-bande ? Comparer les deux configurations (série vs parallèle) en termes d'impédance, de tension, et d'applications.</li>
+                    <li><strong>Exercice 6 (cascade) :</strong> On cascade 3 filtres RLC passe-bande identiques, chacun avec Q = 10. Quel est le Q effectif du filtre global ? La bande passante ?</li>
+                    <li><strong>Exercice 7 (sélectivité) :</strong> Un récepteur radio AM est conçu pour recevoir une station à 1 MHz. Une station adjacente émet à 1,01 MHz avec 100 fois plus de puissance. Quel Q minimum faut-il pour que la station adjacente soit atténuée d'au moins 30 dB par rapport à la station principale ?</li>
                 </ol>
             </div>
 
             <div class="plan-summary">
-                <strong>📌 Résumé :</strong> Le filtre passe-bande laisse passer les signaux dont la fréquence est comprise dans une bande特定 [f₁, f₂], définie par la fréquence centrale f₀ = 1/(2π√(L·C)) et la bande passante Δf = f₂ − f₁. Le facteur de qualité Q = f₀/Δf quantifie la sélectivité du filtre : plus Q est grand, plus la bande passante est étroite. Le circuit RLC série constitue un filtre passe-bande naturel dont l'impédance est minimale à la résonance, maximisant le courant et le gain en sortie. Les applications couvrent les télécommunications, l'audio, la mesure et le traitement du signal biomédical.
+                <strong>📌 Résumé :</strong> Le filtre passe-bande laisse passer les signaux dont la fréquence est comprise dans une bande spécifique [f₁, f₂], définie par la fréquence centrale f₀ = 1/(2π√(L·C)) et la bande passante Δf = f₂ − f₁. Le facteur de qualité Q = f₀/Δf quantifie la sélectivité du filtre : plus Q est grand, plus la bande passante est étroite et la sélectivité élevée. Le circuit RLC série constitue un filtre passe-bande naturel dont l'impédance est minimale à la résonance, maximisant le courant et le gain en sortie. Le circuit RLC parallèle est dual : impédance maximale à la résonance, utilisé comme circuit d'accord dans les récepteurs radio. Les applications couvrent les télécommunications (radio, Wi-Fi, Bluetooth, DSL), l'audio (égaliseurs, analyseurs de spectre), la mesure (spectromètres) et le traitement du signal biomédical (ECG, EEG, EMG).
             </div>
         </section>
 

@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onde transversale - Physique</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .cours-detaille {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 35px 45px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            line-height: 1.9;
+            color: #1f2937;
+            font-size: 1.05em;
+        }
+        .cours-detaille h2 {
+            color: #4C1D95;
+            border-left: 6px solid #7C3AED;
+            padding-left: 18px;
+            margin-top: 40px;
+            font-size: 1.6em;
+        }
+        .cours-detaille h3 {
+            color: #6D28D9;
+            margin-top: 28px;
+            font-size: 1.25em;
+        }
+        .cours-detaille h4 {
+            color: #5B21B6;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .cours-detaille .definition {
+            background: #EDE9FE;
+            border-left: 5px solid #7C3AED;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .remarque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .exemple {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .formule {
+            background: #1F2937;
+            color: #FBBF24;
+            padding: 14px 22px;
+            margin: 14px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+        .cours-detaille ul, .cours-detaille ol {
+            margin-left: 28px;
+        }
+        .cours-detaille li {
+            margin: 10px 0;
+        }
+        .cours-titre {
+            text-align: center;
+            color: #3B0764;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 4px solid #7C3AED;
+        }
+        .cours-detaille p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -16,7 +96,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +126,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1yYvKon3AH9eUerz97dIvGxMItVC8pz5p/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +137,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/3B0764/FFFFFF?text=Onde+transversale" alt="Résumé de l'onde transversale">
-                <div class="resume-overlay">
-                    <h3>Onde transversale</h3>
-                    <p>Propagation d'une onde dont la perturbation est perpendiculaire à la direction.</p>
-                </div>
+                
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1bC-Cn-6YBodG-BYM0AHckpGVX48-7hEG/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,9 +148,248 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1nxtUn-QdSjFE36lrRi3b9K93PD_Mo6sZ/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
+            </div>
+        </section>
+
+        <!-- COURS DÉTAILLÉ -->
+        <section class="cours-detaille">
+            <h2 class="cours-titre">📖 Cours détaillé — Leçon 11 : Onde transversale</h2>
+
+            <h2>1. Introduction générale aux ondes</h2>
+            <p>Dans la nature, nous rencontrons une grande variété de phénomènes physiques qui se manifestent par la propagation d'une perturbation dans un milieu donné : le son qui se propage dans l'air, la lumière qui nous parvient du Soleil, les vagues qui avancent à la surface de la mer, les secousses sismiques qui se propagent dans le sol… Tous ces phénomènes sont regroupés sous le terme général d'<strong>ondes</strong>.</p>
+
+            <p>Une onde est, d'un point de vue physique, le transport d'une perturbation d'un point à un autre d'un milieu matériel (ou parfois non matériel dans le cas des ondes électromagnétiques), <strong>sans qu'il y ait un déplacement permanent de la matière elle-même</strong>. Autrement dit, l'onde transporte de l'énergie et de l'information, mais pas de matière.</p>
+
+            <p>Il existe deux grandes catégories d'ondes mécaniques :</p>
+            <ul>
+                <li>Les <strong>ondes transversales</strong>, que nous étudions dans cette leçon.</li>
+                <li>Les <strong>ondes longitudinales</strong>, qui font l'objet de la leçon 13.</li>
+            </ul>
+
+            <h2>2. Définition d'une onde transversale</h2>
+            <div class="definition">
+                Une <strong>onde transversale</strong> est une onde mécanique dans laquelle la <strong>direction de la perturbation</strong> (le mouvement des points du milieu) est <strong>perpendiculaire</strong> à la <strong>direction de propagation</strong> de l'onde.
+            </div>
+
+            <p>Pour bien comprendre cette définition, prenons un exemple simple : une corde tendue horizontalement, attachée à un mur à son extrémité droite. Si l'on agite verticalement l'extrémité gauche de la corde de bas en haut puis de haut en bas, on observe qu'une déformation (une "bosse") se déplace horizontalement le long de la corde, en allant de la gauche vers la droite. Cependant, chaque point de la corde, au moment où la déformation le traverse, ne fait que monter et descendre verticalement : il se déplace donc perpendiculairement à la direction dans laquelle l'onde avance.</p>
+
+            <p>Ainsi, dans une onde transversale, on distingue clairement deux directions :</p>
+            <ul>
+                <li><strong>La direction de propagation :</strong> c'est la direction dans laquelle la perturbation se propage, c'est-à-dire la direction selon laquelle l'onde "avance".</li>
+                <li><strong>La direction de la perturbation :</strong> c'est la direction dans laquelle les points du milieu oscillent autour de leur position d'équilibre.</li>
+            </ul>
+            <p>Dans une onde transversale, ces deux directions sont perpendiculaires l'une à l'autre. C'est ce qui définit ce type d'onde.</p>
+
+            <h2>3. Exemples détaillés d'ondes transversales</h2>
+
+            <h3>3.1. La corde vibrante</h3>
+            <p>C'est l'exemple historique et le plus simple pour comprendre la notion d'onde transversale. Une corde est tendue entre deux points fixes (par exemple, un mur et la main d'une personne, ou les deux extrémités d'une guitare). Lorsqu'on agite l'une des extrémités perpendiculairement à la corde, une onde se propage le long de celle-ci.</p>
+
+            <p>Dans une guitare, lorsque l'on pince une corde, celle-ci vibre verticalement, mais la déformation visible semble se déplacer horizontalement. Les vibrations de la corde produisent alors le son de la guitare. Le son est bien un autre type d'onde (longitudinale, car il se propage dans l'air), mais la vibration de la corde elle-même est un exemple typique d'onde transversale se propageant dans un milieu matériel unidimensionnel (la corde).</p>
+
+            <h3>3.2. Les vagues à la surface de l'eau</h3>
+            <p>Quand on jette un caillou dans un plan d'eau calme, on observe des rides circulaires qui s'éloignent du point d'impact. Ces rides, appelées <strong>vagues</strong>, correspondent à des ondes qui se propagent horizontalement à la surface de l'eau. Cependant, chaque particule d'eau se déplace essentiellement de haut en bas (verticalement), tout en décrivant de petits cercles.</p>
+
+            <p>Ainsi, à l'échelle macroscopique, on voit la vague se déplacer, mais à l'échelle microscopique, l'eau reste globalement à sa place. Un bouchon de liège posé sur l'eau monte et descend au passage des vagues, mais ne se déplace pas avec elles. C'est bien le signe qu'il n'y a pas de transport de matière.</p>
+
+            <h3>3.3. Les ondes électromagnétiques</h3>
+            <p>Les ondes électromagnétiques constituent une catégorie très importante d'ondes transversales. Elles comprennent la lumière visible, les ondes radio, les micro-ondes, les rayons X, les rayons gamma, les ultraviolets et les infrarouges.</p>
+
+            <p>Dans une onde électromagnétique, ce sont le <strong>champ électrique</strong> et le <strong>champ magnétique</strong> qui oscillent, et ces oscillations sont perpendiculaires entre elles, mais aussi perpendiculaires à la direction de propagation. Les ondes électromagnétiques ont la particularité de <strong>ne pas avoir besoin d'un milieu matériel</strong> pour se propager : elles peuvent voyager dans le vide, à la vitesse de la lumière (c ≈ 3 × 10⁸ m/s).</p>
+
+            <h3>3.4. Les ondes sismiques S (secondaires)</h3>
+            <p>Lors d'un tremblement de terre, l'énergie libérée au foyer du séisme se propage dans la Terre sous forme d'ondes sismiques. Parmi celles-ci, les <strong>ondes S</strong> (ou ondes secondaires) sont des ondes transversales : le sol vibre perpendiculairement à la direction de propagation de l'onde. Ces ondes sont plus lentes que les ondes P (primaires), mais elles sont plus destructrices, car elles provoquent des mouvements de cisaillement importants dans les structures.</p>
+
+            <h2>4. Représentation schématique d'une onde transversale</h2>
+            <p>Pour bien visualiser une onde transversale, on la représente souvent sous la forme d'une "courbe sinusoïdale" qui se propage dans le temps. Voici une description détaillée de ce que l'on observe :</p>
+
+            <p>Imaginons une corde horizontale très longue, tendue entre deux points fixes, à l'instant t = 0. À cet instant, l'extrémité gauche est animée d'un mouvement vertical rapide : elle monte, atteint un maximum (la <strong>crête</strong>), redescend, passe par sa position d'équilibre, descend plus bas (le <strong>creux</strong>), puis remonte à sa position d'équilibre. Pendant ce temps, l'extrémité droite de la corde est immobile, car la perturbation n'a pas encore eu le temps de l'atteindre.</p>
+
+            <p>Ainsi, à t = 0, la corde a la forme d'une demi-sinusoïde : une bosse suivie d'un creux, qui s'étend sur une certaine longueur à partir de l'extrémité gauche. Cette forme constitue l'<strong>onde</strong>.</p>
+
+            <p>Quelques instants plus tard (à t = T/4, soit un quart de période), la forme s'est déplacée vers la droite, et chaque point de la corde a déjà effectué une partie de son oscillation verticale. La forme générale de l'onde reste la même, mais elle s'est propagée d'une certaine distance, appelée la <strong>longueur d'onde</strong> λ au bout d'une période complète T.</p>
+
+            <p>On peut suivre ainsi l'évolution de la corde à différents instants :</p>
+            <ul>
+                <li>À t = 0 : la forme initiale est concentrée près de l'extrémité gauche.</li>
+                <li>À t = T/4 : la forme s'est déplacée vers la droite, mais reste identique à elle-même (translation horizontale).</li>
+                <li>À t = T/2 : la forme est centrée sur le milieu de la corde.</li>
+                <li>À t = T : la forme a atteint l'extrémité droite, et un nouveau cycle commence à gauche.</li>
+            </ul>
+
+            <p>Ce qu'il faut bien comprendre, c'est que <strong>ce n'est pas la matière qui se déplace sur de longues distances</strong>, mais uniquement la <strong>forme de la déformation</strong> qui se propage. Les points du milieu, eux, oscillent seulement autour de leur position d'équilibre, en restant sur place.</p>
+
+            <h2>5. Les grandeurs caractéristiques d'une onde transversale</h2>
+            <p>Pour décrire complètement une onde transversale, on utilise plusieurs grandeurs physiques fondamentales. Chacune apporte une information spécifique sur l'onde.</p>
+
+            <h3>5.1. La direction de propagation</h3>
+            <p>C'est la direction dans laquelle l'onde se déplace. Elle est définie par un vecteur d'onde, noté parfois →k, qui pointe dans la direction et le sens de propagation. Pour une corde horizontale, si l'onde va de la gauche vers la droite, la direction de propagation est celle de l'axe (Ox), orienté positivement vers la droite.</p>
+
+            <h3>5.2. La perturbation</h3>
+            <p>La perturbation, notée souvent y(x, t), représente le déplacement d'un point du milieu par rapport à sa position d'équilibre. Pour une onde transversale se propageant le long de l'axe (Ox), la perturbation est dirigée selon l'axe (Oy) ou (Oz), c'est-à-dire perpendiculairement à (Ox). La perturbation dépend à la fois de la position x du point considéré et de l'instant t où l'on observe l'onde.</p>
+
+            <h3>5.3. L'amplitude A</h3>
+            <p>L'amplitude est la <strong>valeur maximale</strong> de la perturbation. Elle représente l'écart le plus grand entre la position d'un point du milieu et sa position d'équilibre. On la note A, et elle s'exprime en mètres (m) pour les ondes mécaniques.</p>
+
+            <p>L'amplitude est une grandeur très importante, car elle est directement liée à l'<strong>énergie transportée</strong> par l'onde. Plus l'amplitude est grande, plus l'onde transporte d'énergie. Par exemple, une vague de 50 cm d'amplitude transporte beaucoup moins d'énergie qu'une vague de 5 mètres d'amplitude.</p>
+
+            <h3>5.4. La longueur d'onde λ (lambda)</h3>
+            <p>La longueur d'onde est la <strong>distance parcourue par l'onde pendant une période T</strong>. Elle correspond aussi à la distance entre :</p>
+            <ul>
+                <li>deux <strong>crêtes consécutives</strong> (les points les plus hauts de l'onde).</li>
+                <li>deux <strong>creux consécutifs</strong> (les points les plus bas).</li>
+                <li>deux points du milieu qui vibrent en <strong>phase</strong> (de la même manière) au même instant.</li>
+            </ul>
+            <p>La longueur d'onde se note λ (lettre grecque "lambda") et s'exprime en mètres (m). Pour des ondes très courtes (comme la lumière visible), on utilise le nanomètre (1 nm = 10⁻⁹ m). Pour des ondes très longues (comme les ondes radio), on parle de mètres, voire de kilomètres.</p>
+
+            <h3>5.5. La fréquence f</h3>
+            <p>La fréquence représente le <strong>nombre d'oscillations complètes</strong> effectuées par la source (ou par un point du milieu) en <strong>une seconde</strong>. Elle se note f et s'exprime en Hertz (Hz).</p>
+
+            <p>Par exemple, une fréquence de 50 Hz signifie que la perturbation se répète 50 fois par seconde. Une fréquence de 1 kHz (kilohertz) correspond à 1000 oscillations par seconde, et une fréquence de 1 MHz (mégahertz) à un million d'oscillations par seconde.</p>
+
+            <h3>5.6. La période T</h3>
+            <p>La période T est la <strong>durée d'une oscillation complète</strong> d'un point du milieu. Elle s'exprime en secondes (s). La période est l'inverse de la fréquence :</p>
+            <div class="formule">T = 1 / f</div>
+            <p>Ainsi, si f = 50 Hz, alors T = 1/50 = 0,02 s = 20 ms (vingt millisecondes).</p>
+
+            <h3>5.7. La célérité (vitesse de propagation) v</h3>
+            <p>La célérité, aussi appelée vitesse de propagation, est la <strong>vitesse à laquelle l'onde se déplace</strong> dans le milieu. Elle s'exprime en mètres par seconde (m/s). La célérité est une propriété du milieu : elle ne dépend pas de la source de l'onde, mais des caractéristiques physiques du milieu (masse volumique, élasticité, température…).</p>
+
+            <p>La relation fondamentale entre la célérité v, la longueur d'onde λ et la fréquence f est :</p>
+            <div class="formule">v = λ × f</div>
+            <p>Cette relation est universelle pour toutes les ondes périodiques. On peut aussi l'écrire sous la forme :</p>
+            <div class="formule">λ = v × T = v / f</div>
+
+            <h2>6. La célérité selon le milieu</h2>
+            <p>La vitesse d'une onde transversale dépend fortement du milieu dans lequel elle se propage. Voici quelques exemples concrets :</p>
+
+            <h3>6.1. Sur une corde tendue</h3>
+            <p>Pour une onde transversale se propageant sur une corde, la célérité est donnée par la formule :</p>
+            <div class="formule">v = √(F / μ)</div>
+            <p>où :</p>
+            <ul>
+                <li><em>F</em> est la tension de la corde, exprimée en newtons (N).</li>
+                <li><em>μ</em> est la masse linéique de la corde (masse par unité de longueur), exprimée en kg/m.</li>
+            </ul>
+            <p>Ainsi, plus la corde est tendue, plus l'onde se propage vite. Et plus la corde est lourde (masse linéique élevée), plus l'onde se propage lentement.</p>
+
+            <div class="exemple">
+                <strong>Exemple :</strong> Une corde de guitare a une masse linéique μ = 5 × 10⁻⁴ kg/m et est tendue avec une force F = 50 N. La vitesse de propagation de l'onde est :<br>
+                v = √(50 / 5 × 10⁻⁴) = √(10⁵) ≈ 316 m/s.
+            </div>
+
+            <h3>6.2. La lumière dans le vide</h3>
+            <p>Pour les ondes électromagnétiques se propageant dans le vide, la célérité est constante et vaut :</p>
+            <div class="formule">c = 2,998 × 10⁸ m/s ≈ 3 × 10⁸ m/s</div>
+            <p>Cette valeur est une constante fondamentale de la physique. Dans un milieu autre que le vide (par exemple dans l'eau ou dans le verre), la lumière se propage un peu moins vite.</p>
+
+            <h2>7. Observation expérimentale d'une onde transversale</h2>
+            <p>Pour observer une onde transversale, on peut réaliser une expérience simple : on attache une corde à un mur, on la tend bien, puis on agite rapidement son extrémité libre de bas en haut, puis de haut en bas. On observe alors qu'une déformation (une "vague") se propage le long de la corde depuis notre main jusqu'au mur, où elle se réfléchit et repart en sens inverse. Les deux ondes (aller et retour) se superposent et peuvent former des figures d'interférence appelées <strong>ondes stationnaires</strong> si la fréquence est bien choisie.</p>
+
+            <p>Cette expérience permet de visualiser directement la direction perpendiculaire de la perturbation (verticale) par rapport à la direction de propagation (horizontale), ce qui est la signature d'une onde transversale.</p>
+
+            <h2>8. Différence entre onde transversale et onde longitudinale</h2>
+            <p>Pour bien comprendre ce qui distingue une onde transversale d'une onde longitudinale, voici un tableau comparatif :</p>
+
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="background:#7C3AED; color:white;">
+                    <th style="padding:12px; border:1px solid #ccc;">Caractéristique</th>
+                    <th style="padding:12px; border:1px solid #ccc;">Onde transversale</th>
+                    <th style="padding:12px; border:1px solid #ccc;">Onde longitudinale</th>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ccc;"><strong>Direction de la perturbation</strong></td>
+                    <td style="padding:10px; border:1px solid #ccc;">Perpendiculaire à la propagation</td>
+                    <td style="padding:10px; border:1px solid #ccc;">Parallèle à la propagation</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ccc;"><strong>Visualisation</strong></td>
+                    <td style="padding:10px; border:1px solid #ccc;">Crêtes et creux (forme sinusoïdale)</td>
+                    <td style="padding:10px; border:1px solid #ccc;">Compressions et dilatations</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ccc;"><strong>Exemples courants</strong></td>
+                    <td style="padding:10px; border:1px solid #ccc;">Corde, vagues, lumière, ondes S</td>
+                    <td style="padding:10px; border:1px solid #ccc;">Son, ressort, ondes P</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border:1px solid #ccc;"><strong>Type de milieu</strong></td>
+                    <td style="padding:10px; border:1px solid #ccc;">Surface ou solide (en général)</td>
+                    <td style="padding:10px; border:1px solid #ccc;">Solide, liquide, gaz</td>
+                </tr>
+            </table>
+
+            <h2>9. Applications des ondes transversales</h2>
+            <p>Les ondes transversales ont de très nombreuses applications concrètes, dans des domaines très variés :</p>
+
+            <h3>9.1. Musique et instruments à cordes</h3>
+            <p>Dans un violon, une guitare, un piano ou un piano, les cordes vibrent transversalement. La fréquence de vibration de la corde (donc la hauteur du son) dépend de sa longueur, de sa tension et de sa masse linéique. Cette vibration est ensuite transmise à l'air ambiant sous forme d'onde longitudinale (le son).</p>
+
+            <h3>9.2. Télécommunications</h3>
+            <p>Les ondes radio, qui sont des ondes électromagnétiques transversales, sont utilisées pour la diffusion de la radio, de la télévision, et pour les communications sans fil (Wi-Fi, Bluetooth, téléphone portable). Chaque bande de fréquence a ses propres caractéristiques et utilisations.</p>
+
+            <h3>9.3. Imagerie médicale</h3>
+            <p>Les rayons X, qui sont des ondes électromagnétiques transversales de très haute fréquence, sont utilisés pour radiographier les os et détecter certaines pathologies. L'IRM (Imagerie par Résonance Magnétique) utilise aussi des ondes électromagnétiques.</p>
+
+            <h3>9.4. Sismologie</h3>
+            <p>Les ondes S, ondes transversales qui se propagent dans la Terre, sont étudiées par les sismologues pour comprendre la structure interne de notre planète. Leur étude permet aussi de localiser l'épicentre d'un séisme.</p>
+
+            <h3>9.5. Optique</h3>
+            <p>La lumière visible est une onde électromagnétique transversale. Toute l'optique géométrique (miroirs, lentilles, prismes) repose sur le comportement de cette onde transversale. La polarisation de la lumière est d'ailleurs un phénomène spécifique aux ondes transversales.</p>
+
+            <h2>10. La polarisation : une propriété exclusive des ondes transversales</h2>
+            <div class="remarque">
+                <strong>Point important :</strong> la polarisation est un phénomène qui ne concerne QUE les ondes transversales. Elle n'existe pas pour les ondes longitudinales.
+            </div>
+            <p>Une onde transversale peut vibrer dans différents plans perpendiculaires à sa direction de propagation. Par exemple, la lumière naturelle vibre dans tous les plans perpendiculaires à sa direction de propagation. Mais on peut, à l'aide d'un filtre appelé <strong>polariseur</strong>, ne laisser passer que la lumière qui vibre dans un plan particulier. La lumière ainsi obtenue est dite <strong>lumière polarisée</strong>.</p>
+
+            <p>Ce phénomène a de nombreuses applications :</p>
+            <ul>
+                <li><strong>Les lunettes polarisantes :</strong> elles filtrent les reflets parasites (par exemple les reflets du soleil sur l'eau ou sur la neige).</li>
+                <li><strong>Les écrans d'ordinateur et de téléphone :</strong> ils utilisent la polarisation pour afficher les images.</li>
+                <li><strong>La photoélasticimétrie :</strong> technique utilisée pour visualiser les contraintes mécaniques dans les matériaux transparents.</li>
+            </ul>
+
+            <h2>11. Résumé et points clés à mémoriser</h2>
+            <div class="remarque">
+                <strong>Ce qu'il faut absolument retenir :</strong>
+                <ul>
+                    <li>Une onde transversale est une onde dont la perturbation est <strong>perpendiculaire</strong> à la direction de propagation.</li>
+                    <li>Exemples emblématiques : <strong>corde vibrante, vagues, ondes électromagnétiques (lumière), ondes sismiques S</strong>.</li>
+                    <li>Les grandeurs fondamentales sont : <strong>amplitude A, longueur d'onde λ, fréquence f, période T, célérité v</strong>.</li>
+                    <li>Relation fondamentale : <strong>v = λ × f</strong> (et T = 1/f).</li>
+                    <li>La célérité dépend du milieu, pas de la source.</li>
+                    <li>Pour une corde tendue : <strong>v = √(F/μ)</strong>.</li>
+                    <li>La <strong>polarisation</strong> est une propriété exclusive des ondes transversales.</li>
+                </ul>
+            </div>
+
+            <h2>12. Exercices d'application simples</h2>
+
+            <h3>Exercice 1</h3>
+            <p>Une onde transversale se propage sur une corde avec une célérité v = 20 m/s et une fréquence f = 4 Hz. Calculez la longueur d'onde et la période.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                T = 1/f = 1/4 = 0,25 s.<br>
+                λ = v/f = 20/4 = 5 m.
+            </div>
+
+            <h3>Exercice 2</h3>
+            <p>Une lumière jaune a une longueur d'onde λ = 600 nm dans le vide. Calculez sa fréquence, sachant que c = 3 × 10⁸ m/s.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                f = c/λ = (3 × 10⁸) / (600 × 10⁻⁹) = 5 × 10¹⁴ Hz.
+            </div>
+
+            <h3>Exercice 3</h3>
+            <p>Une corde de masse linéique μ = 0,1 kg/m est tendue avec une force F = 40 N. Calculez la vitesse de propagation d'une onde transversale sur cette corde.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                v = √(F/μ) = √(40/0,1) = √400 = 20 m/s.
             </div>
         </section>
 

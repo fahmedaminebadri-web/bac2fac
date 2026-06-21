@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1rBEwjeVVXutfLARH95fWEcZNecTkEzEP/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/5B21B6/FFFFFF?text=Filtre+passe-haut" alt="Résumé du filtre passe-haut">
-                <div class="resume-overlay">
-                    <h3>Filtre passe-haut</h3>
-                    <p>Fréquence de coupure et comportement haute fréquence.</p>
-                </div>
+             
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1Da2Dbie3SCcVwCXX0JuUB0ZY8XPHAP1U/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,9 +68,290 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1mtMTd_pcrol7nlwd4agkifEPOGmjA6nn/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
+            </div>
+        </section>
+
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le principe de fonctionnement d'un filtre passe-haut</li>
+                    <li><strong>Calculer</strong> la fonction de transfert d'un filtre RC passe-haut du premier ordre</li>
+                    <li><strong>Définir</strong> la fréquence de coupure fc et le comportement haute fréquence</li>
+                    <li><strong>Tracer et interpréter</strong> le diagramme de Bode (amplitude et phase) d'un filtre passe-haut</li>
+                    <li><strong>Comparer</strong> les filtres passe-haut et passe-bas (dualité)</li>
+                    <li><strong>Appliquer</strong> les filtres passe-haut à des cas concrets (couplage AC, dérivateurs)</li>
+                </ol>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+            <ul>
+                <li>Connaissance du filtre passe-bas passif RC (leçon 3) et de sa fonction de transfert</li>
+                <li>Maîtrise des impédances complexes ZC = 1/(jωC), ZR = R</li>
+                <li>Familiarité avec les diagrammes de Bode et le décibel</li>
+                <li>Compréhension de la dualité temporelle entre condensateur et bobine</li>
+            </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+
+                <h4>1. Introduction et importance du filtre passe-haut</h4>
+                <p>Le filtre passe-haut est le dual exact du filtre passe-bas étudié en leçon 3. Si le filtre passe-bas laisse passer les basses fréquences et atténue les hautes, le filtre passe-haut fait exactement l'inverse : il laisse passer les hautes fréquences et atténue les basses fréquences. Cette complémentarité est exploitée dans d'innombrables applications : élimination de la composante continue (couplage AC), dérivation analogique, suppression du bruit basse fréquence, séparation des composantes spectrales en audio, etc.</p>
+                <p>Le filtre passe-haut est essentiel dans les chaînes de mesure, les télécommunications, l'audio haute fidélité, et les systèmes électroniques en général. Par exemple :</p>
+                <ul>
+                    <li>Dans un amplificateur audio, on utilise un filtre passe-haut pour supprimer le « ronflement » basse fréquence du secteur 50/60 Hz</li>
+                    <li>Dans une chaîne de mesure, le filtre passe-haut élimine la dérive lente (offset) du signal</li>
+                    <li>Dans un récepteur radio, le filtre passe-haut élimine le bruit basse fréquence et prépare le signal pour la démodulation</li>
+                    <li>Dans un système d'acquisition, le filtre passe-haut couplage AC permet de mesurer uniquement les variations rapides du signal</li>
+                </ul>
+
+                <h4>2. Définition d'un filtre passe-haut</h4>
+                <p>Un <strong>filtre passe-haut</strong> (high-pass filter) est un circuit qui :</p>
+                <ul>
+                    <li>Laisse passer les signaux de <strong>haute fréquence</strong> avec un gain maximal (idéalement unité)</li>
+                    <li>Atténue les signaux de <strong>basse fréquence</strong>, y compris la composante continue (DC)</li>
+                </ul>
+                <p>La <strong>bande passante</strong> est l'intervalle [fc, +∞[, où fc est la fréquence de coupure. En dehors de cette bande (fréquences inférieures à fc), le signal est atténué. Idéalement, un filtre passe-haut élimine totalement la composante continue (DC), mais en pratique il existe toujours un résidu d'atténuation finie.</p>
+
+                <h4>3. Circuit RC passe-haut (configuration en tension)</h4>
+                <p>Le filtre passe-haut passif du premier ordre le plus simple est le circuit RC série où la tension de sortie est prélevée aux bornes de la résistance. C'est la configuration duale du filtre passe-bas (leçon 3) :</p>
+                <p>Dans le filtre passe-bas, la sortie est prélevée aux bornes de C. Dans le filtre passe-haut, la sortie est prélevée aux bornes de R. Cette simple permutation de la sortie change radicalement le comportement en fréquence du filtre.</p>
+                <p>Le circuit est composé d'un condensateur C en série avec une résistance R, avec :</p>
+                <ul>
+                    <li>Le signal d'entrée V_e appliqué à l'ensemble R-C</li>
+                    <li>Le signal de sortie V_s prélevé aux bornes de R</li>
+                </ul>
+                <p>Le <strong>principe physique</strong> repose sur le comportement de l'impédance du condensateur :</p>
+                <div class="plan-highlight">
+                    <strong>Z_C = 1/(jωC)</strong><br>
+                    |Z_C| = 1/(ωC) — décroît quand ω augmente
+                </div>
+                <ul>
+                    <li>À <strong>basse fréquence</strong> (ω → 0) : |Z_C| → ∞. Le condensateur bloque le signal. Le courant est quasi nul, et la tension aux bornes de R est quasi nulle : V_s → 0.</li>
+                    <li>À <strong>haute fréquence</strong> (ω → ∞) : |Z_C| → 0. Le condensateur se comporte comme un court-circuit (un fil). Toute la tension d'entrée se retrouve aux bornes de R : V_s ≈ V_e.</li>
+                    <li>Le circuit se comporte donc comme un <strong>diviseur de tension</strong> dépendant de la fréquence, qui laisse passer les hautes fréquences et atténue les basses.</li>
+                </ul>
+
+                <h4>4. Calcul de la fonction de transfert</h4>
+                <p>En utilisant le diviseur de tension dans le domaine complexe (en supposant la sortie à haute impédance) :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = V_s / V_e = R / (R + Z_C) = R / (R + 1/(jωC))</strong>
+                </div>
+                <p>En multipliant numérateur et dénominateur par jωC :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = jωRC / (1 + jωRC)</strong>
+                </div>
+                <p>On pose la pulsation de coupure ωc = 1/(RC), d'où :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = j(ω/ωc) / (1 + j(ω/ωc))</strong>
+                </div>
+                <p>Cette fonction de transfert est l'<strong>exacte duale</strong> de celle du filtre passe-bas RC. On peut l'écrire aussi sous la forme :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = 1 / (1 + 1/(jω/ωc)) = 1 / (1 − j(ωc/ω))</strong>
+                </div>
+                <p>Le module et la phase sont :</p>
+                <div class="plan-highlight">
+                    <strong>|H(jω)| = (ω/ωc) / √(1 + (ω/ωc)²) = 1/√(1 + (ωc/ω)²)</strong><br>
+                    <strong>φ(ω) = π/2 − arctan(ω/ωc) = arctan(ωc/ω)</strong>
+                </div>
+
+                <h4>5. Fréquence de coupure fc et gain à −3 dB</h4>
+                <p>La fréquence de coupure est définie de la même manière que pour le filtre passe-bas : c'est la fréquence pour laquelle le gain vaut 1/√2 du gain maximal en bande passante (qui est 1 pour le passe-haut). À ω = ωc :</p>
+                <div class="plan-highlight">
+                    <strong>|H(jωc)| = 1/√2 ≈ 0,707</strong><br>
+                    soit en décibels : G_dB = 20·log₁₀(0,707) ≈ −3 dB
+                </div>
+                <p>La fréquence de coupure est :</p>
+                <div class="plan-highlight">
+                    <strong>fc = ωc/(2π) = 1/(2π·R·C)</strong>
+                </div>
+                <p>Comportement asymptotique :</p>
+                <ul>
+                    <li>Pour <strong>ω << ωc</strong> : |H| ≈ ω/ωc, qui croît en +20 dB/décade. Le filtre atténue fortement les basses fréquences.</li>
+                    <li>Pour <strong>ω = ωc</strong> : |H| = 1/√2 (−3 dB), φ = +45°.</li>
+                    <li>Pour <strong>ω >> ωc</strong> : |H| ≈ 1 (0 dB), φ ≈ 0°. Le filtre est transparent en haute fréquence.</li>
+                </ul>
+
+                <h4>6. Diagramme de Bode en amplitude</h4>
+                <p>Le diagramme de Bode en amplitude d'un filtre passe-haut RC présente deux asymptotes :</p>
+                <ul>
+                    <li>Une <strong>droite de pente +20 dB/décade</strong> pour ω << ωc (région d'atténuation)</li>
+                    <li>Une <strong>asymptote horizontale à 0 dB</strong> pour ω >> ωc (bande passante)</li>
+                </ul>
+                <p>Les deux asymptotes se croisent exactement à fc. La courbe réelle passe par le point (fc, −3 dB) et forme un « coin arrondi » autour de la fréquence de coupure, avec une erreur maximale de 3 dB au point de cassure et de 1 dB à fc/2 et 2·fc.</p>
+                <p>Pour tracer rapidement le diagramme, on peut retenir quelques points caractéristiques :</p>
+                <ul>
+                    <li>À <strong>fc/10</strong> : G_dB = −20 dB</li>
+                    <li>À <strong>fc</strong> : G_dB = −3 dB</li>
+                    <li>À <strong>10·fc</strong> : G_dB = 0 dB</li>
+                </ul>
+
+                <h4>7. Diagramme de Bode en phase</h4>
+                <p>Le déphasage φ(ω) entre la sortie et l'entrée est :</p>
+                <div class="plan-highlight">
+                    <strong>φ(ω) = +arctan(ωc/ω)</strong>
+                </div>
+                <p>Le signe positif indique que la sortie est en <strong>avance</strong> sur l'entrée (contrairement au filtre passe-bas où elle est en retard). Comportement :</p>
+                <ul>
+                    <li>Pour <strong>ω << ωc</strong> : φ ≈ +90° (sortie en quadrature avance sur l'entrée)</li>
+                    <li>Pour <strong>ω = ωc</strong> : φ = +45°</li>
+                    <li>Pour <strong>ω >> ωc</strong> : φ → 0° (sortie en phase avec l'entrée)</li>
+                </ul>
+                <p>Le diagramme de phase est l'image miroir (par rapport à l'axe horizontal) de celui du filtre passe-bas. Cette dualité traduit l'<strong>équivalence mathématique</strong> entre les deux filtres.</p>
+
+                <h4>8. Comportement temporel : réponse à un échelon</h4>
+                <p>La réponse du filtre passe-haut à un échelon de tension E à t = 0 est :</p>
+                <div class="plan-highlight">
+                    <strong>v_s(t) = E · e^(−t/τ)</strong>, avec τ = R·C
+                </div>
+                <p>Le signal de sortie démarre à E (la composante continue passe instantanément) et décroît exponentiellement vers 0 avec la constante de temps τ = R·C. C'est le comportement d'un <strong>couplage AC</strong> (le condensateur bloque la composante continue à long terme, mais la laisse passer brièvement lors d'une transition rapide).</p>
+                <p>Pour un signal carré, le filtre passe-haut transforme le signal carré en une suite d'<strong>impulsions positive et négative</strong> au moment des transitions, ce qui correspond à la dérivée du signal (le filtre passe-haut est l'approximation d'un dérivateur pour ω >> ωc).</p>
+
+                <h4>9. Le filtre passe-haut comme dérivateur</h4>
+                <p>Pour ω >> ωc (c'est-à-dire pour des signaux dont la fréquence est grande devant fc), on a :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) ≈ jωRC</strong>
+                </div>
+                <p>En temporel, cela correspond à :</p>
+                <div class="plan-highlight">
+                    <strong>v_s(t) ≈ RC · dv_e/dt</strong>
+                </div>
+                <p>Le filtre passe-haut fonctionne donc comme un <strong>dérivateur analogique</strong> pour les signaux à haute fréquence. C'est cette propriété qui est exploitée dans les circuits de détection de fronts en logique numérique, et dans les trigger de Schmitt des oscilloscopes numériques.</p>
+                <p>Inversement, pour ω << ωc, on a H(jω) ≈ jωRC, qui tend vers 0 : le filtre passe-haut élimine les basses fréquences et donc la composante continue.</p>
+
+                <h4>10. Comparaison détaillée avec le filtre passe-bas</h4>
+                <table class="plan-table">
+                    <tr><th>Critère</th><th>Filtre passe-bas RC</th><th>Filtre passe-haut RC</th></tr>
+                    <tr><td>Fonction de transfert</td><td>1 / (1 + jω/ωc)</td><td>jω/ωc / (1 + jω/ωc)</td></tr>
+                    <tr><td>Bande passante</td><td>[0, fc]</td><td>[fc, +∞[</td></tr>
+                    <tr><td>Sortie prélevée</td><td>Bornes de C</td><td>Bornes de R</td></tr>
+                    <tr><td>Comportement DC</td><td>Transparent (V_s = V_e)</td><td>Bloqué (V_s = 0)</td></tr>
+                    <tr><td>Comportement HF</td><td>Bloqué (V_s = 0)</td><td>Transparent (V_s = V_e)</td></tr>
+                    <tr><td>Pente basse fréquence</td><td>0 dB/décade</td><td>+20 dB/décade</td></tr>
+                    <tr><td>Pente haute fréquence</td><td>−20 dB/décade</td><td>0 dB/décade</td></tr>
+                    <tr><td>Phase basse fréquence</td><td>0°</td><td>+90°</td></tr>
+                    <tr><td>Phase haute fréquence</td><td>−90°</td><td>0°</td></tr>
+                    <tr><td>Phase à fc</td><td>−45°</td><td>+45°</td></tr>
+                    <tr><td>Réponse à un échelon</td><td>Charge exponentielle</td><td>Décharge exponentielle</td></tr>
+                    <tr><td>Équivalent temporel</td><td>Intégrateur (pour ω << ωc)</td><td>Dérivateur (pour ω >> ωc)</td></tr>
+                </table>
+
+                <h4>11. Topologies alternatives du filtre passe-haut</h4>
+                <p>Plusieurs autres topologies permettent de réaliser un filtre passe-haut :</p>
+                <ul>
+                    <li><strong>Filtre CR (C série, R parallèle) :</strong> c'est le filtre étudié ci-dessus. Le plus simple.</li>
+                    <li><strong>Filtre RL passe-haut :</strong> on utilise une inductance L en parallèle avec la résistance de charge. La fonction de transfert est H(jω) = jωL/(R + jωL). La fréquence de coupure est fc = R/(2π·L).</li>
+                    <li><strong>Filtre passe-haut d'ordre supérieur :</strong> en cascadant plusieurs filtres CR avec isolation, on obtient des pentes de −40 dB/décade (2ème ordre), −60 dB/décade (3ème ordre), etc.</li>
+                    <li><strong>Filtre passe-haut actif :</strong> utilise un AOP en plus du réseau RC. Permet d'amplifier le signal en bande passante et d'avoir une impédance d'entrée élevée (utile dans les chaînes de mesure).</li>
+                </ul>
+
+                <h4>12. Filtre passe-haut actif à AOP</h4>
+                <p>Le filtre passe-haut actif le plus simple combine un réseau CR d'entrée avec un AOP en montage non-inverseur. Le circuit est composé de :</p>
+                <ul>
+                    <li>Un condensateur C en série avec une résistance R₁ à l'entrée non-inverseuse de l'AOP</li>
+                    <li>Un réseau de contre-réaction R₂, R₃ sur l'AOP</li>
+                </ul>
+                <p>La fonction de transfert est :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = (1 + R₂/R₃) · jωR₁C / (1 + jωR₁C) = A_v · j(ω/ωc) / (1 + j(ω/ωc))</strong>
+                </div>
+                <p>Le gain en bande passante est A_v = 1 + R₂/R₃ (≥ 1), configurable par le rapport des résistances. La fréquence de coupure est toujours ωc = 1/(R₁C).</p>
+                <p>Comme pour le filtre passe-bas actif, l'AOP apporte :</p>
+                <ul>
+                    <li>Un gain configurable (pouvant compenser l'atténuation naturelle du filtre passif)</li>
+                    <li>Une impédance d'entrée très élevée (nouvelle condition de non-charge de la source)</li>
+                    <li>Une impédance de sortie très faible (meilleure drive de la charge)</li>
+                    <li>L'isolation entre étages pour la mise en cascade</li>
+                </ul>
+
+                <h4>13. Comportement réel et limitations pratiques</h4>
+                <p>Plusieurs limitations pratiques affectent les filtres passe-haut réels :</p>
+                <ul>
+                    <li><strong>Atténuation finie en DC :</strong> à ω = 0, |H| = 0 idéalement. En pratique, il existe toujours une composante continue résiduelle à cause des courants de fuite du condensateur et des imperfections des composants.</li>
+                    <li><strong>Impédance de source :</strong> la fréquence de coupure effective dépend de l'impédance de la source, comme pour le filtre passe-bas.</li>
+                    <li><strong>Composants parasites :</strong> aux hautes fréquences, les inductances parasites des fils et des composants deviennent significatives et modifient la réponse.</li>
+                    <li><strong>Tolérance des composants :</strong> la précision de fc dépend de la tolérance de R et de C. Pour des fc précises, on utilise des résistances et condensateurs de précision (1% ou mieux).</li>
+                    <li><strong>Stabilité thermique :</strong> les condensateurs céramique (C0G/NP0) sont préférables aux X7R/Y5V pour la stabilité de fc avec la température.</li>
+                </ul>
+
+                <h4>14. Mise en cascade de filtres passe-haut</h4>
+                <p>Pour augmenter la pente et la sélectivité du filtre, on peut cascader plusieurs filtres CR passe-haut du premier ordre. Si on utilise un suiveur à AOP entre chaque étage (pour éviter l'interaction), chaque étage ajoute −20 dB/décade de pente, et la pente totale est de N·20 dB/décade pour N étages cascadés.</p>
+                <p>Un filtre passe-haut d'ordre N a une fonction de transfert de la forme :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = A_v · (jω/ωc)ⁿ / [(1 + jω/ωc₁) · (1 + jω/ωc₂) · ... · (1 + jω/ωcₙ)]</strong>
+                </div>
+                <p>où les ωc_i sont les pulsations de coupure de chaque étage. Pour un filtre de Butterworth, toutes les pulsations de coupure sont égales à ωc, et l'amplitude est plate dans la bande passante. Pour Tchebychev, il y a des ondulations, etc.</p>
+
+                <h4>15. Applications pratiques détaillées</h4>
+                <p>Les filtres passe-haut ont des applications extraordinairement variées :</p>
+                <ul>
+                    <li><strong>Couplage AC entre étages d'amplification :</strong> dans les chaînes audio, on utilise des condensateurs de couplage entre les étages pour bloquer la composante continue et ne transmettre que les variations du signal. Cela permet d'ajuster indépendamment les points de fonctionnement DC de chaque étage.</li>
+                    <li><strong>Suppression de la dérive en instrumentation :</strong> les capteurs (thermocouples, jauges de contrainte) produisent souvent une tension continue qui dérive lentement avec la température. Un filtre passe-haut avec fc = 0,1 Hz élimine cette dérive tout en laissant passer les variations utiles du signal.</li>
+                    <li><strong>Élimination du ronflement 50 Hz :</strong> dans les amplificateurs audio, un filtre passe-haut avec fc = 80-100 Hz supprime les ronflements basse fréquence du secteur et les vibrations mécaniques des haut-parleurs.</li>
+                    <li><strong>Filtrage des tweeters :</strong> dans les enceintes acoustiques, le filtre passe-haut (crossover) envoie les hautes fréquences au tweeter et bloque les basses fréquences qui pourraient l'endommager.</li>
+                    <li><strong>Récepteurs radio à modulation d'amplitude (AM) :</strong> après démodulation, un filtre passe-haut avec fc = 50-100 Hz élimine la composante basse fréquence et le bruit de ronflement.</li>
+                    <li><strong>Détection de fronts en logique :</strong> un filtre CR suivi d'un trigger de Schmitt détecte les transitions rapides (fronts montants et descendants) d'un signal logique.</li>
+                    <li><strong>Dérivateur analogique :</strong> pour ω >> ωc, le filtre passe-haut se comporte comme un dérivateur. Utilisé dans les boucles à verrouillage de phase (PLL) et les asservissements.</li>
+                    <li><strong>Réduction du bruit en sortie d'un convertisseur numérique-analogique :</strong> après un CNA, un filtre passe-haut élimine la composante continue (offset) du signal.</li>
+                    <li><strong>Électrocardiogramme (ECG) :</strong> les signaux ECG sont dans la bande 0,05-150 Hz. Un filtre passe-haut avec fc = 0,05 Hz élimine la dérive baseline due à la respiration et au mouvement.</li>
+                    <li><strong>Systèmes audio Bluetooth :</strong> un filtre passe-haut avec fc = 20 Hz élimine les fréquences infra-audibles qui consomment de la puissance sans apporter d'information utile.</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Fonction de transfert :</strong> H(jω) = j(ω/ωc) / (1 + j(ω/ωc)) avec ωc = 1/(RC)</li>
+                    <li><strong>Fréquence de coupure fc = 1/(2πRC)</strong>, où l'atténuation est de −3 dB</li>
+                    <li><strong>Bande passante :</strong> [fc, +∞[</li>
+                    <li><strong>Bande atténuée :</strong> [0, fc]</li>
+                    <li><strong>Pente d'atténuation :</strong> +20 dB/décade (filtre du premier ordre)</li>
+                    <li><strong>Déphasage à fc :</strong> +45° (sortie en avance sur l'entrée)</li>
+                    <li><strong>Déphasage en haute fréquence :</strong> tend vers 0°</li>
+                    <li><strong>Déphasage en basse fréquence :</strong> tend vers +90°</li>
+                    <li><strong>Équivalent temporel :</strong> dérivateur pour ω >> ωc</li>
+                    <li><strong>Couplage AC :</strong> bloque la composante continue, laisse passer les variations</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Couplage AC</strong> : blocage de la composante continue entre étages d'amplification</li>
+                    <li><strong>Suppression de la dérive</strong> : élimination des offsets et dérives lentes des capteurs</li>
+                    <li><strong>Filtrage audio</strong> : suppression des ronflements 50/60 Hz et des fréquences infra-audibles</li>
+                    <li><strong>Crossover tweeter</strong> : filtrage passe-haut pour haut-parleur d'aigus</li>
+                    <li><strong>Dérivateur analogique</strong> : pour PLL, asservissements, détection de fronts</li>
+                    <li><strong>ECG / EEG</strong> : élimination de la dérive baseline en instrumentation médicale</li>
+                    <li><strong>Modems</strong> : filtrage des composantes basse fréquence en transmission de données</li>
+                    <li><strong>Trigger de Schmitt</strong> : détection des transitions rapides dans les signaux logiques</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1 (dimensionnement) :</strong> Concevoir un filtre passe-haut avec fc = 100 Hz, C = 100 nF. Calculer R et vérifier fc. Choisir une valeur normalisée.</li>
+                    <li><strong>Exercice 2 (calcul de gain) :</strong> Pour le filtre CR avec R = 10 kΩ et C = 1 µF, déterminer : (a) fc, (b) le gain à 10 Hz, 100 Hz, 1 kHz et 10 kHz en dB, (c) le déphasage à ces fréquences.</li>
+                    <li><strong>Exercice 3 (tracé du diagramme de Bode) :</strong> Tracer le diagramme de Bode (amplitude et phase) d'un filtre passe-haut avec fc = 500 Hz. Identifier les asymptotes et les points caractéristiques.</li>
+                    <li><strong>Exercice 4 (couplage AC) :</strong> Un amplificateur audio a un point de fonctionnement DC de 5 V en sortie. On le connecte à un haut-parleur via un condensateur de couplage C = 10 µF et une résistance d'entrée du haut-parleur R = 8 Ω. Calculer la fréquence de coupure fc. Quelle est l'atténuation à 20 Hz (limite basse de l'audible) ?</li>
+                    <li><strong>Exercice 5 (dérivateur) :</strong> Un filtre passe-haut avec R = 10 kΩ et C = 1 µF reçoit en entrée un signal triangulaire d'amplitude 1 V et de fréquence 1 kHz. Décrire qualitativement la forme du signal de sortie. Vérifier que le circuit fonctionne en dérivateur.</li>
+                    <li><strong>Exercice 6 (filtre d'ordre 2) :</strong> On cascade deux filtres CR passe-haut identiques avec fc₁ = fc₂ = 100 Hz. Calculer la nouvelle fonction de transfert, la fréquence de coupure globale, et la pente. Comparer avec un filtre unique.</li>
+                    <li><strong>Exercice 7 (filtre actif) :</strong> Concevoir un filtre passe-haut actif avec fc = 1 kHz, gain en bande passante = 10 (20 dB). Choisir R₁, R₂, R₃ et C₁. Vérifier la fréquence de coupure et le gain.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le filtre passe-haut passif CR est le dual exact du filtre passe-bas RC. Sa fonction de transfert est H(jω) = j(ω/ωc) / (1 + j(ω/ωc)) avec ωc = 1/(RC) et fc = 1/(2πRC). Il laisse passer les fréquences supérieures à fc avec un gain unitaire (0 dB) et atténue les fréquences inférieures à fc avec une pente de +20 dB/décade. Le déphasage varie de +90° (basses fréquences, sortie en avance) à 0° (hautes fréquences, sortie en phase avec l'entrée), en passant par +45° à la coupure. Le filtre passe-haut bloque la composante continue (DC) et se comporte comme un dérivateur pour ω >> ωc. Ses applications sont innombrables : couplage AC entre étages d'amplification, suppression des dérives et offsets en instrumentation, filtrage audio (suppression des ronflements 50/60 Hz, crossovers pour tweeters), détection de fronts en logique, et filtrage des signaux biomédicaux (ECG, EEG).
             </div>
         </section>
 

@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1KrRRj-zo8zq58_GdnkR_P1QrAR3Dywxv/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/EA580C/FFFFFF?text=Circuit+RL" alt="Résumé du Circuit RL">
-                <div class="resume-overlay">
-                    <h3>Circuit RL</h3>
-                    <p>Établissement et annihilation du courant dans un circuit RL.</p>
-                </div>
+              
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1zA_dof5tvujxdokcwpHXXS47ySmLPdV-/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,7 +68,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1dIuuOOu8OfkxWqY9tK5angKZtx7Ju-nU/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -104,69 +102,189 @@
 
             <div class="plan-subsection">
                 <h3>📖 Contenu détaillé</h3>
-                <h4>1. Structure et comportement de la bobine</h4>
-                <p>Une bobine (ou inductance) est un dipôle passif constitué d'un enroulement de fil conducteur autour d'un noyau. Elle stocke l'énergie sous forme de champ magnétique. La tension à ses bornes est directement liée à la variation du courant : <strong>uL(t) = L·(di/dt)</strong>, où L est l'inductance en henrys (H). En régime permanent (courant constant), la bobine se comporte comme un court-circuit car di/dt = 0. L'énergie emmagasinée est <strong>E = ½·L·I²</strong>.</p>
 
-                <h4>2. Établissement du courant dans un circuit RL</h4>
-                <p>L'équation différentielle du circuit série RL est : L·(di/dt) + R·i = E. La solution est :</p>
+                <h4>1. Introduction et contexte historique</h4>
+                <p>Le circuit RL (Résistance-Inductance) est le dual du circuit RC. Si le circuit RC est dominé par le stockage d'énergie électrique dans un champ électrique, le circuit RL est dominé par le stockage d'énergie magnétique dans un champ magnétique. L'étude du circuit RL est intimement liée à la découverte de l'induction électromagnétique par <strong>Michael Faraday</strong> en 1831, formalisée par <strong>Joseph Henry</strong> la même année de manière indépendante. L'henry (H), unité d'inductance, fut nommé en l'honneur de ce dernier.</p>
+                <p>Le circuit RL se distingue du circuit RC par une propriété fondamentale : la <strong>continuité du courant</strong>. Alors que la tension aux bornes d'un condensateur est continue, le courant dans une inductance est continu. Cela signifie qu'une inductance s'oppose aux variations brusques de courant, alors qu'un condensateur s'oppose aux variations brusques de tension. Cette dualité se retrouve partout en physique et conditionne profondément le comportement des deux circuits.</p>
+
+                <h4>2. La bobine : structure, physique et caractéristiques</h4>
+                <p>Une bobine (ou inductance, ou self) est un composant passif à deux bornes constitué d'un enroulement de fil conducteur, généralement de cuivre émaillé, autour d'un support. Le support peut être un simple tube d'air (bobine à air), un noyau de ferrite, un noyau de fer, ou encore une céramique spéciale. Le rôle du noyau est de canaliser et concentrer les lignes de champ magnétique, ce qui multiplie l'inductance par un facteur appelé <strong>perméabilité relative μᵣ</strong>.</p>
+                <p>L'<strong>inductance L</strong> d'une bobine, exprimée en henrys (H), mesure sa capacité à stocker de l'énergie sous forme de champ magnétique. Pour une bobine longue de N spires, de longueur ℓ et de section S :</p>
                 <div class="plan-highlight">
-                    <strong>Courant :</strong> i(t) = (E/R)·(1 − e^(−t/τ)), où τ = L/R<br>
-                    <strong>Tension aux bornes de la bobine :</strong> uL(t) = E·e^(−t/τ)<br>
-                    <strong>Tension aux bornes de la résistance :</strong> uR(t) = E·(1 − e^(−t/τ))
+                    <strong>L = μ₀ · μᵣ · N² · S / ℓ</strong><br>
+                    où μ₀ = 4π·10⁻⁷ H/m est la perméabilité du vide, μᵣ la perméabilité relative du noyau (≈ 1 pour l'air, 100 à 10000 pour la ferrite, 5000 à 100000 pour le fer doux).
                 </div>
-                <p>Le courant croît exponentiellement vers sa valeur finale I_max = E/R.</p>
-
-                <h4>3. Annihilation (rupture) du courant</h4>
-                <p>Lorsque le circuit est soudainement ouvert, l'énergie stockée dans la bobine crée une fem auto-induite qui tend à maintenir le courant :</p>
+                <p>La <strong>loi de Faraday</strong> appliquée à une bobine donne la tension à ses bornes :</p>
+                <div class="plan-highlight">
+                    <strong>u_L(t) = L · (di/dt)</strong>
+                </div>
+                <p>Cette relation montre que la tension est proportionnelle à la <strong>vitesse de variation</strong> du courant, et non au courant lui-même. Les conséquences sont multiples :</p>
                 <ul>
-                    <li>Courant : <strong>i(t) = I₀·e^(−t/τ)</strong></li>
-                    <li>Tension aux bornes de la bobine : <strong>uL(t) = −R·I₀·e^(−t/τ)</strong></li>
+                    <li>En <strong>régime permanent</strong> (courant continu constant), di/dt = 0, donc u_L = 0. La bobine se comporte comme un <strong>court-circuit</strong> parfait en DC.</li>
+                    <li>Lors d'une <strong>variation brutale</strong> du courant, di/dt est très grand, ce qui crée des tensions potentiellement énormes (surtensions destructrices).</li>
+                    <li>L'<strong>énergie stockée</strong> dans la bobine parcourue par un courant I est E_L = ½ · L · I², qui correspond à l'énergie du champ magnétique B²/(2μ) intégrée dans tout le volume.</li>
+                </ul>
+                <p>Pour un circuit magnétique parfait sans saturation, on a la relation linéaire flux-courant : Φ = L · i, où Φ est le flux magnétique total à travers la bobine (en webers, Wb). Le couplage inductif entre deux bobines voisines est à la base du <strong>transformateur</strong>.</p>
+                <p>En régime sinusoïdal, l'impédance complexe d'une bobine est Z_L = jωL : son module est |Z_L| = ωL, qui croît linéairement avec la fréquence. À basse fréquence, la bobine est « transparente » ; à haute fréquence, elle bloque le passage du courant. C'est l'inverse du condensateur.</p>
+                <p>Les grandeurs caractéristiques d'une bobine sont :</p>
+                <ul>
+                    <li><strong>Inductance nominale :</strong> valeur inscrite (de quelques nH à plusieurs H)</li>
+                    <li><strong>Courant de saturation :</strong> courant maximal avant saturation du noyau magnétique (au-delà, l'inductance chute)</li>
+                    <li><strong>Résistance série (DCR) :</strong> résistance ohmique du fil de cuivre</li>
+                    <li><strong>Facteur de qualité Q :</strong> rapport entre la réactance inductive et la résistance (Q = ωL/R à basse perte)</li>
+                    <li><strong>Fréquence de coupure :</strong> fréquence au-delà de laquelle les capacités parasites dominent</li>
                 </ul>
 
-                <h4>4. Phénomène de surtension lors de la coupure</h4>
-                <p>Lors de la rupture brutale du courant, la variation très rapide du courant (di/dt très grand en valeur absolue) engendre une fem auto-induite très élevée, potentiellement destructrice pour les composants électroniques. C'est pourquoi on utilise des <strong>diodes de roue libre</strong> en parallèle des bobines (relais, moteurs) ou des varistances (MOV) pour protéger les circuits.</p>
+                <h4>3. Établissement du courant dans un circuit RL</h4>
+                <p>Considérons un circuit série RL : générateur E, interrupteur K (fermé à t = 0), résistance R, bobine L. Initialement, le courant est nul (i(0) = 0). L'équation de maille s'écrit :</p>
+                <div class="plan-highlight">
+                    <strong>E = u_R(t) + u_L(t) = R · i(t) + L · (di/dt)</strong>
+                </div>
+                <p>Cette équation différentielle du premier ordre admet comme solution complète :</p>
+                <div class="plan-highlight">
+                    <strong>i(t) = (E/R) · (1 − e^(−t/τ))</strong>, avec <strong>τ = L/R</strong>
+                </div>
+                <p>La tension aux bornes de la résistance et de la bobine sont :</p>
+                <ul>
+                    <li><strong>u_R(t) = R · i(t) = E · (1 − e^(−t/τ))</strong> — croît comme le courant</li>
+                    <li><strong>u_L(t) = L · (di/dt) = E · e^(−t/τ)</strong> — décroît exponentiellement</li>
+                </ul>
+                <p>On vérifie à tout instant : u_R + u_L = E. À t = 0, u_L = E (la bobine s'oppose à l'établissement du courant en présentant une tension égale à la source), puis u_L → 0 lorsque le régime permanent est atteint (i = E/R constant).</p>
+                <p>Le courant <strong>ne peut pas croître instantanément</strong> à cause de l'inductance : la pente initiale est (di/dt)(0) = E/L, et l'extrapolation linéaire de la tangente à l'origine atteint la valeur asymptotique I_∞ = E/R exactement à l'instant t = τ.</p>
 
-                <h4>5. Aspect énergétique</h4>
-                <p>L'énergie fournie par le générateur pendant l'établissement se répartit entre l'énergie dissipée par effet Joule (E_J = ½·L·I²) et l'énergie stockée dans la bobine (E_L = ½·L·I²). Le rendement est de 50%. En annihilation, l'énergie stockée est entièrement dissipée dans la résistance.</p>
+                <h4>4. Annihilation (rupture) du courant</h4>
+                <p>Supposons qu'à un instant t = 0, après avoir atteint le régime permanent (I₀ = E/R), on ouvre brutalement l'interrupteur K. Le courant ne peut pas s'interrompre instantanément à cause de l'inertie électromagnétique de la bobine (analogie avec l'inertie mécanique d'une masse en mouvement). L'énergie emmagasinée dans le champ magnétique doit nécessairement se dissiper quelque part.</p>
+                <p>Si l'on court-circuite simplement la bobine sur une résistance R, on observe la décroissance :</p>
+                <div class="plan-highlight">
+                    <strong>i(t) = I₀ · e^(−t/τ)</strong>, avec τ = L/R<br>
+                    <strong>u_L(t) = −R · I₀ · e^(−t/τ)</strong> (signe négatif car la bobine s'oppose à la décroissance)
+                </div>
+                <p>Le courant décroît exponentiellement avec la même constante de temps τ. La tension aux bornes de la bobine est négative (sa polarité s'inverse) car elle tente de maintenir le courant. Son module est maximal à t = 0 et vaut R·I₀.</p>
+
+                <h4>5. Le phénomène de surtension à la coupure</h4>
+                <p>Le cas le plus dangereux se produit lorsqu'on <strong>ouvre l'interrupteur</strong> sans offrir de chemin au courant. La loi de Faraday u_L = L·(di/dt) impose qu'une variation di/dt très rapide engendre une tension très élevée. Si l'interrupteur mécanique s'ouvre en quelques microsecondes (di/dt ≈ I₀/µs), et que L = 100 mH, I₀ = 1 A, alors :</p>
+                <div class="plan-highlight">
+                    <strong>u_L = L · di/dt = 0,1 · 10⁶ = 100 000 V !</strong>
+                </div>
+                <p>Cette surtension peut :</p>
+                <ul>
+                    <li>Créer un <strong>arc électrique</strong> dans l'interrupteur (l'air s'ionise, le courant continue de circuler sous forme de plasma)</li>
+                    <li><strong>Détruire</strong> les composants électroniques adjacents (transistors, circuits intégrés)</li>
+                    <li>Causer des <strong>chocs électriques</strong> dangereux pour l'utilisateur</li>
+                </ul>
+                <p>Pour se protéger, on utilise plusieurs techniques :</p>
+                <ul>
+                    <li><strong>Diode de roue libre (flyback) :</strong> placée en antiparallèle de la bobine, elle offre un chemin de courant pendant la coupure. La surtension est alors limitée à la tension directe de la diode (≈ 0,7 V pour une diode silicium, ≈ 0,3 V pour Schottky).</li>
+                    <li><strong>Snubber RC :</strong> circuit résistance-condensateur en parallèle qui absorbe l'énergie et limite la vitesse de variation du courant.</li>
+                    <li><strong>Varistance (MOV) :</strong> résistance non linéaire qui devient conductrice au-delà d'une certaine tension.</li>
+                    <li><strong>Transistor MOSFET avec body diode :</strong> dans les alimentations à découpage, la diode intrinsèque du MOSFET protège les circuits.</li>
+                </ul>
+
+                <h4>6. Aspect énergétique du circuit RL</h4>
+                <p>Pendant la phase d'établissement, l'énergie fournie par le générateur est :</p>
+                <div class="plan-highlight">
+                    <strong>W_gen = ∫₀^∞ E · i(t) dt = E² · τ / R = E · I_∞ · τ</strong>
+                </div>
+                <p>L'énergie stockée dans la bobine en régime permanent est :</p>
+                <div class="plan-highlight">
+                    <strong>W_bobine = ½ · L · I_∞²</strong>
+                </div>
+                <p>L'énergie dissipée dans la résistance est donc :</p>
+                <div class="plan-highlight">
+                    <strong>W_R = W_gen − W_bobine = E · I_∞ · τ − ½ · L · I_∞² = ½ · L · I_∞²</strong>
+                </div>
+                <p>Tout comme pour le circuit RC, on retrouve un <strong>rendement énergétique de 50%</strong> : la moitié de l'énergie fournie par le générateur est stockée dans la bobine, l'autre moitié est dissipée en chaleur. Ce résultat est général pour tout système où l'élément stockant l'énergie est chargé via une résistance (analogie avec la charge d'un ressort amorti, où la moitié de l'énergie de compression est dissipée par l'amortisseur).</p>
+                <p>Pendant la phase d'annihilation (court-circuit de la bobine), l'énergie stockée ½·L·I₀² est intégralement dissipée dans la résistance.</p>
+
+                <h4>7. Continuité du courant et conditions initiales</h4>
+                <p>Une propriété essentielle du circuit RL est la <strong>continuité du courant</strong> à travers la bobine. Cette propriété découle directement de la loi u_L = L·(di/dt) : si le courant pouvait varier de manière discontinue (saut brutal), di/dt serait infini et u_L aussi, ce qui violerait la loi des mailles. En pratique :</p>
+                <ul>
+                    <li><strong>À l'instant initial t = 0+ :</strong> i(0+) = i(0−). Si le circuit est ouvert depuis longtemps, i(0+) = 0.</li>
+                    <li><strong>À l'instant d'ouverture d'un interrupteur :</strong> le courant « cherche » à continuer à circuler et peut générer un arc si le circuit n'offre pas de chemin.</li>
+                    <li>Cette propriété est à la base de tous les circuits d'allumage automobile et de la protection des relais et contacteurs.</li>
+                </ul>
+
+                <h4>8. Comportement fréquentiel du circuit RL</h4>
+                <p>En régime sinusoïdal forcé, le circuit RL série admet la fonction de transfert (sortie aux bornes de R, qui est un filtre passe-bas) :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = R / (R + jωL) = 1 / (1 + jωL/R)</strong>
+                </div>
+                <p>On retrouve la même structure mathématique que pour le filtre RC passe-bas, avec une <strong>fréquence de coupure</strong> fc = R/(2πL) et une pente de −20 dB/décade au-delà. Si l'on prend la sortie aux bornes de L, on obtient un filtre passe-haut.</p>
+
+                <h4>9. Représentation temporelle et exploitation graphique</h4>
+                <p>Les courbes i(t), u_R(t) et u_L(t) en charge sont des exponentielles miroir : i et u_R croissent depuis 0 vers I_∞ et E respectivement, tandis que u_L décroît depuis E vers 0. Toutes les courbes ont la même forme mathématique, simplement décalées et/ou inversées.</p>
+                <p>La tangente à l'origine de i(t) a pour pente E/L. Son extrapolation linéaire coupe l'asymptote horizontale I_∞ = E/R à l'instant t = τ = L/R. C'est la méthode graphique standard pour mesurer L expérimentalement.</p>
+
+                <h4>10. Cas particulier : la coupure avec diode de roue libre</h4>
+                <p>Pour comprendre concrètement la protection par diode, plaçons une diode idéale en parallèle avec la bobine (cathode côté positif de l'alimentation, anode côté négatif). En régime permanent, la diode est polarisée en inverse (u_L = 0, mais la tension cathode-anode est −E, donc bloquée). À l'ouverture de K, le courant ne peut pas s'annuler instantanément, il passe donc par la diode (polarisée en direct) qui maintient la tension aux bornes de la bobine à environ −0,7 V. Le courant décroît alors selon i(t) = I₀·e^(−t/τ_dio), où τ_dio = L/(R + R_dio) ≈ L/R. L'énergie est dissipée dans R (résistance externe) et la diode, sans surtension destructrice.</p>
+
+                <h4>11. Méthodes de mesure de l'inductance L</h4>
+                <p>Plusieurs méthodes permettent de déterminer L expérimentalement :</p>
+                <ul>
+                    <li><strong>Méthode de la tangente :</strong> on trace i(t) à l'oscilloscope après fermeture de K, on relève la pente initiale E/L, d'où L.</li>
+                    <li><strong>Méthode de la constante de temps :</strong> on mesure τ = L/R à partir du temps pour lequel i atteint 63,2% de I_∞.</li>
+                    <li><strong>Méthode de l'impédance en régime sinusoïdal :</strong> on mesure |Z| = √(R² + (ωL)²) à une fréquence ω connue, d'où L.</li>
+                    <li><strong>Pont de Maxwell :</strong> circuit en pont qui permet des mesures précises en comparant l'inconnue à des étalons.</li>
+                </ul>
+
+                <h4>12. Applications pratiques détaillées</h4>
+                <p>Les circuits RL sont présents dans de nombreux systèmes :</p>
+                <ul>
+                    <li><strong>Allumage automobile :</strong> la bobine d'allumage (L ≈ 5-10 mH) est chargée à 12 V, puis brutalement coupée. La surtension (300-400 V) est transformée en 20-30 kV par le transformateur haute tension, créant l'étincelle à la bougie.</li>
+                    <li><strong>Relais et contacteurs :</strong> la bobine de commande d'un relais (L ≈ 100 mH) nécessite une diode de roue libre en parallèle pour protéger le transistor de commande lors de la coupure.</li>
+                    <li><strong>Alimentations à découpage :</strong> l'inductance de sortie lisse le courant de sortie pour fournir une tension continue stable, malgré la commutation rapide du transistor.</li>
+                    <li><strong>Convertisseurs DC-DC (boost, buck) :</strong> l'inductance stocke l'énergie pendant la phase d'ouverture du commutateur, puis la restitue à la charge avec une tension différente.</li>
+                    <li><strong>Filtres EMI :</strong> les inductances de mode commun et de mode différentiel bloquent les perturbations haute fréquence sur les lignes d'alimentation et de signal.</li>
+                    <li><strong>Circuits de snubber :</strong> protection des thyristors et triacs dans les variateurs de vitesse et les gradateurs.</li>
+                    <li><strong>Systèmes de transmission sans fil :</strong> les bobines d'accord des radios sélectionnent la fréquence de réception.</li>
+                    <li><strong>Électroaimants :</strong> portails automatiques, serrures magnétiques, contacteurs industriels : l'inductance stocke l'énergie magnétique nécessaire à l'attraction.</li>
+                </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔑 Concepts clés à retenir</h3>
                 <ul>
-                    <li><strong>Tension aux bornes d'une bobine :</strong> uL = L·(di/dt)</li>
-                    <li><strong>Constante de temps du circuit RL :</strong> τ = L/R</li>
-                    <li><strong>Établissement du courant :</strong> i(t) = (E/R)·(1 − e^(−t/τ))</li>
-                    <li><strong>Annihilation du courant :</strong> i(t) = I₀·e^(−t/τ)</li>
-                    <li><strong>Énergie emmagasinée dans une bobine :</strong> E_L = ½·L·I²</li>
+                    <li><strong>Tension aux bornes d'une bobine :</strong> u_L = L · (di/dt)</li>
+                    <li><strong>Constante de temps du circuit RL :</strong> τ = L / R</li>
+                    <li><strong>Établissement du courant :</strong> i(t) = (E/R) · (1 − e^(−t/τ))</li>
+                    <li><strong>Annihilation du courant :</strong> i(t) = I₀ · e^(−t/τ)</li>
+                    <li><strong>Énergie emmagasinée dans une bobine :</strong> E_L = ½ · L · I²</li>
                     <li><strong>Bobine en régime permanent</strong> se comporte comme un court-circuit</li>
-                    <li><strong>Surtension destructrice</strong> lors de la coupure brutale d'une bobine</li>
+                    <li><strong>Surtension destructrice</strong> lors de la coupure brutale d'une bobine — utiliser une diode de roue libre</li>
+                    <li><strong>Continuité du courant</strong> à travers une bobine (analogue à l'inertie mécanique d'une masse)</li>
+                    <li><strong>Rendement énergétique :</strong> 50% lors de la charge</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔧 Applications pratiques</h3>
                 <ul>
-                    <li><strong>Commande de relais</strong> : la bobine crée un champ magnétique qui actionne le contact</li>
-                    <li><strong>Alimentations à découpage</strong> : l'inductance lisse le courant de sortie</li>
-                    <li><strong>Circuit d'allumage automobile</strong> : la rupture du courant dans la bobine haute tension crée l'étincelle</li>
-                    <li><strong>Protection par diode de roue libre</strong> : dissiper l'énergie de la bobine de manière contrôlée</li>
+                    <li><strong>Commande de relais</strong> : la bobine crée un champ magnétique qui actionne le contact (avec diode de roue libre obligatoire)</li>
+                    <li><strong>Alimentations à découpage</strong> : l'inductance lisse le courant de sortie, stocke et restitue l'énergie</li>
+                    <li><strong>Circuit d'allumage automobile</strong> : la rupture du courant dans la bobine haute tension crée l'étincelle de la bougie</li>
+                    <li><strong>Protection par diode de roue libre</strong> : dissiper l'énergie de la bobine de manière contrôlée et sans surtension</li>
                     <li><strong>Filtres passe-bas RL</strong> : atténuation des composantes haute fréquence d'un signal</li>
+                    <li><strong>Convertisseurs boost / buck</strong> : élévateurs et abaisseurs de tension DC-DC</li>
+                    <li><strong>Variateurs de lumière</strong> : gradateurs à triac pour l'éclairage domestique</li>
+                    <li><strong>Filtres EMI / EMC</strong> : suppression des perturbations électromagnétiques</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>✏️ Exercices suggérés</h3>
                 <ol>
-                    <li><strong>Exercice 1</strong> : Un circuit RL avec L = 0,5 H et R = 10 Ω est connecté à une source E = 24 V. Calculer τ, le courant maximal, et le courant après 0,1 s, 0,2 s et 5τ.</li>
-                    <li><strong>Exercice 2</strong> : Même circuit, coupé brutalement alors que le courant vaut I₀ = 2 A. Calculer l'évolution du courant et de la tension aux bornes de la bobine.</li>
-                    <li><strong>Exercice 3</strong> : Calculer la surtension maximale aux bornes de la bobine lors de la coupure si le courant décroît de 2 A à 0 en 1 ms.</li>
-                    <li><strong>Exercice 4</strong> : Un relais 12 V avec une bobine de 120 mH consomme 50 mA en régime permanent. Calculer R de la bobine et τ.</li>
-                    <li><strong>Exercice 5</strong> : Pour un circuit de délai de 50 ms, choisir L et R appropriées.</li>
+                    <li><strong>Exercice 1 (établissement) :</strong> Un circuit RL avec L = 0,5 H et R = 10 Ω est connecté à une source E = 24 V. Calculer τ, le courant maximal, et le courant après 0,1 s, 0,2 s et 5τ. Tracer la courbe i(t).</li>
+                    <li><strong>Exercice 2 (annihilation) :</strong> Même circuit, coupé brutalement alors que le courant vaut I₀ = 2 A. Calculer l'évolution du courant et de la tension aux bornes de la bobine. Que vaut la tension initiale ?</li>
+                    <li><strong>Exercice 3 (surtension) :</strong> Calculer la surtension maximale aux bornes de la bobine lors de la coupure si le courant décroît de 2 A à 0 en 1 µs. Pourquoi cette tension est-elle dangereuse ?</li>
+                    <li><strong>Exercice 4 (relais) :</strong> Un relais 12 V avec une bobine de 120 mH consomme 50 mA en régime permanent. Calculer : (a) la résistance de la bobine, (b) la constante de temps τ, (c) l'énergie stockée, (d) la tension aux bornes de la bobine à t = τ.</li>
+                    <li><strong>Exercice 5 (dimensionnement) :</strong> Pour un circuit de délai de 50 ms (on veut que i atteigne 95% de I_∞ en 50 ms), choisir L et R appropriées. Justifier.</li>
+                    <li><strong>Exercice 6 (diode de roue libre) :</strong> Une bobine de 100 mH parcourue par 1 A est court-circuitée via une diode de roue libre (tension directe 0,7 V) en série avec R = 50 Ω. Calculer τ, l'évolution de i(t) et la durée totale de l'annihilation.</li>
+                    <li><strong>Exercice 7 (énergie) :</strong> Un moteur DC avec inductance de 50 mH et résistance 5 Ω fonctionne sous 24 V. Calculer l'énergie stockée en régime permanent, l'énergie dissipée pendant l'établissement, et le rendement.</li>
                 </ol>
             </div>
 
             <div class="plan-summary">
-                <strong>📌 Résumé :</strong> Le circuit RL est un système du premier ordre dont la dynamique est régie par la constante de temps τ = L/R. Lors de l'établissement du courant, celui-ci croît exponentiellement vers I_max = E/R selon i(t) = (E/R)(1 − e^(−t/τ)). Lors de l'annihilation, le courant décroît selon i(t) = I₀·e^(−t/τ) et la fem auto-induite peut créer des surtensions dangereuses. L'énergie stockée dans la bobine est E = ½·L·I². Les circuits RL sont fondamentaux pour comprendre le comportement des composants inductifs et les phénomènes de protection contre les surtensions.
+                <strong>📌 Résumé :</strong> Le circuit RL est un système du premier ordre dont la dynamique est régie par la constante de temps τ = L/R. Lors de l'établissement du courant, celui-ci croît exponentiellement vers I_max = E/R selon i(t) = (E/R)·(1 − e^(−t/τ)). Lors de l'annihilation, le courant décroît selon i(t) = I₀·e^(−t/τ) et la fem auto-induite peut créer des surtensions destructrices. L'énergie stockée dans la bobine est E = ½·L·I², avec un rendement de charge de 50%. La continuité du courant à travers la bobine (analogue à l'inertie mécanique) impose l'utilisation systématique de diodes de roue libre dans les circuits de commande de charges inductives (relais, moteurs, contacteurs). Les circuits RL sont fondamentaux pour comprendre le comportement des composants inductifs, les alimentations à découpage, les systèmes d'allumage et la protection contre les surtensions.
             </div>
         </section>
 

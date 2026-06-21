@@ -5,6 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mécanique non amortie - Physique</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .cours-detaille {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 35px 45px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            line-height: 1.9;
+            color: #1f2937;
+            font-size: 1.05em;
+        }
+        .cours-detaille h2 {
+            color: #4C1D95;
+            border-left: 6px solid #7C3AED;
+            padding-left: 18px;
+            margin-top: 40px;
+            font-size: 1.6em;
+        }
+        .cours-detaille h3 {
+            color: #6D28D9;
+            margin-top: 28px;
+            font-size: 1.25em;
+        }
+        .cours-detaille h4 {
+            color: #5B21B6;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .cours-detaille .definition {
+            background: #EDE9FE;
+            border-left: 5px solid #7C3AED;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .remarque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .exemple {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .formule {
+            background: #1F2937;
+            color: #FBBF24;
+            padding: 14px 22px;
+            margin: 14px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+        .cours-detaille ul, .cours-detaille ol {
+            margin-left: 28px;
+        }
+        .cours-detaille li {
+            margin: 10px 0;
+        }
+        .cours-titre {
+            text-align: center;
+            color: #3B0764;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 4px solid #7C3AED;
+        }
+        .cours-detaille p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        .cours-detaille table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .cours-detaille th {
+            background: #7C3AED;
+            color: white;
+            padding: 12px;
+            border: 1px solid #ccc;
+        }
+        .cours-detaille td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .plan-subsection {
+            margin: 25px 0;
+            padding: 20px;
+            background: #F9FAFB;
+            border-radius: 10px;
+            border: 1px solid #E5E7EB;
+        }
+        .plan-highlight {
+            background: #1F2937;
+            color: #FBBF24;
+            padding: 12px 20px;
+            margin: 12px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.05em;
+            font-weight: bold;
+        }
+        .plan-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .plan-table th, .plan-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .plan-table th {
+            background: #7C3AED;
+            color: white;
+        }
+        .plan-summary {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -16,7 +149,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +179,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1vJwXJuTtBRRTOm9OqBaE7ZHnvkB4dSh_/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +190,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/4C1D95/FFFFFF?text=Mecanique+non+amortie" alt="Résumé de la mécanique non amortie">
-                <div class="resume-overlay">
-                    <h3>Oscillations mécaniques libres</h3>
-                    <p>Oscillations non amorties d'un système masse-ressort.</p>
-                </div>
+               
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1-_3IXb9n-9OOxfonNjIeXeMsW0bR2ZhS/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,19 +201,656 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1JjMmpJj5zs5r-G-1sNa3f0PO5usHe1lm/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
         </section>
 
-        <!-- BOUTON LEÇON SUIVANTE -->
-        <a href="physique-lecon11.html" class="next-lesson">
-            <div>
-                <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">Onde transversale →</p>
+        <!-- SECTION PLAN DE COURS -->
+        <section class="section-plan">
+            <h2><span class="icon">📚</span> Plan de cours</h2>
+
+            <div class="plan-subsection">
+                <h3>🎯 Objectifs d'apprentissage</h3>
+                <ol>
+                    <li><strong>Comprendre</strong> le mouvement d'un système masse-ressort horizontal sans frottement</li>
+                    <li><strong>Maîtriser</strong> l'équation différentielle du mouvement et ses solutions</li>
+                    <li><strong>Définir</strong> la pulsation, la période et la fréquence propres des oscillations</li>
+                    <li><strong>Analyser</strong> les échanges d'énergie cinétique et potentielle</li>
+                    <li><strong>Distinguer</strong> les oscillations libres, forcées et amorties</li>
+                    <li><strong>Comprendre</strong> l'analogie avec les circuits LC électriques</li>
+                </ol>
             </div>
-            <span class="next-lesson-arrow">→</span>
+
+            <div class="plan-subsection">
+                <h3>📋 Prérequis</h3>
+                <ul>
+                    <li>Connaissance des lois de Newton (principe fondamental de la dynamique)</li>
+                    <li>Maîtrise de la notion d'énergie cinétique (½mv²) et potentielle élastique (½kx²)</li>
+                    <li>Connaissance des équations différentielles du second ordre et de leurs solutions</li>
+                    <li>Notions de base sur la cinématique (position, vitesse, accélération)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>📖 Contenu détaillé</h3>
+
+                <h4>1. Introduction historique et conceptuelle</h4>
+                <p>Le système masse-ressort est l'<strong>archétype de l'oscillateur harmonique</strong> en mécanique. Son étude remonte à <strong>Galilée</strong> (1564-1642) qui observa l'isochronisme des oscillations du pendule, à <strong>Hooke</strong> (1635-1703) qui formula la loi de proportionalité entre force et élongation, et à <strong>Newton</strong> (1643-1727) qui unifia la dynamique terrestre et céleste par sa loi fondamentale F = m·a. Plus tard, <strong>Euler</strong>, <strong>Lagrange</strong> et <strong>Hamilton</strong> reformulèrent l'étude de ces systèmes en termes énergétiques, ouvrant la voie à la mécanique analytique moderne.</p>
+                <p>L'oscillateur harmonique occupe une place centrale en physique, et ce pour plusieurs raisons :</p>
+                <ul>
+                    <li>C'est le seul système pour lequel on peut résoudre <strong>exactement</strong> les équations du mouvement</li>
+                    <li>Tout système physique stable, écarté légèrement de sa position d'équilibre, se comporte localement comme un oscillateur harmonique (théorème des petites oscillations)</li>
+                    <li>En mécanique quantique, l'oscillateur harmonique est l'un des rares systèmes exactement solubles, et il décrit les vibrations moléculaires, les phonons dans les solides, et les champs quantiques</li>
+                    <li>La transformation de Fourier, qui est à la base du traitement du signal, repose sur la décomposition en sinusoïdes, qui sont les solutions de l'oscillateur harmonique</li>
+                </ul>
+
+                <h4>2. Le système masse-ressort horizontal sans frottement</h4>
+                <p>Le système mécanique le plus simple pour étudier l'oscillateur harmonique est composé de :</p>
+                <ul>
+                    <li>Une <strong>masse m</strong> (assimilée à un point matériel) pouvant glisser sans frottement sur un support horizontal</li>
+                    <li>Un <strong>ressort de raideur k</strong> et de longueur à vide ℓ₀, fixé à l'une de ses extrémités à un point fixe</li>
+                </ul>
+                <p>On note <strong>x(t)</strong> l'élongation du ressort par rapport à sa longueur à vide. La position d'équilibre stable correspond à x = 0 (longueur à vide, où aucune force ne s'exerce sur la masse).</p>
+                <p>La <strong>loi de Hooke</strong> (1660) stipule que la force de rappel exercée par le ressort est proportionnelle à son élongation et opposée à celle-ci :</p>
+                <div class="plan-highlight">
+                    <strong>F_rappel = −k · x</strong>
+                </div>
+                <p>Le signe négatif traduit le fait que la force de rappel tend toujours à ramener la masse vers sa position d'équilibre (force de rappel, et non d'éloignement). L'unité de raideur k est le newton par mètre (N/m). Pour un ressort à spires non serrées, la raideur est donnée par :</p>
+                <div class="plan-highlight">
+                    <strong>k = G · d⁴ / (8·n·D³)</strong>
+                </div>
+                <p>où G est le module de cisaillement du matériau, d le diamètre du fil, n le nombre de spires actives, et D le diamètre moyen des spires. Cette formule, issue de la résistance des matériaux, permet de dimensionner un ressort pour une raideur donnée.</p>
+
+                <div class="exemple">
+                    <strong>Exemple concret :</strong> Un ressort en acier (G ≈ 80 GPa) avec un fil de diamètre d = 1 mm, 20 spires actives et un diamètre moyen de spires D = 30 mm aura une raideur :<br>
+                    k = (80 × 10⁹) × (10⁻³)⁴ / (8 × 20 × (30 × 10⁻³)³)<br>
+                    k = (80 × 10⁹ × 10⁻¹²) / (160 × 27 × 10⁻⁹)<br>
+                    k ≈ 80 × 10⁻³ / 4320 × 10⁻⁹ ≈ 18,5 N/m.
+                </div>
+
+                <h4>3. Équation différentielle du mouvement</h4>
+                <p>En l'absence de frottement et de toute autre force, la seule force agissant sur la masse est la force de rappel du ressort. Le principe fondamental de la dynamique (PFD) de Newton s'écrit :</p>
+                <div class="plan-highlight">
+                    <strong>m · (d²x/dt²) = F_rappel = −k · x</strong>
+                </div>
+                <p>En réarrangeant :</p>
+                <div class="plan-highlight">
+                    <strong>d²x/dt² + (k/m) · x = 0</strong>
+                </div>
+                <p>C'est l'<strong>équation différentielle canonique de l'oscillateur harmonique</strong>. On définit la <strong>pulsation propre</strong> ω₀ et la <strong>fréquence propre</strong> f₀ :</p>
+                <div class="plan-highlight">
+                    <strong>Pulsation propre :</strong> ω₀ = √(k/m) [rad/s]<br>
+                    <strong>Fréquence propre :</strong> f₀ = 1/T₀ = ω₀/(2π) [Hz]<br>
+                    <strong>Période propre :</strong> T₀ = 2π · √(m/k) [s]
+                </div>
+                <p>Ces trois grandeurs sont fondamentales : elles caractérisent la « rapidité » de l'oscillateur. Plus la masse est grande, plus la période est longue (l'inertie ralentit le mouvement). Plus la raideur est grande, plus la période est courte (le ressort tire plus fort).</p>
+
+                <div class="remarque">
+                    <strong>Point important :</strong> la pulsation propre ω₀ ne dépend <strong>que des paramètres du système</strong> (m et k), pas des conditions initiales. C'est l'une des caractéristiques essentielles de l'oscillateur harmonique : sa "fréquence naturelle" est une propriété intrinsèque du système, indépendante de la manière dont on l'a mis en mouvement.
+                </div>
+
+                <h4>4. Solution de l'équation différentielle</h4>
+                <p>L'équation caractéristique associée est r² + ω₀² = 0, dont les solutions sont purement imaginaires conjuguées : r = ±j·ω₀. La solution générale est donc :</p>
+                <div class="plan-highlight">
+                    <strong>x(t) = A · cos(ω₀·t) + B · sin(ω₀·t)</strong>
+                </div>
+                <p>ou, sous forme plus parlante :</p>
+                <div class="plan-highlight">
+                    <strong>x(t) = X_max · cos(ω₀·t + φ)</strong>
+                </div>
+                <p>où X_max est l'<strong>amplitude</strong> des oscillations et φ la <strong>phase initiale</strong>. Ces deux grandeurs sont déterminées par les conditions initiales :</p>
+                <ul>
+                    <li><strong>Élongation initiale :</strong> x(0) = X_max · cos(φ)</li>
+                    <li><strong>Vitesse initiale :</strong> v(0) = dx/dt(0) = −ω₀ · X_max · sin(φ)</li>
+                </ul>
+                <p>On en déduit :</p>
+                <div class="plan-highlight">
+                    <strong>X_max = √(x(0)² + (v(0)/ω₀)²)</strong><br>
+                    <strong>tan(φ) = −v(0) / (ω₀ · x(0))</strong>
+                </div>
+                <p>Cas particuliers importants :</p>
+                <ul>
+                    <li>Si <strong>x(0) = X₀ et v(0) = 0</strong> : on lâche la masse à partir de la position X₀ sans vitesse initiale. Alors X_max = X₀ et φ = 0, donc <strong>x(t) = X₀ · cos(ω₀·t)</strong>.</li>
+                    <li>Si <strong>x(0) = 0 et v(0) = V₀</strong> : on lance la masse depuis l'équilibre avec une vitesse initiale V₀. Alors X_max = V₀/ω₀ et φ = −π/2, donc <strong>x(t) = (V₀/ω₀) · sin(ω₀·t)</strong>.</li>
+                </ul>
+
+                <div class="exemple">
+                    <strong>Exemple numérique :</strong> Soit un système masse-ressort avec m = 0,5 kg, k = 50 N/m, et des conditions initiales x(0) = 0,04 m, v(0) = 0,3 m/s.<br>
+                    On a ω₀ = √(50/0,5) = 10 rad/s.<br>
+                    X_max = √(0,04² + (0,3/10)²) = √(0,0016 + 0,0009) = √0,0025 = 0,05 m = 5 cm.<br>
+                    tan(φ) = −0,3 / (10 × 0,04) = −0,75, donc φ = arctan(−0,75) ≈ −0,6435 rad ≈ −36,87°.<br>
+                    Donc x(t) = 0,05 · cos(10t − 0,6435).
+                </div>
+
+                <h4>5. Vitesse et accélération</h4>
+                <p>La vitesse et l'accélération se déduisent par dérivation :</p>
+                <div class="plan-highlight">
+                    <strong>x(t) = X_max · cos(ω₀·t + φ)</strong><br>
+                    <strong>v(t) = dx/dt = −ω₀ · X_max · sin(ω₀·t + φ)</strong><br>
+                    <strong>a(t) = d²x/dt² = −ω₀² · X_max · cos(ω₀·t + φ) = −ω₀² · x(t)</strong>
+                </div>
+                <p>On note les <strong>déphasages caractéristiques</strong> :</p>
+                <ul>
+                    <li>La vitesse est en <strong>quadrature avance</strong> (90° en avance) par rapport à la position</li>
+                    <li>L'accélération est en <strong>opposition de phase</strong> (180° de déphasage) par rapport à la position, ce qui traduit la loi F = m·a = −k·x (l'accélération est proportionnelle à l'opposé de la position)</li>
+                </ul>
+                <p>Les amplitudes sont liées :</p>
+                <ul>
+                    <li>Vitesse maximale : V_max = ω₀ · X_max</li>
+                    <li>Accélération maximale : A_max = ω₀² · X_max</li>
+                </ul>
+
+                <h4>6. Échanges d'énergie cinétique et potentielle</h4>
+                <p>Le système masse-ressort non amorti est le siège d'<strong>oscillations d'énergie</strong> entre deux formes :</p>
+                <ul>
+                    <li><strong>Énergie cinétique :</strong> E_c = ½ · m · v² = ½ · m · ω₀² · X_max² · sin²(ω₀·t + φ)</li>
+                    <li><strong>Énergie potentielle élastique :</strong> E_p = ½ · k · x² = ½ · k · X_max² · cos²(ω₀·t + φ)</li>
+                </ul>
+                <p>En utilisant ω₀² = k/m, on a ½·m·ω₀²·X_max² = ½·k·X_max². Donc :</p>
+                <div class="plan-highlight">
+                    <strong>E_c(t) = ½ · k · X_max² · sin²(ω₀·t + φ)</strong><br>
+                    <strong>E_p(t) = ½ · k · X_max² · cos²(ω₀·t + φ)</strong><br>
+                    <strong>E_totale = E_c(t) + E_p(t) = ½ · k · X_max² = constante</strong>
+                </div>
+                <p>La <strong>conservation de l'énergie totale</strong> est une conséquence directe de l'absence de frottement : aucune énergie n'est dissipée. L'énergie oscille indéfiniment entre la forme cinétique (masse en mouvement) et la forme potentielle (ressort comprimé ou étiré). Le scénario physique est :</p>
+                <ul>
+                    <li><strong>À t = 0 (position d'élongation maximale) :</strong> v = 0, donc E_c = 0 ; x = X_max, donc E_p = E_totale (maximum)</li>
+                    <li><strong>De t = 0 à T₀/4 :</strong> la masse se déplace vers l'équilibre, la vitesse croît. L'énergie passe progressivement de E_p à E_c.</li>
+                    <li><strong>À t = T₀/4 (passage par l'équilibre) :</strong> x = 0 (E_p = 0), v = V_max (E_c = E_totale, maximum)</li>
+                    <li><strong>De t = T₀/4 à T₀/2 :</strong> la masse dépasse l'équilibre, le ressort se comprime de l'autre côté, la vitesse décroît. L'énergie repasse de E_c à E_p.</li>
+                    <li><strong>À t = T₀/2 :</strong> x = −X_max, v = 0. Le système est à nouveau à une position d'élongation maximale, mais de l'autre côté.</li>
+                    <li>Le cycle se répète indéfiniment, avec une période T₀.</li>
+                </ul>
+
+                <div class="exemple">
+                    <strong>Exemple numérique :</strong> Pour m = 0,5 kg, k = 50 N/m, X_max = 0,05 m :<br>
+                    E_totale = ½ × 50 × (0,05)² = ½ × 50 × 0,0025 = 0,0625 J = 62,5 mJ.<br>
+                    À t = 0 : E_c = 0, E_p = 62,5 mJ.<br>
+                    À t = T₀/4 : E_c = 62,5 mJ, E_p = 0.<br>
+                    À t = T₀/2 : E_c = 0, E_p = 62,5 mJ.
+                </div>
+
+                <h4>7. Espace des phases</h4>
+                <p>Une visualisation très élégante est l'<strong>espace des phases</strong> (x, v). En traçant v en fonction de x, on obtient une <strong>ellipse centrée à l'origine</strong> :</p>
+                <div class="plan-highlight">
+                    <strong>(x/X_max)² + (v/V_max)² = 1</strong>
+                </div>
+                <p>La trajectoire forme une courbe fermée, parcourue dans le sens horaire au cours du temps. La forme fermée traduit la <strong>conservation de l'énergie</strong> : le système repasse périodiquement par les mêmes états (x, v). En mécanique analytique, l'aire de l'ellipse divisée par 2π est l'<strong>action</strong> du système, qui est quantifiée en mécanique quantique (action de Planck h).</p>
+                <p>Pour un système amorti (avec frottement), la trajectoire dans l'espace des phases est une spirale qui converge vers l'origine (le système perd de l'énergie et finit par s'immobiliser). Pour un système forcé, la trajectoire peut être une spirale qui s'enroule autour d'un cycle limite stable.</p>
+
+                <h4>8. Analogie avec le circuit LC électrique</h4>
+                <p>Le système masse-ressort non amorti est l'<strong>analogue mécanique exact du circuit LC électrique</strong> (leçon 5). La correspondance est bijective :</p>
+                <table class="plan-table">
+                    <tr><th>Grandeur mécanique</th><th>Grandeur électrique</th><th>Symbole</th></tr>
+                    <tr><td>Position (élongation)</td><td>Charge électrique</td><td>x ↔ q</td></tr>
+                    <tr><td>Vitesse</td><td>Courant</td><td>v = dx/dt ↔ i = dq/dt</td></tr>
+                    <tr><td>Masse</td><td>Inductance</td><td>m ↔ L (inertie)</td></tr>
+                    <tr><td>Raideur du ressort</td><td>Inverse de la capacité</td><td>k ↔ 1/C</td></tr>
+                    <tr><td>Force de rappel</td><td>Tension aux bornes de C</td><td>F = −k·x ↔ v_C = q/C</td></tr>
+                    <tr><td>Énergie potentielle ½·k·x²</td><td>Énergie électrique ½·C·v²</td><td>E_p ↔ E_C</td></tr>
+                    <tr><td>Énergie cinétique ½·m·v²</td><td>Énergie magnétique ½·L·i²</td><td>E_c ↔ E_L</td></tr>
+                    <tr><td>ω₀ = √(k/m)</td><td>ω₀ = 1/√(LC)</td><td>Pulsation propre</td></tr>
+                </table>
+                <p>Cette analogie profonde permet de transposer les résultats d'un domaine à l'autre : tout circuit LC a un équivalent mécanique, et réciproquement. C'est la base des <strong>simulateurs analogiques</strong> qui résolvent des équations différentielles en utilisant des circuits électriques.</p>
+
+                <h4>9. Cas du système masse-ressort vertical</h4>
+                <p>Lorsqu'on suspend un ressort verticalement à un point fixe, la situation est légèrement différente à cause de la gravité. À l'équilibre, le ressort est étiré de x₀ = m·g/k pour compenser le poids de la masse. Si l'on pose y = x − x₀ comme l'élongation par rapport à la position d'équilibre, l'équation du mouvement redevient :</p>
+                <div class="plan-highlight">
+                    <strong>d²y/dt² + (k/m) · y = 0</strong>
+                </div>
+                <p>La pulsation propre est <strong>identique</strong> à celle du système horizontal. La gravité modifie seulement la position d'équilibre, pas la fréquence des oscillations. C'est un résultat remarquable et très utile en pratique : un pendule élastique vertical oscille à la même fréquence que le même pendule horizontal.</p>
+
+                <div class="exemple">
+                    <strong>Exemple numérique :</strong> Un ressort de raideur k = 100 N/m et de longueur à vide ℓ₀ = 20 cm est suspendu verticalement. Une masse m = 200 g = 0,2 kg est accrochée. L'allongement à l'équilibre est :<br>
+                    x₀ = m·g/k = 0,2 × 9,81 / 100 = 0,01962 m ≈ 1,96 cm.<br>
+                    La longueur totale du ressort à l'équilibre est : ℓ = ℓ₀ + x₀ = 20 + 1,96 = 21,96 cm.<br>
+                    La pulsation propre est : ω₀ = √(100/0,2) = √500 ≈ 22,36 rad/s.<br>
+                    La période est : T₀ = 2π/ω₀ = 2π/22,36 ≈ 0,281 s.
+                </div>
+
+                <h4>10. Le pendule simple (petites oscillations)</h4>
+                <p>Le pendule simple (masse ponctuelle suspendue à un fil inextensible de longueur L) est un autre exemple classique d'oscillateur harmonique, mais uniquement dans l'approximation des petites oscillations. Pour un angle θ par rapport à la verticale, l'équation du mouvement est :</p>
+                <div class="plan-highlight">
+                    <strong>d²θ/dt² + (g/L) · sin(θ) = 0</strong>
+                </div>
+                <p>Pour <strong>|θ| << 1 radian</strong> (≈ 5,7°), sin(θ) ≈ θ, et l'équation devient :</p>
+                <div class="plan-highlight">
+                    <strong>d²θ/dt² + (g/L) · θ = 0</strong>
+                </div>
+                <p>La pulsation propre est :</p>
+                <div class="plan-highlight">
+                    <strong>ω₀ = √(g/L)</strong><br>
+                    <strong>T₀ = 2π · √(L/g)</strong>
+                </div>
+                <p>Cette formule a une importance historique considérable : elle est à la base de la mesure du temps (horloges à balancier), de la détermination de l'accélération de la pesanteur g, et de la découverte de la variation de g avec la latitude. Galilée l'a découverte en observant les lustres de la cathédrale de Pise.</p>
+                <p>Pour des oscillations de grande amplitude, l'approximation sin(θ) ≈ θ n'est plus valable, et l'équation devient non linéaire. La période dépend alors de l'amplitude :</p>
+                <div class="plan-highlight">
+                    <strong>T = T₀ · (1 + θ_max²/16 + 11·θ_max⁴/3072 + ...)</strong>
+                </div>
+                <p>La période augmente avec l'amplitude, ce qui se traduit par l'<strong>anharmonicité</strong> du pendule.</p>
+
+                <div class="exemple">
+                    <strong>Exemple numérique :</strong> Un pendule de longueur L = 1 m à la surface de la Terre (g = 9,81 m/s²) :<br>
+                    T₀ = 2π · √(1/9,81) ≈ 2,006 s.<br>
+                    Pour une amplitude de 10° (θ_max = 0,1745 rad) :<br>
+                    T = 2,006 × (1 + 0,1745²/16 + ...) ≈ 2,006 × (1 + 0,0019) ≈ 2,010 s.<br>
+                    La correction est d'environ 0,2 %, négligeable pour la plupart des applications.
+                </div>
+
+                <h4>11. Pendule composé (pendule physique)</h4>
+                <p>Le pendule composé est un solide rigide mobile autour d'un axe horizontal fixe, qui n'est pas une masse ponctuelle. Sa période propre est :</p>
+                <div class="plan-highlight">
+                    <strong>T₀ = 2π · √(I / (m·g·d))</strong>
+                </div>
+                <p>où I est le moment d'inertie du solide par rapport à l'axe de rotation, m sa masse, d la distance du centre de masse à l'axe, et g l'accélération de la pesanteur. Cette formule se réduit à celle du pendule simple quand I = m·L² (masse ponctuelle à distance L de l'axe).</p>
+                <p>Le <strong>pendule réversible</strong> (ou pendule de Kater) est un instrument de mesure de g basé sur cette propriété. En ajustant la position de masselottes, on peut rendre la période identique en deux points de suspension symétriques, ce qui donne une mesure très précise de g.</p>
+
+                <h4>12. Énergie du système et théorème de l'énergie</h4>
+                <p>Pour un système conservatif (sans frottement), l'énergie totale est la somme de l'énergie cinétique et de l'énergie potentielle :</p>
+                <div class="plan-highlight">
+                    <strong>E_tot = E_c + E_p = ½ · m · v² + ½ · k · x² = constante</strong>
+                </div>
+                <p>On peut retrouver l'équation du mouvement en dérivant cette expression par rapport au temps :</p>
+                <div class="plan-highlight">
+                    <strong>dE_tot/dt = m · v · a + k · x · v = v · (m·a + k·x) = 0</strong>
+                </div>
+                <p>Comme v ≠ 0 en général, on retrouve m·a + k·x = 0, soit m·a = −k·x (loi de Hooke).</p>
+                <p>Cette approche énergétique est particulièrement puissante pour les systèmes complexes où l'écriture directe des forces est difficile. La fonction de Hamilton et la fonction de Lagrange formalisent cette approche et sont à la base de la mécanique analytique.</p>
+
+                <h4>13. Mesure de k et m expérimentalement</h4>
+                <p>Plusieurs méthodes permettent de déterminer k et m :</p>
+                <ul>
+                    <li><strong>Mesure statique :</strong> on suspend des masses connues au ressort et on mesure l'allongement. La raideur k = F/x se déduit de la pente.</li>
+                    <li><strong>Mesure dynamique :</strong> on fait osciller la masse et on mesure la période T₀. La pulsation ω₀ = 2π/T₀, et k = m·ω₀² (si m est connue).</li>
+                    <li><strong>Méthode de la résonance :</strong> on applique une force oscillante et on cherche la fréquence de résonance, qui est f₀.</li>
+                </ul>
+
+                <h4>14. Comparaison avec les oscillateurs réels</h4>
+                <p>Le système masse-ressort idéal que nous étudions est une idéalisation. En pratique :</p>
+                <ul>
+                    <li><strong>Frottement sec (Coulomb) :</strong> force constante opposée au mouvement. Introduit un amortissement.</li>
+                    <li><strong>Frottement visqueux :</strong> force proportionnelle à la vitesse (F = −c·v). Introduit un amortissement linéaire, qui sera étudié dans la leçon suivante (par analogie au circuit RLC).</li>
+                    <li><strong>Non-linéarité du ressort :</strong> pour de grandes déformations, la loi de Hooke n'est plus valable. Le ressort devient « dur » ou « mou » selon le matériau.</li>
+                    <li><strong>Masse du ressort :</strong> pour les oscillations rapides, il faut tenir compte de la masse du ressort lui-même, ce qui modifie la fréquence propre.</li>
+                </ul>
+                <p>Tous ces effets introduisent un amortissement qui réduit progressivement l'amplitude des oscillations. Le système tend vers sa position d'équilibre, sans oscillations dans le cas apériodique, ou avec des oscillations décroissantes dans le cas pseudo-périodique (analogie au circuit RLC de la leçon 7).</p>
+
+                <h4>15. Applications pratiques détaillées</h4>
+                <p>L'oscillateur mécanique non amorti est le modèle de base de nombreux systèmes :</p>
+                <ul>
+                    <li><strong>Horloges à balancier :</strong> l'invention de l'horloge à pendule par Huygens en 1656 a marqué le début de la mesure précise du temps. La période du pendule ne dépend que de sa longueur (et de g), ce qui permet une stabilité excellente.</li>
+                    <li><strong>Montres mécaniques :</strong> un balancier spiral (ressort) oscille à une fréquence fixe (typiquement 28 800 alternances par heure, soit 4 Hz), régularisée par l'échappement qui compense l'amortissement.</li>
+                    <li><strong>Suspension des véhicules :</strong> la suspension automobile est un système masse-ressort-amortisseur. Le réglage des paramètres (m, k, c) détermine le confort et la tenue de route. L'oscillateur non amorti est le modèle idéal vers lequel on tend pour minimiser l'amortissement.</li>
+                    <li><strong>Bâtiments antisismiques :</strong> les gratte-ciels modernes intègrent des amortisseurs accordés (TMD, Tuned Mass Dampers) qui sont des oscillateurs mécaniques accordés sur la fréquence propre du bâtiment. Ils entrent en résonance en cas de séisme et dissipent l'énergie vibratoire.</li>
+                    <li><strong>Instruments de musique à cordes :</strong> la corde vibrante (guitare, piano, violon) est un oscillateur mécanique avec amortissement. La fréquence des harmoniques dépend de la longueur, de la tension, et de la masse linéique de la corde.</li>
+                    <li><strong>Microscopie à force atomique (AFM) :</strong> la pointe de l'AFM est montée sur un micro-levier (cantilever) qui se comporte comme un oscillateur mécanique. La mesure de la fréquence propre et du facteur Q permet de caractériser la surface.</li>
+                    <li><strong>Quartz piézoélectrique :</strong> un cristal de quartz vibre mécaniquement à une fréquence très stable, utilisée comme référence de temps dans les horloges, les microcontrôleurs, et les systèmes de télécommunication.</li>
+                    <li><strong>Gyroscopes :</strong> les gyroscopes mécaniques utilisent la conservation du moment angulaire pour détecter les rotations. L'analyse de leurs vibrations fait appel à la théorie des oscillateurs.</li>
+                    <li><strong>Modélisation des solides :</strong> les vibrations d'un réseau cristallin (phonons) sont modélisées par un ensemble d'oscillateurs harmoniques couplés, à la base de la théorie du solide.</li>
+                    <li><strong>Étude des marées :</strong> les marées océaniques sont des oscillations de très basse fréquence (12h environ) dans les bassins océaniques, modélisées par des oscillateurs harmoniques forcés par les forces gravitationnelles de la Lune et du Soleil.</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔑 Concepts clés à retenir</h3>
+                <ul>
+                    <li><strong>Loi de Hooke :</strong> F = −k · x (force de rappel proportionnelle à l'élongation)</li>
+                    <li><strong>Équation différentielle :</strong> d²x/dt² + (k/m) · x = 0</li>
+                    <li><strong>Pulsation propre :</strong> ω₀ = √(k/m) [rad/s]</li>
+                    <li><strong>Période propre :</strong> T₀ = 2π · √(m/k)</li>
+                    <li><strong>Fréquence propre :</strong> f₀ = 1/(2π · √(m/k))</li>
+                    <li><strong>Solution :</strong> x(t) = X_max · cos(ω₀·t + φ)</li>
+                    <li><strong>Énergie totale conservée :</strong> E = ½·m·v² + ½·k·x² = constante</li>
+                    <li><strong>Échanges d'énergie :</strong> E_c ↔ E_p à la fréquence ω₀</li>
+                    <li><strong>Analogie avec le circuit LC :</strong> m ↔ L, k ↔ 1/C, x ↔ q</li>
+                    <li><strong>Pendule simple (petites oscillations) :</strong> T₀ = 2π · √(L/g)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>🔧 Applications pratiques</h3>
+                <ul>
+                    <li><strong>Horloges à pendule</strong> : première mesure précise du temps (Huygens, 1656)</li>
+                    <li><strong>Montres mécaniques</strong> : balancier-spiral comme référence de fréquence</li>
+                    <li><strong>Suspension automobile</strong> : compromis confort/stabilité (masse-ressort-amortisseur)</li>
+                    <li><strong>Bâtiments antisismiques</strong> : amortisseurs accordés (TMD) pour la protection sismique</li>
+                    <li><strong>Instruments de musique</strong> : cordes vibrantes, membranes, colonnes d'air</li>
+                    <li><strong>Microscopie à force atomique (AFM)</strong> : micro-levier oscillant</li>
+                    <li><strong>Quartz piézoélectrique</strong> : référence de temps dans les circuits électroniques</li>
+                    <li><strong>Gyroscopes</strong> : détection des rotations par conservation du moment angulaire</li>
+                    <li><strong>Modélisation des solides</strong> : vibrations du réseau cristallin (phonons)</li>
+                </ul>
+            </div>
+
+            <div class="plan-subsection">
+                <h3>✏️ Exercices suggérés</h3>
+                <ol>
+                    <li><strong>Exercice 1 (oscillations libres) :</strong> Une masse m = 500 g est attachée à un ressort de raideur k = 200 N/m. La masse est écartée de 5 cm de sa position d'équilibre et relâchée sans vitesse initiale. Calculer : (a) la pulsation et la période propres, (b) l'amplitude et la phase initiale, (c) la position et la vitesse à t = 0,1 s, (d) l'énergie totale du système.</li>
+                    <li><strong>Exercice 2 (vitesse et accélération) :</strong> Reprendre l'exercice précédent et calculer : (a) la vitesse maximale, (b) l'accélération maximale, (c) la position où l'accélération vaut −50 m/s², (d) la vitesse à la position x = 3 cm.</li>
+                    <li><strong>Exercice 3 (conservation de l'énergie) :</strong> Pour le même système, vérifier que l'énergie totale se conserve en calculant E_c et E_p à plusieurs instants caractéristiques (t = 0, T₀/4, T₀/2, 3T₀/4, T₀).</li>
+                    <li><strong>Exercice 4 (pendule simple) :</strong> Un pendule simple de longueur 1 m est écarté de 10° de la verticale et relâché. Calculer : (a) la pulsation et la période propres, (b) la vitesse au passage par la verticale, (c) la fréquence pour la Station spatiale internationale en orbite (g ≈ 0). Commenter.</li>
+                    <li><strong>Exercice 5 (ressort vertical) :</strong> Un ressort de raideur k = 100 N/m et de longueur à vide 20 cm est suspendu verticalement. Une masse m = 200 g est accrochée et atteint une nouvelle position d'équilibre. Calculer : (a) l'allongement à l'équilibre, (b) la pulsation propre des petites oscillations, (c) la période.</li>
+                    <li><strong>Exercice 6 (analogie électrique) :</strong> Un circuit LC série a L = 100 mH et C = 10 µF. Calculer sa pulsation et sa période propres. Trouver la masse et la raideur d'un système masse-ressort équivalent. Vérifier que la fréquence est la même.</li>
+                    <li><strong>Exercice 7 (mesure de g) :</strong> Un pendule simple de longueur 1,5 m oscille avec une période de 2,45 s. Calculer g. Comparer avec la valeur standard (9,81 m/s²) et expliquer les écarts possibles.</li>
+                </ol>
+            </div>
+
+            <div class="plan-summary">
+                <strong>📌 Résumé :</strong> Le système masse-ressort horizontal non amorti est l'archétype de l'oscillateur harmonique en mécanique. L'équation différentielle du mouvement, obtenue par application de la loi fondamentale de la dynamique à la force de rappel élastique (loi de Hooke F = −k·x), est d²x/dt² + (k/m)·x = 0. Sa solution est sinusoïdale : x(t) = X_max·cos(ω₀·t + φ), avec la pulsation propre ω₀ = √(k/m) et la période T₀ = 2π·√(m/k). L'énergie totale, somme de l'énergie cinétique ½·m·v² et de l'énergie potentielle élastique ½·k·x², se conserve en l'absence de frottement et oscille entre ces deux formes à la fréquence ω₀. Le pendule simple, dans l'approximation des petites oscillations, se comporte aussi comme un oscillateur harmonique avec T₀ = 2π·√(L/g). Le système masse-ressort est l'analogue mécanique exact du circuit LC électrique (m ↔ L, k ↔ 1/C, x ↔ q), permettant de transposer les résultats entre les deux domaines. Cette étude constitue la base de la mécanique des vibrations, de l'acoustique musicale, de la conception des horloges et des systèmes de suspension, et de la mécanique quantique de l'oscillateur harmonique.
+            </div>
+        </section>
+
+        <!-- COURS DÉTAILLÉ (enrichi) -->
+        <section class="cours-detaille">
+            <h2 class="cours-titre">📖 Cours détaillé enrichi — Leçon 10 : Mécanique non amortie</h2>
+
+            <h2>1. L'oscillateur harmonique : un concept fondamental de la physique</h2>
+            <p>L'oscillateur harmonique est l'un des modèles les plus importants de toute la physique. Il décrit un système qui, après avoir été écarté de sa position d'équilibre, oscille indéfiniment avec une fréquence qui lui est propre, sans perdre d'énergie. Ce modèle apparaît partout : en mécanique (ressort, pendule), en électricité (circuit LC), en optique (ondes électromagnétiques), en acoustique (vibration des cordes), en mécanique quantique (oscillateur harmonique quantique), et même en mécanique des fluides (oscillations de la surface d'un liquide).</p>
+
+            <p>Dans cette leçon, nous étudions le cas le plus simple : l'oscillateur mécanique non amorti, c'est-à-dire un système masse-ressort horizontal qui oscille sans aucun frottement. Bien que ce cas soit idéal (en pratique, il y a toujours un peu d'amortissement), il permet de comprendre les concepts fondamentaux qui seront ensuite étendus aux cas plus réalistes (oscillations amorties, oscillations forcées, résonance).</p>
+
+            <h2>2. Le système masse-ressort : description détaillée</h2>
+
+            <h3>2.1. Description physique</h3>
+            <p>Imaginons un système composé de :</p>
+            <ul>
+                <li>Une <strong>masse m</strong>, assimilée à un point matériel, qui peut glisser sans frottement sur un rail horizontal.</li>
+                <li>Un <strong>ressort hélicoïdal</strong> de raideur k et de longueur à vide ℓ₀, fixé à l'une de ses extrémités à un point fixe (un mur par exemple), et attaché à la masse à son autre extrémité.</li>
+            </ul>
+            <p>Le rail horizontal est considéré comme parfaitement lisse : il n'y a aucun frottement entre la masse et le rail. L'air ambiant est supposé peu résistant : on néglige les frottements aérodynamiques.</p>
+
+            <h3>2.2. Position d'équilibre</h3>
+            <p>Quand la masse est au repos, sans aucune force extérieure autre que la force de rappel du ressort, le système est en équilibre. À cet équilibre, le ressort a une longueur bien précise (sa longueur à vide ℓ₀) et la force de rappel est nulle. C'est ce qu'on appelle la <strong>position d'équilibre stable</strong> du système.</p>
+
+            <p>Si on écarte la masse de cette position d'équilibre, en l'éloignant ou en la rapprochant du mur, le ressort n'est plus à sa longueur à vide : il est soit comprimé, soit étiré. Il exerce alors une force de rappel qui tend à ramener la masse vers sa position d'équilibre. C'est cette force de rappel qui est à l'origine des oscillations.</p>
+
+            <h3>2.3. La loi de Hooke</h3>
+            <p>La loi empirique qui décrit la force exercée par un ressort a été formulée par le physicien anglais Robert Hooke en 1660. Elle s'énonce ainsi :</p>
+
+            <div class="definition">
+                La <strong>force de rappel</strong> exercée par un ressort est <strong>proportionnelle</strong> à son élongation (c'est-à-dire à son écart par rapport à sa longueur à vide) et <strong>de signe opposé</strong> (c'est-à-dire dirigée vers la position d'équilibre).
+            </div>
+
+            <p>Mathématiquement, on écrit :</p>
+            <div class="formule">F = −k · x</div>
+            <p>où F est la force exercée par le ressort, x est l'élongation, et k est la constante de raideur du ressort (en N/m).</p>
+
+            <p>Le signe négatif est essentiel : il traduit le fait que la force de rappel est toujours dirigée <strong>vers</strong> la position d'équilibre. Si x > 0 (ressort étiré), F < 0 (force dirigée vers le mur). Si x < 0 (ressort comprimé), F > 0 (force dirigée dans l'autre sens).</p>
+
+            <div class="remarque">
+                <strong>Limites de la loi de Hooke :</strong> la loi de Hooke n'est valable que dans le <strong>domaine élastique</strong> du ressort, c'est-à-dire pour des déformations pas trop importantes. Si on dépasse ce domaine, le ressort se déforme plastiquement de manière irréversible, et la force n'est plus proportionnelle à l'élongation. Pour les petits écarts autour de la position d'équilibre, la loi de Hooke est en revanche très bien vérifiée.
+            </div>
+
+            <h2>3. Mise en équation du mouvement</h2>
+
+            <h3>3.1. Application du principe fondamental de la dynamique</h3>
+            <p>Le principe fondamental de la dynamique (PFD), énoncé par Newton en 1687, stipule que la somme des forces extérieures appliquées à un système est égale à la masse du système multipliée par son accélération :</p>
+            <div class="formule">Σ F_ext = m · a = m · (d²x/dt²)</div>
+
+            <p>Dans notre système masse-ressort horizontal sans frottement, la seule force extérieure agissant sur la masse est la force de rappel du ressort. On a donc :</p>
+            <div class="formule">−k · x = m · (d²x/dt²)</div>
+
+            <p>En réarrangeant les termes, on obtient l'<strong>équation différentielle du mouvement</strong> :</p>
+            <div class="formule">d²x/dt² + (k/m) · x = 0</div>
+
+            <h3>3.2. Définition de la pulsation propre</h3>
+            <p>On définit la <strong>pulsation propre</strong> ω₀ du système par :</p>
+            <div class="formule">ω₀ = √(k/m)</div>
+            <p>Cette pulsation est exprimée en radians par seconde (rad/s). Elle caractérise la "vitesse" à laquelle le système oscille.</p>
+
+            <p>L'équation différentielle se réécrit alors sous la forme canonique :</p>
+            <div class="formule">d²x/dt² + ω₀² · x = 0</div>
+
+            <h3>3.3. Définition de la période et de la fréquence propres</h3>
+            <p>La <strong>période propre</strong> T₀ est la durée d'une oscillation complète. Elle vaut :</p>
+            <div class="formule">T₀ = 2π / ω₀ = 2π · √(m/k)</div>
+
+            <p>La <strong>fréquence propre</strong> f₀ est le nombre d'oscillations par seconde :</p>
+            <div class="formule">f₀ = 1 / T₀ = ω₀ / (2π) = (1/(2π)) · √(k/m)</div>
+            <p>La fréquence est exprimée en Hertz (Hz).</p>
+
+            <div class="exemple">
+                <strong>Exemple de calcul :</strong> Pour m = 0,5 kg et k = 50 N/m :<br>
+                ω₀ = √(50/0,5) = √100 = 10 rad/s.<br>
+                T₀ = 2π/10 ≈ 0,628 s.<br>
+                f₀ = 1/0,628 ≈ 1,59 Hz.
+            </div>
+
+            <h2>4. Résolution de l'équation différentielle</h2>
+
+            <h3>4.1. Solution générale</h3>
+            <p>L'équation d²x/dt² + ω₀² · x = 0 est une équation différentielle linéaire du second ordre, à coefficients constants, sans second membre. Sa solution générale est :</p>
+            <div class="formule">x(t) = A · cos(ω₀ · t) + B · sin(ω₀ · t)</div>
+            <p>où A et B sont des constantes déterminées par les conditions initiales.</p>
+
+            <p>On peut aussi écrire la solution sous la forme équivalente (et souvent plus pratique) :</p>
+            <div class="formule">x(t) = X_max · cos(ω₀ · t + φ)</div>
+            <p>où X_max est l'<strong>amplitude</strong> des oscillations (X_max > 0) et φ est la <strong>phase initiale</strong> (comprise entre −π et π).</p>
+
+            <h3>4.2. Détermination de X_max et φ à partir des conditions initiales</h3>
+            <p>Si à t = 0, on a x(0) = x₀ et v(0) = v₀, on peut écrire :</p>
+            <ul>
+                <li>x(0) = X_max · cos(φ) = x₀</li>
+                <li>v(0) = −ω₀ · X_max · sin(φ) = v₀</li>
+            </ul>
+            <p>D'où :</p>
+            <div class="formule">X_max = √(x₀² + (v₀/ω₀)²)</div>
+            <div class="formule">tan(φ) = −v₀ / (ω₀ · x₀)</div>
+
+            <h3>4.3. Cas particuliers importants</h3>
+            <ul>
+                <li><strong>Cas 1 :</strong> on lâche la masse à partir de la position x₀ sans vitesse initiale (x(0) = x₀, v(0) = 0). Alors X_max = x₀, φ = 0, et :<br>
+                <div class="formule">x(t) = x₀ · cos(ω₀ · t)</div>
+                </li>
+                <li><strong>Cas 2 :</strong> on lance la masse depuis l'équilibre avec une vitesse initiale v₀ (x(0) = 0, v(0) = v₀). Alors X_max = v₀/ω₀, φ = −π/2, et :<br>
+                <div class="formule">x(t) = (v₀/ω₀) · sin(ω₀ · t)</div>
+                </li>
+                <li><strong>Cas 3 :</strong> on lance la masse depuis la position x₀ avec une vitesse initiale v₀. La solution générale s'applique avec les formules ci-dessus.</li>
+            </ul>
+
+            <h2>5. Vitesse, accélération et déphasages</h2>
+
+            <h3>5.1. Expressions de la vitesse et de l'accélération</h3>
+            <p>La vitesse et l'accélération se déduisent de x(t) par dérivation :</p>
+            <div class="formule">v(t) = dx/dt = −ω₀ · X_max · sin(ω₀ · t + φ)</div>
+            <div class="formule">a(t) = d²x/dt² = −ω₀² · X_max · cos(ω₀ · t + φ) = −ω₀² · x(t)</div>
+
+            <h3>5.2. Amplitudes maximales</h3>
+            <ul>
+                <li><strong>Amplitude de position :</strong> X_max</li>
+                <li><strong>Vitesse maximale (en valeur absolue) :</strong> V_max = ω₀ · X_max</li>
+                <li><strong>Accélération maximale (en valeur absolue) :</strong> A_max = ω₀² · X_max</li>
+            </ul>
+
+            <h3>5.3. Déphasages entre position, vitesse et accélération</h3>
+            <ul>
+                <li>La <strong>vitesse</strong> est en <strong>quadrature avance</strong> par rapport à la position (elle est en avance d'un quart de période, soit π/2 radians).</li>
+                <li>L'<strong>accélération</strong> est en <strong>opposition de phase</strong> par rapport à la position (elle est déphasée de π radians, soit 180°).</li>
+            </ul>
+
+            <div class="remarque">
+                <strong>Interprétation physique :</strong> lorsque la masse est à son élongation maximale (x = X_max), sa vitesse est nulle (elle s'apprête à changer de sens) et son accélération est maximale en valeur absolue et dirigée vers l'équilibre. Au passage par la position d'équilibre (x = 0), la vitesse est maximale en valeur absolue, et l'accélération est nulle.
+            </div>
+
+            <h2>6. Énergie du système</h2>
+
+            <h3>6.1. Énergie cinétique</h3>
+            <p>L'énergie cinétique de la masse est :</p>
+            <div class="formule">E_c = ½ · m · v²</div>
+
+            <h3>6.2. Énergie potentielle élastique</h3>
+            <p>L'énergie potentielle élastique emmagasinée dans le ressort est :</p>
+            <div class="formule">E_p = ½ · k · x²</div>
+
+            <h3>6.3. Énergie totale et sa conservation</h3>
+            <p>L'énergie totale du système est :</p>
+            <div class="formule">E_tot = E_c + E_p = ½ · m · v² + ½ · k · x²</div>
+
+            <p>En utilisant les expressions de x(t) et v(t) :</p>
+            <div class="formule">E_c(t) = ½ · k · X_max² · sin²(ω₀ · t + φ)</div>
+            <div class="formule">E_p(t) = ½ · k · X_max² · cos²(ω₀ · t + φ)</div>
+            <div class="formule">E_tot = ½ · k · X_max² = constante</div>
+
+            <div class="definition">
+                <strong>Conservation de l'énergie :</strong> en l'absence de frottement, l'énergie totale du système masse-ressort est constante au cours du temps. Elle ne dépend que de l'amplitude des oscillations.
+            </div>
+
+            <h3>6.4. Échanges d'énergie au cours d'une période</h3>
+            <p>Au cours d'une oscillation, l'énergie oscille entre les formes cinétique et potentielle :</p>
+            <ul>
+                <li><strong>À t = 0</strong> (élongation maximale) : E_c = 0, E_p = E_tot.</li>
+                <li><strong>De t = 0 à T₀/4</strong> : la masse se déplace vers l'équilibre, sa vitesse augmente, donc E_c augmente et E_p diminue. L'énergie passe de la forme potentielle à la forme cinétique.</li>
+                <li><strong>À t = T₀/4</strong> (passage par l'équilibre) : E_c = E_tot, E_p = 0.</li>
+                <li><strong>De t = T₀/4 à T₀/2</strong> : la masse dépasse l'équilibre, le ressort se comprime de l'autre côté, la vitesse diminue, donc E_c diminue et E_p augmente. L'énergie repasse de la forme cinétique à la forme potentielle.</li>
+                <li><strong>À t = T₀/2</strong> : E_c = 0, E_p = E_tot (de nouveau élongation maximale, mais de l'autre côté).</li>
+                <li>Le cycle se répète.</li>
+            </ul>
+
+            <h2>7. Représentation dans l'espace des phases</h2>
+            <p>L'<strong>espace des phases</strong> est un diagramme qui représente la vitesse v en fonction de la position x. Pour un oscillateur harmonique non amorti, la trajectoire dans cet espace est une <strong>ellipse</strong> centrée à l'origine :</p>
+            <div class="formule">(x/X_max)² + (v/V_max)² = 1</div>
+
+            <p>Cette ellipse est parcourue dans le sens trigonométrique (antihoraire) au cours du temps. La trajectoire est <strong>fermée</strong>, ce qui traduit la périodicité du mouvement : le système repasse périodiquement par les mêmes états. L'aire de cette ellipse est reliée à l'<strong>action</strong> du système, une grandeur fondamentale en mécanique analytique.</p>
+
+            <h2>8. Le pendule simple</h2>
+
+            <h3>8.1. Description et équation du mouvement</h3>
+            <p>Le <strong>pendule simple</strong> est constitué d'une masse ponctuelle m suspendue à un fil inextensible de longueur L, dont l'autre extrémité est fixée à un point fixe. Quand on écarte le pendule de sa position d'équilibre (fil vertical) d'un angle θ, le fil fait un angle θ avec la verticale, et la masse est soumise à son poids (mg, vertical) et à la tension du fil (T, le long du fil). La composante tangentielle du poids est m·g·sin(θ), qui tend à ramener la masse vers l'équilibre.</p>
+
+            <p>L'équation du mouvement s'écrit :</p>
+            <div class="formule">d²θ/dt² + (g/L) · sin(θ) = 0</div>
+
+            <h3>8.2. Approximation des petites oscillations</h3>
+            <p>Pour de petits angles (|θ| << 1 rad, soit environ 5,7°), on peut faire l'approximation sin(θ) ≈ θ. L'équation devient alors :</p>
+            <div class="formule">d²θ/dt² + (g/L) · θ = 0</div>
+
+            <p>Cette équation est identique à celle de l'oscillateur harmonique masse-ressort. On identifie :</p>
+            <div class="formule">ω₀ = √(g/L)</div>
+            <div class="formule">T₀ = 2π · √(L/g)</div>
+
+            <h3>8.3. Propriétés remarquables</h3>
+            <ul>
+                <li>La période T₀ ne dépend <strong>pas de la masse</strong> du pendule : un pendule de 1 m de long a la même période pour une masse de 10 g ou de 10 kg (en l'absence de frottement).</li>
+                <li>La période T₀ ne dépend <strong>pas de l'amplitude</strong> (dans l'approximation des petites oscillations). C'est l'<strong>isochronisme des petites oscillations</strong>, découvert par Galilée.</li>
+                <li>La période T₀ dépend de g, ce qui permet de mesurer g avec un pendule. C'est ainsi qu'on a mesuré g avec précision pour la première fois, et qu'on a montré que g varie légèrement avec la latitude (à cause de la rotation de la Terre et de l'aplatissement aux pôles).</li>
+            </ul>
+
+            <div class="exemple">
+                <strong>Exemple de calcul :</strong> Pour un pendule de longueur L = 1 m à Paris (g ≈ 9,81 m/s²) :<br>
+                T₀ = 2π · √(1/9,81) ≈ 2,006 s.<br>
+                C'est la période historique d'une "seconde" environ (1 s correspond à un pendule de 25 cm).
+            </div>
+
+            <h2>9. Exercices corrigés détaillés</h2>
+
+            <h3>Exercice 1 — Oscillations libres d'un système masse-ressort</h3>
+            <p><strong>Énoncé :</strong> Une masse m = 500 g est attachée à un ressort de raideur k = 200 N/m, horizontal, sans frottement. À t = 0, on écarte la masse de 5 cm de sa position d'équilibre et on la relâche sans vitesse initiale.</p>
+            <p><strong>Questions :</strong> (a) Calculer la pulsation et la période propres. (b) Calculer l'amplitude et la phase initiale. (c) Calculer la position et la vitesse à t = 0,1 s. (d) Calculer l'énergie totale du système.</p>
+
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                <strong>(a)</strong> ω₀ = √(k/m) = √(200/0,5) = √400 = 20 rad/s.<br>
+                T₀ = 2π/ω₀ = 2π/20 = 0,1π ≈ 0,314 s.<br>
+                <strong>(b)</strong> Conditions initiales : x(0) = 0,05 m, v(0) = 0. Donc X_max = 0,05 m, φ = 0.<br>
+                x(t) = 0,05 · cos(20t).<br>
+                <strong>(c)</strong> À t = 0,1 s : ω₀ · t = 20 × 0,1 = 2 rad.<br>
+                x(0,1) = 0,05 · cos(2) ≈ 0,05 × (−0,416) ≈ −0,0208 m = −2,08 cm.<br>
+                v(0,1) = −ω₀ · X_max · sin(ω₀ · t) = −20 × 0,05 × sin(2) ≈ −1 × 0,909 ≈ −0,909 m/s.<br>
+                <strong>(d)</strong> E_tot = ½ · k · X_max² = ½ × 200 × (0,05)² = ½ × 200 × 0,0025 = 0,25 J.
+            </div>
+
+            <h3>Exercice 2 — Vitesse et accélération maximales</h3>
+            <p><strong>Énoncé :</strong> reprendre l'exercice précédent et calculer la vitesse maximale, l'accélération maximale, ainsi que la position où l'accélération vaut −50 m/s².</p>
+
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                V_max = ω₀ · X_max = 20 × 0,05 = 1 m/s.<br>
+                A_max = ω₀² · X_max = 400 × 0,05 = 20 m/s².<br>
+                Pour a = −ω₀² · x = −50 m/s², on a :<br>
+                −400 · x = −50, donc x = 50/400 = 0,125 m = 12,5 cm.<br>
+                Mais X_max = 0,05 m = 5 cm, donc x = 12,5 cm n'est jamais atteint ! Cela signifie que l'accélération ne peut jamais atteindre −50 m/s² dans ce système. La valeur maximale est de 20 m/s² en valeur absolue.
+            </div>
+
+            <h3>Exercice 3 — Ressort vertical</h3>
+            <p><strong>Énoncé :</strong> Un ressort de raideur k = 100 N/m et de longueur à vide ℓ₀ = 20 cm est suspendu verticalement. Une masse m = 200 g est accrochée au ressort et atteint une nouvelle position d'équilibre. Calculer : (a) l'allongement à l'équilibre, (b) la pulsation propre des petites oscillations, (c) la période, (d) la longueur totale du ressort à l'équilibre.</p>
+
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                <strong>(a)</strong> À l'équilibre, la force de rappel équilibre le poids : k · x₀ = m · g.<br>
+                x₀ = m · g / k = 0,2 × 9,81 / 100 ≈ 0,01962 m ≈ 1,96 cm.<br>
+                <strong>(b)</strong> ω₀ = √(k/m) = √(100/0,2) = √500 ≈ 22,36 rad/s.<br>
+                <strong>(c)</strong> T₀ = 2π/ω₀ = 2π/22,36 ≈ 0,281 s.<br>
+                <strong>(d)</strong> ℓ = ℓ₀ + x₀ = 20 + 1,96 ≈ 21,96 cm.
+            </div>
+
+            <h3>Exercice 4 — Pendule simple : calcul de la vitesse</h3>
+            <p><strong>Énoncé :</strong> Un pendule simple de longueur L = 1 m est écarté de θ_max = 10° de la verticale et relâché sans vitesse initiale. Calculer : (a) la pulsation et la période propres, (b) la vitesse au passage par la verticale, (c) la hauteur de chute.</p>
+
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                <strong>(a)</strong> ω₀ = √(g/L) = √(9,81/1) ≈ 3,132 rad/s.<br>
+                T₀ = 2π/ω₀ ≈ 2,006 s.<br>
+                <strong>(b)</strong> L'amplitude angulaire est θ_max = 10° = 0,1745 rad.<br>
+                La vitesse linéaire au passage par la verticale est :<br>
+                v_max = L · ω₀ · θ_max = 1 × 3,132 × 0,1745 ≈ 0,547 m/s.<br>
+                <strong>(c)</strong> La hauteur de chute est :<br>
+                h = L · (1 − cos(θ_max)) = 1 × (1 − cos(10°)) ≈ 1 × 0,0152 ≈ 0,0152 m = 1,52 cm.
+            </div>
+
+            <h3>Exercice 5 — Analogie avec le circuit LC</h3>
+            <p><strong>Énoncé :</strong> Un circuit LC série a une inductance L = 100 mH et une capacité C = 10 µF. Calculer sa pulsation et sa période propres. Trouver la masse et la raideur d'un système masse-ressort équivalent qui oscille à la même fréquence.</p>
+
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                Pour le circuit LC : ω₀ = 1/√(LC) = 1/√(100 × 10⁻³ × 10 × 10⁻⁶) = 1/√(10⁻⁶) = 1000 rad/s.<br>
+                T₀ = 2π/1000 ≈ 0,00628 s ≈ 6,28 ms.<br>
+                Pour le système masse-ressort équivalent, on peut choisir arbitrairement m = 1 kg.<br>
+                Alors k = m · ω₀² = 1 × 1000² = 10⁶ N/m.<br>
+                Ou choisir arbitrairement k = 100 N/m.<br>
+                Alors m = k/ω₀² = 100 / 10⁶ = 10⁻⁴ kg = 0,1 g.<br>
+                Les deux systèmes oscillent à la même fréquence, et l'analogie permet de transposer les résultats d'un domaine à l'autre.
+            </div>
+
+            <h3>Exercice 6 — Mesure expérimentale de g</h3>
+            <p><strong>Énoncé :</strong> Un pendule simple de longueur L = 1,5 m oscille avec une période T₀ = 2,45 s. Calculer g. Comparer avec la valeur standard (9,81 m/s²) et expliquer les écarts possibles.</p>
+
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                T₀ = 2π · √(L/g), donc g = 4π² · L / T₀².<br>
+                g = 4 × (3,1416)² × 1,5 / (2,45)² = 4 × 9,8696 × 1,5 / 6,0025 ≈ 59,217 / 6,0025 ≈ 9,866 m/s².<br>
+                C'est très proche de 9,81 m/s², avec un écart de 0,5 %. Les écarts possibles viennent :<br>
+                - de l'imprécision sur la mesure de la longueur du pendule (longueur exacte du fil, position du centre de masse de la masse),<br>
+                - de l'imprécision sur la mesure de la période (durée de plusieurs oscillations divisée par le nombre d'oscillations),<br>
+                - de l'amortissement de l'air (qui allonge légèrement la période),<br>
+                - du fait que le pendule n'est pas exactement un pendule simple (la masse a une taille finie).<br>
+                La valeur mesurée est cohérente avec la valeur standard à 0,5 % près.
+            </div>
+
+            <h2>10. Résumé des points clés à retenir</h2>
+            <div class="remarque">
+                <strong>Ce qu'il faut absolument mémoriser :</strong>
+                <ul>
+                    <li>Un oscillateur harmonique non amorti oscille <strong>indéfiniment</strong> avec une fréquence propre bien définie.</li>
+                    <li>La <strong>loi de Hooke</strong> : F = −k · x (force de rappel proportionnelle à l'élongation et opposée).</li>
+                    <li>L'<strong>équation différentielle</strong> du mouvement : d²x/dt² + (k/m) · x = 0.</li>
+                    <li>La <strong>pulsation propre</strong> : ω₀ = √(k/m) [rad/s].</li>
+                    <li>La <strong>période propre</strong> : T₀ = 2π · √(m/k) [s].</li>
+                    <li>La <strong>fréquence propre</strong> : f₀ = 1/(2π) · √(k/m) [Hz].</li>
+                    <li>La <strong>solution générale</strong> : x(t) = X_max · cos(ω₀ · t + φ).</li>
+                    <li>L'<strong>énergie totale</strong> se conserve : E_tot = ½ · m · v² + ½ · k · x² = constante.</li>
+                    <li>L'énergie oscille entre les formes <strong>cinétique</strong> et <strong>potentielle</strong> à la fréquence ω₀.</li>
+                    <li>Le <strong>pendule simple</strong> (petites oscillations) : T₀ = 2π · √(L/g).</li>
+                    <li>Analogie avec le <strong>circuit LC</strong> : m ↔ L, k ↔ 1/C, x ↔ q.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- BOUTON RETOUR À LA MATIÈRE -->
+        <a href="../physique.html" class="back-btn" style="margin-top: 2rem;">
+            ← Retour aux leçons de Physique
         </a>
     </main>
 

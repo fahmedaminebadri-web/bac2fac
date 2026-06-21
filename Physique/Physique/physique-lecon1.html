@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1iOkHlNBfPCgoBwqEErxQk1kAK6KMYXbC/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/F97316/FFFFFF?text=Circuit+RC" alt="Résumé du Circuit RC">
-                <div class="resume-overlay">
-                    <h3>Circuit RC</h3>
-                    <p>Charge et décharge d'un condensateur, constante de temps τ = RC.</p>
-                </div>
+               
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1hdrUF9IzqZSLyEK8qy127K7kXfe9Zz2b/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,7 +68,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1DYpSqK3M_cve00Mtu6IlMAvYa5S-LLx1/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -104,76 +102,203 @@
 
             <div class="plan-subsection">
                 <h3>📖 Contenu détaillé</h3>
-                <h4>1. Structure et comportement du condensateur</h4>
-                <p>Un condensateur est un dipôle passif composé de deux armatures conductrices séparées par un isolant (diélectrique). Sa propriété principale est sa capacité C, définie par la relation <strong>Q = C·V</strong>, où Q est la charge accumulée, V la tension à ses bornes et C la capacité en farads (F). Le condensateur ne permet pas le passage d'un courant permanent en régime stationnaire ; il se comporte comme un circuit ouvert pour le courant continu. L'énergie emmagasinée dans un condensateur chargé est <strong>E = ½·C·V²</strong>.</p>
 
-                <h4>2. Charge d'un circuit RC</h4>
-                <p>Lorsqu'on ferme l'interrupteur reliant un condensateur initialement déchargé à un générateur de tension continue E à travers une résistance R, le condensateur se charge progressivement.</p>
+                <h4>1. Introduction et contexte historique</h4>
+                <p>Le circuit RC (Résistance-Condensateur) est l'un des circuits fondamentaux de l'électronique moderne. Son étude remonte aux travaux pionniers de <strong>Georg Simon Ohm</strong> (1789-1854) sur la résistance, de <strong>Michael Faraday</strong> (1791-1867) sur le condensateur, et de <strong>Hermann von Helmholtz</strong> (1821-1894) sur la dynamique des circuits électriques. Le circuit RC constitue le premier exemple d'un système du premier ordre, c'est-à-dire un système dont le comportement est décrit par une équation différentielle linéaire du premier ordre. Cette simplicité apparente cache une richesse conceptuelle considérable : le circuit RC est l'analogue électrique de nombreux phénomènes physiques comme la charge thermique d'un corps, la diffusion de particules, ou encore la réponse d'un système amorti à un échelon.</p>
+                <p>Dans la vie quotidienne, les circuits RC interviennent partout : dans les alimentations électriques pour le filtrage du bruit, dans les circuits de temporisation des appareils ménagers, dans les unités de flash photographique, dans les systèmes anti-rebond des boutons-poussoirs, ou encore dans les filtres des chaînes audio. Comprendre le circuit RC, c'est donc acquérir une clé essentielle pour décoder le fonctionnement de l'électronique analogique.</p>
+
+                <h4>2. Le condensateur : structure, fonctionnement et caractéristiques</h4>
+                <p>Un condensateur (parfois appelé « capacité ») est un composant passif à deux bornes constitué de deux armatures conductrices (plaques) séparées par un matériau isolant appelé <strong>diélectrique</strong>. Le diélectrique peut être de l'air, du mica, du papier imprégné, du plastique, de la céramique, ou encore de l'oxyde métallique (cas des condensateurs électrolytiques). La fonction d'un diélectrique est double : empêcher le passage du courant continu entre les armatures, et augmenter la capacité par rapport à un condensateur à air de mêmes dimensions grâce à la <strong>permittivité relative εᵣ</strong> du matériau.</p>
+                <p>La <strong>capacité C</strong> d'un condensateur, exprimée en farads (F), mesure sa capacité à stocker des charges électriques. Elle est définie par la relation fondamentale :</p>
                 <div class="plan-highlight">
-                    <strong>Équation différentielle :</strong> R·C·(duc/dt) + uc = E<br>
-                    <strong>Tension aux bornes du condensateur :</strong> uc(t) = E·(1 − e^(−t/τ)), où τ = R·C<br>
-                    <strong>Courant de charge :</strong> i(t) = (E/R)·e^(−t/τ)
+                    <strong>Q = C · V</strong><br>
+                    où Q est la charge stockée (en coulombs), V la tension aux bornes (en volts) et C la capacité (en farads).<br>
+                    <strong>Energie stockée :</strong> E = ½ · C · V²
                 </div>
-
-                <h4>3. Décharge d'un circuit RC</h4>
-                <p>Si l'on remplace le générateur par un court-circuit, le condensateur chargé se décharge à travers la résistance :</p>
+                <p>Pour un condensateur plan à plaques parallèles, la capacité est donnée par :</p>
                 <ul>
-                    <li>Tension : <strong>uc(t) = E·e^(−t/τ)</strong></li>
-                    <li>Courant : <strong>i(t) = −(E/R)·e^(−t/τ)</strong> (signe négatif = sens inverse)</li>
-                    <li>Charge : <strong>q(t) = C·E·e^(−t/τ)</strong></li>
+                    <li><strong>C = ε₀ · εᵣ · S / d</strong>, où S est la surface des plaques (m²), d la distance entre plaques (m), ε₀ ≈ 8,854·10⁻¹² F/m la permittivité du vide, et εᵣ la permittivité relative du diélectrique (sans dimension).</li>
+                    <li>Pour un diélectrique typique comme le polyester, εᵣ ≈ 3,2 ; pour la céramique haute-k, εᵣ peut atteindre plusieurs milliers ; pour le mica, εᵣ ≈ 6,8.</li>
+                </ul>
+                <p>La loi constitutive du condensateur, exprimée en fonction du temps, est :</p>
+                <div class="plan-highlight">
+                    <strong>i(t) = C · (du_C/dt)</strong><br>
+                    ou encore, en intégrant :<br>
+                    <strong>u_C(t) = u_C(0) + (1/C) · ∫₀ᵗ i(τ) dτ</strong>
+                </div>
+                <p>Cette relation montre que le condensateur s'oppose aux variations brusques de tension : lorsque la tension change très rapidement (du/dt élevé), un courant très important circule. À l'inverse, en régime permanent (courant continu établi), du/dt = 0, donc i = 0 : <strong>le condensateur se comporte comme un circuit ouvert en régime permanent</strong>. À haute fréquence, son impédance Z_C = 1/(jωC) devient très faible, et il se comporte quasiment comme un court-circuit pour le courant alternatif.</p>
+                <p>Les principales grandeurs caractéristiques d'un condensateur sont :</p>
+                <ul>
+                    <li><strong>Capacité nominale :</strong> valeur de C inscrite sur le boîtier (de quelques pF à plusieurs mF)</li>
+                    <li><strong>Tension de service :</strong> tension maximale applicable en permanence sans destruction du diélectrique</li>
+                    <li><strong>Tolérance :</strong> écart maximal entre la capacité réelle et la valeur nominale (typiquement ±5%, ±10%, ±20%)</li>
+                    <li><strong>Résistance série équivalente (ESR) :</strong> modélise les pertes ohmiques dans les armatures et le diélectrique</li>
+                    <li><strong>Courant de fuite :</strong> courant résiduel traversant le diélectrique en régime permanent (très faible pour les bons condensateurs)</li>
                 </ul>
 
-                <h4>4. Constante de temps τ = R·C</h4>
-                <p>La constante de temps τ = R·C a la dimension d'un temps (secondes). Elle représente :</p>
+                <h4>3. Établissement de l'équation différentielle de charge</h4>
+                <p>Considérons le circuit RC série le plus simple : un générateur de tension continue E (par exemple une pile), une résistance R, un condensateur C initialement déchargé (u_C(0) = 0), et un interrupteur K. À l'instant t = 0, on ferme K. Le circuit devient fermé et le condensateur commence à se charger.</p>
+                <p>Appliquons la <strong>loi des mailles de Kirchhoff</strong> à la maille unique du circuit :</p>
+                <div class="plan-highlight">
+                    <strong>E = u_R(t) + u_C(t)</strong><br>
+                    avec u_R(t) = R · i(t) et i(t) = C · (du_C/dt)
+                </div>
+                <p>En substituant i(t) dans l'équation de maille, on obtient :</p>
+                <div class="plan-highlight">
+                    <strong>E = R · C · (du_C/dt) + u_C(t)</strong>
+                </div>
+                <p>Cette équation différentielle linéaire du premier ordre à coefficients constants admet une solution unique pour chaque condition initiale. La <strong>condition initiale</strong> est u_C(0) = 0 (condensateur initialement déchargé). Le <strong>régime permanent</strong> (lorsque t → ∞) est caractérisé par du_C/dt = 0, donc u_C(∞) = E.</p>
+
+                <h4>4. Résolution mathématique de l'équation de charge</h4>
+                <p>La méthode standard de résolution consiste à séparer la solution en régime permanent (solution particulière) et en régime transitoire (solution homogène) :</p>
                 <ul>
-                    <li>Le temps nécessaire pour que la tension atteigne <strong>63,2%</strong> de sa valeur finale en charge</li>
-                    <li>Le temps nécessaire pour qu'elle descende à <strong>36,8%</strong> de sa valeur initiale en décharge</li>
-                    <li>Après <strong>t = 5τ</strong>, le condensateur est considéré comme quasi-totalement chargé (~99,3%) ou quasi-totalement déchargé (~0,7%)</li>
+                    <li><strong>Solution particulière (régime permanent) :</strong> u_C,particulière = E</li>
+                    <li><strong>Solution homogène (sans second membre) :</strong> R·C·(du_C/dt) + u_C = 0 ⇒ u_C(t) = A·e^(−t/RC)</li>
+                </ul>
+                <p>La solution complète est :</p>
+                <div class="plan-highlight">
+                    <strong>u_C(t) = E + A·e^(−t/RC)</strong>
+                </div>
+                <p>En appliquant la condition initiale u_C(0) = 0, on trouve 0 = E + A, soit A = −E. Donc :</p>
+                <div class="plan-highlight">
+                    <strong>u_C(t) = E · (1 − e^(−t/τ))</strong>, avec <strong>τ = R · C</strong>
+                </div>
+                <p>Le courant de charge s'en déduit par dérivation :</p>
+                <div class="plan-highlight">
+                    <strong>i(t) = C · (du_C/dt) = (E/R) · e^(−t/τ)</strong>
+                </div>
+                <p>Le courant initial (à t = 0+) est donc I₀ = E/R, qui est exactement le courant qu'aurait le circuit si le condensateur était remplacé par un court-circuit. Cela correspond physiquement au fait qu'un condensateur déchargé se comporte comme un court-circuit instantané.</p>
+
+                <h4>5. Interprétation physique de la constante de temps τ</h4>
+                <p>La constante de temps τ = R·C possède la dimension d'un temps, ce qu'on vérifie par analyse dimensionnelle : [R]·[C] = Ω · F = (V/A) · (C/V) = (V/A) · (A·s/V) = s. La constante de temps τ caractérise la « rapidité » du circuit RC à atteindre son régime permanent. Plus τ est grand, plus le circuit est lent, et inversement.</p>
+                <p>Quelques valeurs de référence à mémoriser :</p>
+                <ul>
+                    <li>À <strong>t = τ</strong> : u_C = E·(1 − e⁻¹) ≈ 0,632·E (63,2% de E), soit 63,2% de charge</li>
+                    <li>À <strong>t = 2τ</strong> : u_C ≈ 0,865·E (86,5%)</li>
+                    <li>À <strong>t = 3τ</strong> : u_C ≈ 0,950·E (95,0%)</li>
+                    <li>À <strong>t = 4τ</strong> : u_C ≈ 0,982·E (98,2%)</li>
+                    <li>À <strong>t = 5τ</strong> : u_C ≈ 0,993·E (99,3%) — régime permanent pratiquement atteint</li>
+                </ul>
+                <p>La règle empirique « 5τ » est universellement utilisée en électronique : on considère qu'un circuit RC a atteint son régime permanent après une durée égale à 5 fois la constante de temps. À l'inverse, la « demi-vie » (temps pour que la charge atteigne 50%) vaut t = τ·ln(2) ≈ 0,693·τ.</p>
+                <p>Une <strong>représentation graphique</strong> classique consiste à tracer u_C(t) en fonction du temps et à observer qu'à l'instant t = τ, l'extrapolation linéaire de la tangente initiale (de pente E/R) atteint précisément la valeur u_C = E. Cette propriété géométrique est souvent utilisée pour déterminer graphiquement τ à partir d'un relevé expérimental.</p>
+
+                <h4>6. La décharge du condensateur</h4>
+                <p>Supposons maintenant qu'à un instant t = 0, on remplace le générateur par un court-circuit (par exemple en basculant un commutateur), tout en gardant R et C dans la même maille. Le condensateur, chargé à la tension E, va se décharger progressivement dans la résistance R.</p>
+                <p>L'équation de maille devient : 0 = R·i + u_C, avec i = C·(du_C/dt), d'où :</p>
+                <div class="plan-highlight">
+                    <strong>R·C · (du_C/dt) + u_C = 0</strong>
+                </div>
+                <p>Avec la condition initiale u_C(0) = E, la solution est :</p>
+                <div class="plan-highlight">
+                    <strong>u_C(t) = E · e^(−t/τ)</strong><br>
+                    <strong>i(t) = −(E/R) · e^(−t/τ)</strong> (signe négatif = courant inverse)
+                </div>
+                <p>Le signe négatif du courant traduit le fait que le courant circule en sens inverse de la charge : le condensateur se comporte maintenant comme un générateur qui restitue son énergie à la résistance. Les valeurs de référence pour la décharge :</p>
+                <ul>
+                    <li>À <strong>t = τ</strong> : u_C = E/e ≈ 0,368·E (36,8% de E restant)</li>
+                    <li>À <strong>t = 5τ</strong> : u_C ≈ 0,007·E (moins de 1% restant) — condensateur quasi vide</li>
                 </ul>
 
-                <h4>5. Aspect énergétique</h4>
-                <p>Pendant la charge, l'énergie fournie par le générateur est partiellement stockée dans le condensateur (E_c = ½·C·E²) et partiellement dissipée dans la résistance (E_R = ½·C·E² également). Le rendement énergétique de la charge est donc de 50%. En décharge, l'énergie stockée dans le condensateur est entièrement dissipée dans la résistance.</p>
+                <h4>7. Aspect énergétique : où va l'énergie ?</h4>
+                <p>Un aspect fascinant et souvent mal compris du circuit RC est l'analyse énergétique. Pendant la charge, le générateur fournit une énergie totale :</p>
+                <div class="plan-highlight">
+                    <strong>W_genérateur = ∫₀^∞ E · i(t) dt = ∫₀^∞ E · (E/R) · e^(−t/τ) dt = E² · τ / R = C · E²</strong>
+                </div>
+                <p>L'énergie stockée dans le condensateur en fin de charge est :</p>
+                <div class="plan-highlight">
+                    <strong>W_condensateur = ½ · C · E²</strong>
+                </div>
+                <p>L'énergie dissipée par effet Joule dans la résistance est donc :</p>
+                <div class="plan-highlight">
+                    <strong>W_résistance = W_genérateur − W_condensateur = C · E² − ½ · C · E² = ½ · C · E²</strong>
+                </div>
+                <p><strong>Conclusion frappante :</strong> le rendement énergétique de la charge d'un condensateur à travers une résistance est exactement de 50%, quelle que soit la valeur de R et de C ! La moitié de l'énergie fournie par le générateur est dissipée en chaleur, et l'autre moitié est stockée dans le condensateur. Cette propriété est paradoxale au premier abord : intuitivement, on pourrait penser qu'une résistance plus faible permettrait de mieux charger le condensateur et de réduire les pertes. En réalité, R n'influence pas le bilan énergétique final — elle modifie seulement la durée de la charge (par τ = R·C), mais pas la quantité d'énergie dissipée.</p>
+                <p>Pendant la décharge, l'énergie stockée ½·C·E² est intégralement dissipée dans la résistance, conformément au principe de conservation de l'énergie.</p>
 
-                <h4>6. Applications pratiques</h4>
-                <p>Les circuits RC sont omniprésents en électronique : circuits de temporisation (monostables), filtres passe-bas RC, circuits anti-rebond pour interrupteurs mécaniques, circuits de filtrage pour alimentations découplées, mémoire DRAM, circuits de différenciation et d'intégration.</p>
+                <h4>8. Représentation temporelle et asymptotes</h4>
+                <p>La courbe u_C(t) en charge est une <strong>fonction exponentielle croissante</strong> qui démarre tangentiellement à la droite de pente E/R (extrapolation à t = 0) et atteint asymptotiquement la valeur E. La tangente à l'origine coupe l'asymptote horizontale E exactement à l'instant t = τ. Cette propriété géométrique est très utile en pratique pour mesurer τ sur un oscilloscope.</p>
+                <p>La courbe i(t) est une <strong>exponentielle décroissante</strong> qui démarre à I₀ = E/R et décroît jusqu'à 0. La forme est la même que la courbe de décharge de u_C, mais inversée. On note que <strong>la puissance instantanée p_R(t) = R·i²(t)</strong> dans la résistance est maximale au début de la charge et décroît exponentiellement. La puissance dissipée moyenne est P_R,moy = E²/(2R).</p>
+
+                <h4>9. Comportement fréquentiel : la fonction de transfert</h4>
+                <p>En régime sinusoïdal forcé, le circuit RC passe-bas (sortie aux bornes du condensateur) admet la fonction de transfert complexe :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = V_s / V_e = (1/jωC) / (R + 1/jωC) = 1 / (1 + jωRC)</strong>
+                </div>
+                <p>Le module de la fonction de transfert est |H(jω)| = 1/√(1 + (ωRC)²) et la phase est φ(ω) = −arctan(ωRC). On définit la <strong>fréquence de coupure</strong> fc = 1/(2πRC) comme la fréquence pour laquelle |H(jω)| = 1/√2 ≈ 0,707 (soit −3 dB). Le circuit RC série est donc un filtre passe-bas du premier ordre : il laisse passer les basses fréquences (ω << ωc) et atténue les hautes fréquences (ω >> ωc) avec une pente de −20 dB/décade. Ce point sera développé en détail dans la leçon 3.</p>
+
+                <h4>10. Extension : circuit RC parallèle et généralisation</h4>
+                <p>Le circuit RC parallèle (R en parallèle avec C) présente un comportement dual : la tension aux bornes est imposée par le générateur, et le courant se répartit entre R et C. La fonction de transfert devient :</p>
+                <div class="plan-highlight">
+                    <strong>H(jω) = R / (R + 1/jωC) = jωRC / (1 + jωRC)</strong>
+                </div>
+                <p>Il s'agit d'un <strong>filtre passe-haut</strong> (détaillé en leçon 9). La constante de temps reste τ = R·C. Les formules générales du circuit RC série s'adaptent par dualité.</p>
+
+                <h4>11. Mesure expérimentale de τ</h4>
+                <p>En laboratoire, la constante de temps τ peut être déterminée de plusieurs manières :</p>
+                <ul>
+                    <li><strong>Méthode de la tangente :</strong> on trace u_C(t) sur un oscilloscope, on relève la pente à l'origine, et on l'extrapole jusqu'à u_C = E. L'abscisse du point d'intersection donne τ.</li>
+                    <li><strong>Méthode des 63,2% :</strong> on mesure le temps nécessaire pour que u_C atteigne 63,2% de E.</li>
+                    <li><strong>Méthode de la demi-amplitude :</strong> en décharge, on mesure le temps pour que u_C passe de E à E/2. On a alors t = τ·ln(2) ≈ 0,693·τ, d'où τ = t / 0,693.</li>
+                    <li><strong>Méthode des 5τ :</strong> on mesure le temps de charge complète (5τ) et on divise par 5.</li>
+                </ul>
+
+                <h4>12. Applications pratiques détaillées</h4>
+                <p>Les circuits RC ont des applications extraordinairement variées :</p>
+                <ul>
+                    <li><strong>Filtrage anti-rebond :</strong> lorsqu'on appuie sur un bouton-poussoir mécanique, les contacts rebondissent pendant quelques millisecondes, générant des transitions parasites. Un circuit RC lisse ces oscillations et fournit un signal propre à l'entrée d'un circuit logique.</li>
+                    <li><strong>Temporisation :</strong> dans les circuits de minuterie, on utilise un circuit RC pour retarder l'allumage d'une LED, le déclenchement d'un relais ou la commutation d'un transistor. Le célèbre circuit 555 utilise deux circuits RC pour générer des signaux carrés.</li>
+                    <li><strong>Filtrage d'alimentation :</strong> les condensateurs de découplage placés près des circuits intégrés forment avec les pistes du circuit imprimé des filtres RC qui éliminent les parasites haute fréquence.</li>
+                    <li><strong>Intégrateur analogique :</strong> lorsque la période du signal d'entrée est grande devant τ, la sortie aux bornes du condensateur est approximativement l'intégrale du signal d'entrée. C'est le principe de l'intégrateur RC utilisé dans les convertisseurs et les filtres actifs.</li>
+                    <li><strong>Dérivateur analogique :</strong> si l'on prend la sortie aux bornes de la résistance, on obtient un dérivateur, qui amplifie les transitions rapides. Utilisé en logique pour détecter les fronts.</li>
+                    <li><strong>Mémoire DRAM :</strong> chaque bit d'une mémoire DRAM est stocké sous forme de charge dans un micro-condensateur (≈ 30 fF). C'est l'application la plus avancée du concept de circuit RC à l'échelle nanométrique.</li>
+                    <li><strong>Flash photographique :</strong> un condensateur de forte capacité (centaines de µF) est chargé lentement à travers R, puis déchargé rapidement dans la lampe à xénon.</li>
+                    <li><strong>Démarrage progressif (soft-start) :</strong> pour éviter des appels de courant trop brutaux dans les alimentations, on utilise un circuit RC pour faire monter progressivement la tension de référence.</li>
+                </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔑 Concepts clés à retenir</h3>
                 <ul>
-                    <li><strong>Constante de temps τ = R·C</strong> caractérise la rapidité du circuit RC</li>
-                    <li><strong>En charge :</strong> uc(t) = E(1 − e^(−t/τ))</li>
-                    <li><strong>En décharge :</strong> uc(t) = E·e^(−t/τ)</li>
+                    <li><strong>Constante de temps τ = R · C</strong> caractérise la rapidité du circuit RC</li>
+                    <li><strong>En charge :</strong> u_C(t) = E · (1 − e^(−t/τ))</li>
+                    <li><strong>En décharge :</strong> u_C(t) = E · e^(−t/τ)</li>
                     <li><strong>Après t = 5τ</strong>, le condensateur est quasi saturé ou quasi déchargé</li>
-                    <li><strong>Énergie emmagasinée :</strong> E_condo = ½·C·V²</li>
+                    <li><strong>Énergie emmagasinée :</strong> E_condensateur = ½ · C · V²</li>
                     <li><strong>Condensateur en régime permanent</strong> se comporte comme un circuit ouvert (courant nul)</li>
+                    <li><strong>Rendement énergétique de la charge :</strong> 50% (autant d'énergie dissipée dans R que stockée dans C)</li>
+                    <li><strong>Condensateur = circuit ouvert en DC, court-circuit en HF</strong></li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔧 Applications pratiques</h3>
                 <ul>
-                    <li><strong>Circuits de temporisation</strong> : minuteries, délais dans les circuits logiques</li>
-                    <li><strong>Filtres passe-bas passifs</strong> : combinaison R-C qui atténue les hautes fréquences</li>
-                    <li><strong>Circuits anti-rebond</strong> : atténuation des oscillations mécaniques d'un interrupteur</li>
+                    <li><strong>Circuits de temporisation</strong> : minuteries, délais dans les circuits logiques, monostables 555</li>
+                    <li><strong>Filtres passe-bas passifs</strong> : combinaison R-C qui atténue les hautes fréquences (anti-aliasing, audio)</li>
+                    <li><strong>Circuits anti-rebond</strong> : atténuation des oscillations mécaniques d'un interrupteur ou bouton-poussoir</li>
                     <li><strong>Découplage d'alimentation</strong> : filtrage des bruits haute fréquence sur les rails d'alimentation</li>
-                    <li><strong>Mémoires DRAM</strong> : chaque bit est stocké sous forme de charge dans un condensateur</li>
+                    <li><strong>Mémoires DRAM</strong> : chaque bit est stocké sous forme de charge dans un micro-condensateur</li>
+                    <li><strong>Intégrateurs et dérivateurs</strong> : opérations analogiques sur les signaux</li>
+                    <li><strong>Flash photographique</strong> : charge lente puis décharge rapide dans une lampe à xénon</li>
+                    <li><strong>Soft-start</strong> : démarrage progressif des alimentations à découpage</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>✏️ Exercices suggérés</h3>
                 <ol>
-                    <li><strong>Exercice 1</strong> : Un circuit RC avec R = 10 kΩ et C = 100 µF est chargé sous E = 12 V. Calculer τ, la tension aux bornes du condensateur après 0,5 s, 1 s et 5 s.</li>
-                    <li><strong>Exercice 2</strong> : Même circuit en décharge : calculer la tension et le courant après 0,5 s et 2 s. Tracer les allures de uc(t) et i(t).</li>
-                    <li><strong>Exercice 3</strong> : Déterminer le temps nécessaire pour que le condensateur atteigne 90% de sa charge finale.</li>
-                    <li><strong>Exercice 4</strong> : Un condensateur de 470 µF est chargé à 15 V puis déchargé à travers une résistance de 2,2 kΩ. Calculer l'énergie dissipée dans la résistance.</li>
-                    <li><strong>Exercice 5</strong> : Quelle combinaison R-C choisir pour obtenir une temporisation de 1 seconde dans un circuit déclenché par un front ?</li>
+                    <li><strong>Exercice 1 (charge simple) :</strong> Un circuit RC avec R = 10 kΩ et C = 100 µF est chargé sous E = 12 V. Calculer τ, la tension aux bornes du condensateur après 0,5 s, 1 s et 5 s. Vérifier que le régime permanent est atteint à 5τ.</li>
+                    <li><strong>Exercice 2 (décharge) :</strong> Même circuit, déchargé après charge complète. Calculer la tension et le courant après 0,5 s, 1 s et 2 s. Tracer les courbes u_C(t) et i(t).</li>
+                    <li><strong>Exercice 3 (temps caractéristique) :</strong> Déterminer le temps nécessaire pour que le condensateur atteigne 90% de sa charge finale. Application numérique : R = 4,7 kΩ, C = 220 µF, E = 9 V.</li>
+                    <li><strong>Exercice 4 (énergie) :</strong> Un condensateur de 470 µF est chargé à 15 V puis déchargé à travers une résistance de 2,2 kΩ. Calculer : (a) l'énergie stockée, (b) l'énergie dissipée dans la résistance, (c) la puissance moyenne dissipée.</li>
+                    <li><strong>Exercice 5 (dimensionnement) :</strong> Quelle combinaison R-C choisir pour obtenir une temporisation de 1 seconde dans un circuit de monostable déclenché par un front ? Justifier le choix des valeurs.</li>
+                    <li><strong>Exercice 6 (fréquence de coupure) :</strong> Calculer la fréquence de coupure d'un filtre RC passe-bas avec R = 1 kΩ et C = 10 nF. Quel est le gain en dB à fc/2 et 2·fc ?</li>
+                    <li><strong>Exercice 7 (charge partielle) :</strong> Un condensateur initialement déchargé est branché à t = 0 sur une source E via R. Au bout de combien de temps la tension atteint-elle la moitié de E ? Le tiers ? Les trois quarts ?</li>
                 </ol>
             </div>
 
             <div class="plan-summary">
-                <strong>📌 Résumé :</strong> Le circuit RC est un système du premier ordre dont la dynamique est gouvernée par la constante de temps τ = R·C. Lors de la charge, la tension aux bornes du condensateur croît exponentiellement selon uc(t) = E(1 − e^(−t/τ)), tandis qu'en décharge elle décroît selon uc(t) = E·e^(−t/τ). Le courant suit une loi exponentielle inverse. Après un temps égal à 5τ, le régime transitoire est quasi-terminé. L'énergie stockée dans le condensateur est E = ½·C·V², mais la charge complète dissipe une énergie équivalente dans la résistance. Les circuits RC constituent la base de nombreux dispositifs de temporisation et de filtrage en électronique analogique.
+                <strong>📌 Résumé :</strong> Le circuit RC est un système du premier ordre dont la dynamique est gouvernée par la constante de temps τ = R·C. Lors de la charge, la tension aux bornes du condensateur croît exponentiellement selon u_C(t) = E(1 − e^(−t/τ)), tandis qu'en décharge elle décroît selon u_C(t) = E·e^(−t/τ). Le courant suit une loi exponentielle inverse : i(t) = (E/R)·e^(−t/τ) en charge, et i(t) = −(E/R)·e^(−t/τ) en décharge. Après un temps égal à 5τ, le régime transitoire est quasi-terminé. L'énergie stockée dans le condensateur est E = ½·C·V², mais la charge complète dissipe une énergie équivalente dans la résistance (rendement 50%). Le condensateur se comporte comme un circuit ouvert en régime permanent continu et comme un court-circuit à haute fréquence. Les circuits RC constituent la base de nombreux dispositifs de temporisation, de filtrage, de mémorisation (DRAM) et de conditionnement du signal en électronique analogique et numérique.
             </div>
         </section>
 
@@ -187,7 +312,7 @@
         </a>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOUTER -->
     <footer class="footer">
         <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>

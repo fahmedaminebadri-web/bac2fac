@@ -5,6 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onde longitudinale - Physique</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .cours-detaille {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 35px 45px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            line-height: 1.9;
+            color: #1f2937;
+            font-size: 1.05em;
+        }
+        .cours-detaille h2 {
+            color: #4C1D95;
+            border-left: 6px solid #7C3AED;
+            padding-left: 18px;
+            margin-top: 40px;
+            font-size: 1.6em;
+        }
+        .cours-detaille h3 {
+            color: #6D28D9;
+            margin-top: 28px;
+            font-size: 1.25em;
+        }
+        .cours-detaille h4 {
+            color: #5B21B6;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .cours-detaille .definition {
+            background: #EDE9FE;
+            border-left: 5px solid #7C3AED;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .remarque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .exemple {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .formule {
+            background: #1F2937;
+            color: #FBBF24;
+            padding: 14px 22px;
+            margin: 14px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+        .cours-detaille ul, .cours-detaille ol {
+            margin-left: 28px;
+        }
+        .cours-detaille li {
+            margin: 10px 0;
+        }
+        .cours-titre {
+            text-align: center;
+            color: #3B0764;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 4px solid #7C3AED;
+        }
+        .cours-detaille p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        .cours-detaille table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .cours-detaille th {
+            background: #7C3AED;
+            color: white;
+            padding: 12px;
+            border: 1px solid #ccc;
+        }
+        .cours-detaille td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -16,7 +111,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +141,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/12TDPXaC8RdxGEQ2elik7lfUsw7iHnR_Q/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +152,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/1E3A5F/FFFFFF?text=Onde+longitudinale" alt="Résumé de l'onde longitudinale">
-                <div class="resume-overlay">
-                    <h3>Onde longitudinale</h3>
-                    <p>Vibrations parallèles à la direction de propagation, compression et dilatation.</p>
-                </div>
+ 
                             <br><br>
-                <a href="" download>
+                <a href=https://drive.google.com/file/d/1x2ShQB82c84leH1uK-R35EIWPTK41qdP/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,9 +163,254 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
+            </div>
+        </section>
+
+        <!-- COURS DÉTAILLÉ -->
+        <section class="cours-detaille">
+            <h2 class="cours-titre">📖 Cours détaillé — Leçon 13 : Onde longitudinale</h2>
+
+            <h2>1. Introduction</h2>
+            <p>Dans la leçon précédente (Leçon 11), nous avons étudié les ondes transversales, pour lesquelles la perturbation est perpendiculaire à la direction de propagation. Il existe une autre grande catégorie d'ondes mécaniques : les <strong>ondes longitudinales</strong>, pour lesquelles la perturbation se fait <strong>dans la même direction que la propagation</strong>. C'est cette catégorie que nous allons étudier en détail dans cette leçon.</p>
+
+            <p>Les ondes longitudinales sont extrêmement importantes dans la vie quotidienne : le <strong>son</strong> est l'exemple le plus connu et le plus utilisé. C'est grâce à des ondes longitudinales que nous pouvons parler, écouter de la musique, percevoir le bruit de la pluie ou entendre un instrument de musique. Ces ondes sont aussi utilisées en médecine (échographie), en géophysique (étude de la Terre par les ondes sismiques P), et dans de nombreux domaines techniques.</p>
+
+            <h2>2. Définition précise</h2>
+            <div class="definition">
+                Une <strong>onde longitudinale</strong> est une onde mécanique dans laquelle la <strong>direction de la perturbation</strong> (le mouvement des points du milieu) est <strong>parallèle</strong> à la <strong>direction de propagation</strong> de l'onde.
+            </div>
+
+            <p>Autrement dit, dans une onde longitudinale, les particules du milieu oscillent <strong>en avant et en arrière</strong> le long de la direction dans laquelle l'onde se propage. Elles ne se déplacent pas en zigzag ni perpendiculairement, mais exactement le long de l'axe de propagation.</p>
+
+            <p>Cette oscillation en avant-arrière crée, dans le milieu, des zones où les particules sont <strong>rapprochées</strong> les unes des autres (zones de <strong>compression</strong>) et des zones où elles sont <strong>espacées</strong> (zones de <strong>dilatation</strong> ou de <strong>raréfaction</strong>). Ces zones alternent régulièrement et se déplacent avec l'onde.</p>
+
+            <h2>3. Exemples détaillés d'ondes longitudinales</h2>
+
+            <h3>3.1. Le son</h3>
+            <p>Le <strong>son</strong> est l'exemple le plus courant et le plus important d'onde longitudinale. Quand on parle, les cordes vocales vibrent, ce qui crée des variations de pression dans l'air environnant. Ces variations se propagent de proche en proche : une molécule d'air pousse sa voisine, qui pousse la suivante, et ainsi de suite.</p>
+
+            <p>On peut visualiser ce mécanisme en imaginant une file de personnes serrées les unes contre les autres, côte à côte. Si la première personne pousse brièvement la deuxième, celle-ci pousse la troisième, et ainsi de suite. La "compression" se propage le long de la file, mais chaque personne ne fait que bouger un peu en avant puis revenir à sa place : elle ne se déplace pas de manière permanente.</p>
+
+            <p>Le son est une onde à trois dimensions : il se propage dans toutes les directions de l'espace, en formant des "sphères" concentriques de pression qui s'agrandissent au cours du temps. La vitesse du son dépend du milieu : environ 340 m/s dans l'air à 20°C, 1500 m/s dans l'eau, et jusqu'à 5000 m/s dans l'acier.</p>
+
+            <h3>3.2. Le ressort (slinky)</h3>
+            <p>Un ressort étiré (par exemple un "slinky") est un excellent support pour observer une onde longitudinale. On tient le ressort horizontalement, et on pousse brusquement l'une de ses extrémités vers l'avant. On observe alors qu'une zone où les spires sont très rapprochées (zone de compression) se forme et se propage le long du ressort, suivie d'une zone où les spires sont plus espacées que la normale (zone de dilatation).</p>
+
+            <p>Le ressort lui-même ne se déplace pas en bloc (à part un léger déplacement initial), mais chaque spire oscille brièvement en avant et en arrière, parallèlement à la direction de propagation de l'onde. On voit clairement la compression et la dilatation se déplacer le long du ressort, ce qui est la signature visuelle d'une onde longitudinale.</p>
+
+            <h3>3.3. Les ondes sismiques P (primaires)</h3>
+            <p>Lors d'un tremblement de terre, l'énergie libérée au foyer du séisme se propage dans la Terre sous forme de plusieurs types d'ondes. Les <strong>ondes P</strong> (ou ondes primaires) sont des <strong>ondes longitudinales</strong> : le sol oscille en avant et en arrière dans la direction de propagation de l'onde, ce qui correspond à des compressions et des dilatations successives du sous-sol.</p>
+
+            <p>Les ondes P sont les plus rapides de toutes les ondes sismiques (leur célérité varie de 6 à 13 km/s selon la nature des roches traversées), et ce sont donc les premières à être détectées par les sismographes. C'est pour cette raison qu'on les appelle "primaires". Elles peuvent se propager dans tous les milieux : solides, liquides et gazeux. Les ondes P nous renseignent sur la composition interne de la Terre : on a ainsi découvert que le noyau externe de la Terre est liquide, car les ondes P s'y propagent, mais pas les ondes S (transversales).</p>
+
+            <h2>4. Description détaillée d'une onde longitudinale sur un ressort</h2>
+            <p>Pour bien comprendre la structure d'une onde longitudinale, examinons en détail ce qui se passe sur un ressort horizontal :</p>
+
+            <p>Prenons un ressort à spires non serrées, étiré horizontalement entre deux supports. À l'instant t = 0, on pousse l'extrémité gauche du ressort vers la droite, sur une distance de quelques centimètres, puis on la ramène à sa position initiale. Cet ébranlement initial a pour effet de rapprocher les premières spires du ressort, créant ainsi une zone de compression près de l'extrémité gauche.</p>
+
+            <p>Quelques instants plus tard, on observe que cette zone de compression s'est déplacée vers la droite. Les spires situées à droite, qui étaient au repos, se sont rapprochées les unes des autres, tandis que les spires de gauche sont revenues à leur position initiale. La compression s'est donc propagée de proche en proche, par transmission de l'ébranlement d'une spire à la suivante.</p>
+
+            <p>Si l'on agite de manière périodique l'extrémité gauche du ressort (en avant et en arrière, avec un mouvement régulier), on observe la formation d'un train d'ondes : une succession de zones de compression et de zones de dilatation qui se propagent le long du ressort, à vitesse constante. Chaque spire oscille d'avant en arrière autour de sa position d'équilibre, en reproduisant le mouvement de la source avec un certain retard (qui dépend de sa position).</p>
+
+            <p>Ainsi, contrairement à une onde transversale (qui présente des crêtes et des creux, comme une vague), une onde longitudinale présente des <strong>zones de compression</strong> et des <strong>zones de dilatation</strong>, qui s'alternent régulièrement.</p>
+
+            <h2>5. Représentation graphique d'une onde longitudinale</h2>
+            <p>Pour représenter graphiquement une onde longitudinale, on utilise souvent un système de "ressort étiré" dans lequel on place des points (ou des petits cercles) à intervalles réguliers pour symboliser les spires. Au repos, ces points sont régulièrement espacés. Sous l'effet d'une onde longitudinale, on observe des zones où les points sont très rapprochés (compression) et des zones où les points sont très espacés (dilatation).</p>
+
+            <p>On peut aussi utiliser un graphe représentant l'élongation (le déplacement) des particules en fonction de leur position le long de l'axe de propagation. Ce graphe ressemble à une sinusoïde, mais attention : il ne faut pas confondre cette courbe avec la forme physique de l'onde. En effet, dans une onde longitudinale, il n'y a pas de "bosse" ni de "creux" qui se déplace : il y a des zones de compression et de dilatation, mais la forme du milieu reste globalement alignée le long de l'axe de propagation.</p>
+
+            <h2>6. Les grandeurs caractéristiques d'une onde longitudinale</h2>
+            <p>Comme pour toute onde, une onde longitudinale est caractérisée par un certain nombre de grandeurs physiques :</p>
+
+            <h3>6.1. La direction de propagation</h3>
+            <p>C'est la direction dans laquelle l'onde se déplace. Pour une onde sonore dans l'air, c'est la direction qui va de la source vers le récepteur.</p>
+
+            <h3>6.2. La perturbation</h3>
+            <p>C'est la grandeur physique qui varie dans le milieu. Pour une onde sonore, la perturbation est la <strong>pression</strong> (on parle de surpression ou de dépression) ou le <strong>déplacement</strong> des particules du milieu. Pour une onde dans un ressort, c'est la position des spires par rapport à leur position d'équilibre.</p>
+
+            <h3>6.3. Les zones de compression et de dilatation</h3>
+            <ul>
+                <li><strong>Compression :</strong> zone où les particules du milieu sont rapprochées les unes des autres. La densité et la pression du milieu y sont localement plus élevées que la moyenne.</li>
+                <li><strong>Dilatation (ou raréfaction) :</strong> zone où les particules du milieu sont écartées les unes des autres. La densité et la pression du milieu y sont localement plus faibles que la moyenne.</li>
+            </ul>
+
+            <h3>6.4. L'amplitude A</h3>
+            <p>C'est la valeur maximale du déplacement des particules par rapport à leur position d'équilibre. Elle s'exprime en mètres (m) pour les ondes mécaniques. L'amplitude est liée à l'intensité de l'onde : plus l'amplitude est grande, plus l'onde transporte d'énergie.</p>
+
+            <h3>6.5. La longueur d'onde λ</h3>
+            <p>La longueur d'onde est la distance entre deux zones de compression consécutives, ou entre deux zones de dilatation consécutives. C'est aussi la distance parcourue par l'onde pendant une période T. Elle s'exprime en mètres (m).</p>
+
+            <h3>6.6. La fréquence f et la période T</h3>
+            <p>La fréquence f est le nombre d'oscillations par seconde, exprimée en Hertz (Hz). La période T est la durée d'une oscillation complète, exprimée en secondes (s). Elles sont liées par :</p>
+            <div class="formule">T = 1 / f</div>
+
+            <h3>6.7. La célérité v</h3>
+            <p>La célérité d'une onde longitudinale dépend du milieu dans lequel elle se propage. Pour le son :</p>
+            <ul>
+                <li>Dans l'air à 20°C : v ≈ 340 m/s.</li>
+                <li>Dans l'air à 0°C : v ≈ 331 m/s.</li>
+                <li>Dans l'eau (à 20°C) : v ≈ 1500 m/s.</li>
+                <li>Dans l'acier : v ≈ 5000 à 6000 m/s.</li>
+                <li>Dans le verre : v ≈ 5300 m/s.</li>
+                <li>Dans le bois : v ≈ 3500 m/s.</li>
+            </ul>
+
+            <p>On remarque que la célérité du son est plus élevée dans les solides que dans les liquides, et plus élevée dans les liquides que dans les gaz. Cela s'explique par le fait que les solides sont plus rigides (plus grande élasticité) que les liquides, eux-mêmes plus rigides que les gaz.</p>
+
+            <h2>7. Comparaison détaillée : onde longitudinale vs onde transversale</h2>
+
+            <table>
+                <tr>
+                    <th>Caractéristique</th>
+                    <th>Onde longitudinale</th>
+                    <th>Onde transversale</th>
+                </tr>
+                <tr>
+                    <td><strong>Direction de la perturbation</strong></td>
+                    <td>Parallèle à la propagation</td>
+                    <td>Perpendiculaire à la propagation</td>
+                </tr>
+                <tr>
+                    <td><strong>Visualisation</strong></td>
+                    <td>Compressions et dilatations</td>
+                    <td>Crêtes et creux (forme sinusoïdale)</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemples typiques</strong></td>
+                    <td>Son, ressort, ondes sismiques P</td>
+                    <td>Corde, vagues, ondes sismiques S, lumière</td>
+                </tr>
+                <tr>
+                    <td><strong>Milieux possibles</strong></td>
+                    <td>Solide, liquide, gaz (tous les milieux)</td>
+                    <td>Solides et surfaces seulement (pas dans les fluides)</td>
+                </tr>
+                <tr>
+                    <td><strong>Polarisation</strong></td>
+                    <td>Impossible</td>
+                    <td>Possible (lumière polarisée, etc.)</td>
+                </tr>
+                <tr>
+                    <td><strong>Célérité typique</strong></td>
+                    <td>Son : 340 m/s dans l'air</td>
+                    <td>Corde : 10-500 m/s selon tension</td>
+                </tr>
+                <tr>
+                    <td><strong>Source courante</strong></td>
+                    <td>Haut-parleur, instrument à vent, voix</td>
+                    <td>Instrument à cordes, agitation latérale</td>
+                </tr>
+            </table>
+
+            <h2>8. Cas particulier important : le son</h2>
+            <p>Le son est l'exemple type d'onde longitudinale, et c'est aussi l'onde la plus importante dans notre vie quotidienne. Voici quelques précisions sur la production et la propagation du son :</p>
+
+            <h3>8.1. Production du son</h3>
+            <p>Un son est produit par la <strong>vibration rapide</strong> d'un objet matériel. Cette vibration peut être créée de différentes manières :</p>
+            <ul>
+                <li><strong>Corde vocale</strong> : chez l'être humain, l'air expulsé des poumons fait vibrer les cordes vocales, ce qui produit la voix.</li>
+                <li><strong>Corde vibrante</strong> : dans un violon, une guitare, un piano, c'est la corde qui vibre.</li>
+                <li><strong>Membrane vibrante</strong> : dans un haut-parleur, un tambour, c'est une membrane qui vibre.</li>
+                <li><strong>Colonne d'air vibrante</strong> : dans une flûte, une trompette, c'est la colonne d'air à l'intérieur de l'instrument qui vibre.</li>
+                <li><strong>Diapason</strong> : un diapason, quand on le frappe, vibre à une fréquence précise (souvent 440 Hz) et émet un son pur.</li>
+            </ul>
+
+            <h3>8.2. Propagation du son dans différents milieux</h3>
+            <p>Le son peut se propager dans tous les milieux matériels, mais avec des célérités très différentes :</p>
+
+            <div class="exemple">
+                <strong>Quelques valeurs de la vitesse du son :</strong>
+                <ul>
+                    <li>Air (0°C) : 331 m/s.</li>
+                    <li>Air (20°C) : 343 m/s.</li>
+                    <li>Air (40°C) : 355 m/s.</li>
+                    <li>Eau douce (20°C) : 1480 m/s.</li>
+                    <li>Eau de mer (20°C) : 1520 m/s.</li>
+                    <li>Acier : 5000 à 6000 m/s.</li>
+                    <li>Verre : 5300 m/s.</li>
+                    <li>Bois : 3500 m/s.</li>
+                    <li>Caoutchouc : 50 à 150 m/s.</li>
+                </ul>
+            </div>
+
+            <h3>8.3. Le son ne se propage pas dans le vide</h3>
+            <div class="remarque">
+                <strong>Point essentiel :</strong> Le son, étant une onde mécanique, a besoin d'un milieu matériel pour se propager. Dans le vide, il n'y a pas de matière, donc pas de son possible. C'est pourquoi l'espace est silencieux : aucun son ne peut y être transmis. Les astronautes communiquent par ondes radio (ondes électromagnétiques), qui peuvent, elles, se propager dans le vide.
+            </div>
+
+            <h2>9. La sensibilité de l'oreille humaine</h2>
+            <p>L'oreille humaine ne perçoit qu'une certaine plage de fréquences sonores :</p>
+            <ul>
+                <li>Les <strong>sons audibles</strong> ont une fréquence comprise entre <strong>20 Hz et 20 000 Hz (20 kHz)</strong>.</li>
+                <li>Les <strong>infrasons</strong> (fréquence inférieure à 20 Hz) ne sont pas audibles par l'oreille humaine, mais peuvent être perçus par certains animaux (éléphants, baleines) et peuvent produire des sensations physiologiques chez l'homme (nausée, malaise).</li>
+                <li>Les <strong>ultrasons</strong> (fréquence supérieure à 20 kHz) ne sont pas audibles non plus, mais ils sont utilisés par de nombreux animaux (chauves-souris, dauphins) pour l'écho-localisation, et par l'homme pour de nombreuses applications (échographie médicale, nettoyage par ultrasons, détecteurs de défauts dans les matériaux).</li>
+            </ul>
+
+            <h2>10. Applications des ondes longitudinales</h2>
+            <p>Les ondes longitudinales (en particulier le son) ont de très nombreuses applications :</p>
+
+            <h3>10.1. Échographie médicale</h3>
+            <p>En médecine, on utilise des <strong>ultrasons</strong> (sons de fréquence supérieure à 20 kHz) pour visualiser l'intérieur du corps humain. Une sonde émet des ultrasons qui se propagent dans les tissus, se réfléchissent sur les interfaces entre les différents organes, et reviennent à la sonde. Le temps de parcours permet de calculer la profondeur des structures réfléchissantes. L'échographie est utilisée pour suivre la grossesse, examiner le cœur, le foie, les reins, etc.</p>
+
+            <h3>10.2. Sonar</h3>
+            <p>Les sous-marins utilisent un <strong>sonar</strong> (Sound Navigation And Ranging) pour détecter des objets sous l'eau. Le sonar émet une onde sonore, qui se réfléchit sur les obstacles (autres navires, fond marin, bancs de poissons), et l'écho est analysé pour déterminer la position et la nature de l'obstacle. Le sonar a été inventé pendant la Première Guerre mondiale et reste un outil essentiel de la navigation sous-marine.</p>
+
+            <h3>10.3. Écho-localisation animale</h3>
+            <p>Les <strong>chauves-souris</strong> et les <strong>dauphins</strong> utilisent des ultrasons pour se repérer dans leur environnement : ils émettent des sons très aigus (jusqu'à 100 kHz chez certaines chauves-souris) et analysent l'écho pour détecter les obstacles et les proies. Ce système est appelé écholocation et est d'une précision remarquable.</p>
+
+            <h3>10.4. Sismologie</h3>
+            <p>Les ondes P (longitudinales) et S (transversales) générées par les séismes permettent aux sismologues d'étudier la structure interne de la Terre. La mesure du temps d'arrivée de ces ondes en différents points du globe permet de localiser le foyer du séisme, et d'étudier les différentes couches de la Terre (croûte, manteau, noyau).</p>
+
+            <h3>10.5. Musique</h3>
+            <p>Tous les instruments de musique (à vent, à cordes, à percussion) produisent des ondes sonores longitudinales. La hauteur du son est déterminée par la fréquence, et le timbre par la forme du signal sonore (présence d'harmoniques).</p>
+
+            <h2>11. Résumé des points clés à retenir</h2>
+            <div class="remarque">
+                <strong>Ce qu'il faut absolument mémoriser :</strong>
+                <ul>
+                    <li>Une <strong>onde longitudinale</strong> est une onde mécanique dont la perturbation est <strong>parallèle</strong> à la direction de propagation.</li>
+                    <li>Elle se manifeste par des <strong>compressions</strong> et des <strong>dilatations</strong> successives du milieu.</li>
+                    <li>L'exemple emblématique est le <strong>son</strong>, qui se propage par variations de pression dans l'air.</li>
+                    <li>Les ondes longitudinales peuvent se propager dans <strong>tous les milieux matériels</strong> : solides, liquides et gaz.</li>
+                    <li>La célérité du son dans l'air est d'environ <strong>340 m/s</strong> à 20°C.</li>
+                    <li>Le son ne se propage <strong>pas dans le vide</strong>.</li>
+                    <li>Les grandeurs fondamentales : amplitude, longueur d'onde, fréquence, période, célérité.</li>
+                    <li>La relation fondamentale est : <strong>v = λ × f</strong>.</li>
+                </ul>
+            </div>
+
+            <h2>12. Exercices d'application</h2>
+
+            <h3>Exercice 1</h3>
+            <p>Une onde sonore se propage dans l'air à la célérité v = 340 m/s. Sa fréquence est f = 680 Hz. Calculez sa longueur d'onde.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                λ = v / f = 340 / 680 = 0,5 m = 50 cm.
+            </div>
+
+            <h3>Exercice 2</h3>
+            <p>Un dauphin émet un ultrason de fréquence f = 50 kHz dans l'eau, où la célérité du son est v = 1500 m/s. Calculez la longueur d'onde de cet ultrason.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                λ = v / f = 1500 / 50 000 = 0,03 m = 3 cm.
+            </div>
+
+            <h3>Exercice 3</h3>
+            <p>Une ambulance émet un son de fréquence f = 1000 Hz en se déplaçant. Le son se propage à 340 m/s dans l'air. Calculez la période et la longueur d'onde du son émis.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                T = 1/f = 1/1000 = 0,001 s = 1 ms.<br>
+                λ = v/f = 340/1000 = 0,34 m.
+            </div>
+
+            <h3>Exercice 4</h3>
+            <p>Un ressort est étiré sur une longueur L = 5 m. On crée une perturbation à une extrémité, et elle met t = 0,5 s pour atteindre l'autre extrémité. Calculez la célérité de l'onde longitudinale sur ce ressort.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                v = d/t = 5 / 0,5 = 10 m/s.
             </div>
         </section>
 

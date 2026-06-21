@@ -16,7 +16,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +46,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1VW_FNoujTZFZpFc2tn8uVfsguWynUEQh/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -56,13 +57,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/B91C1C/FFFFFF?text=Circuit+LC" alt="Résumé du Circuit LC">
-                <div class="resume-overlay">
-                    <h3>Oscillations LC</h3>
-                    <p>Oscillations électriques libres dans un circuit LC, période propre.</p>
-                </div>
+                
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1zA_dof5tvujxdokcwpHXXS47ySmLPdV-/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,7 +68,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1w07iMF9rM7TmX6Z6HY28tolR2fZLpDOs/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -104,57 +102,170 @@
 
             <div class="plan-subsection">
                 <h3>📖 Contenu détaillé</h3>
-                <h4>1. Présentation du circuit LC</h4>
-                <p>Le circuit LC idéal est composé d'un condensateur de capacité C et d'une bobine d'inductance L, connectés en série ou en parallèle, sans aucune résistance. Ce circuit constitue le modèle fondamental des oscillateurs électriques et mécaniques. L'absence de résistance signifie qu'aucune énergie n'est dissipée : les oscillations peuvent en théorie se maintenir indéfiniment.</p>
 
-                <h4>2. Équation différentielle du circuit LC série</h4>
-                <p>L'équation de maille s'écrit : uL + uC = 0, soit <strong>L·(di/dt) + q/C = 0</strong>. Comme i = dq/dt, on obtient :</p>
-                <div class="plan-highlight">
-                    <strong>Équation différentielle :</strong> d²q/dt² + (1/(L·C))·q = 0<br>
-                    <strong>Pulsation propre :</strong> ω₀ = 1/√(L·C)<br>
-                    <strong>Période propre :</strong> T₀ = 2π·√(L·C)
-                </div>
+                <h4>1. Introduction et importance historique</h4>
+                <p>Le circuit LC est sans doute l'un des circuits les plus fondamentaux et les plus riches de la physique. Il constitue le <strong>modèle mathématique le plus simple d'un oscillateur harmonique</strong> — qu'il soit électrique, mécanique, acoustique, ou quantique. Son étude a accompagné les grandes découvertes de l'électricité au XIX<sup>ème</sup> siècle, en particulier les travaux de <strong>Hermann von Helmholtz</strong> sur la conservation de l'énergie (1847), de <strong>Lord Kelvin</strong> sur les circuits oscillants (1853), et de <strong>Heinrich Hertz</strong> qui réalisa en 1887 la première transmission radio grâce à un circuit LC accordé.</p>
+                <p>Aujourd'hui, les circuits LC sont présents dans pratiquement tous les systèmes électroniques : récepteurs radio, oscillateurs à quartz, alimentations à découpage, systèmes RFID, implants médicaux, et même les cavités résonnantes des accélérateurs de particules. Comprendre le circuit LC, c'est donc acquérir une clé universelle pour décoder l'oscillation, qu'elle soit électrique, mécanique ou ondulatoire.</p>
 
-                <h4>3. Solution de l'équation différentielle</h4>
-                <p>La solution générale est :</p>
+                <h4>2. Structure du circuit LC idéal</h4>
+                <p>Le circuit LC idéal est composé de deux éléments réactifs :</p>
                 <ul>
-                    <li>Charge : <strong>q(t) = Q₀·cos(ω₀·t + φ)</strong></li>
-                    <li>Tension : <strong>V(t) = V₀·cos(ω₀·t + φ)</strong></li>
-                    <li>Courant : <strong>i(t) = −ω₀·Q₀·sin(ω₀·t + φ)</strong></li>
+                    <li>Une <strong>inductance L</strong> (bobine) qui stocke l'énergie sous forme de champ magnétique</li>
+                    <li>Un <strong>condensateur C</strong> qui stocke l'énergie sous forme de champ électrique</li>
+                </ul>
+                <p>Contrairement aux circuits RC et RL, le circuit LC <strong>ne contient aucune résistance</strong>. C'est un circuit purement réactif, ce qui signifie qu'il n'y a aucune dissipation d'énergie par effet Joule. Cette propriété est idéale, car dans un circuit réel, les résistances parasites des fils et des composants finissent toujours par amortir les oscillations (ce point sera développé en leçon 7 avec le circuit RLC).</p>
+                <p>Deux topologies principales existent :</p>
+                <ul>
+                    <li><strong>Circuit LC série :</strong> L et C sont parcourus par le même courant. L'impédance totale est Z = jωL + 1/(jωC) = j(ωL − 1/(ωC)). À la résonance, Z = 0 (court-circuit), donc le courant peut devenir très important.</li>
+                    <li><strong>Circuit LC parallèle :</strong> L et C sont soumis à la même tension. L'impédance totale tend vers l'infini à la résonance, ce qui est utile pour les circuits d'accord radio.</li>
                 </ul>
 
-                <h4>4. Échanges d'énergie entre C et L</h4>
-                <p>L'énergie totale du circuit LC idéal est la somme de l'énergie électrique (condensateur) et de l'énergie magnétique (bobine) :</p>
+                <h4>3. Équation différentielle du circuit LC série</h4>
+                <p>Considérons un circuit LC série initialement au repos (i(0) = 0, q(0) = 0). On charge le condensateur à une tension V₀, puis on le connecte en série avec la bobine à l'instant t = 0 (sans source externe). L'équation de maille s'écrit :</p>
                 <div class="plan-highlight">
-                    <strong>E_totale = E_C + E_L = (½)·C·V² + (½)·L·i² = constante</strong>
+                    <strong>u_L(t) + u_C(t) = 0</strong>
                 </div>
-                <p>Quand le condensateur est chargé au maximum (V = V_max, i = 0), E_C est maximale. Quand il est déchargé (V = 0, i = I_max), E_L est maximale. L'énergie oscille donc de manière périodique entre le condensateur et la bobine.</p>
+                <p>Avec u_L = L·(di/dt) et u_C = q/C, et la relation i = dq/dt, on obtient :</p>
+                <div class="plan-highlight">
+                    <strong>L · (d²q/dt²) + q/C = 0</strong><br>
+                    soit<br>
+                    <strong>d²q/dt² + (1/(L·C)) · q = 0</strong>
+                </div>
+                <p>Cette équation différentielle linéaire du second ordre à coefficients constants est <strong>l'équation canonique de l'oscillateur harmonique</strong>. Sa résolution fait apparaître deux grandeurs fondamentales :</p>
+                <div class="plan-highlight">
+                    <strong>Pulsation propre :</strong> ω₀ = 1/√(L·C) [rad/s]<br>
+                    <strong>Période propre :</strong> T₀ = 2π/ω₀ = 2π·√(L·C) [s]<br>
+                    <strong>Fréquence propre :</strong> f₀ = 1/T₀ = 1/(2π·√(L·C)) [Hz]
+                </div>
+                <p>Ces formules sont parmi les plus célèbres de la physique. Elles se retrouvent à l'identique en mécanique pour le système masse-ressort, en acoustique pour les oscillateurs, et même en mécanique quantique pour les niveaux d'énergie de l'oscillateur harmonique.</p>
 
-                <h4>5. Analogie avec l'oscillateur mécanique</h4>
-                <p>Le circuit LC idéal est l'analogue électrique de l'oscillateur masse-ressort horizontal sans frottement :</p>
+                <h4>4. Solution de l'équation différentielle</h4>
+                <p>L'équation caractéristique associée est : r² + 1/(LC) = 0, dont les racines sont purement imaginaires conjuguées : r = ±j·ω₀. La solution générale est donc :</p>
+                <div class="plan-highlight">
+                    <strong>q(t) = A · cos(ω₀·t) + B · sin(ω₀·t)</strong>
+                </div>
+                <p>Que l'on peut écrire sous la forme plus parlante :</p>
+                <div class="plan-highlight">
+                    <strong>q(t) = Q₀ · cos(ω₀·t + φ)</strong>
+                </div>
+                <p>où Q₀ = √(A² + B²) est l'amplitude et φ = arctan(−B/A) est la phase initiale. Ces deux grandeurs sont fixées par les conditions initiales.</p>
+                <p>Pour un condensateur initialement chargé à Q₀ et un courant initial nul (cas typique), on a q(0) = Q₀ et i(0) = 0, ce qui donne A = Q₀ et B = 0, donc :</p>
+                <div class="plan-highlight">
+                    <strong>q(t) = Q₀ · cos(ω₀·t)</strong><br>
+                    <strong>i(t) = dq/dt = −Q₀ · ω₀ · sin(ω₀·t)</strong><br>
+                    <strong>v_C(t) = q(t)/C = (Q₀/C) · cos(ω₀·t) = V₀ · cos(ω₀·t)</strong>
+                </div>
+                <p>On note que q et i sont en quadrature de phase (90° de déphasage). Quand q est maximale, i = 0, et inversement. Cette quadrature est caractéristique des échanges d'énergie entre C et L.</p>
+
+                <h4>5. Échanges d'énergie entre condensateur et bobine</h4>
+                <p>Le circuit LC est le siège d'<strong>oscillations d'énergie</strong> entre deux formes :</p>
+                <ul>
+                    <li><strong>Énergie électrique</strong> stockée dans le condensateur : E_C(t) = ½ · C · v_C(t)² = (Q₀²/(2C)) · cos²(ω₀·t)</li>
+                    <li><strong>Énergie magnétique</strong> stockée dans la bobine : E_L(t) = ½ · L · i(t)² = ½ · L · (Q₀·ω₀)² · sin²(ω₀·t) = (Q₀²/(2C)) · sin²(ω₀·t)</li>
+                </ul>
+                <p>En utilisant ω₀² = 1/(LC), on a ½·L·(Q₀·ω₀)² = ½·L·Q₀²/(LC) = Q₀²/(2C). Donc :</p>
+                <div class="plan-highlight">
+                    <strong>E_C(t) = (Q₀²/(2C)) · cos²(ω₀·t)</strong><br>
+                    <strong>E_L(t) = (Q₀²/(2C)) · sin²(ω₀·t)</strong><br>
+                    <strong>E_totale = E_C(t) + E_L(t) = Q₀²/(2C) = constante</strong>
+                </div>
+                <p>La conservation de l'énergie totale est une conséquence directe de l'absence de résistance : aucune énergie n'est dissipée. L'énergie oscille indéfiniment entre le condensateur et la bobine à la fréquence ω₀. Le scénario physique est le suivant :</p>
+                <ul>
+                    <li><strong>À t = 0 :</strong> condensateur chargé (E_C max), courant nul (E_L = 0)</li>
+                    <li><strong>De t = 0 à T₀/4 :</strong> le condensateur se décharge, le courant croît. L'énergie passe progressivement de C vers L.</li>
+                    <li><strong>À t = T₀/4 :</strong> condensateur déchargé (E_C = 0), courant max (E_L max)</li>
+                    <li><strong>De t = T₀/4 à T₀/2 :</strong> le courant décroît, le condensateur se recharge en polarité inverse. L'énergie repasse de L vers C.</li>
+                    <li><strong>À t = T₀/2 :</strong> condensateur chargé en polarité inverse (E_C max), courant nul</li>
+                    <li>Le cycle se répète indéfiniment, avec une période T₀.</li>
+                </ul>
+
+                <h4>6. Représentation dans l'espace des phases</h4>
+                <p>Une visualisation élégante du circuit LC est l'<strong>espace des phases</strong> (q, i). En traçant i en fonction de q, on obtient une <strong>ellipse</strong> centrée à l'origine. La forme fermée de cette trajectoire traduit la conservation de l'énergie :</p>
+                <div class="plan-highlight">
+                    <strong>½ · (q²/C) + ½ · L · i² = E_totale</strong>
+                </div>
+                <p>C'est l'équation d'une ellipse d'axes √(2C·E_totale) et √(2E_totale/L). En mécanique, l'espace des phases (x, p) d'un oscillateur harmonique est parcouru en boucles elliptiques qui ne se referment jamais exactement en pratique (à cause des frottements) — c'est ce qui distingue les systèmes conservatifs des systèmes dissipatifs.</p>
+
+                <h4>7. Analogie détaillée avec l'oscillateur mécanique</h4>
+                <p>Le circuit LC idéal est l'<strong>analogue électrique exact</strong> de l'oscillateur masse-ressort horizontal sans frottement. La correspondance est bijective :</p>
                 <table class="plan-table">
-                    <tr><th>Électrique</th><th>Mécanique</th></tr>
-                    <tr><td>Charge q</td><td>Position x</td></tr>
-                    <tr><td>Inductance L</td><td>Masse m</td></tr>
-                    <tr><td>1/C</td><td>Raideur k</td></tr>
-                    <tr><td>Tension V</td><td>Force F = k·x</td></tr>
-                    <tr><td>½·C·V²</td><td>½·k·x² (potentielle)</td></tr>
-                    <tr><td>½·L·i²</td><td>½·m·v² (cinétique)</td></tr>
+                    <tr><th>Grandeur électrique</th><th>Grandeur mécanique</th><th>Symbole</th></tr>
+                    <tr><td>Charge électrique</td><td>Position (élongation)</td><td>q ↔ x</td></tr>
+                    <tr><td>Courant</td><td>Vitesse</td><td>i = dq/dt ↔ v = dx/dt</td></tr>
+                    <tr><td>Inductance L</td><td>Masse m</td><td>L ↔ m (inertie)</td></tr>
+                    <tr><td>1/C</td><td>Raideur k du ressort</td><td>1/C ↔ k</td></tr>
+                    <tr><td>Tension v_C</td><td>Force de rappel F = −k·x</td><td>v_C ↔ F</td></tr>
+                    <tr><td>Énergie ½·C·v_C²</td><td>Énergie potentielle ½·k·x²</td><td>E_C ↔ U_potentielle</td></tr>
+                    <tr><td>Énergie ½·L·i²</td><td>Énergie cinétique ½·m·v²</td><td>E_L ↔ E_cinetique</td></tr>
+                    <tr><td>ω₀ = 1/√(LC)</td><td>ω₀ = √(k/m)</td><td>Pulsation propre</td></tr>
                 </table>
+                <p>Cette analogie n'est pas superficielle : elle traduit une <strong>équivalence mathématique profonde</strong> entre les deux systèmes, régis par la même équation différentielle. C'est pourquoi les électriciens utilisent intuitivement les concepts d'« inertie électrique » (L) et de « raideur électrique » (1/C), et les mécaniciens parlent de « capacité » d'un ressort.</p>
 
-                <h4>6. Applications pratiques</h4>
-                <p>Oscillateurs à quartz (montre, horloges numériques), circuits d'accord des радио (bandes AM, FM), oscillateurs Hartley et Colpitts, filtres à résonance (RF), circuits de démarrage pour alimentations flyback, convertisseurs de tension capacitifs.</p>
+                <h4>8. Cas particulier : le circuit LC parallèle</h4>
+                <p>Dans le circuit LC parallèle (L et C en parallèle), c'est la <strong>tension</strong> aux bornes qui est l'analogue de la position. L'équation différentielle s'écrit :</p>
+                <div class="plan-highlight">
+                    <strong>C · (d²v/dt²) + v/L = 0</strong>
+                </div>
+                <p>La pulsation propre reste ω₀ = 1/√(LC), identique au circuit série. En revanche, le comportement vis-à-vis d'une source extérieure diffère : à la résonance, l'impédance du LC parallèle tend vers l'infini (le circuit se comporte comme un circuit ouvert), tandis que l'impédance du LC série tend vers zéro (court-circuit). Cette dualité est exploitée dans les filtres d'accord des récepteurs radio.</p>
+
+                <h4>9. Réponse à une excitation extérieure : la résonance</h4>
+                <p>Le circuit LC idéal n'oscille spontanément qu'en régime libre. Si on l'alimente avec une source sinusoïdale de pulsation ω, il entre en résonance lorsque ω = ω₀. À cette fréquence :</p>
+                <ul>
+                    <li>Pour le LC série : l'impédance est nulle, le courant peut devenir théoriquement infini (en pratique limité par la résistance)</li>
+                    <li>Pour le LC parallèle : l'impédance est infinie, la tension peut devenir théoriquement infinie (en pratique limitée par la résistance de la bobine)</li>
+                </ul>
+                <p>Le phénomène de résonance est crucial en électronique : il est à la base de la <strong>sélection de fréquence</strong> dans les récepteurs radio. En réglant L ou C, on modifie ω₀ pour l'accorder sur la fréquence de la station que l'on veut écouter. Cette propriété est détaillée dans la leçon 6 (circuit RLC forcé).</p>
+
+                <h4>10. Facteur de qualité et amortissement réel</h4>
+                <p>Un circuit LC réel comporte toujours une résistance R (résistance des fils, ESR du condensateur, pertes dans le noyau de la bobine). Cette résistance dissipe de l'énergie et amortit les oscillations. Le facteur de qualité caractérise l'amortissement :</p>
+                <div class="plan-highlight">
+                    <strong>Q = (1/R) · √(L/C) = ω₀ · L / R = 1/(ω₀ · R · C)</strong>
+                </div>
+                <p>Plus Q est grand, plus les oscillations persistent longtemps. Pour un circuit supraconducteur, R = 0 et Q → ∞, donc les oscillations sont théoriquement éternelles. Pour un circuit réel typique, Q peut varier de 10 (médiocre) à plusieurs milliers (oscillateur à quartz). Le circuit RLC est étudié en détail dans la leçon 7.</p>
+
+                <h4>11. Calcul des échanges d'énergie en notation complexe</h4>
+                <p>En régime sinusoïdal permanent, on peut écrire la charge et le courant comme des grandeurs complexes : q(t) = Re{Q·exp(jωt)}, i(t) = Re{I·exp(jωt)}. La loi des mailles donne :</p>
+                <div class="plan-highlight">
+                    <strong>jωL · I + I/(jωC) = 0 ⇒ (jωL + 1/(jωC)) · I = 0</strong>
+                </div>
+                <p>Pour qu'un courant non nul circule, il faut jωL + 1/(jωC) = 0, soit ω² = 1/(LC), d'où ω = ω₀. C'est la condition de résonance. En pratique, l'ajout d'une source sinusoïdale V_e permet de trouver le courant en fonction de la fréquence, avec un pic à ω = ω₀.</p>
+
+                <h4>12. Méthodes de mesure de L et C</h4>
+                <p>Plusieurs techniques permettent de déterminer L et C expérimentalement :</p>
+                <ul>
+                    <li><strong>Mesure de la fréquence propre :</strong> on excite le circuit LC avec un signal de fréquence variable (GBF) et on repère la fréquence où la tension est maximale (résonance). Connaissant L (ou C), on en déduit l'autre grandeur.</li>
+                    <li><strong>Méthode de la résonance parallèle :</strong> on associe le circuit LC à une source de courant. La fréquence d'oscillation libre donne accès au produit L·C.</li>
+                    <li><strong>Pont de Maxwell-Wien :</strong> circuit en pont qui permet de mesurer L et C avec une grande précision en comparant à des étalons.</li>
+                    <li><strong>Q-mètre :</strong> instrument qui mesure directement L, C et le facteur de qualité Q d'un circuit LC.</li>
+                </ul>
+
+                <h4>13. Applications pratiques détaillées</h4>
+                <p>Les circuits LC sont présents dans une multitude d'applications :</p>
+                <ul>
+                    <li><strong>Oscillateurs à quartz :</strong> un cristal de quartz vibre mécaniquement à une fréquence très stable (32,768 kHz pour les montres, plusieurs MHz pour les horloges d'ordinateur). Son modèle électrique équivalent est un circuit RLC avec un Q très élevé (10⁴ à 10⁶). Le quartz est taillé pour avoir une fréquence propre précise.</li>
+                    <li><strong>Récepteurs radio AM/FM :</strong> l'antenne capte des signaux à de nombreuses fréquences. Un circuit LC accordé (variable C) permet de sélectionner la fréquence de la station désirée. L'impédance du LC parallèle devient maximale à la résonance, ce qui maximise le signal utile.</li>
+                    <li><strong>Oscillateurs Hartley et Colpitts :</strong> oscillateurs à transistor utilisant deux circuits LC couplés (Hartley : deux bobines et un condensateur ; Colpitts : un bobine et un condensateur à prise). Ils génèrent des signaux sinusoïdaux stables pour les émetteurs et les synthétiseurs.</li>
+                    <li><strong>Filtres à résonance RF :</strong> dans les émetteurs radio, les circuits LC sélectionnent la fréquence d'émission et éliminent les harmoniques parasites.</li>
+                    <li><strong>Alimentations à découpage flyback :</strong> le primaire d'un transformateur couplé à un condensateur forme un circuit LC qui détermine la fréquence de découpage et la transmission d'énergie.</li>
+                    <li><strong>Convertisseurs capacitifs (charge pumps) :</strong> utilisent des condensateurs commutés pour générer des tensions multiples de la tension d'alimentation (doubleurs, tripleurs).</li>
+                    <li><strong>RFID (identification par radiofréquence) :</strong> les tags RFID passifs sont constitués d'un circuit LC accordé à la fréquence du lecteur, qui fournit l'énergie par couplage inductif.</li>
+                    <li><strong>Cavités résonnantes :</strong> dans les accélérateurs de particules, les cavités micro-ondes (cavités LC à fréquence GHz) accélèrent les particules chargées.</li>
+                    <li><strong>Imagerie médicale (IRM) :</strong> les antennes RF de l'IRM sont des circuits LC accordés à la fréquence de Larmor des noyaux d'hydrogène (≈ 128 MHz pour un champ de 3 T).</li>
+                </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>🔑 Concepts clés à retenir</h3>
                 <ul>
-                    <li><strong>Équation différentielle :</strong> d²q/dt² + (1/(L·C))·q = 0</li>
-                    <li><strong>Pulsation propre :</strong> ω₀ = 1/√(L·C) (rad/s)</li>
-                    <li><strong>Période propre :</strong> T₀ = 2π·√(L·C)</li>
-                    <li><strong>Solution :</strong> q(t) = Q₀·cos(ω₀·t + φ)</li>
+                    <li><strong>Équation différentielle :</strong> d²q/dt² + (1/(L·C)) · q = 0</li>
+                    <li><strong>Pulsation propre :</strong> ω₀ = 1/√(L·C) [rad/s]</li>
+                    <li><strong>Période propre :</strong> T₀ = 2π · √(L·C)</li>
+                    <li><strong>Fréquence propre :</strong> f₀ = 1/(2π · √(L·C)) [Hz]</li>
+                    <li><strong>Solution :</strong> q(t) = Q₀ · cos(ω₀·t + φ), i(t) = −Q₀·ω₀·sin(ω₀·t + φ)</li>
                     <li><strong>Énergie totale conservée :</strong> E = ½·C·V² + ½·L·i² = constante</li>
-                    <li><strong>Analogie avec l'oscillateur mécanique :</strong> L ↔ m, 1/C ↔ k</li>
+                    <li><strong>Échanges d'énergie :</strong> C ↔ L à la fréquence ω₀</li>
+                    <li><strong>Analogie avec l'oscillateur mécanique :</strong> L ↔ m, 1/C ↔ k, q ↔ x</li>
+                    <li><strong>Pas d'amortissement</strong> dans le circuit LC idéal (R = 0)</li>
                 </ul>
             </div>
 
@@ -165,22 +276,27 @@
                     <li><strong>Filtres d'accord</strong> : sélection d'une fréquence parmi plusieurs (impédance maximale à ω₀)</li>
                     <li><strong>Horloges à quartz</strong> : le quartz est un oscillateur électromécanique dont le modèle équivalent est un circuit LC</li>
                     <li><strong>Convertisseurs boost</strong> : l'inductance stocke l'énergie et la restitue au condensateur de sortie</li>
+                    <li><strong>Tags RFID</strong> : circuit LC accordé pour la transmission d'énergie et de données par radiofréquence</li>
+                    <li><strong>Cavités résonnantes</strong> : accélérateurs de particules, fours à micro-ondes</li>
+                    <li><strong>Synthétiseurs audio</strong> : oscillateurs LC pour générer les formes d'onde</li>
                 </ul>
             </div>
 
             <div class="plan-subsection">
                 <h3>✏️ Exercices suggérés</h3>
                 <ol>
-                    <li><strong>Exercice 1</strong> : Un circuit LC avec L = 10 mH et C = 1 µF a une charge initiale Q₀ = 100 µC. Calculer ω₀, T₀, V₀ et I₀.</li>
-                    <li><strong>Exercice 2</strong> : Tracer l'évolution temporelle de q(t), V(t) et i(t) pour le circuit LC, en supposant φ = 0.</li>
-                    <li><strong>Exercice 3</strong> : Montrer que l'énergie totale se conserve en calculant E_C(t) + E_L(t).</li>
-                    <li><strong>Exercice 4</strong> : Un circuit LC parallèle a L = 5 mH et C = 200 pF. Quelle est sa fréquence propre ?</li>
-                    <li><strong>Exercice 5</strong> : Pourquoi un circuit LC réel perd-il progressivement ses oscillations ? Quelles sont les causes de l'amortissement ?</li>
+                    <li><strong>Exercice 1 (fréquence propre) :</strong> Un circuit LC avec L = 10 mH et C = 1 µF a une charge initiale Q₀ = 100 µC. Calculer ω₀, T₀, f₀, V₀ et I₀. Représenter q(t), v_C(t) et i(t) sur un graphique.</li>
+                    <li><strong>Exercice 2 (solutions) :</strong> Tracer l'évolution temporelle de q(t), v_C(t) et i(t) pour le circuit LC précédent, en supposant φ = 0. Identifier les points où E_C est maximale et où E_L est maximale.</li>
+                    <li><strong>Exercice 3 (conservation de l'énergie) :</strong> Montrer analytiquement que l'énergie totale se conserve en calculant dE_C/dt + dE_L/dt = 0.</li>
+                    <li><strong>Exercice 4 (LC parallèle) :</strong> Un circuit LC parallèle a L = 5 mH et C = 200 pF. Quelle est sa fréquence propre ? À quoi sert ce circuit dans un récepteur radio ?</li>
+                    <li><strong>Exercice 5 (amortissement réel) :</strong> Pourquoi un circuit LC réel perd-il progressivement ses oscillations ? Quelles sont les principales causes d'amortissement ? Donner des ordres de grandeur typiques du facteur Q.</li>
+                    <li><strong>Exercice 6 (analogie mécanique) :</strong> Un circuit LC est l'analogue d'un système masse-ressort. Pour un circuit avec L = 100 mH et C = 10 µF, calculer la masse et la raideur équivalentes. Vérifier que la fréquence propre est la même.</li>
+                    <li><strong>Exercice 7 (résonance) :</strong> Un circuit LC série est alimenté par une source sinusoïdale de 10 V. Calculer le courant à ω = ω₀, à ω = ω₀/2 et à 2·ω₀. Commenter les résultats.</li>
                 </ol>
             </div>
 
             <div class="plan-summary">
-                <strong>📌 Résumé :</strong> Le circuit LC idéal est le siège d'oscillations électriques libres non amorties. L'équation différentielle d²q/dt² + (1/(L·C))·q = 0 admet des solutions sinusoïdales q(t) = Q₀·cos(ω₀·t + φ) avec ω₀ = 1/√(L·C). L'énergie totale est conservée et oscille entre la forme électrique (condensateur) et la forme magnétique (bobine) à la fréquence ω₀. La période propre est T₀ = 2π·√(L·C). Le circuit LC constitue l'analogue électrique de l'oscillateur harmonique mécanique, et ses propriétés sont à la base de nombreux dispositifs d'oscillation et de filtrage en électronique.
+                <strong>📌 Résumé :</strong> Le circuit LC idéal est le siège d'oscillations électriques libres non amorties. L'équation différentielle d²q/dt² + (1/(L·C)) · q = 0 admet des solutions sinusoïdales q(t) = Q₀·cos(ω₀·t + φ) avec ω₀ = 1/√(L·C). L'énergie totale est conservée et oscille entre la forme électrique (condensateur, ½·C·V²) et la forme magnétique (bobine, ½·L·i²) à la fréquence ω₀. La période propre est T₀ = 2π·√(L·C). Le circuit LC constitue l'analogue électrique exact de l'oscillateur harmonique mécanique (L ↔ m, 1/C ↔ k), et ses propriétés sont à la base de nombreux dispositifs d'oscillation et de filtrage en électronique : oscillateurs à quartz, circuits d'accord radio, convertisseurs DC-DC, RFID, et cavités résonnantes. Dans un circuit réel, la résistance inévitable amortit les oscillations avec un temps caractéristique τ = 2L/R, sujet de la leçon 7.
             </div>
         </section>
 
@@ -194,7 +310,7 @@
         </a>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOUTER -->
     <footer class="footer">
         <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
     </footer>

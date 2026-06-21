@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'onde sonore - Physique</title>
     <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .cours-detaille {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 35px 45px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            line-height: 1.9;
+            color: #1f2937;
+            font-size: 1.05em;
+        }
+        .cours-detaille h2 {
+            color: #4C1D95;
+            border-left: 6px solid #7C3AED;
+            padding-left: 18px;
+            margin-top: 40px;
+            font-size: 1.6em;
+        }
+        .cours-detaille h3 {
+            color: #6D28D9;
+            margin-top: 28px;
+            font-size: 1.25em;
+        }
+        .cours-detaille h4 {
+            color: #5B21B6;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .cours-detaille .definition {
+            background: #EDE9FE;
+            border-left: 5px solid #7C3AED;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .remarque {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .exemple {
+            background: #D1FAE5;
+            border-left: 5px solid #10B981;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 8px;
+        }
+        .cours-detaille .formule {
+            background: #1F2937;
+            color: #FBBF24;
+            padding: 14px 22px;
+            margin: 14px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+        .cours-detaille ul, .cours-detaille ol {
+            margin-left: 28px;
+        }
+        .cours-detaille li {
+            margin: 10px 0;
+        }
+        .cours-titre {
+            text-align: center;
+            color: #3B0764;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 4px solid #7C3AED;
+        }
+        .cours-detaille p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
@@ -16,7 +96,7 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">Accueil</a>
-                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Mathematiques/mathematiques.html">Math</a>
                 <a href="../physique.html">Physique</a>
                 <a href="../../Electrique/electrique.html">Électrique</a>
                 <a href="../../Mecanique/mecanique.html">Mécanique</a>
@@ -46,7 +126,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast - Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1w07iMF9rM7TmX6Z6HY28tolR2fZLpDOs/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -55,14 +136,9 @@
         <!-- SECTION RÉSUMÉ IMAGE -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
-            <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x600/1E40AF/FFFFFF?text=L+onde+sonore" alt="Résumé de l'onde sonore">
-                <div class="resume-overlay">
-                    <h3>L'onde sonore</h3>
-                    <p>Propagation du son, vitesse du son et caractéristiques acoustiques.</p>
-                </div>
+            
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1psOUNpvmcMwhrakwgeUYDQbol3gvcubb/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -71,9 +147,279 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/10vk0nWuEaL2_jQWCthPyvHz9DMDrPjcn/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
+            </div>
+        </section>
+
+        <!-- COURS DÉTAILLÉ -->
+        <section class="cours-detaille">
+            <h2 class="cours-titre">📖 Cours détaillé — Leçon 14 : L'onde sonore</h2>
+
+            <h2>1. Introduction : le son dans notre vie quotidienne</h2>
+            <p>Le son est l'une des manifestations physiques les plus familières de notre quotidien. Il nous permet de communiquer par la parole, d'écouter de la musique, de percevoir les bruits de notre environnement, et même de nous repérer dans l'espace (par exemple, on tourne la tête vers la source d'un bruit qu'on vient d'entendre). Le son est une <strong>onde mécanique</strong>, c'est-à-dire une perturbation qui se propage dans un milieu matériel, en l'occurrence grâce aux vibrations des particules qui constituent ce milieu.</p>
+
+            <p>Dans cette leçon, nous allons étudier en détail la nature du son, sa production, sa propagation, ses caractéristiques physiques (fréquence, intensité, timbre) et ses nombreuses applications dans les domaines les plus variés.</p>
+
+            <h2>2. Définition et nature du son</h2>
+            <div class="definition">
+                Le <strong>son</strong> est une <strong>onde mécanique longitudinale</strong> qui résulte de la vibration d'un milieu matériel (solide, liquide ou gazeux) et qui se propage grâce à la variation de pression de ce milieu.
+            </div>
+
+            <p>Cette définition implique plusieurs choses importantes :</p>
+            <ul>
+                <li>Le son est une <strong>onde mécanique</strong> : il a besoin d'un support matériel (de la matière) pour se propager. Sans matière, pas de son possible.</li>
+                <li>Le son est une <strong>onde longitudinale</strong> : la perturbation (la vibration des particules du milieu) se fait dans la même direction que la propagation de l'onde. C'est ce qui distingue le son des ondes transversales (comme la lumière).</li>
+                <li>Le son se propage grâce à des <strong>variations de pression</strong> : quand une source sonore vibre, elle comprime les couches d'air voisines (créant des zones de surpression), puis les laisse se détendre (créant des zones de dépression). Ces variations de pression se propagent de proche en proche.</li>
+            </ul>
+
+            <h2>3. Production d'un son : la source sonore</h2>
+            <p>Tout son est produit par la <strong>vibration rapide</strong> d'un objet matériel. On appelle cet objet la <strong>source sonore</strong>. La vibration peut être créée de différentes manières, selon le type d'instrument ou d'objet :</p>
+
+            <h3>3.1. Cordes vibrantes</h3>
+            <p>Dans les instruments à cordes (guitare, violon, piano, harpe…), c'est la <strong>corde</strong> qui vibre. La corde est tendue entre deux points fixes, et lorsqu'on la pince (guitare), la frotte avec un archet (violon) ou la frappe (piano), elle se met à osciller transversalement. Ces vibrations sont ensuite transmises à l'air environnant, qui les transporte sous forme de son.</p>
+
+            <h3>3.2. Colonnes d'air vibrantes</h3>
+            <p>Dans les instruments à vent (flûte, trompette, clarinette, saxophone…), c'est la <strong>colonne d'air</strong> à l'intérieur de l'instrument qui vibre. Le musicien souffle dans l'instrument, créant des vibrations dans l'air, qui se propagent ensuite à l'extérieur.</p>
+
+            <h3>3.3. Membranes vibrantes</h3>
+            <p>Dans les instruments à percussion (tambour, timbale, grosse caisse), c'est une <strong>membrane tendue</strong> qui vibre quand on la frappe. Dans un haut-parleur, c'est aussi une membrane (la "membrane du haut-parleur") qui vibre sous l'effet d'un signal électrique, et qui produit le son qu'on entend.</p>
+
+            <h3>3.4. Cordes vocales</h3>
+            <p>Chez l'être humain, le son de la voix est produit par la vibration des <strong>cordes vocales</strong>, situées dans le larynx. L'air expulsé des poumons fait vibrer les cordes vocales, et le son ainsi produit est ensuite modulé par la bouche, la langue et les lèvres pour former les voyelles et les consonnes du langage.</p>
+
+            <h3>3.5. Le diapason</h3>
+            <p>Un <strong>diapason</strong> est un instrument en forme de U, utilisé en musique et en physique pour produire un son pur de fréquence connue (souvent 440 Hz, qui correspond à la note "La" de l'octave 4). Quand on frappe le diapason, ses deux branches se mettent à vibrer à une fréquence très précise, produisant un son presque pur (c'est-à-dire presque sinusoïdal).</p>
+
+            <h2>4. Mécanisme de propagation du son</h2>
+            <p>Pour bien comprendre comment le son se propage, examinons en détail ce qui se passe au niveau microscopique :</p>
+
+            <p>L'air est constitué de molécules (essentiellement N₂ et O₂) qui sont en mouvement permanent et désordonné (agitation thermique). Ces molécules sont séparées par des distances relativement grandes par rapport à leur taille. Quand une source sonore (par exemple, un haut-parleur) vibre, sa membrane pousse les molécules d'air voisines : ces molécules se rapprochent, créant localement une zone de <strong>compression</strong> (la pression augmente). Ces molécules comprimées poussent à leur tour leurs voisines, qui poussent leurs voisines, et ainsi de suite : la compression se propage de proche en proche.</p>
+
+            <p>Quand la membrane du haut-parleur recule (elle revient en arrière), elle laisse un "vide" derrière elle : les molécules d'air voisines se raréfient, créant une zone de <strong>dilatation</strong> (la pression diminue). Cette dilatation se propage également de proche en proche.</p>
+
+            <p>Ainsi, la vibration continue de la source crée une succession alternée de compressions et de dilatations qui s'éloignent de la source à la vitesse du son. Les molécules d'air, elles, ne font que de petits mouvements d'avant en arrière, autour de leur position d'équilibre : elles ne se déplacent pas de manière permanente avec l'onde.</p>
+
+            <div class="remarque">
+                <strong>Point important :</strong> C'est bien la <strong>pression</strong> qui se propage, et non les molécules. Les molécules font de petits va-et-vient, mais elles restent globalement sur place. Le son est donc une onde de pression, et non une onde de matière.
+            </div>
+
+            <h2>5. Le son ne se propage pas dans le vide</h2>
+            <p>Puisque le son est une onde mécanique, il a besoin d'un milieu matériel pour se propager. Dans le vide, il n'y a pas de matière, donc pas de molécules pour transmettre la vibration, et donc pas de son possible. C'est pourquoi :</p>
+            <ul>
+                <li>Dans l'espace, entre les planètes, le silence est total. Les astronautes, même s'ils se tiennent à quelques mètres les uns des autres, ne peuvent pas s'entendre en parlant normalement.</li>
+                <li>Les films de science-fiction qui montrent des explosions retentissantes dans l'espace sont physiquement incorrects : il n'y aurait aucun son.</li>
+                <li>Les astronautes communiquent par <strong>radio</strong> (ondes électromagnétiques), qui peuvent, elles, se propager dans le vide.</li>
+            </ul>
+
+            <h2>6. Vitesse de propagation du son</h2>
+            <p>La vitesse de propagation du son (sa célérité) dépend principalement du milieu dans lequel il se propage. Voici les principales caractéristiques :</p>
+
+            <h3>6.1. Vitesse du son dans différents milieux</h3>
+
+            <div class="exemple">
+                <strong>Tableau des vitesses du son (à 20°C sauf indication contraire) :</strong>
+                <ul>
+                    <li><strong>Air</strong> (à 0°C) : 331 m/s</li>
+                    <li><strong>Air</strong> (à 20°C) : 343 m/s</li>
+                    <li><strong>Air</strong> (à 40°C) : 355 m/s</li>
+                    <li><strong>Eau douce</strong> : 1480 m/s</li>
+                    <li><strong>Eau de mer</strong> : 1520 m/s</li>
+                    <li><strong>Acier</strong> : 5000 à 6000 m/s</li>
+                    <li><strong>Aluminium</strong> : 5100 m/s</li>
+                    <li><strong>Verre</strong> : 5300 m/s</li>
+                    <li><strong>Bois</strong> : 3300 à 5000 m/s (selon l'essence)</li>
+                    <li><strong>Caoutchouc</strong> : 50 à 150 m/s</li>
+                    <li><strong>Plomb</strong> : 1200 m/s</li>
+                </ul>
+            </div>
+
+            <h3>6.2. Influence de la température dans les gaz</h3>
+            <p>Dans l'air (et dans les gaz en général), la vitesse du son augmente avec la température. On peut l'estimer par la formule approchée :</p>
+            <div class="formule">v ≈ 331 + 0,6 × T</div>
+            <p>où T est la température en degrés Celsius, et v est la vitesse en m/s. Ainsi, à 0°C, on a v ≈ 331 m/s, et à 20°C, on a v ≈ 343 m/s.</p>
+
+            <p>Cette dépendance s'explique par le fait que la vitesse du son dans un gaz est proportionnelle à la racine carrée de la température absolue (en Kelvin) :</p>
+            <div class="formule">v = √(γ × R × T / M)</div>
+            <p>où γ est le coefficient de Laplace (≈ 1,4 pour l'air), R est la constante des gaz parfaits, T la température absolue, et M la masse molaire du gaz.</p>
+
+            <h3>6.3. Influence de la rigidité du milieu</h3>
+            <p>Dans les solides, la vitesse du son est déterminée principalement par la rigidité (module d'Young) et la masse volumique :</p>
+            <div class="formule">v = √(E / ρ)</div>
+            <p>où E est le module d'Young (en Pa) et ρ la masse volumique (en kg/m³). Plus le matériau est rigide, plus le son s'y propage rapidement.</p>
+
+            <h2>7. Les caractéristiques physiques du son</h2>
+            <p>Un son peut être décrit par trois grandeurs physiques fondamentales : sa hauteur (liée à la fréquence), son intensité (liée à l'amplitude) et son timbre. Nous allons étudier chacune de ces grandeurs en détail.</p>
+
+            <h3>7.1. La hauteur d'un son : la fréquence</h3>
+            <p>La <strong>fréquence f</strong> d'un son correspond au nombre de vibrations par seconde de la source sonore. Elle s'exprime en Hertz (Hz). Plus la fréquence est élevée, plus le son est <strong>aigu</strong>. Plus la fréquence est basse, plus le son est <strong>grave</strong>.</p>
+
+            <div class="exemple">
+                <strong>Exemples de fréquences :</strong>
+                <ul>
+                    <li>La voix humaine parlée : environ 100 à 300 Hz (homme), 150 à 400 Hz (femme).</li>
+                    <li>La note La (diapason) : 440 Hz.</li>
+                    <li>La note Do médium du piano : 262 Hz.</li>
+                    <li>Le son d'une grosse caisse : environ 60 Hz.</li>
+                    <li>Le son d'un sifflet : environ 2000 à 3000 Hz.</li>
+                    <li>Le sifflement d'un chien (inaudible pour l'homme) : 20 000 à 50 000 Hz.</li>
+                </ul>
+            </div>
+
+            <p>La hauteur d'un son est une sensation subjective (perçue par l'oreille) qui est directement liée à la fréquence physique. En musique, on classe les sons en octaves. Une octave correspond à un doublement de la fréquence. Ainsi, le La 440 Hz et le La 880 Hz sont séparés d'une octave.</p>
+
+            <h3>7.2. L'intensité d'un son : l'amplitude</h3>
+            <p>L'<strong>intensité sonore I</strong> correspond à la puissance transportée par l'onde sonore, par unité de surface. Elle se mesure en watts par mètre carré (W/m²). L'intensité est proportionnelle au carré de l'amplitude de la vibration, et au carré de la différence de pression créée par l'onde.</p>
+
+            <p>En pratique, l'intensité sonore est souvent exprimée en <strong>décibels (dB)</strong>, en utilisant l'<strong>échelle logarithmique</strong>. Cette échelle a été choisie parce que l'oreille humaine est sensible à un très grand éventail d'intensités (de 10⁻¹² W/m² à environ 1 W/m², soit 12 ordres de grandeur), et parce qu'elle perçoit les intensités de manière logarithmique (un son 10 fois plus intense n'est pas perçu 10 fois plus fort, mais seulement 2 fois plus fort).</p>
+
+            <p>Le niveau d'intensité sonore L (en dB) est défini par :</p>
+            <div class="formule">L = 10 × log₁₀(I / I₀)</div>
+            <p>où I₀ = 10⁻¹² W/m² est l'intensité de référence (le seuil d'audibilité).</p>
+
+            <div class="exemple">
+                <strong>Quelques niveaux d'intensité sonore courants :</strong>
+                <ul>
+                    <li>0 dB : seuil d'audibilité.</li>
+                    <li>20 dB : murmure, bruit de fond d'une chambre silencieuse.</li>
+                    <li>40 dB : bibliothèque, conversation à voix basse.</li>
+                    <li>60 dB : conversation normale à 1 m.</li>
+                    <li>80 dB : rue animée, aspirateur.</li>
+                    <li>90 dB : circulation dense, tondeuse à gazon.</li>
+                    <li>100 dB : klaxon de voiture, chaîne hi-fi puissante.</li>
+                    <li>110 dB : concert de rock, marteau-piqueur.</li>
+                    <li>120 dB : seuil de douleur, avion au décollage à proximité.</li>
+                    <li>140 dB : décollage d'un avion à réaction à 100 m (douleur intense).</li>
+                </ul>
+            </div>
+
+            <div class="remarque">
+                <strong>Risques auditifs :</strong> Une exposition prolongée à des niveaux supérieurs à 85 dB peut provoquer des lésions auditives irréversibles. C'est pourquoi les travailleurs exposés au bruit (chantiers, industries, aéroports) doivent porter des protections auditives. La réglementation limite le niveau sonore dans les lieux publics (discothèques, concerts) à 105 dB en France.
+            </div>
+
+            <h3>7.3. Le timbre d'un son</h3>
+            <p>Le <strong>timbre</strong> est la caractéristique qui permet de distinguer deux sons de même hauteur et de même intensité, produits par des sources différentes. Par exemple, une note La (440 Hz) jouée au piano ne sonne pas de la même manière que la même note jouée au violon ou à la guitare : c'est ce qui permet de reconnaître l'instrument.</p>
+
+            <p>Physiquement, le timbre dépend de la <strong>forme du signal sonore</strong> au cours du temps, c'est-à-dire de la manière dont l'amplitude et la phase des vibrations varient. Un son pur (comme celui d'un diapason) correspond à une sinusoïde pure, avec une seule fréquence. Mais la plupart des sons réels sont des sons <strong>complexes</strong>, c'est-à-dire la superposition d'un son <strong>fondamental</strong> (la fréquence la plus basse) et de plusieurs <strong>harmoniques</strong> (fréquences multiples du fondamental).</p>
+
+            <p>La présence et l'intensité relative de ces harmoniques déterminent le timbre du son. Par exemple, le son d'un violon est riche en harmoniques aigus, ce qui lui donne un timbre "brillant", tandis que le son d'une flûte est plus proche d'un son pur, avec peu d'harmoniques, ce qui lui donne un timbre "doux".</p>
+
+            <h2>8. La perception des sons par l'oreille humaine</h2>
+            <p>L'oreille humaine est un organe remarquable, capable de percevoir des sons dont la fréquence est comprise entre 20 Hz et 20 000 Hz (20 kHz). Cette plage est appelée la <strong>plage auditive</strong>. En dehors de cette plage, les sons ne sont pas perçus par l'oreille humaine :</p>
+
+            <ul>
+                <li>Les <strong>infrasons</strong> (fréquence inférieure à 20 Hz) ne sont pas audibles, mais ils peuvent être ressentis par le corps (vibrations, malaises). Certains animaux (éléphants, baleines) les utilisent pour communiquer sur de longues distances.</li>
+                <li>Les <strong>ultrasons</strong> (fréquence supérieure à 20 kHz) ne sont pas audibles non plus. Mais ils sont utilisés par certaines espèces animales (chauves-souris, dauphins) pour l'écho-localisation, et par l'homme dans de nombreuses applications (échographie médicale, nettoyage, détection de défauts…).</li>
+            </ul>
+
+            <h2>9. Réflexion du son et phénomène d'écho</h2>
+            <p>Quand une onde sonore rencontre un obstacle (un mur, une falaise, un bâtiment…), elle est en partie <strong>réfléchie</strong> : elle change de direction et repart dans une autre direction. C'est ce phénomène qui produit l'<strong>écho</strong> : le son émis revient à l'oreille après s'être réfléchi sur l'obstacle.</p>
+
+            <p>Pour qu'un son soit perçu comme un écho distinct (c'est-à-dire séparé du son direct), il faut que le retard entre l'émission et la réception soit supérieur à environ 0,1 s (centièmes de seconde). Sachant que la vitesse du son est d'environ 340 m/s, cela correspond à une distance aller-retour de 0,1 × 340 = 34 m, soit une distance à l'obstacle d'environ 17 m.</p>
+
+            <div class="exemple">
+                <strong>Exemple de calcul :</strong> Si l'on entend un écho 2 secondes après avoir crié, et que la vitesse du son est 340 m/s, la distance à l'obstacle est :<br>
+                d = (v × t) / 2 = (340 × 2) / 2 = 340 m.<br>
+                Le son a parcouru 340 m à l'aller, puis 340 m au retour, soit 680 m en tout en 2 secondes.
+            </div>
+
+            <h2>10. La résonance</h2>
+            <p>Un phénomène important en acoustique est la <strong>résonance</strong>. Quand un objet est excité à une fréquence qui correspond à l'une de ses fréquences propres de vibration, il entre en résonance : son amplitude de vibration devient très grande. C'est ce phénomène qui explique pourquoi :</p>
+            <ul>
+                <li>Un verre se brise quand une chanteuse émet une note à la bonne fréquence.</li>
+                <li>Un pont peut osciller violemment et s'effondrer si une troupe marchant au pas excite sa fréquence propre de résonance (c'est ce qui s'est passé avec le pont de Tacoma Narrows en 1940, à cause du vent).</li>
+                <li>Une corde de guitare vibre intensément quand on joue la note correspondant à sa fréquence propre.</li>
+            </ul>
+
+            <h2>11. Applications de l'onde sonore</h2>
+            <p>Le son a de très nombreuses applications dans notre vie quotidienne et dans la science :</p>
+
+            <h3>11.1. Échographie médicale</h3>
+            <p>L'échographie est une technique d'imagerie médicale qui utilise des <strong>ultrasons</strong> (sons de fréquence supérieure à 20 kHz). Une sonde émet des ultrasons qui se propagent dans les tissus du corps, se réfléchissent sur les interfaces entre les différents organes, et reviennent à la sonde. Le temps de parcours permet de calculer la profondeur des structures réfléchissantes. L'échographie est utilisée pour suivre la grossesse, examiner le cœur, le foie, les reins, etc.</p>
+
+            <h3>11.2. Sonar</h3>
+            <p>Le <strong>sonar</strong> (Sound Navigation And Ranging) est un dispositif utilisé principalement par les sous-marins pour détecter des objets sous l'eau. Il émet des ondes sonores (souvent des ultrasons) et analyse l'écho renvoyé par les obstacles (autres navires, fond marin, bancs de poissons). Le sonar a été inventé pendant la Première Guerre mondiale et reste un outil essentiel de la navigation sous-marine, de la pêche, et de la cartographie des fonds marins.</p>
+
+            <h3>11.3. Écho-localisation animale</h3>
+            <p>Les <strong>chauves-souris</strong> et les <strong>dauphins</strong> utilisent des ultrasons pour se repérer dans leur environnement. Ils émettent des cris très aigus (jusqu'à 100 kHz chez certaines espèces) et analysent l'écho qui leur revient. Cela leur permet de détecter des obstacles, de localiser leurs proies, et même de communiquer. Ce système est appelé <strong>écholocation</strong>, et il est d'une précision remarquable.</p>
+
+            <h3>11.4. Musique</h3>
+            <p>Tous les instruments de musique produisent des ondes sonores longitudinales. La hauteur du son est déterminée par la fréquence de vibration, l'intensité par l'amplitude, et le timbre par la forme du signal (présence d'harmoniques). La musique est l'art de combiner des sons de manière harmonieuse pour créer une œuvre plaisante à l'oreille.</p>
+
+            <h3>11.5. Isolation phonique</h3>
+            <p>L'isolation phonique consiste à empêcher le son de se propager d'un milieu à un autre. Elle est utilisée dans la construction (murs, fenêtres, portes isolantes), dans l'industrie (cabines anti-bruit pour les machines bruyantes), et dans l'automobile (insonorisation de l'habitacle).</p>
+
+            <h3>11.6. Contrôle non destructif</h3>
+            <p>Les ultrasons sont utilisés pour détecter des défauts (fissures, bulles) à l'intérieur de pièces métalliques ou de matériaux solides. Une sonde émet des ultrasons dans la pièce, et on analyse les échos renvoyés par les défauts éventuels. Cette technique est appelée <strong>contrôle non destructif par ultrasons</strong>.</p>
+
+            <h3>11.7. Nettoyage par ultrasons</h3>
+            <p>Les ultrasons de haute intensité sont utilisés pour nettoyer des objets de petite taille (bijoux, lunettes, instruments chirurgicaux). Les vibrations ultrasonores créent des micro-bulles dans un liquide, qui implosent en dégageant une énergie qui détache les salissures. C'est le principe de la <strong>cavitation acoustique</strong>.</p>
+
+            <h2>12. Résumé des points essentiels à retenir</h2>
+            <div class="remarque">
+                <strong>Les points clés à absolument mémoriser :</strong>
+                <ul>
+                    <li>Le son est une <strong>onde mécanique longitudinale</strong>.</li>
+                    <li>Il nécessite un <strong>milieu matériel</strong> pour se propager (solide, liquide ou gaz).</li>
+                    <li>Il <strong>ne se propage pas dans le vide</strong>.</li>
+                    <li>La vitesse du son dans l'air est d'environ <strong>340 m/s à 20°C</strong>.</li>
+                    <li>Le son se propage plus vite dans les solides que dans les liquides, et plus vite dans les liquides que dans les gaz.</li>
+                    <li>La <strong>fréquence f</strong> détermine la hauteur du son (aigu ou grave).</li>
+                    <li>L'<strong>intensité</strong> détermine le volume sonore (fort ou faible), et se mesure en décibels (dB).</li>
+                    <li>Le <strong>timbre</strong> permet de distinguer deux sons de même hauteur et de même intensité.</li>
+                    <li>L'oreille humaine perçoit les sons de fréquence comprise entre <strong>20 Hz et 20 kHz</strong>.</li>
+                    <li>La <strong>réflexion</strong> du son sur un obstacle produit un <strong>écho</strong>.</li>
+                    <li>Relation fondamentale : <strong>v = λ × f</strong>.</li>
+                </ul>
+            </div>
+
+            <h2>13. Exercices d'application</h2>
+
+            <h3>Exercice 1</h3>
+            <p>Un observateur entend le tonnerre 5 secondes après avoir vu l'éclair. La vitesse du son dans l'air est de 340 m/s et celle de la lumière est de 3 × 10⁸ m/s. Calculez la distance à laquelle la foudre est tombée.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                Le temps mis par la lumière est négligeable (≈ 1,7 µs pour 500 m). On peut donc considérer que l'éclair est vu au moment de l'événement, et que le tonnerre est entendu avec un retard de 5 s.<br>
+                d = v × t = 340 × 5 = 1700 m = 1,7 km.
+            </div>
+
+            <h3>Exercice 2</h3>
+            <p>Un haut-parleur émet un son de fréquence f = 440 Hz (note La). La vitesse du son dans l'air est v = 340 m/s. Calculez la longueur d'onde de ce son.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                λ = v / f = 340 / 440 ≈ 0,77 m.
+            </div>
+
+            <h3>Exercice 3</h3>
+            <p>Un sonar de sous-marin émet un signal sonore vers le fond de l'océan. La vitesse du son dans l'eau est v = 1500 m/s. L'écho est reçu 0,6 s après l'émission. Calculez la profondeur de l'océan à cet endroit.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                Le son parcourt deux fois la distance (aller-retour) en 0,6 s. La distance totale parcourue est :<br>
+                d_totale = v × t = 1500 × 0,6 = 900 m.<br>
+                La profondeur est la moitié : h = 900 / 2 = 450 m.
+            </div>
+
+            <h3>Exercice 4</h3>
+            <p>Un son a une intensité I = 10⁻⁶ W/m². Sachant que l'intensité de référence est I₀ = 10⁻¹² W/m², calculez le niveau d'intensité sonore en décibels.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                L = 10 × log₁₀(I / I₀) = 10 × log₁₀(10⁻⁶ / 10⁻¹²) = 10 × log₁₀(10⁶) = 10 × 6 = 60 dB.
+            </div>
+
+            <h3>Exercice 5</h3>
+            <p>Un dauphin émet un ultrason de fréquence f = 80 kHz. La vitesse du son dans l'eau est v = 1500 m/s. Calculez la longueur d'onde de cet ultrason.</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                λ = v / f = 1500 / 80 000 = 0,01875 m ≈ 1,9 cm.
+            </div>
+
+            <h3>Exercice 6</h3>
+            <p>Un écho revient 0,3 s après l'émission d'un cri. Calculez la distance à laquelle se trouve l'obstacle qui a réfléchi le son (vitesse du son : 340 m/s).</p>
+            <div class="exemple">
+                <strong>Solution :</strong><br>
+                d = (v × t) / 2 = (340 × 0,3) / 2 = 102 / 2 = 51 m.
             </div>
         </section>
 
