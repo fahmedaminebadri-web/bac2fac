@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 4 : Les connecteurs logiques et les subordonnées - Français</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        .fr-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .fr-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .fr-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+        .toc { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FBCFE8; }
+        .toc h3 { color: #9D174D; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-left: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .toc li a:hover { text-decoration: underline; }
+        .plan-box { background: linear-gradient(135deg, #FAF5FF, #F3E8FF); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #E9D5FF; }
+        .plan-box h3 { color: #7C3AED; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box ol { padding-left: 22px; }
+        .plan-box li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .citation { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 14px 0; font-style: italic; color: var(--secondary); }
+        .tech-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .tech-table th { background: var(--primary); color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
+        .tech-table td { padding: 12px; border-bottom: 1px solid var(--border-light); }
+        .tech-table tr:nth-child(even) { background: var(--bg-gray-50); }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="../../Mathematiques/math.html">Math</a>
+                <a href="../../Physique/physique.html">Physique</a>
+                <a href="../../Electrique/electrique.html">Électrique</a>
+                <a href="../../Mecanique/mecanique.html">Mécanique</a>
+                <a href="francais.html">Français</a>
+                <a href="../Anglais/anglais.html">Anglais</a>
+                <a href="../Arabe/arabe.html">Arabe</a>
+                <a href="../../Informatique/informatique.html">Info</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container">
+        <a href="francais.html" class="back-btn">← Retour aux leçons de Français</a>
+
+        <!-- HEADER LEÇON -->
+        <div class="lesson-header">
+            <h1>Leçon 4 : Les connecteurs logiques et les subordonnées</h1>
+            <p class="breadcrumb">Français > Leçon 4</p>
+        </div>
+
+        <!-- RÉSUMÉ -->
+        <div class="plan-box">
+            <h3>📝 Résumé de la leçon</h3>
+            <p>Cette leçon constitue le <strong>complément indispensable</strong> de la Leçon 1 sur la langue. Elle est entièrement consacrée à la <strong>logique du discours</strong> et aux <strong>relations entre les phrases et les propositions</strong>. Au programme du <strong>Bac tunisien</strong>, la maîtrise des connecteurs logiques et des différentes subordonnées (cause, conséquence, but, hypothèse, condition, opposition, concession, comparaison, temps…) est essentielle à la fois pour <strong>comprendre un texte</strong>, <strong>analyser la cohérence d'un paragraphe</strong>, et surtout pour <strong>rédiger une production écrite fluide et logique</strong>.</p>
+            <p>Dans tout texte, les idées s'enchaînent selon des <strong>relations logiques précises</strong> : une cause engendre une conséquence, un but motive une action, une hypothèse prépare une conclusion, une opposition crée un contraste, une comparaison rapproche deux éléments, une concession reconnaît un point avant de s'y opposer. Chaque relation est marquée par des <strong>connecteurs spécifiques</strong> (conjonctions de subordination, conjonctions de coordination, adverbes, locutions conjonctives) qui articulent le discours et guident le lecteur.</p>
+            <p>Cette leçon propose une <strong>méthode complète et détaillée</strong> pour chaque relation logique : <strong>cause</strong>, <strong>conséquence</strong>, <strong>but</strong>, <strong>hypothèse / condition</strong>, <strong>opposition / concession</strong>, <strong>comparaison</strong>, <strong>temps</strong>. Pour chaque relation, vous trouverez : la <strong>définition</strong>, les <strong>connecteurs à utiliser</strong>, des <strong>exemples détaillés</strong>, des <strong>exercices corrigés</strong>, et des <strong>astuces méthodologiques</strong> directement applicables au Bac tunisien.</p>
+        </div>
+
+        <!-- PLAN -->
+        <div class="toc">
+            <h3>📋 Plan de la leçon</h3>
+            <ol>
+                <li><a href="#partie1">Qu'est-ce qu'un connecteur logique ?</a></li>
+                <li><a href="#partie2">La cause</a></li>
+                <li><a href="#partie3">La conséquence</a></li>
+                <li><a href="#partie4">Le but</a></li>
+                <li><a href="#partie5">L'hypothèse et la condition</a></li>
+                <li><a href="#partie6">L'opposition et la concession</a></li>
+                <li><a href="#partie7">La comparaison et la concession</a></li>
+                <li><a href="#partie8">Le temps et les autres relations</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION PODCAST -->
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
+            <div class="audio-player">
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="fr-content" id="partie1">
+            <h3>📘 1. Qu'est-ce qu'un connecteur logique ?</h3>
+            <p>Un <strong>connecteur logique</strong> est un mot ou une expression qui sert à <strong>relier deux phrases, deux propositions ou deux idées</strong> en précisant le <strong>type de relation</strong> qui les unit. Les connecteurs logiques sont l'<strong>ossature du texte</strong> : sans eux, un texte devient une simple succession de phrases sans lien.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">1.1. Les grandes familles de connecteurs</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Rôle</th>
+                    <th>Exemples</th>
+                </tr>
+                <tr>
+                    <td><strong>Conjonctions de coordination</strong></td>
+                    <td>Relient deux mots ou deux phrases de même nature.</td>
+                    <td><em>mais, ou, et, donc, or, ni, car</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Conjonctions de subordination</strong></td>
+                    <td>Introduisent une proposition subordonnée (phrase dépendante).</td>
+                    <td><em>parce que, lorsque, si, bien que, pour que…</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Adverbes de liaison</strong></td>
+                    <td>Marquent une transition logique.</td>
+                    <td><em>cependant, donc, ainsi, pourtant, néanmoins…</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Locutions conjonctives</strong></td>
+                    <td>Groupes de mots qui fonctionnent comme une conjonction.</td>
+                    <td><em>parce que, bien que, étant donné que, afin que…</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">1.2. Les types de relations logiques</h3>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔍</span>
+                    <p><strong>Cause</strong> — Pour expliquer pourquoi.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">➡️</span>
+                    <p><strong>Conséquence</strong> — Pour montrer le résultat.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>But</strong> — Pour indiquer l'objectif.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>Hypothèse / Condition</strong> — Pour poser une condition.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>Opposition / Concession</strong> — Pour marquer un contraste.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>Comparaison</strong> — Pour rapprocher deux éléments.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⏰</span>
+                    <p><strong>Temps</strong> — Pour situer dans la durée.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">➕</span>
+                    <p><strong>Addition</strong> — Pour ajouter une idée.</p>
+                </div>
+            </div>
+
+            <div class="citation">
+                « Maîtriser les connecteurs logiques, c'est pouvoir produire un texte cohérent, fluide et convaincant. Sans eux, le correcteur voit immédiatement un texte décousu. »
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Astuce au Bac</h4>
+                <p>Dans une production écrite, chaque connecteur employé doit être <strong>choisi en fonction du sens précis</strong> que l'on veut exprimer. Employer « mais » ou « cependant », « parce que » ou « car » n'est pas anodin : c'est ce qui montre la <strong>maîtrise de la langue</strong> au correcteur.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="fr-content" id="partie2">
+            <h3>📗 2. La cause</h3>
+            <p>La <strong>cause</strong> est la <strong>raison</strong> pour laquelle un fait se produit. Elle <strong>explique pourquoi</strong> quelque chose arrive. C'est l'une des relations logiques les plus fréquentes au Bac tunisien, tant dans l'étude de texte que dans la production écrite.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">2.1. Schéma logique</h3>
+            <div class="example-box">
+                <h4>💡 Structure</h4>
+                <p><strong>[Conséquence / Résultat]</strong> <em>parce que / à cause de / grâce à…</em> <strong>[Cause]</strong></p>
+                <p>ou</p>
+                <p><strong>[Cause]</strong> <em>provoque / entraîne / cause…</em> <strong>[Conséquence]</strong></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">2.2. Les connecteurs de cause</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Nature</th>
+                    <th>Registre</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>parce que</strong></td>
+                    <td>Conjonction de subordination</td>
+                    <td>Courant / soutenu</td>
+                    <td><em>« Il est fatigué <strong>parce qu</strong>'il a trop travaillé. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>car</strong></td>
+                    <td>Conjonction de coordination</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il est fatigué, <strong>car</strong> il a trop travaillé. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>puisque</strong></td>
+                    <td>Conjonction de subordination</td>
+                    <td>Soutenu</td>
+                    <td><em>« Puisque tu insistes, je viendrai. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>comme</strong></td>
+                    <td>Conjonction de subordination</td>
+                    <td>Soutenu</td>
+                    <td><em>« Comme il pleuvait, je suis resté. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>étant donné que</strong></td>
+                    <td>Locution conjonctive</td>
+                    <td>Soutenu</td>
+                    <td><em>« Étant donné qu'il pleut, restons. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>vu que</strong></td>
+                    <td>Locution conjonctive</td>
+                    <td>Soutenu</td>
+                    <td><em>« Vu que tu as raison, j'accepte. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en raison de</strong></td>
+                    <td>Locution prépositionnelle</td>
+                    <td>Soutenu</td>
+                    <td><em>« En raison du mauvais temps, le match est annulé. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>à cause de</strong></td>
+                    <td>Locution prépositionnelle</td>
+                    <td>Courant</td>
+                    <td><em>« À cause de la pluie, je suis resté. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>grâce à</strong></td>
+                    <td>Locution prépositionnelle</td>
+                    <td>Courant</td>
+                    <td><em>« Grâce à toi, j'ai réussi. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en effet</strong></td>
+                    <td>Adverbe</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il est absent. En effet, il est malade. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>par suite de</strong></td>
+                    <td>Locution prépositionnelle</td>
+                    <td>Soutenu</td>
+                    <td><em>« Par suite de la sécheresse, la récolte fut mauvaise. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">2.3. Exemples détaillés</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemple 1 — Cause et effet</h4>
+                <p><em>« Le sol est mouillé <strong>parce qu'il</strong> a plu cette nuit. »</em></p>
+                <p>• <strong>Cause</strong> : il a plu cette nuit.</p>
+                <p>• <strong>Conséquence</strong> : le sol est mouillé.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 2 — Plusieurs causes</h4>
+                <p><em>« L'élève a échoué <strong>à cause de</strong> son manque de travail <strong>et de</strong> l'absence de soutien familial. »</em></p>
+                <p>• Cause 1 : manque de travail.</p>
+                <p>• Cause 2 : absence de soutien familial.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 3 — Cause positive</h4>
+                <p><em>« Il a réussi <strong>grâce à</strong> son travail régulier et à sa persévérance. »</em></p>
+                <p>→ <strong>À noter</strong> : <em>grâce à</em> a une connotation positive, <em>à cause de</em> une connotation négative.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">2.4. Nuances importantes</h3>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p><strong>parce que</strong> = cause simple, fréquente à l'oral et à l'écrit.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p><strong>car</strong> = cause dans un registre soutenu (jamais en début de phrase).</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p><strong>puisque</strong> = cause connue, évidente (le lecteur la partage déjà).</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p><strong>comme</strong> = cause en début de phrase, toujours en tête.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p><strong>étant donné que / vu que</strong> = cause administrative, juridique ou didactique.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Piège classique au Bac</h4>
+                <p>Ne confondez pas <strong>parce que</strong> (en deux mots) et <strong>par ce que</strong> (en trois mots) :</p>
+                <p>• <em>« Il pleure <strong>parce qu</strong>'il est triste. »</em> (cause)</p>
+                <p>• <em>« Il est surpris <strong>par ce que</strong> tu dis. »</em> (= par cela)</p>
+                <p>• <em>« Je sais <strong>par ce que</strong> tu m'as dit. »</em></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="fr-content" id="partie3">
+            <h3>📙 3. La conséquence</h3>
+            <p>La <strong>conséquence</strong> est le <strong>résultat</strong> qui découle d'un fait, d'une cause ou d'une action. Elle exprime <strong>ce qui arrive</strong> à la suite de quelque chose.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">3.1. Schéma logique</h3>
+            <div class="example-box">
+                <h4>💡 Structure</h4>
+                <p><strong>[Cause]</strong> <em>donc / par conséquent / si bien que…</em> <strong>[Conséquence]</strong></p>
+                <p>ou</p>
+                <p><strong>[Cause]</strong> <em>est si / tellement… que</em> <strong>[Conséquence]</strong></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">3.2. Les connecteurs de conséquence</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Nature</th>
+                    <th>Registre</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>donc</strong></td>
+                    <td>Conjonction de coordination</td>
+                    <td>Courant</td>
+                    <td><em>« Il pleut, <strong>donc</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>alors</strong></td>
+                    <td>Adverbe</td>
+                    <td>Courant</td>
+                    <td><em>« Il pleut, <strong>alors</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>par conséquent</strong></td>
+                    <td>Locution adverbiale</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il pleut, <strong>par conséquent</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en conséquence</strong></td>
+                    <td>Locution adverbiale</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il pleut ; <strong>en conséquence</strong>, je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>c'est pourquoi</strong></td>
+                    <td>Locution</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il pleut, <strong>c'est pourquoi</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>si bien que</strong></td>
+                    <td>Locution conjonctive</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il pleut <strong>si bien que</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de sorte que</strong></td>
+                    <td>Locution conjonctive</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il pleut <strong>de sorte que</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>tellement… que</strong></td>
+                    <td>Correspondance</td>
+                    <td>Courant</td>
+                    <td><em>« Il pleut <strong>tellement</strong> <strong>que</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>si… que</strong></td>
+                    <td>Correspondance</td>
+                    <td>Courant</td>
+                    <td><em>« Il pleut <strong>si</strong> fort <strong>que</strong> je reste. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>au point de</strong></td>
+                    <td>Locution prépositionnelle</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il est fatigué <strong>au point de</strong> s'endormir. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>d'où</strong></td>
+                    <td>Adverbe</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il n'a pas étudié ; <strong>d'où</strong> son échec. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>ainsi</strong></td>
+                    <td>Adverbe</td>
+                    <td>Soutenu</td>
+                    <td><em>« Il a plu, <strong>ainsi</strong> la terre est mouillée. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">3.3. Exemples détaillés</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemple 1</h4>
+                <p><em>« Il a beaucoup neigé cette nuit, <strong>si bien que</strong> les routes sont bloquées. »</em></p>
+                <p>• Cause : beaucoup de neige.</p>
+                <p>• Conséquence : routes bloquées.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 2 — Intensité + conséquence</h4>
+                <p><em>« Il a travaillé <strong>tellement</strong> <strong>que</strong> ses mains tremblaient. »</em></p>
+                <p>• Cause : il a beaucoup travaillé.</p>
+                <p>• Conséquence : ses mains tremblaient.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 3 — Conséquence logique</h4>
+                <p><em>« Le ciel s'est assombri ; <strong>par conséquent</strong>, il va pleuvoir. »</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">3.4. Nuances entre les connecteurs</h3>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📊</span>
+                    <p><strong>donc / alors</strong> = conséquence simple, logique, courante.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>par conséquent / en conséquence / c'est pourquoi</strong> = conséquence logique, soutenue.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>si bien que / de sorte que / de telle manière que</strong> = conséquence concrète, visible.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔥</span>
+                    <p><strong>tellement… que / si… que</strong> = conséquence due à une intensité.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔗</span>
+                    <p><strong>d'où</strong> = conséquence tirée d'un fait précédent, en début de phrase.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Subtilité au Bac</h4>
+                <p><strong>de sorte que / si bien que</strong> peuvent exprimer :</p>
+                <p>• une conséquence <strong>réelle</strong> (mode indicatif) : <em>« Il a couru si bien qu'il est arrivé premier. »</em></p>
+                <p>• un <strong>but</strong> (mode subjonctif) : <em>« Il a couru de sorte qu'il puisse arriver premier. »</em></p>
+                <p>→ Le mode du verbe après le connecteur est la clé pour distinguer les deux.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="fr-content" id="partie4">
+            <h3>📕 4. Le but</h3>
+            <p>Le <strong>but</strong> exprime <strong>l'objectif</strong>, la <strong>finalité</strong> d'une action. C'est le « pour quoi » ou le « dans quel dessein » d'une action. C'est une relation très importante dans les textes argumentatifs et dans les lettres officielles.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">4.1. Schéma logique</h3>
+            <div class="example-box">
+                <h4>💡 Structure</h4>
+                <p><strong>[Action]</strong> <em>pour / afin de / pour que / afin que…</em> <strong>[But]</strong></p>
+                <p>Exemple : <em>« Il travaille <strong>pour réussir</strong>. »</em></p>
+                <p>ou : <em>« Il aide son ami <strong>pour qu'il réussisse</strong>. »</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">4.2. Les connecteurs de but</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Construction</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>pour</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Il étudie <strong>pour</strong> réussir. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>afin de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Il étudie <strong>afin de</strong> réussir. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>pour que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« Il l'aide <strong>pour qu'</strong>il réussisse. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>afin que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« Il l'aide <strong>afin qu'</strong>il réussisse. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de peur de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Il court <strong>de peur de</strong> rater le train. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de peur que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« Il court <strong>de peur qu'</strong>il rate le train. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de crainte de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Il se tait <strong>de crainte de</strong> se tromper. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de crainte que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« Il se tait <strong>de crainte qu'</strong>il se trompe. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en vue de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Il s'entraîne <strong>en vue de</strong> gagner. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>dans le but de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Il agit <strong>dans le but de</strong> convaincre. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>dans l'objectif de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Il agit <strong>dans l'objectif de</strong> convaincre. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">4.3. Exemples détaillés</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemple 1 — But positif</h4>
+                <p><em>« Il a longtemps étudié <strong>pour</strong> comprendre les maths. »</em></p>
+                <p>• Action : il a étudié.</p>
+                <p>• But : comprendre les maths.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 2 — But avec subjonctif</h4>
+                <p><em>« Le professeur parle lentement <strong>afin que</strong> les élèves comprennent. »</em></p>
+                <p>→ <strong>À noter</strong> : <em>pour que / afin que</em> exigent le <strong>subjonctif</strong>.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 3 — But négatif (crainte)</h4>
+                <p><em>« Il a pris un parapluie <strong>de peur d'</strong>être surpris par la pluie. »</em></p>
+                <p>→ <em>de peur de / de crainte de</em> = but négatif (on veut éviter quelque chose).</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">4.4. Astuce mode verbal</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🟢</span>
+                    <p><strong>pour / afin de / de peur de</strong> + <strong>INFINITIF</strong> → même sujet.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔵</span>
+                    <p><strong>pour que / afin que / de peur que</strong> + <strong>SUBJONCTIF</strong> → deux sujets différents.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Exemple décisif</h4>
+                <p><em>« Je travaille <strong>pour</strong> réussir. »</em> (je = sujet des deux verbes → infinitif)</p>
+                <p><em>« Je travaille <strong>pour que</strong> tu réussisses. »</em> (je ≠ tu → subjonctif)</p>
+                <p>→ C'est la règle d'or du but : <strong>« que » + subjonctif</strong> quand les sujets sont différents.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="fr-content" id="partie5">
+            <h3>📒 5. L'hypothèse et la condition</h3>
+            <p>L'<strong>hypothèse</strong> et la <strong>condition</strong> expriment une <strong>situation éventuelle</strong>, soumise à la réalisation d'un événement. C'est une relation logique essentielle pour les raisonnements, les conseils, les promesses et les menaces.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">5.1. Schéma logique</h3>
+            <div class="example-box">
+                <h4>💡 Structure</h4>
+                <p><strong>[Condition / Hypothèse]</strong> <em>si / au cas où / à condition que…</em> <strong>[Résultat possible]</strong></p>
+                <p>Exemple : <em>« Si tu travailles, tu réussiras. »</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">5.2. Les connecteurs d'hypothèse / condition</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Construction</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>si</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Si tu viens, je serai content. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>au cas où</strong></td>
+                    <td>+ conditionnel</td>
+                    <td><em>« Au cas où il pleuvrait, prends un parapluie. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>à condition que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« Je viendrai <strong>à condition que</strong> tu viennes. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>à condition de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Je viendrai <strong>à condition de</strong> finir tôt. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>pourvu que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« Tout ira bien, <strong>pourvu que</strong> tu reviennes. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>à moins que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« Je viendrai <strong>à moins qu'</strong>il pleuve. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>à moins de</strong></td>
+                    <td>+ infinitif</td>
+                    <td><em>« Je viendrai <strong>à moins de</strong> tomber malade. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en admettant que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« En admettant qu'il vienne, que ferons-nous ? »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>à supposer que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« À supposer qu'il pleuve, le match sera annulé. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en cas de</strong></td>
+                    <td>+ nom</td>
+                    <td><em>« En cas de pluie, le match sera annulé. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>dans le cas où</strong></td>
+                    <td>+ conditionnel</td>
+                    <td><em>« Dans le cas où il viendrait, préviens-moi. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>sauf si</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Je viendrai, sauf si tu m'appelles. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">5.3. Les trois types d'hypothèse</h3>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🟢</span>
+                    <p><strong>Hypothèse réelle / possible</strong> — Si + présent → futur. <em>« Si tu viens, je serai content. »</em></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🟡</span>
+                    <p><strong>Hypothèse irréelle du présent</strong> — Si + imparfait → conditionnel présent. <em>« Si tu venais, je serais content. »</em></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔴</span>
+                    <p><strong>Hypothèse irréelle du passé</strong> — Si + plus-que-parfait → conditionnel passé. <em>« Si tu étais venu, j'aurais été content. »</em></p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">5.4. Exemples détaillés</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemple 1 — Hypothèse possible</h4>
+                <p><em>« Si tu viens demain, nous irons au cinéma. »</em></p>
+                <p>→ Si + présent → futur simple. L'hypothèse est réaliste.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 2 — Hypothèse irréelle</h4>
+                <p><em>« Si j'avais de l'argent, je voyagerais. »</em></p>
+                <p>→ Si + imparfait → conditionnel. L'hypothèse est improbable.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 3 — Hypothèse non réalisée</h4>
+                <p><em>« Si j'avais su, je serais venu. »</em></p>
+                <p>→ Si + plus-que-parfait → conditionnel passé. L'hypothèse n'a pas eu lieu.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 4 — Pourvu que (souhait)</h4>
+                <p><em>« Pourvu qu'il réussisse ! »</em></p>
+                <p>→ <em>pourvu que</em> exprime un <strong>souhait</strong>, suivi du <strong>subjonctif</strong>.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">5.5. Astuce mode verbal</h3>
+
+            <div class="warning-box">
+                <h4>⚠️ Règle d'or au Bac tunisien</h4>
+                <p><strong>Si + indicatif</strong> (jamais de conditionnel ni de futur après <em>si</em>).</p>
+                <p>→ <em>« Si je <u>viendrai</u> demain, préviens-moi. »</em> ❌ FAUX</p>
+                <p>→ <em>« Si je <u>viens</u> demain, préviens-moi. »</em> ✅ JUSTE</p>
+                <p>→ <em>« Si je <u>venais</u> demain, préviens-moi. »</em> ✅ JUSTE (hypothèse irréelle)</p>
+                <p>C'est l'une des fautes les plus pénalisées au Bac.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="fr-content" id="partie6">
+            <h3>📘 6. L'opposition et la concession</h3>
+            <p>L'<strong>opposition</strong> et la <strong>concession</strong> expriment une <strong>contradiction</strong> ou une <strong>résistance</strong> entre deux idées. Elles créent des contrastes qui enrichissent le texte et montrent la complexité du raisonnement.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">6.1. Schéma logique</h3>
+            <div class="example-box">
+                <h4>💡 Structure</h4>
+                <p><strong>[Idée 1]</strong> <em>mais / cependant / bien que…</em> <strong>[Idée 2 opposée]</strong></p>
+                <p>Exemple : <em>« Il pleut <strong>mais</strong> je sors. »</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">6.2. Les connecteurs d'opposition</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Nature</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>mais</strong></td>
+                    <td>Conjonction de coordination</td>
+                    <td><em>« Il est riche, <strong>mais</strong> il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>cependant</strong></td>
+                    <td>Adverbe</td>
+                    <td><em>« Il est riche ; <strong>cependant</strong>, il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>toutefois</strong></td>
+                    <td>Adverbe</td>
+                    <td><em>« Il est riche, <strong>toutefois</strong> il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>pourtant</strong></td>
+                    <td>Adverbe</td>
+                    <td><em>« Il est riche, <strong>pourtant</strong> il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>néanmoins</strong></td>
+                    <td>Adverbe</td>
+                    <td><em>« Il est riche, <strong>néanmoins</strong> il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>or</strong></td>
+                    <td>Conjonction</td>
+                    <td><em>« Il promet, <strong>or</strong> il ne tient pas parole. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en revanche</strong></td>
+                    <td>Locution adverbiale</td>
+                    <td><em>« Il est riche, <strong>en revanche</strong> il n'est pas heureux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>par contre</strong></td>
+                    <td>Locution</td>
+                    <td><em>« Il est riche, <strong>par contre</strong> il n'est pas heureux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>au contraire</strong></td>
+                    <td>Locution</td>
+                    <td><em>« Il n'est pas timide, <strong>au contraire</strong>. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>tandis que</strong></td>
+                    <td>Conjonction</td>
+                    <td><em>« Lui parle, <strong>tandis que</strong> l'autre se tait. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>alors que</strong></td>
+                    <td>Conjonction</td>
+                    <td><em>« Il chante, <strong>alors que</strong> tout le monde dort. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>pendant que</strong></td>
+                    <td>Conjonction</td>
+                    <td><em>« Il chante, <strong>pendant que</strong> tout le monde dort. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">6.3. Les connecteurs de concession</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Construction</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>bien que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« <strong>Bien qu'</strong>il soit riche, il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>quoique</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« <strong>Quoiqu'</strong>il soit riche, il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>malgré</strong></td>
+                    <td>+ nom</td>
+                    <td><em>« <strong>Malgré</strong> sa richesse, il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en dépit de</strong></td>
+                    <td>+ nom</td>
+                    <td><em>« <strong>En dépit de</strong> sa richesse, il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>même si</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« <strong>Même si</strong> il est riche, il est généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>quand bien même</strong></td>
+                    <td>+ conditionnel</td>
+                    <td><em>« <strong>Quand bien même</strong> il serait riche, il serait généreux. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>quoi que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« <strong>Quoi qu'</strong>il fasse, il réussit. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>qui que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« <strong>Qui que</strong> tu sois, tu es le bienvenu. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>où que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« <strong>Où qu'</strong>il aille, il réussit. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>quel que</strong></td>
+                    <td>+ subjonctif</td>
+                    <td><em>« <strong>Quel que</strong> soit son choix, je le respecte. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">6.4. Distinction opposition / concession</h3>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>Opposition</strong> = deux faits contraires, réels, juxtaposés. <em>« Il est riche, mais il n'est pas heureux. »</em></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🤲</span>
+                    <p><strong>Concession</strong> = on reconnaît un point avant de s'y opposer. <em>« Bien qu'il soit riche, il n'est pas heureux. »</em></p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">6.5. Exemples détaillés</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemple 1 — Opposition simple</h4>
+                <p><em>« Le temps était beau ; <strong>cependant</strong>, la sortie a été annulée. »</em></p>
+                <p>→ <strong>cependant</strong> marque une opposition logique entre deux faits.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 2 — Concession</h4>
+                <p><em>« <strong>Bien qu'</strong>il soit jeune, il fait preuve de maturité. »</em></p>
+                <p>→ <strong>bien que</strong> + subjonctif = on concède la jeunesse avant d'opposer la maturité.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 3 — Opposition + concession</h4>
+                <p><em>« <strong>Malgré</strong> ses efforts, il n'a pas réussi. »</em></p>
+                <p>→ <strong>malgré</strong> + nom (efforts) = concession.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Subtilité</h4>
+                <p>Ne confondez pas :</p>
+                <p>• <strong>bien que</strong> = conjonction (deux mots) → <em>« Bien qu'il soit… »</em></p>
+                <p>• <strong>bien</strong> = adverbe → <em>« Il est <u>bien</u> gentil. »</em></p>
+                <p>• <strong>bien sûr</strong> = expression → <em>« Bien sûr, je viens. »</em></p>
+            </div>
+        </div>
+
+        <!-- PARTIE 7 -->
+        <div class="fr-content" id="partie7">
+            <h3>📗 7. La comparaison et la concession</h3>
+            <p>La <strong>comparaison</strong> rapproche deux éléments qui se ressemblent ou qui s'opposent. Elle peut prendre la forme d'une figure de style (cf. Leçon 1) ou d'une relation logique à part entière.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">7.1. Schéma logique</h3>
+            <div class="example-box">
+                <h4>💡 Structure</h4>
+                <p><strong>[Élément 1]</strong> <em>comme / ainsi que / tel que / plus… que / moins… que…</em> <strong>[Élément 2]</strong></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">7.2. Les connecteurs de comparaison</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Construction</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>comme</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Il est fort <strong>comme</strong> un lion. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>ainsi que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Il chante, <strong>ainsi que</strong> son frère. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>tel que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Un homme <strong>tel que</strong> lui mérite le respect. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>plus… que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Il est <strong>plus</strong> grand <strong>que</strong> moi. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>moins… que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Il est <strong>moins</strong> grand <strong>que</strong> moi. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>aussi… que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Il est <strong>aussi</strong> grand <strong>que</strong> moi. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>autant… que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« Il travaille <strong>autant</strong> <strong>que</strong> son frère. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de même que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« <strong>De même que</strong> le père, le fils travaille. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>comme si</strong></td>
+                    <td>+ imparfait</td>
+                    <td><em>« Il parle <strong>comme s'</strong>il savait tout. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>selon que</strong></td>
+                    <td>+ indicatif</td>
+                    <td><em>« <strong>Selon que</strong> tu viens ou non, je partirai. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">7.3. Exemples détaillés</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemple 1 — Comparaison directe</h4>
+                <p><em>« Il est courageux <strong>comme</strong> un lion. »</em></p>
+                <p>→ Comparaison avec un outil (<em>comme</em>).</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 2 — Comparaison de supériorité</h4>
+                <p><em>« Il est <strong>plus</strong> intelligent <strong>que</strong> son frère. »</em></p>
+                <p>→ Comparaison avec <em>plus… que</em>.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exemple 3 — Comparaison hypothétique</h4>
+                <p><em>« Il agit <strong>comme s'</strong>il était le chef. »</em></p>
+                <p>→ <em>comme si</em> + imparfait = comparaison avec une hypothèse.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">7.4. La comparaison dans la production écrite</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✍️</span>
+                    <p>La comparaison <strong>structure l'argumentation</strong> en rapprochant des situations.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p>Elle <strong>crée des images</strong> qui rendent le texte plus vivant.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🧠</span>
+                    <p>Elle <strong>aide à faire comprendre</strong> une idée abstraite par analogie.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 8 -->
+        <div class="fr-content" id="partie8">
+            <h3>📙 8. Le temps et les autres relations</h3>
+            <p>Outre les relations principales vues précédemment, le texte logique s'enrichit de <strong>relations temporelles</strong>, <strong>additives</strong>, <strong>explicatives</strong> et <strong>concluantes</strong>. Cette partie fait le tour de ces connecteurs complémentaires.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:18px;">8.1. Les connecteurs de temps</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Relation</th>
+                    <th>Connecteurs</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>Antériorité</strong></td>
+                    <td>avant que, d'abord, premièrement, auparavant…</td>
+                    <td><em>« <strong>Avant qu'</strong>il ne parte, je l'ai vu. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Simultanéité</strong></td>
+                    <td>pendant que, tandis que, lorsque, quand, au moment où…</td>
+                    <td><em>« <strong>Pendant qu'</strong>il parle, j'écoute. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Postériorité</strong></td>
+                    <td>après que, ensuite, puis, enfin, une fois que…</td>
+                    <td><em>« <strong>Après qu'</strong>il soit parti, j'ai pleuré. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Fréquence</strong></td>
+                    <td>chaque fois que, quand, lorsque, souvent, parfois…</td>
+                    <td><em>« <strong>Chaque fois qu'</strong>il vient, je suis content. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Durée</strong></td>
+                    <td>depuis que, pendant que, tant que, aussi longtemps que…</td>
+                    <td><em>« <strong>Depuis qu'</strong>il est parti, je suis triste. »</em></td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <h4>⚠️ Subtilité au Bac</h4>
+                <p><strong>Avant que</strong> → subjonctif (<em>« Avant qu'il <strong>parte</strong>. »</em>)</p>
+                <p><strong>Après que</strong> → indicatif (<em>« Après qu'il <strong>est parti</strong>. »</em>) — l'usage classique ignore la nouvelle règle du subjonctif.</p>
+                <p><strong>Pendant que</strong> → indicatif (<em>« Pendant qu'il <strong>parle</strong>. »</em>)</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">8.2. Les connecteurs d'addition</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Connecteur</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td><strong>et</strong></td>
+                    <td><em>« Il lit <strong>et</strong> écrit. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de plus</strong></td>
+                    <td><em>« Il lit ; <strong>de plus</strong>, il écrit. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>en outre</strong></td>
+                    <td><em>« <strong>En outre</strong>, il écrit. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>par ailleurs</strong></td>
+                    <td><em>« <strong>Par ailleurs</strong>, il écrit. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>de surcroît</strong></td>
+                    <td><em>« Il lit, <strong>de surcroît</strong> il écrit. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>aussi</strong></td>
+                    <td><em>« Il lit ; <strong>aussi</strong> écrit-il. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>également</strong></td>
+                    <td><em>« Il lit <strong>également</strong>. »</em></td>
+                </tr>
+                <tr>
+                    <td><strong>et puis</strong></td>
+                    <td><em>« Il lit, <strong>et puis</strong> il écrit. »</em></td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">8.3. Les connecteurs d'explication</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>• <em>« Il pleut ; <strong>en effet</strong>, le ciel est couvert. »</em></p>
+                <p>• <em>« Il pleut, <strong>c'est-à-dire</strong> que la sortie est annulée. »</em></p>
+                <p>• <em>« Il pleut ; <strong>autrement dit</strong>, nous restons. »</em></p>
+                <p>• <em>« Il pleut, <strong>à savoir</strong> qu'il faut un parapluie. »</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">8.4. Les connecteurs de conclusion</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>• <em>« <strong>En conclusion</strong>, la lecture est essentielle. »</em></p>
+                <p>• <em>« <strong>Pour conclure</strong>, l'éducation est un droit. »</em></p>
+                <p>• <em>« <strong>En somme</strong>, il faut agir. »</em></p>
+                <p>• <em>« <strong>En définitive</strong>, l'homme est perfectible. »</em></p>
+                <p>• <em>« <strong>Bref</strong>, il faut changer. »</em></p>
+                <p>• <em>« <strong>Finalement</strong>, nous l'avons fait. »</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">8.5. Les connecteurs de choix / alternative</h3>
+
+            <div class="example-box">
+                <h4>💡 Exemples</h4>
+                <p>• <em>« Tu viens <strong>ou</strong> tu restes ? »</em></p>
+                <p>• <em>« <strong>Soit</strong> tu viens, <strong>soit</strong> tu restes. »</em></p>
+                <p>• <em>« <strong>Ou bien</strong> tu viens, <strong>ou bien</strong> tu restes. »</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">8.6. Tableau récapitulatif général</h3>
+
+            <table class="tech-table">
+                <tr>
+                    <th>Relation</th>
+                    <th>Connecteurs principaux</th>
+                </tr>
+                <tr>
+                    <td><strong>Cause</strong></td>
+                    <td>parce que, car, puisque, comme, étant donné que, vu que, à cause de, grâce à</td>
+                </tr>
+                <tr>
+                    <td><strong>Conséquence</strong></td>
+                    <td>donc, alors, par conséquent, c'est pourquoi, si bien que, tellement… que</td>
+                </tr>
+                <tr>
+                    <td><strong>But</strong></td>
+                    <td>pour, afin de, pour que, afin que, de peur de, de crainte de</td>
+                </tr>
+                <tr>
+                    <td><strong>Hypothèse / Condition</strong></td>
+                    <td>si, à condition que, au cas où, pourvu que, à moins que, en admettant que</td>
+                </tr>
+                <tr>
+                    <td><strong>Opposition</strong></td>
+                    <td>mais, cependant, pourtant, toutefois, néanmoins, or, en revanche, tandis que</td>
+                </tr>
+                <tr>
+                    <td><strong>Concession</strong></td>
+                    <td>bien que, quoique, même si, malgré, en dépit de, quand bien même</td>
+                </tr>
+                <tr>
+                    <td><strong>Comparaison</strong></td>
+                    <td>comme, ainsi que, tel que, plus… que, moins… que, comme si</td>
+                </tr>
+                <tr>
+                    <td><strong>Temps</strong></td>
+                    <td>avant que, après que, pendant que, lorsque, dès que, depuis que</td>
+                </tr>
+                <tr>
+                    <td><strong>Addition</strong></td>
+                    <td>et, de plus, en outre, par ailleurs, de surcroît, également</td>
+                </tr>
+                <tr>
+                    <td><strong>Conclusion</strong></td>
+                    <td>en conclusion, pour conclure, en définitive, en somme, bref</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">8.7. Méthode d'utilisation dans la production écrite</h3>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">1️⃣</span>
+                    <p><strong>Varier les connecteurs</strong> — éviter de répéter <em>parce que, parce que, parce que</em>.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">2️⃣</span>
+                    <p><strong>Adapter au registre</strong> — registre courant : <em>parce que, mais, donc</em> ; registre soutenu : <em>car, cependant, par conséquent</em>.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">3️⃣</span>
+                    <p><strong>Vérifier le mode verbal</strong> — subjonctif après <em>bien que, pour que, avant que, à condition que…</em></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">4️⃣</span>
+                    <p><strong>Utiliser en début de paragraphe</strong> pour assurer la transition entre les parties.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">5️⃣</span>
+                    <p><strong>Ne pas en abuser</strong> — 2 ou 3 connecteurs bien placés valent mieux qu'une phrase sursaturée.</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">8.8. Exemple complet d'utilisation des connecteurs</h3>
+
+            <div class="example-box">
+                <h4>💡 Paragraphe argumentatif utilisant plusieurs relations logiques</h4>
+                <p><em>« <strong>Bien que</strong> les voyages soient souvent coûteux, <strong>ils restent</strong> une école indispensable <strong>parce qu'</strong>ils ouvrent l'esprit. <strong>En effet</strong>, ils confrontent le voyageur à d'autres cultures ; <strong>par conséquent</strong>, ils favorisent la tolérance. <strong>De plus</strong>, ils développent l'autonomie : <strong>si</strong> l'on voyage seul, on apprend à se débrouiller. <strong>C'est pourquoi</strong> les voyages devraient être encouragés <strong>afin que</strong> chacun puisse découvrir le monde <strong>et</strong> se découvrir soi-même. <strong>En définitive</strong>, voyager n'est pas un luxe, <strong>mais</strong> une nécessité. »</em></p>
+                <p><strong>Connecteurs utilisés :</strong></p>
+                <p>• <strong>bien que</strong> = concession</p>
+                <p>• <strong>parce que</strong> = cause</p>
+                <p>• <strong>en effet</strong> = explication</p>
+                <p>• <strong>par conséquent</strong> = conséquence</p>
+                <p>• <strong>de plus</strong> = addition</p>
+                <p>• <strong>si</strong> = hypothèse</p>
+                <p>• <strong>c'est pourquoi</strong> = conséquence</p>
+                <p>• <strong>afin que</strong> = but</p>
+                <p>• <strong>et</strong> = addition</p>
+                <p>• <strong>en définitive</strong> = conclusion</p>
+                <p>• <strong>mais</strong> = opposition</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Erreurs fréquentes au Bac tunisien</h4>
+                <p>1. <strong>Confondre cause et conséquence</strong> — toujours identifier qui entraîne quoi.</p>
+                <p>2. <strong>Oublier le mode verbal</strong> après <em>pour que, bien que, avant que</em> = subjonctif obligatoire.</p>
+                <p>3. <strong>Employer <em>si + futur</em></strong> — toujours <em>si + présent</em> ou <em>si + imparfait</em>.</p>
+                <p>4. <strong>Répéter le même connecteur</strong> — varier les marqueurs logiques.</p>
+                <p>5. <strong>Confondre <em>bien que</em> et <em>bien sûr</em></strong> — deux expressions très différentes.</p>
+                <p>6. <strong>Confondre <em>parce que</em> et <em>par ce que</em></strong> — toujours deux mots pour la cause.</p>
+                <p>7. <strong>Employer <em>malgré</em> au lieu de <em>bien que</em></strong> — <em>malgré</em> + nom, <em>bien que</em> + subjonctif.</p>
+            </div>
+
+            <div class="citation">
+                « Un texte sans connecteurs logiques est un texte sans squelette. Maîtriser les connecteurs, c'est construire un texte solide, fluide et convaincant — exactement ce qu'attend le correcteur du Bac tunisien. »
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ IMAGE -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/7C3AED/FFFFFF?text=Connecteurs+Logiques+et+Subordonnees+Bac+Tunisien" alt="Résumé connecteurs logiques">
+                <div class="resume-overlay">
+                    <h3>Les connecteurs logiques en 8 parties</h3>
+                    <p>Cause, conséquence, but, hypothèse, opposition, concession, comparaison, temps</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
+            <div class="video-container">
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- BOUTON LEÇON SUIVANTE -->
+        <a href="francais.html" class="next-lesson">
+            <div>
+                <p class="next-lesson-text">Retour au sommaire</p>
+                <p class="next-lesson-title">Toutes les leçons Français →</p>
+            </div>
+            <span class="next-lesson-arrow">→</span>
+        </a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>
