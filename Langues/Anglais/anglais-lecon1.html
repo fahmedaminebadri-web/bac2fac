@@ -1,396 +1,2080 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leçon 1 : The Basics of English - English</title>
+    <title>Lesson 1: Complete English Grammar - From Bac-2-Fac</title>
     <link rel="stylesheet" href="../../Shared/style.css">
     <style>
-        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
-        .en-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-        .en-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
-        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; }
-        .code-box .code-title { font-size: 0.85rem; color: #888; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
+        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 32px; margin-bottom: 32px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .en-content h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .en-content h4 { color: var(--accent); font-size: 1.05rem; margin: 24px 0 12px; }
+        .en-content p { margin-bottom: 14px; line-height: 1.85; color: var(--text-dark); }
+        .en-content ul, .en-content ol { margin: 12px 0 16px 24px; }
+        .en-content li { margin-bottom: 8px; line-height: 1.7; color: var(--text-dark); }
+        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 20px 26px; margin: 18px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; line-height: 1.7; }
+        .code-box .code-title { font-size: 0.88rem; color: #888; margin-bottom: 10px; font-family: 'Segoe UI', sans-serif; }
         .code-box .keyword { color: #569CD6; }
         .code-box .function { color: #DCDCAA; }
         .code-box .comment { color: #6A9955; }
         .code-box .string { color: #CE9178; }
         .code-box .phrase-en { color: #4FC1FF; font-weight: 600; }
         .code-box .phrase-fr { color: #B5CEA8; }
-        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
-        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
-        .example-box p { margin-bottom: 6px; color: #14532d; }
-        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
-        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
-        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
-        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
-        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
-        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
-        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #C5CAE9; }
-        .toc h3 { color: #3F51B5; margin-bottom: 14px; font-size: 1.05rem; }
-        .toc ol { padding-left: 22px; }
-        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 20px 26px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 18px 0; }
+        .example-box h4 { color: #166534; font-size: 1rem; margin-bottom: 10px; }
+        .example-box p { margin-bottom: 8px; color: #14532d; }
+        .example-box ul { margin: 8px 0 8px 20px; }
+        .example-box li { margin-bottom: 6px; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 20px 26px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 18px 0; }
+        .warning-box h4 { color: #B45309; font-size: 1rem; margin-bottom: 10px; }
+        .warning-box p { margin-bottom: 8px; color: #92400e; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 18px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 14px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.4rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.9rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 32px; border: 1px solid #C5CAE9; }
+        .toc h3 { color: #3F51B5; margin-bottom: 16px; font-size: 1.1rem; }
+        .toc ol { padding-left: 24px; }
+        .toc li { margin-bottom: 10px; color: var(--text-dark); font-size: 0.95rem; }
         .toc li a { color: var(--primary); font-weight: 500; }
-        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #90CAF9; }
-        .plan-box h3 { color: #1565C0; margin-bottom: 14px; font-size: 1.05rem; }
-        .plan-box p { color: var(--text-dark); line-height: 1.7; }
-        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-        .vocab-table th { background: #673AB7; color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
-        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 32px; border: 1px solid #90CAF9; }
+        .plan-box h3 { color: #1565C0; margin-bottom: 16px; font-size: 1.1rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.8; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .vocab-table th { background: #673AB7; color: white; padding: 14px; text-align: left; border-radius: 10px 10px 0 0; font-size: 0.95rem; }
+        .vocab-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); font-size: 0.92rem; }
         .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
         .vocab-table .en-word { color: #673AB7; font-weight: 600; }
         .vocab-table .fr-word { color: var(--text-dark); }
+        .tense-box { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: var(--radius-lg); padding: 20px; margin: 18px 0; border: 2px solid #FFB74D; }
+        .tense-box h4 { color: #E65100; margin-bottom: 12px; }
+        .tense-box p { margin-bottom: 8px; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .comparison-table th { background: #1565C0; color: white; padding: 14px; text-align: left; border-radius: 10px 10px 0 0; }
+        .comparison-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
     </style>
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
         <div class="header-content">
-            <a href="../../index.html" class="logo">
+       <a href="../../index.html" class="logo">
                 <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
             <nav class="nav-links">
-                <a href="../../index.html">Accueil</a>
+                <a href="../../index.html">Home</a>
                 <a href="../../Mathematiques/math.html">Math</a>
-                <a href="../../Physique/physique.html">Physique</a>
-                <a href="../../Electrique/electrique.html">Électrique</a>
-                <a href="../../Mecanique/mecanique.html">Mécanique</a>
-                <a href="../Francais/francais.html">Français</a>
-                <a href="anglais.html">Anglais</a>
-                <a href="../Arabe/arabe.html">Arabe</a>
-                <a href="../../Informatique/informatique.html">Info</a>
-                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+                <a href="../../Physique/physique.html">Physics</a>
+                <a href="../../Electrique/electrique.html">Electricity</a>
+                <a href="../../Mecanique/mecanique.html">Mechanics</a>
+                <a href="../Francais/francais.html">French</a>
+                <a href="anglais.html">English</a>
+                <a href="../Arabe/arabe.html">Arabic</a>
+                <a href="../../Informatique/informatique.html">IT</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philosophy</a>
             </nav>
         </div>
     </header>
 
-    <!-- CONTENU PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <main class="container">
-        <a href="anglais.html" class="back-btn">← Retour aux leçons d'Anglais</a>
+        <a href="anglais.html" class="back-btn">← Back to English Lessons</a>
 
-        <!-- HEADER LEÇON -->
+        <!-- LESSON HEADER -->
         <div class="lesson-header">
-            <h1>Leçon 1 : The Basics of English</h1>
-            <p class="breadcrumb">Anglais > Leçon 1</p>
+            <h1>Lesson 1: Complete English Grammar</h1>
+            <p class="breadcrumb">English > Lesson 1</p>
         </div>
 
-        <!-- RÉSUMÉ -->
+        <!-- SUMMARY -->
         <div class="plan-box">
-            <h3>📝 Résumé de la leçon</h3>
-            <p>Cette première leçon présente les <strong>bases fondamentales de l'anglais</strong> : les salutations, les présentations, les pronoms personnels, le verbe "to be" et le vocabulaire essentiel du quotidien. L'objectif est de permettre à l'apprenant de se présenter et de tenir une conversation simple en anglais.</p>
+            <h3>📝 Lesson Summary</h3>
+            <p>This comprehensive lesson covers all the <strong>essential grammatical structures</strong> required for the BAC Tunisia English exam. You will master the present tenses, past tenses, future forms, modal verbs, passive voice, conditional sentences, and linking words. A thorough understanding of these topics is crucial for achieving excellence in both written and oral examinations.</p>
         </div>
 
-        <!-- PLAN -->
+        <!-- TABLE OF CONTENTS -->
         <div class="toc">
-            <h3>📋 Plan de la leçon</h3>
+            <h3>📋 Table of Contents</h3>
             <ol>
-                <li><a href="#partie1">Salutations et formules de politesse</a></li>
-                <li><a href="#partie2">Les pronoms personnels et le verbe "to be"</a></li>
-                <li><a href="#partie3">Se présenter et présenter quelqu'un</a></li>
-                <li><a href="#partie4">Les nombres et les jours de la semaine</a></li>
-                <li><a href="#partie5">Le vocabulaire fondamental</a></li>
-                <li><a href="#partie6">Exercices pratiques</a></li>
+                <li><a href="#partie1">Present Tenses (Simple, Continuous, Perfect)</a></li>
+                <li><a href="#partie2">Past Tenses (Simple, Continuous, Perfect, Perfect Continuous)</a></li>
+                <li><a href="#partie3">Future Tenses and Forms (Will, Going to, Present Continuous)</a></li>
+                <li><a href="#partie4">Modal Verbs (Can, Could, May, Might, Must, Should, Would)</a></li>
+                <li><a href="#partie5">Passive Voice (All Tenses)</a></li>
+                <li><a href="#partie6">Conditional Sentences (Zero to Third Conditional)</a></li>
+                <li><a href="#partie7">Linking Words and Connectors</a></li>
+                <li><a href="#partie8">Reported Speech</a></li>
+                <li><a href="#partie9">Relative Clauses</a></li>
+                <li><a href="#partie10">Common Mistakes and Practice Exercises</a></li>
             </ol>
         </div>
 
-        <!-- SECTION PODCAST -->
-        <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
-            <div class="audio-player">
-                <iframe src=""
-                        width="600" height="120" frameborder="0" allow="autoplay">
-                </iframe>
-            </div>
-        </section>
-
-        <!-- PARTIE 1 -->
+        <!-- PART 1: PRESENT TENSES -->
         <div class="en-content" id="partie1">
-            <h3>📘 1. Salutations et formules de politesse</h3>
-            <p>Les <strong>salutations</strong> (Greetings) sont la première chose à maîtriser pour communiquer en anglais. Voici les expressions les plus courantes :</p>
-            <table class="vocab-table">
+            <h3>📘 1. Present Tenses</h3>
+            <p>English has three main present tenses, each serving a different purpose. Understanding when to use each one is fundamental to communicating effectively in English.</p>
+
+            <h4>📌 1.1 Present Simple</h4>
+            <p>The Present Simple is used to describe habits, general truths, permanent states, and scheduled events. It is one of the most frequently used tenses in English.</p>
+            
+            <h4>Formation</h4>
+            <div class="code-box">
+                <div class="code-title">// Present Simple - Affirmative Form</div>
+                <span class="comment">// Subject + Base Verb (+ s/es for 3rd person singular)</span>
+                <br>I <span class="function">work</span>.         → <span class="keyword">I work.</span>        <span class="phrase-fr">— General habit</span>
+                <br>You <span class="function">work</span>.        → <span class="keyword">You work.</span>       <span class="phrase-fr">— General habit</span>
+                <br>He/She/It <span class="function">work</span>s.   → <span class="keyword">He/She works.</span>   <span class="phrase-fr">— 3rd person singular adds -s or -es</span>
+                <br>We/They <span class="function">work</span>.      → <span class="keyword">We/They work.</span>  <span class="phrase-fr">— General habit</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Spelling Rules for 3rd Person Singular</div>
+                <span class="comment">// Most verbs: add -s</span>
+                work → works | play → plays | read → reads
+                <br><br><span class="comment">// Verbs ending in s, x, z, ch, sh, o: add -es</span>
+                pass → passes | watch → watches | go → goes | teach → teaches
+                <br><br><span class="comment">// Verbs ending in consonant + y: change y to ies</span>
+                study → studies | fly → flies | try → tries
+                <br><br><span class="comment">// Exceptions: have → has</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Present Simple - Negative Form</div>
+                <span class="comment">// Subject + do not (don't) / does not (doesn't) + base verb</span>
+                <br>I <span class="function">do not (don't) work</span>.      <span class="phrase-fr">— I don't work here.</span>
+                <br>You <span class="function">do not (don't) work</span>.    <span class="phrase-fr">— You don't need this.</span>
+                <br>He/She <span class="function">does not (doesn't) work</span>. <span class="phrase-fr">— She doesn't understand.</span>
+                <br>We/They <span class="function">do not (don't) work</span>.   <span class="phrase-fr">— They don't agree.</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Present Simple - Interrogative Form</div>
+                <span class="comment">// Do/Does + Subject + Base Verb + ?</span>
+                <br><span class="function">Do</span> you <span class="function">work</span>?           <span class="phrase-fr">— Do you work here?</span>
+                <br><span class="function">Does</span> she <span class="function">work</span>?         <span class="phrase-fr">— Does she live in Tunis?</span>
+                <br><span class="function">Do</span> they <span class="function">speak</span> English? <span class="phrase-fr">— Do they speak English?</span>
+                <br><br><span class="comment">// Short Answers</span>
+                <span class="keyword">Yes,</span> I do. / <span class="keyword">No,</span> I don't.
+                <br><span class="keyword">Yes,</span> she does. / <span class="keyword">No,</span> she doesn't.
+            </div>
+
+            <h4>Use Cases</h4>
+            <div class="tense-box">
+                <h4>📌 When to Use Present Simple</h4>
+                <p><strong>1. Habits and Routines:</strong> "I <strong>drink</strong> coffee every morning." (daily action)</p>
+                <p><strong>2. General Truths:</strong> "Water <strong>boils</strong> at 100°C." (scientific fact)</p>
+                <p><strong>3. Permanent States:</strong> "She <strong>lives</strong> in Paris." (permanent situation)</p>
+                <p><strong>4. Scheduled Events:</strong> "The train <strong>departs</strong> at 8 PM." (timetables)</p>
+                <p><strong>5. Instructions:</strong> "You <strong>turn</strong> left, then right." (directions)</p>
+                <p><strong>6. Commentary:</strong> "He <strong>takes</strong> the ball and <strong>kicks</strong> it!" (sports)</p>
+            </div>
+
+            <h4>Adverbs of Frequency</h4>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>always</strong> (100%) — He always arrives on time.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>usually</strong> (80-90%) — I usually wake up early.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>often/frequently</strong> (60-70%) — She often goes to the gym.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>sometimes</strong> (30-50%) — I sometimes eat pizza.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>rarely/seldom</strong> (10-20%) — He rarely watches TV.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>never</strong> (0%) — I never smoke.</p>
+                </div>
+            </div>
+
+            <h4>📌 1.2 Present Continuous</h4>
+            <p>The Present Continuous (also called Present Progressive) describes actions happening at the moment of speaking or around the current time period.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Present Continuous - Formation</div>
+                <span class="comment">// Subject + am/is/are + Verb-ing</span>
+                <br>I <span class="function">am (I'm)</span> reading.      → <span class="keyword">I'm reading.</span>     <span class="phrase-fr">— happening now</span>
+                <br>He/She <span class="function">is (He's/She's)</span> working. → <span class="keyword">She's working.</span>  <span class="phrase-fr">— happening now</span>
+                <br>We/They <span class="function">are (We're/They're)</span> playing. → <span class="keyword">They're playing.</span> <span class="phrase-fr">— happening now</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Present Continuous - All Forms</div>
+                <span class="comment">// Negative: am/is/are + not + verb-ing</span>
+                I <span class="function">am not (I'm not)</span> reading.    <span class="phrase-fr">— I'm not reading.</span>
+                He <span class="function">is not (isn't)</span> listening.   <span class="phrase-fr">— He isn't listening.</span>
+                <br><br><span class="comment">// Interrogative: Am/Is/Are + subject + verb-ing ?</span>
+                <span class="function">Are</span> you <span class="function">listening</span>?          <span class="phrase-fr">— Are you listening?</span>
+                <span class="function">Is</span> she <span class="function">cooking</span>?             <span class="phrase-fr">— Is she cooking?</span>
+                <span class="function">What</span> are you <span class="function">doing</span>?          <span class="phrase-fr">— What are you doing?</span>
+            </div>
+
+            <h4>Spelling Rules for -ing</h4>
+            <div class="code-box">
+                <div class="code-title">// How to Add -ing to Verbs</div>
+                <span class="comment">// Most verbs: simply add -ing</span>
+                work → working | play → playing | read → reading
+                <br><br><span class="comment">// Verbs ending in -e: drop -e, add -ing</span>
+                make → making | write → writing | take → taking | drive → driving
+                <br><br><span class="comment">// Verbs ending in consonant + vowel + consonant: double final consonant</span>
+                run → running | sit → sitting | stop → stopping | get → getting
+                <br><br><span class="comment">// Exception: don't double w, x, y</span>
+                show → showing | fix → fixing | say → saying
+            </div>
+
+            <div class="tense-box">
+                <h4>📌 Present Simple vs Present Continuous</h4>
+                <p><strong>Present Simple:</strong> I <strong>work</strong> at a bank. → Habit or permanent job</p>
+                <p><strong>Present Continuous:</strong> I <strong>am working</strong> right now. → Action in progress</p>
+                <br>
+                <p><strong>Present Simple:</strong> She <strong>lives</strong> in Tunis. → Permanent residence</p>
+                <p><strong>Present Continuous:</strong> She <strong>is staying</strong> at a hotel. → Temporary situation</p>
+                <br>
+                <p><strong>Present Simple:</strong> I <strong>drink</strong> coffee every day. → Habit</p>
+                <p><strong>Present Continuous:</strong> I <strong>am drinking</strong> coffee now. → In progress</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Important: Stative Verbs</h4>
+                <p>Some verbs describe states (not actions) and are <strong>NOT used in continuous tenses</strong>:</p>
+                <p><strong>Emotions:</strong> love, like, hate, prefer, dislike, want, wish, desire</p>
+                <p><strong>Mental states:</strong> know, believe, understand, remember, forget, think, realize</p>
+                <p><strong>Senses:</strong> see, hear, smell, taste, feel (when describing perception)</p>
+                <p><strong>Possession:</strong> have, own, possess, belong</p>
+                <p><strong>Others:</strong> be, seem, appear, contain, consist, depend, matter</p>
+                <br>
+                <p>✓ I <strong>love</strong> music. &nbsp;&nbsp;&nbsp; ✗ I <strong>am loving</strong> music. (WRONG!)</p>
+                <p>✓ I <strong>see</strong> the problem. &nbsp;&nbsp; ✗ I <strong>am seeing</strong> the problem. (WRONG!)</p>
+            </div>
+
+            <h4>📌 1.3 Present Perfect</h4>
+            <p>The Present Perfect connects the past with the present. It describes actions or situations that occurred at an unspecified time before now, with relevance to the present moment.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Present Perfect - Formation</div>
+                <span class="comment">// Subject + have/has + Past Participle</span>
+                <br><span class="comment">// Regular verbs: verb + ed (same as Past Simple)</span>
+                I <span class="function">have (I've)</span> worked.      → <span class="keyword">I've worked</span> here.    <span class="phrase-fr">— experience</span>
+                <br><span class="comment">// Irregular verbs: must learn the past participle form</span>
+                She <span class="function">has (She's)</span> seen it.     → <span class="keyword">She's seen</span> the film. <span class="phrase-fr">— completed action</span>
+                <br><span class="function">They</span> have <span class="function">been</span> there.   → <span class="keyword">They've been</span> there. <span class="phrase-fr">— state until now</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Present Perfect - Negative and Interrogative</div>
+                <span class="comment">// Negative: have/has + not + past participle</span>
+                I <span class="function">haven't finished</span> yet.      <span class="phrase-fr">— I haven't finished yet.</span>
+                She <span class="function">hasn't called</span>.           <span class="phrase-fr">— She hasn't called.</span>
+                <br><br><span class="comment">// Interrogative: Have/Has + subject + past participle ?</span>
+                <span class="function">Have</span> you <span class="function">seen</span> it?          <span class="phrase-fr">— Have you seen it?</span>
+                <span class="function">Has</span> she <span class="function">arrived</span>?         <span class="phrase-fr">— Has she arrived?</span>
+                <span class="function">Where</span> have you <span class="function">been</span>?       <span class="phrase-fr">— Where have you been?</span>
+            </div>
+
+            <div class="tense-box">
+                <h4>📌 Time Markers for Present Perfect</h4>
+                <p><strong>already</strong> — already completed: "I've already eaten."</p>
+                <p><strong>yet</strong> — completion expected (neg/question): "Have you finished yet?" / "I haven't finished yet."</p>
+                <p><strong>just</strong> — very recently completed: "I've just arrived."</p>
+                <p><strong>ever</strong> — in someone's life (questions): "Have you ever been to London?"</p>
+                <p><strong>never</strong> — not in someone's life: "I've never eaten sushi."</p>
+                <p><strong>for</strong> — duration (period of time): "I've lived here <strong>for</strong> 5 years."</p>
+                <p><strong>since</strong> — starting point: "I've lived here <strong>since</strong> 2019."</p>
+            </div>
+
+            <h4>Key Differences: Present Perfect vs Past Simple</h4>
+            <table class="comparison-table">
                 <tr>
-                    <th>Anglais</th>
-                    <th>Français</th>
-                    <th>Contexte</th>
+                    <th>Present Perfect</th>
+                    <th>Past Simple</th>
                 </tr>
                 <tr>
-                    <td class="en-word">Hello!</td>
-                    <td class="fr-word">Bonjour !</td>
-                    <td>Formel / informel</td>
+                    <td>Unspecified time</td>
+                    <td>Specified time (yesterday, last week, in 2020)</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Hi!</td>
-                    <td class="fr-word">Salut !</td>
-                    <td>Informel</td>
+                    <td>Connected to present</td>
+                    <td>Finished past</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Good morning!</td>
-                    <td class="fr-word">Bonjour ! (matin)</td>
-                    <td>Avant midi</td>
+                    <td>Result important now</td>
+                    <td>Action important</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Good afternoon!</td>
-                    <td class="fr-word">Bon après-midi !</td>
-                    <td>Après midi</td>
+                    <td>"I've <strong>seen</strong> that movie." (experience)</td>
+                    <td>"I <strong>saw</strong> that movie <strong>last night</strong>." (specific time)</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Good evening!</td>
-                    <td class="fr-word">Bonsoir !</td>
-                    <td>En soirée</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Good night!</td>
-                    <td class="fr-word">Bonne nuit !</td>
-                    <td>Pour se séparer le soir</td>
+                    <td>"She has <strong>gone</strong> to Paris." (she's there now)</td>
+                    <td>"She <strong>went</strong> to Paris." (completed action)</td>
                 </tr>
             </table>
+
+            <h4>📌 1.4 Present Perfect Continuous</h4>
+            <p>Used to emphasize the duration of an action that started in the past and is still continuing or has just finished with visible results.</p>
+
             <div class="code-box">
-                <div class="code-title">// Réponses aux salutations</div>
-                <span class="phrase-en">"How are you?"</span> <span class="phrase-fr">— Comment allez-vous ?</span>
-                <br><span class="comment">→ I'm fine, thank you. / I'm OK. / Not bad!</span>
-
-                <br><br><span class="phrase-en">"Nice to meet you!"</span> <span class="phrase-fr">— Enchanté !</span>
-                <br><span class="comment">→ Nice to meet you too!</span>
-
-                <br><br><span class="phrase-en">"How do you do?"</span> <span class="phrase-fr">— Comment allez-vous ? (très formel)</span>
-                <br><span class="comment">→ How do you do? (réponse traditionnelle)</span>
+                <div class="code-title">// Present Perfect Continuous</div>
+                <span class="comment">// Subject + have/has + been + verb-ing</span>
+                <br>I <span class="function">have been working</span> for 3 hours.     <span class="phrase-fr">— duration of action</span>
+                <br>She <span class="function">has been studying</span> all day.        <span class="phrase-fr">— recently and duration</span>
+                <br><br><span class="comment">// Negative: haven't/hasn't + been + verb-ing</span>
+                I <span class="function">haven't been sleeping</span> well lately. <span class="phrase-fr">— recent problem</span>
+                <br><br><span class="comment">// Interrogative: Have/Has + subject + been + verb-ing ?</span>
+                <span class="function">Why</span> have you <span class="function">been crying</span>?           <span class="phrase-fr">— visible evidence</span>
             </div>
-            <div class="warning-box">
-                <h4>⚠️ Différence importante</h4>
-                <p><strong>Good night</strong> = pour dire au revoir le soir (jamais pour saluer le matin !)</p>
-                <p><strong>Good evening</strong> = pour saluer en soirée</p>
+
+            <div class="tense-box">
+                <h4>📌 Present Perfect vs Present Perfect Continuous</h4>
+                <p><strong>Present Perfect:</strong> I <strong>have worked</strong> here for 5 years. → Emphasizes the experience/duration</p>
+                <p><strong>Present Perfect Continuous:</strong> I <strong>have been working</strong> here for 5 years. → Emphasizes the ongoing nature</p>
+                <br>
+                <p><strong>Present Perfect:</strong> She <strong>has painted</strong> the room. → The room is now painted (result)</p>
+                <p><strong>Present Perfect Continuous:</strong> She <strong>has been painting</strong> the room. → She painted it (activity, might still be painting)</p>
             </div>
         </div>
 
-        <!-- PARTIE 2 -->
+        <!-- PART 2: PAST TENSES -->
         <div class="en-content" id="partie2">
-            <h3>📗 2. Les pronoms personnels et le verbe "to be"</h3>
-            <p>Le verbe <strong>to be</strong> (être) est le verbe le plus important en anglais. Il se conjugue différemment selon le pronom :</p>
-            <div class="code-box">
-                <div class="code-title">// Conjugaison du verbe TO BE</div>
-                <span class="comment">// Forme affirmative</span>
-                <span class="keyword">I</span> <span class="function">am</span>          → I'm            <span class="comment">// Je suis</span>
-                <span class="keyword">You</span> <span class="function">are</span>         → You're         <span class="comment">// Tu es / Vous êtes</span>
-                <span class="keyword">He</span> <span class="function">is</span>           → He's           <span class="comment">// Il est</span>
-                <span class="keyword">She</span> <span class="function">is</span>          → She's          <span class="comment">// Elle est</span>
-                <span class="keyword">It</span> <span class="function">is</span>           → It's           <span class="comment">// Il/Elle est (chose/animal)</span>
-                <span class="keyword">We</span> <span class="function">are</span>          → We're          <span class="comment">// Nous sommes</span>
-                <span class="keyword">They</span> <span class="function">are</span>         → They're        <span class="comment">// Ils/Elles sont</span>
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Forme négative</div>
-                <span class="comment">// On ajoute "not" après le verbe</span>
-                I <span class="function">am not</span>       → I'm not / I aren't (informel)
-                He <span class="function">is not</span>      → He isn't
-                They <span class="function">are not</span>    → They aren't
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Forme interrogative</div>
-                <span class="comment">// On inverse le sujet et le verbe</span>
-                <span class="function">Am</span> I...?
-                <span class="function">Is</span> he...?
-                <span class="function">Are</span> you...?
-                <span class="function">Are</span> they...?
-            </div>
-            <div class="example-box">
-                <h4>💡 Exemples</h4>
-                <p><strong>Affirmatif :</strong> I am a student. → I'm a student.</p>
-                <p><strong>Négatif :</strong> She is not French. → She isn't French.</p>
-                <p><strong>Question :</strong> Are you a teacher? — Yes, I am. / No, I'm not.</p>
-            </div>
-        </div>
+            <h3>📗 2. Past Tenses</h3>
+            <p>English has four past tenses, each describing different aspects of past time. Understanding when to use each tense is essential for describing events accurately.</p>
 
-        <!-- PARTIE 3 -->
-        <div class="en-content" id="partie3">
-            <h3>📙 3. Se présenter et présenter quelqu'un</h3>
-            <p>Voici les structures essentielles pour <strong>se présenter</strong> (Introduce yourself) et <strong>présenter quelqu'un</strong> (Introduce someone) :</p>
-            <div class="code-box">
-                <div class="code-title">// Se présenter</div>
-                <span class="phrase-en">"My name is Ahmed."</span> <span class="phrase-fr">— Je m'appelle Ahmed.</span>
-                <br><span class="phrase-en">"I'm 20 years old."</span> <span class="phrase-fr">— J'ai 20 ans.</span>
-                <br><span class="phrase-en">"I'm from Tunisia."</span> <span class="phrase-fr">— Je viens de Tunisie.</span>
-                <br><span class="phrase-en">"I'm a student."</span> <span class="phrase-fr">— Je suis étudiant.</span>
-                <br><span class="phrase-en">"I live in Tunis."</span> <span class="phrase-fr">— J'habite à Tunis.</span>
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Présenter quelqu'un</div>
-                <span class="phrase-en">"This is my friend, Sara."</span> <span class="phrase-fr">— Voici mon ami(e), Sara.</span>
-                <br><span class="phrase-en">"She is a doctor."</span> <span class="phrase-fr">— Elle est médecin.</span>
-                <br><span class="phrase-en">"Nice to meet you!"</span> <span class="phrase-fr">— Enchanté !</span>
-            </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Questions pour faire connaissance</h3>
-            <div class="code-box">
-                <div class="code-title">// Questions courantes</div>
-                <span class="phrase-en">"What is your name?"</span> <span class="phrase-fr">— Comment vous appelez-vous ?</span>
-                <br><span class="phrase-en">"Where are you from?"</span> <span class="phrase-fr">— D'où venez-vous ?</span>
-                <br><span class="phrase-en">"How old are you?"</span> <span class="phrase-fr">— Quel âge avez-vous ?</span>
-                <br><span class="phrase-en">"What do you do?"</span> <span class="phrase-fr">— Que faites-vous ? (profession)</span>
-                <br><span class="phrase-en">"Where do you live?"</span> <span class="phrase-fr">— Où habitez-vous ?</span>
-            </div>
-        </div>
+            <h4>📌 2.1 Past Simple</h4>
+            <p>The Past Simple describes completed actions or states that happened at a specific time in the past. It is the most commonly used past tense.</p>
 
-        <!-- PARTIE 4 -->
-        <div class="en-content" id="partie4">
-            <h3>📕 4. Les nombres et les jours de la semaine</h3>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Les nombres de 1 à 20</h3>
+            <div class="code-box">
+                <div class="code-title">// Past Simple - Affirmative Form</div>
+                <span class="comment">// Regular verbs: verb + ed</span>
+                work → worked | play → played | study → studied | finish → finished
+                <br><br><span class="comment">// Irregular verbs: must memorize (no pattern)</span>
+                go → went | see → saw | eat → ate | take → took | write → wrote
+                <br>have → had | be → was/were | do → did | speak → spoke | give → gave
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Spelling Rules for Regular Verbs</div>
+                <span class="comment">// Most verbs: add -ed</span>
+                work → worked | play → played | help → helped
+                <br><br><span class="comment">// Verbs ending in -e: add -d only</span>
+                love → loved | like → liked | create → created
+                <br><br><span class="comment">// Verbs ending in consonant + y: change y to ied</span>
+                study → studied | try → tried | cry → cried | marry → married
+                <br><br><span class="comment">// Short verbs (1 vowel + 1 consonant): double final consonant</span>
+                stop → stopped | plan → planned | prefer → preferred | occur → occurred
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Past Simple - All Forms</div>
+                <span class="comment">// Affirmative: Subject + verb (past)</span>
+                I <span class="function">worked</span>.       <span class="phrase-fr">— I worked yesterday.</span>
+                <br>She <span class="function">went</span> home. <span class="phrase-fr">— She went home.</span>
+                <br><br><span class="comment">// Negative: Subject + did not (didn't) + base verb</span>
+                I <span class="function">didn't work</span>.       <span class="phrase-fr">— I didn't work yesterday.</span>
+                She <span class="function">didn't see</span> him. <span class="phrase-fr">— She didn't see him.</span>
+                <br><br><span class="comment">// Interrogative: Did + subject + base verb ?</span>
+                <span class="function">Did</span> you <span class="function">work</span>?         <span class="phrase-fr">— Did you work?</span>
+                <span class="function">Did</span> she <span class="function">go</span> there?    <span class="phrase-fr">— Did she go there?</span>
+                <span class="function">When</span> did you <span class="function">arrive</span>? <span class="phrase-fr">— When did you arrive?</span>
+            </div>
+
+            <h4>Past Time Markers</h4>
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">1️⃣</span>
-                    <p>1 one, 2 two, 3 three, 4 four, 5 five, 6 six, 7 seven, 8 eight, 9 nine, 10 ten</p>
+                    <span class="icon">⏰</span>
+                    <p><strong>yesterday</strong> — yesterday, yesterday morning</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">1️⃣</span>
-                    <p>11 eleven, 12 twelve, 13 thirteen, 14 fourteen, 15 fifteen, 16 sixteen</p>
+                    <span class="icon">⏰</span>
+                    <p><strong>last</strong> — last week, last month, last year</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">1️⃣</span>
-                    <p>17 seventeen, 18 eighteen, 19 nineteen, 20 twenty</p>
-                </div>
-            </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Les dizaines</h3>
-            <div class="key-points">
-                <div class="key-point">
-                    <span class="icon">🔟</span>
-                    <p>20 twenty, 30 thirty, 40 forty, 50 fifty, 60 sixty</p>
+                    <span class="icon">⏰</span>
+                    <p><strong>ago</strong> — two days ago, three weeks ago</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">🔟</span>
-                    <p>70 seventy, 80 eighty, 90 ninety, 100 one hundred</p>
+                    <span class="icon">⏰</span>
+                    <p><strong>in + year</strong> — in 2020, in 1995</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⏰</span>
+                    <p><strong>when + past</strong> — when I was young</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⏰</span>
+                    <p><strong>once upon a time</strong> — fairy tale opening</p>
                 </div>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Les jours de la semaine</h3>
-            <div class="code-box">
-                <div class="code-title">// Days of the week</div>
-                <span class="keyword">Monday</span> (lundi) — <span class="keyword">Tuesday</span> (mardi) — <span class="keyword">Wednesday</span> (mercredi)
-                <br><span class="keyword">Thursday</span> (jeudi) — <span class="keyword">Friday</span> (vendredi) — <span class="keyword">Saturday</span> (samedi) — <span class="keyword">Sunday</span> (dimanche)
-            </div>
-            <div class="example-box">
-                <h4>💡 Exemples</h4>
-                <p>« I was born on <strong>Monday</strong>, June 15th. » — Je suis né lundi 15 juin.</p>
-                <p>« See you on <strong>Friday</strong>! » — À vendredi !</p>
-                <p>« Today is <strong>Saturday</strong>. » — Aujourd'hui c'est samedi.</p>
-            </div>
-        </div>
 
-        <!-- PARTIE 5 -->
-        <div class="en-content" id="partie5">
-            <h3>📒 5. Le vocabulaire fondamental</h3>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Expressions utiles du quotidien</h3>
+            <h4>Common Irregular Verbs Table</h4>
             <table class="vocab-table">
                 <tr>
-                    <th>Anglais</th>
-                    <th>Français</th>
+                    <th>Base Form</th>
+                    <th>Past Simple</th>
+                    <th>Past Participle</th>
+                    <th>Meaning</th>
                 </tr>
                 <tr>
-                    <td class="en-word">Please</td>
-                    <td class="fr-word">S'il vous plaît</td>
+                    <td class="en-word">be</td>
+                    <td>was/were</td>
+                    <td>been</td>
+                    <td>être</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Thank you / Thanks</td>
-                    <td class="fr-word">Merci</td>
+                    <td class="en-word">become</td>
+                    <td>became</td>
+                    <td>become</td>
+                    <td>devenir</td>
                 </tr>
                 <tr>
-                    <td class="en-word">You're welcome</td>
-                    <td class="fr-word">De rien</td>
+                    <td class="en-word">begin</td>
+                    <td>began</td>
+                    <td>begun</td>
+                    <td>commencer</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Excuse me</td>
-                    <td class="fr-word">Excusez-moi (pour attirer l'attention)</td>
+                    <td class="en-word">break</td>
+                    <td>broke</td>
+                    <td>broken</td>
+                    <td>casser</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Sorry / I'm sorry</td>
-                    <td class="fr-word">Désolé(e)</td>
+                    <td class="en-word">bring</td>
+                    <td>brought</td>
+                    <td>brought</td>
+                    <td>apporter</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Yes, please</td>
-                    <td class="fr-word">Oui, s'il vous plaît</td>
+                    <td class="en-word">build</td>
+                    <td>built</td>
+                    <td>built</td>
+                    <td>construire</td>
                 </tr>
                 <tr>
-                    <td class="en-word">No, thank you</td>
-                    <td class="fr-word">Non, merci</td>
+                    <td class="en-word">buy</td>
+                    <td>bought</td>
+                    <td>bought</td>
+                    <td>acheter</td>
                 </tr>
                 <tr>
-                    <td class="en-word">I don't understand</td>
-                    <td class="fr-word">Je ne comprends pas</td>
+                    <td class="en-word">catch</td>
+                    <td>caught</td>
+                    <td>caught</td>
+                    <td>attraper</td>
                 </tr>
                 <tr>
-                    <td class="en-word">Can you repeat?</td>
-                    <td class="fr-word">Pouvez-vous répéter ?</td>
+                    <td class="en-word">choose</td>
+                    <td>chose</td>
+                    <td>chosen</td>
+                    <td>choisir</td>
                 </tr>
                 <tr>
-                    <td class="en-word">I speak a little English</td>
-                    <td class="fr-word">Je parle un peu anglais</td>
+                    <td class="en-word">come</td>
+                    <td>came</td>
+                    <td>come</td>
+                    <td>venir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">do</td>
+                    <td>did</td>
+                    <td>done</td>
+                    <td>faire</td>
+                </tr>
+                <tr>
+                    <td class="en-word">drink</td>
+                    <td>drank</td>
+                    <td>drunk</td>
+                    <td>boire</td>
+                </tr>
+                <tr>
+                    <td class="en-word">drive</td>
+                    <td>drove</td>
+                    <td>driven</td>
+                    <td>conduire</td>
+                </tr>
+                <tr>
+                    <td class="en-word">eat</td>
+                    <td>ate</td>
+                    <td>eaten</td>
+                    <td>manger</td>
+                </tr>
+                <tr>
+                    <td class="en-word">fall</td>
+                    <td>fell</td>
+                    <td>fallen</td>
+                    <td>tomber</td>
+                </tr>
+                <tr>
+                    <td class="en-word">feel</td>
+                    <td>felt</td>
+                    <td>felt</td>
+                    <td>ressentir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">find</td>
+                    <td>found</td>
+                    <td>found</td>
+                    <td>trouver</td>
+                </tr>
+                <tr>
+                    <td class="en-word">fly</td>
+                    <td>flew</td>
+                    <td>flown</td>
+                    <td>voler</td>
+                </tr>
+                <tr>
+                    <td class="en-word">forget</td>
+                    <td>forgot</td>
+                    <td>forgotten</td>
+                    <td>oublier</td>
+                </tr>
+                <tr>
+                    <td class="en-word">get</td>
+                    <td>got</td>
+                    <td>gotten/got</td>
+                    <td>obtenir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">give</td>
+                    <td>gave</td>
+                    <td>given</td>
+                    <td>donner</td>
+                </tr>
+                <tr>
+                    <td class="en-word">go</td>
+                    <td>went</td>
+                    <td>gone</td>
+                    <td>aller</td>
+                </tr>
+                <tr>
+                    <td class="en-word">grow</td>
+                    <td>grew</td>
+                    <td>grown</td>
+                    <td>grandir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">have</td>
+                    <td>had</td>
+                    <td>had</td>
+                    <td>avoir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">hear</td>
+                    <td>heard</td>
+                    <td>heard</td>
+                    <td>entendre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">know</td>
+                    <td>knew</td>
+                    <td>known</td>
+                    <td>savoir/connaître</td>
+                </tr>
+                <tr>
+                    <td class="en-word">lead</td>
+                    <td>led</td>
+                    <td>led</td>
+                    <td>mener</td>
+                </tr>
+                <tr>
+                    <td class="en-word">leave</td>
+                    <td>left</td>
+                    <td>left</td>
+                    <td>quitter</td>
+                </tr>
+                <tr>
+                    <td class="en-word">let</td>
+                    <td>let</td>
+                    <td>let</td>
+                    <td>permettre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">lie</td>
+                    <td>lay</td>
+                    <td>lain</td>
+                    <td>s'allonger</td>
                 </tr>
             </table>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>Base Form</th>
+                    <th>Past Simple</th>
+                    <th>Past Participle</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td class="en-word">lose</td>
+                    <td>lost</td>
+                    <td>lost</td>
+                    <td>perdre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">make</td>
+                    <td>made</td>
+                    <td>made</td>
+                    <td>faire/fabriquer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">meet</td>
+                    <td>met</td>
+                    <td>met</td>
+                    <td>rencontrer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">pay</td>
+                    <td>paid</td>
+                    <td>paid</td>
+                    <td>payer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">put</td>
+                    <td>put</td>
+                    <td>put</td>
+                    <td>mettre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">read</td>
+                    <td>read</td>
+                    <td>read</td>
+                    <td>lire</td>
+                </tr>
+                <tr>
+                    <td class="en-word">ride</td>
+                    <td>rode</td>
+                    <td>ridden</td>
+                    <td>chevaucher</td>
+                </tr>
+                <tr>
+                    <td class="en-word">ring</td>
+                    <td>rang</td>
+                    <td>rung</td>
+                    <td>sonner</td>
+                </tr>
+                <tr>
+                    <td class="en-word">rise</td>
+                    <td>rose</td>
+                    <td>risen</td>
+                    <td>se lever</td>
+                </tr>
+                <tr>
+                    <td class="en-word">run</td>
+                    <td>ran</td>
+                    <td>run</td>
+                    <td>courir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">say</td>
+                    <td>said</td>
+                    <td>said</td>
+                    <td>dire</td>
+                </tr>
+                <tr>
+                    <td class="en-word">see</td>
+                    <td>saw</td>
+                    <td>seen</td>
+                    <td>voir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">seek</td>
+                    <td>sought</td>
+                    <td>sought</td>
+                    <td>chercher</td>
+                </tr>
+                <tr>
+                    <td class="en-word">sell</td>
+                    <td>sold</td>
+                    <td>sold</td>
+                    <td>vendre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">send</td>
+                    <td>sent</td>
+                    <td>sent</td>
+                    <td>envoyer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">set</td>
+                    <td>set</td>
+                    <td>set</td>
+                    <td>fixer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">shake</td>
+                    <td>shook</td>
+                    <td>shaken</td>
+                    <td>secouer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">shine</td>
+                    <td>shone</td>
+                    <td>shone</td>
+                    <td>briller</td>
+                </tr>
+                <tr>
+                    <td class="en-word">shoot</td>
+                    <td>shot</td>
+                    <td>shot</td>
+                    <td>tirer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">show</td>
+                    <td>showed</td>
+                    <td>shown</td>
+                    <td>montrer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">sing</td>
+                    <td>sang</td>
+                    <td>sung</td>
+                    <td>chanter</td>
+                </tr>
+                <tr>
+                    <td class="en-word">sit</td>
+                    <td>sat</td>
+                    <td>sat</td>
+                    <td>s'asseoir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">sleep</td>
+                    <td>slept</td>
+                    <td>slept</td>
+                    <td>dormir</td>
+                </tr>
+                <tr>
+                    <td class="en-word">speak</td>
+                    <td>spoke</td>
+                    <td>spoken</td>
+                    <td>parler</td>
+                </tr>
+                <tr>
+                    <td class="en-word">spend</td>
+                    <td>spent</td>
+                    <td>spent</td>
+                    <td>dépenser</td>
+                </tr>
+                <tr>
+                    <td class="en-word">stand</td>
+                    <td>stood</td>
+                    <td>stood</td>
+                    <td>se lever</td>
+                </tr>
+                <tr>
+                    <td class="en-word">swim</td>
+                    <td>swam</td>
+                    <td>swum</td>
+                    <td>nager</td>
+                </tr>
+                <tr>
+                    <td class="en-word">take</td>
+                    <td>took</td>
+                    <td>taken</td>
+                    <td>prendre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">teach</td>
+                    <td>taught</td>
+                    <td>taught</td>
+                    <td>enseigner</td>
+                </tr>
+                <tr>
+                    <td class="en-word">tell</td>
+                    <td>told</td>
+                    <td>told</td>
+                    <td>raconter</td>
+                </tr>
+                <tr>
+                    <td class="en-word">think</td>
+                    <td>thought</td>
+                    <td>thought</td>
+                    <td>penser</td>
+                </tr>
+                <tr>
+                    <td class="en-word">throw</td>
+                    <td>threw</td>
+                    <td>thrown</td>
+                    <td>lancer</td>
+                </tr>
+                <tr>
+                    <td class="en-word">understand</td>
+                    <td>understood</td>
+                    <td>understood</td>
+                    <td>comprendre</td>
+                </tr>
+                <tr>
+                    <td class="en-word">wake</td>
+                    <td>woke</td>
+                    <td>woken</td>
+                    <td>réveiller</td>
+                </tr>
+                <tr>
+                    <td class="en-word">wear</td>
+                    <td>wore</td>
+                    <td>worn</td>
+                    <td>porter (vêtements)</td>
+                </tr>
+                <tr>
+                    <td class="en-word">win</td>
+                    <td>won</td>
+                    <td>won</td>
+                    <td>gagner</td>
+                </tr>
+                <tr>
+                    <td class="en-word">write</td>
+                    <td>wrote</td>
+                    <td>written</td>
+                    <td>écrire</td>
+                </tr>
+            </table>
+
+            <h4>📌 2.2 Past Continuous</h4>
+            <p>The Past Continuous describes actions that were in progress at a specific time in the past or that were interrupted by another action.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Past Continuous - Formation</div>
+                <span class="comment">// Subject + was/were + verb-ing</span>
+                <br>I/He/She/It <span class="function">was</span> working.    <span class="phrase-fr">— I was working.</span>
+                <br>You/We/They <span class="function">were</span> playing.  <span class="phrase-fr">— They were playing.</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Past Continuous - All Forms</div>
+                <span class="comment">// Affirmative</span>
+                I <span class="function">was reading</span> when he called.  <span class="phrase-fr">— Action in progress</span>
+                <br><br><span class="comment">// Negative: was/were + not + verb-ing</span>
+                I <span class="function">wasn't listening</span>.             <span class="phrase-fr">— I wasn't listening.</span>
+                <br><br><span class="comment">// Interrogative: Was/Were + subject + verb-ing ?</span>
+                <span class="function">Were</span> you <span class="function">sleeping</span>?           <span class="phrase-fr">— Were you sleeping?</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Using Past Continuous with Past Simple (Interruption)</div>
+                <span class="comment">// Past Continuous = longer action in progress</span>
+                <span class="comment">// Past Simple = shorter interruption</span>
+                <br>I <span class="function">was reading</span> when he <span class="function">called</span>.     <span class="phrase-fr">— I was reading; then he called (interruption)</span>
+                <br>She <span class="function">was cooking</span> while I <span class="function">worked</span>.   <span class="phrase-fr">— simultaneous ongoing actions</span>
+                <br>They <span class="function">were sleeping</span> when the earthquake <span class="function">hit</span>. <span class="phrase-fr">— sudden event during ongoing action</span>
+                <br><br><span class="comment">// Two ongoing actions (using while)</span>
+                While I <span class="function">was studying</span>, she <span class="function">was watching</span> TV. <span class="phrase-fr">— both in progress simultaneously</span>
+            </div>
+
+            <h4>📌 2.3 Past Perfect (Past Simple + Past Perfect)</h4>
+            <p>The Past Perfect describes an action that happened BEFORE another action in the past. It is used to show the sequence of past events.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Past Perfect - Formation</div>
+                <span class="comment">// Subject + had (hadn't) + Past Participle</span>
+                <br>I <span class="function">had (I'd)</span> finished.      <span class="phrase-fr">— completed before another point</span>
+                <br>She <span class="function">hadn't arrived</span>.      <span class="phrase-fr">— negative form</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Past Perfect - Usage Examples</div>
+                <span class="comment">// Past Perfect = earlier action</span>
+                <span class="comment">// Past Simple = later action</span>
+                <br>I <span class="function">had finished</span> my homework before I <span class="function">went</span> out. <span class="phrase-fr">— finished first, then went out</span>
+                <br>She <span class="function">realized</span> she <span class="function">had forgotten</span> her keys. <span class="phrase-fr">— forgot first, then realized</span>
+                <br>When I <span class="function">arrived</span>, the film <span class="function">had already started</span>. <span class="phrase-fr">— started before my arrival</span>
+                <br><br><span class="comment">// With time expressions</span>
+                <span class="function">by the time</span> — By the time I got there, they had left.
+                <span class="function">before</span> — He left before I had spoken to him.
+                <span class="function">after</span> — After she had finished, she left.
+            </div>
+
+            <h4>📌 2.4 Past Perfect Continuous</h4>
+            <p>Similar to Past Perfect but emphasizes the duration of the action before another past action.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Past Perfect Continuous</div>
+                <span class="comment">// Subject + had + been + verb-ing</span>
+                <br>I <span class="function">had been working</span> for 2 hours when he called. <span class="phrase-fr">— duration before interruption</span>
+                <br>She <span class="function">had been studying</span> all night before the exam. <span class="phrase-fr">— long duration before event</span>
+            </div>
+
+            <div class="tense-box">
+                <h4>📌 Summary: All Past Tenses Comparison</h4>
+                <p><strong>Past Simple:</strong> I <strong>saw</strong> him yesterday. → single completed action</p>
+                <p><strong>Past Continuous:</strong> I <strong>was watching</strong> TV at 8 PM. → action in progress</p>
+                <p><strong>Past Perfect:</strong> I <strong>had seen</strong> the movie before. → completed before another past point</p>
+                <p><strong>Past Perfect Continuous:</strong> I <strong>had been waiting</strong> for 1 hour when he arrived. → duration before another past event</p>
+            </div>
+        </div>
+
+        <!-- PART 3: FUTURE TENSES -->
+        <div class="en-content" id="partie3">
+            <h3>📙 3. Future Tenses and Forms</h3>
+            <p>English has several ways to express the future. The choice depends on the level of certainty, planning, and the context of the prediction or intention.</p>
+
+            <h4>📌 3.1 Will</h4>
+            <p>"Will" is used for spontaneous decisions, predictions without evidence, promises, and offers.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Will - Formation</div>
+                <span class="comment">// Affirmative: Subject + will + base verb</span>
+                I <span class="function">will (I'll)</span> help you.        <span class="phrase-fr">— promise/offer</span>
+                <br><br><span class="comment">// Negative: will not (won't)</span>
+                I <span class="function">will not (won't)</span> come.     <span class="phrase-fr">— refusal</span>
+                <br><br><span class="comment">// Interrogative: Will + subject + base verb ?</span>
+                <span class="function">Will</span> you <span class="function">help</span> me?          <span class="phrase-fr">— offer</span>
+                <span class="function">Will</span> it <span class="function">rain</span>?             <span class="phrase-fr">— prediction</span>
+            </div>
+
+            <div class="tense-box">
+                <h4>📌 When to Use "Will"</h4>
+                <p><strong>1. Spontaneous Decision:</strong> "The phone is ringing. I'll answer it." (decided at the moment)</p>
+                <p><strong>2. Prediction (no evidence):</strong> "I think it will rain tomorrow." (personal belief)</p>
+                <p><strong>3. Promise:</strong> "I will always love you."</p>
+                <p><strong>4. Offer:</strong> "Will you have some tea?" / "I'll help you with that."</p>
+                <p><strong>5. Threat:</strong> "I'll tell the teacher if you don't behave."</p>
+                <p><strong>6. Refusal:</strong> "I won't do it."</p>
+            </div>
+
+            <h4>📌 3.2 Going to</h4>
+            <p>"Going to" is used for planned intentions and predictions based on visible evidence.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Going to - Formation</div>
+                <span class="comment">// Subject + am/is/are + going to + verb</span>
+                <br>I <span class="function">am (I'm)</span> going to study.       <span class="phrase-fr">— planned intention</span>
+                <br>She <span class="function">is (She's)</span> going to travel.   <span class="phrase-fr">— planned intention</span>
+                <br><br><span class="comment">// Negative: am/is/are + not + going to + verb</span>
+                I <span class="function">am not (I'm not)</span> going to go. <span class="phrase-fr">— refusal of plan</span>
+                <br><br><span class="comment">// Interrogative: Am/Is/Are + subject + going to + verb ?</span>
+                <span class="function">Are</span> you <span class="function">going to come</span>?     <span class="phrase-fr">— question about plan</span>
+            </div>
+
+            <div class="tense-box">
+                <h4>📌 When to Use "Going to"</h4>
+                <p><strong>1. Planned Intentions:</strong> "I'm going to visit my grandmother next week." (already decided)</p>
+                <p><strong>2. Predictions with Evidence:</strong> "Look at those clouds! It's going to rain!" (you can see signs)</p>
+                <p><strong>3. Future Arrangements:</strong> "I'm going to start a new job in September."</p>
+            </div>
+
+            <h4>📌 3.3 Present Continuous for Future</h4>
+            <p>Used for arrangements that are already planned and confirmed.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Present Continuous for Future</div>
+                <span class="comment">// Subject + am/is/are + verb-ing (with future time reference)</span>
+                <br>I <span class="function">am meeting</span> John tomorrow.     <span class="phrase-fr">— arranged meeting</span>
+                <br>She <span class="function">is flying</span> to London next week. <span class="phrase-fr">— booked flight</span>
+                <br>They <span class="function">are having</span> a party on Friday. <span class="phrase-fr">— planned event</span>
+            </div>
+
+            <h4>Will vs Going to vs Present Continuous</h4>
+            <table class="comparison-table">
+                <tr>
+                    <th>Will</th>
+                    <th>Going to</th>
+                    <th>Present Continuous</th>
+                </tr>
+                <tr>
+                    <td>Spontaneous decision</td>
+                    <td>Planned intention</td>
+                    <td>Fixed arrangement</td>
+                </tr>
+                <tr>
+                    <td>"I'll call you tonight."</td>
+                    <td>"I'm going to call him."</td>
+                    <td>"I'm calling him at 6."</td>
+                </tr>
+                <tr>
+                    <td>Prediction (no evidence)</td>
+                    <td>Prediction (with evidence)</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>"It will be cold."</td>
+                    <td>"It's going to snow!"</td>
+                    <td>—</td>
+                </tr>
+            </table>
+
+            <h4>📌 3.4 Future Continuous</h4>
+            <p>Used for actions that will be in progress at a specific future time.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Future Continuous</div>
+                <span class="comment">// Subject + will + be + verb-ing</span>
+                <br>This time tomorrow, I <span class="function">will be flying</span> to Paris. <span class="phrase-fr">— in progress at future time</span>
+                <br>Don't call at 8 PM — we <span class="function">will be having</span> dinner. <span class="phrase-fr">— ongoing activity</span>
+                <br><br><span class="comment">// Negative: will + not + be + verb-ing</span>
+                I <span class="function">won't be working</span> this weekend. <span class="phrase-fr">— won't be in progress</span>
+            </div>
+
+            <h4>📌 3.5 Future Perfect</h4>
+            <p>Used for actions that will be completed before a specific future time.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Future Perfect</div>
+                <span class="comment">// Subject + will + have + past participle</span>
+                <br>By 2027, I <span class="function">will have graduated</span>. <span class="phrase-fr">— completed before 2027</span>
+                <br>She <span class="function">will have finished</span> by then. <span class="phrase-fr">— completed before then</span>
+            </div>
+        </div>
+
+        <!-- PART 4: MODAL VERBS -->
+        <div class="en-content" id="partie4">
+            <h3>📕 4. Modal Verbs</h3>
+            <p>Modal verbs are auxiliary verbs that express possibility, ability, permission, obligation, and other attitudes. They are used with the base form of the main verb (without "to").</p>
+
+            <h4>📌 Complete Overview of Modal Verbs</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Modal</th>
+                    <th>Main Use</th>
+                    <th>Example</th>
+                    <th>Neg/Question</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Can</strong></td>
+                    <td>Ability, Permission (informal)</td>
+                    <td>I can swim.</td>
+                    <td>can't / Can I?</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Could</strong></td>
+                    <td>Past ability, Polite request</td>
+                    <td>Could you help?</td>
+                    <td>couldn't / Could I?</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>May</strong></td>
+                    <td>Permission (formal), Possibility</td>
+                    <td>May I sit?</td>
+                    <td>may not / May I?</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Might</strong></td>
+                    <td>Small possibility</td>
+                    <td>It might rain.</td>
+                    <td>mightn't / Might I?</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Must</strong></td>
+                    <td>Strong obligation (internal)</td>
+                    <td>You must study.</td>
+                    <td>mustn't / Must I?</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Have to</strong></td>
+                    <td>Obligation (external rule)</td>
+                    <td>I have to wear uniform.</td>
+                    <td>don't have to</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Should</strong></td>
+                    <td>Advice, Recommendation</td>
+                    <td>You should rest.</td>
+                    <td>shouldn't / Should I?</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Ought to</strong></td>
+                    <td>Advice (similar to should)</td>
+                    <td>You ought to try.</td>
+                    <td>oughtn't to</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Would</strong></td>
+                    <td>Hypothetical, Polite request</td>
+                    <td>I would like...</td>
+                    <td>wouldn't / Would you?</td>
+                </tr>
+            </table>
+
+            <h4>📌 Detailed Uses</h4>
+
+            <h4>Ability</h4>
+            <div class="code-box">
+                <div class="code-title">// Can / Could - Ability</div>
+                <span class="comment">// Present ability</span>
+                I <span class="function">can</span> speak three languages.     <span class="phrase-fr">— present ability</span>
+                <br><br><span class="comment">// Past ability</span>
+                I <span class="function">could</span> swim when I was 5.      <span class="phrase-fr">— past ability</span>
+                <br>She <span class="function">could</span> play piano well.     <span class="phrase-fr">— past skill</span>
+                <br><br><span class="comment">// Negative: can't (present), couldn't (past)</span>
+                I <span class="function">can't</span> drive.                   <span class="phrase-fr">— cannot drive</span>
+                He <span class="function">couldn't</span> attend.              <span class="phrase-fr">— was not able to attend</span>
+            </div>
+
+            <h4>Permission</h4>
+            <div class="code-box">
+                <div class="code-title">// Can / Could / May - Permission</div>
+                <span class="comment">// Informal permission (can)</span>
+                <span class="function">Can</span> I use your phone?              <span class="phrase-fr">— casual</span>
+                <br><br><span class="comment">// More polite (could/may)</span>
+                <span class="function">Could</span> I borrow your book?           <span class="phrase-fr">— polite</span>
+                <span class="function">May</span> I sit here?                     <span class="phrase-fr">— formal</span>
+                <br><br><span class="comment">// Permission granted/refused</span>
+                Yes, you can. / No, I'm afraid not.
+                Yes, you may. / No, you may not.
+            </div>
+
+            <h4>Possibility</h4>
+            <div class="code-box">
+                <div class="code-title">// May / Might / Could - Possibility</div>
+                <span class="comment">// Degrees of possibility</span>
+                <span class="function">May</span> / <span class="function">Might</span> / <span class="function">Could</span> rain later.     <span class="phrase-fr">— maybe it will rain</span>
+                <br><br><span class="comment">// Certainty levels (most to least certain)</span>
+                It <span class="function">will</span> rain. (certain)              <span class="phrase-fr">— I'm sure</span>
+                It <span class="function">should</span> rain. (probable)         <span class="phrase-fr">— probably</span>
+                It <span class="function">might</span> rain. (possible)          <span class="phrase-fr">— maybe</span>
+                It <span class="function">may</span> rain. (possible)            <span class="phrase-fr">— maybe</span>
+                It <span class="function">could</span> rain. (possible)          <span class="phrase-fr">— maybe</span>
+            </div>
+
+            <h4>Obligation</h4>
+            <div class="code-box">
+                <div class="code-title">// Must / Have to - Obligation</div>
+                <span class="comment">// Must = internal obligation (you feel it's necessary)</span>
+                I <span class="function">must</span> study harder.              <span class="phrase-fr">— I feel I need to</span>
+                <br><br><span class="comment">// Have to = external obligation (rule, law, someone else decides)</span>
+                I <span class="function">have to</span> wear a uniform.          <span class="phrase-fr">— school rule</span>
+                You <span class="function">have to</span> be 18 to vote.         <span class="phrase-fr">— law</span>
+                <br><br><span class="comment">// Past obligation</span>
+                I <span class="function">had to</span> work yesterday.        <span class="phrase-fr">— was required to</span>
+                <br><br><span class="comment">// Mustn't vs Don't have to</span>
+                You <span class="function">mustn't</span> smoke here.           <span class="phrase-fr">— prohibition (not allowed)</span>
+                You <span class="function">don't have to</span> come.           <span class="phrase-fr">— optional (not required)</span>
+            </div>
+
+            <h4>Advice and Recommendation</h4>
+            <div class="code-box">
+                <div class="code-title">// Should / Ought to - Advice</div>
+                <span class="comment">// Should = general advice (most common)</span>
+                You <span class="function">should</span> see a doctor.          <span class="phrase-fr">— recommendation</span>
+                You <span class="function">shouldn't</span> worry.            <span class="phrase-fr">— negative advice</span>
+                <br><br><span class="comment">// Ought to = similar to should (more formal)</span>
+                You <span class="function">ought to</span> apologize.           <span class="phrase-fr">— you should</span>
+                You <span class="function">ought not to</span> have done that.  <span class="phrase-fr">— criticism of past action</span>
+                <br><br><span class="comment">// Should have / Ought to have = criticism of past action</span>
+                You <span class="function">should have studied</span>.          <span class="phrase-fr">— you didn't but should have</span>
+                I <span class="function">shouldn't have said</span> that.      <span class="phrase-fr">— I said it but shouldn't have</span>
+            </div>
+
+            <h4>Polite Requests and Offers</h4>
+            <div class="code-box">
+                <div class="code-title">// Would / Could - Polite Requests</div>
+                <span class="comment">// Requests (more polite than will/can)</span>
+                <span class="function">Would</span> you pass the salt?           <span class="phrase-fr">— polite request</span>
+                <span class="function">Could</span> you help me, please?        <span class="phrase-fr">— polite request</span>
+                <span class="function">Can</span> you help me?                  <span class="phrase-fr">— less formal</span>
+                <br><br><span class="comment">// Offers (Will / Shall)</span>
+                <span class="function">Will</span> you have some tea?             <span class="phrase-fr">— offer</span>
+                <span class="function">Shall</span> I open the window?          <span class="phrase-fr">— offer (mainly British)</span>
+                <span class="function">I'll</span> carry that for you.          <span class="phrase-fr">— offer</span>
+            </div>
+
+            <h4>Hypothetical Situations</h4>
+            <div class="code-box">
+                <div class="code-title">// Would - Hypothetical</div>
+                <span class="comment">// Unreal situations (present/past)</span>
+                If I <span class="function">were</span> rich, I <span class="function">would travel</span>. <span class="phrase-fr">— present hypothetical</span>
+                If I <span class="function">had studied</span>, I <span class="function">would have passed</span>. <span class="phrase-fr">— past hypothetical</span>
+                <br><br><span class="comment">// Polite/Softening</span>
+                I <span class="function">would</span> like some coffee.         <span class="phrase-fr">— polite way to want</span>
+                I <span class="function">wouldn't</span> mind a vacation.      <span class="phrase-fr">— I would like</span>
+                <br><br><span class="comment">// Would like vs Want</span>
+                I <span class="function">would like</span> to order.           <span class="phrase-fr">— polite (restaurant)</span>
+                I <span class="function">want</span> to order.                  <span class="phrase-fr">— direct</span>
+            </div>
+
             <div class="warning-box">
-                <h4>⚠️ Conseil de prononciation</h4>
-                <p>En anglais, la liaison n'existe pas comme en français. Chaque mot se prononce clairement. Écoutez des natifs pour améliorer votre accent !</p>
+                <h4>⚠️ Important Modal Rules</h4>
+                <p>• Modals are followed by the <strong>base verb</strong> (without "to")</p>
+                <p>✓ You <strong>can</strong> <em>go</em>. &nbsp;&nbsp;&nbsp; ✗ You <strong>can to go</strong>. (WRONG!)</p>
+                <p>• Modals do NOT change form for different subjects</p>
+                <p>✓ He <strong>can</strong> go. &nbsp;&nbsp;&nbsp; ✗ He <strong>cans</strong> go. (WRONG!)</p>
+                <p>• To form negative, add <strong>not</strong> after the modal</p>
+                <p>✓ can't, couldn't, shouldn't, wouldn't, mustn't</p>
+                <p>• Questions are formed by putting the modal first</p>
+                <p>✓ <strong>Can</strong> you help? &nbsp;&nbsp;&nbsp; ✗ You <strong>can</strong> help? (WRONG!)</p>
             </div>
         </div>
 
-        <!-- PARTIE 6 -->
+        <!-- PART 5: PASSIVE VOICE -->
+        <div class="en-content" id="partie5">
+            <h3>📒 5. Passive Voice</h3>
+            <p>The passive voice is used when the action is more important than the agent (who performed the action), or when the agent is unknown, irrelevant, or obvious.</p>
+
+            <h4>📌 Formation</h4>
+            <div class="code-box">
+                <div class="code-title">// Passive Voice Structure</div>
+                <span class="comment">// Subject + BE + Past Participle (+ by agent)</span>
+                <br><span class="comment">// Active:</span> Someone stole my bike.
+                <br><span class="comment">// Passive:</span> My bike <span class="function">was stolen</span> (by someone).
+            </div>
+
+            <h4>Passive in All Tenses</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Tense</th>
+                    <th>Active</th>
+                    <th>Passive</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Present Simple</td>
+                    <td>People speak French.</td>
+                    <td>French <strong>is spoken</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Present Continuous</td>
+                    <td>They are painting the house.</td>
+                    <td>The house <strong>is being painted</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Present Perfect</td>
+                    <td>They have built a new school.</td>
+                    <td>A new school <strong>has been built</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Past Simple</td>
+                    <td>Shakespeare wrote this play.</td>
+                    <td>This play <strong>was written</strong> by Shakespeare.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Past Continuous</td>
+                    <td>They were building a bridge.</td>
+                    <td>A bridge <strong>was being built</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Past Perfect</td>
+                    <td>They had finished the work.</td>
+                    <td>The work <strong>had been finished</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Future (will)</td>
+                    <td>They will announce the results.</td>
+                    <td>The results <strong>will be announced</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Future (going to)</td>
+                    <td>They are going to hold a meeting.</td>
+                    <td>A meeting <strong>is going to be held</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Modal verbs</td>
+                    <td>You must do the work.</td>
+                    <td>The work <strong>must be done</strong>.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Examples in Context</h4>
+            <div class="code-box">
+                <div class="code-title">// Passive Voice Examples</div>
+                <span class="comment">// Present Simple Passive</span>
+                English <span class="function">is spoken</span> in many countries.     <span class="phrase-fr">— worldwide language</span>
+                <br>French <span class="function">is spoken</span> in Tunisia.             <span class="phrase-fr">— official language</span>
+                <br><br><span class="comment">// Past Simple Passive</span>
+                The president <span class="function">was elected</span> last month.    <span class="phrase-fr">— completed action</span>
+                <br>The city <span class="function">was founded</strong> in 698 BC.    <span class="phrase-fr">— historical fact</span>
+                <br><br><span class="comment">// Present Perfect Passive</span>
+                The movie <span class="function">has been watched</span> millions.   <span class="phrase-fr">— popular movie</span>
+                <br>My phone <span class="function">has been stolen</span>.           <span class="phrase-fr">— recent event</span>
+                <br><br><span class="comment">// With "by agent"</span>
+                The letter <span class="function">was written</span> <strong>by my mother</strong>.  <span class="phrase-fr">— agent mentioned</span>
+                <br>The Mona Lisa <span class="function">was painted</span> <strong>by Da Vinci</strong>. <span class="phrase-fr">— famous painter</span>
+            </div>
+
+            <div class="tense-box">
+                <h4>📌 When to Use Passive Voice</h4>
+                <p><strong>1. Agent is unknown:</strong> "My car <strong>was stolen</strong>." (who took it is unknown)</p>
+                <p><strong>2. Agent is irrelevant:</strong> "Water <strong>is boiled</strong> at 100°C." (who boils it doesn't matter)</p>
+                <p><strong>3. Agent is less important:</strong> "Many buildings <strong>were destroyed</strong> in the earthquake."</p>
+                <p><strong>4. Formality:</strong> "Applications <strong>must be submitted</strong> by Friday."</p>
+                <p><strong>5. Topic focus:</strong> "The discovery <strong>was made</strong> in 1928." (the discovery is the topic)</p>
+            </div>
+        </div>
+
+        <!-- PART 6: CONDITIONAL SENTENCES -->
         <div class="en-content" id="partie6">
-            <h3>📓 6. Exercices pratiques</h3>
-            <div class="example-box">
-                <h4>💡 Exercice 1 : Conjuguez le verbe "to be"</h4>
-                <p>1. I _____ (am) a student.</p>
-                <p>2. She _____ (is) from France.</p>
-                <p>3. They _____ (are) in the classroom.</p>
-                <p>4. He _____ (is not) a teacher.</p>
-                <p>5. _____ (Are) you ready?</p>
-                <p style="margin-top:10px;"><strong>Réponses :</strong> 1. am, 2. is, 3. are, 4. isn't, 5. Are</p>
+            <h3>📓 6. Conditional Sentences</h3>
+            <p>Conditional sentences express "if" situations and their possible results. There are four main types, each referring to different time frames and levels of probability.</p>
+
+            <h4>📌 The Four Types of Conditionals</h4>
+
+            <h4>Type 0: Zero Conditional</h4>
+            <p>Used for general truths and facts that are always true when the condition is met.</p>
+            <div class="code-box">
+                <div class="code-title">// Zero Conditional - General Truths</div>
+                <span class="comment">// Structure: If + Present Simple, Present Simple</span>
+                <br>If you <span class="function">heat</span> water, it <span class="function">boils</span>.      <span class="phrase-fr">— scientific fact</span>
+                <br>If it <span class="function">rains</span>, the ground <span class="function">gets</span> wet.    <span class="phrase-fr">— general truth</span>
+                <br>Water <span class="function">freezes</span> if it <span class="function">gets</span> cold enough. <span class="phrase-fr">— always true</span>
+                <br><br><span class="comment">// Alternative: Can use when/whenever instead of if</span>
+                When you <span class="function">mix</span> red and blue, you <span class="function">get</span> purple. <span class="phrase-fr">— general result</span>
             </div>
-            <div class="example-box">
-                <h4>💡 Exercice 2 : Traduisez en anglais</h4>
-                <p>1. Je m'appelle Ahmed et j'ai 18 ans.</p>
-                <p>2. Enchanté de faire votre connaissance !</p>
-                <p>3. Comment vous appelez-vous ?</p>
-                <p>4. Elle est médecin et elle travaille à l'hôpital.</p>
-                <p style="margin-top:10px;"><strong>Réponses :</strong> 1. My name is Ahmed and I'm 18 years old. 2. Nice to meet you! 3. What is your name? 4. She is a doctor and she works at the hospital.</p>
+
+            <h4>Type 1: First Conditional</h4>
+            <p>Used for real and likely situations in the present or future.</p>
+            <div class="code-box">
+                <div class="code-title">// First Conditional - Real/Likely Situations</div>
+                <span class="comment">// Structure: If + Present Simple, will + base verb</span>
+                <br>If it <span class="function">rains</span>, I <span class="function">will stay</span> home.     <span class="phrase-fr">— possible future event</span>
+                <br>If you <span class="function">study</span> hard, you <span class="function">will pass</span>.    <span class="phrase-fr">— likely outcome</span>
+                <br><br><span class="comment">// Can also use: might, can, may, should</span>
+                If you <span class="function">see</span> her, you <span class="function">should tell</span> her. <span class="phrase-fr">— advice</span>
+                <br>If you <span class="function">need</span> help, you <span class="function">can call</span> me.   <span class="phrase-fr">— offer</span>
+                <br><br><span class="comment">// Alternative structures (will can be in either clause)</span>
+                <span class="function">If</span> I <span class="function">have</span> time, I <span class="function">will help</span> you. <span class="phrase-fr">— most common</span>
+                I <span class="function">will help</span> you <span class="function">if</span> I <span class="function">have</span> time. <span class="phrase-fr">— same meaning</span>
             </div>
+
+            <h4>Type 2: Second Conditional</h4>
+            <p>Used for unreal, imaginary, or unlikely situations in the present or future.</p>
+            <div class="code-box">
+                <div class="code-title">// Second Conditional - Unreal/Hypothetical Situations</div>
+                <span class="comment">// Structure: If + Past Simple (were or past verb), would + base verb</span>
+                <br>If I <span class="function">had</span> a million dollars, I <span class="function">would buy</span> a yacht. <span class="phrase-fr">— hypothetical present</span>
+                <br>If I <span class="function">were</span> you, I <span class="function">would accept</span>.      <span class="phrase-fr">— unreal situation</span>
+                <br><br><span class="comment">// Note: "If I were" is more common than "If I was"</span>
+                If I <span class="function">were</span> rich, I <span class="function">would travel</span> the world. <span class="phrase-fr">— imaginary</span>
+                <br><br><span class="comment">// Would can be replaced with might or could</span>
+                If I <span class="function">studied</span> more, I <span class="function">could pass</span>. <span class="phrase-fr">— possibility</span>
+            </div>
+
+            <h4>Type 3: Third Conditional</h4>
+            <p>Used for unreal situations in the past — things that did not happen.</p>
+            <div class="code-box">
+                <div class="code-title">// Third Conditional - Unreal Past Situations</div>
+                <span class="comment">// Structure: If + Past Perfect, would have + past participle</span>
+                <br>If I <span class="function">had studied</span>, I <span class="function">would have passed</span>. <span class="phrase-fr">— didn't study, didn't pass</span>
+                <br>If she <span class="function">had left</span> earlier, she <span class="function">would have caught</span> the train. <span class="phrase-fr">— didn't leave, didn't catch</span>
+                <br><br><span class="comment">// Might have or could have instead of would have</span>
+                If he <span class="function">had tried</span>, he <span class="function">might have succeeded</span>. <span class="phrase-fr">— possible outcome</span>
+                <br><br><span class="comment">// Mixed conditional (past condition → present result)</span>
+                If I <span class="function">had worked</span> harder, I <span class="function">would be</span> a manager now. <span class="phrase-fr">— past action → present state</span>
+            </div>
+
+            <h4>Summary Table</h4>
+            <table class="comparison-table">
+                <tr>
+                    <th>Type</th>
+                    <th>If clause</th>
+                    <th>Main clause</th>
+                    <th>Use</th>
+                </tr>
+                <tr>
+                    <td><strong>Zero</strong></td>
+                    <td>Present Simple</td>
+                    <td>Present Simple</td>
+                    <td>General truths</td>
+                </tr>
+                <tr>
+                    <td><strong>First</strong></td>
+                    <td>Present Simple</td>
+                    <td>will + verb</td>
+                    <td>Likely future</td>
+                </tr>
+                <tr>
+                    <td><strong>Second</strong></td>
+                    <td>Past Simple (were)</td>
+                    <td>would + verb</td>
+                    <td>Unlikely present/future</td>
+                </tr>
+                <tr>
+                    <td><strong>Third</strong></td>
+                    <td>Past Perfect</td>
+                    <td>would have + past participle</td>
+                    <td>Imaginary past</td>
+                </tr>
+            </table>
+
             <div class="example-box">
-                <h4>💡 Exercice 3 : Dialogue</h4>
-                <p><strong>A :</strong> Hello! My name is Sara. What's your name?</p>
-                <p><strong>B :</strong> Hi Sara! I'm Ahmed. Nice to meet you!</p>
-                <p><strong>A :</strong> Nice to meet you too! Where are you from?</p>
-                <p><strong>B :</strong> I'm from Tunisia. And you?</p>
-                <p><strong>A :</strong> I'm from France. How old are you?</p>
-                <p><strong>B :</strong> I'm 20. And you?</p>
-                <p><strong>A :strong> I'm 19. Nice to talk to you!</p>
+                <h4>💡 Mixed Conditionals Examples</h4>
+                <p><strong>Past → Present:</strong> If I had taken the job, I would be rich now. (but I didn't take it)</p>
+                <p><strong>Present → Past:</strong> If I were braver, I would have spoken up. (but I'm not brave enough)</p>
             </div>
         </div>
 
-        <!-- SECTION RÉSUMÉ IMAGE -->
-        <section class="section-resume">
-            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
-            <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/673AB7/FFFFFF?text=The+Basics+of+English+-+Complete+Summary" alt="Résumé des bases de l'anglais">
-                <div class="resume-overlay">
-                    <h3>Les bases de l'anglais</h3>
-                    <p>Salutations, verbe to be, présentations, vocabulaire fondamental</p>
-                </div>
-                            <br><br>
-                <a href="" download>
-                    <button>📥 Télécharger la photo</button>
-                </a></div>
-        </section>
+        <!-- PART 7: LINKING WORDS -->
+        <div class="en-content" id="partie7">
+            <h3>📘 7. Linking Words and Connectors</h3>
+            <p>Linking words (also called connectors or transition words) are essential for creating coherent and well-structured writing. They show the relationship between ideas.</p>
 
-        <!-- SECTION VIDÉO -->
-        <section class="section-video">
-            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
-            <div class="video-container">
-                <iframe src=""
-                        width="640" height="360" frameborder="0" allow="autoplay">
-                </iframe>
+            <h4>📌 Addition (Adding Ideas)</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>and</strong></td>
+                    <td>Same type of idea</td>
+                    <td>She is smart <strong>and</strong> talented.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>also / too / as well</strong></td>
+                    <td>Adding similar information</td>
+                    <td>She speaks English. She <strong>also</strong> speaks French.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in addition (to)</strong></td>
+                    <td>Formal addition</td>
+                    <td><strong>In addition to</strong> studying, she works part-time.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>furthermore / moreover</strong></td>
+                    <td>Strong addition</td>
+                    <td>The food was good. <strong>Furthermore</strong>, the service was excellent.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>besides</strong></td>
+                    <td>Adding a point</td>
+                    <td><strong>Besides</strong> being cheap, it's also delicious.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>not only... but also</strong></td>
+                    <td>Emphatic addition</td>
+                    <td><strong>Not only</strong> is it cheap, <strong>but also</strong> it's healthy.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Contrast (Opposite Ideas)</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>but</strong></td>
+                    <td>Simple contrast</td>
+                    <td>It's cheap, <strong>but</strong> it's not good.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>however / nevertheless</strong></td>
+                    <td>Formal contrast</td>
+                    <td>It was raining. <strong>However</strong>, we went out.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>although / though / even though</strong></td>
+                    <td>Concession (despite)</td>
+                    <td><strong>Although</strong> it was raining, we went out.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>despite / in spite of</strong></td>
+                    <td>Concession (noun/gerund)</td>
+                    <td><strong>Despite the rain</strong>, we went out.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>on the other hand</strong></td>
+                    <td>Presenting opposite view</td>
+                    <td><strong>On the other hand</strong>, some people prefer rural life.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>while / whereas</strong></td>
+                    <td>Comparing two things</td>
+                    <td><strong>While</strong> city life is exciting, <strong>whereas</strong> rural life is peaceful.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>unlike</strong></td>
+                    <td>Showing difference</td>
+                    <td><strong>Unlike</strong> her sister, she is very outgoing.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>still / yet</strong></td>
+                    <td>Unexpected contrast</td>
+                    <td>It was expensive. <strong>Still</strong>, I bought it.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Cause and Effect (Reason/Result)</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>because</strong></td>
+                    <td>Reason (before result)</td>
+                    <td>I stayed home <strong>because</strong> it was raining.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>since / as</strong></td>
+                    <td>Reason (more formal)</td>
+                    <td><strong>Since</strong> you are here, let's begin.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>so</strong></td>
+                    <td>Result (before reason)</td>
+                    <td>It was raining, <strong>so</strong> I stayed home.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>therefore / consequently</strong></td>
+                    <td>Formal result</td>
+                    <td>He studied hard. <strong>Therefore</strong>, he passed.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>as a result</strong></td>
+                    <td>Result</td>
+                    <td>He didn't study. <strong>As a result</strong>, he failed.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>because of / due to</strong></td>
+                    <td>Cause (noun)</td>
+                    <td><strong>Because of</strong> the rain, we stayed home.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>owing to</strong></td>
+                    <td>Formal cause</td>
+                    <td><strong>Owing to</strong> the weather, the match was cancelled.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Sequence and Time (Ordering Ideas)</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>first(ly) / first of all</strong></td>
+                    <td>Beginning</td>
+                    <td><strong>First</strong>, gather your ingredients.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>second(ly) / third(ly)</strong></td>
+                    <td>Middle points</td>
+                    <td><strong>Secondly</strong>, mix the dry ingredients.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>then / next</strong></td>
+                    <td>Next step</td>
+                    <td><strong>Then</strong>, add water.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>after that / afterwards</strong></td>
+                    <td>Following step</td>
+                    <td><strong>After that</strong>, let it rest for 10 minutes.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>finally / lastly / last but not least</strong></td>
+                    <td>End point</td>
+                    <td><strong>Finally</strong>, serve and enjoy.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>meanwhile</strong></td>
+                    <td>Simultaneous action</td>
+                    <td><strong>Meanwhile</strong>, prepare the sauce.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Examples and Illustration</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>for example / for instance</strong></td>
+                    <td>Illustrating a point</td>
+                    <td>Many jobs require English. <strong>For example</strong>, in tourism.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>such as / like</strong></td>
+                    <td>Giving examples</td>
+                    <td>I like fruits <strong>such as</strong> apples and oranges.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in fact / actually</strong></td>
+                    <td>Emphasizing truth</td>
+                    <td><strong>In fact</strong>, English is the global language.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>especially / particularly</strong></td>
+                    <td>Focusing on specifics</td>
+                    <td>All subjects are important, <strong>especially</strong> mathematics.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Conclusion and Summary</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in conclusion / to conclude</strong></td>
+                    <td>Ending an essay</td>
+                    <td><strong>In conclusion</strong>, technology has both pros and cons.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>to sum up / in summary</strong></td>
+                    <td>Summarizing</td>
+                    <td><strong>To sum up</strong>, we need to take action now.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in short / in brief</strong></td>
+                    <td>Concise summary</td>
+                    <td><strong>In short</strong>, the project was a success.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>overall / all in all</strong></td>
+                    <td>General assessment</td>
+                    <td><strong>Overall</strong>, it was a great experience.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in my opinion / personally</strong></td>
+                    <td>Giving personal view</td>
+                    <td><strong>In my opinion</strong>, this is the best solution.</td>
+                </tr>
+            </table>
+
+            <div class="example-box">
+                <h4>💡 Sample Paragraph with Connectors</h4>
+                <p><strong>Topic:</strong> The advantages and disadvantages of social media</p>
+                <p>Social media has become an integral part of modern life. <strong>On the one hand</strong>, it offers numerous benefits. <strong>Firstly</strong>, it allows people to <strong>stay connected</strong> with friends and family across the world. <strong>Furthermore</strong>, it provides a platform for learning and sharing information. <strong>For example</strong>, students can access educational content online.</p>
+                <p><strong>On the other hand</strong>, there are also significant drawbacks. <strong>Although</strong> social media can be beneficial, <strong>however</strong>, excessive use can lead to addiction. <strong>Moreover</strong>, privacy concerns have increased <strong>because</strong> personal data can be misused. <strong>As a result</strong>, many users experience anxiety and depression.</p>
+                <p><strong>In conclusion</strong>, while social media has its advantages, it is crucial to use it responsibly. <strong>In my opinion</strong>, we should establish healthy boundaries to maximize the benefits <strong>while</strong> minimizing the risks.</p>
+            </div>
+        </div>
+
+        <!-- PART 8: REPORTED SPEECH -->
+        <div class="en-content" id="partie8">
+            <h3>📗 8. Reported Speech</h3>
+            <p>Reported speech (also called indirect speech) is used to report what someone said without using their exact words. The tense usually shifts back in time.</p>
+
+            <h4>📌 Direct vs Reported Speech</h4>
+            <div class="code-box">
+                <div class="code-title">// Direct Speech vs Reported Speech</div>
+                <span class="comment">// Direct Speech (exact words)</span>
+                <span class="keyword">"I am tired,"</span> she said.
+                <br><br><span class="comment">// Reported Speech (paraphrased)</span>
+                <span class="keyword">She said that she was tired.</span>
+            </div>
+
+            <h4>Tense Changes (Backshift)</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Direct Speech</th>
+                    <th>Reported Speech</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Present Simple →</td>
+                    <td>Past Simple</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Present Continuous →</td>
+                    <td>Past Continuous</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Present Perfect →</td>
+                    <td>Past Perfect</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Past Simple →</td>
+                    <td>Past Perfect</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>will</strong> →</td>
+                    <td><strong>would</strong></td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>can</strong> →</td>
+                    <td><strong>could</strong></td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>may</strong> →</td>
+                    <td><strong>might</strong></td>
+                </tr>
+            </table>
+
+            <div class="code-box">
+                <div class="code-title">// Tense Backshift Examples</div>
+                <span class="comment">// Present Simple → Past Simple</span>
+                "I <strong>like</strong> coffee." → She said she <strong>liked</strong> coffee.
+                <br><br><span class="comment">// Present Continuous → Past Continuous</span>
+                "I <strong>am working</strong>." → He said he <strong>was working</strong>.
+                <br><br><span class="comment">// Present Perfect → Past Perfect</span>
+                "I <strong>have finished</strong>." → She said she <strong>had finished</strong>.
+                <br><br><span class="comment">// Past Simple → Past Perfect</span>
+                "I <strong>saw</strong> her." → He said he <strong>had seen</strong> her.
+                <br><br><span class="comment">// will → would</span>
+                "I <strong>will call</strong> you." → She said she <strong>would call</strong> me.
+                <br><br><span class="comment">// can → could</span>
+                "I <strong>can help</strong>." → He said he <strong>could help</strong>.
+            </div>
+
+            <h4>Time Expression Changes</h4>
+            <div class="code-box">
+                <div class="code-title">// Time Expression Shifts</div>
+                <span class="comment">// When reporting in the past</span>
+                <strong>today</strong> → that day
+                <strong>yesterday</strong> → the day before / the previous day
+                <strong>tomorrow</strong> → the next day / the following day
+                <strong>this week</strong> → that week
+                <strong>last week</strong> → the week before
+                <strong>next week</strong> → the following week
+                <strong>now</strong> → then
+                <strong>here</strong> → there
+                <strong>ago</strong> → before
+            </div>
+
+            <h4>Say vs Tell vs Ask</h4>
+            <div class="code-box">
+                <div class="code-title">// Reporting Verbs</div>
+                <span class="comment">// tell + object</span>
+                <span class="keyword">"I am tired," she told me.</span> → She told me that she was tired.
+                <br><br><span class="comment">// say (no object needed)</span>
+                <span class="keyword">"I am tired," she said.</span> → She said (that) she was tired.
+                <br><br><span class="comment">// ask + object (questions)</span>
+                <span class="keyword">"Are you coming?" he asked.</span> → He asked if I was coming.
+                <span class="keyword">"Where do you live?" she asked.</span> → She asked where I lived.
+            </div>
+
+            <h4>Reporting Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// Yes/No Questions</div>
+                <span class="comment">// if / whether</span>
+                "Are you coming?" → She asked <strong>if</strong> I was coming.
+                "Do you understand?" → He asked <strong>whether</strong> I understood.
+                <br><br><span class="code-title">// Wh- Questions (keep the question word)</div>
+                "Where do you live?" → She asked <strong>where</strong> I lived.
+                "What time is it?" → He asked <strong>what</strong> time it was.
+                "Why did you leave?" → She asked <strong>why</strong> I had left.
+                <br><br><span class="comment">// Note: Question word order in reported questions</span>
+                "Where are you going?" → She asked where I <strong>was going</strong>. (not "where was I going")
+            </div>
+
+            <h4>Reporting Commands and Requests</h4>
+            <div class="code-box">
+                <div class="code-title">// Commands and Requests</div>
+                <span class="comment">// tell/ask + object + to + infinitive</span>
+                <br><span class="comment">// Imperative → Infinitive construction</span>
+                "Close the door." → She told me <strong>to close</strong> the door.
+                "Please sit down." → He asked me <strong>to sit</strong> down.
+                <br><br><span class="comment">// Negative commands</span>
+                "Don't touch that." → She told me <strong>not to touch</strong> that.
+                "Don't worry." → He asked me <strong>not to worry</strong>.
+            </div>
+        </div>
+
+        <!-- PART 9: RELATIVE CLAUSES -->
+        <div class="en-content" id="partie9">
+            <h3>📙 9. Relative Clauses</h3>
+            <p>Relative clauses are used to add additional information about a noun without starting a new sentence. They begin with relative pronouns.</p>
+
+            <h4>📌 Relative Pronouns</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Use</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>who</strong></td>
+                    <td>People (subject)</td>
+                    <td>The student <strong>who</strong> passed was happy.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>whom</strong></td>
+                    <td>People (object) - formal</td>
+                    <td>The teacher <strong>whom</strong> we respect is leaving.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>which</strong></td>
+                    <td>Things and animals</td>
+                    <td>The book <strong>which</strong> I read was interesting.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>that</strong></td>
+                    <td>People and things (defining)</td>
+                    <td>The book <strong>that</strong> I bought was expensive.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>whose</strong></td>
+                    <td>Possession</td>
+                    <td>The student <strong>whose</strong> work was best got a prize.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>where</strong></td>
+                    <td>Places</td>
+                    <td>The city <strong>where</strong> I live is beautiful.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>when</strong></td>
+                    <td>Time</td>
+                    <td>The day <strong>when</strong> I met you was amazing.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>why</strong></td>
+                    <td>Reasons</td>
+                    <td>The reason <strong>why</strong> I called was to invite you.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Defining vs Non-Defining Relative Clauses</h4>
+
+            <h4>Defining Relative Clauses (Essential)</h4>
+            <p>These clauses are essential for understanding the sentence. They identify which person or thing is being referred to. No commas are used.</p>
+            <div class="code-box">
+                <div class="code-title">// Defining Clauses - No Commas</div>
+                The student <span class="function">who studies</span> hard will pass. <span class="phrase-fr">— identifies which student</span>
+                <br>The book <span class="function">that I bought</span> is interesting. <span class="phrase-fr">— identifies which book</span>
+                <br>The man <span class="function">whose car broke down</span> called for help. <span class="phrase-fr">— possession</span>
+                <br><br><span class="comment">// With prepositions</span>
+                The book <span class="function">which I was looking for</span> was expensive. (for = preposition)
+                <br>The student <span class="function">whom I told you about</span> passed. (about = preposition)
+            </div>
+
+            <h4>Non-Defining Relative Clauses (Non-Essential)</h4>
+            <p>These clauses add extra information that is not essential. They are separated by commas and can be removed without changing the meaning.</p>
+            <div class="code-box">
+                <div class="code-title">// Non-Defining Clauses - With Commas</div>
+                My brother, <span class="function">who lives in Paris</span>, is visiting. <span class="phrase-fr">— extra info</span>
+                <br>Mrs. Smith, <span class="function">whom you met yesterday</span>, is our teacher. <span class="phrase-fr">— extra info</span>
+                <br>Tunisia, <span class="function">which is a North African country</span>, has beautiful beaches. <span class="phrase-fr">— additional fact</span>
+                <br><br><span class="comment">// IMPORTANT: Don't use "that" in non-defining clauses!</span>
+                My brother, <span class="function">who</span> lives in Paris... (✓) &nbsp;&nbsp; My brother, <span class="function">that</span> lives in Paris... (✗)
+            </div>
+
+            <h4>Relative Pronouns: Subject vs Object</h4>
+            <div class="code-box">
+                <div class="code-title">// Subject vs Object Pronouns</div>
+                <span class="comment">// Subject pronoun: acts as subject in the relative clause</span>
+                <span class="function">who/which</span> + verb
+                <br>The student <span class="function">who passed</span> the exam was happy. (who = subject of "passed")
+                <br>The book <span class="function">which costs</span> 50 dinars is mine. (which = subject of "costs")
+                <br><br><span class="comment">// Object pronoun: can often be omitted in defining clauses</span>
+                <span class="function">who(m)/that/which</span> + subject + verb
+                <br>The student <span class="function">who(m) I met</span> was nice. = The student <span class="function">I met</span> was nice. (omitted)
+                <br>The book <span class="function">that I bought</span> is expensive. = The book <span class="function">I bought</span> is expensive.
+                <br><br><span class="comment">// Object pronoun CANNOT be omitted in non-defining clauses</span>
+                My brother, <span class="function">whom I love</span>, is here. (whom cannot be omitted)
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Relative Pronoun Rules</h4>
+                <p>• Use <strong>who</strong> for people (subject) — "The man <strong>who called</strong> was tall."</p>
+                <p>• Use <strong>whom</strong> for people (object, formal) — "The man <strong>whom I saw</strong> was tall."</p>
+                <p>• Use <strong>which</strong> for things and animals</p>
+                <p>• Use <strong>that</strong> for defining clauses (people AND things)</p>
+                <p>• <strong>That</strong> is NOT used in non-defining clauses</p>
+                <p>• Object pronouns can be <strong>omitted</strong> in defining clauses</p>
+                <p>• <strong>Whose</strong> shows possession (no apostrophe) — "the student <strong>whose</strong> book was lost"</p>
+            </div>
+        </div>
+
+        <!-- PART 10: PRACTICE EXERCISES -->
+        <div class="en-content" id="partie10">
+            <h3>📕 10. Common Mistakes and Practice Exercises</h3>
+            <p>This section covers the most common errors students make and provides extensive practice exercises to help you master English grammar.</p>
+
+            <h4>📌 Top 20 Common Mistakes to Avoid</h4>
+            <div class="warning-box">
+                <h4>⚠️ Mistake 1: Subject-Verb Agreement</h4>
+                <p>✗ She <strong>don't</strong> understand. &nbsp;&nbsp; ✓ She <strong>doesn't</strong> understand.</p>
+                <p>✗ The book <strong>are</strong> on the table. &nbsp;&nbsp; ✓ The book <strong>is</strong> on the table.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 2: Articles (a/an/the)</h4>
+                <p>✗ I am <strong>a</strong> honest person. &nbsp;&nbsp; ✓ I am <strong>an</strong> honest person. (an before vowel sound)</p>
+                <p>✗ I went to <strong>school</strong> yesterday. &nbsp;&nbsp; ✓ Correct as is. (no article with places like school, hospital, work, church when their purpose)</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 3: Countable vs Uncountable Nouns</h4>
+                <p>✗ I have many <strong>informations</strong>. &nbsp;&nbsp; ✓ I have much <strong>information</strong>. (information is uncountable)</p>
+                <p>✗ Give me <strong>some</strong> advice. &nbsp;&nbsp; ✓ Give me <strong>some</strong> advice. (advice is uncountable)</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 4: Word Order in Questions</h4>
+                <p>✗ <strong>Where</strong> you <strong>are going</strong>? &nbsp;&nbsp; ✓ <strong>Where are you going</strong>?</p>
+                <p>✗ <strong>What</strong> does he <strong>means</strong>? &nbsp;&nbsp; ✓ <strong>What does he mean</strong>? (base verb after auxiliary)</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 5: Using gerunds vs infinitives</h4>
+                <p>✗ I enjoy <strong>to read</strong>. &nbsp;&nbsp; ✓ I enjoy <strong>reading</strong>. (enjoy + -ing)</p>
+                <p>✗ I decided <strong>going</strong>. &nbsp;&nbsp; ✓ I decided <strong>to go</strong>. (decide + to + verb)</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 6: Past Simple vs Present Perfect</h4>
+                <p>✗ I have seen him <strong>yesterday</strong>. &nbsp;&nbsp; ✓ I saw him <strong>yesterday</strong>. (yesterday = Past Simple)</p>
+                <p>✗ I have visited Paris <strong>in 2020</strong>. &nbsp;&nbsp; ✓ I visited Paris <strong>in 2020</strong>. (specific past time = Past Simple)</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 7: Silent Letters</h4>
+                <p>✗ I <strong>wrote</strong> (pronounced /roʊt/) &nbsp;&nbsp; ✓ <strong>write</strong> (/raɪt/)</p>
+                <p>English has many silent letters: <strong>knife, hour, honest, castle, Wednesday</strong></p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 8: Because vs Because of</h4>
+                <p>✗ <strong>Because of</strong> it was raining, we stayed home. &nbsp;&nbsp; ✓ <strong>Because</strong> it was raining, we stayed home.</p>
+                <p>✗ <strong>Because</strong> the rain, we stayed home. &nbsp;&nbsp; ✓ <strong>Because of</strong> the rain, we stayed home. (because of + noun)</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 9: Like vs As/Like vs Such as</h4>
+                <p>✗ <strong>Like</strong> I said before... &nbsp;&nbsp; ✓ <strong>As</strong> I said before... (like = similar to; as = in the capacity of)</p>
+                <p>✗ I have hobbies <strong>like</strong> reading and swimming. &nbsp;&nbsp; ✓ I have hobbies <strong>such as</strong> reading and swimming.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 10: Make vs Do</h4>
+                <p>✗ Let's <strong>make</strong> homework. &nbsp;&nbsp; ✓ Let's <strong>do</strong> homework. (do = perform tasks)</p>
+                <p>✗ She <strong>does</strong> a mistake. &nbsp;&nbsp; ✓ She <strong>made</strong> a mistake. (make = create)</p>
+            </div>
+
+            <h4>📌 Practice Exercises</h4>
+
+            <div class="example-box">
+                <h4>💡 Exercise 1: Choose the correct tense</h4>
+                <p>1. I ____ (study) English for five years.</p>
+                <p>2. She ____ (go) to Paris last summer.</p>
+                <p>3. Look! The baby ____ (sleep).</p>
+                <p>4. By the time I arrived, they ____ (already/eat).</p>
+                <p>5. If I ____ (be) rich, I would travel.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. have been studying / have studied, 2. went, 3. is sleeping, 4. had already eaten, 5. were</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 2: Correct the mistakes</h4>
+                <p>1. She don't know the answer.</p>
+                <p>2. I have finished my homework yesterday.</p>
+                <p>3. Although it was expensive, but I bought it.</p>
+                <p>4. The book who I read was interesting.</p>
+                <p>5. I enjoy to listen to music.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. She doesn't know, 2. I finished / I had finished my homework, 3. Although it was expensive, I bought it (remove "but"), 4. The book that/which I read was, 5. I enjoy listening to music</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 3: Rewrite using passive voice</h4>
+                <p>1. They speak English all over the world.</p>
+                <p>2. Someone stole my bicycle last night.</p>
+                <p>3. They are building a new hospital near here.</p>
+                <p>4. Shakespeare wrote Hamlet.</p>
+                <p>5. They will announce the results tomorrow.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. English is spoken, 2. My bicycle was stolen, 3. A new hospital is being built, 4. Hamlet was written by Shakespeare, 5. The results will be announced</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 4: Transform into reported speech</h4>
+                <p>1. "I am tired," she said.</p>
+                <p>2. "I will call you tomorrow," he said.</p>
+                <p>3. "Are you coming to the party?" she asked.</p>
+                <p>4. "Don't be late," the teacher said.</p>
+                <p>5. "Where did you buy this?" he asked.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. She said (that) she was tired, 2. He said (that) he would call me the next day, 3. She asked if I was coming to the party, 4. The teacher told us not to be late, 5. He asked where I had bought this</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 5: Complete with relative pronouns</h4>
+                <p>1. The student ____ won the prize is my friend.</p>
+                <p>2. The book ____ I lent you is very interesting.</p>
+                <p>3. The woman ____ husband works at the hospital is a doctor.</p>
+                <p>4. I remember the day ____ we first met.</p>
+                <p>5. Tunisia, ____ is a beautiful country, attracts many tourists.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. who/that, 2. which/that, 3. whose, 4. when, 5. which</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 6: Choose the correct modal verb</h4>
+                <p>1. You ____ study harder if you want to pass. (should/might)</p>
+                <p>2. ____ I borrow your pen? (Can/could)</p>
+                <p>3. I ____ speak three languages when I was young. (can/could)</p>
+                <p>4. You ____ park here. It's forbidden. (mustn't/don't have to)</p>
+                <p>5. If I were you, I ____ accept the offer. (will/would)</p>
+                <br>
+                <p><strong>Answers:</strong> 1. should, 2. Can/Could, 3. could, 4. mustn't, 5. would</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 7: Put the words in the correct order</h4>
+                <p>1. you / what / doing / are / ?</p>
+                <p>2. never / I / have / France / visited</p>
+                <p>3. tired / is / she / very</p>
+                <p>4. going / where / are / you / ?</p>
+                <p>5. English / spoken / is / Tunisia / in</p>
+                <br>
+                <p><strong>Answers:</strong> 1. What are you doing?, 2. I have never visited France, 3. She is very tired, 4. Where are you going?, 5. English is spoken in Tunisia</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 8: Fill in with for/since/ago/yesterday/last</h4>
+                <p>1. I have been learning English ____ three years.</p>
+                <p>2. I started this job ____ year.</p>
+                <p>3. She left the house two hours ____.</p>
+                <p>4. I haven't seen him ____ Monday.</p>
+                <p>5. We have lived here ____ 2018.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. for, 2. last, 3. ago, 4. since/last, 5. since</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 9: Complete the conditional sentences</h4>
+                <p>1. If it ____ (rain), I will stay home.</p>
+                <p>2. If I ____ (be) a millionaire, I would buy a yacht.</p>
+                <p>3. If you heat water, it ____ (boil).</p>
+                <p>4. If he had studied harder, he ____ (pass).</p>
+                <p>5. If I ____ (know) the answer, I would have told you.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. rains, 2. were, 3. boils, 4. would have passed, 5. had known</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Exercise 10: Complete with the correct form</h4>
+                <p>1. I enjoy ____ (read) books.</p>
+                <p>2. She decided ____ (go) to the university.</p>
+                <p>3. I remember ____ (meet) her at the party.</p>
+                <p>4. He promised ____ (call) me tomorrow.</p>
+                <p>5. They suggested ____ (go) to the beach.</p>
+                <br>
+                <p><strong>Answers:</strong> 1. reading, 2. to go, 3. meeting, 4. to call, 5. going</p>
+            </div>
+        </div>
+
+        <!-- IMAGE SUMMARY -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Visual Summary</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/673AB7/FFFFFF?text=Complete+English+Grammar+Summary+BAC+Tunisia" alt="Complete Grammar Summary">
+                <div class="resume-overlay">
+                    <h3>Complete English Grammar - BAC Tunisia</h3>
+                    <p>Tenses, Modals, Passive, Conditionals, Reported Speech, Relative Clauses</p>
+                </div>
             </div>
         </section>
 
-        <!-- BOUTON LEÇON SUIVANTE -->
+        <!-- VIDEO SECTION -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Explanatory Video</h2>
+            <div class="video-container">
+                <iframe src="" width="640" height="360" frameborder="0" allow="autoplay"></iframe>
+            </div>
+        </section>
+
+        <!-- NEXT LESSON BUTTON -->
         <a href="anglais-lecon2.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">English Grammar →</p>
+                <p class="next-lesson-text">Next Lesson</p>
+                <p class="next-lesson-title">How to Answer Text Questions (BAC) →</p>
             </div>
             <span class="next-lesson-arrow">→</span>
         </a>
@@ -398,7 +2082,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+        <p>© 2025 BAC Tunisia - All Rights Reserved</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

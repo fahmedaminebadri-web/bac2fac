@@ -1,560 +1,1520 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leçon 3 : Everyday Vocabulary - English</title>
+    <title>Lesson 3: How to Write for From Bac-2-Fac</title>
     <link rel="stylesheet" href="../../Shared/style.css">
     <style>
-        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
-        .en-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-        .en-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
-        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; }
-        .code-box .code-title { font-size: 0.85rem; color: #888; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
+        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 32px; margin-bottom: 32px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .en-content h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .en-content h4 { color: var(--accent); font-size: 1.05rem; margin: 24px 0 12px; }
+        .en-content p { margin-bottom: 14px; line-height: 1.85; color: var(--text-dark); }
+        .en-content ul, .en-content ol { margin: 12px 0 16px 24px; }
+        .en-content li { margin-bottom: 8px; line-height: 1.7; color: var(--text-dark); }
+        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 20px 26px; margin: 18px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; line-height: 1.7; }
+        .code-box .code-title { font-size: 0.88rem; color: #888; margin-bottom: 10px; font-family: 'Segoe UI', sans-serif; }
         .code-box .keyword { color: #569CD6; }
         .code-box .function { color: #DCDCAA; }
         .code-box .comment { color: #6A9955; }
         .code-box .string { color: #CE9178; }
         .code-box .phrase-en { color: #4FC1FF; font-weight: 600; }
         .code-box .phrase-fr { color: #B5CEA8; }
-        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
-        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
-        .example-box p { margin-bottom: 6px; color: #14532d; }
-        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
-        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
-        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
-        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
-        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
-        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
-        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #C5CAE9; }
-        .toc h3 { color: #3F51B5; margin-bottom: 14px; font-size: 1.05rem; }
-        .toc ol { padding-left: 22px; }
-        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 20px 26px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 18px 0; }
+        .example-box h4 { color: #166534; font-size: 1rem; margin-bottom: 10px; }
+        .example-box p { margin-bottom: 8px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 20px 26px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 18px 0; }
+        .warning-box h4 { color: #B45309; font-size: 1rem; margin-bottom: 10px; }
+        .warning-box p { margin-bottom: 8px; color: #92400e; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 18px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 14px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.4rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.9rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 32px; border: 1px solid #C5CAE9; }
+        .toc h3 { color: #3F51B5; margin-bottom: 16px; font-size: 1.1rem; }
+        .toc ol { padding-left: 24px; }
+        .toc li { margin-bottom: 10px; color: var(--text-dark); font-size: 0.95rem; }
         .toc li a { color: var(--primary); font-weight: 500; }
-        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #90CAF9; }
-        .plan-box h3 { color: #1565C0; margin-bottom: 14px; font-size: 1.05rem; }
-        .plan-box p { color: var(--text-dark); line-height: 1.7; }
-        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-        .vocab-table th { background: #673AB7; color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
-        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 32px; border: 1px solid #90CAF9; }
+        .plan-box h3 { color: #1565C0; margin-bottom: 16px; font-size: 1.1rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.8; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .vocab-table th { background: #673AB7; color: white; padding: 14px; text-align: left; border-radius: 10px 10px 0 0; font-size: 0.95rem; }
+        .vocab-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); font-size: 0.92rem; }
         .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
         .vocab-table .en-word { color: #673AB7; font-weight: 600; }
         .vocab-table .fr-word { color: var(--text-dark); }
-        .category-box { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 1px solid #81C784; }
-        .category-box h4 { color: #2E7D32; margin-bottom: 10px; }
-        .category-box p { margin-bottom: 4px; }
+        .writing-type { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 2px solid #FFB74D; }
+        .writing-type h4 { color: #E65100; margin-bottom: 10px; }
+        .writing-type p { margin-bottom: 6px; }
+        .structure-box { background: linear-gradient(135deg, #E8EAF6, #C5CAE9); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 1px solid #9FA8DA; }
+        .structure-box h4 { color: #303F9F; margin-bottom: 10px; }
+        .structure-box p { margin-bottom: 6px; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .comparison-table th { background: #1565C0; color: white; padding: 14px; text-align: left; border-radius: 10px 10px 0 0; }
+        .comparison-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+        .tips-box { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 1px solid #81C784; }
+        .tips-box h4 { color: #2E7D32; margin-bottom: 10px; }
+        .tips-box p { margin-bottom: 6px; }
     </style>
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
         <div class="header-content">
-            <a href="../../index.html" class="logo">
+         <a href="../../index.html" class="logo">
                 <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
             <nav class="nav-links">
-                <a href="../../index.html">Accueil</a>
+                <a href="../../index.html">Home</a>
                 <a href="../../Mathematiques/math.html">Math</a>
-                <a href="../../Physique/physique.html">Physique</a>
-                <a href="../../Electrique/electrique.html">Électrique</a>
-                <a href="../../Mecanique/mecanique.html">Mécanique</a>
-                <a href="../Francais/francais.html">Français</a>
-                <a href="anglais.html">Anglais</a>
-                <a href="../Arabe/arabe.html">Arabe</a>
-                <a href="../../Informatique/informatique.html">Info</a>
-                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+                <a href="../../Physique/physique.html">Physics</a>
+                <a href="../../Electrique/electrique.html">Electricity</a>
+                <a href="../../Mecanique/mecanique.html">Mechanics</a>
+                <a href="../Francais/francais.html">French</a>
+                <a href="anglais.html">English</a>
+                <a href="../Arabe/arabe.html">Arabic</a>
+                <a href="../../Informatique/informatique.html">IT</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philosophy</a>
             </nav>
         </div>
     </header>
 
-    <!-- CONTENU PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <main class="container">
-        <a href="anglais.html" class="back-btn">← Retour aux leçons d'Anglais</a>
+        <a href="anglais.html" class="back-btn">← Back to English Lessons</a>
 
-        <!-- HEADER LEÇON -->
+        <!-- LESSON HEADER -->
         <div class="lesson-header">
-            <h1>Leçon 3 : Everyday Vocabulary</h1>
-            <p class="breadcrumb">Anglais > Leçon 3</p>
+            <h1>Lesson 3: How to Write for BAC Tunisia</h1>
+            <p class="breadcrumb">English > Lesson 3</p>
         </div>
 
-        <!-- RÉSUMÉ -->
+        <!-- SUMMARY -->
         <div class="plan-box">
-            <h3>📝 Résumé de la leçon</h3>
-            <p>Cette leçon présente le <strong>vocabulaire essentiel du quotidien</strong> organisé par thèmes : la famille, la maison, les achats, la nourriture, les transports et les expressions idiomatiques courantes. Enrichir son vocabulaire est la clé pour communiquer efficacement en anglais et réussir les épreuves du Bac.</p>
+            <h3>📝 Lesson Summary</h3>
+            <p>This comprehensive lesson teaches you <strong>how to produce excellent written work</strong> for the BAC Tunisia English exam. You will master paragraph structure using the TEEEC model, learn to write formal and informal emails, compose argumentative essays, understand evaluation criteria, and practice with model answers. These skills are essential for achieving a high score in the production écrite section.</p>
         </div>
 
-        <!-- PLAN -->
+        <!-- TABLE OF CONTENTS -->
         <div class="toc">
-            <h3>📋 Plan de la leçon</h3>
+            <h3>📋 Table of Contents</h3>
             <ol>
-                <li><a href="#partie1">La famille et les relations</a></li>
-                <li><a href="#partie2">La maison et les pièces</a></li>
-                <li><a href="#partie3">Les achats et l'argent</a></li>
-                <li><a href="#partie4">La nourriture et les repas</a></li>
-                <li><a href="#partie5">Les transports et les directions</a></li>
-                <li><a href="#partie6">Expressions idiomatiques utiles</a></li>
+                <li><a href="#partie1">Paragraph Structure: The TEEEC Model</a></li>
+                <li><a href="#partie2">The Writing Process: Planning and Drafting</a></li>
+                <li><a href="#partie3">Formal and Informal Emails</a></li>
+                <li><a href="#partie4">Argumentative Essays: Complete Guide</a></li>
+                <li><a href="#partie5">Other Writing Types (Articles, Summaries, Reviews)</a></li>
+                <li><a href="#partie6">Linking Words and Transition Phrases</a></li>
+                <li><a href="#partie7">Vocabulary for Academic Writing</a></li>
+                <li><a href="#partie8">Common Mistakes to Avoid</a></li>
+                <li><a href="#partie9">Evaluation Criteria and Grading</a></li>
+                <li><a href="#partie10">Practice Exercises and Model Answers</a></li>
             </ol>
         </div>
 
-        <!-- SECTION PODCAST -->
-        <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
-            <div class="audio-player">
-                <iframe src=""
-                        width="600" height="120" frameborder="0" allow="autoplay">
-                </iframe>
-            </div>
-        </section>
-
-        <!-- PARTIE 1 -->
+        <!-- PART 1: PARAGRAPH STRUCTURE -->
         <div class="en-content" id="partie1">
-            <h3>📘 1. La famille et les relations</h3>
-            <table class="vocab-table">
-                <tr>
-                    <th>Anglais</th>
-                    <th>Français</th>
-                </tr>
-                <tr>
-                    <td class="en-word">Family</td>
-                    <td class="fr-word">Famille</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Mother / Mom / Mum</td>
-                    <td class="fr-word">Mère / Maman</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Father / Dad / Daddy</td>
-                    <td class="fr-word">Père / Papa</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Parents</td>
-                    <td class="fr-word">Parents</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Brother</td>
-                    <td class="fr-word">Frère</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Sister</td>
-                    <td class="fr-word">Sœur</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Siblings</td>
-                    <td class="fr-word">Frères et sœurs</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Grandmother / Grandma</td>
-                    <td class="fr-word">Grand-mère</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Grandfather / Grandpa</td>
-                    <td class="fr-word">Grand-père</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Uncle</td>
-                    <td class="fr-word">Oncle</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Aunt</td>
-                    <td class="fr-word">Tante</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Cousin</td>
-                    <td class="fr-word">Cousin(e)</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Nephew</td>
-                    <td class="fr-word">Neveu</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Niece</td>
-                    <td class="fr-word">Nièce</td>
-                </tr>
-            </table>
-            <div class="code-box">
-                <div class="code-title">// Relations et liens familiaux</div>
-                <span class="phrase-en">"I have two brothers and one sister."</span> <span class="phrase-fr">— J'ai deux frères et une sœur.</span>
-                <br><span class="phrase-en">"She is married to John."</span> <span class="phrase-fr">— Elle est mariée avec John.</span>
-                <br><span class="phrase-en">"They have three children."</span> <span class="phrase-fr">— Ils ont trois enfants.</span>
-                <br><span class="phrase-en">"He is my best friend."</span> <span class="phrase-fr">— C'est mon meilleur ami.</span>
+            <h3>📘 1. Paragraph Structure: The TEEEC Model</h3>
+            <p>A well-structured paragraph is the foundation of excellent writing. The TEEEC model provides a clear framework for creating coherent, developed paragraphs that fully address the topic.</p>
+
+            <h4>📌 Understanding TEEEC</h4>
+            <div class="structure-box">
+                <h4>📝 TEEEC = Topic Sentence + Explanation + Example + Explanation + Concluding Sentence</h4>
+                <p><strong>T - Topic Sentence:</strong> The main idea of the paragraph (what you want to say)</p>
+                <p><strong>E - Explanation:</strong> Explain and develop the topic sentence</p>
+                <p><strong>E - Example:</strong> Provide a specific example to illustrate your point</p>
+                <p><strong>E - Explanation:</strong> Explain the significance of the example</p>
+                <p><strong>C - Concluding Sentence:</strong> Restate or summarize the main idea</p>
             </div>
-            <div class="category-box">
-                <h4>👨‍👩‍👧‍👦 Types de familles (Family types)</h4>
-                <p>• <strong>Nuclear family</strong> — Famille nucléaire (parents + enfants)</p>
-                <p>• <strong>Extended family</strong> — Famille élargie (grands-parents, oncles, tantes…)</p>
-                <p>• <strong>Single-parent family</strong> — Famille monoparentale</p>
-                <p>• <strong>Blended family</strong> — Famille recomposée</p>
+
+            <h4>📌 The Topic Sentence</h4>
+            <p>The topic sentence is the most important sentence in a paragraph. It:</p>
+            <ul>
+                <li>Introduces the main idea</li>
+                <li>Is usually the first sentence (but can be elsewhere)</li>
+                <li>Is general enough to cover the whole paragraph</li>
+                <li>Is specific enough to be meaningful</li>
+            </ul>
+
+            <div class="code-box">
+                <div class="code-title">// Good vs Bad Topic Sentences</div>
+                <span class="comment">// Good Topic Sentence:</span>
+                <br>"<strong>Social media has both positive and negative effects on young people.</strong>"
+                <br><span class="phrase-fr">This is clear, introduces the main idea, and sets up the paragraph.</span>
+                <br><br><span class="comment">// Bad Topic Sentence:</span>
+                <br>"<strong>Social media is popular.</strong>"
+                <br><span class="phrase-fr">Too vague — doesn't indicate what the paragraph will discuss</span>
+                <br><br><span class="comment">// Bad Topic Sentence:</span>
+                <br>"<strong>Social media was invented in 2004.</strong>"
+                <br><span class="phrase-fr">Too narrow — doesn't allow for development and discussion</span>
+            </div>
+
+            <h4>📌 Complete TEEEC Paragraph Example</h4>
+            <div class="code-box">
+                <div class="code-title">// TEEEC Paragraph: Social Media and Communication</div>
+                <span class="comment">// Topic Sentence (T)</span>
+                <br><strong>Social media has revolutionized the way people communicate with each other.</strong>
+                <br><br><span class="comment">// Explanation 1 (E)</span>
+                <br>Through various platforms, individuals can now stay connected with friends and family regardless of geographical distance.
+                <br><br><span class="comment">// Example (E)</span>
+                <br><strong>For instance</strong>, during the COVID-19 pandemic, many families used video calling apps like Zoom and FaceTime to maintain regular contact.
+                <br><br><span class="comment">// Explanation of Example (E)</span>
+                <br><strong>This</strong> allowed grandparents to see their grandchildren and friends to celebrate birthdays together, despite being physically separated during lockdowns.
+                <br><br><span class="comment">// Concluding Sentence (C)</span>
+                <br><strong>Therefore</strong>, social media has made communication more accessible and convenient in our modern world.
+            </div>
+
+            <h4>📌 Another TEEEC Example</h4>
+            <div class="code-box">
+                <div class="code-title">// TEEEC Paragraph: Online Education</div>
+                <span class="comment">// Topic Sentence (T)</span>
+                <br><strong>Online education has made learning more accessible than ever before.</strong>
+                <br><br><span class="comment">// Explanation 1 (E)</span>
+                <br>Students from remote areas or developing countries can now access courses from top universities without traveling.
+                <br><br><span class="comment">// Example (E)</span>
+                <br><strong>For example</strong>, platforms like Coursera and edX offer courses from Harvard, MIT, and other prestigious institutions for free or at low cost.
+                <br><br><span class="comment">// Explanation of Example (E)</span>
+                <br><strong>This</strong> means that someone in a small village in Tunisia can learn computer programming from the best instructors in the world.
+                <br><br><span class="comment">// Concluding Sentence (C)</span>
+                <br><strong>In conclusion</strong>, online education has democratized access to knowledge and created new opportunities for learners worldwide.
+            </div>
+
+            <h4>📌 Alternative Paragraph Models</h4>
+
+            <h4>PEE Model (Simpler)</h4>
+            <div class="structure-box">
+                <p><strong>P - Point:</strong> State your main idea</p>
+                <p><strong>E - Evidence:</strong> Provide supporting evidence or example</p>
+                <p><strong>E - Explanation:</strong> Explain how the evidence supports your point</p>
+            </div>
+
+            <h4>TEA Model (Even Simpler)</h4>
+            <div class="structure-box">
+                <p><strong>T - Topic:</strong> Introduce the topic</p>
+                <p><strong>E - Evidence:</strong> Provide evidence or examples</p>
+                <p><strong>A - Analysis:</strong> Analyze what this means or why it matters</p>
+            </div>
+
+            <div class="tips-box">
+                <h4>✅ Tips for Strong Paragraphs</h4>
+                <p>• Each paragraph should focus on ONE main idea</p>
+                <p>• Keep paragraphs balanced in length (usually 4-8 sentences)</p>
+                <p>• Use transition sentences to connect paragraphs</p>
+                <p>• Include specific examples rather than general statements</p>
+                <p>• Avoid starting multiple paragraphs the same way</p>
             </div>
         </div>
 
-        <!-- PARTIE 2 -->
+        <!-- PART 2: WRITING PROCESS -->
         <div class="en-content" id="partie2">
-            <h3>📗 2. La maison et les pièces</h3>
-            <table class="vocab-table">
-                <tr>
-                    <th>Anglais</th>
-                    <th>Français</th>
-                </tr>
-                <tr>
-                    <td class="en-word">House / Home</td>
-                    <td class="fr-word">Maison / Foyer</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Apartment / Flat</td>
-                    <td class="fr-word">Appartement</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Living room</td>
-                    <td class="fr-word">Salon / Séjour</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Bedroom</td>
-                    <td class="fr-word">Chambre à coucher</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Kitchen</td>
-                    <td class="fr-word">Cuisine</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Bathroom</td>
-                    <td class="fr-word">Salle de bain</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Toilet / Restroom</td>
-                    <td class="fr-word">Toilettes</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Garden / Yard</td>
-                    <td class="fr-word">Jardin</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Roof</td>
-                    <td class="fr-word">Toit</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Door</td>
-                    <td class="fr-word">Porte</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Window</td>
-                    <td class="fr-word">Fenêtre</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Floor</td>
-                    <td class="fr-word">Sol / Étage</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Stairs</td>
-                    <td class="fr-word">Escalier</td>
-                </tr>
-            </table>
-            <div class="code-box">
-                <div class="code-title">// Dans la maison</div>
-                <span class="phrase-en">"There is a big garden behind the house."</span> <span class="phrase-fr">— Il y a un grand jardin derrière la maison.</span>
-                <br><span class="phrase-en">"The bedroom is on the second floor."</span> <span class="phrase-fr">— La chambre est au deuxième étage.</span>
-                <br><span class="phrase-en">"I live in a small apartment."</span> <span class="phrase-fr">— J'habite dans un petit appartement.</span>
-            </div>
-        </div>
+            <h3>📗 2. The Writing Process: Planning and Drafting</h3>
+            <p>Good writing doesn't happen in one draft. Following a systematic process will help you produce well-organized, coherent pieces of writing.</p>
 
-        <!-- PARTIE 3 -->
-        <div class="en-content" id="partie3">
-            <h3>📙 3. Les achats et l'argent</h3>
-            <table class="vocab-table">
-                <tr>
-                    <th>Anglais</th>
-                    <th>Français</th>
-                </tr>
-                <tr>
-                    <td class="en-word">Shop / Store</td>
-                    <td class="fr-word">Magasin</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Market</td>
-                    <td class="fr-word">Marché</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Supermarket</td>
-                    <td class="fr-word">Supermarché</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Shopping center / Mall</td>
-                    <td class="fr-word">Centre commercial</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Price</td>
-                    <td class="fr-word">Prix</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Cheap / Expensive</td>
-                    <td class="fr-word">Pas cher / Cher</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Sale / Discount</td>
-                    <td class="fr-word">Soldes / Réduction</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Money / Cash</td>
-                    <td class="fr-word">Argent / Espèces</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Credit card</td>
-                    <td class="fr-word">Carte de crédit</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Receipt</td>
-                    <td class="fr-word">Reçu</td>
-                </tr>
-                <tr>
-                    <td class="en-word">To buy / To sell</td>
-                    <td class="fr-word">Acheter / Vendre</td>
-                </tr>
-                <tr>
-                    <td class="en-word">How much is it?</td>
-                    <td class="fr-word">Ça coûte combien ?</td>
-                </tr>
-            </table>
-            <div class="code-box">
-                <div class="code-title">// Dans un magasin</div>
-                <span class="phrase-en">"How much does this shirt cost?"</span> <span class="phrase-fr">— Combien coûte cette chemise ?</span>
-                <br><span class="phrase-en">"It's too expensive. Can I have a discount?"</span> <span class="phrase-fr">— C'est trop cher. Puis-je avoir une réduction ?</span>
-                <br><span class="phrase-en">"Can I pay by card?"</span> <span class="phrase-fr">— Puis-je payer par carte ?</span>
-                <br><span class="phrase-en">"Do you have this in another size?"</span> <span class="phrase-fr">— Avez-vous ceci dans une autre taille ?</span>
-            </div>
-        </div>
+            <h4>📌 The 5-Stage Writing Process</h4>
 
-        <!-- PARTIE 4 -->
-        <div class="en-content" id="partie4">
-            <h3>📕 4. La nourriture et les repas</h3>
-            <table class="vocab-table">
-                <tr>
-                    <th>Anglais</th>
-                    <th>Français</th>
-                </tr>
-                <tr>
-                    <td class="en-word">Breakfast</td>
-                    <td class="fr-word">Petit-déjeuner</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Lunch</td>
-                    <td class="fr-word">Déjeuner</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Dinner / Supper</td>
-                    <td class="fr-word">Dîner / Souper</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Bread</td>
-                    <td class="fr-word">Pain</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Water</td>
-                    <td class="fr-word">Eau</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Milk</td>
-                    <td class="fr-word">Lait</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Coffee / Tea</td>
-                    <td class="fr-word">Café / Thé</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Rice / Pasta</td>
-                    <td class="fr-word">Riz / Pâtes</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Chicken / Meat / Fish</td>
-                    <td class="fr-word">Poulet / Viande / Poisson</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Vegetables / Fruits</td>
-                    <td class="fr-word">Légumes / Fruits</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Salad</td>
-                    <td class="fr-word">Salade</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Soup</td>
-                    <td class="fr-word">Soupe / Potage</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Dessert</td>
-                    <td class="fr-word">Dessert</td>
-                </tr>
-            </table>
+            <h4>Stage 1: Analyze the Task</h4>
             <div class="code-box">
-                <div class="code-title">// Au restaurant</div>
-                <span class="phrase-en">"Can I see the menu, please?"</span> <span class="phrase-fr">— Puis-je voir le menu, s'il vous plaît ?</span>
-                <br><span class="phrase-en">"I would like to order the chicken, please."</span> <span class="phrase-fr">— Je voudrais commander le poulet, s'il vous plaît.</span>
-                <br><span class="phrase-en">"What do you recommend?"</span> <span class="phrase-fr">— Que recommandez-vous ?</span>
-                <br><span class="phrase-en">"The bill, please."</span> <span class="phrase-fr">— L'addition, s'il vous plaît.</span>
-                <br><span class="phrase-en">"I'm vegetarian."</span> <span class="phrase-fr">— Je suis végétarien(ne).</span>
+                <div class="code-title">// Before Writing: Understand What is Asked</div>
+                <span class="comment">// Ask yourself:</span>
+                <br>• What type of writing is required? (email, essay, article?)
+                <br>• Who is my audience? (friend, teacher, employer?)
+                <br>• What is the purpose? (inform, persuade, entertain?)
+                <br>• How long should it be? (word limit?)
+                <br>• What format is expected? (formal, informal?)
             </div>
-        </div>
 
-        <!-- PARTIE 5 -->
-        <div class="en-content" id="partie5">
-            <h3>📒 5. Les transports et les directions</h3>
-            <table class="vocab-table">
-                <tr>
-                    <th>Anglais</th>
-                    <th>Français</th>
-                </tr>
-                <tr>
-                    <td class="en-word">Car / Bus / Train</td>
-                    <td class="fr-word">Voiture / Bus / Train</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Plane / Airplane</td>
-                    <td class="fr-word">Avion</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Bicycle / Bike</td>
-                    <td class="fr-word">Vélo</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Taxi</td>
-                    <td class="fr-word">Taxi</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Metro / Subway</td>
-                    <td class="fr-word">Métro</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Airport</td>
-                    <td class="fr-word">Aéroport</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Train station</td>
-                    <td class="fr-word">Gare</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Bus stop</td>
-                    <td class="fr-word">Arrêt de bus</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Left / Right</td>
-                    <td class="fr-word">Gauche / Droite</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Straight ahead</td>
-                    <td class="fr-word">Tout droit</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Near / Far</td>
-                    <td class="fr-word">Près / Loin</td>
-                </tr>
-            </table>
+            <h4>Stage 2: Brainstorm and Plan</h4>
             <div class="code-box">
-                <div class="code-title">// Demander son chemin</div>
-                <span class="phrase-en">"Excuse me, how do I get to the train station?"</span> <span class="phrase-fr">— Excusez-moi, comment aller à la gare ?</span>
-                <br><span class="phrase-en">"Turn left at the traffic light."</span> <span class="phrase-fr">— Tournez à gauche au feu.</span>
-                <br><span class="phrase-en">"Go straight ahead for 200 meters."</span> <span class="phrase-fr">— Continuez tout droit pendant 200 mètres.</span>
-                <br><span class="phrase-en">"Is it far from here?"</span> <span class="phrase-fr">— Est-ce loin d'ici ?</span>
-                <br><span class="phrase-en">"It's quite close."</span> <span class="phrase-fr">— C'est assez proche.</span>
+                <div class="code-title">// Planning Techniques</div>
+                <span class="comment">// Mind Map:</span>
+                <br>Write the topic in the center and branch out with related ideas.
+                <br><br><span class="comment">// List:</span>
+                <br>Write down all ideas, then organize them into groups.
+                <br><br><span class="comment">// Outline:</span>
+                <br>Create a structured plan with main points and sub-points.
             </div>
-        </div>
 
-        <!-- PARTIE 6 -->
-        <div class="en-content" id="partie6">
-            <h3>📓 6. Expressions idiomatiques utiles</h3>
-            <p>Les <strong>idioms</strong> (expressions idiomatiques) sont des expressions dont le sens ne peut pas être deviné mot à mot. Elles sont essentielles pour parler comme un natif !</p>
-            <table class="vocab-table">
-                <tr>
-                    <th>Expression</th>
-                    <th>Signification</th>
-                </tr>
-                <tr>
-                    <td class="en-word">How are you doing?</td>
-                    <td class="fr-word">Comment allez-vous ? (informel)</td>
-                </tr>
-                <tr>
-                    <td class="en-word">What's up?</td>
-                    <td class="fr-word">Quoi de neuf ? (très informel)</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Long time no see!</td>
-                    <td class="fr-word">Ça fait longtemps !</td>
-                </tr>
-                <tr>
-                    <td class="en-word">I couldn't agree more.</td>
-                    <td class="fr-word">Je suis tout à fait d'accord.</td>
-                </tr>
-                <tr>
-                    <td class="en-word">It's a piece of cake.</td>
-                    <td class="fr-word">C'est un jeu d'enfant.</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Break a leg!</td>
-                    <td class="fr-word">Bonne chance ! (avant un examen)</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Bite the bullet</td>
-                    <td class="fr-word">Prendre son courage à deux mains</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Hit the nail on the head</td>
-                    <td class="fr-word">Mettre le doigt dessus / Avoir raison</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Cost an arm and a leg</td>
-                    <td class="fr-word">Coûter les yeux de la tête</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Once in a blue moon</td>
-                    <td class="fr-word">Rarement / De temps en temps</td>
-                </tr>
-            </table>
+            <h4>Stage 3: Draft (First Version)</h4>
+            <div class="code-box">
+                <div class="code-title">// While Drafting</div>
+                <span class="comment">// DO:</span>
+                <br>• Write quickly to capture your ideas
+                <br>• Focus on content, not perfection
+                <br>• Use your outline as a guide
+                <br>• Include examples and details
+                <br><br><span class="comment">// DON'T:</span>
+                <br>• Worry about spelling or grammar yet
+                <br>• Edit as you write
+                <br>• Second-guess your ideas
+            </div>
+
+            <h4>Stage 4: Revise</h4>
+            <div class="code-box">
+                <div class="code-title">// Revision Checklist</div>
+                <span class="comment">// Content:</span>
+                <br>• Have I addressed all parts of the question?
+                <br>• Is my argument clear and logical?
+                <br>• Do I have enough supporting examples?
+                <br>• Is the structure clear?
+                <br><br><span class="comment">// Organization:</span>
+                <br>• Do my ideas flow logically?
+                <br>• Are transitions smooth?
+                <br>• Is each paragraph focused on one idea?
+            </div>
+
+            <h4>Stage 5: Edit and Proofread</h4>
+            <div class="code-box">
+                <div class="code-title">// Final Check</div>
+                <span class="comment">// Grammar and Language:</span>
+                <br>• Check verb tenses — do they match throughout?
+                <br>• Ensure subject-verb agreement
+                <br>• Watch for run-on sentences
+                <br>• Check word order in questions
+                <br><br><span class="comment">// Vocabulary and Style:</span>
+                <br>• Have I used varied vocabulary?
+                <br>• Is the tone appropriate?
+                <br>• Have I avoided repetition?
+                <br><br><span class="comment">// Mechanics:</span>
+                <br>• Check spelling
+                <br>• Verify punctuation
+                <br>• Ensure proper capitalization
+            </div>
+
+            <h4>📌 Sample Planning Template</h4>
             <div class="example-box">
-                <h4>💡 Dialogue avec expressions idiomatiques</h4>
-                <p><strong>A :</strong> Hey! Long time no see! How's it going?</p>
-                <p><strong>B :</strong> Pretty good! I just finished my exams.</p>
-                <p><strong>A :</strong> Really? How did it go?</p>
-                <p><strong>B :</strong> It was a piece of cake! I'm so relieved!</p>
-                <p><strong>A :</strong> Great! We should celebrate. What about going to a restaurant tonight?</p>
-                <p><strong>B :</strong> Sure! That sounds awesome!</p>
-            </div>
-            <div class="warning-box">
-                <h4>⚠️ Conseil pour enrichir votre vocabulaire</h4>
-                <p>1. Lisez des textes en anglais каждый jour (journaux, réseaux sociaux)</p>
-                <p>2. Regardez des films et séries en VO avec sous-titres anglais</p>
-                <p>3. Apprenez 5 nouveaux mots par jour et استخدم-les dans des phrases</p>
-                <p>4. Tenez un journal en anglais pour pratiquer l'écriture</p>
+                <h4>💡 Essay Planning Template</h4>
+                <p><strong>Topic:</strong> Should smartphones be allowed in schools?</p>
+                <br>
+                <p><strong>Introduction:</strong></p>
+                <p>• Hook/Background: Technology is everywhere...</p>
+                <p>• Thesis statement: I believe smartphones should be allowed with guidelines</p>
+                <br>
+                <p><strong>Body Paragraph 1:</strong></p>
+                <p>• Point: Educational benefits</p>
+                <p>• Example: Apps for learning, research capabilities</p>
+                <p>• Evidence: Statistics on improved learning</p>
+                <br>
+                <p><strong>Body Paragraph 2:</strong></p>
+                <p>• Point: Communication benefits</p>
+                <p>• Example: Contacting parents, emergencies</p>
+                <p>• Evidence: Parents' peace of mind</p>
+                <br>
+                <p><strong>Body Paragraph 3 (Counter-argument):</strong></p>
+                <p>• Counter: Distractions, misuse</p>
+                <p>• Rebuttal: With proper supervision and rules</p>
+                <br>
+                <p><strong>Conclusion:</strong></p>
+                <p>• Restate thesis: Smartphones should be allowed</p>
+                <p>• Summary: Benefits outweigh concerns with guidelines</p>
             </div>
         </div>
 
-        <!-- SECTION RÉSUMÉ IMAGE -->
-        <section class="section-resume">
-            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
-            <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/4527A0/FFFFFF?text=Everyday+English+Vocabulary+-+Complete" alt="Résumé vocabulaire anglais">
-                <div class="resume-overlay">
-                    <h3>Vocabulaire anglais du quotidien</h3>
-                    <p>Famille, maison, achats, nourriture, transports, expressions idiomatiques</p>
-                </div>
-                            <br><br>
-                <a href="" download>
-                    <button>📥 Télécharger la photo</button>
-                </a></div>
-        </section>
+        <!-- PART 3: EMAILS -->
+        <div class="en-content" id="partie3">
+            <h3>📙 3. Formal and Informal Emails</h3>
+            <p>Email writing is a common task in the BAC exam. Understanding the differences between formal and informal styles is essential.</p>
 
-        <!-- SECTION VIDÉO -->
-        <section class="section-video">
-            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
-            <div class="video-container">
-                <iframe src=""
-                        width="640" height="360" frameborder="0" allow="autoplay">
-                </iframe>
+            <h4>📌 Formal vs Informal Language</h4>
+            <table class="comparison-table">
+                <tr>
+                    <th>Formal</th>
+                    <th>Informal</th>
+                </tr>
+                <tr>
+                    <td>Dear Sir/Madam</td>
+                    <td>Hi, Hello, Hey</td>
+                </tr>
+                <tr>
+                    <td>Yours sincerely</td>
+                    <td>Best, Regards, Love</td>
+                </tr>
+                <tr>
+                    <td>I am writing to inquire about...</td>
+                    <td>I wanted to ask you about...</td>
+                </tr>
+                <tr>
+                    <td>Furthermore, Moreover</td>
+                    <td>Also, Plus</td>
+                </tr>
+                <tr>
+                    <td>I would appreciate your help</td>
+                    <td>Could you help me?</td>
+                </tr>
+                <tr>
+                    <td>Unfortunately</td>
+                    <td>Unfortunately / Sadly</td>
+                </tr>
+                <tr>
+                    <td>Please find attached</td>
+                    <td>Here's the file</td>
+                </tr>
+                <tr>
+                    <td>Full sentences</td>
+                    <td>Contractions OK</td>
+                </tr>
+            </table>
+
+            <h4>📌 Formal Email Structure</h4>
+            <div class="structure-box">
+                <h4>📝 Formal Email Format</h4>
+                <p><strong>Subject:</strong> Clear, specific subject line</p>
+                <p><strong>Greeting:</strong> Dear Mr./Ms. [Name] or Dear Sir/Madam</p>
+                <p><strong>Introduction:</strong> State your purpose immediately</p>
+                <p><strong>Body:</strong> Provide necessary details in logical order</p>
+                <p><strong>Conclusion:</strong> Thank the reader, restate request if needed</p>
+                <p><strong>Sign-off:</strong> Yours sincerely / Kind regards</p>
+                <p><strong>Signature:</strong> Your name</p>
+            </div>
+
+            <h4>📌 Formal Email Example</h4>
+            <div class="code-box">
+                <div class="code-title">// Formal Email: Job Application</div>
+                <span class="keyword">Subject:</span> Application for English Teacher Position
+                <br><br>
+                <span class="keyword">Dear Mr. Johnson,</span>
+                <br><br>
+                <span class="function">I am writing to express my interest in the English Teacher position</span> advertised on your school's website.
+                <br><br>
+                <span class="function">I graduated from the University of Tunis</span> with a degree in English Literature. <span class="function">I have three years of teaching experience</span> at a secondary school, where I taught students from ages 14 to 18.
+                <br><br>
+                <span class="function">I would be grateful if you could provide me with more information</span> about the requirements for this position, including the application deadline and necessary documents.
+                <br><br>
+                <span class="function">I have attached my CV and letters of recommendation</span> for your consideration.
+                <br><br>
+                <span class="function">I look forward to hearing from you at your earliest convenience.</span>
+                <br><br>
+                <span class="keyword">Yours sincerely,</span>
+                <br>Ahmed Ben Ali
+            </div>
+
+            <h4>📌 Another Formal Email Example</h4>
+            <div class="code-box">
+                <div class="code-title">// Formal Email: Request for Information</div>
+                <span class="keyword">Subject:</span> Request for Information About Summer English Course
+                <br><br>
+                <span class="keyword">Dear Sir or Madam,</span>
+                <br><br>
+                <span class="function">I am writing to inquire about your summer English language course</span> for international students.
+                <br><br>
+                <span class="function">I am a high school student from Tunisia</span>, and I am interested in improving my English skills during the summer holiday. <span class="function">Could you please provide me with the following information:</span>
+                <br><br>
+                <span class="function">1. Course duration and start dates</span>
+                <br><span class="function">2. Course fees and payment options</span>
+                <br><span class="function">3. Accommodation options</span>
+                <br><span class="function">4. Entry requirements</span>
+                <br><br>
+                <span class="function">I would be grateful for any additional information</span> you could provide about the program.
+                <br><br>
+                <span class="function">Thank you for your time and consideration. I look forward to your response.</span>
+                <br><br>
+                <span class="keyword">Yours faithfully,</span>
+                <br>Sarah Mansour
+            </div>
+
+            <h4>📌 Informal Email Structure</h4>
+            <div class="structure-box">
+                <h4>📝 Informal Email Format</h4>
+                <p><strong>Subject:</strong> Casual or no subject needed</p>
+                <p><strong>Greeting:</strong> Hi, Hello, Hey (first name if known)</p>
+                <p><strong>Body:</strong> Conversational, friendly tone</p>
+                <p><strong>Closing:</strong> Best, Take care, Talk soon</p>
+                <p><strong>Signature:</strong> First name only</p>
+            </div>
+
+            <h4>📌 Informal Email Example</h4>
+            <div class="code-box">
+                <div class="code-title">// Informal Email: Catching Up with a Friend</div>
+                <span class="keyword">Subject:</span> Hey! Long time no see!
+                <br><br>
+                <span class="keyword">Hi Sara,</span>
+                <br><br>
+                <span class="function">How are you doing?</span> I haven't heard from you in ages!
+                <br><br>
+                <span class="function">I wanted to tell you that</span> I just got accepted into university! <span class="function">I'm so excited</span> about studying Computer Science. The campus is beautiful, and I've already made some friends.
+                <br><br>
+                <span class="function">How's everything going with you?</span> Are you still working at that café? How's your family?
+                <br><br>
+                <span class="function">Why don't we meet up</span> next weekend to celebrate? <span class="function">It would be great to catch up!</span> We could go to that coffee shop near the beach.
+                <br><br>
+                <span class="function">Let me know</span> when you're free.
+                <br><br>
+                <span class="keyword">Best,</span>
+                <br>Ahmed
+            </div>
+
+            <h4>📌 Another Informal Email Example</h4>
+            <div class="code-box">
+                <div class="code-title">// Informal Email: Apology to a Friend</div>
+                <span class="keyword">Subject:</span> So sorry about yesterday!
+                <br><br>
+                <span class="keyword">Hey Mohammed,</span>
+                <br><br>
+                <span class="function">I'm so sorry</span> I couldn't make it to your birthday party yesterday. My car broke down on the way, and I had to wait for a tow truck. It was really frustrating!
+                <br><br>
+                <span class="function">How was the party?</span> Did everyone have a good time? I'm really disappointed I missed it. <span class="function">Can we hang out sometime</span> next week? I'll make it up to you!
+                <br><br>
+                <span class="function">Sorry again</span> and hope you're not too mad at me.
+                <br><br>
+                <span class="keyword">Take care,</span>
+                <br>Youssef
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Key Differences to Remember</h4>
+                <p>• <strong>Formal:</strong> No contractions (I am, not I'm), complete sentences, polite language</p>
+                <p>• <strong>Informal:</strong> Contractions OK, shorter sentences, friendly tone</p>
+                <p>• <strong>Never use:</strong> "u" for "you," "gr8" for "great," or text-message abbreviations!</p>
+                <p>• <strong>Always use:</strong> proper grammar and spelling in both formal and informal emails</p>
+            </div>
+        </div>
+
+        <!-- PART 4: ARGUMENTATIVE ESSAYS -->
+        <div class="en-content" id="partie4">
+            <h3>📕 4. Argumentative Essays: Complete Guide</h3>
+            <p>The argumentative essay is the most common and important writing task in the BAC exam. It requires you to present a clear argument with supporting evidence.</p>
+
+            <h4>📌 Types of Essays</h4>
+            <div class="writing-type">
+                <h4>1. Argumentative Essay</h4>
+                <p>Presents a clear position and defends it with evidence and reasoning.</p>
+                <p><strong>Example:</strong> "Technology has done more harm than good to society."</p>
+            </div>
+
+            <div class="writing-type">
+                <h4>2. Opinion Essay</h4>
+                <p>States your opinion on a topic and supports it with reasons.</p>
+                <p><strong>Example:</strong> "In my opinion, students should learn two foreign languages."</p>
+            </div>
+
+            <div class="writing-type">
+                <h4>3. Discussion Essay</h4>
+                <p>Discusses both sides of an issue before giving an opinion.</p>
+                <p><strong>Example:</strong> "Some people think..., others believe... In my view..."</p>
+            </div>
+
+            <div class="writing-type">
+                <h4>4. Problem-Solution Essay</h4>
+                <p>Identifies a problem and proposes solutions.</p>
+                <p><strong>Example:</strong> "Climate change is a serious problem. This essay will discuss solutions..."</p>
+            </div>
+
+            <h4>📌 Standard 5-Paragraph Essay Structure</h4>
+            <div class="structure-box">
+                <h4>📝 The Perfect Essay Structure</h4>
+                <p><strong>Paragraph 1: Introduction</strong></p>
+                <p>• Hook (attention-grabbing opening)</p>
+                <p>• Background information</p>
+                <p>• Thesis statement (main argument)</p>
+                <br>
+                <p><strong>Paragraph 2: Body 1</strong></p>
+                <p>• Topic sentence (first main point)</p>
+                <p>• Explanation and evidence</p>
+                <p>• Example</p>
+                <br>
+                <p><strong>Paragraph 3: Body 2</strong></p>
+                <p>• Topic sentence (second main point)</p>
+                <p>• Explanation and evidence</p>
+                <p>• Example</p>
+                <br>
+                <p><strong>Paragraph 4: Body 3 (Counter-argument)</strong></p>
+                <p>• Acknowledge opposing view</p>
+                <p>• Present your response/rebuttal</p>
+                <br>
+                <p><strong>Paragraph 5: Conclusion</strong></p>
+                <p>• Restate thesis in different words</p>
+                <p>• Summary of main points</p>
+                <p>• Final thought or call to action</p>
+            </div>
+
+            <h4>📌 Complete Argumentative Essay: Example 1</h4>
+            <div class="code-box">
+                <div class="code-title">// Essay: Should smartphones be allowed in schools?</div>
+                <br><span class="comment">// INTRODUCTION</span>
+                <br><span class="keyword">Introduction:</span>
+                <br><strong>Smartphones have become an integral part of modern life</strong>, especially among young people. <span class="function">With the increasing prevalence of mobile technology</span>, questions arise about whether these devices should be permitted in educational settings. <span class="function">While some argue that smartphones are distracting and harmful</span>, <span class="function">I firmly believe that smartphones should be allowed in schools</span>, provided that proper guidelines are established.
+                <br><br><span class="comment">// BODY PARAGRAPH 1</span>
+                <br><span class="keyword">Body Paragraph 1:</span>
+                <br><strong>First and foremost, smartphones serve as valuable educational tools</strong>.
+                <br><span class="function">With access to the internet</span>, students can quickly research topics, access educational apps, and learn at their own pace. <span class="function">For example</span>, language learning apps like Duolingo can help students practice foreign languages outside the classroom. <span class="function">Moreover</span>, educational videos on platforms like YouTube can supplement traditional teaching methods and make learning more engaging. <span class="function">Therefore</span>, smartphones can enhance the learning experience and provide students with additional resources.
+                <br><br><span class="comment">// BODY PARAGRAPH 2</span>
+                <br><span class="keyword">Body Paragraph 2:</span>
+                <br><strong>In addition, smartphones enable effective communication between students and parents</strong>.
+                <br><span class="function">In case of emergencies</span>, students can quickly contact their families to ensure their safety. <span class="function">Similarly</span>, parents can stay informed about their children's schedules and any unexpected changes. <span class="function">This</span> provides peace of mind to both students and parents alike. <span class="function">Furthermore</span>, schools can use messaging apps to send important notifications about schedule changes or events.
+                <br><br><span class="comment">// BODY PARAGRAPH 3 (COUNTER-ARGUMENT)</span>
+                <br><span class="keyword">Body Paragraph 3:</span>
+                <br><strong>Nevertheless, critics argue that smartphones can be distracting and disruptive</strong>.
+                <br><span class="function">They claim that</span> students may play games, use social media, or text friends instead of focusing on their lessons. <span class="function">However</span>, this issue can be effectively addressed through proper supervision and clear classroom policies. <span class="function">For instance</span>, teachers can implement "phone-free periods" during instruction time or use designated phone storage areas. <span class="function">With proper management</span>, the benefits of smartphones can be maximized while minimizing potential drawbacks.
+                <br><br><span class="comment">// CONCLUSION</span>
+                <br><span class="keyword">Conclusion:</span>
+                <br><strong>In conclusion, smartphones offer significant educational and communicative benefits</strong> that should not be overlooked.
+                <br><span class="function">While concerns about distraction are valid</span>, they can be mitigated through thoughtful implementation of rules and guidelines. <span class="function">Therefore</span>, <strong>I maintain that smartphones should be permitted in schools</strong>, as they prepare students for the modern digital world and enhance the educational process when used responsibly.
+            </div>
+
+            <h4>📌 Complete Argumentative Essay: Example 2</h4>
+            <div class="code-box">
+                <div class="code-title">// Essay: The Internet has changed the way we live</div>
+                <br><span class="comment">// INTRODUCTION</span>
+                <br><span class="keyword">Introduction:</span>
+                <br><strong>The Internet has undoubtedly transformed nearly every aspect of modern life</strong>, from how we communicate to how we work and learn. <span class="function">This essay will discuss both the advantages and disadvantages</span> of this technological revolution. <span class="function">While the Internet has brought remarkable benefits</span>, <strong>it also presents significant challenges that must be addressed</strong>.
+                <br><br><span class="comment">// BODY PARAGRAPH 1 - ADVANTAGES</span>
+                <br><span class="keyword">Body Paragraph 1:</span>
+                <br><strong>On the one hand, the Internet has made information more accessible than ever before</strong>.
+                <br><span class="function">Students can now access online libraries</span>, educational resources, and courses from prestigious universities without leaving their homes. <span class="function">For example</span>, platforms like Coursera and Khan Academy offer free courses on virtually any subject. <span class="function">This</span> democratizes education and creates opportunities for lifelong learning. <span class="function">Furthermore</span>, the Internet facilitates instant communication across the globe, allowing people to stay connected with friends and family through video calls and social media.
+                <br><br><span class="comment">// BODY PARAGRAPH 2 - ADVANTAGES CONTINUED</span>
+                <br><span class="keyword">Body Paragraph 2:</span>
+                <br><strong>In addition, the Internet has revolutionized how businesses operate</strong>.
+                <br><span class="function">E-commerce has enabled companies</span> to reach customers worldwide, while remote work has become increasingly common. <span class="function">This</span> has reduced commuting time and provided flexibility for workers. <span class="function">Similarly</span>, online banking and services have made financial transactions more convenient and efficient.
+                <br><br><span class="comment">// BODY PARAGRAPH 3 - DISADVANTAGES</span>
+                <br><span class="keyword">Body Paragraph 3:</span>
+                <br><strong>On the other hand, the Internet poses serious risks to privacy and security</strong>.
+                <br><span class="function">Personal information can be stolen</span> through hacking and phishing scams. <span class="function">Moreover</span>, many people fall victim to online fraud and identity theft. <span class="function">Additionally</span>, excessive screen time can lead to health problems such as eye strain, poor posture, and lack of physical activity. <span class="function">As a result</span>, mental health issues like anxiety and depression have increased among heavy Internet users.
+                <br><br><span class="comment">// CONCLUSION</span>
+                <br><span class="keyword">Conclusion:</span>
+                <br><strong>To sum up, the Internet has brought both remarkable benefits and significant challenges</strong> to modern society.
+                <br><span class="function">While it has transformed education, communication, and commerce</span>, it has also created new threats to privacy and well-being. <span class="function">Therefore</span>, <strong>it is essential that we use the Internet responsibly and develop strategies to mitigate its negative effects</strong> while continuing to enjoy its numerous advantages.
+            </div>
+
+            <h4>📌 Useful Phrases for Essays</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Useful Phrases</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Introducing a topic</td>
+                    <td>This essay will discuss..., The purpose of this essay is to..., In this essay, I will argue that...</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Presenting your opinion</td>
+                    <td>In my opinion..., I firmly believe that..., I strongly agree/disagree with...</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Adding points</td>
+                    <td>Furthermore, Moreover, In addition, Additionally, Also, Besides</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Giving examples</td>
+                    <td>For example, For instance, Such as, Specifically, To illustrate</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Contrast</td>
+                    <td>However, Nevertheless, On the other hand, Although, Despite, While</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Cause and effect</td>
+                    <td>Therefore, As a result, Consequently, Thus, Hence, Because of this</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Concluding</td>
+                    <td>In conclusion, To sum up, In summary, Overall, To conclude, Finally</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PART 5: OTHER WRITING TYPES -->
+        <div class="en-content" id="partie5">
+            <h3>📒 5. Other Writing Types</h3>
+            <p>Beyond emails and essays, the BAC exam may also require other types of writing. Here is a comprehensive guide to each type.</p>
+
+            <h4>📌 Article Writing</h4>
+            <p>Articles inform readers about a topic in an engaging, accessible way.</p>
+
+            <div class="structure-box">
+                <h4>📝 Article Structure</h4>
+                <p><strong>Headline:</strong> Catchy, attention-grabbing title</p>
+                <p><strong>Introduction:</strong> Hook the reader, introduce the topic</p>
+                <p><strong>Body:</strong> Key information organized logically</p>
+                <p><strong>Conclusion:</strong> Summary or final thought</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Article: The Importance of Reading</div>
+                <br><span class="keyword">The Power of Reading: Why Books Still Matter in the Digital Age</span>
+                <br><br>
+                <strong>In an era dominated by smartphones and social media, one might wonder if reading books has become obsolete.</strong> However, nothing could be further from the truth. Reading remains one of the most beneficial activities for personal development and intellectual growth.
+                <br><br>
+                <strong>First and foremost, reading expands our vocabulary and improves our language skills.</strong> Unlike social media posts, books provide exposure to rich, varied language. <span class="function">Moreover</span>, reading enhances concentration and critical thinking abilities. <span class="function">For example</span>, novels require us to follow complex narratives and analyze characters' motivations.
+                <br><br>
+                <strong>Furthermore, reading is an excellent way to reduce stress and escape from daily pressures.</strong> <span class="function">According to research</span>, just six minutes of reading can reduce stress levels by up to 68 percent. <span class="function">Whether you enjoy fiction, non-fiction, or poetry</span>, there is a book for everyone.
+                <br><br>
+                <strong>Therefore, I urge everyone to make reading a regular habit.</strong> <span class="function">Visit your local library</span>, join a book club, or simply set aside 30 minutes each day for reading. <span class="function">Your mind will thank you for it!</span>
+            </div>
+
+            <h4>📌 Summary Writing</h4>
+            <p>A summary condenses the main points of a text into a shorter version.</p>
+
+            <div class="structure-box">
+                <h4>📝 Summary Writing Rules</h4>
+                <p>• Keep it brief (usually 1/3 of original length)</p>
+                <p>• Focus on main ideas only</p>
+                <p>• Use your own words</p>
+                <p>• Include ONLY information from the text</p>
+                <p>• No opinions or comments</p>
+                <p>• Include a thesis statement</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Summary Template</div>
+                <span class="keyword">Title/Topic:</span> [Main topic]
+                <br><br>
+                <span class="keyword">Summary:</span>
+                <br><span class="function">The text discusses/examines/explores...</span> [Brief overview of main idea].
+                <br><br>
+                <span class="function">According to the text</span>, [main point 1]. <span class="function">Additionally</span>, [main point 2]. <span class="function">Finally</span>, [main point 3].
+                <br><br>
+                <span class="function">In conclusion</span>, the text emphasizes/highlights/concludes that [final takeaway].
+            </div>
+
+            <h4>📌 Review Writing</h4>
+            <p>Reviews give opinions about books, movies, restaurants, etc.</p>
+
+            <div class="structure-box">
+                <h4>📝 Review Structure</h4>
+                <p><strong>Introduction:</strong> What you are reviewing, basic information</p>
+                <p><strong>Summary:</strong> Brief overview without spoilers (for books/movies)</p>
+                <p><strong>Analysis:</strong> What works and what doesn't</p>
+                <p><strong>Opinion:</strong> Your overall judgment</p>
+                <p><strong>Recommendation:</strong> Would you recommend it?</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Book/Movie Review Template</div>
+                <span class="keyword">Title:</span> [Name of Book/Movie]
+                <br><span class="keyword">Genre:</span> [Type of work]
+                <br><span class="keyword">Rating:</span> ★★★★☆ [4 out of 5 stars]
+                <br><br>
+                <strong>[Book/Movie Name] is a [type of work] that [brief description].</strong> <span class="function">The story follows</span> [main character] who [brief plot summary].
+                <br><br>
+                <strong>What I enjoyed most about this [book/movie] was</strong> [positive aspect]. <span class="function">However</span>, [negative aspect] could have been improved.
+                <br><br>
+                <strong>I would recommend this [book/movie] to</strong> [target audience]. <span class="function">Overall</span>, it is [final opinion].
+            </div>
+
+            <h4>📌 Letter Writing</h4>
+            <div class="structure-box">
+                <h4>📝 Formal Letter Structure</h4>
+                <p><strong>Your Address:</strong> (top right)</p>
+                <p><strong>Date:</strong> (below address)</p>
+                <p><strong>Recipient's Address:</strong> (left aligned)</p>
+                <p><strong>Salutation:</strong> Dear Sir/Madam,</p>
+                <p><strong>Body:</strong> Introduction, purpose, details, conclusion</p>
+                <p><strong>Closing:</strong> Yours faithfully/sincerely,</p>
+                <p><strong>Signature:</strong> Your name</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Formal Letter Example</div>
+                <br>Ahmed Ben Ali
+                <br>123 Rue de la Liberté
+                <br>Tunis, Tunisia
+                <br><br>
+                15 June 2025
+                <br><br>
+                The Director
+                <br>English Language Center
+                <br>Tunis, Tunisia
+                <br><br>
+                <span class="keyword">Dear Sir or Madam,</span>
+                <br><br>
+                <span class="function">I am writing to apply for the position of English teacher</span> advertised in your recent announcement.
+                <br><br>
+                <span class="function">I am a graduate of the University of Tunis</span> with a degree in English Literature. <span class="function">I have experience teaching</span> students of various levels and ages.
+                <br><br>
+                <span class="function">I would welcome the opportunity</span> to discuss my application at an interview.
+                <br><br>
+                <span class="keyword">Yours faithfully,</span>
+                <br><br>
+                Ahmed Ben Ali
+            </div>
+        </div>
+
+        <!-- PART 6: LINKING WORDS -->
+        <div class="en-content" id="partie6">
+            <h3>📓 6. Linking Words and Transition Phrases</h3>
+            <p>Linking words (connectors or transition words) are essential for creating smooth, coherent writing. They show the relationship between ideas and help your writing flow logically.</p>
+
+            <h4>📌 Addition (Adding Information)</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>and</strong></td>
+                    <td>Simple addition</td>
+                    <td>She is smart and talented.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>also</strong></td>
+                    <td>Adding similar information</td>
+                    <td>She speaks English. She also speaks French.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>too</strong></td>
+                    <td>Adding at the end</td>
+                    <td>She speaks English, French too.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>as well</strong></td>
+                    <td>Adding similarly</td>
+                    <td>She studies hard, as well as playing sports.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in addition (to)</strong></td>
+                    <td>Formal addition</td>
+                    <td>In addition to studying, she works part-time.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>furthermore</strong></td>
+                    <td>Strong addition</td>
+                    <td>The food was good. Furthermore, the service was excellent.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>moreover</strong></td>
+                    <td>Adding another point</td>
+                    <td>The house is beautiful. Moreover, it has a large garden.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>besides</strong></td>
+                    <td>Adding an extra point</td>
+                    <td>Besides being cheap, it's also delicious.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>not only... but also</strong></td>
+                    <td>Emphatic addition</td>
+                    <td>Not only is it cheap, but also it's healthy.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Contrast (Showing Differences)</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>but</strong></td>
+                    <td>Simple contrast</td>
+                    <td>It's cheap, but it's not good.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>however</strong></td>
+                    <td>Formal contrast</td>
+                    <td>It was raining. However, we went out.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>nevertheless</strong></td>
+                    <td>Formal contrast</td>
+                    <td>It was expensive. Nevertheless, I bought it.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>although / though / even though</strong></td>
+                    <td>Concession</td>
+                    <td>Although it was raining, we went out.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>despite / in spite of</strong></td>
+                    <td>Despite + noun/gerund</td>
+                    <td>Despite the rain, we went out.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>on the other hand</strong></td>
+                    <td>Presenting opposite view</td>
+                    <td>City life is exciting. On the other hand, it's expensive.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>while / whereas</strong></td>
+                    <td>Comparing two things</td>
+                    <td>While city life is exciting, rural life is peaceful.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>unlike</strong></td>
+                    <td>Showing difference</td>
+                    <td>Unlike her sister, she is very outgoing.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>still</strong></td>
+                    <td>Unexpected contrast</td>
+                    <td>It was expensive. Still, I bought it.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>yet</strong></td>
+                    <td>Contrast with positive</td>
+                    <td>It was difficult, yet I succeeded.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Cause and Effect</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>because</strong></td>
+                    <td>Reason (before result)</td>
+                    <td>I stayed home because it was raining.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>since / as</strong></td>
+                    <td>Reason (formal)</td>
+                    <td>Since you are here, let's begin.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>so</strong></td>
+                    <td>Result (before reason)</td>
+                    <td>It was raining, so I stayed home.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>therefore</strong></td>
+                    <td>Formal result</td>
+                    <td>He studied hard. Therefore, he passed.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>consequently</strong></td>
+                    <td>Formal result</td>
+                    <td>He didn't study. Consequently, he failed.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>as a result</strong></td>
+                    <td>Result</td>
+                    <td>He didn't study. As a result, he failed.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>because of / due to</strong></td>
+                    <td>Cause (followed by noun)</td>
+                    <td>Because of the rain, we stayed home.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>owing to</strong></td>
+                    <td>Formal cause</td>
+                    <td>Owing to the weather, the match was cancelled.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Sequence and Time</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>first / firstly</strong></td>
+                    <td>Beginning</td>
+                    <td>First, gather your ingredients.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>second / secondly</strong></td>
+                    <td>Second point</td>
+                    <td>Secondly, mix the dry ingredients.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>then / next</strong></td>
+                    <td>Next step</td>
+                    <td>Then, add water.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>after that</strong></td>
+                    <td>Following step</td>
+                    <td>After that, let it rest for 10 minutes.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>afterwards</strong></td>
+                    <td>Following</td>
+                    <td>Afterwards, we went home.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>finally / lastly</strong></td>
+                    <td>End point</td>
+                    <td>Finally, serve and enjoy.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>meanwhile</strong></td>
+                    <td>Simultaneous action</td>
+                    <td>Meanwhile, prepare the sauce.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Examples and Illustration</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>for example / for instance</strong></td>
+                    <td>Illustrating a point</td>
+                    <td>Many jobs require English. For example, in tourism.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>such as</strong></td>
+                    <td>Giving examples</td>
+                    <td>I like fruits such as apples and oranges.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>like</strong></td>
+                    <td>Informal examples</td>
+                    <td>I enjoy sports like football and basketball.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in fact / actually</strong></td>
+                    <td>Emphasizing truth</td>
+                    <td>In fact, English is the global language.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>especially / particularly</strong></td>
+                    <td>Focusing on specifics</td>
+                    <td>All subjects are important, especially mathematics.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Conclusion and Summary</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Connector</th>
+                    <th>Usage</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in conclusion</strong></td>
+                    <td>Ending an essay</td>
+                    <td>In conclusion, technology has both pros and cons.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>to sum up / in summary</strong></td>
+                    <td>Summarizing</td>
+                    <td>To sum up, we need to take action now.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in short / in brief</strong></td>
+                    <td>Concise summary</td>
+                    <td>In short, the project was a success.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>overall</strong></td>
+                    <td>General assessment</td>
+                    <td>Overall, it was a great experience.</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>in my opinion / personally</strong></td>
+                    <td>Giving personal view</td>
+                    <td>In my opinion, this is the best solution.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PART 7: VOCABULARY FOR ACADEMIC WRITING -->
+        <div class="en-content" id="partie7">
+            <h3>📘 7. Vocabulary for Academic Writing</h3>
+            <p>Using sophisticated vocabulary demonstrates language proficiency and helps you express ideas more precisely. Here is a comprehensive list organized by topic.</p>
+
+            <h4>📌 Technology and Modern Life</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Basic Word</th>
+                    <th>Advanced Alternative</th>
+                </tr>
+                <tr>
+                    <td class="en-word">new</td>
+                    <td>innovative, cutting-edge, state-of-the-art, groundbreaking</td>
+                </tr>
+                <tr>
+                    <td class="en-word">important</td>
+                    <td>crucial, essential, significant, vital, paramount</td>
+                </tr>
+                <tr>
+                    <td class="en-word">big</td>
+                    <td>substantial, considerable, massive, significant</td>
+                </tr>
+                <tr>
+                    <td class="en-word">many</td>
+                    <td>numerous, countless, a multitude of, a significant number of</td>
+                </tr>
+                <tr>
+                    <td class="en-word">good</td>
+                    <td>beneficial, advantageous, favorable, constructive</td>
+                </tr>
+                <tr>
+                    <td class="en-word">bad</td>
+                    <td>harmful, detrimental, adverse, negative, damaging</td>
+                </tr>
+                <tr>
+                    <td class="en-word">change</td>
+                    <td>transform, revolutionize, alter, modify</td>
+                </tr>
+                <tr>
+                    <td class="en-word">use</td>
+                    <td>utilize, employ, harness, exploit</td>
+                </tr>
+            </table>
+
+            <h4>📌 Describing Problems and Solutions</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Vocabulary</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Problems</td>
+                    <td>issue, challenge, obstacle, hurdle, predicament, dilemma, crisis</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Causes</td>
+                    <td>factor, reason, source, origin, root cause, trigger</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Effects</td>
+                    <td>consequence, result, outcome, impact, repercussion, ramification</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Solutions</td>
+                    <td>remedy, solution, measure, initiative, strategy, approach</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Solutions (verbs)</td>
+                    <td>address, tackle, tackle, resolve, mitigate, alleviate, combat</td>
+                </tr>
+            </table>
+
+            <h4>📌 Expressing Opinions and Views</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Phrases</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Introducing opinion</td>
+                    <td>In my view..., In my opinion..., I believe that..., I am convinced that..., I am of the opinion that...</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Strong opinion</td>
+                    <td>I firmly believe that..., I am strongly convinced that..., There is no doubt in my mind that...</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Balanced view</td>
+                    <td>It can be argued that..., Some people believe that..., There are those who argue that...</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Agreeing</td>
+                    <td>I agree with the view that..., This is indeed true..., I share the belief that...</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Disagreeing</td>
+                    <td>I disagree with..., I cannot accept the view that..., This is not necessarily true...</td>
+                </tr>
+            </table>
+
+            <h4>📌 Causation and Effect Language</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Phrases</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Direct cause</td>
+                    <td>because of, due to, owing to, thanks to, attributed to, caused by</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Leading to</td>
+                    <td>results in, leads to, gives rise to, contributes to, brings about</td>
+                </tr>
+                <tr>
+                    <td class="en-word">As a consequence</td>
+                    <td>as a result, consequently, subsequently, accordingly, therefore</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Indirect cause</td>
+                    <td>in part due to, partly because, to some extent, in large part</td>
+                </tr>
+            </table>
+
+            <h4>📌 Degree and Intensity</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Degree</th>
+                    <th>Words</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Very low</td>
+                    <td>slightly, marginally, minimally, hardly, barely</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Low to medium</td>
+                    <td>somewhat, relatively, moderately, partly</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Medium</td>
+                    <td>fairly, quite, rather, reasonably</td>
+                </tr>
+                <tr>
+                    <td class="en-word">High</td>
+                    <td>very, highly, extremely, remarkably, significantly</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Very high</td>
+                    <td>exceptionally, profoundly, tremendously, enormously</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PART 8: COMMON MISTAKES -->
+        <div class="en-content" id="partie8">
+            <h3>📗 8. Common Mistakes to Avoid</h3>
+            <p>Being aware of common errors will help you produce cleaner, more professional writing.</p>
+
+            <h4>📌 Top 20 Writing Mistakes</h4>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 1: Not Answering the Question</h4>
+                <p><strong>Error:</strong> Writing about a related topic but not addressing the specific question.</p>
+                <p><strong>Example:</strong> Question asks about effects of technology on education, but you write about technology in general.</p>
+                <p><strong>Solution:</strong> Always read the question carefully and plan your response around it.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 2: No Clear Thesis Statement</h4>
+                <p><strong>Error:</strong> Writing without a clear central argument or position.</p>
+                <p><strong>Solution:</strong> State your main argument clearly in the introduction.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 3: Using Informal Language</h4>
+                <p><strong>Error:</strong> Using contractions, slang, or casual expressions in formal writing.</p>
+                <p><strong>Example:</strong> "I think smartphones are cool, but they can be distracting."</p>
+                <p><strong>Better:</strong> "While smartphones offer numerous benefits, they can also be distracting."</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 4: Repeating Ideas</h4>
+                <p><strong>Error:</strong> Saying the same thing in different ways without adding new content.</p>
+                <p><strong>Solution:</strong> Each paragraph should add new information or evidence.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 5: Lack of Examples</h4>
+                <p><strong>Error:</strong> Making claims without supporting examples or evidence.</p>
+                <p><strong>Solution:</strong> Always provide specific examples to support your arguments.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 6: Poor Paragraph Structure</h4>
+                <p><strong>Error:</strong> Writing without clear paragraph breaks or mixing ideas.</p>
+                <p><strong>Solution:</strong> Each paragraph should focus on one main idea with supporting details.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 7: Weak Conclusions</h4>
+                <p><strong>Error:</strong> Introducing new ideas or simply repeating the introduction.</p>
+                <p><strong>Solution:</strong> Restate your thesis, summarize key points, and end with a final thought.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 8: Repetitive Vocabulary</h4>
+                <p><strong>Error:</strong> Using the same words repeatedly throughout the essay.</p>
+                <p><strong>Solution:</strong> Use synonyms and varied expressions.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 9: Ignoring the Counter-argument</h4>
+                <p><strong>Error:</strong> Only presenting one side without acknowledging opposing views.</p>
+                <p><strong>Solution:</strong> Include a paragraph addressing the opposing view and your response.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 10: Grammar and Spelling Errors</h4>
+                <p><strong>Error:</strong> Careless mistakes that reduce the quality of your writing.</p>
+                <p><strong>Solution:</strong> Always proofread your work before submitting.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 11: Word Count Issues</h4>
+                <p><strong>Error:</strong> Writing too much or too little.</p>
+                <p><strong>Solution:</strong> Practice writing within the required word limit.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 12: Irrelevant Information</h4>
+                <p><strong>Error:</strong> Including off-topic content to fill space.</p>
+                <p><strong>Solution:</strong> Stay focused on the question throughout your response.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 13: Overgeneralization</h4>
+                <p><strong>Error:</strong> Using words like "always," "never," "all," "none" when not accurate.</p>
+                <p><strong>Solution:</strong> Use more cautious language: "often," "some," "many," "in some cases."</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 14: Missing Transitions</h4>
+                <p><strong>Error:</strong> Abrupt jumps between ideas without smooth transitions.</p>
+                <p><strong>Solution:</strong> Use linking words and transition phrases to connect ideas.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 15: Not Following the Format</h4>
+                <p><strong>Error:</strong> Writing an email as an essay or vice versa.</p>
+                <p><strong>Solution:</strong> Understand and follow the required format for each task.</p>
+            </div>
+        </div>
+
+        <!-- PART 9: EVALUATION CRITERIA -->
+        <div class="en-content" id="partie9">
+            <h3>📙 9. Evaluation Criteria and Grading</h3>
+            <p>Understanding how your writing is evaluated will help you focus your efforts on what matters most.</p>
+
+            <h4>📌 Marking Criteria for the BAC Writing</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Criterion</th>
+                    <th>Weight</th>
+                    <th>What Examiners Look For</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Content</strong></td>
+                    <td>30%</td>
+                    <td>Relevance to the topic, depth of ideas, quality of arguments, supporting evidence</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Organization</strong></td>
+                    <td>25%</td>
+                    <td>Structure, coherence, paragraph development, logical flow, transitions</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Vocabulary</strong></td>
+                    <td>20%</td>
+                    <td>Range, accuracy, appropriateness, variety, sophistication</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Grammar</strong></td>
+                    <td>15%</td>
+                    <td>Accuracy, complexity, range of structures, error frequency</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Spelling & Punctuation</strong></td>
+                    <td>10%</td>
+                    <td>Accuracy, consistency, appropriate use of punctuation</td>
+                </tr>
+            </table>
+
+            <h4>📌 What Each Band Means</h4>
+            <div class="structure-box">
+                <h4>Band 9: Excellent (90-100%)</h4>
+                <p>• Fully addresses all aspects of the task</p>
+                <p>• Very well organized with perfect paragraphing</p>
+                <p>• Wide range of vocabulary used accurately</p>
+                <p>• Complex grammar structures used successfully</p>
+                <p>• Virtually no errors</p>
+            </div>
+
+            <div class="structure-box">
+                <h4>Band 7-8: Good (70-89%)</h4>
+                <p>• Addresses all aspects of the task</p>
+                <p>• Well organized with clear structure</p>
+                <p>• Good range of vocabulary, few errors</p>
+                <p>• Good control of grammar, occasional errors</p>
+                <p>• Minor spelling or punctuation errors</p>
+            </div>
+
+            <div class="structure-box">
+                <h4>Band 5-6: Average (50-69%)</h4>
+                <p>• Addresses most aspects of the task</p>
+                <p>• Organized, though may lack coherence</p>
+                <p>• Adequate vocabulary, some inaccuracies</p>
+                <p>• Reasonable grammar control, several errors</p>
+                <p>• Some spelling and punctuation errors</p>
+            </div>
+
+            <div class="structure-box">
+                <h4>Band 3-4: Below Average (30-49%)</h4>
+                <p>• Partially addresses the task</p>
+                <p>• Limited organization</p>
+                <p>• Limited vocabulary range</p>
+                <p>• Grammar errors impede communication</p>
+                <p>• Frequent spelling errors</p>
+            </div>
+
+            <div class="structure-box">
+                <h4>Band 1-2: Poor (0-29%)</h4>
+                <p>• Does not address the task</p>
+                <p>• Disorganized</p>
+                <p>• Very limited vocabulary</p>
+                <p>• Grammar errors make understanding very difficult</p>
+                <p>• Extensive spelling errors</p>
+            </div>
+
+            <h4>📌 Tips for Each Criterion</h4>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Content:</strong> Answer the question fully. Include specific examples. Show depth of thought.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Organization:</strong> Use the essay structure. Include clear paragraphs. Use transitions.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Vocabulary:</strong> Use synonyms. Avoid repetition. Use topic-specific words.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Grammar:</strong> Use varied sentence structures. Check verb tenses. Avoid run-on sentences.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Spelling:</strong> Proofread carefully. Be especially careful with commonly misspelled words.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Punctuation:</strong> Use commas correctly. Know when to use periods, commas, and semicolons.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 10: PRACTICE EXERCISES -->
+        <div class="en-content" id="partie10">
+            <h3>📕 10. Practice Exercises and Model Answers</h3>
+            <p>Practice is essential for improving your writing skills. Here are exercises with model answers to help you prepare for the BAC exam.</p>
+
+            <h4>📌 Exercise 1: Write a Formal Email</h4>
+            <div class="example-box">
+                <h4>Task</h4>
+                <p>You want to apply for a summer English course at a language school in London. Write a formal email to the school requesting information about the course.</p>
+                <p><strong>Include:</strong></p>
+                <p>• Course dates and duration</p>
+                <p>• Tuition fees</p>
+                <p>• Accommodation options</p>
+                <p>• Entry requirements</p>
+                <br>
+                <h4>Model Answer</h4>
+                <p><strong>Subject:</strong> Inquiry About Summer English Course</p>
+                <p><strong>Dear Sir or Madam,</strong></p>
+                <p><strong>I am writing to inquire about your summer English language course</strong> for international students.</p>
+                <p><strong>I am a high school student from Tunisia</strong>, and I am interested in improving my English skills during the summer holidays. <strong>Could you please provide me with the following information:</strong></p>
+                <p><strong>1. Course dates and duration</strong></p>
+                <p><strong>2. Tuition fees and payment options</strong></p>
+                <p><strong>3. Accommodation options and costs</strong></p>
+                <p><strong>4. Entry requirements for international students</strong></p>
+                <p><strong>I would be grateful if you could also send me any brochures or application forms</strong> that might be relevant.</p>
+                <p><strong>Thank you for your time and consideration. I look forward to hearing from you.</strong></p>
+                <p><strong>Yours faithfully,</strong></p>
+                <p><strong>Mohamed Trabelsi</strong></p>
+            </div>
+
+            <h4>📌 Exercise 2: Write an Argumentative Essay</h4>
+            <div class="example-box">
+                <h4>Task</h4>
+                <p><strong>Topic:</strong> "The Internet has done more harm than good to society."</p>
+                <p>Write an argumentative essay presenting your point of view. Write at least 150 words.</p>
+                <br>
+                <h4>Model Answer</h4>
+                <p><strong>Introduction:</strong></p>
+                <p><strong>The Internet has undoubtedly transformed the way we live</strong>, work, and communicate. <span class="function">However</span>, there is ongoing debate about whether its impact has been largely positive or negative. <span class="function">In my opinion</span>, <strong>while the Internet has brought many benefits, I believe it has also caused significant harm to society</strong>.</p>
+                <br>
+                <p><strong>Body Paragraph 1:</strong></p>
+                <p><strong>First and foremost, the Internet has made communication faster and more convenient</strong>. <span class="function">People can now connect with others across the globe instantly</span> through social media and video calls. <span class="function">For example</span>, families separated by distance can now see each other regularly through platforms like Skype. <span class="function">Moreover</span>, businesses can operate globally and efficiently.</p>
+                <br>
+                <p><strong>Body Paragraph 2:</strong></p>
+                <p><strong>Nevertheless, the Internet has also had detrimental effects on mental health</strong>. <span class="function">Studies have shown that</span> excessive social media use can lead to anxiety, depression, and loneliness, particularly among young people. <span class="function">Furthermore</span>, the spread of misinformation and cyberbullying has become increasingly prevalent, causing harm to individuals and society as a whole.</p>
+                <br>
+                <p><strong>Conclusion:</strong></p>
+                <p><strong>To conclude, the Internet presents both advantages and disadvantages</strong>. <span class="function">While it has revolutionized communication and access to information</span>, <strong>its negative effects on mental health and social well-being cannot be ignored</strong>. <span class="function">Therefore</span>, it is essential that we use the Internet responsibly and develop strategies to mitigate its harmful effects while continuing to enjoy its many benefits.</p>
+            </div>
+
+            <h4>📌 Exercise 3: Complete with Linking Words</h4>
+            <div class="example-box">
+                <h4>Task</h4>
+                <p>Complete the following paragraph with appropriate linking words.</p>
+                <br>
+                <p>"Social media has become ubiquitous in modern society. _______ (1) it offers many benefits, _______ (2) there are also concerns about its impact. _______ (3) the ability to stay connected with friends and family, many people spend too much time scrolling through feeds. _______ (4), this can lead to addiction and mental health issues. _______ (5), experts recommend setting boundaries and using social media mindfully. _______ (6), individuals should be aware of the potential risks _______ (7) they can enjoy the benefits safely."</p>
+                <br>
+                <h4>Answers</h4>
+                <p>1. Although / While</p>
+                <p>2. there are also / however</p>
+                <p>3. Despite / In spite of</p>
+                <p>4. Consequently / As a result</p>
+                <p>5. Therefore / Thus</p>
+                <p>6. In conclusion / To sum up</p>
+                <p>7. so that / in order to</p>
+            </div>
+
+            <h4>📌 Exercise 4: Improve the Vocabulary</h4>
+            <div class="example-box">
+                <h4>Task</h4>
+                <p>Rewrite the following sentences using more sophisticated vocabulary.</p>
+                <br>
+                <p><strong>1. The Internet is very important today.</strong></p>
+                <p>→ The Internet has become <strong>essential/vital/crucial</strong> in today's world.</p>
+                <br>
+                <p><strong>2. Many people use the Internet for learning.</strong></p>
+                <p>→ The Internet is <strong>widely utilized/harnessed</strong> for <strong>educational purposes/learning</strong>.</p>
+                <br>
+                <p><strong>3. Social media is a good thing.</strong></p>
+                <p>→ Social media offers <strong>significant/substantial</strong> <strong>benefits/advantages</strong>.</p>
+                <br>
+                <p><strong>4. This problem is very big.</strong></p>
+                <p>→ This is a <strong>major/significant/substantial</strong> issue.</p>
+                <br>
+                <p><strong>5. The Internet can cause health problems.</strong></p>
+                <p>→ The Internet can <strong>lead to/result in/cause</strong> various <strong>health issues/problems</strong>.</p>
+            </div>
+
+            <h4>📌 Exercise 5: Write a Summary</h4>
+            <div class="example-box">
+                <h4>Task</h4>
+                <p>Read the following paragraph and write a summary in no more than 50 words.</p>
+                <br>
+                <p><strong>Original Text:</strong></p>
+                <p><em>"Climate change is one of the most pressing challenges facing humanity today. Rising global temperatures have led to melting ice caps, rising sea levels, and more frequent extreme weather events. Scientists warn that without immediate action, the situation will only worsen. Governments around the world are implementing policies to reduce carbon emissions and promote renewable energy sources."</em></p>
+                <br>
+                <h4>Model Summary (47 words)</h4>
+                <p><strong>Climate change is a major global challenge</strong>. Rising temperatures have caused melting ice caps, rising sea levels, and extreme weather. Scientists warn that <strong>without immediate action</strong>, the situation will worsen. <strong>Governments are implementing policies</strong> to reduce carbon emissions and promote renewable energy to address this crisis.</p>
+            </div>
+
+            <div class="tips-box">
+                <h4>✅ Final Tips for Success</h4>
+                <p>• <strong>Practice regularly</strong> — Write something every day, even just a few sentences</p>
+                <p>• <strong>Read model essays</strong> — Learn from well-written examples</p>
+                <p>• <strong>Learn linking words</strong> — They make your writing flow smoothly</p>
+                <p>• <strong>Expand your vocabulary</strong> — Use a variety of words and expressions</p>
+                <p>• <strong>Master the essay structure</strong> — Clear organization is essential</p>
+                <p>• <strong>Proofread carefully</strong> — Check for errors before submitting</p>
+                <p>• <strong>Manage your time</strong> — Don't rush, but don't take too long either</p>
+            </div>
+        </div>
+
+        <!-- IMAGE SUMMARY -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Visual Summary</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/E65100/FFFFFF?text=How+to+Write+for+BAC+Tunisia+Complete+Guide" alt="Writing Guide">
+                <div class="resume-overlay">
+                    <h3>How to Write for BAC Tunisia</h3>
+                    <p>TEEEC Structure, Emails, Essays, Linking Words, Practice</p>
+                </div>
             </div>
         </section>
 
-        <!-- BOUTON LEÇON SUIVANTE -->
+        <!-- VIDEO SECTION -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Explanatory Video</h2>
+            <div class="video-container">
+                <iframe src="" width="640" height="360" frameborder="0" allow="autoplay"></iframe>
+            </div>
+        </section>
+
+        <!-- NEXT LESSON BUTTON -->
         <a href="anglais.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Retour au sommaire</p>
-                <p class="next-lesson-title">Toutes les leçons Anglais →</p>
+                <p class="next-lesson-text">Back to All Lessons</p>
+                <p class="next-lesson-title">English Lessons Index →</p>
             </div>
             <span class="next-lesson-arrow">→</span>
         </a>
@@ -562,7 +1522,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+        <p>© 2025 BAC Tunisia - All Rights Reserved</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>

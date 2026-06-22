@@ -1,419 +1,1302 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leçon 2 : English Grammar - English</title>
+    <title>Lesson 2: How to Answer Text Questions - From Bac-2-Fac</title>
     <link rel="stylesheet" href="../../Shared/style.css">
     <style>
-        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
-        .en-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-        .en-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
-        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; }
-        .code-box .code-title { font-size: 0.85rem; color: #888; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
+        .en-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 32px; margin-bottom: 32px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
+        .en-content h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .en-content h4 { color: var(--accent); font-size: 1.05rem; margin: 24px 0 12px; }
+        .en-content p { margin-bottom: 14px; line-height: 1.85; color: var(--text-dark); }
+        .en-content ul, .en-content ol { margin: 12px 0 16px 24px; }
+        .en-content li { margin-bottom: 8px; line-height: 1.7; color: var(--text-dark); }
+        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 20px 26px; margin: 18px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; line-height: 1.7; }
+        .code-box .code-title { font-size: 0.88rem; color: #888; margin-bottom: 10px; font-family: 'Segoe UI', sans-serif; }
         .code-box .keyword { color: #569CD6; }
         .code-box .function { color: #DCDCAA; }
         .code-box .comment { color: #6A9955; }
         .code-box .string { color: #CE9178; }
         .code-box .phrase-en { color: #4FC1FF; font-weight: 600; }
         .code-box .phrase-fr { color: #B5CEA8; }
-        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
-        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
-        .example-box p { margin-bottom: 6px; color: #14532d; }
-        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
-        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
-        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
-        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
-        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
-        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
-        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #C5CAE9; }
-        .toc h3 { color: #3F51B5; margin-bottom: 14px; font-size: 1.05rem; }
-        .toc ol { padding-left: 22px; }
-        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 20px 26px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 18px 0; }
+        .example-box h4 { color: #166534; font-size: 1rem; margin-bottom: 10px; }
+        .example-box p { margin-bottom: 8px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 20px 26px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 18px 0; }
+        .warning-box h4 { color: #B45309; font-size: 1rem; margin-bottom: 10px; }
+        .warning-box p { margin-bottom: 8px; color: #92400e; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 18px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 14px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.4rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.9rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #EDE7F6, #E8EAF6); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 32px; border: 1px solid #C5CAE9; }
+        .toc h3 { color: #3F51B5; margin-bottom: 16px; font-size: 1.1rem; }
+        .toc ol { padding-left: 24px; }
+        .toc li { margin-bottom: 10px; color: var(--text-dark); font-size: 0.95rem; }
         .toc li a { color: var(--primary); font-weight: 500; }
-        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #90CAF9; }
-        .plan-box h3 { color: #1565C0; margin-bottom: 14px; font-size: 1.05rem; }
-        .plan-box p { color: var(--text-dark); line-height: 1.7; }
-        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-        .vocab-table th { background: #673AB7; color: white; padding: 12px; text-align: left; border-radius: 8px 8px 0 0; }
-        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .plan-box { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 32px; border: 1px solid #90CAF9; }
+        .plan-box h3 { color: #1565C0; margin-bottom: 16px; font-size: 1.1rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.8; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .vocab-table th { background: #673AB7; color: white; padding: 14px; text-align: left; border-radius: 10px 10px 0 0; font-size: 0.95rem; }
+        .vocab-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); font-size: 0.92rem; }
         .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
         .vocab-table .en-word { color: #673AB7; font-weight: 600; }
         .vocab-table .fr-word { color: var(--text-dark); }
-        .tense-box { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 11px solid #FFB74D; }
-        .tense-box h4 { color: #E65100; margin-bottom: 10px; }
-        .tense-box p { margin-bottom: 6px; }
+        .question-type { background: linear-gradient(135deg, #F3E5F5, #E1BEE7); border-radius: var(--radius-lg); padding: 18px; margin: 14px 0; border-left: 4px solid #9C27B0; }
+        .question-type h4 { color: #7B1FA2; margin-bottom: 10px; font-size: 0.95rem; }
+        .question-type p { margin-bottom: 6px; font-size: 0.9rem; }
+        .tips-box { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border-radius: var(--radius-lg); padding: 18px; margin: 16px 0; border: 1px solid #81C784; }
+        .tips-box h4 { color: #2E7D32; margin-bottom: 10px; }
+        .tips-box p { margin-bottom: 6px; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        .comparison-table th { background: #1565C0; color: white; padding: 14px; text-align: left; border-radius: 10px 10px 0 0; }
+        .comparison-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
     </style>
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
         <div class="header-content">
-            <a href="../../index.html" class="logo">
+       <a href="../../index.html" class="logo">
                 <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
             <nav class="nav-links">
-                <a href="../../index.html">Accueil</a>
+                <a href="../../index.html">Home</a>
                 <a href="../../Mathematiques/math.html">Math</a>
-                <a href="../../Physique/physique.html">Physique</a>
-                <a href="../../Electrique/electrique.html">Électrique</a>
-                <a href="../../Mecanique/mecanique.html">Mécanique</a>
-                <a href="../Francais/francais.html">Français</a>
-                <a href="anglais.html">Anglais</a>
-                <a href="../Arabe/arabe.html">Arabe</a>
-                <a href="../../Informatique/informatique.html">Info</a>
-                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philo</a>
+                <a href="../../Physique/physique.html">Physics</a>
+                <a href="../../Electrique/electrique.html">Electricity</a>
+                <a href="../../Mecanique/mecanique.html">Mechanics</a>
+                <a href="../Francais/francais.html">French</a>
+                <a href="anglais.html">English</a>
+                <a href="../Arabe/arabe.html">Arabic</a>
+                <a href="../../Informatique/informatique.html">IT</a>
+                <a href="../../Sciences-Humaines/Philosophie/philosophie.html">Philosophy</a>
             </nav>
         </div>
     </header>
 
-    <!-- CONTENU PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <main class="container">
-        <a href="anglais.html" class="back-btn">← Retour aux leçons d'Anglais</a>
+        <a href="anglais.html" class="back-btn">← Back to English Lessons</a>
 
-        <!-- HEADER LEÇON -->
+        <!-- LESSON HEADER -->
         <div class="lesson-header">
-            <h1>Leçon 2 : English Grammar</h1>
-            <p class="breadcrumb">Anglais > Leçon 2</p>
+            <h1>Lesson 2: How to Answer Text Questions (BAC Tunisia)</h1>
+            <p class="breadcrumb">English > Lesson 2 > BAC Tunisia</p>
         </div>
 
-        <!-- RÉSUMÉ -->
+        <!-- SUMMARY -->
         <div class="plan-box">
-            <h3>📝 Résumé de la leçon</h3>
-            <p>Cette leçon couvre les <strong>structures grammaticales essentielles</strong> de l'anglais : les temps verbaux (Present Simple, Past Simple, Present Continuous), la formation des phrases affirmatives, négatives et interrogatives, et l'utilisation des mots interrogatifs. Une bonne maîtrise de ces bases permet de construire des phrases correctes et de se faire comprendre.</p>
+            <h3>📝 Lesson Summary</h3>
+            <p>This comprehensive lesson teaches you <strong>how to effectively answer all types of questions</strong> found in the BAC Tunisia English exam. You will learn to identify question types, locate answers in texts, understand how to paraphrase and reformulate information, and avoid common mistakes. Mastering these skills is essential for achieving a high score in the reading comprehension section.</p>
         </div>
 
-        <!-- PLAN -->
+        <!-- TABLE OF CONTENTS -->
         <div class="toc">
-            <h3>📋 Plan de la leçon</h3>
+            <h3>📋 Table of Contents</h3>
             <ol>
-                <li><a href="#partie1">La structure de base d'une phrase</a></li>
-                <li><a href="#partie2">Le Present Simple (Présent simple)</a></li>
-                <li><a href="#partie3">Le Past Simple (Passé simple)</a></li>
-                <li><a href="#partie4">Le Present Continuous (Présent continu)</a></li>
-                <li><a href="#partie5">Les mots interrogatifs (Wh-questions)</a></li>
-                <li><a href="#partie6">Exercices et comparaisons</a></li>
+                <li><a href="#partie1">Understanding Question Types</a></li>
+                <li><a href="#partie2">Strategies for Finding Answers</a></li>
+                <li><a href="#partie3">How to Paraphrase and Reformulate</a></li>
+                <li><a href="#partie4">True/False Questions with Justification</a></li>
+                <li><a href="#partie5">Multiple Choice Questions</a></li>
+                <li><a href="#partie6">Vocabulary Questions (Synonyms and Antonyms)</a></li>
+                <li><a href="#partie7">WH-Questions: Detailed Analysis</a></li>
+                <li><a href="#partie8">Error Analysis and Common Mistakes</a></li>
+                <li><a href="#partie9">Full Practice Texts with Complete Answers</a></li>
+                <li><a href="#partie10">Final Checklist and Tips for Exam Day</a></li>
             </ol>
         </div>
 
-        <!-- SECTION PODCAST -->
-        <section class="section-podcast">
-            <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
-            <div class="audio-player">
-                <iframe src=""
-                        width="600" height="120" frameborder="0" allow="autoplay">
-                </iframe>
-            </div>
-        </section>
-
-        <!-- PARTIE 1 -->
+        <!-- PART 1: UNDERSTANDING QUESTION TYPES -->
         <div class="en-content" id="partie1">
-            <h3>📘 1. La structure de base d'une phrase</h3>
-            <p>En anglais, la structure de base d'une phrase est très simple : <strong>Sujet + Verbe + Complément</strong> (SVO).</p>
-            <div class="code-box">
-                <div class="code-title">// Structure de base</div>
-                <span class="comment">// Sujet + Verbe + Complément</span>
-                <span class="phrase-en">I</span> <span class="keyword">love</span> <span class="string">music.</span>        <span class="phrase-fr">— J'aime la musique.</span>
-                <span class="phrase-en">She</span> <span class="keyword">studies</span> <span class="string">English.</span>   <span class="phrase-fr">— Elle étudie l'anglais.</span>
-                <span class="phrase-en">They</span> <span class="keyword">live</span> <span class="string">in Tunis.</span>   <span class="phrase-fr">— Ils habitent à Tunis.</span>
+            <h3>📘 1. Understanding Question Types</h3>
+            <p>Before you can answer a question correctly, you must first understand what type of question it is and what kind of answer is expected. The BAC Tunisia exam typically includes several categories of questions.</p>
+
+            <h4>📌 Category A: Global Comprehension Questions</h4>
+            <p>These questions test your overall understanding of the text. They ask about the main idea, the author's purpose, or the general topic.</p>
+
+            <div class="question-type">
+                <h4>Common Global Comprehension Questions</h4>
+                <p>• <strong>What is the text about?</strong> — Identify the main topic</p>
+                <p>• <strong>What is the main idea of the text?</strong> — The central point the author wants to convey</p>
+                <p>• <strong>What is the author's purpose?</strong> — To inform, to persuade, to entertain, to describe</p>
+                <p>• <strong>What is the most suitable title for the text?</strong> — Choose the best heading</p>
+                <p>• <strong>What is the text mainly concerned with?</strong> — Main theme</p>
+                <p>• <strong>The text is mainly intended for...</strong> — Target audience</p>
             </div>
+
+            <h4>Example and Model Answer</h4>
+            <div class="code-box">
+                <div class="code-title">// Sample Global Comprehension Question</div>
+                <span class="comment">// Text:</span> "Social media has revolutionized how people communicate. Platforms like Facebook, Instagram, and Twitter have created new ways for people to stay connected across the globe. However, this digital transformation has also raised concerns about privacy and mental health."
+                <br><br><span class="comment">// Question:</span> What is the text mainly about?
+                <br><br><span class="comment">// Model Answer:</span>
+                <span class="function">The text is mainly about the impact of social media on communication, including both its benefits and concerns.</span>
+            </div>
+
+            <h4>📌 Category B: Detailed Comprehension Questions</h4>
+            <p>These questions test your understanding of specific information in the text. They require you to find and understand particular details.</p>
+
+            <div class="question-type">
+                <h4>Common Detailed Comprehension Questions</h4>
+                <p>• <strong>According to the text...</strong> — Find stated information</p>
+                <p>• <strong>How/Why/When/Where...</strong> — Specific details</p>
+                <p>• <strong>What does the word/phrase "X" refer to?</strong> — Reference questions</p>
+                <p>• <strong>What is mentioned as...</strong> — List-type questions</p>
+                <p>• <strong>Which of the following is stated in the text?</strong> — Fact-checking</p>
+                <p>• <strong>How many/much?</strong> — Quantities</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Sample Detailed Question</div>
+                <span class="comment">// Text:</span> "According to the World Health Organization, over 3.6 billion people use social media worldwide. This number is expected to grow to 4.9 billion by 2027. The most popular platform is Facebook, followed by YouTube and Instagram."
+                <br><br><span class="comment">// Question 1:</span> How many people use social media according to the WHO?
+                <br><span class="function">Answer: According to the WHO, over 3.6 billion people use social media worldwide.</span>
+                <br><br><span class="comment">// Question 2:</span> What is the expected number of users by 2027?
+                <br><span class="function">Answer: The number is expected to grow to 4.9 billion by 2027.</span>
+            </div>
+
+            <h4>📌 Category C: Vocabulary Questions</h4>
+            <p>These questions test your vocabulary knowledge and ability to understand words in context.</p>
+
+            <div class="question-type">
+                <h4>Common Vocabulary Questions</h4>
+                <p>• <strong>What does the underlined word/phrase mean?</strong> — Contextual meaning</p>
+                <p>• <strong>Find in the text words that are similar in meaning to...</strong> — Synonyms</p>
+                <p>• <strong>Which word in the text is opposite in meaning to...</strong> — Antonyms</p>
+                <p>• <strong>Choose the correct definition for the word "X"</strong> — Multiple choice vocabulary</p>
+                <p>• <strong>Which word could replace "X" without changing the meaning?</strong> — Substitutes</p>
+            </div>
+
+            <h4>📌 Category D: Inference Questions</h4>
+            <p>These questions require you to read between the lines and understand information that is implied but not directly stated.</p>
+
+            <div class="question-type">
+                <h4>Common Inference Questions</h4>
+                <p>• <strong>It can be inferred from the text that...</strong> — Implied meaning</p>
+                <p>• <strong>What can we conclude from the text?</strong> — Drawing conclusions</p>
+                <p>• <strong>The author implies that...</strong> — Implication</p>
+                <p>• <strong>What is likely to happen?</strong> — Prediction</p>
+                <p>• <strong>Why do you think...</strong> — Reasoning from evidence</p>
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Sample Inference Question</div>
+                <span class="comment">// Text:</span> "Many teenagers spend over 6 hours daily on their smartphones. Schools have started implementing policies to limit phone use during class hours. Some parents are worried about the impact on their children's academic performance."
+                <br><br><span class="comment">// Question:</span> What can be inferred from this text?
+                <br><br><span class="comment">// Answer:</span>
+                <span class="function">It can be inferred that excessive smartphone use among teenagers is becoming a concern for both schools and parents, particularly regarding academic performance.</span>
+            </div>
+        </div>
+
+        <!-- PART 2: STRATEGIES FOR FINDING ANSWERS -->
+        <div class="en-content" id="partie2">
+            <h3>📗 2. Strategies for Finding Answers</h3>
+            <p>Effective reading strategies are crucial for quickly and accurately finding answers in the text. Follow these systematic approaches to maximize your comprehension.</p>
+
+            <h4>📌 Step-by-Step Reading Strategy</h4>
+            <div class="code-box">
+                <div class="code-title">// The 3-Pass Reading Strategy</div>
+                <span class="comment">// FIRST PASS: Skimming (2-3 minutes)</span>
+                <br><span class="keyword">1.</span> Read the title and any subtitle
+                <br><span class="keyword">2.</span> Read the first and last paragraphs
+                <br><span class="keyword">3.</span> Look at any pictures, charts, or headings
+                <br><span class="keyword">4.</span> Get a general understanding of the topic
+                <br><br><span class="comment">// SECOND PASS: Scanning (4-5 minutes)</span>
+                <br><span class="keyword">1.</span> Read the questions carefully
+                <br><span class="keyword">2.</span> Look for keywords in the questions
+                <br><span class="keyword">3.</span> Scan the text for those keywords
+                <br><span class="keyword">4.</span> Read the relevant paragraphs more carefully
+                <br><br><span class="comment">// THIRD PASS: Careful Reading (as needed)</span>
+                <br><span class="keyword">1.</span> Read the specific sections again
+                <br><span class="keyword">2.</span> Understand the context of each answer
+                <br><span class="keyword">3.</span> Formulate your answers in your own words
+            </div>
+
+            <h4>📌 How to Identify Keywords</h4>
+            <p>Keywords are the most important words in a question that help you locate the answer in the text.</p>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>Question Word</th>
+                    <th>Look for in Text</th>
+                    <th>Type of Answer</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>What</strong></td>
+                    <td>Nouns, actions, events</td>
+                    <td>A thing, concept, or action</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Who</strong></td>
+                    <td>Names, titles, descriptions of people</td>
+                    <td>A person's name or role</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Where</strong></td>
+                    <td>Place names, locations</td>
+                    <td>A place or location</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>When</strong></td>
+                    <td>Dates, time expressions</td>
+                    <td>A time, date, or period</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Why</strong></td>
+                    <td>Because, reason, cause words</td>
+                    <td>A reason or explanation</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>How</strong></td>
+                    <td>Method, manner, by + action</td>
+                    <td>A method, process, or way</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>How many</strong></td>
+                    <td>Numbers, quantities</td>
+                    <td>A number</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>How much</strong></td>
+                    <td>Numbers, prices, uncountable quantities</td>
+                    <td>An amount or price</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>To what extent</strong></td>
+                    <td>Degree words, extent expressions</td>
+                    <td>Level or degree</td>
+                </tr>
+            </table>
+
+            <h4>📌 Signal Words to Look For</h4>
+            <p>These words often indicate important information in the text:</p>
+
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p>En anglais, <strong>l'ordre des mots est fixe</strong> — pas d'inversion comme en français</p>
+                    <span class="icon">🔑</span>
+                    <p><strong>Definition signals:</strong> is, means, refers to, is called, is defined as</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p>Le verbe <strong>ne change pas</strong> selon le sujet (sauf pour le 3ème personne du singulier)</p>
+                    <span class="icon">🔑</span>
+                    <p><strong>Example signals:</strong> for example, for instance, such as, including, especially</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p>Pas d'article défini перед nom neutre : <em>"the book"</em> mais pas <em>"the water"</em> pour généraliser</p>
+                    <span class="icon">🔑</span>
+                    <p><strong>Reason signals:</strong> because, since, due to, the reason is, in order to</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔑</span>
+                    <p><strong>Result signals:</strong> therefore, as a result, consequently, so, thus</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔑</span>
+                    <p><strong>Contrast signals:</strong> however, although, but, on the other hand, unlike</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔑</span>
+                    <p><strong>Addition signals:</strong> moreover, furthermore, in addition, also, besides</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔑</span>
+                    <p><strong>Sequence signals:</strong> first, second, then, finally, next, after</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔑</span>
+                    <p><strong>Emphasis signals:</strong> importantly, especially, particularly, notably</p>
                 </div>
             </div>
-            <div class="warning-box">
-                <h4>⚠️ Différence avec le français</h4>
-                <p>En anglais, on dit <strong>"I study English"</strong> (sans article), alors qu'en français on dit « j'étudie <strong>l'</strong>anglais ». Attention aux articles !</p>
+
+            <h4>📌 Time Management Tips</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Question Type</th>
+                    <th>Recommended Time</th>
+                    <th>Strategy</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Global comprehension</td>
+                    <td>2-3 minutes</td>
+                    <td>Quick scan of whole text</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Detailed questions</td>
+                    <td>2-3 minutes each</td>
+                    <td>Scan for specific keywords</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Vocabulary questions</td>
+                    <td>1-2 minutes each</td>
+                    <td>Context analysis</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Inference questions</td>
+                    <td>3-4 minutes</td>
+                    <td>Careful reading of related parts</td>
+                </tr>
+                <tr>
+                    <td class="en-word">True/False questions</td>
+                    <td>1-2 minutes each</td>
+                    <td>Find the relevant statement</td>
+                </tr>
+            </table>
+
+            <div class="tips-box">
+                <h4>✅ Pro Tips</h4>
+                <p>• <strong>Always read the questions BEFORE the text</strong> — This helps you know what to look for</p>
+                <p>• <strong>Underline key information</strong> while reading the text</p>
+                <p>• <strong>Mark paragraphs</strong> with numbers to find information quickly</p>
+                <p>• <strong>Don't panic</strong> if you don't understand every word — focus on what you need to answer</p>
+                <p>• <strong>Watch the time</strong> — Don't spend too long on one question</p>
             </div>
         </div>
 
-        <!-- PARTIE 2 -->
-        <div class="en-content" id="partie2">
-            <h3>📗 2. Le Present Simple (Présent simple)</h3>
-            <p>Le <strong>Present Simple</strong> s'utilise pour les habitudes, les vérités générales et les faits répétitifs.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Formation</h3>
-            <div class="code-box">
-                <div class="code-title">// Formation du Present Simple</div>
-                <span class="comment">// Affirmatif : Sujet + verbe (base) + s/es à la 3ème personne sg</span>
-                I <span class="function">work</span>.         → <span class="keyword">I work.</span>
-                You <span class="function">work</span>.        → <span class="keyword">You work.</span>
-                He/She/It <span class="function">work</span>s.   → <span class="keyword">He works.</span>
-                We/They <span class="function">work</span>.     → <span class="keyword">We work.</span>
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Négatif : Sujet + do not (don't) / does not (doesn't) + verbe</div>
-                I <span class="function">don't work</span>.       <span class="comment">— Je ne travaille pas.</span>
-                He <span class="function">doesn't work</span>.     <span class="comment">— Il ne travaille pas.</span>
-                They <span class="function">don't live</span> here. <span class="comment">— Ils n'habitent pas ici.</span>
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Interrogatif : Do/Does + sujet + verbe ?</div>
-                <span class="function">Do</span> you <span class="function">work</span>?      <span class="comment">— Travaillez-vous ?</span>
-                <span class="function">Does</span> she <span class="function">live</span> here? <span class="comment">— Habite-t-elle ici ?</span>
-                <span class="function">Do</span> they <span class="function">speak</span> English? <span class="comment">— Parlent-ils anglais ?</span>
-            </div>
-            <div class="tense-box">
-                <h4>📌 Quand utiliser le Present Simple ?</h4>
-                <p>• <strong>Habitudes</strong> : I <strong>drink</strong> coffee every morning. (Je bois du café chaque matin.)</p>
-                <p>• <strong>Vérités générales</strong> : Water <strong>boils</strong> at 100°C. (L'eau bout à 100°C.)</p>
-                <p>• <strong>États permanents</strong> : She <strong>lives</strong> in Paris. (Elle habite à Paris.)</p>
-                <p>• <strong>Instructions / Instructions</strong> : You <strong>turn</strong> left, then right. (Tu tournes à gauche, puis à droite.)</p>
-            </div>
-        </div>
-
-        <!-- PARTIE 3 -->
+        <!-- PART 3: PARAPHRASING AND REFORMULATING -->
         <div class="en-content" id="partie3">
-            <h3>📙 3. Le Past Simple (Passé simple)</h3>
-            <p>Le <strong>Past Simple</strong> s'utilise pour des actions terminées dans le passé, souvent avec une date ou une indication temporelle.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Formation</h3>
-            <div class="code-box">
-                <div class="code-title">// Formation du Past Simple</div>
-                <span class="comment">// Régulier : verbe + ed</span>
-                work → worked    play → played    study → studied
-                <br><br><span class="comment">// Irrégulier : à mémoriser (voir tableau)</span>
-                go → went       see → saw       eat → ate
-                have → had      take → took     write → wrote
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Négatif : Sujet + did not (didn't) + verbe (base)</div>
-                I <span class="function">didn't go</span> to school yesterday. <span class="comment">— Je ne suis pas allé à l'école hier.</span>
-                She <span class="function">didn't see</span> the movie.         <span class="comment">— Elle n'a pas vu le film.</span>
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Interrogatif : Did + sujet + verbe (base) ?</div>
-                <span class="function">Did</span> you <span class="function">finish</span> your homework?  <span class="comment">— As-tu fini tes devoirs ?</span>
-                <span class="function">Did</span> he <span class="function">call</span> you?              <span class="comment">— T'a-t-il appelé ?</span>
-            </div>
-            <table class="vocab-table">
-                <tr>
-                    <th>Verbe (infinitif)</th>
-                    <th>Past Simple</th>
-                    <th>Français</th>
-                </tr>
-                <tr>
-                    <td class="en-word">be</td>
-                    <td class="fr-word">was / were</td>
-                    <td>être</td>
-                </tr>
-                <tr>
-                    <td class="en-word">have</td>
-                    <td class="fr-word">had</td>
-                    <td>avoir</td>
-                </tr>
-                <tr>
-                    <td class="en-word">do</td>
-                    <td class="fr-word">did</td>
-                    <td>faire</td>
-                </tr>
-                <tr>
-                    <td class="en-word">go</td>
-                    <td class="fr-word">went</td>
-                    <td>aller</td>
-                </tr>
-                <tr>
-                    <td class="en-word">see</td>
-                    <td class="fr-word">saw</td>
-                    <td>voir</td>
-                </tr>
-                <tr>
-                    <td class="en-word">eat</td>
-                    <td class="fr-word">ate</td>
-                    <td>manger</td>
-                </tr>
-                <tr>
-                    <td class="en-word">write</td>
-                    <td class="fr-word">wrote</td>
-                    <td>écrire</td>
-                </tr>
-                <tr>
-                    <td class="en-word">take</td>
-                    <td class="fr-word">took</td>
-                    <td>prendre</td>
-                </tr>
-            </table>
-        </div>
+            <h3>📙 3. How to Paraphrase and Reformulate</h3>
+            <p>Paraphrasing means restating information from the text in your own words. This is a crucial skill for the BAC exam as it shows your understanding of the material and avoids direct copying.</p>
 
-        <!-- PARTIE 4 -->
-        <div class="en-content" id="partie4">
-            <h3>📕 4. Le Present Continuous (Présent continu)</h3>
-            <p>Le <strong>Present Continuous</strong> s'utilise pour des actions en cours de réalisation au moment où l'on parle.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Formation</h3>
-            <div class="code-box">
-                <div class="code-title">// Formation : Sujet + am/is/are + verbe-ing</div>
-                I <span class="function">am reading</span>.      → I'm reading.      <span class="comment">— Je lis (en ce moment).</span>
-                She <span class="function">is working</span>.     → She's working.    <span class="comment">— Elle travaille (en ce moment).</span>
-                They <span class="function">are playing</span>.    → They're playing.  <span class="comment">— Ils jouent (en ce moment).</span>
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Négatif : am/is/are + not + verbe-ing</div>
-                I <span class="function">am not reading</span>.    → I'm not reading.
-                He <span class="function">is not listening</span>. → He isn't listening.
-            </div>
-            <div class="code-box">
-                <div class="code-title">// Interrogatif : Am/Is/Are + sujet + verbe-ing ?</div>
-                <span class="function">Are</span> you <span class="function">listening</span>?      <span class="comment">— Écoutez-vous ?</span>
-                <span class="function">Is</span> she <span class="function">cooking</span>?         <span class="comment">— Cuisine-t-elle ?</span>
-            </div>
-            <div class="tense-box">
-                <h4>📌 Present Simple vs Present Continuous</h4>
-                <p>• <strong>Present Simple</strong> : I <strong>work</strong> at a bank. (Je travaille dans une banque — habitude)</p>
-                <p>• <strong>Present Continuous</strong> : I <strong>am working</strong> right now. (Je travaille en ce moment — action en cours)</p>
-                <p>• <strong>Present Simple</strong> : She <strong>lives</strong> in Tunis. (Elle habite à Tunis — état permanent)</p>
-                <p>• <strong>Present Continuous</strong> : She <strong>is staying</strong> at a hotel. (Elle loge à l'hôtel — temporaire)</p>
-            </div>
-            <div class="warning-box">
-                <h4>⚠️ Règle importante : verbes non utilisés au continu</h4>
-                <p>Certains verbes (verbes d'état) ne s'utilisent <strong>PAS</strong> au Present Continuous :</p>
-                <p><strong>love, like, hate, want, need, know, understand, remember, believe, seem</strong></p>
-                <p>→ On dit : I <strong>love</strong> music. (✓) mais PAS : I <strong>am loving</strong> music. (✗)</p>
-            </div>
-        </div>
-
-        <!-- PARTIE 5 -->
-        <div class="en-content" id="partie5">
-            <h3>📒 5. Les mots interrogatifs (Wh-questions)</h3>
-            <p>Les <strong>Wh-questions</strong> sont les questions qui commencent par un mot interrogatif :</p>
-            <table class="vocab-table">
-                <tr>
-                    <th>Mot interrogatif</th>
-                    <th>Signification</th>
-                    <th>Exemple</th>
-                </tr>
-                <tr>
-                    <td class="en-word">What?</td>
-                    <td class="fr-word">Quoi ? / Quel(le) ?</td>
-                    <td>What is your name?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Who?</td>
-                    <td class="fr-word">Qui ?</td>
-                    <td>Who is she?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Where?</td>
-                    <td class="fr-word">Où ?</td>
-                    <td>Where do you live?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">When?</td>
-                    <td class="fr-word">Quand ?</td>
-                    <td>When does the class start?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Why?</td>
-                    <td class="fr-word">Pourquoi ?</td>
-                    <td>Why are you late?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">How?</td>
-                    <td class="fr-word">Comment ?</td>
-                    <td>How are you?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">How much?</td>
-                    <td class="fr-word">Combien (prix) ?</td>
-                    <td>How much is this book?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">How many?</td>
-                    <td class="fr-word">Combien (dénombrable) ?</td>
-                    <td>How many students are there?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Which?</td>
-                    <td class="fr-word">Lequel/Laquelle ?</td>
-                    <td>Which one do you prefer?</td>
-                </tr>
-                <tr>
-                    <td class="en-word">Whose?</td>
-                    <td class="fr-word">À qui ?</td>
-                    <td>Whose book is this?</td>
-                </tr>
-            </table>
-            <div class="code-box">
-                <div class="code-title">// Structure des Wh-questions</div>
-                <span class="comment">// Wh-word + auxiliary + sujet + verbe ?</span>
-                <span class="function">What</span> do you <span class="function">do</span>?          <span class="comment">— Que faites-vous ? (profession)</span>
-                <span class="function">Where</span> does she <span class="function">live</span>?      <span class="comment">— Où habite-t-elle ?</span>
-                <span class="function">When</span> did you <span class="function">arrive</span>?      <span class="comment">— Quand êtes-vous arrivé ?</span>
-                <span class="function">Why</span> are you <span class="function">crying</span>?      <span class="comment">— Pourquoi pleurez-vous ?</span>
-            </div>
-        </div>
-
-        <!-- PARTIE 6 -->
-        <div class="en-content" id="partie6">
-            <h3>📓 6. Exercices et comparaisons</h3>
-            <div class="example-box">
-                <h4>💡 Exercice 1 : Present Simple ou Present Continuous ?</h4>
-                <p>1. Right now, I _____ (read) a book. → am reading</p>
-                <p>2. Every day, I _____ (drink) coffee. → drink</p>
-                <p>3. Look! The children _____ (play) in the garden. → are playing</p>
-                <p>4. She _____ (work) at a hospital. → works</p>
-                <p>5. At the moment, he _____ (sleep). → is sleeping</p>
-            </div>
-            <div class="example-box">
-                <h4>💡 Exercice 2 : Mettez à la forme négative</h4>
-                <p>1. I like fish. → I <strong>don't like</strong> fish.</p>
-                <p>2. She works here. → She <strong>doesn't work</strong> here.</p>
-                <p>3. They went to Paris. → They <strong>didn't go</strong> to Paris.</p>
-                <p>4. He is sleeping. → He <strong>isn't sleeping</strong>.</p>
-            </div>
-            <div class="example-box">
-                <h4>💡 Exercice 3 : Transformez en question</h4>
-                <p>1. You speak English. → <strong>Do you speak</strong> English?</p>
-                <p>2. She lives in Tunis. → <strong>Does she live</strong> in Tunis?</p>
-                <p>3. They saw the movie. → <strong>Did they see</strong> the movie?</p>
-                <p>4. He is a teacher. → <strong>Is he</strong> a teacher?</p>
-            </div>
-            <div class="warning-box">
-                <h4>⚠️ Erreurs fréquentes à éviter</h4>
-                <p>1. <strong>Don't forget the "s"</strong> à la 3ème personne du Present Simple : He likeS, not "He like"</p>
-                <p>2. <strong>Use the base form</strong> après "does/don't/doesn't/did" : Does she speak, not "Does she speaks"</p>
-                <p>3. <strong>区分 Simple vs Continuous</strong> : I work (habit) ≠ I am working (en ce moment)</p>
-            </div>
-        </div>
-
-        <!-- SECTION RÉSUMÉ IMAGE -->
-        <section class="section-resume">
-            <h2><span class="icon">🖼️</span> Résumé visuel</h2>
-            <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/512DA8/FFFFFF?text=English+Grammar+-+Complete+Summary" alt="Résumé grammaire anglaise">
-                <div class="resume-overlay">
-                    <h3>English Grammar</h3>
-                    <p>Present Simple, Past Simple, Present Continuous, Wh-questions</p>
+            <h4>📌 Why Paraphrase?</h4>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Demonstrates understanding:</strong> You show you truly comprehend the text, not just memorize it</p>
                 </div>
-                            <br><br>
-                <a href="" download>
-                    <button>📥 Télécharger la photo</button>
-                </a></div>
-        </section>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Avoids plagiarism:</strong> Direct copying may be penalized</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Shows language skills:</strong> You demonstrate your vocabulary and grammar knowledge</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>Adapts to questions:</strong> Some questions specifically ask for your own words</p>
+                </div>
+            </div>
 
-        <!-- SECTION VIDÉO -->
-        <section class="section-video">
-            <h2><span class="icon">🎬</span> Vidéo explicative</h2>
-            <div class="video-container">
-                <iframe src=""
-                        width="640" height="360" frameborder="0" allow="autoplay">
-                </iframe>
+            <h4>📌 Technique 1: Synonym Replacement</h4>
+            <p>The simplest paraphrasing technique involves replacing words with synonyms while maintaining the meaning.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Synonym Replacement Examples</div>
+                <span class="comment">// Original:</span> "The smartphone has become <strong>essential</strong> in our daily lives."
+                <br><br><span class="comment">// Paraphrased:</span> "The smartphone has become <strong>necessary/vital/crucial</strong> in our everyday lives."
+                <br><br><span class="comment">// Original:</span> "Social media has <strong>changed</strong> the way we communicate."
+                <br><br><span class="comment">// Paraphrased:</span> "Social media has <strong>transformed/altered/modified</strong> the way we communicate."
+                <br><br><span class="comment">// Original:</span> "Many students <strong>use</strong> phones for educational purposes."
+                <br><br><span class="comment">// Paraphrased:</span> "Many students <strong>utilize/employ</strong> phones for educational purposes."
+            </div>
+
+            <h4>Useful Synonyms for Academic Writing</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Common Word</th>
+                    <th>Synonyms</th>
+                </tr>
+                <tr>
+                    <td class="en-word">important</td>
+                    <td>significant, crucial, essential, vital, key</td>
+                </tr>
+                <tr>
+                    <td class="en-word">big/large</td>
+                    <td>major, significant, considerable, substantial</td>
+                </tr>
+                <tr>
+                    <td class="en-word">many</td>
+                    <td>numerous, several, a number of, countless</td>
+                </tr>
+                <tr>
+                    <td class="en-word">good</td>
+                    <td>beneficial, advantageous, positive, valuable</td>
+                </tr>
+                <tr>
+                    <td class="en-word">bad</td>
+                    <td>harmful, negative, detrimental, damaging</td>
+                </tr>
+                <tr>
+                    <td class="en-word">think</td>
+                    <td>believe, consider, feel, argue, maintain</td>
+                </tr>
+                <tr>
+                    <td class="en-word">show</td>
+                    <td>demonstrate, illustrate, indicate, reveal</td>
+                </tr>
+                <tr>
+                    <td class="en-word">use</td>
+                    <td>utilize, employ, apply, make use of</td>
+                </tr>
+                <tr>
+                    <td class="en-word">help</td>
+                    <td>assist, support, aid, facilitate</td>
+                </tr>
+                <tr>
+                    <td class="en-word">different</td>
+                    <td>various, diverse, distinct, various</td>
+                </tr>
+            </table>
+
+            <h4>📌 Technique 2: Change Word Class (Part of Speech)</h4>
+            <p>Transform words from one part of speech to another while keeping the meaning.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Word Class Changes</div>
+                <span class="comment">// Verb → Noun</span>
+                <br>The government <strong>implemented</strong> new policies. → The government <strong>implemented</strong> <strong>implementation</strong> of new policies.
+                <br><br><span class="comment">// Adjective → Noun</span>
+                <br>The study showed <strong>positive</strong> results. → The study showed <strong>positivity</strong> in its results.
+                <br><br><span class="comment">// Noun → Verb</span>
+                <br>The <strong>development</strong> of technology is rapid. → Technology <strong>developed</strong> rapidly.
+                <br><br><span class="comment">// Verb → Adjective</span>
+                <br>The results <strong>surprised</strong> everyone. → The results were <strong>surprising</strong> to everyone.
+            </div>
+
+            <h4>📌 Technique 3: Change Structure</h4>
+            <p>Rephrase sentences by changing their grammatical structure.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Structural Changes</div>
+                <span class="comment">// Active → Passive</span>
+                <br><span class="function">Original:</span> "Researchers discovered a new treatment."
+                <br><span class="function">Paraphrased:</span> "A new treatment was discovered by researchers."
+                <br><br><span class="comment">// Direct object → Subject</span>
+                <br><span class="function">Original:</span> "The study covered 1000 participants."
+                <br><span class="function">Paraphrased:</span> "The study involved 1000 participants."
+                <br><br><span class="comment">// Negative → Affirmative</span>
+                <br><span class="function">Original:</span> "The problem is not simple."
+                <br><span class="function">Paraphrased:</span> "The problem is complex/complicated."
+                <br><br><span class="comment">// Simple sentence → Complex</span>
+                <br><span class="function">Original:</span> "Technology advanced quickly."
+                <br><span class="function">Paraphrased:</span> "Technology advanced at a rapid pace."
+            </div>
+
+            <h4>📌 Technique 4: Combine Information</h4>
+            <p>Sometimes you can paraphrase by combining related pieces of information.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Combining Information</div>
+                <span class="comment">// Original text:</span> "The internet has changed education. Students can now access online courses. They can learn from anywhere in the world."
+                <br><br><span class="comment">// Paraphrased:</span> "The internet has transformed education by enabling students to access online courses from anywhere in the world."
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ IMPORTANT: What NOT to Do</h4>
+                <p>• <strong>NE copy the exact sentence</strong> from the text — this is considered plagiarism</p>
+                <p>• <strong>NE change just a few words</strong> — this is not true paraphrasing</p>
+                <p>• <strong>NE change the meaning</strong> — your paraphrase must accurately reflect the original</p>
+                <p>• <strong>NE add information</strong> not found in the text</p>
+                <p>• <strong>DO</strong> keep the essential meaning and key facts</p>
+            </div>
+        </div>
+
+        <!-- PART 4: TRUE/FALSE QUESTIONS -->
+        <div class="en-content" id="partie4">
+            <h3>📕 4. True/False Questions with Justification</h3>
+            <p>True/False questions require you to determine whether a statement agrees with the text and, in many cases, provide a justification using information from the text.</p>
+
+            <h4>📌 Question Formats</h4>
+            <div class="question-type">
+                <h4>Format 1: Simple True/False</h4>
+                <p>Simply state whether the statement is True or False.</p>
+                <p>Example: "Social media is mentioned as a communication tool. (True / False)"</p>
+            </div>
+
+            <div class="question-type">
+                <h4>Format 2: True/False with Justification</h4>
+                <p>State True/False AND provide evidence from the text to support your answer.</p>
+                <p>Example: "According to the text, teenagers spend more than 6 hours on phones daily. (True / False) Justify."</p>
+            </div>
+
+            <div class="question-type">
+                <h4>Format 3: True/False/Not Stated</h4>
+                <p>Determine if the statement is explicitly confirmed, denied, or not mentioned in the text.</p>
+                <p>Example: "The text states that the government has banned smartphones in schools. (True / False / Not Stated)"</p>
+            </div>
+
+            <h4>📌 How to Answer True/False Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// Step-by-Step Approach</div>
+                <span class="comment">// Step 1: Read the statement carefully</span>
+                <br>Identify the key claim or fact in the statement.
+                <br><br><span class="comment">// Step 2: Scan the text for relevant information</span>
+                <br>Look for keywords related to the statement.
+                <br><br><span class="comment">// Step 3: Compare the statement with the text</span>
+                <br>Check if the information matches, contradicts, or is absent.
+                <br><br><span class="comment">// Step 4: Provide your answer with justification</span>
+                <br>State True/False and quote relevant text evidence.
+            </div>
+
+            <h4>📌 Model Answers for True/False Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// Sample Text</div>
+                <span class="comment">// "Climate change is becoming one of the most pressing challenges of our time. Global temperatures have risen by 1.1°C since the pre-industrial era. This warming is primarily caused by human activities, especially the burning of fossil fuels. The consequences include rising sea levels, extreme weather events, and the loss of biodiversity."</span>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Question 1: True/False with justification</h4>
+                <p><strong>Statement:</strong> Global temperatures have increased by 1.1°C since the industrial era.</p>
+                <p><strong>Answer:</strong> <strong>True</strong>. The text explicitly states that "Global temperatures have risen by 1.1°C since the pre-industrial era."</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Question 2: True/False with justification</h4>
+                <p><strong>Statement:</strong> Climate change is only caused by natural factors.</p>
+                <p><strong>Answer:</strong> <strong>False</strong>. The text clearly indicates that climate change is "primarily caused by human activities, especially the burning of fossil fuels," contradicting the statement.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Question 3: True/False/Not Stated</h4>
+                <p><strong>Statement:</strong> Governments have implemented policies to reduce carbon emissions.</p>
+                <p><strong>Answer:</strong> <strong>Not Stated</strong>. While the text discusses the causes and consequences of climate change, it does not mention any government policies or measures to address the issue.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Question 4: True/False with justification</h4>
+                <p><strong>Statement:</strong> One consequence of climate change is the loss of biodiversity.</p>
+                <p><strong>Answer:</strong> <strong>True</strong>. The text lists "the loss of biodiversity" as one of the consequences of climate change, along with rising sea levels and extreme weather events.</p>
+            </div>
+
+            <h4>📌 Common Patterns to Watch For</h4>
+            <table class="comparison-table">
+                <tr>
+                    <th>Statement Uses</th>
+                    <th>Text Uses</th>
+                    <th>Answer</th>
+                </tr>
+                <tr>
+                    <td>"many"</td>
+                    <td>"over 3.6 billion"</td>
+                    <td>True (many = a large number)</td>
+                </tr>
+                <tr>
+                    <td>"always"</td>
+                    <td>"often"</td>
+                    <td>False (different degree)</td>
+                </tr>
+                <tr>
+                    <td>"can"</td>
+                    <td>"must"</td>
+                    <td>False (different modality)</td>
+                </tr>
+                <tr>
+                    <td>"all"</td>
+                    <td>"most"</td>
+                    <td>False (different scope)</td>
+                </tr>
+                <tr>
+                    <td>"positive"</td>
+                    <td>"negative"</td>
+                    <td>False (opposite)</td>
+                </tr>
+                <tr>
+                    <td>"may"</td>
+                    <td>"will"</td>
+                    <td>Depends on context</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PART 5: MULTIPLE CHOICE QUESTIONS -->
+        <div class="en-content" id="partie5">
+            <h3>📒 5. Multiple Choice Questions</h3>
+            <p>Multiple choice questions present you with several answer options, and you must select the correct one based on information from the text.</p>
+
+            <h4>📌 Types of Multiple Choice Questions</h4>
+
+            <div class="question-type">
+                <h4>Type 1: Single Best Answer</h4>
+                <p>Choose only ONE correct answer from the options provided.</p>
+                <p>Example: "What is the main purpose of the text?"</p>
+                <p>a) To entertain readers</p>
+                <p>b) To inform about climate change</p>
+                <p>c) To persuade people to travel</p>
+                <p>d) To describe a vacation</p>
+            </div>
+
+            <div class="question-type">
+                <h4>Type 2: Multiple Answers</h4>
+                <p>Select ALL correct answers (may have more than one correct option).</p>
+                <p>Example: "Which of the following are mentioned as consequences of climate change?"</p>
+                <p>a) Rising sea levels</p>
+                <p>b) Economic growth</p>
+                <p>c) Extreme weather events</p>
+                <p>d) Loss of biodiversity</p>
+            </div>
+
+            <div class="question-type">
+                <h4>Type 3: Vocabulary in Context</h4>
+                <p>Choose the correct meaning of an underlined word based on context.</p>
+                <p>Example: "What does the word 'crucial' in line 5 mean?"</p>
+                <p>a) Important</p>
+                <p>b) Unimportant</p>
+                <p>c) Difficult</p>
+                <p>d) Simple</p>
+            </div>
+
+            <h4>📌 Strategies for Answering Multiple Choice</h4>
+            <div class="code-box">
+                <div class="code-title">// Elimination Strategy</div>
+                <span class="comment">// Step 1: Read the question and options carefully</span>
+                <br>Identify what the question is asking for.
+                <br><br><span class="comment">// Step 2: Eliminate obviously wrong answers</span>
+                <br>Cross out options that are clearly incorrect or contradict the text.
+                <br><br><span class="comment">// Step 3: Compare remaining options with the text</span>
+                <br>Look for the option that best matches the information.
+                <br><br><span class="comment">// Step 4: Choose the best answer</span>
+                <br>Select the option that is most supported by the text.
+            </div>
+
+            <h4>📌 Common Wrong Answer Traps</h4>
+            <div class="warning-box">
+                <h4>⚠️ Trap 1: True but Not Answer the Question</h4>
+                <p>The statement may be true according to the text, but it doesn't answer the specific question asked.</p>
+                <p><strong>Example:</strong> Question asks about CAUSES, but you choose an answer about CONSEQUENCES</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Trap 2: Word-for-Word from Text</h4>
+                <p>Answers that are copied directly from the text are often incorrect because they don't address the question.</p>
+                <p><strong>Solution:</strong> Make sure the answer actually responds to what is being asked</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Trap 3: Extreme Words</h4>
+                <p>Options with words like "always," "never," "all," "none," "impossible" are often wrong.</p>
+                <p><strong>Solution:</strong> Look for more moderate language like "sometimes," "may," "could"</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Trap 4: Similar but Incorrect</h4>
+                <p>Some options look correct but have subtle differences that make them wrong.</p>
+                <p><strong>Example:</strong> "increased by 10%" vs "increased to 10%"</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Trap 5: Outside Knowledge</h4>
+                <p>Don't use your own knowledge if it contradicts the text. Always base your answer on the text.</p>
+                <p><strong>Example:</strong> You know something is false in reality, but the text states it — follow the text!</p>
+            </div>
+
+            <h4>📌 Model Answer for Multiple Choice</h4>
+            <div class="code-box">
+                <div class="code-title">// Sample Multiple Choice Question</div>
+                <span class="comment">// Text:</span> "Online learning has grown significantly in recent years. Students can now access courses from top universities without leaving their homes. However, this form of education requires strong self-discipline and motivation."
+                <br><br><span class="comment">// Question:</span> According to the text, online learning ____.
+                <br><br><span class="function">A)</span> eliminates the need for self-discipline
+                <br><span class="function">B)</span> requires self-discipline and motivation
+                <br><span class="function">C)</span> is only available to rich students
+                <br><span class="function">D)</span> has decreased in popularity
+                <br><br><span class="comment">// Analysis:</span>
+                <br>A) <strong>WRONG</strong> — The text says it REQUIRES self-discipline, not eliminates it
+                <br>B) <strong>CORRECT</strong> — Matches "requires strong self-discipline and motivation"
+                <br>C) <strong>WRONG</strong> — Not mentioned in the text
+                <br>D) <strong>WRONG</strong> — Text says it has GROWN, not decreased
+                <br><br><span class="comment">// Answer:</span> <strong>B</strong>
+            </div>
+        </div>
+
+        <!-- PART 6: VOCABULARY QUESTIONS -->
+        <div class="en-content" id="partie6">
+            <h3>📓 6. Vocabulary Questions (Synonyms and Antonyms)</h3>
+            <p>Vocabulary questions test your ability to understand words in context and find their meanings using the surrounding text.</p>
+
+            <h4>📌 Types of Vocabulary Questions</h4>
+
+            <h4>Type 1: Synonym Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// Synonym Question Patterns</div>
+                <span class="comment">// Pattern 1:</span> "The underlined word in line X is closest in meaning to:"
+                <br><br><span class="comment">// Pattern 2:</span> "Find in the text a word that is similar in meaning to:"
+                <br><br><span class="comment">// Pattern 3:</span> "Which word could replace 'X' without changing the meaning?"
+            </div>
+
+            <h4>Type 2: Antonym Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// Antonym Question Patterns</div>
+                <span class="comment">// Pattern 1:</span> "The underlined word in line X is opposite in meaning to:"
+                <br><br><span class="comment">// Pattern 2:</span> "Which word in the text is opposite in meaning to:"
+            </div>
+
+            <h4>Type 3: Contextual Meaning</h4>
+            <div class="code-box">
+                <div class="code-title">// Contextual Meaning Patterns</div>
+                <span class="comment">// Pattern 1:</span> "What does the word 'X' mean in the context of the text?"
+                <br><br><span class="comment">// Pattern 2:</span> "In line X, 'X' could be best defined as:"
+                <br><br><span class="comment">// Pattern 3:</span> "The word 'X' in paragraph 2 is closest in meaning to:"
+            </div>
+
+            <h4>📌 How to Find Meaning from Context</h4>
+            <div class="code-box">
+                <div class="code-title">// Context Clues Strategy</div>
+                <span class="comment">// Step 1: Read the sentence with the unknown word</span>
+                <br>Try to understand the overall meaning of the sentence.
+                <br><br><span class="comment">// Step 2: Look for context clues</span>
+                <br>• Definition clues: "The word means, that is, in other words"
+                <br>• Example clues: "for example, such as, including"
+                <br>• Contrast clues: "however, but, unlike, although"
+                <br>• Cause/Effect clues: "because, therefore, as a result"
+                <br><br><span class="comment">// Step 3: Make an educated guess</span>
+                <br>Based on the surrounding context, guess the meaning.
+                <br><br><span class="comment">// Step 4: Verify your guess</span>
+                <br>Check if your guess makes sense in the sentence.
+            </div>
+
+            <h4>📌 Context Clue Examples</h4>
+            <div class="example-box">
+                <h4>💡 Example 1: Definition Clue</h4>
+                <p><strong>Sentence:</strong> "A <strong>pandemic</strong>, that is, a worldwide epidemic, has affected millions of people."</p>
+                <p><strong>Meaning:</strong> "Pandemic" means a worldwide epidemic (disease spreading worldwide).</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Example 2: Contrast Clue</h4>
+                <p><strong>Sentence:</strong> "Unlike his <strong>introvert</strong> brother, John is quite <strong>extrovert</strong> and loves parties."</p>
+                <p><strong>Meaning:</strong> "Extrovert" is the opposite of introvert (someone who is outgoing and social).</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Example 3: Example Clue</h4>
+                <p><strong>Sentence:</strong> "Healthy habits include eating vegetables, exercising regularly, and getting enough sleep."</p>
+                <p><strong>Meaning:</strong> "Healthy habits" are behaviors that contribute to good health.</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Example 4: Cause/Effect Clue</h4>
+                <p><strong>Sentence:</strong> "Due to the heavy rain, the <strong>floods</strong> caused significant damage to the city."</p>
+                <p><strong>Meaning:</strong> "Floods" are caused by heavy rain and result in water damage.</p>
+            </div>
+
+            <h4>📌 Common Vocabulary for BAC Exam</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Word</th>
+                    <th>Meaning</th>
+                    <th>Synonyms</th>
+                </tr>
+                <tr>
+                    <td class="en-word">significant</td>
+                    <td>important, considerable</td>
+                    <td>major, notable, important</td>
+                </tr>
+                <tr>
+                    <td class="en-word">rapidly</td>
+                    <td>quickly, fast</td>
+                    <td>swiftly, speedily, fast</td>
+                </tr>
+                <tr>
+                    <td class="en-word">adequate</td>
+                    <td>enough, sufficient</td>
+                    <td>sufficient, plenty</td>
+                </tr>
+                <tr>
+                    <td class="en-word">concern</td>
+                    <td>worry, interest</td>
+                    <td>worry, anxiety, interest</td>
+                </tr>
+                <tr>
+                    <td class="en-word">essential</td>
+                    <td>necessary, vital</td>
+                    <td>crucial, vital, necessary</td>
+                </tr>
+                <tr>
+                    <td class="en-word">considerable</td>
+                    <td>large, significant</td>
+                    <td>substantial, significant, large</td>
+                </tr>
+                <tr>
+                    <td class="en-word">primary</td>
+                    <td>main, most important</td>
+                    <td>main, chief, principal</td>
+                </tr>
+                <tr>
+                    <td class="en-word">despite</td>
+                    <td>in spite of</td>
+                    <td>although, even though</td>
+                </tr>
+                <tr>
+                    <td class="en-word">furthermore</td>
+                    <td>in addition, moreover</td>
+                    <td>also, moreover, additionally</td>
+                </tr>
+                <tr>
+                    <td class="en-word">consequently</td>
+                    <td>as a result, therefore</td>
+                    <td>therefore, thus, so</td>
+                </tr>
+            </table>
+
+            <div class="example-box">
+                <h4>💡 Practice: Find the Meaning</h4>
+                <p><strong>Text:</strong> "The government has introduced <strong>stringent</strong> measures to reduce pollution. Factories must now follow strict environmental regulations."</p>
+                <p><strong>Question:</strong> What does "stringent" mean in this context?</p>
+                <p><strong>Answer:</strong> "Stringent" means strict or severe. This is shown by the context clue "strict environmental regulations" which explains the measure.</p>
+            </div>
+        </div>
+
+        <!-- PART 7: WH-QUESTIONS DETAILED ANALYSIS -->
+        <div class="en-content" id="partie7">
+            <h3>📘 7. WH-Questions: Detailed Analysis</h3>
+            <p>WH-questions (questions starting with What, Who, Where, When, Why, How, etc.) require specific types of answers. Understanding what each question word asks for will help you answer correctly.</p>
+
+            <h4>📌 Question Words and Their Functions</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Question Word</th>
+                    <th>Asks for</th>
+                    <th>Example Answer Type</th>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>What</strong></td>
+                    <td>A thing, action, or fact</td>
+                    <td>"A new policy" / "Studying languages"</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>What + noun</strong></td>
+                    <td>Specific type</td>
+                    <td>"What kind of" → a specific category</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>What + N</strong></td>
+                    <td>Quantity</td>
+                    <td>"What percentage" → a number or percentage</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Who</strong></td>
+                    <td>A person</td>
+                    <td>"The president" / "Researchers"</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Whose</strong></td>
+                    <td>Possession</td>
+                    <td>"My friend's" / "The school's"</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Where</strong></td>
+                    <td>A place or location</td>
+                    <td>"In Paris" / "At the university"</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>When</strong></td>
+                    <td>A time or date</td>
+                    <td>"Last year" / "In 2020" / "Every day"</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>Why</strong></td>
+                    <td>A reason or cause</td>
+                    <td>"Because of..." / "In order to..."</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>How</strong></td>
+                    <td>A manner, method, or way</td>
+                    <td>"By using..." / "In a way that..."</td>
+                </tr>
+                <tr>
+                    <td class="en-word"><strong>How + adj/adv</strong></td>
+                    <td>Degree or extent</td>
+                    <td>"How many" → a number</td>
+                </tr>
+            </table>
+
+            <h4>📌 Detailed Analysis of Each Question Type</h4>
+
+            <h4>WHAT Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// WHAT Question Patterns</div>
+                <span class="comment">// Pattern 1: What + noun</span>
+                <br>What <strong>is the main idea</strong> of the text? → A statement of the central point
+                <br>What <strong>are the benefits</strong> mentioned? → A list of items
+                <br><br><span class="comment">// Pattern 2: What + verb/action</span>
+                <br>What <strong>happened</strong> in 2020? → An event
+                <br>What <strong>can be done</strong> about this? → A solution or recommendation
+                <br><br><span class="comment">// Pattern 3: What does X mean?</span>
+                <br>What <strong>does the author mean</strong> by...? → An explanation
+            </div>
+
+            <h4>WHO Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// WHO Question Patterns</div>
+                <span class="comment">// WHO asks about people (subject or object)</span>
+                <br>Who <strong>conducted the study</strong>? → The researcher(s)
+                <br>Who <strong>is mentioned</strong> as an example? → A person mentioned
+                <br>Who <strong>does the pronoun "they" refer to</strong>? → The people "they" represents
+                <br><br><span class="comment">// WHO vs WHOM</span>
+                <br>Who <strong>did this</strong>? (subject) → Who performed the action?
+                <br>Whom <strong>did you meet</strong>? (object) → Who received the action? (formal)
+            </div>
+
+            <h4>WHY Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// WHY Question Patterns</div>
+                <span class="comment">// WHY asks for reasons, causes, or purposes</span>
+                <br>Why <strong>is this happening</strong>? → Because of [reason]
+                <br>Why <strong>did the author write</strong> this? → For [purpose]
+                <br><br><span class="comment">// Common reason markers in text:</span>
+                <br>• because (of) — reason
+                <br>• in order to / so that — purpose
+                <br>• due to / owing to — cause
+                <br>• the reason is — explanation
+            </div>
+
+            <h4>HOW Questions</h4>
+            <div class="code-box">
+                <div class="code-title">// HOW Question Patterns</div>
+                <span class="comment">// HOW asks for manner, method, or degree</span>
+                <br>How <strong>does this work</strong>? → A method or process
+                <br>How <strong>many</strong>? → A number (countable)
+                <br>How <strong>much</strong>? → An amount (uncountable)
+                <br>How <strong>long</strong>? → Duration (time)
+                <br>How <strong>far</strong>? → Distance
+                <br>How <strong>old</strong>? → Age
+                <br>How <strong>often</strong>? → Frequency
+                <br>How <strong>quickly</strong>? → Speed
+            </div>
+
+            <h4>📌 Reference Questions (What does X refer to?)</h4>
+            <p>These questions ask you to identify what a pronoun, word, or phrase refers to in the context.</p>
+
+            <div class="code-box">
+                <div class="code-title">// Pronoun Reference</div>
+                <span class="comment">// Text:</span> "Many students struggle with exams. <strong>They</strong> often feel anxious before tests."
+                <br><br><span class="comment">// Question:</span> What does "They" in line 2 refer to?
+                <br><br><span class="comment">// Answer:</span> "They" refers to <strong>students</strong>.
+            </div>
+
+            <div class="code-box">
+                <div class="code-title">// Word/Phrase Reference</div>
+                <span class="comment">// Text:</span> "Online learning offers flexibility. <strong>This</strong> is particularly beneficial for working adults."
+                <br><br><span class="comment">// Question:</span> What does "This" in line 2 refer to?
+                <br><br><span class="comment">// Answer:</span> "This" refers to the <strong>flexibility that online learning offers</strong>.
+            </div>
+        </div>
+
+        <!-- PART 8: ERROR ANALYSIS -->
+        <div class="en-content" id="partie8">
+            <h3>📗 8. Error Analysis and Common Mistakes</h3>
+            <p>Understanding the most common errors will help you avoid them and provide better answers on exam day.</p>
+
+            <h4>📌 Top 15 Mistakes to Avoid</h4>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 1: Answering Based on General Knowledge</h4>
+                <p><strong>Error:</strong> "I know this from outside the text, so it must be true."</p>
+                <p><strong>Reality:</strong> Even if something is true in reality, the question asks about the TEXT. If the text doesn't say it, it's not the correct answer.</p>
+                <p><strong>Example:</strong> You know climate change is real, but if the text only mentions rising temperatures, you can only answer based on what the text states.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 2: Partial Understanding</h4>
+                <p><strong>Error:</strong> "I think I understand, so I'll answer quickly without checking."</p>
+                <p><strong>Reality:</strong> Always verify your understanding by re-reading the relevant part of the text.</p>
+                <p><strong>Solution:</strong> Take the time to locate and verify the answer in the text.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 3: Misreading the Question</h4>
+                <p><strong>Error:</strong> Reading "What is NOT mentioned" as "What is mentioned" or vice versa.</p>
+                <p><strong>Reality:</strong> The word NOT completely changes the answer.</p>
+                <p><strong>Solution:</strong> Underline the word NOT when you see it and make sure to answer accordingly.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 4: Overlooking Negative Words</h4>
+                <p><strong>Error:</strong> Missing words like "never," "not," "no," "without," "rarely."</p>
+                <p><strong>Reality:</strong> These words completely change the meaning of a statement.</p>
+                <p><strong>Solution:</strong> Pay special attention to negative words in statements.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 5: Choosing the First Match</h4>
+                <p><strong>Error:</strong> Selecting an answer that contains words from the text without fully understanding the question.</p>
+                <p><strong>Reality:</strong> Sometimes the answer with text words is deliberately wrong.</p>
+                <p><strong>Solution:</strong> Always verify that the answer actually addresses the question.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 6: Too Vague or Too Specific Answers</h4>
+                <p><strong>Error:</strong> Giving an answer that is either too general or too narrow.</p>
+                <p><strong>Reality:</strong> The answer should be neither too general nor too specific.</p>
+                <p><strong>Solution:</strong> Find the balance — answer exactly what is asked, no more, no less.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 7: Forgetting to Justify</h4>
+                <p><strong>Error:</strong> Only writing "True" or "False" without providing evidence.</p>
+                <p><strong>Reality:</strong> Even when not explicitly required, justification strengthens your answer.</p>
+                <p><strong>Solution:</strong> Always provide a brief justification using information from the text.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 8: Making Assumptions</h4>
+                <p><strong>Error:</strong> Assuming what happened before or after the text.</p>
+                <p><strong>Reality:</strong> Only base your answers on information IN the text.</p>
+                <p><strong>Solution:</strong> Stick strictly to what is written in the passage.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 9: Ignoring Context</h4>
+                <p><strong>Error:</strong> Giving the dictionary meaning of a word instead of the contextual meaning.</p>
+                <p><strong>Reality:</strong> Words can have different meanings depending on context.</p>
+                <p><strong>Solution:</strong> Always derive the meaning from the surrounding context.</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Mistake 10: Answering in the Wrong Language</h4>
+                <p><strong>Error:</strong> Writing answers in French when the question is in English.</p>
+                <p><strong>Reality:</strong> Answers should be in English.</p>
+                <p><strong>Solution:</strong> Always answer in English to demonstrate your language skills.</p>
+            </div>
+
+            <h4>📌 Quality Check for Your Answers</h4>
+            <div class="tips-box">
+                <h4>✅ Before Submitting, Check:</h4>
+                <p>□ Does my answer address exactly what the question asks?</p>
+                <p>□ Is my answer based solely on information from the text?</p>
+                <p>□ Have I provided justification where needed?</p>
+                <p>□ Did I notice any negative words (NOT, never, rarely)?</p>
+                <p>□ Is my answer clear and complete?</p>
+                <p>□ Did I use my own words or paraphrase when needed?</p>
+                <p>□ Are there any spelling or grammar mistakes?</p>
+            </div>
+        </div>
+
+        <!-- PART 9: FULL PRACTICE TEXTS -->
+        <div class="en-content" id="partie9">
+            <h3>📙 9. Full Practice Texts with Complete Answers</h3>
+            <p>This section provides complete practice texts similar to the BAC exam format, with all questions fully answered and explained.</p>
+
+            <h4>📌 Practice Text 1: Technology and Education</h4>
+            <div class="example-box">
+                <h4>Reading Passage</h4>
+                <p style="font-style:italic;">"The integration of technology in education has transformed traditional learning methods. Today's classrooms are equipped with smart boards, tablets, and high-speed internet, enabling teachers to deliver interactive lessons. According to a recent UNESCO report, over 60% of students worldwide now use digital devices for learning purposes.</p>
+                <p style="font-style:italic;">Online learning platforms have democratized education by providing access to courses from prestigious universities for free or at low cost. Students from remote areas can now attend virtual classes taught by expert instructors. However, this digital shift has raised concerns about screen time and its impact on students' health.</p>
+                <p style="font-style:italic;">Experts recommend balancing technology use with traditional learning activities. Physical books, face-to-face interactions, and outdoor activities remain essential for a well-rounded education. The key is to use technology as a tool to enhance learning, not to replace human connection entirely."</p>
+            </div>
+
+            <div class="example-box">
+                <h4>Questions</h4>
+                <p><strong>1. What is the text mainly about?</strong></p>
+                <p><strong>Answer:</strong> The text is mainly about how technology has transformed education, its benefits in terms of access to learning, and the importance of balancing it with traditional methods.</p>
+                <br>
+                <p><strong>2. According to the text, what percentage of students use digital devices for learning?</strong></p>
+                <p><strong>Answer:</strong> According to the UNESCO report mentioned in the text, over 60% of students worldwide use digital devices for learning purposes.</p>
+                <br>
+                <p><strong>3. How has online learning changed access to education?</strong></p>
+                <p><strong>Answer:</strong> Online learning has made education more accessible by providing courses from prestigious universities for free or at low cost, allowing students from remote areas to attend virtual classes taught by expert instructors.</p>
+                <br>
+                <p><strong>4. What concerns have been raised about the digital shift in education?</strong></p>
+                <p><strong>Answer:</strong> The text mentions concerns about screen time and its impact on students' health as a result of the increased use of digital devices in education.</p>
+                <br>
+                <p><strong>5. What do experts recommend?</strong></p>
+                <p><strong>Answer:</strong> Experts recommend balancing technology use with traditional learning activities, emphasizing that physical books, face-to-face interactions, and outdoor activities remain essential.</p>
+                <br>
+                <p><strong>6. True or False: All education will be replaced by technology.</strong></p>
+                <p><strong>Answer:</strong> <strong>False.</strong> The text explicitly states that technology should be used to "enhance learning, not to replace human connection entirely," indicating that traditional methods will continue to play an important role.</p>
+                <br>
+                <p><strong>7. What does the word "democratized" in paragraph 2 mean?</strong></p>
+                <p><strong>Answer:</strong> In this context, "democratized" means made more accessible to everyone, regardless of their location or economic status. This is supported by the context that students from remote areas can now access courses.</p>
+                <br>
+                <p><strong>8. What is the author's purpose in writing this text?</strong></p>
+                <p><strong>Answer:</strong> The author's purpose is to inform readers about the transformation of education through technology, highlighting both its benefits and concerns, while recommending a balanced approach.</p>
+            </div>
+
+            <h4>📌 Practice Text 2: Climate Change</h4>
+            <div class="example-box">
+                <h4>Reading Passage</h4>
+                <p style="font-style:italic;">"Climate change represents one of the greatest challenges facing humanity in the 21st century. The Earth's average surface temperature has risen by approximately 1.1°C since the pre-industrial era, primarily due to increased greenhouse gas emissions from human activities.</p>
+                <p style="font-style:italic;">The consequences of this warming are already visible across the globe. Sea levels have risen by about 20 centimeters in the past century, threatening coastal communities. Extreme weather events, including hurricanes, droughts, and floods, have become more frequent and intense. Furthermore, many species of plants and animals are struggling to adapt to rapidly changing environments.</p>
+                <p style="font-style:italic;">Addressing climate change requires immediate and coordinated action from governments, businesses, and individuals. Transitioning to renewable energy sources, improving energy efficiency, and protecting forests are essential strategies. While the challenge is immense, many experts believe that with sufficient political will and technological innovation, it is still possible to limit global warming to 1.5°C above pre-industrial levels."</p>
+            </div>
+
+            <div class="example-box">
+                <h4>Questions</h4>
+                <p><strong>1. What is the main idea of the text?</strong></p>
+                <p><strong>Answer:</strong> The main idea is that climate change is a major global challenge caused by human activities, with serious consequences already visible, but that it can still be addressed through coordinated action.</p>
+                <br>
+                <p><strong>2. By how much has the Earth's temperature risen since the pre-industrial era?</strong></p>
+                <p><strong>Answer:</strong> The Earth's average surface temperature has risen by approximately 1.1°C since the pre-industrial era.</p>
+                <br>
+                <p><strong>3. What has caused this temperature increase?</strong></p>
+                <p><strong>Answer:</strong> The temperature increase is primarily due to increased greenhouse gas emissions from human activities.</p>
+                <br>
+                <p><strong>4. List two consequences of climate change mentioned in the text.</strong></p>
+                <p><strong>Answer:</strong> Two consequences mentioned are: (1) sea levels have risen by about 20 centimeters, threatening coastal communities, and (2) extreme weather events such as hurricanes, droughts, and floods have become more frequent and intense.</p>
+                <br>
+                <p><strong>5. Why are some species struggling?</strong></p>
+                <p><strong>Answer:</strong> Many species of plants and animals are struggling to adapt to rapidly changing environments caused by climate change.</p>
+                <br>
+                <p><strong>6. What three strategies are mentioned to address climate change?</strong></p>
+                <p><strong>Answer:</strong> The three strategies mentioned are: (1) transitioning to renewable energy sources, (2) improving energy efficiency, and (3) protecting forests.</p>
+                <br>
+                <p><strong>7. According to some experts, is it still possible to limit global warming? Why?</strong></p>
+                <p><strong>Answer:</strong> Yes, many experts believe it is still possible to limit global warming to 1.5°C above pre-industrial levels, provided there is sufficient political will and technological innovation.</p>
+                <br>
+                <p><strong>8. True or False: Only governments need to take action on climate change.</strong></p>
+                <p><strong>Answer:</strong> <strong>False.</strong> The text states that addressing climate change requires immediate and coordinated action from governments, businesses, AND individuals.</p>
+            </div>
+        </div>
+
+        <!-- PART 10: FINAL CHECKLIST -->
+        <div class="en-content" id="partie10">
+            <h3>📕 10. Final Checklist and Tips for Exam Day</h3>
+            <p>Use this comprehensive checklist to ensure you're fully prepared for the reading comprehension section of the BAC exam.</p>
+
+            <h4>📌 Before the Exam</h4>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>Practice with past BAC papers to familiarize yourself with the format and question types</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>Review all types of questions: global comprehension, detailed, vocabulary, inference</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>Learn common vocabulary words and their synonyms for academic texts</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>Understand how to derive word meanings from context</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>Practice paraphrasing to improve reformulation skills</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>Time yourself during practice to improve speed</p>
+                </div>
+            </div>
+
+            <h4>📌 During the Exam: Reading Strategy</h4>
+            <div class="code-box">
+                <div class="code-title">// Recommended Reading Sequence</div>
+                <span class="comment">// Step 1: Read the title and first paragraph (1 minute)</span>
+                <br>This gives you the main topic and author's approach.
+                <br><br><span class="comment">// Step 2: Read all questions carefully (2 minutes)</span>
+                <br>Know what you're looking for before reading the full text.
+                <br><br><span class="comment">// Step 3: Read the entire text once (5-7 minutes)</span>
+                <br>Get a general understanding. Don't stop for unknown words.
+                <br><br><span class="comment">// Step 4: Answer questions in order (15-20 minutes)</span>
+                <br>Start with easier questions. Use the text to find answers.
+                <br><br><span class="comment">// Step 5: Review your answers (3-5 minutes)</span>
+                <br>Check for completeness and accuracy.
+            </div>
+
+            <h4>📌 Answering Strategy Checklist</h4>
+            <div class="tips-box">
+                <h4>✅ For Each Question, Verify:</h4>
+                <p>□ Did I understand what the question is asking?</p>
+                <p>□ Did I look for the relevant part of the text?</p>
+                <p>□ Did I base my answer on the text, not on outside knowledge?</p>
+                <p>□ Did I paraphrase or use my own words where appropriate?</p>
+                <p>□ Did I include justification for True/False answers?</p>
+                <p>□ Is my answer complete and clear?</p>
+                <p>□ Are there any spelling or grammar errors?</p>
+            </div>
+
+            <h4>📌 Question-Specific Tips</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Question Type</th>
+                    <th>Key Tips</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Global comprehension</td>
+                    <td>Think about the main topic and purpose. Read the first and last paragraphs carefully.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Detailed questions</td>
+                    <td>Use keywords to locate information. Look for exact matches or paraphrases.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Vocabulary questions</td>
+                    <td>Use context clues. Don't rely on dictionary meanings alone.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">True/False</td>
+                    <td>Always justify with evidence from the text. Watch for NOT, never, always.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Multiple choice</td>
+                    <td>Eliminate wrong answers first. Choose the best option, not an perfect one.</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Inference</td>
+                    <td>Read between the lines. Use evidence to support your conclusions.</td>
+                </tr>
+            </table>
+
+            <h4>📌 Time Management</h4>
+            <table class="vocab-table">
+                <tr>
+                    <th>Activity</th>
+                    <th>Recommended Time</th>
+                </tr>
+                <tr>
+                    <td class="en-word">Initial reading</td>
+                    <td>5-7 minutes</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Answering all questions</td>
+                    <td>15-20 minutes</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Review and check</td>
+                    <td>3-5 minutes</td>
+                </tr>
+                <tr>
+                    <td class="en-word">Total</td>
+                    <td>25-30 minutes</td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <h4>⚠️ Final Reminders</h4>
+                <p>• <strong>Read the instructions carefully</strong> — Make sure you understand what is required</p>
+                <p>• <strong>Answer every question</strong> — Even if unsure, make an educated guess</p>
+                <p>• <strong>Don't leave blank</strong> — All questions deserve an attempt</p>
+                <p>• <strong>Stay calm</strong> — If you don't understand something, move on and come back</p>
+                <p>• <strong>Trust your first instinct</strong> — Usually correct unless you find clear evidence otherwise</p>
+                <p>• <strong>Write legibly</strong> — Illegible answers won't be graded</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Final Motivational Tip</h4>
+                <p>Remember: the BAC reading comprehension section is designed to test your ability to understand and interpret texts. With thorough preparation using these strategies, you are well-equipped to tackle any text confidently. Practice regularly, stay focused during the exam, and trust your preparation!</p>
+            </div>
+        </div>
+
+        <!-- IMAGE SUMMARY -->
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> Visual Summary</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/9C27B0/FFFFFF?text=How+to+Answer+Text+Questions+BAC+Tunisia" alt="Answering Questions Guide">
+                <div class="resume-overlay">
+                    <h3>How to Answer Text Questions - BAC Tunisia</h3>
+                    <p>Question Types, Strategies, Paraphrasing, True/False, Practice</p>
+                </div>
             </div>
         </section>
 
-        <!-- BOUTON LEÇON SUIVANTE -->
+        <!-- VIDEO SECTION -->
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> Explanatory Video</h2>
+            <div class="video-container">
+                <iframe src="" width="640" height="360" frameborder="0" allow="autoplay"></iframe>
+            </div>
+        </section>
+
+        <!-- NEXT LESSON BUTTON -->
         <a href="anglais-lecon3.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">Leçon suivante</p>
-                <p class="next-lesson-title">Everyday Vocabulary →</p>
+                <p class="next-lesson-text">Next Lesson</p>
+                <p class="next-lesson-title">How to Write for BAC (Writing) →</p>
             </div>
             <span class="next-lesson-arrow">→</span>
         </a>
@@ -421,7 +1304,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2027 From Bac-2-Fac - Tous droits réservés<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+        <p>© 2025 BAC Tunisia - All Rights Reserved</p>
     </footer>
 
     <script src="../../Shared/script.js"></script>
