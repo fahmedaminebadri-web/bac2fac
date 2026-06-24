@@ -28,6 +28,17 @@
         .plan-box h3 { color: #1E40AF; margin-bottom: 14px; font-size: 1.05rem; }
         .plan-box p { color: var(--text-dark); line-height: 1.7; }
         .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #DC2626; color: white; padding: 12px; text-align: right; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .ar-word { color: #DC2626; font-weight: 600; }
+        .def-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-right: 4px solid #3B82F6; padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .def-box h4 { color: #1E40AF; font-size: 0.95rem; margin-bottom: 8px; }
+        .def-box p { color: #1E3A8A; margin-bottom: 6px; }
+        .question-box { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-right: 4px solid #EC4899; padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .question-box h4 { color: #9D174D; font-size: 0.95rem; margin-bottom: 8px; }
+        .question-box p { color: #831843; margin: 0; font-style: italic; }
     </style>
 </head>
 <body>
@@ -39,6 +50,9 @@
             </a>
             <nav class="nav-links">
                 <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
                 <a href="arabe.html">العربية</a>
             </nav>
         </div>
@@ -57,19 +71,23 @@
         <!-- ملخص -->
         <div class="plan-box">
             <h3>📝 ملخص الدرس</h3>
-            <p>يتناول هذا الدرس العلاقة بين <strong>الفن والأدب</strong> : مفهوم الأدب، خصائص النص الأدبي، الفرق بين الأدب والفن的其他 أشكال، عناصر النص الأدبي (الشكل والمضمون)، وأنواع الأدب (شعر، نثر، مسرحية). كما يتناول تأثير السياق الاجتماعي والتاريخي على الإنتاج الأدبي.</p>
+            <p>يتناول هذا الدرس العلاقة بين <strong>الفن والأدب</strong> : مفهوم الأدب في التراث العربي والحداثة ، خصائص النص الأدبي ، الفرق بين الأدب والفنون الأخرى ، عناصر النص الأدبي (الشكل والمضمون) ، أنواع الأدب (شعر ، نثر ، مسرحية) ، المدارس الأدبية (الكلاسيكية ، الرومانسية ، الواقعية ، الحداثية) ، الصورة الشعرية والبلاغة ، وتأثير السياق الاجتماعي والتاريخي على الإنتاج الأدبي. مع نصوص تطبيقية من التراث والمعاصر.</p>
         </div>
 
         <!-- خطة الدرس -->
         <div class="toc">
             <h3>📋 خطة الدرس</h3>
             <ol>
-                <li><a href="#partie1">مفهوم الأدب وخصائص النص الأدبي</a></li>
-                <li><a href="#partie2">العناصر الأساسية للنص الأدبي</a></li>
-                <li><a href="#partie3">أنواع الأدب العربي</a></li>
-                <li><a href="#partie4">العلاقة بين الأدب والمجتمع</a></li>
-                <li><a href="#partie5">النص الأدبي وأبرز سماته</a></li>
-                <li><a href="#partie6">التطبيقات والنماذج</a></li>
+                <li><a href="#partie1">مفهوم الأدب : تعريفات متعددة</a></li>
+                <li><a href="#partie2">خصائص النص الأدبي</a></li>
+                <li><a href="#partie3">الفرق بين الأدب والفنون الأخرى</a></li>
+                <li><a href="#partie4">العناصر الأساسية للنص الأدبي</a></li>
+                <li><a href="#partie5">أنواع الأدب العربي</a></li>
+                <li><a href="#partie6">المدارس الأدبية الكبرى</a></li>
+                <li><a href="#partie7">الصورة الشعرية والبلاغة</a></li>
+                <li><a href="#partie8">العلاقة بين الأدب والمجتمع</a></li>
+                <li><a href="#partie9">نصوص تطبيقية ومنهجية التحليل</a></li>
+                <li><a href="#partie10">خلاصة عامة</a></li>
             </ol>
         </div>
 
@@ -84,8 +102,84 @@
 
         <!-- PARTIE 1 -->
         <div class="ar-content" id="partie1">
-            <h3>📘 1. مفهوم الأدب وخصائص النص الأدبي</h3>
-            <p><strong>الأدب</strong> هو فن التعبير الجمالي عن التجربة الإنسانية عبر اللغة. يختلف عن الخطاب العلمي أو اليومي بخصائص أساسية.</p>
+            <h3>📘 1. مفهوم الأدب : تعريفات متعددة</h3>
+            <p><strong>الأدب</strong> مفهوم <strong>متطور</strong> عبر التاريخ ، ومفهومه يختلف باختلاف العصور والمجتمعات والمقاربات النقدية.</p>
+
+            <div class="def-box">
+                <h4>📖 تعريفات أساسية</h4>
+                <p><strong>الأدب (Littérature) :</strong> من "أدَبَ" في العربية تعني دعا وأرشد ودلّ. وفي الاصطلاح : فن التعبير الجمالي عن التجربة الإنسانية عبر اللغة.</p>
+                <p><strong>النص الأدبي (Texte littéraire) :</strong> كل عمل لغوي يهدف إلى الإبداع الجمالي والتأثير الوجداني.</p>
+                <p><strong>الكتابة الأدبية (Écriture littéraire) :</strong> ممارسة إنتاج النصوص الأدبية وفق تقنيات خاصة.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">تطور مفهوم الأدب</h3>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>المعنى</th>
+                    <th>السياق</th>
+                    <th>المحتوى</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">المعنى الواسع (القديم)</td>
+                    <td>ما قبل الإسلام والقرون الوسطى</td>
+                    <td>كل أنواع المعارف والمهارات (أدب الخطابة ، أدب السلوك ، آداب الطعام)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المعنى الخاص</td>
+                    <td>العصر العباسي وما بعده</td>
+                    <td>الشعر والنثر الفني (الأدب = صناعة الكلام الجميل)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المعنى الحديث</td>
+                    <td>القرن 19-20</td>
+                    <td>الأدب = الإبداع اللغوي الجميل (شعر + نثر + مسرحية)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المعنى المعاصر</td>
+                    <td>القرن 20-21</td>
+                    <td>كل كتابة إبداعية (يشمل القصة ، الرواية ، أدب الأطفال ، أدب الإنترنت)</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">تعريفات كبار الأدباء والنقاد</h3>
+
+            <div class="example-box">
+                <h4>💡 تعريفات كلاسيكية</h4>
+                <p><strong>الجاحظ (776-868) :</strong> "الأدب هو الذي يُحيي القلب ويجلو البصر ويُلبّ القريحة".</p>
+                <p><strong>ابن خلدون (1332-1406) :</strong> "الملكة الذهنية التي يُستحضر بها الكلام في النظم والنثر".</p>
+                <p><strong>قدامة بن جعفر (ت 337هـ) :</strong> "صناعة الكلام المنمق المُتقبل من جهة اللفظ والمعنى".</p>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 تعريفات حديثة</h4>
+                <p><strong>طه حسين :</strong> "الأدب هو الحياة : يصورها ويحكم عليها".</p>
+                <p><strong>جبران خليل جبران :</strong> "الأدب هو التعبير الجميل عن الحياة بكل ما فيها".</p>
+                <p><strong>ميخائيل نعيمة :</strong> "الأدب هو اللغة التي تحرّك المشاعر وتهزّ الوجدان".</p>
+            </div>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p><strong>الأدب بالمعنى الواسع</strong> — كل ما تُؤدب به النفس</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>الأدب بالمعنى الخاص</strong> — الكتابة الإبداعية الجمالية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✍️</span>
+                    <p><strong>الأدب بالمعنى الأكاديمي</strong> — كل ما يُنشر ويُدرس</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ar-content" id="partie2">
+            <h3>📗 2. خصائص النص الأدبي</h3>
+            <p>يتميز النص الأدبي عن غيره من النصوص بـ<strong>خصائص جوهرية</strong> :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الخصائص الجوهرية</h3>
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">🎨</span>
@@ -93,7 +187,7 @@
                 </div>
                 <div class="key-point">
                     <span class="icon">💭</span>
-                    <p><strong>التعدد في التأويل</strong> — النص الأدبي يسمح بتفسيرات متعددة</p>
+                    <p><strong>التعدد في التأويل</strong> — النص الأدبي يسمح بتفسيرات متعددة (انفتاح الدلالة)</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">📚</span>
@@ -103,78 +197,547 @@
                     <span class="icon">🌀</span>
                     <p><strong>التكثيف</strong> — المعنى يتكثف في كلمات قليلة</p>
                 </div>
+                <div class="key-point">
+                    <span class="icon">🎵</span>
+                    <p><strong>الإيقاع</strong> — جرس موسيقي داخلي (حتى في النثر)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎭</span>
+                    <p><strong>المجاز</strong> — استخدام اللغة بالمعنى المجازي</p>
+                </div>
             </div>
-            <div class="quote-box">
-                « الأدب هو撒谎 الجميلة التي تقول الحقيقة بطريقة تجعلنا نحسها لا نفهمها فقط. » — أحمد شوقي
-            </div>
-        </div>
 
-        <!-- PARTIE 2 -->
-        <div class="ar-content" id="partie2">
-            <h3>📗 2. العناصر الأساسية للنص الأدبي</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. خصائص ثانوية</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🖼️</span>
+                    <p><strong>التصوير</strong> — خلق صور ذهنية في ذهن المتلقي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❤️</span>
+                    <p><strong>الوجدان</strong> — إثارة المشاعر والأحاسيس</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌍</span>
+                    <p><strong>الكونية</strong> — يخاطب الإنسان أينما كان</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🕰️</span>
+                    <p><strong>الخلود</strong> — يُخلّد تجاربه عبر الزمن</p>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                « الأدب هو الكذبة الجميلة التي تقول الحقيقة بطريقة تجعلنا نحسها لا نفهمها فقط. » — أحمد شوقي
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. الفرق بين النص الأدبي والنص العلمي</h3>
             <table class="vocab-table">
                 <tr>
-                    <th>العنصر</th>
-                    <th>الشرح</th>
-                    <th>مثال</th>
+                    <th>المعيار</th>
+                    <th>النص الأدبي</th>
+                    <th>النص العلمي</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الهدف</td>
+                    <td>الإمتاع والتأثير</td>
+                    <td>الإقناع والإعلام</td>
                 </tr>
                 <tr>
                     <td class="ar-word">اللغة</td>
-                    <td>الكلمات والصور والتراكيب</td>
-                    <td>استعارة، تشبيه، كناية</td>
+                    <td>مجازية ، رمزية</td>
+                    <td>حقيقية ، دقيقة</td>
                 </tr>
                 <tr>
-                    <td class="ar-word">البناء</td>
-                    <td>تنظيم النص وترابط أجزائه</td>
-                    <td>العرض، التعقيد، الذروة، الحل</td>
+                    <td class="ar-word">المعنى</td>
+                    <td>متعدد ، غامض</td>
+                    <td>واحد ، محدد</td>
                 </tr>
                 <tr>
-                    <td class="ar-word">الموضوع</td>
-                    <td>المحتوى والأفكار</td>
-                    <td>الحب، الوطن، الموت، الحياة</td>
-                </tr>
-                <tr>
-                    <td class="ar-word">الرؤية</td>
-                    <td>زاوية الكاتب في تناول الموضوع</td>
-                    <td>رومانسي، واقعي، مثالي</td>
+                    <td class="ar-word">المنطق</td>
+                    <td>منطق الفن</td>
+                    <td>منطق العلم</td>
                 </tr>
                 <tr>
                     <td class="ar-word">الجمهور</td>
-                    <td>المتلقون المستهدفون</td>
-                    <td>عامة، نخبة، أطفال</td>
+                    <td>المثقف والذواق</td>
+                    <td>المتخصص</td>
                 </tr>
             </table>
         </div>
 
         <!-- PARTIE 3 -->
         <div class="ar-content" id="partie3">
-            <h3>📙 3. أنواع الأدب العربي</h3>
+            <h3>📒 3. الفرق بين الأدب والفنون الأخرى</h3>
+            <p>الأدب فن من بين <strong>فنون كثيرة</strong> ، لكل منها وسيلتها وخصائصها :</p>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>الفن</th>
+                    <th>الوسيلة</th>
+                    <th>المضمون</th>
+                    <th>الفنان</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الأدب</td>
+                    <td>اللغة والكلمة</td>
+                    <td>تجربة إنسانية معنوية</td>
+                    <td>الكاتب ، الشاعر ، الروائي</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الموسيقى</td>
+                    <td>الأصوات والإيقاع</td>
+                    <td>تجربة إنسانية سمعية</td>
+                    <td>الموسيقار</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الرسم</td>
+                    <td>الألوان والأشكال</td>
+                    <td>تجربة إنسانية بصرية</td>
+                    <td>الرسام</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">النحت</td>
+                    <td>الحجر والخشب والمعدن</td>
+                    <td>تجربة إنسانية مجسمة</td>
+                    <td>النحات</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المسرح</td>
+                    <td>الجسد والحوار</td>
+                    <td>تجربة إنسانية حيّة</td>
+                    <td>الممثل والمخرج</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">السينما</td>
+                    <td>الصورة والصوت</td>
+                    <td>تجربة إنسانية متعددة</td>
+                    <td>المخرج</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">العمارة</td>
+                    <td>الفضاء والمواد</td>
+                    <td>تجربة إنسانية مكانية</td>
+                    <td>المهندس المعماري</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">خصوصية الأدب</h3>
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">📝</span>
-                    <p><strong>الشعر</strong> — التعبير بالوزن والقافية أو النثر الموسيقي. أنواعه: قصيدة، قصيدة حرة، مرثية، غزل، مدح</p>
-                </div>
-                <div class="key-point">
                     <span class="icon">📖</span>
-                    <p><strong>النثر الأدبي</strong> — القصة، الرواية، المقال الأدبي، الخطبة. يتميز بالإيقاع الداخلي والجمال اللغوي</p>
+                    <p>الأدب هو <strong>فن الكلمة</strong> : يستخدم اللغة أداة تعبير</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">🎭</span>
-                    <p><strong>المسرح</strong> — الحوار الدرامي في قالب تمثيلي. يشمل: مأساة، كوميديا، دراما</p>
+                    <span class="icon">⏳</span>
+                    <p>الأدب هو <strong>أقدم الفنون</strong> : الشعر قبل الرسم والموسيقى</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌍</span>
+                    <p>الأدب <strong>أوسع انتشاراً</strong> : لا يحتاج لمساحة مادية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🕰️</span>
+                    <p>الأدب <strong>أكثر ديمومة</strong> : الكلمات تُخلّد عبر الزمن</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🧠</span>
+                    <p>الأدب <strong>أعمق أثراً</strong> : يُلامس العقل والوجدان معاً</p>
                 </div>
             </div>
+
             <div class="example-box">
-                <h4>💡 أمثلة من الأدب العربي</h4>
-                <p>• <strong>الشعر</strong> : أبو الطيب المتنبي، أحمد شوقي، محمود درويش، أدونيس</p>
-                <p>• <strong>النثر</strong> : نجيب محفوظ (الرواية)، طه حسين (المقالة)، جبران (المقال الفلسفي)</p>
-                <p>• <strong>المسرح</strong> : توفيق الحكيم، يوسف إدريس، علال الفاسي</p>
+                <h4>💡 الفنون التكميلية</h4>
+                <p>كثير من الفنون تتكامل :</p>
+                <p>• <strong>الأوبرا</strong> = أدب + موسيقى + مسرح + رسم</p>
+                <p>• <strong>السينما</strong> = أدب + رسم + موسيقى + مسرح</p>
+                <p>• <strong>القصيدة المصورة</strong> = أدب + رسم</p>
+                <p>• <strong>الأنشودة</strong> = أدب + موسيقى</p>
             </div>
         </div>
 
         <!-- PARTIE 4 -->
         <div class="ar-content" id="partie4">
-            <h3>📕 4. العلاقة بين الأدب والمجتمع</h3>
-            <p>الأدب ليس معزولاً عن محيطه الاجتماعي والتاريخي :</p>
+            <h3>📙 4. العناصر الأساسية للنص الأدبي</h3>
+            <p>يتكون النص الأدبي من <strong>عناصر متكاملة</strong> :</p>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>العنصر</th>
+                    <th>الشرح</th>
+                    <th>أمثلة</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">اللغة (Style)</td>
+                    <td>الكلمات والصور والتراكيب المستخدمة</td>
+                    <td>استعارة ، تشبيه ، كناية</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">البناء (Structure)</td>
+                    <td>تنظيم النص وترابط أجزائه</td>
+                    <td>العرض ، التعقيد ، الذروة ، الحل</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الموضوع (Thème)</td>
+                    <td>المحتوى والأفكار التي يتناولها النص</td>
+                    <td>الحب ، الوطن ، الموت ، الحياة</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الرؤية (Vision)</td>
+                    <td>زاوية الكاتب في تناول الموضوع</td>
+                    <td>رومانسي ، واقعي ، حداثي</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الجمهور (Public)</td>
+                    <td>المتلقون المستهدفون</td>
+                    <td>عامة ، نخبة ، أطفال</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">السياق (Contexte)</td>
+                    <td>الزمان والمكان والظروف</td>
+                    <td>عصر ، بلد ، بيئة</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">أ. الشكل والمضمون (Forme et fond)</h3>
+            <p>النص الأدبي يقوم على <strong>تألف الشكل والمضمون</strong> :</p>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📦</span>
+                    <p><strong>الشكل (Forme)</strong> : كيف يُقال النص (الأسلوب ، البناء ، اللغة)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>المضمون (Fond)</strong> : ماذا يُقال النص (الموضوع ، الأفكار ، الرؤية)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>التألف (Unité)</strong> : الشكل يخدم المضمون والمضمون يُعطي معنى للشكل</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. البنية السردية (Structure narrative)</h3>
+            <p>في النص السردي (القصة ، الرواية) :</p>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🌅</span>
+                    <p><strong>البداية (Exposition)</strong> : تقديم الشخصيات والمكان والزمان</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>الحدث المحوري (Nœud)</strong> : المشكلة أو الصراع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔥</span>
+                    <p><strong>الذروة (Climax)</strong> : أعلى نقطة في التوتر</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌇</span>
+                    <p><strong>الحل (Dénouement)</strong> : نهاية الأحداث</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ar-content" id="partie5">
+            <h3>📕 5. أنواع الأدب العربي</h3>
+            <p>ينقسم الأدب العربي إلى <strong>أنواع كبرى</strong> :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الشعر</h3>
+            <p>أعرق الأنواع الأدبية في التراث العربي. يتألف من أبيات موزونة ومقفاة (أو في الشعر الحر : أبيات ذات إيقاع داخلي).</p>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>النوع</th>
+                    <th>المضمون</th>
+                    <th>أعلام عرب</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الغزل</td>
+                    <td>وصف المحبوبة والحديث عن الحب</td>
+                    <td>قيس بن الملوّح (مجنون ليلى) ، جميل بثينة</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المدح</td>
+                    <td>تمجيد الممدوح</td>
+                    <td>المتنبي ، أبو تمام ، البحتري</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الرثاء</td>
+                    <td>تأبين المتوفى</td>
+                    <td>أبو العتاهية ، البوصيري</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الفخر</td>
+                    <td>الافتخار بالذات أو القبيلة</td>
+                    <td>زهير بن أبي سلمى</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الحكمة</td>
+                    <td>نصائح وآداب</td>
+                    <td>زهير ، أبو العتاهية ، أبو تمام</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الوصف</td>
+                    <td>وصف الطبيعة والأحداث</td>
+                    <td>أبو نواس (وصف الخمر)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الشعر السياسي</td>
+                    <td>قضايا الأمة</td>
+                    <td>محمود درويش ، أمل دنقل</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الشعر الحر</td>
+                    <td>قصيدة حديثة بلا قافية</td>
+                    <td>بدر شاكر السياب ، أدونيس</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. النثر</h3>
+            <p>أدب لا يخضع للوزن والقافية. أنواعه :</p>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p><strong>الخطابة</strong> — فن الإلقاء والتأثير في الجماهير (الخطب الجاهلية)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📜</span>
+                    <p><strong>الرسالة (التراسل)</strong> — فن الرسائل الأدبية (عبد الحميد الكاتب ، ابن المقرب)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>المقالة</strong> — نص قصير يعالج فكرة (طه حسين ، مصطفى لطفي المنفلوطي)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>القصة</strong> — سرد قصير (محمود تيمور ، يوسف إدريس)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📕</span>
+                    <p><strong>الرواية</strong> — سرد طويل (نجيب محفوظ ، الطاهر بن جلون)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌍</span>
+                    <p><strong>السيرة الذاتية</strong> — سرد حياة المؤلف (الأيام لطه حسين)</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. المسرح</h3>
+            <p>أدب قائم على <strong>الحوار والتمثيل</strong> :</p>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">😢</span>
+                    <p><strong>المأساة (Tragédie)</strong> : نهاية مأساوية (شيكسبير)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">😄</span>
+                    <p><strong>الكوميديا (Comédie)</strong> : نهاية سعيدة (موليير)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎭</span>
+                    <p><strong>الدراما (Drame)</strong> : بين المأساة والكوميديا</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌀</span>
+                    <p><strong>مسرح اللامعقول (Absurde)</strong> : بيكيت ، يونسكو</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 أمثلة من الأدب العربي</h4>
+                <p>• <strong>الشعر</strong> : أبو الطيب المتنبي ، أحمد شوقي ، محمود درويش ، أدونيس</p>
+                <p>• <strong>الرواية</strong> : نجيب محفوظ (أولاد حارتنا) ، الطاهر بن جلون (طفل الرمل)</p>
+                <p>• <strong>المقالة</strong> : طه حسين (الأيام) ، جبران (الأجنحة المتكسرة)</p>
+                <p>• <strong>المسرح</strong> : توفيق الحكيم (أهل الكهف) ، يوسف إدريس (الفرافير)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ar-content" id="partie6">
+            <h3>📗 6. المدارس الأدبية الكبرى</h3>
+            <p>مرّ الأدب العربي الحديث بعدة <strong>مدارس أدبية</strong> :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الإحياء والبعث (القرن 19)</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>حركة إحياء التراث العربي (ما قبل الإسلام والعباسي)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🖋️</span>
+                    <p>أعلام : محمود سامي البارودي ، أحمد شوقي ، حافظ إبراهيم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>العودة إلى الأوزان والقوافي القديمة</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. الرومانسية (القرن 19-20)</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">❤️</span>
+                    <p>تمجيد العاطفة والطبيعة والذات</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🖋️</span>
+                    <p>أعلام : جبران خليل جبران ، ميخائيل نعيمة ، إيليا أبو ماضي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>التركيز على الجمال والمطلق والحب</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. الواقعية (القرن 20)</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🌍</span>
+                    <p>وصف الواقع الاجتماعي بموضوعية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🖋️</span>
+                    <p>أعلام : نجيب محفوظ ، محمود تيمور ، حنا مينة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>نقد المجتمع وتسليط الضوء على الفقراء</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. الحداثة (منذ الخمسينيات)</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🌀</span>
+                    <p>كسر الأشكال التقليدية والتجريب</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🖋️</span>
+                    <p>أعلام : أدونيس ، محمد الماغوط ، سعدي يوسف</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>الشعر الحر ، تيار الوعي ، الحداثة في الرواية</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. الواقعية السحرية</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🪄</span>
+                    <p>الجمع بين الواقع والخيال</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🖋️</span>
+                    <p>أعلام : غابرييل غارسيا ماركيز (الواقعية السحرية اللاتينية)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>عناصر سحرية في سياق واقعي</p>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                « كل شاعر كبير هو فيلسوف صغير ، وكل فيلسوف عظيم هو شاعر كبير. » — فيكتور هيغو
+            </div>
+        </div>
+
+        <!-- PARTIE 7 -->
+        <div class="ar-content" id="partie7">
+            <h3>📙 7. الصورة الشعرية والبلاغة</h3>
+            <p>الصورة الشعرية هي <strong>روح الأدب</strong> :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. مفهوم الصورة</h3>
+            <p>الصورة الشعرية هي <strong>التمثيل الحسي للمعنى</strong> عبر اللغة. تحويل الفكرة المجردة إلى <strong>مشهد محسوس</strong>.</p>
+
+            <div class="quote-box">
+                « الصورة الشعرية هي طريقة لخلق واقع بديل يُعمِّق فهمنا للواقع الحقيقي. » — صلاح عبد الصبور
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. أنواع الصور البلاغية</h3>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>الصورة</th>
+                    <th>التعريف</th>
+                    <th>المثال</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الاستعارة</td>
+                    <td>تشبيه حُذف أحد طرفيه</td>
+                    <td>"رأيت أسداً يخطب" (الرجل الشجاع)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">التشبيه</td>
+                    <td>ربط شيئين بوجه شبه</td>
+                    <td>"هو كالأسد في شجاعته"</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الكناية</td>
+                    <td>لفظ يراد به لازم معناه</td>
+                    <td>"طويل النجاد" = طويل القامة (النجاد = حمائل السيف)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المجاز المرسل</td>
+                    <td>علاقة غير التشبيه</td>
+                    <td>"بنى الملك قصراً" (الملك = رئيس الدولة)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الرمز</td>
+                    <td>دلالة على معنى أعمق</td>
+                    <td>"الحمامة" ترمز للسلام</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الطباق</td>
+                    <td>الجمع بين معنيين متضادين</td>
+                    <td>"يضرُّ وينفع" ، "يجمع ويفرّق"</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. وظائف الصورة</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p><strong>الجمالية</strong> : تجعل النص ممتعاً</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>التوضيحية</strong> : تُوضّح المعنى</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❤️</span>
+                    <p><strong>الوجدانية</strong> : تُثير المشاعر</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🧠</span>
+                    <p><strong>الإيحائية</strong> : تخلق دلالات متعددة</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 أمثلة من الشعر العربي</h4>
+                <p><strong>المتنبي :</strong></p>
+                <p><em>"وَوَضعُ النّدى في مَوضِعِ السّيفِ بِالعُلا<br>مُضِرٌّ كَوَضعِ السّيفِ في مَوضِعِ النّدى"</em></p>
+                <p>الاستعارة : "وضع الندى في موضع السيف" = العطاء في موضع القتل (العطاء السخي).</p>
+                <p><strong>محمود درويش :</strong></p>
+                <p><em>"على هذه الأرض ما يستحق الحياة"<br>"ترابُ أرضنا يُنبتُ أقحواناً وفولاً"</em></p>
+                <p>التراب = الوطن. الأقحوان = الأمل.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 8 -->
+        <div class="ar-content" id="partie8">
+            <h3>📕 8. العلاقة بين الأدب والمجتمع</h3>
+            <p>الأدب ليس <strong>معزولاً</strong> عن محيطه الاجتماعي والتاريخي :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الأدب مرآة المجتمع</h3>
+            <p>المقولة الشهيرة "الأدب مرآة المجتمع" تعني أن الأدب <strong>يعكس</strong> قيم المجتمع وعاداته وتحدياته :</p>
+
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">🌍</span>
@@ -186,78 +749,237 @@
                 </div>
                 <div class="key-point">
                     <span class="icon">⚡</span>
-                    <p><strong>الأدب engage</strong> — الأدب الذي يتبنى قضايا المجتمع ويتصدى لها</p>
+                    <p><strong>الأدب engage</strong> — الأدب الذي يتبنى قضايا المجتمع</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">🔄</span>
-                    <p><strong>الأدب والفكر</strong> — الأدب ينقل ويُمَثِّل الأفكار السائدة في المجتمع</p>
+                    <p><strong>الأدب والفكر</strong> — ينقل الأفكار السائدة في المجتمع</p>
                 </div>
             </div>
-            <div class="example-box">
-                <h4>💡 التحول في الأدب العربي</h4>
-                <p>• <strong>العصر الكلاسيكي</strong> : شعر الطبع والبحث عن الجمال المطلق</p>
-                <p>• <strong>العصر الحديث</strong> : الأدب الملتزم بقضايا التحرر والتحديث</p>
-                <p>• <strong>العصر المعاصر</strong> : التنوع بين الالتزام الاجتماعي والتجريب الفني</p>
-            </div>
-        </div>
 
-        <!-- PARTIE 5 -->
-        <div class="ar-content" id="partie5">
-            <h3>📒 5. النص الأدبي وأبرز سماته</h3>
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. الأدب محرك للتغيير</h3>
+            <p>الأدب لا يعكس الواقع فحسب بل <strong>يُسهم في تغييره</strong> :</p>
+
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">🎭</span>
-                    <p><strong>الاستعارة</strong> — نقل الكلمة من معناها الحقيقي إلى مجازي لخلق صورة</p>
+                    <span class="icon">📢</span>
+                    <p><strong>إيقاظ الوعي</strong> : يفضح الاستعمار والظلم</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">🔍</span>
-                    <p><strong>التشبيه</strong> — ربط شيئين لبيان التشابه بينهما</p>
+                    <span class="icon">⚡</span>
+                    <p><strong>التحريض</strong> : يثير الحماس في الأزمات</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">🌊</span>
-                    <p><strong>الإيقاع</strong> — تكرار الأصوات والحروف لخلق إيقاع موسيقي</p>
+                    <span class="icon">🤝</span>
+                    <p><strong>بناء الهوية</strong> : يحفظ تراث الأمة</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">💎</span>
-                    <p><strong>الرمزية</strong> — استخدام رموز تدل على معانٍ أعمق</p>
+                    <span class="icon">🌱</span>
+                    <p><strong>التنمية</strong> : يُسهم في التطور الفكري</p>
                 </div>
             </div>
-            <div class="quote-box">
-                « الصورة الشعرية هي طريقة لخلق واقع بديل يُعمِّق فهمنا للواقع الحقيقي. » — صلاح عبد الصبور
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. التحول في الأدب العربي</h3>
+            <p>الأدب العربي مرّ بتحولات <strong>تاريخية كبرى</strong> :</p>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>المرحلة</th>
+                    <th>السمات</th>
+                    <th>أعلام</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">العصر الجاهلي</td>
+                    <td>الفخر ، المدح ، الغزل ، الحكم</td>
+                    <td>امرؤ القيس ، زهير ، عنترة</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">العصر الإسلامي</td>
+                    <td>القرآن ، الحديث ، الشعر الديني</td>
+                    <td>حسان بن ثابت ، كعب بن زهير</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">العصر العباسي</td>
+                    <td>التجديد ، الزخرف اللفظي ، الفلسفة</td>
+                    <td>أبو نواس ، المتنبي ، المعري</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الأندلس</td>
+                    <td>الموشحات ، الزجل ، الشعر الفلسفي</td>
+                    <td>ابن زيدون ، لسان الدين بن الخطيب</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">النهضة (القرن 19)</td>
+                    <td>إحياء التراث ، التجديد</td>
+                    <td>البارودي ، شوقي ، حافظ</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الحداثة (القرن 20)</td>
+                    <td>التجريب ، الشعر الحر ، الرواية</td>
+                    <td>أدونيس ، درويش ، محفوظ</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- PARTIE 9 -->
+        <div class="ar-content" id="partie9">
+            <h3>📗 9. نصوص تطبيقية ومنهجية التحليل</h3>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. نموذج نص : المتنبي (الشاعر الكبير)</h3>
+            <p>من قصيدة "على قدر أهل العزم" :</p>
+
+            <div class="example-box">
+                <h4>💡 النص</h4>
+                <p><em>عَلى قَدرِ أَهلِ العَزمِ تَأتي العَزائِمُ<br>وَتَأتي عَلى قَدرِ الكِرامِ المَكارِمُ</em></p>
+                <p><em>تَعَظَّمُ مَن عَظَّمَت بِهِ نَفسُهُ<br>وَصَغَّرَ في العَينِ العَظيمِ العَظائمُ</em></p>
+            </div>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>الموضوع :</strong> العزيمة والإرادة القوية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p><strong>الصورة :</strong> العزائم تأتي على قدر العزائم (تشخيص)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎵</span>
+                    <p><strong>الإيقاع :</strong> بحر الكامل ، قوي رصين</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الطباق :</strong> "تعظم" / "صغر"</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. نموذج نص : محمود درويش</h3>
+            <div class="example-box">
+                <h4>💡 من "سجل أنا عربي"</h4>
+                <p><em>سجّلْ أنا عربي<br>ورقمُ بطاقتي خمسون ألف<br>وعددُ أولادي ثمانية<br>وتاسعهم... سيأتي بعد شهر!</em></p>
+            </div>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>الموضوع :</strong> الهوية الفلسطينية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p><strong>الأسلوب :</strong> سرد تقريري يومي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الإيقاع :</strong> التكرار (سجلْ)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🛡️</span>
+                    <p><strong>السياق :</strong> تحت الاحتلال الإسرائيلي</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. نموذج نص : نجيب محفوظ (مقتبس)</h3>
+            <div class="example-box">
+                <h4>💡 من رواية "أولاد حارتنا"</h4>
+                <p><em>"في حارتنا القديمة ، حيث تتشابك الأزقة وتتلاصق الجدران ، ولد جبل. لم يكن كسائر الأولاد. كان يحبّ الوحدة والتأمل ، ويسأل الأسئلة التي لا تُجيب."</em></p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. منهجية تحليل نص أدبي</h3>
+            <div class="example-box">
+                <h4>💡 خطوات التحليل</h4>
+                <p>1. <strong>القراءة الأولى (الفهم العام)</strong> : ما الموضوع الرئيسي ؟</p>
+                <p>2. <strong>القراءة الثانية (التفاصيل)</strong> : ما العناصر الأدبية والجمالية ؟</p>
+                <p>3. <strong>السياق</strong> : من هو المؤلف ؟ متى وأين كُتب النص ؟</p>
+                <p>4. <strong>الموضوع</strong> : ما الفكرة الرئيسية ؟ وما الأفكار الفرعية ؟</p>
+                <p>5. <strong>اللغة والأسلوب</strong> : ما الصور البلاغية ؟ ما الأسلوب ؟</p>
+                <p>6. <strong>البناء</strong> : كيف ينظم الكاتب أفكاره ؟</p>
+                <p>7. <strong>الرسالة</strong> : ما الرسالة الأساسية ؟</p>
+                <p>8. <strong>العلاقة بين الشكل والمضمون</strong> : كيف يخدم الشكل الفني المضمون الفكري ؟</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ في امتحان البكالوريا</h4>
+                <p>في تحليل نص أدبي ، انتبه إلى :</p>
+                <p>• <strong>تحديد النوع الأدبي</strong> (شعر / نثر / مسرحية / مقال)</p>
+                <p>• <strong>الوقوف على الصور البلاغية</strong> (تشبيه ، استعارة ، كناية)</p>
+                <p>• <strong>ربط الشكل بالمضمون</strong> (الفن يخدم الفكر)</p>
+                <p>• <strong>استنتاج الرسالة</strong> (ما الذي يريد الكاتب إيصاله)</p>
+                <p>• <strong>السياق</strong> (الزمني والمكاني)</p>
             </div>
         </div>
 
-        <!-- PARTIE 6 -->
-        <div class="ar-content" id="partie6">
-            <h3>📓 6. التطبيقات والنماذج</h3>
-            <div class="example-box">
-                <h4>💡 كيف تحلل نصاً أدبياً؟</h4>
-                <p>1. <strong>السياق</strong> — من هو author؟ متى وأين كُتب النص؟</p>
-                <p>2. <strong>اللغة</strong> — ما هي الصور والأساليب المستخدمة؟</p>
-                <p>3. <strong>الموضوع</strong> — ما هو الموضوع الرئيسي؟</p>
-                <p>4. <strong>الرؤية</strong> — ما هي زاوية الكاتب؟</p>
-                <p>5. <strong>الأثر</strong> — ما هو التأثير على المتلقي؟</p>
+        <!-- PARTIE 10 -->
+        <div class="ar-content" id="partie10">
+            <h3>📓 10. خلاصة عامة</h3>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">المفاهيم المفتاحية للمراجعة</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الأدب (Littérature)</span> — فن التعبير الجمالي باللغة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">النص الأدبي (Texte littéraire)</span> — كل عمل لغوي إبداعي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الصورة الشعرية (Image poétique)</span> — تمثيل المعنى</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الشكل والمضمون (Forme et fond)</span> — عناصر النص الأدبي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">المدرسة الأدبية (Mouvement littéraire)</span> — تيار أدبي محدد</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الاستعارة (Métaphore)</span> — نقل المعنى للمعنى المجازي</p>
+                </div>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">الخلاصة</h3>
+            <div class="quote-box">
+                « الأدب هو تاريخ الإنسانية الوجداني : فيه تحفظ الأمم تجاربها وتُخلّد أحلامها. » — حكمة عربية
+            </div>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>الأدب فن لغوي متميز بخصائصه الجمالية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>يتنوع في الشعر والنثر والمسرح</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>يخدم المجتمع ويعكس قضاياه</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>يتجدد عبر العصور والمدارس</p>
+                </div>
+            </div>
+
             <div class="warning-box">
                 <h4>⚠️ في امتحان البكالوريا</h4>
-                <p>قد يُطلب منك:</p>
+                <p>قد يُطلب منك :</p>
                 <p>• تحليل نص أدبي وتحديد خصائصه اللغوية</p>
                 <p>• شرح العلاقة بين النص وسياقه الاجتماعي</p>
                 <p>• المقارنة بين نصين من عصرين مختلفين</p>
                 <p>• كتابة تعليق على مقطع أدبي</p>
+                <p>• توضيح الفرق بين المدارس الأدبية</p>
             </div>
         </div>
 
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/DC2626/FFFFFF?text=%D8%AF%D8%B1%D8%B3+%D8%A7%D9%84%D9%81%D9%86+%D9%88%D8%A7%D9%84%D8%A3%D8%AF%D8%A8" alt="ملخص الفن والأدب">
-                <div class="resume-overlay">
-                    <h3>الفن والأدب</h3>
-                    <p>المفهوم، الأنواع، العناصر، التطبيقات</p>
-                </div>
-                            <br><br>
-                <a href="" download>
+              
+                <a href="https://drive.google.com/file/d/1wxE_mVqUtWsMXzvRoufpTns7CXJul3gt/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -265,16 +987,17 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1Nu6pUKqq6SAH_wxV8oFo_hIJM00NBLIg/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
         </section>
 
-        <a href="arabe-lecon5.html" class="next-lesson">
+        <a href="arabe.html" class="next-lesson">
             <div>
-                <p class="next-lesson-text">الدرس التالي</p>
-                <p class="next-lesson-title">منهجية الإجابة على أسئلة اللغة العربية ←</p>
+                <p class="next-lesson-text">العودة للصفحة الرئيسية</p>
+                <p class="next-lesson-title">جميع دروس اللغة العربية ←</p>
             </div>
             <span class="next-lesson-arrow">←</span>
         </a>

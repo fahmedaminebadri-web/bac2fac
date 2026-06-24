@@ -28,6 +28,12 @@
         .plan-box h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
         .phil-term { background: #EDE9FE; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #5B21B6; }
         .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .def-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-right: 4px solid #3B82F6; padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .def-box h4 { color: #1E40AF; font-size: 0.95rem; margin-bottom: 8px; }
+        .def-box p { color: #1E3A8A; margin-bottom: 6px; }
+        .question-box { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-right: 4px solid #EC4899; padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .question-box h4 { color: #9D174D; font-size: 0.95rem; margin-bottom: 8px; }
+        .question-box p { color: #831843; margin: 0; font-style: italic; }
     </style>
 </head>
 <body>
@@ -38,10 +44,15 @@
                 <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
                 <span class="logo-text">From Bac-2-Fac</span>
             </a>
-            <nav class="nav-links">
+               <nav class="nav-links">
                 <a href="../../index.html">الرئيسية</a>
                 <a href="../../Mathematiques/math.html">الرياضيات</a>
                 <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Electrique/electrique.html">الكهرباء</a>
+                <a href="../../Mecanique/mecanique.html">الميكانيك</a>
+                <a href="../../Langues/Francais/francais.html">الفرنسية</a>
+                <a href="../../Langues/Anglais/anglais.html">الإنجليزية</a>
+                <a href="../../Langues/Arabe/arabe.html">العربية</a>
                 <a href="../../Informatique/informatique.html">الإعلامية</a>
                 <a href="philosophie.html">الفلسفة</a>
             </nav>
@@ -63,7 +74,7 @@
         <!-- ملخص -->
         <div class="plan-box">
             <h3>📝 ملخص الدرس</h3>
-            <p>السعادة من أقدم الموضوعات الفلسفية وأكثرها تعقيداً. يتساءل الفلاسفة : ما هي السعادة؟ كيف نحصل عليها؟ هل هي ذاتية أم موضوعية؟ هل هي غاية في ذاتها أم وسيلة؟ طرائق مختلفة للتفكير في السعادة : <strong>ال Појединаية</strong> (اللذة، إبيقور)، <strong>الفضيلة</strong> (أرسطو)، <strong>الإرادة الحرة</strong> (كانط)، و<strong>الإنجاز الذاتي</strong> (ماسلو). هذا الدرس يستعرض أهم النظريات الفلسفية حول السعادة.</p>
+            <p>السعادة من أقدم الموضوعات الفلسفية وأكثرها تعقيداً. يتساءل الفلاسفة : ما هي السعادة ؟ كيف نحصل عليها ؟ هل هي ذاتية أم موضوعية ؟ هل هي غاية في ذاتها أم وسيلة ؟ طرائق مختلفة للتفكير في السعادة : <strong>اللذة</strong> (الإبيقورية)، <strong>الفضيلة</strong> (أرسطو)، <strong>اللامبالاة</strong> (الرواقية)، <strong>الإرادة الخيّرة</strong> (كانط)، <strong>النفعية</strong> (بنتام، ميل)، <strong>الإنجاز الذاتي</strong> (ماسلو)، و<strong>التفكير المعاصر</strong> (علم النفس الإيجابي). يتناول هذا الدرس تاريخ الفلسفة في مفهوم السعادة، المقاربات الكبرى، النقد المعاصر، والأبعاد الأخلاقية والاجتماعية.</p>
         </div>
 
         <!-- خطة الدرس -->
@@ -71,11 +82,15 @@
             <h3>📋 خطة الدرس</h3>
             <ol>
                 <li><a href="#partie1">ما هي السعادة؟ تعريف وإشكاليات</a></li>
-                <li><a href="#partie2">نظرية اللذة : أبيقور والإبيقوريين</a></li>
-                <li><a href="#partie3">نظرية الفضيلة : أرسطو</a></li>
-                <li><a href="#partie4">السعادة عند كانط : الإرادة الخيّرة</a></li>
-                <li><a href="#partie5">النفعية : أكبر سعادة لأكبر عدد</a></li>
-                <li><a href="#partie6">النقد المعاصر : جدل السعادة</a></li>
+                <li><a href="#partie2">السعادة في الفلسفة القديمة : اللذة والفضيلة واللامبالاة</a></li>
+                <li><a href="#partie3">الإبيقورية : اللذة المعتدلة</a></li>
+                <li><a href="#partie4">الرواقية : اللامبالاة بالحظ والفضيلة الكافية</a></li>
+                <li><a href="#partie5">أرسطو : الفضيلة والوسط الذهبي</a></li>
+                <li><a href="#partie6">كانط : السعادة والفضيلة والإرادة الخيّرة</a></li>
+                <li><a href="#partie7">النفعية : أكبر سعادة لأكبر عدد</a></li>
+                <li><a href="#partie8">السعادة في الفلسفة الإسلامية : الفارابي وابن سينا والغزالي</a></li>
+                <li><a href="#partie9">النقد المعاصر : جدل السعادة</a></li>
+                <li><a href="#partie10">خلاصة عامة</a></li>
             </ol>
         </div>
 
@@ -83,7 +98,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/15SI-kEDLNn1eqNcSNPLRlC9z6XNYGVDU/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -92,187 +108,684 @@
         <!-- PARTIE 1 -->
         <div class="ph-content" id="partie1">
             <h3>📘 1. ما هي السعادة؟ تعريف وإشكاليات</h3>
-            <p><strong>السعادة</strong> (Eudaimonia / Bonheur) هي حالة من الرضا والاكتفاء يعيشها الإنسان. لكن هذا التعريف يثير إشكاليات عميقة :</p>
+            <p><strong>السعادة</strong> (Eudaimonia / Bonheur / Happiness) من أقدم الموضوعات الفلسفية. يمكننا تعريفها بأنها <em>حالة من الرضا والاكتفاء يعيشها الإنسان، يشعر فيها بتحقيق ذاته وازدهار وجوده</em>. لكن هذا التعريف البسيط يثير إشكاليات عميقة :</p>
+
+            <div class="def-box">
+                <h4>📖 أصل الكلمة</h4>
+                <p><strong>بالعربية :</strong> من "سَعِدَ" : ضد شقي. تدل على الرخاء والسرور والبهجة.</p>
+                <p><strong>باليونانية :</strong> Eudaimonia (εὐδαιμονία) = حالة النفس الحسنة، من eu (حسن) + daimon (روح، قدر).</p>
+                <p><strong>بالإنجليزية :</strong> Happiness، من Hap (حظ، صدفة).</p>
+                <p><strong>بالفرنسية :</strong> Bonheur، من Bon (جيد) + heur (حظ).</p>
+            </div>
+
+            <p>السعادة تختلف عن <strong>المتعة</strong> (Plaisir) : المتعة لحظة عابرة حسية، أما السعادة فهي حالة شاملة مستدامة.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">الإشكاليات الكبرى للسعادة</h3>
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">❓</span>
-                    <p><strong>إشكالية الذات</strong> — هل السعادة شعور ذاتي (فردي) أم حقيقة موضوعية؟</p>
+                    <p><strong>إشكالية الذات والموضوعية</strong> — هل السعادة شعور ذاتي (فردي) أم حقيقة موضوعية يمكن قياسها ؟</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">❓</span>
-                    <p><strong>إشكالية الغاية</strong> — هل السعادة غاية أم وسيلة؟</p>
+                    <p><strong>إشكالية الغاية والوسيلة</strong> — هل السعادة غاية في ذاتها (تطلب لذاتها) أم وسيلة لشيء آخر (فضيلة، معنى) ؟</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">❓</span>
-                    <p><strong>إشكالية الزمن</strong> — هل السعادة لحظية أم حالة مستدامة؟</p>
+                    <p><strong>إشكالية الزمن</strong> — هل السعادة لحظية (متعة) أم حالة مستدامة ؟ وهل يمكن استرجاعها ؟</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">❓</span>
-                    <p><strong>إشكالية المعيار</strong> — كيف نقيس السعادة؟ ما هو مقياسها؟</p>
+                    <p><strong>إشكالية المعيار</strong> — كيف نقيس السعادة ؟ ما هو مقياسها الموضوعي ؟ وهل يمكن مقارنتها بين الأفراد ؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>إشكالية العالمية</strong> — هل السعادة واحدة أم متعددة (هل هنالك سعادة واحدة أم سعادات) ؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❓</span>
+                    <p><strong>إشكالية الفرد والمجتمع</strong> — هل يمكن أن يكون الفرد سعيداً في مجتمع تعيس ؟</p>
                 </div>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">مفاهيم متمايزة</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">😊</span>
+                    <p><strong>السرور (Joie)</strong> — انفعال عابر</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">😌</span>
+                    <p><strong>الرضا (Contentement)</strong> — قبول الوضع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌟</span>
+                    <p><strong>الازدهار (Épanouissement)</strong> — تحقيق الذات</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💫</span>
+                    <p><strong>النشوة (Extase)</strong> — حالة ذروة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🕊️</span>
+                    <p><strong>السلام الداخلي (Sérénité)</strong> — هدوء النفس</p>
+                </div>
+            </div>
+
             <div class="quote-box">
                 « السعادة ليست نهاية الرحلة، بل هي الرحلة ذاتها. » — والتر وايزمان
+            </div>
+
+            <div class="question-box">
+                <h4>🤔 سؤال للتفكير</h4>
+                <p>هل السعادة "حالة" يمكن بلوغها، أم هي "عملية" مستمرة لا تنتهي ؟</p>
             </div>
         </div>
 
         <!-- PARTIE 2 -->
         <div class="ph-content" id="partie2">
-            <h3>📗 2. نظرية اللذة : أبيقور والإبيقوريين</h3>
-            <p><strong>إبيقور</strong> (341-270 ق.م) يرى أن السعادة = <em>اللذة</em> (Hedone) وهدف الحياة هو تحقيق أعلى درجات اللذة وأدنى درجات الألم.</p>
-            <div class="key-points">
-                <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p><strong>اللذة الديناميكية</strong> — اللذة ليست فقط متعة جسدية بل راحة نفسية وغياب الألم</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">⚖️</span>
-                    <p><strong>حساب اللذة</strong> — يجب الموازنة بين اللذة الفورية والألم المستقبلي</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">🧘</span>
-                    <p><strong>ataraxie</strong> — الهدف هو هدوء النفس وسلامها (لا الاضطراب)</p>
-                </div>
-            </div>
+            <h3>📗 2. السعادة في الفلسفة القديمة : نظرة عامة</h3>
+            <p>السؤال عن السعادة قديم قدم الفلسفة. الفلاسفة اليونانيون وضعوا <strong>ثلاثة تيارات كبرى</strong> للتفكير في السعادة :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. المدرسة الإبيقورية (المتعة)</h3>
+            <p><strong>أبيقور</strong> (341-270 ق.م) يرى أن السعادة = <em>اللذة</em> (Hedone) وهدف الحياة هو تحقيق أعلى درجات اللذة وأدنى درجات الألم. اللذة غاية في ذاتها.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. المدرسة الرواقية (اللامبالاة)</h3>
+            <p><strong>زينون الكلبي</strong> و<strong>سينيكا</strong> و<strong>ماركوس أوريليوس</strong> يرون أن السعادة = <em>الفضيلة وحدها</em>. الأشياء الخارجية (صحة، ثروة، سمعة) ليست جيدة ولا سيئة بذاتها، بل <strong>"لا مبالية"</strong> (Adiaphora). السعادة في تحكمنا في ما نملكه (الحكمة، الإرادة).</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. المدرسة الأرسطية (الفضيلة)</h3>
+            <p><strong>أرسطو</strong> يرفض اختزال السعادة في اللذة. في <em>الأخلاقيات النيقوماخية</em>، السعادة (Eudaimonia) هي <em>نشاط للنفس وفق الفضيلة في حياة كاملة</em>.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. مدرسة أفلاطون (الخلود)</h3>
+            <p><strong>أفلاطون</strong> في <em>الجمهورية</em> يربط السعادة بـ<em>العدالة</em> : النفس العادلة سعيدة. ثم في <em>فيدون</em>، السعادة الحقيقية هي في <strong>الحياة الأخرى</strong> حيث تتخلص النفس من ثقل الجسد.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. المدرسة الكلبية (الدهريون)</h3>
+            <p><strong>ديوجين الكلب</strong> يرفض المعايير الاجتماعية للسعادة : السعادة في <strong>تحرر الإنسان من احتياجاته</strong> (autarkeia)، عيش وفق الطبيعة.</p>
+
             <div class="example-box">
-                <h4>💡 نص من أبيقور</h4>
-                <p>« اللذة هي البداية والغاية في الحياة المباركة. فإننا نعلم أنها صاحرتنا الأولى والمعيار لاختيار كل خير. وبسببها نبدأ كل فعل ولا نرجع إلى أي شيء آخر بصفته معياراً لاختيار اللذة. »</p>
+                <h4>💡 خلاصة التيارات القديمة</h4>
+                <p>1. <strong>الإبيقورية</strong> : السعادة = اللذة المعتدلة (Hedonism)</p>
+                <p>2. <strong>الرواقية</strong> : السعادة = الفضيلة واللامبالاة بالحظ (Stoicism)</p>
+                <p>3. <strong>الأرسطية</strong> : السعادة = الفضيلة + الحياة الكاملة (Eudaimonism)</p>
+                <p>4. <strong>الأفلاطونية</strong> : السعادة = العدالة + التأمل (المُثُل)</p>
+                <p>5. <strong>الكلبية</strong> : السعادة = التحرر من الاحتياج (Cinism)</p>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">الانتقادات</h3>
-            <div class="warning-box">
-                <h4>⚠️ نقد نظرية اللذة</h4>
-                <p>1. اللذة عابرة ولا يمكن أن تكون أساساً لحياة ذات معنى</p>
-                <p>2. البحث عن اللذة قد يؤدي إلى الرذيلة والضرر بالآخرين</p>
-                <p>3. الخلط بين اللذة والسعادة يتجاهل قيماً كالفضيلة والمعنى</p>
+
+            <div class="quote-box">
+                « لا يطلب السعادة إلا من يفتقر إليها. » — سينيكا
             </div>
         </div>
 
         <!-- PARTIE 3 -->
         <div class="ph-content" id="partie3">
-            <h3>📙 3. نظرية الفضيلة : أرسطو</h3>
-            <p><strong>أرسطو</strong> يرفض اختزال السعادة في اللذة. في كتابه <em>الأخلاقيات النيقوماخية</em>، يرى أن السعادة (Eudaimonia) هي <em>نشاط للنفس وفق الفضيلة في حياة كاملة</em>.</p>
+            <h3>📒 3. الإبيقورية : اللذة المعتدلة</h3>
+            <p><strong>أبيقور</strong> (341-270 ق.م)، مؤسس المدرسة الإبيقورية، يرى أن السعادة = <em>اللذة</em> (Hedone) وهدف الحياة هو تحقيق أعلى درجات اللذة وأدنى درجات الألم.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. مفهوم اللذة</h3>
+            <p>أبيقور يُوسّع مفهوم اللذة : ليست فقط المتعة الحسية، بل <strong>غياب الألم الجسدي وقلق النفس</strong> :</p>
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">🎯</span>
-                    <p><strong>الفضيلة كعادة</strong> — الفضيلة ليست معرفة بل ممارسة متكررة (Le virtue is a habit)</p>
+                    <span class="icon">✅</span>
+                    <p><strong>اللذة الديناميكية (Kinetike)</strong> — اللذة المتحركة : الشبع، الفرح</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">⚖️</span>
-                    <p><strong>الوسط الذهبي</strong> — الفضيلة هي الوسط بين الإفراط والتفريط (الشجاعة = بين التهور والجبن)</p>
+                    <p><strong>اللذة الساكنة (Katastematike)</strong> — اللذة الهادئة : غياب الألم</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">🏛️</span>
-                    <p><strong>الحياة السياسية</strong> — السعادة الكاملة تتحقق في المشاركة في الحياة العامة</p>
+                    <span class="icon">🧘</span>
+                    <p><strong>الاطراقية (Ataraxie)</strong> — هدوء النفس، عدم الاضطراب</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌊</span>
+                    <p><strong>الأبونيا (Aponia)</strong> — غياب الألم الجسدي</p>
                 </div>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. حساب اللذة</h3>
+            <p>أبيقور يُعلّمنا <strong>حساباً للذة</strong> : يجب الموازنة بين اللذة الفورية والألم المستقبلي. مثلاً : الإفراط في الشراب يتبعه صداع وغثيان، فلا يستحق. أما شرب الماء البارد لظمأ شديد فلذة نقية.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. اللذات الطبيعية والضرورية</h3>
+            <p>أبيقور يُصنّف اللذات :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🟢</span>
+                    <p><strong>طبيعية وضرورية</strong> — الطعام، الشراب، النوم (سهلة التحقق)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🟡</span>
+                    <p><strong>طبيعية وغير ضرورية</strong> — الملذات الفاخرة (قد تكون مؤذية)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔴</span>
+                    <p><strong>غير طبيعية وغير ضرورية</strong> — الطمع، الشهوة الجامحة (مؤذية)</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. الصداقة</h3>
+            <p>أبيقور يرى أن <strong>الصداقة</strong> من أعظم مصادر السعادة : "من الصداقة ينبثق كل ما يمكن أن تقدمه الحكمة في طريق السعادة".</p>
+
             <div class="example-box">
-                <h4>💡 نص من أرسطو</h4>
-                <p>« السعادة هي أفضل وأكمل وأجمل وأحب الأشياء، وهي لا تُحسب بالقياس بل تليق بأنفسها. وهي الغاية التي لا نطلبها لأجل شيء آخر، بل كل شيء آخر نطلبه لأجلها. »</p>
+                <h4>💡 نص من أبيقور</h4>
+                <p>« اللذة هي البداية والغاية في الحياة المباركة. فإننا نعلم أنها صاحرتنا الأولى والمعيار لاختيار كل خير. وبسببها نبدأ كل فعل ولا نرجع إلى أي شيء آخر بصفته معياراً لاختيار اللذة. » — رسالة إلى مينيسيوس</p>
+                <p>« إذا أزلت من السماء الآلهة ووضعت مكانها الصداقة، فسأكون سعيداً. »</p>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">الفضائل الرئيسية عند أرسطو</h3>
-            <div class="key-points">
-                <div class="key-point">
-                    <span class="icon">💪</span>
-                    <p><strong>الشجاعة</strong> — الوسط بين التهور والجبن</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">🍽️</span>
-                    <p><strong>الاعتدال</strong> — الوسط بين الشهوة旗舰 واللامبالاة</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">⚖️</span>
-                    <p><strong>العدالة</strong> — إعطاء كل ذي حق حقه</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">🤔</span>
-                    <p><strong>الحكمة العملية</strong> — الوسط في الحكم والعمل</p>
-                </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. الانتقادات</h3>
+            <div class="warning-box">
+                <h4>⚠️ نقد نظرية اللذة</h4>
+                <p>1. <strong>اللذة عابرة</strong> : لا يمكن أن تكون أساساً لحياة ذات معنى مستدام.</p>
+                <p>2. <strong>الأنانية</strong> : السعي للذة قد يؤدي إلى إهمال الآخرين.</p>
+                <p>3. <strong>التمييز بين الكيف والكم</strong> : لذة التفكير أعلى من لذة الأكل، ولا يمكن قياسهما بمعيار واحد.</p>
+                <p>4. <strong>تجاهل الفضيلة</strong> : قد يكون الفعل اللذيذ فعلاً منافياً للأخلاق.</p>
             </div>
         </div>
 
         <!-- PARTIE 4 -->
         <div class="ph-content" id="partie4">
-            <h3>📕 4. السعادة عند كانط : الإرادة الخيّرة</h3>
-            <p><strong>إيمانويل كانط</strong> (1724-1804) يفصل بين السعادة والفضيلة بشكل جذري :</p>
+            <h3>📙 4. الرواقية : اللامبالاة بالحظ والفضيلة الكافية</h3>
+            <p>المدرسة الرواقية (Stoïcisme) تأسست على يد <strong>زينون الكلبي</strong> (333-264 ق.م) في أثينا، ثم طوّرها <strong>سينيكا</strong> (4 ق.م - 65م) و<strong>إبكتيتوس</strong> (50-130م) و<strong>ماركوس أوريليوس</strong> (121-180م).</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. المبدأ الأساسي</h3>
+            <p>السعادة عند الرواقيين تقوم على <strong>التمييز الحاد</strong> :</p>
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">⚡</span>
-                    <p><strong>الإرادة الخيّرة</strong> — الفعل الأخلاقي الحقيقي هو ما يُفعل من واجب، لا من ميل أو رغبة في السعادة</p>
+                    <span class="icon">🟢</span>
+                    <p><strong>ما هو في أيدينا</strong> (Eph'hemin) : أفكارنا، إرادتنا، أحكامنا — هذا فقط يعتمد علينا</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">📜</span>
-                    <p><strong>الواجب الأخلاقي</strong> — يجب أن نفعل الصواب لأن واجبنا يقتضي ذلك، بغض النظر عن سعادتنا</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">⚖️</span>
-                    <p><strong>الامتناع عن الابتزاز</strong> — لا نستخدم الآخر كوسيلة بل كغاية في ذاته</p>
+                    <span class="icon">🔴</span>
+                    <p><strong>ما ليس في أيدينا</strong> (Ouk eph'hemin) : الجسد، الصحة، السمعة، الثروة — لا يعتمد علينا</p>
                 </div>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. الأشياء "اللامبالية" (Adiaphora)</h3>
+            <p>الأشياء الخارجية (صحة، ثروة، جميلة) <strong>ليست جيدة ولا سيئة بذاتها</strong>، بل "لامبالية" (Adiaphora). ما يحدد جودتها أو سوءها هو <strong>استخدامنا لها</strong>.</p>
+
             <div class="example-box">
-                <h4>💡 نص من كانط</h4>
-                <p>« لاشيء في العالم بل حتى خارج العالم يمكن اعتباره خيراً بلا限定 إلا الإرادة الخيّرة. » — مبادئ المنطق الأخلاقي</p>
+                <h4>💡 مثال سينيكا</h4>
+                <p>المرض ليس شراً. التصرف في المرض هو الذي قد يكون شراً (التذمر، اليأس) أو خيراً (الصبر، الحكمة).</p>
             </div>
-            <p>لكن كانط يعترف بأن السعادة والفضيلة قد تتناقضان في هذه الحياة، لذلك يفترض <strong>الخلود</strong> و<strong>الله</strong> كضمانة لتحقيق العدالة في نهاية المطاف.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. الفضيلة الكافية</h3>
+            <p>الرواقيون يقولون : <strong>الفضيلة وحدها كافية للسعادة</strong> (Virtus sufficit ad vitam beatam). من يكتسب الفضيلة الكاملة (الحكيم — Sophos) يكون سعيداً مهما كانت ظروفه. لا فرق بين الملك في قصره والعبد في سجنه إذا كان كلاهما حكيماً.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. المشاعر (Pathè)</h3>
+            <p>الرواقيون ينتقدون <strong>المشاعر المفرطة</strong> (الرغبة، الخوف، اللذة، الألم) باعتبارها أحكاماً خاطئة. الحكيم لا يخاف ولا يتوق ولا يفرح بأحداث خارجية. هذه "Apatheia" (الخلو من المشاعر المفرطة).</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. المشهورات الرواقية</h3>
+            <div class="example-box">
+                <h4>💡 مقولات شهيرة</h4>
+                <p>« تحمّل ولا تتذمر. » — إبكتيتوس</p>
+                <p>« ليس ما يحدث لك، بل ما تفكر فيه حين يحدث. » — إبكتيتوس</p>
+                <p>« كل يوم، اقرأ قائمة أصدقائك وأقاربك وافترض أنهم ماتوا، ثم قل : ربما سأفعل ما أستحق أن أفعله. » — سينيكا</p>
+                <p>« القدرة على السعادة تكمن في أن تجعل قلبك مستقلاً عن كل ما يحدث خارجه. » — ماركوس أوريليوس، تأملات</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">و. الإرث المعاصر</h3>
+            <p>الرواقية عادت بقوة في العصر المعاصر مع <strong>علم النفس الإيجابي</strong> (مارتن سليغمان) والعلاج المعرفي السلوكي (CBT) و<strong>الرواقية الحديثة</strong> (Massimo Pigliucci، Ryan Holiday). كتاب <em>دليل إبكتيتوس للحياة</em> (2021) يُلخّص هذا التيار.</p>
+
+            <div class="quote-box">
+                « خير كل ما يُعطى للإنسان هو في داخله. » — سينيكا
+            </div>
         </div>
 
         <!-- PARTIE 5 -->
         <div class="ph-content" id="partie5">
-            <h3>📒 5. النفعية : أكبر سعادة لأكبر عدد</h3>
-            <p><strong>النفعية</strong> (Utilitarisme) مذهب فلسفي يرى أن الفعل الصحيح هو الذي يُعظم السعادة العامة.</p>
+            <h3>📕 5. أرسطو : الفضيلة والوسط الذهبي</h3>
+            <p><strong>أرسطو</strong> (384-322 ق.م) في كتابه <em>الأخلاقيات النيقوماخية</em> يرفض اختزال السعادة في اللذة ويرفض <strong>الرواقية</strong>. يقدّم نظرية وسطية :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. تعريف السعادة</h3>
+            <p>السعادة (Eudaimonia) هي :</p>
+            <div class="def-box">
+                <h4>📖 التعريف الأرسطي</h4>
+                <p>« نشاط للنفس وفق الفضيلة في حياة كاملة » (Energeia psyches kata areten en bio teleio).</p>
+                <p>ثلاثة عناصر :</p>
+                <p>1. <strong>نشاط</strong> (Energeia) : فعل وممارسة، لا استعداد</p>
+                <p>2. <strong>الفضيلة</strong> (Arete) : تحقيق الوظيفة الطبيعية للشيء</p>
+                <p>3. <strong>حياة كاملة</strong> (Bios teleios) : مدى زمني كافٍ</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. الفضيلة كعادة</h3>
+            <p>أرسطو يميّز بين نوعين من الفضيلة :</p>
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">➕</span>
-                    <p><strong>معيار النفع</strong> — الحكم على الأفعال بقدرتها على إنتاج اللذة أو السعادة</p>
+                    <span class="icon">🧠</span>
+                    <p><strong>الفضائل الأخلاقية (Ethikai)</strong> — مكتسبة بالعادة (الشجاعة، الاعتدال، السخاء)</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">👥</span>
-                    <p><strong>السعادة للجميع</strong> — لا سعادة خاصة دون مراعاة سعادة الآخرين</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">📊</span>
-                    <p><strong>الحساب</strong> — يمكن نظرياً حساب اللذة والألم رياضياً (بنتام)</p>
+                    <span class="icon">💡</span>
+                    <p><strong>الفضائل الفكرية (Dianoetikai)</strong> — مكتسبة بالتعليم (الحكمة، العلم، الذكاء)</p>
                 </div>
             </div>
+
+            <p>الفضيلة الأخلاقية <strong>عادة</strong> : تتكون بالتكرار. نصبح شجعاناً بممارستنا الشجاعة، عادلين بممارستنا العدالة.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. الوسط الذهبي (Mesotes)</h3>
+            <p>أرسطو يقدّم نظريته الشهيرة في <strong>الوسط الذهبي</strong> : كل فضيلة هي وسط بين <strong>إفراط</strong> و<strong>تفريط</strong> :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الشجاعة</strong> = وسط بين التهور (إفراط) والجبن (تفريط)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الاعتدال</strong> = وسط بين الشره (إفراط) واللامبالاة (تفريط)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>السخاء</strong> = وسط بين التبذير (إفراط) والبخل (تفريط)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>العدالة</strong> = وسط بين الإفراط في العقاب والإفراط في التساهل</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الحكمة العملية</strong> = وسط بين التسرع والبطء في الحكم</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. التأمل النظري (Bios theoretikos)</h3>
+            <p>أرسطو يرى أن أعلى أشكال السعادة هو <strong>التأمل الفلسفي</strong> (Theoria) : أسمى نشاط للإنسان هو التفكير في الحقيقة. هذه أعلى سعادة لأنها لا تحتاج لشيء خارجي.</p>
+
             <div class="example-box">
-                <h4>💡 نص من جيرمي بيثام</h4>
-                <p>« الطبيعة وضعت البشرية تحت سيادة سيديّن : الألم واللذة. عليهما يرتكز كل ما نفكره، كل ما نقوله، كل ما نفعله. » — مقدمة في مبادئ الأخلاق</p>
+                <h4>💡 نص من أرسطو</h4>
+                <p>« السعادة هي أفضل وأكمل وأجمل وأحب الأشياء، وهي لا تُحسب بالقياس بل تليق بأنفسها. وهي الغاية التي لا نطلبها لأجل شيء آخر، بل كل شيء آخر نطلبه لأجلها. » — الأخلاقيات النيقوماخية</p>
+                <p>« التأمل هو أسمى ما في الإنسان، لذا فالحياة التأملية هي أسعد حياة. » — الكتاب العاشر</p>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. السعادة والحياة السياسية</h3>
+            <p>أرسطو يرى أن السعادة الكاملة تتحقق في <strong>السياق السياسي</strong> : الإنسان كائن سياسي، يحتاج للمشاركة في الحكم لتحقيق ذاته. العزلة الكاملة لا تناسب السعادة الكاملة.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">و. انتقادات لأرسطو</h3>
             <div class="warning-box">
-                <h4>⚠️ انتقادات النفعية</h4>
-                <p>1. يمكن تبرير الظلم إذا أفاد الأغلبية (مثال : تعذيب شخص بريء لإنقاذ المدينة)</p>
-                <p>2. اللذة تختلف نوعياً ولا يمكن اختزالها في كمية قابلة للقياس</p>
-                <p>3. تتجاهل كرامة الفرد وحقوق الأقليات</p>
+                <h4>⚠️ الانتقادات</h4>
+                <p>1. <strong>تفضيل التأمل</strong> : هل الحياة التأملية كافية لحياة بشرية كاملة ؟</p>
+                <p>2. <strong>النسبية</strong> : الوسط الذهبي يختلف بين الثقافات والأزمنة.</p>
+                <p>3. <strong>إقصاء النساء والعبيد</strong> : أرسطو لم يعتبرهم مؤهلين للحياة التأملية الكاملة.</p>
             </div>
         </div>
 
         <!-- PARTIE 6 -->
         <div class="ph-content" id="partie6">
-            <h3>📓 6. النقد المعاصر : جدل السعادة</h3>
+            <h3>📗 6. كانط : السعادة والفضيلة والإرادة الخيّرة</h3>
+            <p><strong>إيمانويل كانط</strong> (1724-1804) في <em>أسس ميتافيزيقا الأخلاق</em> (1785) و<em>نقد العقل العملي</em> (1788) يقدّم <strong>نظرية فريدة</strong> تفصل بين السعادة والفضيلة بشكل جذري.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الإرادة الخيّرة</h3>
+            <p>كانط يرى أن <strong>الإرادة الخيّرة</strong> (Good will) هي الخير الأعلى غير المشروط : الفعل الأخلاقي الحقيقي هو ما يُفعل من <strong>واجب</strong>، لا من ميل أو رغبة في السعادة.</p>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚡</span>
+                    <p><strong>الفعل من الواجب</strong> : العمل الصالح يجب أن يُفعل لأنه واجب، لا لأنه يخدم مصلحتي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📜</span>
+                    <p><strong>الواجب الأخلاقي</strong> : نُطيع القانون الأخلاقي لأنه صحيح، بغض النظر عن سعادتنا</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>الامتناع عن الابتزاز</strong> : لا نستخدم الآخر كوسيلة بل كغاية في ذاته</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. القانون الأخلاقي (الأمر المطلق)</h3>
+            <p>كانط يصوغ <strong>الأمر المطلق</strong> (Impératif catégorique) :</p>
+            <div class="def-box">
+                <h4>📖 صيغ الأمر المطلق</h4>
+                <p>1. <strong>الصيغة الأولى (الكونية) :</strong> « تصرّف فقط وفق قاعدة يمكن أن تريدها قانوناً كونياً ».</p>
+                <p>2. <strong>الصيغة الثانية (الغائية) :</strong> « تصرّف بحيث تعامل الإنسانية، في شخصك وشخص كل آخر، دائماً كغاية، ولا تعاملها أبداً كوسيلة فقط ».</p>
+                <p>3. <strong>الصيغة الثالثة (الملكية) :</strong> « تصرّف بحيث تكون إرادتك قابلة لأن تعتبر نفسها مُشرّعة لقوانين كونية ».</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. السعادة لا تكفي</h3>
+            <p>كانط يقول إن <strong>السعادة ليست الخير الأخلاقي الأعلى</strong> : لو كانت هي الهدف، فالأشرار الذين ينجحون في الحصول عليها سيكونون "أخياراً"، وهذا يتناقض مع الوعي الأخلاقي.</p>
+
+            <div class="example-box">
+                <h4>💡 نص من كانط</h4>
+                <p>« لاشيء في العالم بل حتى خارج العالم يمكن اعتباره خيراً بلا قيد إلا الإرادة الخيّرة. » — أسس ميتافيزيقا الأخلاق</p>
+                <p>« يعمل كل من أُعطيَ كل ما يشتهيه ليصبح مع ذلك موضوعاً للسؤال : فماذا تنتفع من كل هذا إن لم تكن ذا إرادة خيّرة ؟ »</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. مشكلة التناقض بين السعادة والفضيلة</h3>
+            <p>كانط يعترف بمشكلة عميقة : <strong>السعادة والفضيلة قد تتناقضان</strong> في هذه الحياة (الشرير قد يكون سعيداً، والفضيل قد يتألم). الحل : يفترض <strong>الخلود</strong> و<strong>الله</strong> كضمانة لتحقيق العدالة في نهاية المطاف (المُشرّع الأخلاقي الأعلى).</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. السعادة كغاية نهائية</h3>
+            <p>لكن كانط لا يلغي السعادة تماماً : السعادة هي <strong>غاية نهائية للطبيعة</strong>، لكن <strong>ليست</strong> الخير الأخلاقي الأعلى. الإنسان الفاضل يستحق السعادة، لكنهما لا يتطابقان بالضرورة في هذه الحياة.</p>
+
+            <div class="warning-box">
+                <h4>⚠️ انتقادات لكانط</h4>
+                <p>1. <strong>التقشف</strong> : الفصل بين السعادة والفضيلة يبدو قاسياً على الإنسان.</p>
+                <p>2. <strong>الصرامة</strong> : الواجب وحده لا يكفي لتحفيز الفعل الأخلاقي.</p>
+                <p>3. <strong>الافتراض الميتافيزيقي</strong> : الخلود والله لا يمكن إثباتهما تجريبياً.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 7 -->
+        <div class="ph-content" id="partie7">
+            <h3>📙 7. النفعية : أكبر سعادة لأكبر عدد</h3>
+            <p><strong>النفعية</strong> (Utilitarisme) مذهب فلسفي يرى أن الفعل الصحيح هو الذي <strong>يُعظم السعادة العامة</strong>. أسسه <strong>جيرمي بنتام</strong> (1748-1832) وطوّرها <strong>جون ستيوارت ميل</strong> (1806-1873).</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. بنتام : الحساب اللذيذ</h3>
+            <p>بنتام يُقدّم <strong>حساب اللذة والألم</strong> (Hedonic calculus) :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">➕</span>
+                    <p><strong>الشدة</strong> — كم هي قوية اللذة أو الألم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⏱️</span>
+                    <p><strong>المدة</strong> — كم تدوم اللذة أو الألم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔒</span>
+                    <p><strong>اليقين</strong> — ما احتمال تحققها</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⏰</span>
+                    <p><strong>القرب الزمني</strong> — متى ستحدث</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👶</span>
+                    <p><strong>الخصوبة</strong> — هل تُنتج لذات أخرى</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👥</span>
+                    <p><strong>النطاق</strong> — كم شخصاً يتأثر</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 نص من بنتام</h4>
+                <p>« الطبيعة وضعت البشرية تحت سيادة سيديّن : الألم واللذة. عليهما يرتكز كل ما نفكره، كل ما نقوله، كل ما نفعله. » — مقدمة في مبادئ الأخلاق والتشريع</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. ميل : التمييز بين اللذات</h3>
+            <p><strong>جون ستيوارت ميل</strong> (1806-1873) في <em>النفعية</em> (1863) يُصحّح بنتام : <strong>ليست كل اللذات متساوية</strong>. هناك لذات "أعلى" (لذات الفكر، الفن، الأخلاق) و"أدنى" (لذات الحس، الجسد).</p>
+
+            <p>معيار التفضيل : من اختبر الاثنين يفضّل "اللذة الأعلى". "إنسان غير راضٍ أفضل من خنزير راضٍ".</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. قاعدة "أكبر سعادة لأكبر عدد"</h3>
+            <p>المبدأ الأساسي للنفعية : الفعل الصحيح هو الذي ينتج <strong>أكبر قدر من السعادة لأكبر عدد من الناس</strong>. السعادة الفردية تتراجع أمام السعادة الجماعية.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. تطبيقات النفعية</h3>
+            <p>النفعية أثرت في :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🏛️</span>
+                    <p>الإصلاح القانوني في القرن 19 (تقنين العقوبات، حقوق الإنسان)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💰</span>
+                    <p>الاقتصاد الرفاهي (Welfare economics) : قياس الرفاه الجماعي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p>تحليل السياسات العامة : تحليل التكلفة-الفائدة (Cost-benefit analysis)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🤖</span>
+                    <p>أخلاقيات الذكاء الاصطناعي : تعظيم الفائدة لـ "أكبر عدد"</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ انتقادات النفعية</h4>
+                <p>1. <strong>تبرير الظلم</strong> : يمكن تبرير تعذيب شخص بريء إذا أفاد الأغلبية.</p>
+                <p>2. <strong>الكمية والكيفية</strong> : اللذة تختلف نوعياً ولا يمكن اختزالها في كمية.</p>
+                <p>3. <strong>تجاهل الكرامة</strong> : تتجاهل حقوق الأقليات والفرد.</p>
+                <p>4. <strong>الاستحالة الحسابية</strong> : لا يمكن حساب "السعادة الكلية" بدقة.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 8 -->
+        <div class="ph-content" id="partie8">
+            <h3>📕 8. السعادة في الفلسفة الإسلامية</h3>
+            <p>الفلاسفة المسلمون أثروا في الفكر العالمي وطرحوا رؤى عميقة حول السعادة، تختلف عن اليونانية وتتقاطع معها.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الكندي (801-873) : الفلسفة الأولى</h3>
+            <p><strong>يعقوب بن إسحاق الكندي</strong> ، فيلسوف العرب، ينقل الفلسفة اليونانية إلى العربية ويُؤصّل لمفهوم السعادة في إطار الإسلام. السعادة عنده <strong>معرفة الله</strong> (التوحيد الفلسفي) ، وهي تتحقق بالعقل والتأمل.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. الفارابي (872-950) : المدينة الفاضلة</h3>
+            <p><strong>أبو نصر الفارابي</strong> في كتابه <em>آراء أهل المدينة الفاضلة</em> ينظّر لـ<strong>أعلى مراتب السعادة</strong> :</p>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🌟</span>
+                    <p><strong>السعادة القصوى</strong> — الاتصال بالعقل الفعال (الفلسفة الإلهية)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏛️</span>
+                    <p><strong>المدينة الفاضلة</strong> — المجتمع الذي يُمكّن أفراده من بلوغ السعادة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👑</span>
+                    <p><strong>الفيلسوف-الملك</strong> — رئيس المدينة الفاضلة الذي يملك المعرفة الكاملة</p>
+                </div>
+            </div>
+
+            <p>الفارابي يجمع بين <strong>الفلسفة اليونانية</strong> (أفلاطون، أرسطو) و<strong>الوحي الإسلامي</strong> (النبوة) : الأنبياء فيلسوفون أعلى مرتبة.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. ابن سينا (980-1037) : السعادة والكمال</h3>
+            <p><strong>ابن سينا</strong> (Avicenne) في <em>الشفاء</em> و<em>الإلهيات</em> يُطوّر نظرية السعادة :</p>
+
+            <div class="def-box">
+                <h4>📖 السعادة عند ابن سينا</h4>
+                <p>1. <strong>السعادة القصوى</strong> : إدراك العقل الفعال و"الكل" الذي يصدر عنه الكون</p>
+                <p>2. <strong>الكمال</strong> : كل شيء يسعى لتمامه (كمال النبات في النمو، الحيوان في الحس، الإنسان في العقل)</p>
+                <p>3. <strong>الخلود الشخصي</strong> : النفس بعد الموت تُدرك عالم العقل خالدة</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. الغزالي (1058-1111) : نقد الفلاسفة</h3>
+            <p><strong>أبو حامد الغزالي</strong> في <em>إلجام العوام عن علم الكلام</em> و<em>المنقذ من الضلال</em> ينتقد الفلاسفة (خاصة ابن سينا والفارابي) ويرى أن <strong>السعادة الحقيقية في الإيمان والعرفان</strong>، لا في العقل المجرد.</p>
+
+            <div class="example-box">
+                <h4>💡 نقد الغزالي للفلاسفة</h4>
+                <p>في <em>تهافت الفلاسفة</em> ، الغزالي يهاجم ابن سينا في 20 نقطة، خاصة :</p>
+                <p>1. <strong>قدم العالم</strong> : الفلاسفة يقولون بقدم العالم (خلافاً للإسلام)</p>
+                <p>2. <strong>الخلود الشخصي</strong> : الفلاسفة ينفون بعث الأجساد</p>
+                <p>3. <strong>إنكار المعجزات</strong> : الفلاسفة يفسّرونها بأسباب طبيعية</p>
+            </div>
+
+            <p>لكن الغزالي في <em>إحياء علوم الدين</em> يطرح <strong>سعادة القلب</strong> (qalb) : بالعبادة، التزكية، واليقين.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. ابن رشد (1126-1198) : توفيق بين الفلسفة والشريعة</h3>
+            <p><strong>ابن رشد</strong> (Averroès) في <em>فصل المقال</em> يدافع عن <strong>توفيق الفلسفة مع الإسلام</strong> : لا تعارض بينهما، فالفلسفة طريق إضافي إلى الحقيقة التي جاء بها الوحي.</p>
+
+            <p>السعادة عند ابن رشد <strong>مزدوجة</strong> : سعادة دنياوية (عقلية) وسعادة أخروية (روحية).</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">و. ابن خلدون (1332-1406) : السعادة الاجتماعية</h3>
+            <p><strong>ابن خلدون</strong> في <em>المقدمة</em> يربط السعادة بالـ<strong>عصبية</strong> (التلاحم الاجتماعي) و<strong>العدل</strong> : الدول التي تقوم على العدل تستمر، والتي تقوم على الظلم تَنهار.</p>
+
+            <div class="quote-box">
+                « اعلم أنَّ الاجتماع الإنساني ضروري... فالإنسان مدني بالطبع. » — ابن خلدون
+            </div>
+        </div>
+
+        <!-- PARTIE 9 -->
+        <div class="ph-content" id="partie9">
+            <h3>📒 9. النقد المعاصر : جدل السعادة</h3>
+
             <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. نقد الرأسمالية والسعادة الاستهلاكية</h3>
-            <p>الفلاسفة المعاصرون (باولو فريري، هربرت ماركيوز) ينتقدون ربط السعادة بالاستهلاك : « society de consommation » تخلق احتياجات وهمية وتوهم الناس بأن السعادة في买东西.</p>
+            <p>الفلاسفة المعاصرون (هربرت ماركيوز، باولو فريري، جان بودريار) ينتقدون ربط السعادة بالاستهلاك : "مجتمع الاستهلاك" يخلق احتياجات وهمية ويوهم الناس بأن السعادة في الشراء.</p>
+
             <div class="example-box">
                 <h4>💡 نص من هربرت ماركيوز</h4>
-                <p>« رجل واحد ذو سيارات لا يستفيد من سيارات الآخرين. » — في نقد السعادة الزائفة التي تقدمها الرأسمالية.</p>
+                <p>« مجتمع متقدم صناعياً لا يستطيع مواجهة فكرة الثورة لأن مجتمعه لا يكتفي بتوفير احتياجات الحياة بل يُولّد احتياجات إضافية كاذبة ويُشعر الإنسان أنه يحتاجها. » — الرجل ذو البُعد الواحد</p>
+                <p>« السعادة الاستهلاكية في النظام الرأسمالي هي سعادة زائفة. »</p>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. نظرية ماسلو : الهرمية الحاجات</h3>
-            <p>أبراهام ماسلو يقترح هرمية من الحاجات : الفسيولوجية ← الأمن ← الانتماء ← الاحترام ← الإنجاز الذاتي. السعادة الحقيقية تتحقق عند قمة الهرمية.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. الخلاصة</h3>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. علم النفس الإيجابي</h3>
+            <p><strong>مارتن سليغمان</strong> (1942-) مؤسس <strong>علم النفس الإيجابي</strong> (Positive psychology) يُطوّر نظرية PERMA للسعادة :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">😊</span>
+                    <p><strong>P — المشاعر الإيجابية (Positive emotions)</strong></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔍</span>
+                    <p><strong>E — الانغماس (Engagement)</strong> — Flow</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🤝</span>
+                    <p><strong>R — العلاقات (Relationships)</strong></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>M — المعنى (Meaning)</strong></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏆</span>
+                    <p><strong>A — الإنجاز (Accomplishment)</strong></p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. نظرية ماسلو : هرمية الحاجات</h3>
+            <p><strong>أبراهام ماسلو</strong> (1908-1970) يقترح <strong>هرمية من الحاجات</strong> :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🍞</span>
+                    <p><strong>الحاجات الفسيولوجية</strong> — الأكل، الشرب، النوم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🛡️</span>
+                    <p><strong>حاجات الأمان</strong> — الأمان الجسدي، المالي، الصحي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">❤️</span>
+                    <p><strong>حاجات الانتماء والحب</strong> — العلاقات العائلية والاجتماعية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⭐</span>
+                    <p><strong>حاجات التقدير</strong> — الاحترام، التقدير، المكانة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌟</span>
+                    <p><strong>تحقيق الذات</strong> — الإبداع، حل المشكلات، تحقيق الإمكانات</p>
+                </div>
+            </div>
+
+            <p>السعادة الحقيقية تتحقق عند <strong>قمة الهرمية</strong> (تحقيق الذات) ، لكن الحاجات الأدنى يجب إشباعها أولاً.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. إشكالية قياس السعادة (اقتصاد السعادة)</h3>
+            <p>تقرير <strong>السعادة العالمية</strong> (World Happiness Report) يصدر سنوياً منذ 2012 ، ويصنّف الدول حسب <strong>مؤشر السعادة</strong> (Happiness Index) :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📊</span>
+                    <p>الناتج المحلي الإجمالي للفرد</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👨‍👩‍👧‍👦</span>
+                    <p>الدعم الاجتماعي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏥</span>
+                    <p>الصحة والعمر المتوقع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🗽</span>
+                    <p>الحرية في اتخاذ القرار</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💝</span>
+                    <p>الكرم والتبرع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👮</span>
+                    <p>الفساد (سلبي)</p>
+                </div>
+            </div>
+
+            <p>لكن هذا المؤشر يواجه انتقادات : هل السعادة قابلة للقياس حقاً ؟ هل ما يقيسه هو السعادة أم الرفاه المادي ؟</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. مفارقة عيدن (Easterlin paradox)</h3>
+            <p>الاقتصادي <strong>ريتشارد عيدن</strong> (1974) أثبت مفارقة :</p>
+            <div class="example-box">
+                <h4>💡 المفارقة</h4>
+                <p>داخل بلد معين : الأغنياء أكثر سعادة من الفقراء (تأثير إيجابي للدخل).</p>
+                <p>لكن بين البلدان على المدى الطويل : زيادة الدخل لا تزيد السعادة بشكل ملحوظ (تأثير ضئيل أو صفري).</p>
+                <p>النتيجة : <strong>السعادة لا تتناسب طردياً مع الثروة</strong>.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">و. جدل السعادة في زمن السوشال ميديا</h3>
+            <p>ظاهرة <strong>المقارنة الاجتماعية</strong> في وسائل التواصل الاجتماعي تطرح سؤالاً جديداً : هل التواصل المستمر مع "حياة الآخرين المثالية" يقلل سعادتنا الحقيقية ؟</p>
+
             <div class="quote-box">
                 « السعادة ليست محطة نصل إليها، بل هي أسلوب في السفر. » — مثل هندي
             </div>
+
+            <div class="question-box">
+                <h4>🤔 سؤال للتفكير</h4>
+                <p>هل يمكن للدولة أن تصنع السعادة لمواطنيها ؟ أم أن هذا مشروع سلطوي خطير (نقد فوكو لمقولة "بيوفيراستوس") ؟</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 10 -->
+        <div class="ph-content" id="partie10">
+            <h3>📓 10. خلاصة عامة</h3>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أهم النظريات في السعادة</h3>
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p>السعادة ليست مجرد لذة أو رفاه مادي</p>
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">الإبيقورية</span> — السعادة = اللذة المعتدلة (غياب الألم)</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p>الفضيلة والمعنى والعلاقات الإنسانية جوهرية للسعادة</p>
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">الرواقية</span> — السعادة = الفضيلة + اللامبالاة بالحظ</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p>السعادة الفردية ترتبط بالسعادة الجماعية</p>
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">الأرسطية</span> — السعادة = الفضيلة + الحياة الكاملة + التأمل</p>
                 </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">الكانطية</span> — السعادة لا تكفي ، الإرادة الخيّرة هي الخير الأسمى</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">النفعية</span> — السعادة = أكبر لذة لأكبر عدد</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">الإسلامية (ابن سينا)</span> — السعادة = الاتصال بالعقل الفعال</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">المفاهيم المفتاحية للمراجعة</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">Eudaimonia</span> — السعادة الأرسطية : الازدهار والفضيلة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">Ataraxie</span> — اطراقية : هدوء النفس</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">Hedoné</span> — اللذة عند الإبيقوريين</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">Justum milieu</span> — الوسط الذهبي الأرسطي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">Volonté générale</span> — الإرادة العامة (روسو)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="phil-term">Flow</span> — الانغماس (تشيكمزيهاي)</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">الخلاصة</h3>
+            <p>لا توجد <strong>إجابة نهائية</strong> على سؤال "ما هي السعادة" : هي متعددة الأبعاد (جسدية، نفسية، اجتماعية، روحية) ، وتختلف باختلاف الأفراد والثقافات والأزمنة. لكن كل النظارات تتفق على أن <strong>المعنى</strong> و<strong>العلاقات</strong> و<strong>الفضيلة</strong> هي ركائز السعادة المستدامة.</p>
+
+            <div class="quote-box">
+                « السعادة الحقيقية لا تُشترى ولا تُفرض ولا تُعطى — بل تُبنى. » — حكمة يونانية
             </div>
         </div>
 
@@ -280,13 +793,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/16A34A/FFFFFF?text=%D8%A7%D9%84%D8%B3%D8%B9%D8%A7%D8%AF%D8%A9+%D9%81%D9%8A+%D8%A7%D9%84%D9%81%D9%84%D8%B3%D9%81%D8%A9" alt="ملخص السعادة">
-                <div class="resume-overlay">
-                    <h3>نظريات السعادة</h3>
-                    <p>اللذة، الفضيلة، الإرادة الخيّرة، النفعية</p>
-                </div>
+               
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1h08eQsYz_ibLTdI_lHhC6svOvZw15wcx/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -295,7 +804,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1B2UhSMYIEnqT2HIHXcM1nPA83passeV2/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>

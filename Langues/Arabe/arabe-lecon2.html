@@ -28,6 +28,17 @@
         .plan-box h3 { color: #1E40AF; margin-bottom: 14px; font-size: 1.05rem; }
         .plan-box p { color: var(--text-dark); line-height: 1.7; }
         .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #7C3AED; color: white; padding: 12px; text-align: right; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .ar-word { color: #7C3AED; font-weight: 600; }
+        .def-box { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-right: 4px solid #3B82F6; padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .def-box h4 { color: #1E40AF; font-size: 0.95rem; margin-bottom: 8px; }
+        .def-box p { color: #1E3A8A; margin-bottom: 6px; }
+        .question-box { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-right: 4px solid #EC4899; padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .question-box h4 { color: #9D174D; font-size: 0.95rem; margin-bottom: 8px; }
+        .question-box p { color: #831843; margin: 0; font-style: italic; }
     </style>
 </head>
 <body>
@@ -61,7 +72,7 @@
         <!-- ملخص -->
         <div class="plan-box">
             <h3>📝 ملخص الدرس</h3>
-            <p>الدرس يتناول العلاقة العميقة بين <strong>الفكر والفن</strong> : كيف يُنتج الفكر الفن وكيف يُغذي الفن الفكر. يتناول العلاقة بين المضمون والشكل، دور艺术家 في المجتمع، وظيفة الفن، والعلاقة بين الإبداع الفني والوعي الفكري. كما يستعرض نماذج من التراث العربي الإسلامي والعصر الحديث.</p>
+            <p>الدرس يتناول العلاقة العميقة بين <strong>الفكر والفن</strong> : كيف يُنتج الفكر الفن وكيف يُغذي الفن الفكر. يتناول العلاقة بين المضمون والشكل ، دور الفنان في المجتمع ، وظيفة الفن (التربوية ، النقدية ، الجمالية ، التوثيقية) ، والعلاقة بين الإبداع الفني والوعي الفكري. كما يستعرض نماذج من التراث العربي الإسلامي (النثر الفني ، الشعر ، المسرح ، الخط العربي) ونماذج من الحداثة العربية (محمود درويش ، نجيب محفوظ ، أدونيس ، جبران).</p>
         </div>
 
         <!-- خطة الدرس -->
@@ -69,18 +80,22 @@
             <h3>📋 خطة الدرس</h3>
             <ol>
                 <li><a href="#partie1">تعريف الفكر والفن وخصائص كل منهما</a></li>
-                <li><a href="#partie2">العلاقة بين الفكر والفن</a></li>
+                <li><a href="#partie2">العلاقة الجدلية بين الفكر والفن</a></li>
                 <li><a href="#partie3">وظائف الفن في المجتمع</a></li>
-                <li><a href="#partie4">الفنان والمجتمع</a></li>
+                <li><a href="#partie4">الفنان والمجتمع : الدور والمسؤولية</a></li>
                 <li><a href="#partie5">التجارب العربية في ربط الفن بالفكر</a></li>
-                <li><a href="#partie6">التطبيقات والنماذج</a></li>
+                <li><a href="#partie6">الفن العربي : الأشكال والخصوصيات</a></li>
+                <li><a href="#partie7">الفن بين الالتزام والتجريب</a></li>
+                <li><a href="#partie8">نصوص تطبيقية في الفكر والفن</a></li>
+                <li><a href="#partie9">كيفية تحليل نص فني فكري</a></li>
+                <li><a href="#partie10">خلاصة عامة</a></li>
             </ol>
         </div>
 
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1nTyyI0Uq0ZjvGwaTOQT8i3KNBl7QWxRv/view?usp=drive_link"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -89,64 +104,179 @@
         <!-- PARTIE 1 -->
         <div class="ar-content" id="partie1">
             <h3>📘 1. تعريف الفكر والفن وخصائص كل منهما</h3>
-            <p><strong>الفكر</strong> هو نشاط ذهني يهدف إلى الفهم والتحليل والتركيب، يتناول ظواهر الحياة بقضاياها المختلفة. الفكر يتساءل ويبحث ويشك.</p>
-            <p><strong>الفن</strong> هو التعبير الإبداعي عن التجربة الإنسانية عبر أشكال جمالية (أدب، موسيقى، رسم، مسرح، سينما...). الفن يُعبِّر ويُحسِّس.</p>
+            <p><strong>الفكر</strong> (Pensée) هو نشاط ذهني يهدف إلى الفهم والتحليل والتركيب ، يتناول ظواهر الحياة بقضاياها المختلفة. الفكر يتساءل ويبحث ويشك ويقارن.</p>
+
+            <p><strong>الفن</strong> (Art) هو التعبير الإبداعي عن التجربة الإنسانية عبر أشكال جمالية (أدب ، موسيقى ، رسم ، مسرح ، سينما ، عمارة...). الفن يُعبِّر ويُحسِّس ويُثير.</p>
+
+            <div class="def-box">
+                <h4>📖 تعريفات دقيقة</h4>
+                <p><strong>الفكر (Pensée) :</strong> من "فكَّر" أي أعمل العقل في شيء. نشاط عقلي تأملي يهدف للمعرفة والفهم.</p>
+                <p><strong>الفن (Art) :</strong> من اللاتينية "Ars" أي مهارة. كل نشاط إنساني يهدف إلى إنتاج الجمال أو التأثير في المتلقي.</p>
+                <p><strong>الإبداع (Créativité) :</strong> القدرة على إنتاج شيء جديد ومتميز.</p>
+                <p><strong>الجمال (Beauté) :</strong> ما يثير في النفس شعوراً بالسرور والارتياح.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">الخصائص الجوهرية</h3>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>الجانب</th>
+                    <th>الفكر</th>
+                    <th>الفن</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الهدف</td>
+                    <td>الفهم والمعرفة والحقيقة</td>
+                    <td>الإمتاع والتأثير والجمال</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الأداة</td>
+                    <td>المفاهيم والأفكار والمنطق</td>
+                    <td>الصور والألوان والأصوات والكلمات</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المنهج</td>
+                    <td>التحليل والتركيب والاستدلال</td>
+                    <td>الحدس والخيال والإلهام</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المخاطب</td>
+                    <td>العقل</td>
+                    <td>الوجدان والخيال</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الشكل</td>
+                    <td>المقال ، البحث ، الرسالة</td>
+                    <td>القصيدة ، الرواية ، اللوحة ، المسرحية</td>
+                </tr>
+            </table>
+
+            <div class="quote-box">
+                « الفن هو الكذب الجميل الذي يقول الحقيقة. » — غاستون باشلار
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">مفاهيم مرتبطة</h3>
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">🧠</span>
-                    <p><strong>الفكر</strong> — يتجه نحو العقل والمنطق — يطرح أسئلة ويبحث عن إجابات</p>
+                    <p><strong>الفكر الفلسفي</strong> — يبحث في الوجود والقيم والمعرفة</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">🎨</span>
-                    <p><strong>الفن</strong> — يتجه نحو العاطفة والخيال — يُعبِّر عن المشاعر والخبرات</p>
+                    <p><strong>الفن الجميل</strong> — يُثير الإحساس بالجمال (رسم ، موسيقى ، شعر)</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">📖</span>
-                    <p><strong>التفكير المجرد</strong> — مفاهيم، نظريات، تحليلات</p>
+                    <p><strong>التفكير المجرد</strong> — مفاهيم ، نظريات ، تحليلات</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">🎭</span>
-                    <p><strong>التعبير الجمالي</strong> — صور، ألوان، أصوات، كلمات</p>
+                    <p><strong>التعبير الجمالي</strong> — صور ، ألوان ، أصوات</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔍</span>
+                    <p><strong>النقد</strong> — فحص الأعمال الفكرية والفنية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>الإلهام</strong> — لحظة الوضوح الإبداعي</p>
                 </div>
             </div>
-            <div class="quote-box">
-                « الفن هو谎言 الجميلة التي تقول الحقيقة. » — غاستون باشلار
+
+            <div class="question-box">
+                <h4>🤔 سؤال للتفكير</h4>
+                <p>هل يمكن أن يكون هناك فن دون فكر ؟ وهل يمكن أن يكون فكر دون فن ؟</p>
             </div>
         </div>
 
         <!-- PARTIE 2 -->
         <div class="ar-content" id="partie2">
-            <h3>📗 2. العلاقة بين الفكر والفن</h3>
-            <p>العلاقة بين الفكر والفن وثيقة ومتبادلة :</p>
+            <h3>📗 2. العلاقة الجدلية بين الفكر والفن</h3>
+            <p>العلاقة بين الفكر والفن علاقة <strong>جدلية معقدة</strong> : كل منهما يُغذّي الآخر ويُلهمه.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الفكر يُنتج الفن</h3>
+            <p>الأفكار الجديدة تستدعي <strong>أشكالاً جديدة</strong> للتعبير :</p>
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">🔄</span>
-                    <p><strong>الفكر يُنتج الفن</strong> — الأفكار الجديدة تستدعي أشكالاً جديدة للتعبير</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">🔄</span>
-                    <p><strong>الفن يُغذي الفكر</strong> — الفن يُثير تساؤلات ويُعمق التفكير</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">⚖️</span>
-                    <p><strong>التكامل</strong> — الفن الجيد يجمع بين العمق الفكري والجمال الجمالي</p>
+                    <span class="icon">💡</span>
+                    <p><strong>فكر النهضة</strong> (إيطاليا القرن 15) أنتج فن النهضة (دا فينشي ، مايكل أنجلو)</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">💡</span>
-                    <p><strong>الوعي الفني</strong> — الفنان الواعي يُنتج فناً ذا محتوى فكري</p>
+                    <p><strong>فكر الأنوار</strong> (فرنسا القرن 18) أنتج أدب الأنوار (ديدرو ، فولتير)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>الوجودية</strong> (القرن 20) أنتجت الأدب والسينما الوجودية (سارتر ، كامو)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>ما بعد الحداثة</strong> أنتجت فن التفتت (بيكاسو في اللوحة ، جويس في الرواية)</p>
                 </div>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. الفن يُغذي الفكر</h3>
+            <p>الفن يُثير تساؤلات ويُعمق التفكير :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🎭</span>
+                    <p>مسرحية <strong>"نهاية لعبة"</strong> لبيكيت أثارت تساؤلات فلسفية حول الوجود</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>رواية <strong>"الغثيان"</strong> لسارتر تُجسّد الفكر الوجودي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎬</span>
+                    <p>أفلام <strong>برغمان</strong> (مثل "الفراولة البرية") تطرح مشكلة الزمن والذاكرة</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. التكامل والاختلاف</h3>
+            <p>رغم التكامل ، هناك <strong>اختلافات جوهرية</strong> :</p>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>المعيار</th>
+                    <th>الفكر</th>
+                    <th>الفن</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">اللغة</td>
+                    <td>مفاهيمية ، منطقية</td>
+                    <td>رمزية ، مجازية</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المعنى</td>
+                    <td>أحادي ، محدد</td>
+                    <td>متعدد ، قابل للتأويل</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">التأثير</td>
+                    <td>فكري (يغير التفكير)</td>
+                    <td>وجداني (يثير المشاعر)</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">التحقق</td>
+                    <td>قابل للنقاش والقياس</td>
+                    <td>غير قابل للقياس</td>
+                </tr>
+            </table>
+
             <div class="example-box">
                 <h4>💡 أمثلة من الأدب العربي</h4>
-                <p>• شعر المقاومة (أدونيس، محمود درويش) — يجمع بين الإبداع الفني والوعي السياسي</p>
-                <p>• الرواية العربية المعاصرة — توظف الفن السردي لنقل الأفكار الاجتماعية</p>
-                <p>• المسرح العباسي (ابن دانيال) — فن المسرح服务平台 أفكار الفلاسفة</p>
+                <p>• <strong>شعر المقاومة</strong> (محمود درويش ، أدونيس) — يجمع بين الإبداع الفني والوعي السياسي</p>
+                <p>• <strong>الرواية العربية المعاصرة</strong> (نجيب محفوظ ، الطاهر بن جلون) — توظف الفن السردي لنقل الأفكار الاجتماعية</p>
+                <p>• <strong>المسرح العباسي</strong> (ابن دانيال ، 1248) — فن المسرح服务平台 أفكار الفلاسفة</p>
+                <p>• <strong>أدب المهجر</strong> (جبران خليل جبران ، ميخائيل نعيمة) — الفكر الفلسفي في قالب فني</p>
             </div>
         </div>
 
         <!-- PARTIE 3 -->
         <div class="ar-content" id="partie3">
-            <h3>📙 3. وظائف الفن في المجتمع</h3>
+            <h3>📒 3. وظائف الفن في المجتمع</h3>
+            <p>الفن يقوم بعدة <strong>وظائف أساسية</strong> في المجتمع :</p>
+
             <table class="vocab-table">
                 <tr>
                     <th>الوظيفة</th>
@@ -156,35 +286,72 @@
                 <tr>
                     <td class="ar-word">التربية والتنشئة</td>
                     <td>ترسيخ القيم والأخلاق في النفوس</td>
-                    <td>الأمثال، الحكايات، المسرح</td>
+                    <td>الأمثال ، الحكايات ، المسرح التعليمي</td>
                 </tr>
                 <tr>
                     <td class="ar-word">النقد الاجتماعي</td>
                     <td>كشف عيوب المجتمع بشكل غير مباشر</td>
-                    <td>الرواية، الكاريكاتير، السخرية</td>
+                    <td>الرواية ، الكاريكاتير ، السخرية</td>
                 </tr>
                 <tr>
                     <td class="ar-word">التعويض النفسي</td>
                     <td>إشباع الحاجات الجمالية والنفسية</td>
-                    <td>الموسيقى، الشعر، الرسم</td>
+                    <td>الموسيقى ، الشعر ، الرسم</td>
                 </tr>
                 <tr>
                     <td class="ar-word">الهوية والذاكرة</td>
-                    <td>حفظ التراث和文化 والهوية</td>
-                    <td>الفولكلور، الفنون الشعبية</td>
+                    <td>حفظ التراث والثقافة والهوية</td>
+                    <td>الفولكلور ، الفنون الشعبية</td>
                 </tr>
                 <tr>
                     <td class="ar-word">التغيير والتحويل</td>
                     <td>إلهام الناس نحو التغيير الإيجابي</td>
-                    <td>فن المقاومة، الفن الثوري</td>
+                    <td>فن المقاومة ، الفن الثوري</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">التسجيل والتوثيق</td>
+                    <td>توثيق العصر والمجتمع</td>
+                    <td>السينما الوثائقية ، الرواية التاريخية</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الترفيه والإمتاع</td>
+                    <td>إمتاع المتلقي وتمضية أوقاته</td>
+                    <td>المسرح ، الموسيقى ، الرواية البوليسية</td>
                 </tr>
             </table>
+
+            <div class="quote-box">
+                « الفن ليس ترفاً بل هو حاجة الإنسان الأولى بعد الخبز. » — جبران خليل جبران
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">نظرية الوظائف عند الأدب العربي القديم</h3>
+            <p>الجاحظ (776-868) في كتابه <em>الحيوان</em> و<em>البيان والتبيين</em> يُحلّل الوظائف الاجتماعية للفن :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p>البلاغة : فن الإقناع والتأثير</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎭</span>
+                    <p>الشعر : ديوان العرب ، سجل تاريخهم وأمجادهم</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p>الخطابة : فن التأثير في الجماهير</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p>النقد : تمييز الجيد من الرديء</p>
+                </div>
+            </div>
         </div>
 
         <!-- PARTIE 4 -->
         <div class="ar-content" id="partie4">
-            <h3>📕 4. الفنان والمجتمع</h3>
-            <p>艺术家 في المجتمع له أدوار متعددة :</p>
+            <h3>📙 4. الفنان والمجتمع : الدور والمسؤولية</h3>
+            <p>الفنان في المجتمع له <strong>أدوار متعددة ومتشعبة</strong> :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. الأدوار الجوهرية</h3>
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">👁️</span>
@@ -192,7 +359,7 @@
                 </div>
                 <div class="key-point">
                     <span class="icon">📢</span>
-                    <p><strong>المعبِّر</strong> — يعبر عن هموم الناس وآمالهم</p>
+                    <p><strong>المعبِّر</strong> — يعبر عن هموم الناس وآمالهم بصوت عال</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">⚡</span>
@@ -202,50 +369,459 @@
                     <span class="icon">🔨</span>
                     <p><strong>الباني</strong> — يساهم في بناء الوعي الجماعي</p>
                 </div>
+                <div class="key-point">
+                    <span class="icon">🌍</span>
+                    <p><strong>الناقد</strong> — يكشف عيوب المجتمع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💾</span>
+                    <p><strong>الذاكرة</strong> — يحفظ تراث المجتمع وهويته</p>
+                </div>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. مسؤولية الفنان</h3>
+            <p>الفنان ليس مجرد مُتلقٍ للأحداث بل هو <strong>فاعل في المجتمع</strong> :</p>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>الجانب</th>
+                    <th>المسؤولية</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">تجاه الحقيقة</td>
+                    <td>أن يعبّر عن الواقع بصدق</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">تجاه المتلقي</td>
+                    <td>أن يكون واعياً بأثر فنه</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">تجاه القيم</td>
+                    <td>أن يدافع عن القيم الإنسانية</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">تجاه الحرية</td>
+                    <td>أن يدافع عن حرية الإبداع</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">تجاه الأجيال القادمة</td>
+                    <td>أن يترك أثراً إيجابياً في التاريخ</td>
+                </tr>
+            </table>
+
             <div class="quote-box">
-                « الفن ليس ترفاً بل هو حاجة الإنسان الأولى بعد الخبز. » — جبران خليل جبران
+                « الشاعر في مجتمعه كالمرآة : يعكس ما يراه ، وأحياناً يكشف ما لا يُرى. » — بدر شاكر السياب
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. نماذج من المسؤولية الفنية</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🕊️</span>
+                    <p><strong>فكتور هوغو</strong> — استخدم الرواية لمحاربة الظلم الاجتماعي (<em>البؤساء</em>)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>نجيب محفوظ</strong> — رواياته نقد للواقع المصري والمجتمع العربي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🕊️</span>
+                    <p><strong>محمود درويش</strong> — شعره مقاومة سياسية وهوية وطنية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p><strong>بابلو بيكاسو</strong> — لوحة "غيرنيكا" نقد للحرب (1937)</p>
+                </div>
+            </div>
+
             <div class="warning-box">
                 <h4>⚠️ مسؤولية الفنان</h4>
-                <p>الفنان ليس مجرد مُتلقٍ للأحداث بل هو فاعل في المجتمع. مسؤوليته تتعاظم حين يُنتج فناً يُسهم في بناء الوعي أو تقويته.</p>
+                <p>الفنان ليس مجرد مُتلقٍ للأحداث بل هو فاعل في المجتمع. مسؤوليته تتعاظم حين يُنتج فناً يُسهم في بناء الوعي أو تقويته. لكن يجب أن يحذر من <strong>تحويل الفن إلى دعاية</strong> أو <strong>استخدامه كأداة سياسية</strong> بشكل يفقده جوهره الفني.</p>
             </div>
         </div>
 
         <!-- PARTIE 5 -->
         <div class="ar-content" id="partie5">
-            <h3>📒 5. التجارب العربية في ربط الفن بالفكر</h3>
+            <h3>📕 5. التجارب العربية في ربط الفن بالفكر</h3>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. جبران خليل جبران (1883-1931)</h3>
             <div class="example-box">
-                <h4>💡 جبران خليل جبران</h4>
-                <p>في كتابه "المسيح新城" جمع بين الفلسفة والشعر، فالفكر الفلسفي ظهر في قالب فني جميل. رسالته : الفن يجب أن يكون مرآة للحقيقة.</p>
+                <p>في كتابه <em>المسيح ابن الإنسان</em> و<em>النبي</em> جمع بين الفلسفة والشعر. الفكر الفلسفي ظهر في قالب فني جميل. رسالته : الفن يجب أن يكون <strong>مرآة للحقيقة</strong> وأداة لتحرير الإنسان.</p>
+                <p>كتابه <em>النبي</em> يطرح 26 موضوعاً فلسفياً (الحرية ، الحب ، العمل ، الموت...) في 26 مقالة شعرية.</p>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. أدونيس (علي أحمد سعيد، 1930-)</h3>
             <div class="example-box">
-                <h4>💡 أدونيس (علي أحمد سعيد)</h4>
-                <p>شاعر وفيلسوف عربي ربط بين الشعر والحرية الفكرية. يرى أن الشعر الحقيقي هو ذلك الذي يتحدى ويجدد. أفكاره عن الهوية والحداثة أصبحت مرجعاً.</p>
+                <p>شاعر وفيلسوف عربي سوري ربط بين الشعر والحرية الفكرية. يرى أن الشعر الحقيقي هو الذي <strong>يتحدى ويجدد</strong>. مجلته <em>شعر</em> (1957) مع يوسف الخال أحدثت ثورة في الشعر العربي.</p>
+                <p>أفكاره عن <strong>الهوية والحداثة والتراث</strong> أصبحت مرجعاً في الفكر العربي المعاصر.</p>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. نجيب محفوظ (1911-2006)</h3>
             <div class="example-box">
-                <h4>💡 نجيب محفوظ</h4>
-                <p>روائي عربي ربط بين السرد الفني والفكر الاجتماعي. رواياته الثلاثية و"أولاد حارتنا" تطرح أسئلة فلسفية كبيرة في قالب روائي.</p>
+                <p>روائي عربي مصري ، حائز على نوبل للآداب (1988) — وهو أول عربي يفوز بها. ربط بين السرد الفني والفكر الاجتماعي. رواياته الثلاثية (<em>بين القصرين</em> ، <em>قصر الشوق</em> ، <em>السكرية</em>) توثّق تحولات المجتمع المصري.</p>
+                <p>رواية <em>أولاد حارتنا</em> (1959) تطرح أسئلة فلسفية كبرى (الخير ، الشر ، الدين ، المعرفة) في قالب روائي ملحمي.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. محمود درويش (1941-2008)</h3>
+            <div class="example-box">
+                <p>شاعر فلسطيني ربط بين الشعر والقضية الوطنية. شعره فنّ <strong>ومقاومة وذاكرة وهوية</strong>. ديوانه <em>الأرض المحتلة</em> (1964) علامة فارقة في الشعر العربي الحديث.</p>
+                <p>عبارته الشهيرة : "على هذه الأرض ما يستحق الحياة" أصبحت شعاراً للأمل والمقاومة.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">هـ. بدر شاكر السياب (1926-1964)</h3>
+            <div class="example-box">
+                <p>شاعر عراقي رائد <strong>الشعر الحر</strong> في العربية. ربط بين الشعر والتراث والفكر المعاصر. ديوانه <em>أنشودة المطر</em> (1960) علامة فارقة في الشعر العربي.</p>
+                <p>استخدم الرمز والأسطورة لتقديم قضايا سياسية واجتماعية.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">و. طه حسين (1889-1973)</h3>
+            <div class="example-box">
+                <p>أديب وناقد مصري جمع بين الأدب والفكر النقدي. كتابه <em>في الشعر الجاهلي</em> (1926) أثار ضجة كبيرة. دعا إلى <strong>حرية الفكر</strong> و<strong>الانفتاح على الحضارات</strong>.</p>
+                <p>لقب بـ"شيخ الأدب العربي" و"عميد الأدب العربي".</p>
             </div>
         </div>
 
         <!-- PARTIE 6 -->
         <div class="ar-content" id="partie6">
-            <h3>📓 6. التطبيقات والنماذج</h3>
-            <div class="example-box">
-                <h4>💡 كيف تحلل العلاقة بين الفكر والفن؟</h4>
-                <p>1. <strong>حدد الموضوع</strong> — ما هي الفكرة الأساسية؟</p>
-                <p>2. <strong>ابحث عن الصلة</strong> — كيف تتجلى الفكرة في الشكل الفني؟</p>
-                <p>3. <strong>قيّم التأثير</strong> — ما أثر النص على المتلقي؟</p>
-                <p>4. <strong>اسحب الخلاصة</strong> — ما هي الرسالة؟</p>
+            <h3>📗 6. الفن العربي : الأشكال والخصوصيات</h3>
+            <p>الفن العربي يتميز بـ<strong>خصوصيات فريدة</strong> تعكس ثقافته وحضارته :</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. أنواع الفنون العربية</h3>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>النوع</th>
+                    <th>الخصوصيات</th>
+                    <th>أمثلة</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الخط العربي</td>
+                    <td>فن تزييني وديني مميز</td>
+                    <td>النسخي ، الكوفي ، الديواني ، الثلث</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الموسيقى</td>
+                    <td>اعتمدت على المقامات والأوزان</td>
+                    <td>الموسيقى الأندلسية ، الطرب العربي</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">العمارة</td>
+                    <td>زخرفة إسلامية فريدة</td>
+                    <td>الأزهر ، قصر الحمراء ، تاج محل</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الشعر</td>
+                    <td>تقاليد عريقة من الجاهلية</td>
+                    <td>المعلقات ، الشعر الحديث</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">القصة والرواية</td>
+                    <td>فن حديث في الأدب العربي</td>
+                    <td>نجيب محفوظ ، الطاهر بن جلون</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">المسرح</td>
+                    <td>فن وافد تأصّل في العربية</td>
+                    <td>توفيق الحكيم ، يوسف إدريس</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. سمات الفن العربي</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🌀</span>
+                    <p><strong>الروحانية</strong> — الفن العربي يحمل بصمة روحية ودينية (التزيينية الهندسية)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌊</span>
+                    <p><strong>الإيقاع</strong> — الموسيقى العربية مبنية على المقامات والإيقاعات المعقدة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📜</span>
+                    <p><strong>اللفظية</strong> — الكلمة لها مكانة خاصة (القرآن ، الشعر)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p><strong>التزيينية</strong> — الفنون البصرية تميل إلى الزخرفة والتجريد</p>
+                </div>
             </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. مقاربة الفن بين التراث والحداثة</h3>
+            <p>يطرح الفن العربي إشكالية <strong>التوفيق بين الأصالة والمعاصرة</strong> :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🟢</span>
+                    <p><strong>الاتجاه التراثي</strong> : الحفاظ على الأشكال التقليدية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔴</span>
+                    <p><strong>الاتجاه الحداثي</strong> : التجريب وكسر الأشكال التقليدية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🟡</span>
+                    <p><strong>الاتجاه التوفيقي</strong> : الاستفادة من التراث والتجريب</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 7 -->
+        <div class="ar-content" id="partie7">
+            <h3>📙 7. الفن بين الالتزام والتجريب</h3>
+            <p>من أقدم الجدليات في تاريخ الفن : <strong>هل الفن للفن (L'art pour l'art) أم فن ملتزم (Art engagé) ؟</strong></p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. موقف "الفن للفن"</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p><strong>المبدأ</strong> : الفن هدفه ذاته ، الجمال غاية لا وسيلة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🌹</span>
+                    <p>الفن لا يجب أن يخدم قضية سياسية أو اجتماعية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>ممثلون</strong> : بارت فلوبير ، تيات ستيفان ملكارم ، الأدب الرمزي</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. موقف الفن الملتزم</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⚖️</span>
+                    <p><strong>المبدأ</strong> : الفن أداة تغيير اجتماعي وسياسي</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔥</span>
+                    <p>الفنان مسؤول عن قضايا عصره</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>ممثلون</strong> : سارتر ، بريخت ، محمود درويش ، بابلو نيرودا</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. موقف التجريب الفني</h3>
+            <p>في القرن العشرين ، ظهر تيار <strong>التجريب</strong> في الفن :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🖼️</span>
+                    <p>التكعيبية (بيكاسو) — تجزئة الواقع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p>تيار الوعي (جويس ، وولف) — سرد تداعي الأفكار</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎭</span>
+                    <p>مسرح اللامعقول (بيكيت ، يونسكو) — تكسير المألوف</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎵</span>
+                    <p>الموسيقى التسلسلية (شونبرغ) — كسر النظام التقليدي</p>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                « ليس هناك فن عظيم دون التزام. الالتزام بالفن نفسه التزام. » — جان بول سارتر
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ في الأدب العربي</h4>
+                <p>الجدل بين الالتزام والتجريب حاضر بقوة في الأدب العربي منذ الخمسينيات. مجلة <em>شعر</em> (أدونيس ، يوسف الخال) دعت إلى التجريب. مجلة <em>الآداب</em> (سهيل إدريس) دعت إلى الالتزام الاجتماعي.</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 8 -->
+        <div class="ar-content" id="partie8">
+            <h3>📕 8. نصوص تطبيقية في الفكر والفن</h3>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. نص 1 : طه حسين "الأيام"</h3>
+            <p>طه حسين في سيرته الذاتية <em>الأيام</em> يجمع بين <strong>الأدب والفكر</strong> :</p>
+
+            <div class="example-box">
+                <h4>💡 تحليل النص</h4>
+                <p><strong>الموضوع :</strong> سيرة ذاتية تتناول حياة طفل صعيدي أصيب بالعمى وطلب العلم</p>
+                <p><strong>الفكر :</strong> أهمية العلم في تحرر الإنسان</p>
+                <p><strong>الفن :</strong> السرد الأدبي الجميل ، التصوير الدقيق</p>
+                <p><strong>القيم :</strong> العزيمة ، الإرادة ، تحدي الإعاقة</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. نص 2 : جبران خليل جبران "النبي"</h3>
+            <p><em>النبي</em> (1923) عمل يجمع بين الحكمة والفن :</p>
+
+            <div class="example-box">
+                <h4>💡 مختارات من النص</h4>
+                <p>يقول المعلم مصطفى (النبي) في إحدى فصول الكتاب :</p>
+                <p><em>"إن أحببت شخصاً فلتكن حراً في حبك ، دعه يحيا حيث يشاء ، لا تجعله عبيداً لك. الحب الذي يفقد الحرية ليس حباً بل سجن."</em></p>
+                <p><strong>الأسلوب :</strong> شعري فلسفي</p>
+                <p><strong>الفكر :</strong> الحرية في الحب</p>
+                <p><strong>الفن :</strong> اللغة الشعرية والإيقاع</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. نص 3 : محمود درويش "سجل أنا عربي"</h3>
+            <div class="example-box">
+                <h4>💡 تحليل قصيدة "سجل أنا عربي"</h4>
+                <p>يقول درويش :</p>
+                <p><em>"سجّلْ أنا عربي<br>ورقمُ بطاقتي خمسون ألف<br>وعددُ أولادي ثمانية<br>وتاسعهم... سيأتي بعد شهر!"</em></p>
+                <p><strong>الموضوع :</strong> الهوية الفلسطينية</p>
+                <p><strong>الفكر :</strong> مقاومة التشويه الإعلامي ، تأكيد الوجود</p>
+                <p><strong>الفن :</strong> السرد باليوميات ، التكرار الإيقاعي</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">د. نص 4 : نجيب محفوظ "أولاد حارتنا"</h3>
+            <p>رواية ملحمية تجمع بين <strong>الفلسفة والرواية والفن</strong> :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><strong>الموضوع :</strong> قصة أجيال من عائلة في حارة مصرية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">💡</span>
+                    <p><strong>الفكر :</strong> أسئلة فلسفية عن الخير والشر ، الدين والمعرفة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎨</span>
+                    <p><strong>الفن :</strong> الواقعية السحرية ، تعدد الأصوات</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⚠️</span>
+                    <p><strong>الجدل :</strong> أثارت الرواية ضجة بسبب قراءتها الدينية</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 9 -->
+        <div class="ar-content" id="partie9">
+            <h3>📗 9. كيفية تحليل نص فني فكري</h3>
+            <p>تحليل نص يجمع بين الفكر والفن يتطلب <strong>منهجية خاصة</strong> تجمع بين التحليل الأدبي والتحليل الفكري.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">أ. المنهج المقترح</h3>
+
+            <div class="example-box">
+                <h4>💡 خطوات التحليل</h4>
+                <p>1. <strong>القراءة الأولى (الفهم العام)</strong> : ما الموضوع الرئيسي ؟</p>
+                <p>2. <strong>القراءة الثانية (التفاصيل)</strong> : ما العناصر الأدبية والجمالية ؟</p>
+                <p>3. <strong>السياق</strong> : من هو المؤلف ؟ متى وأين كُتب النص ؟</p>
+                <p>4. <strong>الموضوع</strong> : ما الفكرة الرئيسية ؟ وما الأفكار الفرعية ؟</p>
+                <p>5. <strong>اللغة والأسلوب</strong> : ما الصور البلاغية ؟ ما الأسلوب ؟</p>
+                <p>6. <strong>البناء</strong> : كيف ينظم الكاتب أفكاره ؟</p>
+                <p>7. <strong>الرسالة</strong> : ما الرسالة الأساسية ؟</p>
+                <p>8. <strong>العلاقة بين الفكر والفن</strong> : كيف يخدم الشكل الفني المضمون الفكري ؟</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ب. أدوات التحليل</h3>
+
+            <table class="vocab-table">
+                <tr>
+                    <th>البعد</th>
+                    <th>أدوات التحليل</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">الفكري</td>
+                    <td>الأفكار ، الحجج ، المنطق ، المرجعيات</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">الفني</td>
+                    <td>الصور ، الأساليب ، الإيقاع ، الرمز</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">السياقي</td>
+                    <td>الزمان ، المكان ، الظروف ، المؤثرات</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">النقدي</td>
+                    <td>الاتفاق ، الاختلاف ، التأثير</td>
+                </tr>
+            </table>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">ج. نموذج تطبيقي</h3>
+
+            <div class="example-box">
+                <h4>💡 تطبيق على قصيدة قصيرة</h4>
+                <p><em>"أنا من بلدي<br>من بيتها الصغير<br>أحبُّها<br>وأملأُ كفيَّ من ترابها."</em></p>
+                <p><strong>المضمون الفكري :</strong> الانتماء إلى الوطن</p>
+                <p><strong>الأشكال الفنية :</strong></p>
+                <p>• تكرار "أنا من" (يؤكد الانتماء)</p>
+                <p>• البيت الصغير (رمز للأمان)</p>
+                <p>• التراب (رمز للأصالة)</p>
+                <p>• الإيقاع البسيط (يدل على الصفاء)</p>
+                <p><strong>العلاقة بين الفكر والفن :</strong> الشكل البسيط يخدم فكرة الانتماء البسيط العميق</p>
+            </div>
+
             <div class="warning-box">
                 <h4>⚠️ في امتحان البكالوريا</h4>
-                <p>قد يُطلب منك:</p>
+                <p>في تحليل نص فني فكري ، انتبه إلى :</p>
+                <p>• <strong>تحديد النوع الأدبي</strong> (شعر / نثر / مسرحية / مقال)</p>
+                <p>• <strong>الوقوف على الصور البلاغية</strong> (تشبيه ، استعارة ، كناية)</p>
+                <p>• <strong>ربط الشكل بالمضمون</strong> (الفن يخدم الفكر)</p>
+                <p>• <strong>استنتاج الرسالة</strong> (ما الذي يريد الكاتب إيصاله)</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 10 -->
+        <div class="ar-content" id="partie10">
+            <h3>📓 10. خلاصة عامة</h3>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">المفاهيم المفتاحية للمراجعة</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الفكر (Pensée)</span> — نشاط عقلي يهدف للمعرفة</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الفن (Art)</span> — تعبير إبداعي عن التجربة الإنسانية</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الإبداع (Créativité)</span> — القدرة على إنتاج الجديد</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الجمال (Beauté)</span> — ما يثير السرور والارتياح</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الفن الملتزم (Art engagé)</span> — فن في خدمة القضايا</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📚</span>
+                    <p><span class="ar-word">الفن للفن (L'art pour l'art)</span> — الفن هدفه ذاته</p>
+                </div>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">الخلاصة</h3>
+            <div class="quote-box">
+                « الفن يخلد الإنسان ، والفكر يهديه. » — حكمة عربية
+            </div>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>الفكر والفن متلازمان لا ينفصلان</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>الفن الجيد يحمل فكراً عميقاً</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>الفنان له دور ومسؤولية في المجتمع</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✅</span>
+                    <p>الفن العربي غني بنماذج الفكر والفن</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ في امتحان البكالوريا</h4>
+                <p>قد يُطلب منك :</p>
                 <p>• شرح مفهوم العلاقة بين الفن والتفكير</p>
                 <p>• تحليل نص أدبي وربطه بالفكر الاجتماعي</p>
-                <p>• كتابة مقال عن دور artist في المجتمع</p>
+                <p>• كتابة مقال عن دور الفنان في المجتمع</p>
                 <p>• المقارنة بين فكر وفن في نص معين</p>
+                <p>• دراسة نص أدبي وبيان وظائفه</p>
             </div>
         </div>
 
@@ -253,12 +829,9 @@
             <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
             <div class="resume-image-container">
                 <img src="https://via.placeholder.com/1200x700/7C3AED/FFFFFF?text=%D8%AF%D8%B1%D8%B3+%D8%A7%D9%84%D9%81%D9%83%D8%B1+%D9%88%D8%A7%D9%84%D9%81%D9%86" alt="ملخص الفكر والفن">
-                <div class="resume-overlay">
-                    <h3>الفكر والفن</h3>
-                    <p>العلاقة، الوظائف، المسؤولية، النماذج</p>
-                </div>
+               
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1IlYiK2f-iJD7h1BR5qlb0PwmOVJRwsoF/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -266,7 +839,8 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
             <div class="video-container">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1yJ4RMPW_nRoeUOmx5y4GZ6GY0MfR0Nhn/preview
+"
                         width="640" height="360" frameborder="0" allow="autoplay">
                 </iframe>
             </div>

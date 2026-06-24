@@ -9,19 +9,14 @@
         .info-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); }
         .info-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
         .info-content p { margin-bottom: 12px; line-height: 1.8; color: var(--text-dark); }
-        .code-box { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px 22px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #D4D4D4; overflow-x: auto; }
-        .code-box .code-title { font-size: 0.85rem; color: #888; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
-        .code-box .keyword { color: #569CD6; }
-        .code-box .function { color: #DCDCAA; }
-        .code-box .comment { color: #6A9955; }
-        .code-box .string { color: #CE9178; }
-        .code-box .number { color: #B5CEA8; }
-        .code-box .class-name { color: #4EC9B0; }
+        .info-content ul { margin: 10px 0 14px 20px; line-height: 1.8; color: var(--text-dark); }
+        .info-content li { margin-bottom: 6px; }
         .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-left: 4px solid var(--success); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
         .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
         .example-box p { margin-bottom: 6px; color: #14532d; }
         .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-left: 4px solid var(--warning); padding: 18px 22px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 16px 0; }
         .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .warning-box p { color: #92400e; margin-bottom: 6px; }
         .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
         .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
         .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
@@ -32,8 +27,22 @@
         .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
         .toc li a { color: var(--primary); font-weight: 500; }
         .toc li a:hover { text-decoration: underline; }
-        .ui-diagram { background: var(--bg-gray-50); border-radius: var(--radius-xl); padding: 24px; margin: 16px 0; border: 1px solid var(--border-light); }
+        .ui-diagram { background: var(--bg-gray-50); border-radius: var(--radius-xl); padding: 24px; margin: 16px 0; border: 1px solid var(--border-light); text-align: center; }
         .ui-element { display: inline-flex; align-items: center; gap: 8px; background: #EFF6FF; border: 2px solid #3B82F6; padding: 8px 14px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; color: #1E40AF; margin: 4px; }
+        .step-box { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 20px 24px; margin: 16px 0; }
+        .step-box h4 { color: var(--primary); margin-bottom: 10px; font-size: 1rem; }
+        .step-box p { margin-bottom: 8px; line-height: 1.7; }
+        .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--primary); color: white; border-radius: 50%; font-size: 0.85rem; font-weight: 700; margin-right: 8px; flex-shrink: 0; }
+        .layout-demo { background: #1E1E1E; border-radius: var(--radius-lg); padding: 18px; margin: 14px 0; font-family: 'Courier New', monospace; font-size: 0.9rem; color: #D4D4D4; }
+        .layout-demo .label { color: #888; margin-bottom: 6px; font-family: 'Segoe UI', sans-serif; font-size: 0.82rem; }
+        .layout-demo .row { display: flex; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+        .layout-demo .btn { background: #0E639C; color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; }
+        .interface-preview { background: #f5f5f5; border: 2px dashed #ccc; border-radius: var(--radius-lg); padding: 24px; margin: 14px 0; text-align: center; }
+        .interface-preview .fake-window { background: white; border: 2px solid #ddd; border-radius: 8px; max-width: 400px; margin: 0 auto; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .interface-preview .fake-titlebar { background: #3B82F6; color: white; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; text-align: left; }
+        .interface-preview .fake-body { padding: 16px; text-align: left; }
+        .interface-preview .fake-field { background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 6px 10px; margin-bottom: 10px; font-size: 0.82rem; color: #555; }
+        .interface-preview .fake-btn { background: #3B82F6; color: white; border: none; border-radius: 4px; padding: 8px 16px; font-size: 0.85rem; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -64,7 +73,7 @@
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 3 : Qt Designer — Interfaces graphiques</h1>
+            <h1>Leçon 3 : Qt Designer — Créer des interfaces graphiques</h1>
             <p class="breadcrumb">Informatique > Leçon 3</p>
         </div>
 
@@ -73,19 +82,20 @@
             <h3>📋 Plan de la leçon</h3>
             <ol>
                 <li><a href="#partie1">Qu'est-ce que Qt Designer ?</a></li>
-                <li><a href="#partie2">Interface de Qt Designer</a></li>
-                <li><a href="#partie3">Les widgets principaux</a></li>
-                <li><a href="#partie4">Créer une interface complète</a></li>
-                <li><a href="#partie5">Connecter le .ui au code Python</a></li>
-                <li><a href="#partie6">Projet final : Calculatrice</a></li>
+                <li><a href="#partie2">L'interface de Qt Designer</a></li>
+                <li><a href="#partie3">Les types de fenêtres</a></li>
+                <li><a href="#partie4">Les widgets (éléments d'interface)</a></li>
+                <li><a href="#partie5">Modifier les propriétés</a></li>
+                <li><a href="#partie6">Les layouts (dispositions)</a></li>
+                <li><a href="#partie7">Créer une interface complète pas à pas</a></li>
             </ol>
         </div>
 
-        <!-- SECTION PODCAST -->
-        <section class="section-podcast">
+          <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/130RLoxg4xnjif-_wBXThoRYagGqDd--f/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -94,76 +104,123 @@
         <!-- PARTIE 1 -->
         <div class="info-content" id="partie1">
             <h3>📘 1. Qu'est-ce que Qt Designer ?</h3>
-            <p><strong>Qt Designer</strong> est un outil graphique inclus dans le framework <strong>Qt</strong> qui permet de concevoir visuellement des interfaces utilisateur (GUI) sans écrire de code. On glisse-dépose les éléments, on ajuste les propriétés, et Qt Designer génère un fichier <code>.ui</code> (format XML).</p>
-            <p>Au Baccalauréat tunisien, Qt Designer est utilisé avec <strong>PyQt5</strong> (Python + Qt) pour créer des applications graphiques simples.</p>
+            <p><strong>Qt Designer</strong> est un outil visuel inclus dans Qt qui permet de créer des interfaces graphiques (fenêtres, boutons, champs de texte…) <strong>sans écrire une seule ligne de code</strong>. On construit l'interface en glisser-déposer.</p>
+            <p>Une fois l'interface terminée, Qt Designer génère un fichier <code>.ui</code> (format XML). Ce fichier peut ensuite être utilisé par un développeur dans son programme.</p>
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">🎯</span>
-                    <p><strong>Objectif</strong> — Créer une interface graphique (fenêtre, boutons, champs de texte…)</p>
+                    <p><strong>But</strong> — Créer visuellement des fenêtres et des éléments d'interface</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🖱️</span>
+                    <p><strong>Méthode</strong> — Glisser-déposer des éléments depuis une boîte à outils</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">📄</span>
-                    <p><strong>Sortie</strong> — Fichier <code>.ui</code> (convention XML) lisible par PyQt5</p>
+                    <p><strong>Résultat</strong> — Un fichier <code>.ui</code> qui décrit l'interface</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">⚡</span>
-                    <p><strong>Avantage</strong> — Gain de temps énorme par rapport au codage manuel des interfaces</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">🐍</span>
-                    <p><strong>Avec Python</strong> — On utilise <strong>PyQt5</strong> ou <strong>PyQt6</strong> comme bibliothèque</p>
+                    <span class="icon">✅</span>
+                    <p><strong>Avantage</strong> — Pas besoin de coder l'interface, gain de temps énorme</p>
                 </div>
             </div>
+            <div class="example-box">
+                <h4>💡 Comment lancer Qt Designer ?</h4>
+                <p>Sous Windows : cherchez "Designer" dans le menu Démarrer (après installation de PyQt5)</p>
+                <p>Ou dans le terminal : tapez <code>designer</code></p>
+            </div>
             <div class="warning-box">
-                <h4>⚠️ Installation (Tunsie — Bac Info)</h4>
-                <p>Installez PyQt5 avec la commande : <code>pip install PyQt5</code></p>
-                <p>Qt Designer se trouve dans le dossier d'installation de Python ou se lance via la commande : <code>designer</code></p>
+                <h4>⚠️ Prérequis</h4>
+                <p>Installez PyQt5 d'abord : <code>pip install PyQt5</code></p>
+                <p>Qt Designer sera installé automatiquement avec.</p>
             </div>
         </div>
 
         <!-- PARTIE 2 -->
         <div class="info-content" id="partie2">
-            <h3>📗 2. Interface de Qt Designer</h3>
-            <p>Qt Designer s'organise en <strong>4 zones principales</strong> :</p>
+            <h3>📗 2. L'interface de Qt Designer</h3>
+            <p>Quand vous ouvrez Qt Designer, vous voyez <strong>4 zones principales</strong> :</p>
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">🧰</span>
-                    <p><strong>Boîte à outils (Toolbox)</strong> — Liste des widgets disponibles (boutons, labels, zones de texte…)</p>
+                    <p><strong>Boîte à outils (Widget Box)</strong> — Contient tous les widgets disponibles (boutons, labels, zones de texte…)</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">🎨</span>
-                    <p><strong>Zone de conception</strong> — Canvas central où on dépose et arrange les widgets</p>
+                    <p><strong>Zone de conception (Form Editor)</strong> — Le canvas central où vous déposez et arrangez vos widgets</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">⚙️</span>
-                    <p><strong>Propriétés (Property Editor)</strong> — Liste des attributs du widget sélectionné (taille, texte, couleur…)</p>
+                    <p><strong>Éditeur de propriétés (Property Editor)</strong> — Panel de droite avec toutes les propriétés du widget sélectionné</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">📁</span>
-                    <p><strong>Explorateur d'objets</strong> — Arborescence hiérarchique des widgets de la fenêtre</p>
+                    <p><strong>Explorateur d'objets (Object Explorer)</strong> — Arborescence qui montre la hiérarchie de vos widgets</p>
                 </div>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Types de fenêtres</h3>
-            <div class="key-points">
-                <div class="key-point">
-                    <span class="icon">🔲</span>
-                    <p><strong>Main Window</strong> — Fenêtre complète avec menu, barre d'outils, zone centrale et barre de statut</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">📦</span>
-                    <p><strong>Dialog</strong> — Petite fenêtre de dialogue (sans barre de menu)</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">🏷️</span>
-                    <p><strong>Widget</strong> — Fenêtre basique, le type le plus simple</p>
+            <div class="interface-preview">
+                <p style="color:#888; font-size:0.85rem; margin-bottom:14px;">Aperçu de l'interface Qt Designer :</p>
+                <div class="fake-window">
+                    <div class="fake-titlebar">Qt Designer</div>
+                    <div class="fake-body" style="display:flex; gap:12px;">
+                        <div style="width:120px; background:#f0f0f0; border-radius:4px; padding:8px; font-size:0.75rem; color:#555;">
+                            <div style="margin-bottom:6px; font-weight:600;">🧰 Widgets</div>
+                            <div style="background:#fff; border:1px solid #ccc; border-radius:3px; padding:4px 6px; margin-bottom:4px;">🔘 Push Button</div>
+                            <div style="background:#fff; border:1px solid #ccc; border-radius:3px; padding:4px 6px; margin-bottom:4px;">📝 Label</div>
+                            <div style="background:#fff; border:1px solid #ccc; border-radius:3px; padding:4px 6px; margin-bottom:4px;">✏️ Line Edit</div>
+                            <div style="background:#fff; border:1px solid #ccc; border-radius:3px; padding:4px 6px;">☑️ Check Box</div>
+                        </div>
+                        <div style="flex:1; background:#e8e8e8; border-radius:4px; padding:16px; min-height:180px;">
+                            <div style="background:white; border:2px solid #3B82F6; border-radius:6px; padding:12px; max-width:200px;">
+                                <div style="font-size:0.8rem; color:#555; margin-bottom:6px;">Ma Fenêtre</div>
+                                <div style="background:#f5f5f5; border:1px solid #ccc; border-radius:3px; padding:5px 8px; font-size:0.75rem; margin-bottom:6px;">Texte ici</div>
+                                <div style="display:flex; gap:4px;">
+                                    <div style="background:#3B82F6; color:white; border-radius:3px; padding:5px 10px; font-size:0.75rem;">OK</div>
+                                    <div style="background:#eee; color:#555; border-radius:3px; padding:5px 10px; font-size:0.75rem;">Annuler</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width:140px; background:#f0f0f0; border-radius:4px; padding:8px; font-size:0.75rem; color:#555;">
+                            <div style="margin-bottom:6px; font-weight:600;">⚙️ Propriétés</div>
+                            <div style="background:#fff; border:1px solid #ccc; border-radius:3px; padding:4px 6px; margin-bottom:4px;">objectName: btn</div>
+                            <div style="background:#fff; border:1px solid #ccc; border-radius:3px; padding:4px 6px; margin-bottom:4px;">text: "OK"</div>
+                            <div style="background:#fff; border:1px solid #ccc; border-radius:3px; padding:4px 6px;">geometry</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- PARTIE 3 -->
         <div class="info-content" id="partie3">
-            <h3>📙 3. Les widgets principaux</h3>
-            <p>Un <strong>widget</strong> est un élément d'interface (contrôle graphique). Voici les widgets les plus utilisés au Bac :</p>
+            <h3>📙 3. Les types de fenêtres</h3>
+            <p>Quand vous créez un nouveau projet dans Qt Designer (Fichier → Nouveau), trois types de fenêtre vous sont proposés :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔲</span>
+                    <p><strong>Main Window</strong> — Fenêtre complète avec menu, barre d'outils et barre de statut. Pour les applications principales.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📦</span>
+                    <p><strong>Dialog</strong> — Petite fenêtre de dialogue (ex : confirmation, paramètres). Sans barre de menu.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🏷️</span>
+                    <p><strong>Widget</strong> — La forme la plus simple. Une fenêtre basique sans éléments supplémentaires.</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 Quel type choisir ?</h4>
+                <p>• Pour l'examen du Bac, le type <strong>Widget</strong> est le plus courant et le plus simple.</p>
+                <p>• <strong>Dialog</strong> est utilisé pour les fenêtres pop-up (connexion, alerte).</p>
+                <p>• <strong>Main Window</strong> est pour les applications avec menu (Fichier, Édition…).</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="info-content" id="partie4">
+            <h3>📕 4. Les widgets (éléments d'interface)</h3>
+            <p>Un <strong>widget</strong> est un élément visuel de votre interface. Qt Designer propose des dizaines de widgets dans la boîte à outils. Voici les plus importants :</p>
             <div class="ui-diagram">
                 <div class="ui-element">📝 QLabel — Étiquette (texte non éditable)</div>
                 <div class="ui-element">🔘 QPushButton — Bouton cliquable</div>
@@ -178,216 +235,250 @@
                 <div class="ui-element">🔗 QFrame — Cadre / conteneur visuel</div>
                 <div class="ui-element">🧱 QGroupBox — Groupe avec titre</div>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Propriétés importantes</h3>
-            <div class="key-points">
-                <div class="key-point">
-                    <span class="icon">🔤</span>
-                    <p><strong>objectName</strong> — Nom unique pour identifier le widget dans le code</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">📝</span>
-                    <p><strong>text</strong> — Texte affiché (pour labels, boutons…)</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">📐</span>
-                    <p><strong>geometry</strong> — Position (x, y) et taille (width, height)</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">🔒</span>
-                    <p><strong>enabled</strong> — Active ou désactive le widget</p>
-                </div>
+            <div class="step-box">
+                <h4><span class="step-number">1</span>Comment ajouter un widget</h4>
+                <p>1. Dans la <strong>Boîte à outils</strong> (à gauche), cliquez sur le widget souhaité.</p>
+                <p>2. Cliquez ensuite <strong>dans la zone de conception</strong> pour le placer.</p>
+                <p>3. Le widget apparaît dans votre fenêtre et dans l'<strong>Explorateur d'objets</strong>.</p>
             </div>
-        </div>
-
-        <!-- PARTIE 4 -->
-        <div class="info-content" id="partie4">
-            <h3>📕 4. Créer une interface complète</h3>
-            <p>Voici les étapes pour créer une fenêtre de <strong>connexion</strong> simple :</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Étape 1 : Créer le projet</h3>
-            <div class="example-box">
-                <h4>Dans Qt Designer :</h4>
-                <p>1. Fichier → Nouveau → Widget</p>
-                <p>2. Définir la taille de la fenêtre (Property Editor → geometry → width: 400, height: 300)</p>
-                <p>3. Changer le titre (Property Editor → windowTitle → "Connexion")</p>
+            <div class="step-box">
+                <h4><span class="step-number">2</span>Comment sélectionner un widget</h4>
+                <p>• Cliquez dessus directement dans la zone de conception.</p>
+                <p>• Ou sélectionnez-le dans l'Explorateur d'objets (à droite).</p>
+                <p>Quand un widget est sélectionné, ses propriétés apparaissent dans l'<strong>Éditeur de propriétés</strong>.</p>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 2 : Ajouter les widgets</h3>
-            <div class="code-box">
-                <div class="code-title">// Disposition de l'interface</div>
-                ┌──────────────────────────────────┐
-                │  🎯  Connexion                    │
-                ├──────────────────────────────────┤
-                │                                  │
-                │  Nom d'utilisateur:               │
-                │  [________________]               │
-                │                                  │
-                │  Mot de passe:                    │
-                │  [________________]               │
-                │                                  │
-                │         [Se connecter]           │
-                │                                  │
-                └──────────────────────────────────┘
+            <div class="step-box">
+                <h4><span class="step-number">3</span>Comment déplacer et redimensionner</h4>
+                <p>• <strong>Déplacer</strong> : glissez le widget avec la souris.</p>
+                <p>• <strong>Redimensionner</strong> : cliquez sur un widget puis tirez sur les poignées (carrés bleus) qui apparaissent aux coins et côtés.</p>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 3 : Organiser avec des layouts</h3>
-            <p>Les <strong>layouts</strong> gèrent automatiquement le positionnement et le redimensionnement des widgets :</p>
-            <div class="key-points">
-                <div class="key-point">
-                    <span class="icon">⬇️</span>
-                    <p><strong>QVBoxLayout</strong> — Empilement vertical</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">➡️</span>
-                    <p><strong>QHBoxLayout</strong> — Alignement horizontal</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">⊞</span>
-                    <p><strong>QGridLayout</strong> — Grille (lignes × colonnes)</p>
-                </div>
+            <div class="step-box">
+                <h4><span class="step-number">4</span>Comment supprimer un widget</h4>
+                <p>Sélectionnez le widget et appuyez sur la touche <strong>Suppr</strong> (ou Delete) du clavier.</p>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 4 : Configurer les noms d'objets</h3>
-            <div class="example-box">
-                <h4>Noms d'objets à définir (très important !) :</h4>
-                <p>• <strong>lineEdit_nom</strong> — Champ nom d'utilisateur</p>
-                <p>• <strong>lineEdit_mdp</strong> — Champ mot de passe</p>
-                <p>• <strong>pushButton_connexion</strong> — Bouton de connexion</p>
-                <p>• <strong>label_message</strong> — Label pour afficher un message</p>
-            </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 5 : Sauvegarder</h3>
-            <p>Enregistrer le fichier sous <code>interface_connexion.ui</code> (Fichier → Enregistrer)</p>
         </div>
 
         <!-- PARTIE 5 -->
         <div class="info-content" id="partie5">
-            <h3>📒 5. Connecter le .ui au code Python</h3>
-            <p>Une fois l'interface créée, on l'utilise dans un script Python avec <strong>PyQt5</strong>.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Méthode 1 : Chargement direct du .ui</h3>
-            <div class="code-box">
-                <div class="code-title">// fenetre.py — Chargement dynamique du .ui</div>
-                <span class="keyword">import</span> sys
-                <span class="keyword">from</span> PyQt5.<span class="class-name">QtWidgets</span> <span class="keyword">import</span> QApplication, QMainWindow
-                <span class="keyword">from</span> PyQt5.<span class="class-name">uic</span> <span class="keyword">import</span> loadUi
-
-                <span class="keyword">class</span> <span class="class-name">FenetreConnexion</span>(QMainWindow):
-                    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>):
-                        <span class="keyword">super</span>().__init__()
-                        loadUi(<span class="string">"interface_connexion.ui"</span>, <span class="keyword">self</span>)
-                        <span class="comment"># Connecter le bouton</span>
-                        <span class="keyword">self</span>.pushButton_connexion.clicked.<span class="function">connect</span>(<span class="keyword">self</span>.verifier_connexion)
-
-                    <span class="keyword">def</span> <span class="function">verifier_connexion</span>(<span class="keyword">self</span>):
-                        nom = <span class="keyword">self</span>.lineEdit_nom.text()
-                        mdp = <span class="keyword">self</span>.lineEdit_mdp.text()
-                        <span class="keyword">if</span> nom == <span class="string">"admin"</span> <span class="keyword">and</span> mdp == <span class="string">"1234"</span>:
-                            <span class="keyword">self</span>.label_message.setText(<span class="string">"Connexion réussie !"</span>)
-                        <span class="keyword">else</span>:
-                            <span class="keyword">self</span>.label_message.setText(<span class="string">"Erreur de connexion."</span>)
-
-                app = <span class="class-name">QApplication</span>(sys.argv)
-                window = <span class="class-name">FenetreConnexion</span>()
-                window.show()
-                sys.exit(app.exec_())
-            </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Méthode 2 : Compilation du .ui en Python</h3>
-            <div class="example-box">
-                <h4>Pour convertir le .ui en fichier Python (.py) :</h4>
-                <p>Dans le terminal : <code>pyuic5 -x interface_connexion.ui -o interface_connexion.py</code></p>
-                <p>Ensuite, dans votre code :</p>
-                <div class="code-box" style="margin:8px 0;">
-                    <span class="keyword">from</span> interface_connexion <span class="keyword">import</span> *
-                    <span class="comment"># L'interface est directement accessible</span>
+            <h3>📘 5. Modifier les propriétés</h3>
+            <p>Chaque widget a des <strong>propriétés</strong> que vous pouvez modifier dans le panel de droite (Éditeur de propriétés). Voici les plus utiles :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🏷️</span>
+                    <p><strong>objectName</strong> — Le nom unique du widget. Important pour l'identifier dans le code.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📝</span>
+                    <p><strong>text</strong> — Le texte affiché (pour les boutons, labels, champs…).</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📐</span>
+                    <p><strong>geometry</strong> — Position (X, Y) et taille (Largeur, Hauteur) en pixels.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔒</span>
+                    <p><strong>enabled</strong> — true/false : active ou désactive le widget.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">👁️</span>
+                    <p><strong>visible</strong> — true/false : rend le widget visible ou invisible.</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🅰️</span>
+                    <p><strong>font</strong> — Change la police, la taille et le style du texte.</p>
                 </div>
             </div>
+            <div class="example-box">
+                <h4>💡 Bonnes pratiques pour les noms d'objets</h4>
+                <p>Donnez des noms clairs et cohérents à vos widgets. Quelques conventions :</p>
+                <ul style="margin-top:6px;">
+                    <li>Bouton → <code>pushButton_ok</code>, <code>pushButton_annuler</code></li>
+                    <li>Champ texte → <code>lineEdit_nom</code>, <code>lineEdit_motdepasse</code></li>
+                    <li>Label → <code>label_titre</code>, <code>label_erreur</code></li>
+                    <li>Case à cocher → <code>checkBox_majeur</code></li>
+                </ul>
+            </div>
             <div class="warning-box">
-                <h4>⚠️ Signaux et slots</h4>
-                <p>En PyQt5, les événements sont gérés par le système <strong>signal/slot</strong> :</p>
-                <p>• Un <strong>signal</strong> est émis quand quelque chose se produit (clic sur un bouton, changement de texte…)</p>
-                <p>• Un <strong>slot</strong> est une fonction qui répond à ce signal</p>
-                <p>Syntaxe : <code>widget.signal.connect(slot_fonction)</code></p>
+                <h4>⚠️ Important</h4>
+                <p>Le champ <strong>objectName</strong> ne doit contenir <strong>aucun espace</strong> ni accent. Utilisez des underscores (_) pour séparer les mots.</p>
+                <p>Ce nom sera utilisé pour identifier le widget, alors choisissez quelque chose de logique !</p>
             </div>
         </div>
 
         <!-- PARTIE 6 -->
         <div class="info-content" id="partie6">
-            <h3>📓 6. Projet final : Calculatrice</h3>
-            <p>Construisons une calculatrice simple avec Qt Designer et PyQt5.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Interface (Qt Designer)</h3>
-            <div class="code-box">
-                <div class="code-title">// Disposition de la calculatrice</div>
-                ┌──────────────────────────┐
-                │  [  0  ]  ← Display      │
-                ├──────────────────────────┤
-                │ [7] [8] [9] [/]          │
-                │ [4] [5] [6] [*]          │
-                │ [1] [2] [3] [-]          │
-                │ [C ] [0] [=] [+]         │
-                └──────────────────────────┘
+            <h3>📗 6. Les layouts (dispositions automatiques)</h3>
+            <p>Les <strong>layouts</strong> permettent d'organiser automatiquement vos widgets. Sans layout, les widgets restent à une position fixe. Avec un layout, ils s'ajustent automatiquement quand la fenêtre change de taille.</p>
+            <p>Les layouts se trouvent dans la Boîte à outils, dans la section <strong>"Layouts"</strong> :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">⬇️</span>
+                    <p><strong>Vertical Layout</strong> — Empile les widgets <strong>de haut en bas</strong></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">➡️</span>
+                    <p><strong>Horizontal Layout</strong> — Aligne les widgets <strong>de gauche à droite</strong></p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⊞</span>
+                    <p><strong>Grid Layout</strong> — Place les widgets dans une <strong>grille</strong> (lignes × colonnes)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📐</span>
+                    <p><strong>Form Layout</strong> — Disposition type <strong>label + champ</strong> (comme un formulaire)</p>
+                </div>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Code Python complet</h3>
-            <div class="code-box">
-                <div class="code-title">// calculatrice.py</div>
-                <span class="keyword">import</span> sys
-                <span class="keyword">from</span> PyQt5.<span class="class-name">QtWidgets</span> <span class="keyword">import</span> QApplication
-                <span class="keyword">from</span> PyQt5.<span class="class-name">uic</span> <span class="keyword">import</span> loadUi
-
-                <span class="keyword">class</span> <span class="class-name">Calculatrice</span>:
-                    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>):
-                        loadUi(<span class="string">"calculatrice.ui"</span>, <span class="keyword">self</span>)
-                        <span class="keyword">self</span>.show()
-                        <span class="comment"># Connecter tous les boutons numériques</span>
-                        <span class="keyword">self</span>.pushButton_0.clicked.<span class="function">connect</span>(<span class="keyword">self</span>.chiffre)
-                        <span class="keyword">self</span>.pushButton_1.clicked.<span class="function">connect</span>(<span class="keyword">self</span>.chiffre)
-                        <span class="comment"># ... (faire de même pour les autres)</span>
-                        <span class="keyword">self</span>.pushButton_egale.clicked.<span class="function">connect</span>(<span class="keyword">self</span>.calculer)
-                        <span class="keyword">self</span>.pushButton_clear.clicked.<span class="function">connect</span>(<span class="keyword">self</span>.clear)
-
-                    <span class="keyword">def</span> <span class="function">chiffre</span>(<span class="keyword">self</span>):
-                        texte = <span class="keyword">self</span>.label_display.text()
-                        <span class="keyword">self</span>.label_display.setText(texte + <span class="keyword">self</span>.sender().text())
-
-                    <span class="keyword">def</span> <span class="function">calculer</span>(<span class="keyword">self</span>):
-                        <span class="keyword">try</span>:
-                            resultat = <span class="function">eval</span>(<span class="keyword">self</span>.label_display.text())
-                            <span class="keyword">self</span>.label_display.setText(<span class="function">str</span>(resultat))
-                        <span class="keyword">except</span>:
-                            <span class="keyword">self</span>.label_display.setText(<span class="string">"Erreur"</span>)
-
-                    <span class="keyword">def</span> <span class="function">clear</span>(<span class="keyword">self</span>):
-                        <span class="keyword">self</span>.label_display.setText(<span class="string">"0"</span>)
-
-                app = <span class="class-name">QApplication</span>(sys.argv)
-                calc = <span class="class-name">Calculatrice</span>()
-                sys.exit(app.exec_())
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Visualisation des layouts</h3>
+            <div class="layout-demo">
+                <div class="label">QVBoxLayout (Vertical)</div>
+                <div style="border:1px dashed #555; padding:8px; border-radius:4px; text-align:center;">
+                    <div class="btn">Bouton 1</div>
+                    <div class="btn">Bouton 2</div>
+                    <div class="btn">Bouton 3</div>
+                </div>
+                <br>
+                <div class="label">QHBoxLayout (Horizontal)</div>
+                <div style="border:1px dashed #555; padding:8px; border-radius:4px; text-align:center;">
+                    <div class="btn">A</div>
+                    <div class="btn">B</div>
+                    <div class="btn">C</div>
+                </div>
+                <br>
+                <div class="label">QGridLayout (Grille)</div>
+                <div style="border:1px dashed #555; padding:8px; border-radius:4px; display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+                    <div class="btn">1</div>
+                    <div class="btn">2</div>
+                    <div class="btn">3</div>
+                    <div class="btn">4</div>
+                </div>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">1</span>Appliquer un layout à la fenêtre</h4>
+                <p>Faites un clic droit sur la fenêtre → choisissez <strong>"Lay Out"</strong> → puis le type de layout souhaité.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">2</span>Créer un layout et y mettre des widgets</h4>
+                <p>1. Sélectionnez un widget (ou plusieurs) dans la zone de conception.</p>
+                <p>2. Cliquez sur le layout souhaité dans la Boîte à outils.</p>
+                <p>Les widgets sélectionnés seront automatiquement réorganisés.</p>
+            </div>
+            <div class="step-box">
+                <h4><span class="step-number">3</span>Layout imbriqués</h4>
+                <p>Vous pouvez mettre un layout <strong>à l'intérieur d'un autre</strong> layout pour créer des interfaces complexes. Par exemple : un Vertical Layout principal, contenant deux Horizontal Layouts.</p>
             </div>
             <div class="warning-box">
-                <h4>⚠️ Conseils pour l'examen du Bac</h4>
-                <p>1. Créez d'abord l'interface dans Qt Designer et sauvegardez-la.</p>
-                <p>2. Notez tous les noms d'objets (objectName) avant de coder.</p>
-                <p>3. Testez l'interface puis le code séparément.</p>
-                <p>4. Utilisez la méthode loadUi pour plus de flexibilité.</p>
+                <h4>⚠️ Astuce</h4>
+                <p>Pour "casser" un layout et repositionner les widgets librement, faites un clic droit → <strong>"Break Layout"</strong>.</p>
             </div>
         </div>
 
-        <!-- SECTION RÉSUMÉ IMAGE -->
+        <!-- PARTIE 7 -->
+        <div class="info-content" id="partie7">
+            <h3>📙 7. Créer une interface complète — Pas à pas</h3>
+            <p>Exemple : créer une fenêtre de connexion simple.</p>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 1 — Créer la fenêtre</h3>
+            <div class="step-box">
+                <h4>Dans Qt Designer :</h4>
+                <p>1. <strong>Fichier</strong> → <strong>Nouveau</strong></p>
+                <p>2. Choisissez <strong>"Widget"</strong> puis cliquez sur "Créer"</p>
+                <p>3. Dans l'éditeur de propriétés, réglez :</p>
+                <ul>
+                    <li><code>windowTitle</code> → <code>Connexion</code></li>
+                    <li><code>geometry → width</code> → <code>400</code></li>
+                    <li><code>geometry → height</code> → <code>300</code></li>
+                </ul>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 2 — Ajouter les widgets</h3>
+            <div class="step-box">
+                <p>Depuis la Boîte à outils, glissez-déposez ces éléments dans la fenêtre :</p>
+                <ul>
+                    <li><strong>QLabel</strong> → pour le texte "Nom d'utilisateur"</li>
+                    <li><strong>QLineEdit</strong> → pour saisir le nom</li>
+                    <li><strong>QLabel</strong> → pour le texte "Mot de passe"</li>
+                    <li><strong>QLineEdit</strong> → pour saisir le mot de passe</li>
+                    <li><strong>QPushButton</strong> → "Se connecter"</li>
+                    <li><strong>QLabel</strong> → vide, pour afficher un message</li>
+                </ul>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 3 — Organiser avec un layout</h3>
+            <div class="step-box">
+                <p>1. Sélectionnez <strong>tous les widgets</strong> de la fenêtre (Édition → Sélectionner Tout, ou clic + glisser).</p>
+                <p>2. Cliquez sur le bouton <strong>"Vertical Layout"</strong> dans la Boîte à outils.</p>
+                <p>Les widgets s'organisent automatiquement en colonne.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 4 — Configurer les noms d'objets</h3>
+            <div class="example-box">
+                <h4>Noms à donner à chaque widget (objectName) :</h4>
+                <ul>
+                    <li>QLineEdit nom → <code>lineEdit_nom</code></li>
+                    <li>QLineEdit mot de passe → <code>lineEdit_mdp</code></li>
+                    <li>QPushButton → <code>pushButton_connexion</code></li>
+                    <li>QLabel message → <code>label_message</code></li>
+                </ul>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 5 — Modifier les textes affichés</h3>
+            <div class="step-box">
+                <p>Sélectionnez chaque widget et changez la propriété <code>text</code> dans l'éditeur de propriétés :</p>
+                <ul>
+                    <li>QLabel 1 → <code>Nom d'utilisateur :</code></li>
+                    <li>QLabel 2 → <code>Mot de passe :</code></li>
+                    <li>QPushButton → <code>Se connecter</code></li>
+                    <li>QLabel message → laissez vide pour l'instant</li>
+                </ul>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Étape 6 — Sauvegarder</h3>
+            <div class="step-box">
+                <p><strong>Fichier</strong> → <strong>Enregistrer</strong> (ou Ctrl + S)</p>
+                <p>Sauvegardez votre fichier sous le nom <code>interface_connexion.ui</code></p>
+                <p>C'est ce fichier <code>.ui</code> que vous pouvez donner à un développeur pour l'intégrer dans un programme.</p>
+            </div>
+
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Résultat final</h3>
+            <div class="interface-preview">
+                <p style="color:#888; font-size:0.85rem; margin-bottom:14px;">Voici à quoi ressemble l'interface terminée :</p>
+                <div class="fake-window">
+                    <div class="fake-titlebar">Connexion</div>
+                    <div class="fake-body">
+                        <div style="font-size:0.85rem; color:#555; margin-bottom:4px;">Nom d'utilisateur :</div>
+                        <div class="fake-field">Tapez votre nom...</div>
+                        <div style="font-size:0.85rem; color:#555; margin-bottom:4px;">Mot de passe :</div>
+                        <div class="fake-field">••••••••</div>
+                        <div style="text-align:center; margin-top:8px;">
+                            <span class="fake-btn">Se connecter</span>
+                        </div>
+                        <div style="font-size:0.8rem; color:#999; text-align:center; margin-top:12px;">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION RÉSUMÉ -->
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/00ACC1/FFFFFF?text=Qt+Designer+-+Resume+Complet" alt="Résumé Qt Designer">
-                <div class="resume-overlay">
-                    <h3>Qt Designer et PyQt5</h3>
-                    <p>Créer des interfaces graphiques avec Qt Designer et Python</p>
-                </div>
-                            <br><br>
-                <a href="" download>
+                 <a href="https://drive.google.com/file/d/1eeWD2fLkHa505lo0ej2sP2PGDnzo4DnD/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
-                </a></div>
+                </a>
+            </div>
         </section>
 
         <!-- SECTION VIDÉO -->
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
-                        width="640" height="360" frameborder="0" allow="autoplay">
-                </iframe>
+            <a href="https://youtu.be/Qp220jvHmO8" target="_blank">
+  <img src="https://img.youtube.com/vi/Qp220jvHmO8/0.jpg" 
+       alt="Vidéo YouTube" 
+       style="width:560px; height:auto;">
+</a>
+
+
             </div>
         </section>
 

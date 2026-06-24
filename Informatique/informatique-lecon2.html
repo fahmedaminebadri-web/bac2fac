@@ -32,6 +32,18 @@
         .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
         .toc li a { color: var(--primary); font-weight: 500; }
         .toc li a:hover { text-decoration: underline; }
+        .history-box { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-radius: var(--radius-xl); padding: 20px; margin: 16px 0; border: 1px solid #FBCFE8; }
+        .history-box h4 { color: #9D174D; margin-bottom: 10px; }
+        .history-box p { font-size: 0.9rem; color: #831843; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .comparison-table th { background: var(--primary); color: white; padding: 12px; text-align: left; }
+        .comparison-table td { padding: 10px; border: 1px solid var(--border-light); }
+        .comparison-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .formula-box { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-radius: var(--radius-lg); padding: 16px; margin: 12px 0; text-align: center; border: 1px solid #C4B5FD; }
+        .formula-box span { font-family: 'Courier New', monospace; font-size: 1.2rem; color: #5B21B6; font-weight: bold; }
+        .tip-box { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); border-radius: var(--radius-lg); padding: 16px; margin: 12px 0; border: 1px solid #A5B4FC; }
+        .tip-box h4 { color: #4338CA; margin-bottom: 8px; }
+        .tip-box p { color: #3730A3; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -62,7 +74,7 @@
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 2 : Python — Les bases</h1>
+            <h1>Leçon 2 : Python — Les bases de la programmation</h1>
             <p class="breadcrumb">Informatique > Leçon 2</p>
         </div>
 
@@ -73,9 +85,13 @@
                 <li><a href="#partie1">Introduction à Python</a></li>
                 <li><a href="#partie2">Variables et types de données</a></li>
                 <li><a href="#partie3">Opérateurs et expressions</a></li>
-                <li><a href="#partie4">Conditions et boucles</a></li>
-                <li><a href="#partie5">Listes et dictionnaires</a></li>
-                <li><a href="#partie6">Fonctions en Python</a></li>
+                <li><a href="#partie4">Instructions d'entrée/sortie</a></li>
+                <li><a href="#partie5">Structures conditionnelles (if, elif, else)</a></li>
+                <li><a href="#partie6">Structures itératives (for, while)</a></li>
+                <li><a href="#partie7">Les fonctions en Python</a></li>
+                <li><a href="#partie8">Les listes (tableaux)</a></li>
+                <li><a href="#partie9">Les modules prédéfinis</a></li>
+                <li><a href="#partie10">Exercices pratiques</a></li>
             </ol>
         </div>
 
@@ -83,7 +99,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1ap9R4fFudJGOFH3fCHVXROEYjOemXRP7/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -92,269 +109,1255 @@
         <!-- PARTIE 1 -->
         <div class="info-content" id="partie1">
             <h3>📘 1. Introduction à Python</h3>
-            <p><strong>Python</strong> est un langage de programmation créé par <strong>Guido van Rossum</strong> en 1991. Il est devenu l'un des langages les plus populaires au monde grâce à sa syntaxe simple et lisible.</p>
+            
+            <div class="history-box">
+                <h4>📜 Un peu d'histoire</h4>
+                <p>Python a été créé par <strong>Guido van Rossum</strong> à la fin des années 1980, lors de ses travaux au Centrum Wiskunde & Informatica (CWI) aux Pays-Bas. Le nom « Python » ne vient pas du serpent, mais de la série télévisée britannique « Monty Python's Flying Circus » que Guido adorait.</p>
+                <p>La première version publique (Python 0.9.0) a été publiée en 1991. Python 2.0 est sorti en 2000 et Python 3.0 en 2008. Aujourd'hui, Python 3.x est la version standard.</p>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🐍 Pourquoi apprendre Python ?</h3>
+            <p>Python est devenu l'un des langages de programmation les plus populaires au monde pour plusieurs raisons :</p>
+            
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p><strong>Lisible</strong> — Syntaxe claire proche du langage naturel</p>
+                    <span class="icon">📖</span>
+                    <p><strong>Syntaxe simple et lisible</strong> — Python utilise des mots anglais simples et une indentation claire pour définir les blocs de code.</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p><strong>Polyvalent</strong> — Web, IA, science des données, automatisation</p>
+                    <span class="icon">🎯</span>
+                    <p><strong>Polyvalent</strong> — Utilisé pour le développement web, l'intelligence artificielle, la science des données, l'automatisation, les jeux, etc.</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p><strong>Interpreté</strong> — Pas besoin de compilation, exécution directe</p>
+                    <span class="icon">⚡</span>
+                    <p><strong>Interprété</strong> — Pas besoin de compiler, le code s'exécute directement ligne par ligne.</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">✅</span>
-                    <p><strong>Énorme communauté</strong> — Des milliers de bibliothèques disponibles</p>
+                    <span class="icon">🌍</span>
+                    <p><strong>Grande communauté</strong> — Des milliers de bibliothèques gratuites disponibles (modules).</p>
                 </div>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Premier programme</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">💻 Premier programme en Python</h3>
+            <p>En Python, le traditionnel premier programme « Hello World » est très simple :</p>
+            
             <div class="code-box">
                 <div class="code-title">// premier_programme.py</div>
                 <span class="comment"># Mon premier programme Python</span>
+                <span class="comment"># Tout ce qui suit le signe # est un commentaire (ignoré par Python)</span>
+                
                 <span class="function">print</span>(<span class="string">"Bonjour le monde !"</span>)
-                <span class="comment"># Output: Bonjour le monde !</span>
+                <span class="comment"># Ce message s'affichera à l'écran</span>
             </div>
+            
             <div class="warning-box">
-                <h4>⚠️ Spécificité tunisienne</h4>
-                <p>Au Baccalauréat tunisien, Python est enseigné dans le cadre de la matière Informatique. L'environnement recommandé est <strong>IDLE</strong> ou <strong>Thonny</strong> (fourni avec les kits informatiques du ministère).</p>
+                <h4>⚠️ Spécificité tunisienne — Baccalauréat</h4>
+                <p>Au <strong>Baccalauréat tunisien</strong>, Python est enseigné dans le cadre de la matière Informatique pour les sections :</p>
+                <p>• <strong>Sciences Expérimentales</strong></p>
+                <p>• <strong>Mathématiques</strong></p>
+                <p>• <strong>Sciences Techniques</strong></p>
+                <p>L'environnement recommandé est <strong>IDLE</strong> (fourni avec Python) ou <strong>Thonny</strong> (Téléchargeable gratuitement sur thonny.org). L'EXAMEN se fait sur machine.</p>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📁 Comment exécuter un programme Python</h3>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">💻</span>
+                    <p><strong>Méthode 1 :</strong> Avec IDLE (fourni avec Python)</p>
+                    <p style="margin-top:4px;">Menu Démarrer → Python → IDLE → File → New File → Écrire le code → Run (F5)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">⌨️</span>
+                    <p><strong>Méthode 2 :</strong> Ligne de commande</p>
+                    <p style="margin-top:4px;">Ouvrir cmd/terminal → <code>python nom_fichier.py</code></p>
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Règles de base de Python</h3>
+            <div class="example-box">
+                <h4>✅ Règles importantes</h4>
+                <p>• Python est <strong>sensible à la casse</strong> : <code>print</code> ≠ <code>Print</code> ≠ <code>PRINT</code></p>
+                <p>• L'<strong>indentation</strong> (espaces au début des lignes) est <strong>obligatoire</strong> et définit les blocs de code</p>
+                <p>• Les <strong>commentaires</strong> commencent par <code>#</code> et sont ignorés par Python</p>
+                <p>• On n'utilise pas de point-virgule (<code>;</code>) à la fin des lignes</p>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple avec indentation correcte</div>
+                <span class="keyword">if</span> age >= <span class="number">18</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Vous êtes majeur"</span>)  <span class="comment"># 4 espaces d'indentation</span>
+                <span class="keyword">else</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Vous êtes mineur"</span>)
             </div>
         </div>
 
         <!-- PARTIE 2 -->
         <div class="info-content" id="partie2">
             <h3>📗 2. Variables et types de données</h3>
-            <p>En Python, les variables sont <strong>déclarées automatiquement</strong> lors de l'affectation. Pas besoin de préciser le type — Python le détermine seul.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">🔨 Qu'est-ce qu'une variable ?</h3>
+            <p>Une <strong>variable</strong> est un espace mémoire qui stocke une valeur. En Python, les variables sont <strong>déclarées automatiquement</strong> lors de l'affectation (première attribution de valeur). Pas besoin de préciser le type — Python le détermine automatiquement.</p>
+            
             <div class="code-box">
-                <div class="code-title">// Variables et types</div>
-                nom = <span class="string">"Ahmed"</span>          <span class="comment"># str (chaîne de caractères)</span>
-                age = <span class="number">20</span>               <span class="comment"># int (entier)</span>
-                taille = <span class="number">1.75</span>          <span class="comment"># float (décimal)</span>
-                est_etudiant = <span class="keyword">True</span>     <span class="comment"># bool (booléen)</span>
-
-                <span class="function">print</span>(type(nom))          <span class="comment"># &lt;class 'str'&gt;</span>
-                <span class="function">print</span>(type(age))          <span class="comment"># &lt;class 'int'&gt;</span>
-                <span class="function">print</span>(type(taille))       <span class="comment"># &lt;class 'float'&gt;</span>
+                <div class="code-title">// Déclaration et affectation de variables</div>
+                nom = <span class="string">"Ahmed"</span>          <span class="comment"># Python déduit que c'est une chaîne (str)</span>
+                age = <span class="number">20</span>               <span class="comment"># Python déduit que c'est un entier (int)</span>
+                taille = <span class="number">1.75</span>          <span class="comment"># Python déduit que c'est un décimal (float)</span>
+                est_etudiant = <span class="keyword">True</span>     <span class="comment"># Python déduit que c'est un booléen (bool)</span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Conversions de types</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📋 Les types de données fondamentaux</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Type Python</th>
+                        <th>Description</th>
+                        <th>Exemples</th>
+                        <th>Vérification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>int</code></td>
+                        <td>Entier (positif ou négatif)</td>
+                        <td>0, 42, -7, 1000</td>
+                        <td><code>type(x) == int</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>float</code></td>
+                        <td>Nombre à virgule flottante</td>
+                        <td>3.14, -0.5, 2.71828</td>
+                        <td><code>type(x) == float</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>str</code></td>
+                        <td>Chaîne de caractères (texte)</td>
+                        <td>"Bonjour", 'Tunisie'</td>
+                        <td><code>type(x) == str</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>bool</code></td>
+                        <td>Booléen (vrai ou faux)</td>
+                        <td>True, False</td>
+                        <td><code>type(x) == bool</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>list</code></td>
+                        <td>Liste (collection ordonnée)</td>
+                        <td>[1, 2, 3], ["a", "b"]</td>
+                        <td><code>type(x) == list</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <div class="code-box">
-                <div class="code-title">// Conversion de types (casting)</div>
-                x = <span class="string">"42"</span>          <span class="comment"># str</span>
-                y = <span class="function">int</span>(x)        <span class="comment"># → 42 (int)</span>
-                z = <span class="function">float</span>(y)      <span class="comment"># → 42.0 (float)</span>
-                w = <span class="function">str</span>(z)        <span class="comment"># → "42.0" (str)</span>
-
-                <span class="comment"># Lecture au clavier</span>
-                age = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Entrez votre âge: "</span>))
+                <div class="code-title">// Vérifier le type d'une variable</div>
+                x = <span class="number">42</span>
+                <span class="function">print</span>(type(x))        <span class="comment"># Output: <class 'int'></span>
+                
+                y = <span class="string">"Bonjour"</span>
+                <span class="function">print</span>(type(y))        <span class="comment"># Output: <class 'str'></span>
+                
+                z = <span class="number">3.14</span>
+                <span class="function">print</span>(type(z))        <span class="comment"># Output: <class 'float'></span>
+                
+                w = <span class="keyword">True</span>
+                <span class="function">print</span>(type(w))        <span class="comment"># Output: <class 'bool'></span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">F-strings (formatage)</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔄 Conversions de types (Casting)</h3>
+            <p>Parfois, nous devons convertir une valeur d'un type à un autre. Python fournit des fonctions de conversion :</p>
+            
             <div class="code-box">
-                <div class="code-title">// F-strings — la méthode moderne</div>
+                <div class="code-title">// Fonctions de conversion</div>
+                <span class="function">int</span>(x)    <span class="comment"># Convertit en entier (tronque la partie décimale)</span>
+                <span class="function">float</span>(x)  <span class="comment"># Convertit en nombre décimal</span>
+                <span class="function">str</span>(x)     <span class="comment"># Convertit en chaîne de caractères</span>
+                <span class="function">bool</span>(x)   <span class="comment"># Convertit en booléen</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemples de conversions</div>
+                <span class="comment"># Chaîne vers entier</span>
+                age_str = <span class="string">"20"</span>
+                age_int = <span class="function">int</span>(age_str)
+                <span class="function">print</span>(age_int)          <span class="comment"># 20 (type int)</span>
+                
+                <span class="comment"># Entier vers chaîne</span>
+                nb = <span class="number">42</span>
+                nb_str = <span class="function">str</span>(nb)
+                <span class="function">print</span>(nb_str)           <span class="comment"># "42" (type str)</span>
+                
+                <span class="comment"># Flottant vers entier (tronque)</span>
+                <span class="function">print</span>(<span class="function">int</span>(<span class="number">3.9</span>))         <span class="comment"># 3 (pas 4 !)</span>
+                
+                <span class="comment"># Entier vers flottant</span>
+                <span class="function">print</span>(<span class="function">float</span>(<span class="number">5</span>))          <span class="comment"># 5.0</span>
+            </div>
+            
+            <div class="example-box">
+                <h4>💡 Exemple pratique : Calcul de moyenne avec conversion</h4>
+                <div class="code-box">
+                    <span class="comment"># Saisie au clavier (input retourne toujours une chaîne)</span>
+                    note1_str = <span class="function">input</span>(<span class="string">"Entrez la première note : "</span>)
+                    note2_str = <span class="function">input</span>(<span class="string">"Entrez la deuxième note : "</span>)
+                    
+                    <span class="comment"># Conversion en nombres</span>
+                    note1 = <span class="function">float</span>(note1_str)
+                    note2 = <span class="function">float</span>(note2_str)
+                    
+                    <span class="comment"># Calcul de la moyenne</span>
+                    moyenne = (note1 + note2) / <span class="number">2</span>
+                    
+                    <span class="function">print</span>(<span class="string">f"La moyenne est : {moyenne}"</span>)
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Les chaînes de caractères (str)</h3>
+            <p>Les chaînes de caractères sont des séquences de caractères. On peut les écrire avec des guillemets simples <code>' '</code> ou doubles <code>" "</code>.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Manipulation de chaînes</div>
+                prenom = <span class="string">"Ahmed"</span>
+                nom = <span class="string">'Ben Ali'</span>
+                
+                <span class="comment"># Concaténation (assemblage)</span>
+                <span class="function">print</span>(prenom + <span class="string">" "</span> + nom)      <span class="comment"># Ahmed Ben Ali</span>
+                
+                <span class="comment"># Répétition</span>
+                <span class="function">print</span>(<span class="string">"-"</span> * <span class="number">20</span>)              <span class="comment"># --------------------</span>
+                
+                <span class="comment"># Longueur</span>
+                <span class="function">print</span>(<span class="function">len</span>(prenom))               <span class="comment"># 5</span>
+                
+                <span class="comment"># Accès aux caractères (indexation)</span>
+                <span class="function">print</span>(prenom[<span class="number">0</span>])                <span class="comment"># 'A' (premier caractère)</span>
+                <span class="function">print</span>(prenom[-<span class="number">1</span>])               <span class="comment"># 'd' (dernier caractère)</span>
+                
+                <span class="comment"># Tranche (slice)</span>
+                <span class="function">print</span>(prenom[<span class="number">1</span>:<span class="number">4</span>])              <span class="comment"># 'hme' (caractères 1 à 3)</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Méthodes utiles des chaînes</h3>
+            <div class="code-box">
+                <div class="code-title">// Quelques méthodes de chaînes</div>
+                texte = <span class="string">"Bonjour le monde"</span>
+                
+                <span class="function">print</span>(texte.upper())          <span class="comment"># BONJOUR LE MONDE (tout en majuscules)</span>
+                <span class="function">print</span>(texte.lower())          <span class="comment"># bonjour le monde (tout en minuscules)</span>
+                <span class="function">print</span>(texte.replace(<span class="string">"monde"</span>, <span class="string">"Python"</span>))  <span class="comment"># Bonjour le Python</span>
+                <span class="function">print</span>(texte.split(<span class="string">" "</span>))      <span class="comment"># ['Bonjour', 'le', 'monde']</span>
+                <span class="function">print</span>(texte.find(<span class="string">"le"</span>))       <span class="comment"># 8 (position de "le")</span>
+                <span class="function">print</span>(texte.count(<span class="string">"o"</span>))        <span class="comment"># 3 (nombre de 'o')</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Formatage des chaînes (f-strings)</h3>
+            <p>Les <strong>f-strings</strong> (format strings) permettent d'insérer facilement des variables dans du texte :</p>
+            
+            <div class="code-box">
+                <div class="code-title">// F-strings — méthode moderne et lisible</div>
                 nom = <span class="string">"Ahmed"</span>
                 age = <span class="number">20</span>
-
+                taille = <span class="number">1.75</span>
+                
+                <span class="comment"># Insertion simple</span>
                 <span class="function">print</span>(<span class="string">f"Je m'appelle {nom} et j'ai {age} ans."</span>)
                 <span class="comment"># Output: Je m'appelle Ahmed et j'ai 20 ans.</span>
-
-                <span class="comment"># Avec calcul</span>
+                
+                <span class="comment"># Avec calculs</span>
                 <span class="function">print</span>(<span class="string">f"L'an prochain, j'aurai {age + 1} ans."</span>)
+                <span class="comment"># Output: L'an prochain, j'aurai 21 ans.</span>
+                
+                <span class="comment"># Formatage des décimaux</span>
+                <span class="function">print</span>(<span class="string">f"Taille : {taille:.2f} m"</span>)  <span class="comment"># Taille : 1.75 m (2 décimales)</span>
+                
+                <span class="comment"># Avec des expressions</span>
+                a = <span class="number">10</span>
+                b = <span class="number">3</span>
+                <span class="function">print</span>(<span class="string">f"{a} + {b} = {a + b}"</span>)   <span class="comment"># 10 + 3 = 13</span>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Erreurs fréquentes</h4>
+                <p><strong>Erreur 1 :</strong> Concaténer un nombre et une chaîne</p>
+                <p><code>print("Âge: " + 20)</code> → ❌ TypeError</p>
+                <p>Solution : <code>print("Âge: " + str(20))</code> ou <code>print(f"Âge: {20}")</code></p>
+                
+                <p><strong>Erreur 2 :</strong> Confusion entre guillemets simples et doubles</p>
+                <p><code>texte = 'C'est bien'</code> → ❌ SyntaxError</p>
+                <p>Solution : <code>texte = "C'est bien"</code> ou <code>texte = 'C\'est bien'</code></p>
             </div>
         </div>
 
         <!-- PARTIE 3 -->
         <div class="info-content" id="partie3">
             <h3>📙 3. Opérateurs et expressions</h3>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Opérateurs arithmétiques</h3>
-            <div class="key-points">
-                <div class="key-point">
-                    <span class="icon">➕</span>
-                    <p><code>+</code> Addition &nbsp; <code>-</code> Soustraction &nbsp; <code>*</code> Multiplication</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">➗</span>
-                    <p><code>/</code> Division réelle &nbsp; <code>//</code> Division entière &nbsp; <code>%</code> Modulo</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">⚡</span>
-                    <p><code>**</code> Puissance &nbsp; (ex: <code>2**3</code> = 8)</p>
-                </div>
-            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">➕ Opérateurs arithmétiques</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Opérateur</th>
+                        <th>Description</th>
+                        <th>Exemple</th>
+                        <th>Résultat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>+</strong></td>
+                        <td>Addition</td>
+                        <td>10 + 5</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-</strong></td>
+                        <td>Soustraction</td>
+                        <td>10 - 5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong></td>
+                        <td>Multiplication</td>
+                        <td>10 * 5</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td><strong>/</strong></td>
+                        <td>Division réelle (résultat toujours float)</td>
+                        <td>10 / 5</td>
+                        <td>2.0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>//</strong></td>
+                        <td>Division entière (quotient)</td>
+                        <td>17 // 5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>%</strong></td>
+                        <td>Modulo (reste de la division)</td>
+                        <td>17 % 5</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>**</strong></td>
+                        <td>Puissance</td>
+                        <td>2 ** 10</td>
+                        <td>1024</td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <div class="code-box">
-                <div class="code-title">// Exemples d'opérateurs</div>
+                <div class="code-title">// Exemples d'opérateurs arithmétiques</div>
                 a = <span class="number">17</span>
                 b = <span class="number">5</span>
-
-                <span class="function">print</span>(a + b)    <span class="comment"># 22</span>
-                <span class="function">print</span>(a - b)    <span class="comment"># 12</span>
-                <span class="function">print</span>(a * b)    <span class="comment"># 85</span>
-                <span class="function">print</span>(a / b)    <span class="comment"># 3.4</span>
-                <span class="function">print</span>(a // b)   <span class="comment"># 3 (quotient)</span>
-                <span class="function">print</span>(a % b)    <span class="comment"># 2 (reste)</span>
-                <span class="function">print</span>(a ** b)   <span class="comment"># 1419857</span>
+                
+                <span class="function">print</span>(a + b)     <span class="comment"># 22 (addition)</span>
+                <span class="function">print</span>(a - b)     <span class="comment"># 12 (soustraction)</span>
+                <span class="function">print</span>(a * b)     <span class="comment"># 85 (multiplication)</span>
+                <span class="function">print</span>(a / b)     <span class="comment"># 3.4 (division réelle)</span>
+                <span class="function">print</span>(a // b)    <span class="comment"># 3 (quotient entier)</span>
+                <span class="function">print</span>(a % b)     <span class="comment"># 2 (reste/modulo)</span>
+                <span class="function">print</span>(a ** b)    <span class="comment"># 1419857 (17^5)</span>
+                
+                <span class="comment"># Priorité des opérations (PEMDAS)</span>
+                <span class="function">print</span>(<span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span>)       <span class="comment"># 14 (pas 20 !)</span>
+                <span class="function">print</span>((<span class="number">2</span> + <span class="number">3</span>) * <span class="number">4</span>)     <span class="comment"># 20 (parenthèses prioritaires)</span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Opérateurs de comparaison</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔍 Opérateurs de comparaison</h3>
+            <p>Ces opérateurs comparent deux valeurs et retournent un booléen (<code>True</code> ou <code>False</code>).</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Opérateur</th>
+                        <th>Description</th>
+                        <th>Exemple</th>
+                        <th>Résultat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>==</strong></td>
+                        <td>Égal à</td>
+                        <td>5 == 5</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td><strong>!=</strong></td>
+                        <td>Différent de</td>
+                        <td>5 != 3</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td><strong>></strong></td>
+                        <td>Supérieur à</td>
+                        <td>10 > 5</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td><strong><</strong></td>
+                        <td>Inférieur à</td>
+                        <td>3 < 5</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td><strong>>=</strong></td>
+                        <td>Supérieur ou égal</td>
+                        <td>5 >= 5</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td><strong><=</strong></td>
+                        <td>Inférieur ou égal</td>
+                        <td>5 <= 10</td>
+                        <td>True</td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <div class="code-box">
-                <div class="code-title">// Renvoie True ou False</div>
-                <span class="function">print</span>(<span class="number">10</span> == <span class="number">10</span>)   <span class="comment"># True (égal)</span>
-                <span class="function">print</span>(<span class="number">10</span> != <span class="number">5</span>)    <span class="comment"># True (différent)</span>
-                <span class="function">print</span>(<span class="number">10</span> > <span class="number">5</span>)    <span class="comment"># True</span>
-                <span class="function">print</span>(<span class="number">10</span> <= <span class="number">10</span>)   <span class="comment"># True</span>
+                <div class="code-title">// Exemples de comparaisons</div>
+                <span class="function">print</span>(<span class="number">10</span> == <span class="number">10</span>)    <span class="comment"># True (égal)</span>
+                <span class="function">print</span>(<span class="number">10</span> != <span class="number">5</span>)     <span class="comment"># True (différent)</span>
+                <span class="function">print</span>(<span class="number">10</span> > <span class="number">5</span>)      <span class="comment"># True (supérieur)</span>
+                <span class="function">print</span>(<span class="number">10</span> <= <span class="number">10</span>)    <span class="comment"># True (inférieur ou égal)</span>
+                <span class="function">print</span>(<span class="number">5</span> > <span class="number">10</span>)      <span class="comment"># False (5 n'est pas > 10)</span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Opérateurs logiques</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔗 Opérateurs logiques</h3>
+            <p>Ces opérateurs combinent des conditions booléennes.</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Opérateur</th>
+                        <th>Description</th>
+                        <th>Exemple</th>
+                        <th>Résultat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>and</strong></td>
+                        <td>ET logique — Vrai si les deux sont vrais</td>
+                        <td>True and False</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td><strong>or</strong></td>
+                        <td>OU logique — Vrai si au moins un est vrai</td>
+                        <td>True or False</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td><strong>not</strong></td>
+                        <td>NON logique — Inverse la valeur</td>
+                        <td>not True</td>
+                        <td>False</td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <div class="code-box">
-                <div class="code-title">// and, or, not</div>
-                <span class="function">print</span>(<span class="keyword">True</span> <span class="keyword">and</span> <span class="keyword">False</span>)  <span class="comment"># False</span>
-                <span class="function">print</span>(<span class="keyword">True</span> <span class="keyword">or</span> <span class="keyword">False</span>)   <span class="comment"># True</span>
-                <span class="function">print</span>(<span class="keyword">not</span> <span class="keyword">True</span>)        <span class="comment"># False</span>
+                <div class="code-title">// Exemples d'opérateurs logiques</div>
+                age = <span class="number">20</span>
+                a_le_bac = <span class="keyword">True</span>
+                
+                <span class="comment"># AND : les deux conditions doivent être vraies</span>
+                <span class="function">print</span>(age >= <span class="number">18</span> <span class="keyword">and</span> a_le_bac)     <span class="comment"># True (vrai ET vrai)</span>
+                <span class="function">print</span>(age >= <span class="number">21</span> <span class="keyword">and</span> a_le_bac)     <span class="comment"># False (faux ET vrai)</span>
+                
+                <span class="comment"># OR : au moins une condition doit être vraie</span>
+                <span class="function">print</span>(age >= <span class="number">21</span> <span class="keyword">or</span> a_le_bac)      <span class="comment"># True (faux OR vrai)</span>
+                <span class="function">print</span>(age >= <span class="number">21</span> <span class="keyword">or</span> <span class="keyword">not</span> a_le_bac)  <span class="comment"># False (faux OR faux)</span>
+                
+                <span class="comment"># NOT : inverse la valeur</span>
+                <span class="function">print</span>(<span class="keyword">not</span> a_le_bac)                   <span class="comment"># False</span>
+                
+                <span class="comment"># Combinaison complexe</span>
+                <span class="function">print</span>((age >= <span class="number">18</span>) <span class="keyword">and</span> (age <= <span class="number">25</span>))  <span class="comment"># True (entre 18 et 25)</span>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Priorité des opérateurs</h4>
+                <p>Ordre de priorité (du plus prioritaire au moins prioritaire) :</p>
+                <p>1. <strong>()</strong> — Parenthèses</p>
+                <p>2. <strong>**</strong> — Puissance</p>
+                <p>3. <strong>* / // %</strong> — Multiplication, division</p>
+                <p>4. <strong>+ -</strong> — Addition, soustraction</p>
+                <p>5. <strong>> < >= <= == !=</strong> — Comparaisons</p>
+                <p>6. <strong>not</strong> — NON logique</p>
+                <p>7. <strong>and</strong> — ET logique</p>
+                <p>8. <strong>or</strong> — OU logique</p>
             </div>
         </div>
 
         <!-- PARTIE 4 -->
         <div class="info-content" id="partie4">
-            <h3>📕 4. Conditions et boucles</h3>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">if / elif / else</h3>
+            <h3>📕 4. Instructions d'entrée/sortie</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">📥 Lecture au clavier (input)</h3>
+            <p>La fonction <code>input()</code> permet de demander à l'utilisateur d'entrer des données. Elle retourne <strong>toujours une chaîne de caractères</strong> (str).</p>
+            
             <div class="code-box">
-                <div class="code-title">// Conditions en Python</div>
-                note = <span class="number">15</span>
-
-                <span class="keyword">if</span> note >= <span class="number">16</span>:
-                    <span class="function">print</span>(<span class="string">"Excellent !"</span>)
-                <span class="keyword">elif</span> note >= <span class="number">14</span>:
-                    <span class="function">print</span>(<span class="string">"Très bien"</span>)
-                <span class="keyword">elif</span> note >= <span class="number">12</span>:
-                    <span class="function">print</span>(<span class="string">"Bien"</span>)
-                <span class="keyword">else</span>:
-                    <span class="function">print</span>(<span class="string">"Passable"</span>)
+                <div class="code-title">// Syntaxe de input()</div>
+                variable = <span class="function">input</span>(<span class="string">"Message à afficher"</span>)
             </div>
-            <div class="warning-box">
-                <h4>⚠️ Indentation obligatoire !</h4>
-                <p>En Python, l'indentation (les espaces au début des lignes) <strong>définit les blocs de code</strong>. C'est une erreur fréquente. Utilisez 4 espaces ou 1 tabulation.</p>
-            </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Boucle for</h3>
+            
             <div class="code-box">
-                <div class="code-title">// Boucle FOR — parcours de séquence</div>
-                <span class="comment"># De 0 à 9</span>
-                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">10</span>):
-                    <span class="function">print</span>(i, end=<span class="string">" "</span>)
-                <span class="comment"># Output: 0 1 2 3 4 5 6 7 8 9</span>
-
-                <span class="comment"># De 1 à 10</span>
-                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">11</span>):
-                    <span class="function">print</span>(i, end=<span class="string">" "</span>)
-                <span class="comment"># Output: 1 2 3 4 5 6 7 8 9 10</span>
-
-                <span class="comment"># Parcours d'une liste</span>
-                fruits = [<span class="string">"pomme"</span>, <span class="string">"banane"</span>, <span class="string">"orange"</span>]
-                <span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:
-                    <span class="function">print</span>(fruit)
+                <div class="code-title">// Exemples de input()</div>
+                <span class="comment"># Demander le nom</span>
+                nom = <span class="function">input</span>(<span class="string">"Quel est votre nom ? "</span>)
+                <span class="function">print</span>(<span class="string">f"Bonjour {nom} !"</span>)
+                
+                <span class="comment"># Demander un âge et le convertir en entier</span>
+                age_str = <span class="function">input</span>(<span class="string">"Quel est votre âge ? "</span>)
+                age = <span class="function">int</span>(age_str)  <span class="comment"># Conversion obligatoire pour calculer</span>
+                <span class="function">print</span>(<span class="string">f"Vous avez {age} ans. L'an prochain : {age + 1}"</span>)
+                
+                <span class="comment"># Avec conversion directe</span>
+                note = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"Entrez votre note : "</span>))
+                <span class="function">print</span>(<span class="string">f"Note doublée : {note * 2}"</span>)
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Boucle while</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📤 Affichage (print)</h3>
+            <p>La fonction <code>print()</code> affiche du texte et/ou des variables à l'écran.</p>
+            
             <div class="code-box">
-                <div class="code-title">// Boucle WHILE</div>
-                i = <span class="number">1</span>
-                <span class="keyword">while</span> i <= <span class="number">5</span>:
-                    <span class="function">print</span>(<span class="string">f"Tour {i}"</span>)
-                    i += <span class="number">1</span>
-                <span class="comment"># Output: Tour 1, Tour 2, Tour 3, Tour 4, Tour 5</span>
+                <div class="code-title">// Syntaxe et exemples de print()</div>
+                <span class="comment"># Afficher du texte simple</span>
+                <span class="function">print</span>(<span class="string">"Bonjour le monde !"</span>)
+                
+                <span class="comment"># Afficher plusieurs éléments (séparés par des virgules)</span>
+                nom = <span class="string">"Ahmed"</span>
+                age = <span class="number">20</span>
+                <span class="function">print</span>(<span class="string">"Nom:"</span>, nom, <span class="string">"Âge:"</span>, age)
+                <span class="comment"># Output: Nom: Ahmed Âge: 20</span>
+                
+                <span class="comment"># Avec f-string (recommandé)</span>
+                <span class="function">print</span>(<span class="string">f"Bienvenue {nom}, vous avez {age} ans."</span>)
+                
+                <span class="comment"># Affichage sans retour à la ligne (end)</span>
+                <span class="function">print</span>(<span class="string">"Entrez votre choix : "</span>, end=<span class="string">""</span>)
+                choix = <span class="function">input</span>()
+                
+                <span class="comment"># Affichage avec séparateur personnalisé (sep)</span>
+                <span class="function">print</span>(<span class="string">"2024"</span>, <span class="string">"03"</span>, <span class="string">"15"</span>, sep=<span class="string">"-"</span>)
+                <span class="comment"># Output: 2024-03-15
+            </div>
+            
+            <div class="example-box">
+                <h4>💡 Exemple complet : Calcul de moyenne</h4>
+                <div class="code-box">
+                    <span class="comment"># =====================================</span>
+                    <span class="comment"># Programme : Calcul de moyenne</span>
+                    <span class="comment"># Baccalauréat - Informatique</span>
+                    <span class="comment"># =====================================</span>
+                    
+                    <span class="comment"># Saisie des notes</span>
+                    <span class="function">print</span>(<span class="string">"=== Calcul de moyenne ==="</span>)
+                    nom = <span class="function">input</span>(<span class="string">"Entrez votre nom : "</span>)
+                    prenom = <span class="function">input</span>(<span class="string">"Entrez votre prénom : "</span>)
+                    
+                    <span class="function">print</span>(<span class="string">"\nEntrez vos 3 notes (sur 20) :"</span>)
+                    note1 = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"  Note 1 : "</span>))
+                    note2 = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"  Note 2 : "</span>))
+                    note3 = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"  Note 3 : "</span>))
+                    
+                    <span class="comment"># Calcul</span>
+                    moyenne = (note1 + note2 + note3) / <span class="number">3</span>
+                    
+                    <span class="comment"># Affichage des résultats</span>
+                    <span class="function">print</span>(<span class="string">"\n=== Résultats ==="</span>)
+                    <span class="function">print</span>(<span class="string">f"Élève : {prenom} {nom}"</span>)
+                    <span class="function">print</span>(<span class="string">f"Notes : {note1}, {note2}, {note3}"</span>)
+                    <span class="function">print</span>(<span class="string">f"Moyenne : {moyenne:.2f}/20"</span>)
+                    
+                    <span class="comment"># Appréciation</span>
+                    <span class="keyword">if</span> moyenne >= <span class="number">16</span>:
+                        <span class="function">print</span>(<span class="string">"Mention : Très Bien"</span>)
+                    <span class="keyword">elif</span> moyenne >= <span class="number">14</span>:
+                        <span class="function">print</span>(<span class="string">"Mention : Bien"</span>)
+                    <span class="keyword">elif</span> moyenne >= <span class="number">12</span>:
+                        <span class="function">print</span>(<span class="string">"Mention : Assez Bien"</span>)
+                    <span class="keyword">elif</span> moyenne >= <span class="number">10</span>:
+                        <span class="function">print</span>(<span class="string">"Mention : Passable"</span>)
+                    <span class="keyword">else</span>:
+                        <span class="function">print</span>(<span class="string">"Recalé - Moyenne insuffisante"</span>)
+                </div>
             </div>
         </div>
 
         <!-- PARTIE 5 -->
         <div class="info-content" id="partie5">
-            <h3>📒 5. Listes et dictionnaires</h3>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Les listes (tableaux)</h3>
+            <h3>📒 5. Structures conditionnelles (if, elif, else)</h3>
+            
+            <p>Les <strong>structures conditionnelles</strong> permettent d'exécuter du code différent selon qu'une condition est vraie ou fausse.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">🔀 Structure if simple</h3>
             <div class="code-box">
-                <div class="code-title">// Listes en Python</div>
-                notes = [<span class="number">12</span>, <span class="number">15</span>, <span class="number">8</span>, <span class="number">17</span>, <span class="number">14</span>]
-
-                <span class="function">print</span>(notes[<span class="number">0</span>])      <span class="comment"># 12 (premier élément)</span>
-                <span class="function">print</span>(notes[-<span class="number">1</span>])     <span class="comment"># 14 (dernier élément)</span>
-                <span class="function">print</span>(notes[<span class="number">1</span>:<span class="number">4</span>])   <span class="comment"># [15, 8, 17] (tranche)</span>
-                <span class="function">print</span>(<span class="function">len</span>(notes))   <span class="comment"># 5 (longueur)</span>
-                <span class="function">print</span>(<span class="function">sum</span>(notes))   <span class="comment"># 66 (somme)</span>
-                <span class="function">print</span>(<span class="function">max</span>(notes))   <span class="comment"># 17</span>
-                <span class="function">print</span>(<span class="function">min</span>(notes))   <span class="comment"># 8</span>
+                <div class="code-title">// Syntaxe if simple</div>
+                <span class="keyword">if</span> condition:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code exécuté si la condition est True</span>
             </div>
+            
             <div class="code-box">
-                <div class="code-title">// Méthodes utiles des listes</div>
-                notes = [<span class="number">12</span>, <span class="number">15</span>, <span class="number">8</span>]
-
-                notes.append(<span class="number">17</span>)       <span class="comment"># Ajouter un élément</span>
-                notes.insert(<span class="number">1</span>, <span class="number">14</span>)  <span class="comment"># Insérer en position 1</span>
-                notes.remove(<span class="number">8</span>)        <span class="comment"># Supprimer par valeur</span>
-                notes.pop(<span class="number">0</span>)           <span class="comment"># Supprimer par index</span>
-                notes.sort()              <span class="comment"># Trier (ordre croissant)</span>
-                notes.sort(reverse=<span class="keyword">True</span>) <span class="comment"># Trier (ordre décroissant)</span>
+                <div class="code-title">// Exemple : Vérifier si un nombre est positif</div>
+                nombre = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Entrez un nombre : "</span>))
+                
+                <span class="keyword">if</span> nombre > <span class="number">0</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Le nombre est positif"</span>)
+                
+                <span class="function">print</span>(<span class="string">"Fin du programme"</span>)  <span class="comment"># Toujours exécuté</span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Les dictionnaires</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔀 Structure if...else</h3>
             <div class="code-box">
-                <div class="code-title">// Dictionnaires — paires clé:valeur</div>
-                etudiant = {
-                    <span class="string">"nom"</span>: <span class="string">"Ahmed"</span>,
-                    <span class="string">"age"</span>: <span class="number">20</span>,
-                    <span class="string">"filiere"</span>: <span class="string">"Math"</span>
-                }
-
-                <span class="function">print</span>(etudiant[<span class="string">"nom"</span>])      <span class="comment"># Ahmed</span>
-                etudiant[<span class="string">"note"</span>] = <span class="number">16</span>        <span class="comment"># Ajouter une clé</span>
-                <span class="function">print</span>(etudiant.keys())     <span class="comment"># toutes les clés</span>
-                <span class="function">print</span>(etudiant.values())   <span class="comment"># toutes les valeurs</span>
-                <span class="function">print</span>(etudiant.items())     <span class="comment"># paires (clé, valeur)</span>
+                <div class="code-title">// Syntaxe if...else</div>
+                <span class="keyword">if</span> condition:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code si True</span>
+                <span class="keyword">else</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code si False</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Vérifier la parité d'un nombre</div>
+                n = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Entrez un nombre : "</span>))
+                
+                <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">0</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{n} est pair"</span>)
+                <span class="keyword">else</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{n} est impair"</span>)
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔀 Structure if...elif...else</h3>
+            <div class="code-box">
+                <div class="code-title">// Syntaxe if...elif...else</div>
+                <span class="keyword">if</span> condition1:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code si condition1 est True</span>
+                <span class="keyword">elif</span> condition2:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code si condition1 est False ET condition2 est True</span>
+                <span class="keyword">elif</span> condition3:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code si condition1 et condition2 sont False ET condition3 est True</span>
+                <span class="keyword">else</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code si toutes les conditions sont False</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Attribution de mention au Bac</div>
+                moyenne = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"Entrez votre moyenne : "</span>)))
+                
+                <span class="keyword">if</span> moyenne >= <span class="number">16</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Mention : Très Bien avec Félicitations"</span>)
+                <span class="keyword">elif</span> moyenne >= <span class="number">14</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Mention : Très Bien"</span>)
+                <span class="keyword">elif</span> moyenne >= <span class="number">12</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Mention : Bien"</span>)
+                <span class="keyword">elif</span> moyenne >= <span class="number">10</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Mention : Assez Bien"</span>)
+                <span class="keyword">else</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Recalé - Pas de mention"</span>)
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Calculatrice simple</div>
+                a = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"Nombre 1 : "</span>))
+                op = <span class="function">input</span>(<span class="string">"Opérateur (+, -, *, /) : "</span>)
+                b = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"Nombre 2 : "</span>))
+                
+                <span class="keyword">if</span> op == <span class="string">'+'</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;resultat = a + b
+                <span class="keyword">elif</span> op == <span class="string">'-'</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;resultat = a - b
+                <span class="keyword">elif</span> op == <span class="string">'*'</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;resultat = a * b
+                <span class="keyword">elif</span> op == <span class="string">'/'</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> b != <span class="number">0</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resultat = a / b
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Erreur : division par zéro !"</span>)
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resultat = <span class="keyword">None</span>
+                <span class="keyword">else</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Opérateur invalide !"</span>)
+                &nbsp;&nbsp;&nbsp;&nbsp;resultat = <span class="keyword">None</span>
+                
+                <span class="keyword">if</span> resultat is not <span class="keyword">None</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Résultat : {a} {op} {b} = {resultat}"</span>)
+            </div>
+            
+            <div class="tip-box">
+                <h4>💡 Astuce : Conditions multiples</h4>
+                <p>On peut combiner plusieurs conditions avec <code>and</code>, <code>or</code>, <code>not</code> :</p>
+                <div class="code-box" style="margin:8px 0;">
+                    age = <span class="number">25</span>
+                    revenu = <span class="number">50000</span>
+                    
+                    <span class="keyword">if</span> age >= <span class="number">18</span> <span class="keyword">and</span> revenu >= <span class="number">30000</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Crédit approuvé"</span>)
+                    
+                    <span class="keyword">if</span> age < <span class="number">18</span> <span class="keyword">or</span> age > <span class="number">65</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Exonéré d'impôts"</span>)
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Indentation obligatoire !</h4>
+                <p>En Python, <strong>l'indentation définit les blocs de code</strong>. Une erreur d'indentation provoque une <code>IndentationError</code>.</p>
+                <p><strong>Règle :</strong> Utilisez 4 espaces (ou 1 tabulation) pour chaque niveau d'indentation.</p>
+                <div class="code-box" style="margin:8px 0;">
+                    <span class="comment"># ❌ ERREUR : indentation incohérente</span>
+                    <span class="keyword">if</span> True:
+                    &nbsp;&nbsp;<span class="function">print</span>(<span class="string">"A"</span>)    <span class="comment"># 2 espaces - ERREUR!</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"B"</span>)    <span class="comment"># 4 espaces</span>
+                </div>
+                <div class="code-box" style="margin:8px 0;">
+                    <span class="comment"># ✅ CORRECT</span>
+                    <span class="keyword">if</span> True:
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"A"</span>)    <span class="comment"># 4 espaces</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"B"</span>)    <span class="comment"># 4 espaces</span>
+                </div>
             </div>
         </div>
 
         <!-- PARTIE 6 -->
         <div class="info-content" id="partie6">
-            <h3>📓 6. Fonctions en Python</h3>
-            <p>Une <strong>fonction</strong> est un bloc de code réutilisable. On la définit avec <code>def</code>.</p>
+            <h3>📓 6. Structures itératives (for, while)</h3>
+            
+            <p>Les <strong>boucles</strong> permettent de répéter un bloc d'instructions plusieurs fois.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">🔄 Boucle for</h3>
+            <p>La boucle <code>for</code> est utilisée pour parcourir une séquence (liste, chaîne, range, etc.).</p>
+            
+            <h4 style="color:var(--accent); font-size:0.95rem; margin-top:10px;">📝 Avec range()</h4>
             <div class="code-box">
-                <div class="code-title">// Définir et appeler une fonction</div>
-                <span class="keyword">def</span> <span class="function">saluer</span>(nom):
-                    <span class="string">"""Affiche un message de bienvenue"""</span>
-                    <span class="function">print</span>(<span class="string">f"Bonjour {nom} ! Bienvenue."</span>)
-
-                <span class="function">saluer</span>(<span class="string">"Ahmed"</span>)
-                <span class="comment"># Output: Bonjour Ahmed ! Bienvenue.</span>
+                <div class="code-title">// Syntaxe de range()</div>
+                <span class="function">range</span>(debut, fin, pas)  <span class="comment"># début inclus, fin exclus</span>
             </div>
+            
             <div class="code-box">
-                <div class="code-title">// Fonction avec valeur de retour</div>
-                <span class="keyword">def</span> <span class="function">factoriel</span>(n):
-                    <span class="string">"""Calcule n! (factoriel de n)"""</span>
-                    resultat = <span class="number">1</span>
-                    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):
-                        resultat *= i
-                    <span class="keyword">return</span> resultat
-
-                <span class="function">print</span>(<span class="function">factoriel</span>(<span class="number">5</span>))  <span class="comment"># 120</span>
+                <div class="code-title">// Exemple 1 : De 0 à 9 (10 nombres)</div>
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">10</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i, end=<span class="string">" "</span>)
+                <span class="comment"># Output: 0 1 2 3 4 5 6 7 8 9</span>
+                
+                <span class="comment"># Exemple 2 : De 1 à 10</div>
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">11</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i, end=<span class="string">" "</span>)
+                <span class="comment"># Output: 1 2 3 4 5 6 7 8 9 10</span>
+                
+                <span class="comment"># Exemple 3 : De 0 à 10 par pas de 2</div>
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="number">11</span>, <span class="number">2</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i, end=<span class="string">" "</span>)
+                <span class="comment"># Output: 0 2 4 6 8 10</span>
+                
+                <span class="comment"># Exemple 4 : Décompte</div>
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">10</span>, <span class="number">0</span>, -<span class="number">1</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i, end=<span class="string">" "</span>)
+                <span class="comment"># Output: 10 9 8 7 6 5 4 3 2 1</span>
             </div>
+            
+            <h4 style="color:var(--accent); font-size:0.95rem; margin-top:10px;">📝 Avec une liste</h4>
             <div class="code-box">
-                <div class="code-title">// Fonction avec paramètre par défaut</div>
-                <span class="keyword">def</span> <span class="function">presenter</span>(nom, age=<span class="number">18</span>):
-                    <span class="function">print</span>(<span class="string">f"Je suis {nom}, j'ai {age} ans."</span>)
-
-                <span class="function">presenter</span>(<span class="string">"Ahmed"</span>)          <span class="comment"># age = 18 par défaut</span>
-                <span class="function">presenter</span>(<span class="string">"Sara"</span>, <span class="number">22</span>)      <span class="comment"># age = 22</span>
+                <div class="code-title">// Parcours d'une liste</div>
+                fruits = [<span class="string">"pomme"</span>, <span class="string">"banane"</span>, <span class="string">"orange"</span>, <span class="string">"fraise"</span>]
+                
+                <span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(fruit)
+                <span class="comment"># Output: pomme, banane, orange, fraise</span>
+                
+                <span class="comment"># Avec enumerate (pour avoir l'index)</span>
+                <span class="keyword">for</span> i, fruit <span class="keyword">in</span> <span class="function">enumerate</span>(fruits):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{i+1}. {fruit}"</span>)
+                <span class="comment"># Output: 1. pomme, 2. banane, 3. orange, 4. fraise</span>
             </div>
-            <div class="example-box">
-                <h4>💡 Exemple complet : Gestion de notes</h4>
-                <div class="code-box">
-                    <span class="keyword">def</span> <span class="function">moyenne</span>(notes):
-                        <span class="keyword">return</span> <span class="function">sum</span>(notes) / <span class="function">len</span>(notes)
-
-                    <span class="keyword">def</span> <span class="function">apreciation</span>(moy):
-                        <span class="keyword">if</span> moy >= <span class="number">16</span>: <span class="keyword">return</span> <span class="string">"Excellent"</span>
-                        <span class="keyword">elif</span> moy >= <span class="number">14</span>: <span class="keyword">return</span> <span class="string">"Très bien"</span>
-                        <span class="keyword">elif</span> moy >= <span class="number">12</span>: <span class="keyword">return</span> <span class="string">"Bien"</span>
-                        <span class="keyword">else</span>: <span class="keyword">return</span> <span class="string">"Passable"</span>
-
-                    mes_notes = [<span class="number">15</span>, <span class="number">12</span>, <span class="number">17</span>, <span class="number">14</span>]
-                    m = <span class="function">moyenne</span>(mes_notes)
-                    <span class="function">print</span>(<span class="string">f"Moyenne: {m:.2f}"</span>)
-                    <span class="function">print</span>(<span class="string">f"Appréciation: {apreciation(m)}"</span>)
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Table de multiplication</div>
+                n = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Quelle table ? "</span>))
+                
+                <span class="function">print</span>(<span class="string">f"Table de multiplication de {n}:"</span>)
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">11</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{n} × {i} = {n*i}"</span>)
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Calcul de factorielle</div>
+                n = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Entrez n : "</span>))
+                
+                factorielle = <span class="number">1</span>
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;factorielle = factorielle * i
+                
+                <span class="function">print</span>(<span class="string">f"{n}! = {factorielle}"</span>)
+                <span class="comment"># Si n=5 → 5! = 120</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔄 Boucle while</h3>
+            <p>La boucle <code>while</code> répète les instructions <strong>tant que</strong> la condition est vraie.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Syntaxe while</div>
+                <span class="keyword">while</span> condition:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Code répété tant que condition est True</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 1 : Compteur</div>
+                i = <span class="number">1</span>
+                <span class="keyword">while</span> i <= <span class="number">5</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Tour {i}"</span>)
+                &nbsp;&nbsp;&nbsp;&nbsp;i = i + <span class="number">1</span>
+                <span class="comment"># Output: Tour 1, Tour 2, Tour 3, Tour 4, Tour 5</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 2 : Saisie contrôlée</div>
+                age = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Entrez votre âge (1-120) : "</span>))
+                
+                <span class="keyword">while</span> age < <span class="number">1</span> <span class="keyword">or</span> age > <span class="number">120</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Âge invalide !"</span>)
+                &nbsp;&nbsp;&nbsp;&nbsp;age = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Réessayez : "</span>))
+                
+                <span class="function">print</span>(<span class="string">f"Âge accepté : {age}"</span>)
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 3 : Jeu de devinettes</div>
+                secret = <span class="number">42</span>
+                guess = <span class="number">0</span>
+                tentatives = <span class="number">0</span>
+                
+                <span class="function">print</span>(<span class="string">"Devinez le nombre entre 1 et 100:"</span>)
+                
+                <span class="keyword">while</span> guess != secret:
+                &nbsp;&nbsp;&nbsp;&nbsp;guess = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Votre proposition : "</span>))
+                &nbsp;&nbsp;&nbsp;&nbsp;tentatives = tentatives + <span class="number">1</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> guess < secret:
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"C'est plus grand !"</span>)
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> guess > secret:
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"C'est plus petit !"</span>)
+                
+                <span class="function">print</span>(<span class="string">f"Bravo ! Trouvé en {tentatives} tentatives."</span>)
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Boucle infinie — Danger !</h4>
+                <p>Une boucle <code>while</code> qui ne se termine jamais bloque le programme.</p>
+                <div class="code-box" style="margin:8px 0;">
+                    <span class="comment"># ❌ ERREUR : i n'est jamais incrémenté → boucle infinie !</span>
+                    i = <span class="number">1</span>
+                    <span class="keyword">while</span> i <= <span class="number">10</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i)
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># i = i + 1 est oublié !</span>
                 </div>
+                <div class="code-box" style="margin:8px 0;">
+                    <span class="comment"># ✅ CORRECT : i est incrémenté</span>
+                    i = <span class="number">1</span>
+                    <span class="keyword">while</span> i <= <span class="number">10</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i)
+                    &nbsp;&nbsp;&nbsp;&nbsp;i = i + <span class="number">1</span>
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔄 Break et Continue</h3>
+            <div class="code-box">
+                <div class="code-title">// break — Sortir de la boucle prématurément</div>
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">100</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> i == <span class="number">10</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span>    <span class="comment"># Sortir de la boucle</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i, end=<span class="string">" "</span>)
+                <span class="comment"># Output: 1 2 3 4 5 6 7 8 9</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// continue — Passer à l'itération suivante</div>
+                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">11</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">continue</span>  <span class="comment"># Passer à l'itération suivante</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i, end=<span class="string">" "</span>)
+                <span class="comment"># Output: 1 3 5 7 9 (seulement les impairs)</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 7 -->
+        <div class="info-content" id="partie7">
+            <h3>📘 7. Les fonctions en Python</h3>
+            
+            <p>Une <strong>fonction</strong> est un bloc de code réutilisable qui effectue une tâche spécifique. Elle peut accepter des <strong>paramètres</strong> et retourner un <strong>résultat</strong>.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">📝 Définir une fonction</h3>
+            <div class="code-box">
+                <div class="code-title">// Syntaxe de définition d'une fonction</div>
+                <span class="keyword">def</span> <span class="function">nom_fonction</span>(param1, param2, ...):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Corps de la fonction</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> resultat  <span class="comment"># Optionnel</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Fonctions sans paramètres</h3>
+            <div class="code-box">
+                <div class="code-title">// Fonction simple sans paramètre</div>
+                <span class="keyword">def</span> <span class="function">saluer</span>():
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Bonjour et bienvenue !"</span>)
+                
+                <span class="comment"># Appel</span>
+                <span class="function">saluer</span>()
+                <span class="comment"># Output: Bonjour et bienvenue !</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Fonctions avec paramètres</h3>
+            <div class="code-box">
+                <div class="code-title">// Fonction avec un paramètre</div>
+                <span class="keyword">def</span> <span class="function">saluer</span>(nom):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Bonjour {nom} ! Bienvenue."</span>)
+                
+                <span class="comment"># Appels</span>
+                <span class="function">saluer</span>(<span class="string">"Ahmed"</span>)
+                <span class="function">saluer</span>(<span class="string">"Sara"</span>)
+                <span class="comment"># Output: Bonjour Ahmed ! Bienvenue.</span>
+                <span class="comment"># Output: Bonjour Sara ! Bienvenue.</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Fonction avec plusieurs paramètres</div>
+                <span class="keyword">def</span> <span class="function">calculer_moyenne</span>(note1, note2, note3):
+                &nbsp;&nbsp;&nbsp;&nbsp;moyenne = (note1 + note2 + note3) / <span class="number">3</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> moyenne
+                
+                <span class="comment"># Appel</span>
+                resultat = <span class="function">calculer_moyenne</span>(<span class="number">15</span>, <span class="number">12</span>, <span class="number">17</span>)
+                <span class="function">print</span>(<span class="string">f"La moyenne est : {resultat}"</span>)
+                <span class="comment"># Output: La moyenne est : 14.666...</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Valeur de retour (return)</h3>
+            <div class="code-box">
+                <div class="code-title">// Fonction qui retourne une valeur</div>
+                <span class="keyword">def</span> <span class="function">factoriel</span>(n):
+                &nbsp;&nbsp;&nbsp;&nbsp;resultat = <span class="number">1</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resultat = resultat * i
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> resultat
+                
+                <span class="comment"># Appels</span>
+                <span class="function">print</span>(<span class="function">factoriel</span>(<span class="number">5</span>))   <span class="comment"># 120</span>
+                <span class="function">print</span>(<span class="function">factoriel</span>(<span class="number">7</span>))   <span class="comment"># 5040</span>
+                <span class="function">print</span>(<span class="function">factoriel</span>(<span class="number">0</span>))   <span class="comment"># 1</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Fonction avec plusieurs retours</div>
+                <span class="keyword">def</span> <span class="function">operations</span>(a, b):
+                &nbsp;&nbsp;&nbsp;&nbsp;somme = a + b
+                &nbsp;&nbsp;&nbsp;&nbsp;difference = a - b
+                &nbsp;&nbsp;&nbsp;&nbsp;produit = a * b
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> somme, difference, produit
+                
+                <span class="comment"># Appel avec déballage</span>
+                s, d, p = <span class="function">operations</span>(<span class="number">10</span>, <span class="number">3</span>)
+                <span class="function">print</span>(<span class="string">f"Somme: {s}, Diff: {d}, Prod: {p}"</span>)
+                <span class="comment"># Output: Somme: 13, Diff: 7, Prod: 30</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Paramètres par défaut</h3>
+            <div class="code-box">
+                <div class="code-title">// Paramètres avec valeurs par défaut</div>
+                <span class="keyword">def</span> <span class="function">presenter</span>(nom, age=<span class="number">18</span>, ville=<span class="string">"Tunis"</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Je suis {nom}, j'ai {age} ans, j'habite à {ville}."</span>)
+                
+                <span class="comment"># Appels</span>
+                <span class="function">presenter</span>(<span class="string">"Ahmed"</span>)                    <span class="comment"># age=18, ville="Tunis" par défaut</span>
+                <span class="function">presenter</span>(<span class="string">"Sara"</span>, <span class="number">22</span>)                <span class="comment"># ville="Tunis" par défaut</span>
+                <span class="function">presenter</span>(<span class="string">"Ali"</span>, <span class="number">25</span>, <span class="string">"Sfax"</span>)         <span class="comment"># tous les paramètres</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Variables locales et globales</h3>
+            <div class="code-box">
+                <div class="code-title">// Portée des variables</div>
+                x = <span class="number">10</span>  <span class="comment"># Variable globale</span>
+                
+                <span class="keyword">def</span> <span class="function">test</span>():
+                &nbsp;&nbsp;&nbsp;&nbsp;x = <span class="number">5</span>    <span class="comment"># Variable locale (différente de x global)</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"x local = {x}"</span>)
+                
+                <span class="function">test</span>()
+                <span class="function">print</span>(<span class="string">f"x global = {x}"</span>)
+                <span class="comment"># Output: x local = 5</span>
+                <span class="comment"># Output: x global = 10</span>
+            </div>
+            
+            <div class="example-box">
+                <h4>💡 Exemple complet : Gestion de notes avec fonctions</h4>
+                <div class="code-box">
+                    <span class="comment"># Fonctions</span>
+                    <span class="keyword">def</span> <span class="function">saisir_notes</span>(n):
+                    &nbsp;&nbsp;&nbsp;&nbsp;notes = []
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(n):
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note = <span class="function">float</span>(<span class="function">input</span>(<span class="string">f"Note {i+1} : "</span>))
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notes.append(note)
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> notes
+                    
+                    <span class="keyword">def</span> <span class="function">calculer_moyenne</span>(notes):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">sum</span>(notes) / <span class="function">len</span>(notes)
+                    
+                    <span class="keyword">def</span> <span class="function">trouver_max</span>(notes):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="function">max</span>(notes)
+                    
+                    <span class="keyword">def</span> <span class="function">appreciations</span>(moyenne):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> moyenne >= <span class="number">16</span>: <span class="keyword">return</span> <span class="string">"Très Bien"</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> moyenne >= <span class="number">14</span>: <span class="keyword">return</span> <span class="string">"Bien"</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> moyenne >= <span class="number">12</span>: <span class="keyword">return</span> <span class="string">"Assez Bien"</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> moyenne >= <span class="number">10</span>: <span class="keyword">return</span> <span class="string">"Passable"</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>: <span class="keyword">return</span> <span class="string">"Insuffisant"</span>
+                    
+                    <span class="comment"># Programme principal</span>
+                    nb = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Combien de notes ? "</span>))
+                    mes_notes = <span class="function">saisir_notes</span>(nb)
+                    moy = <span class="function">calculer_moyenne</span>(mes_notes)
+                    
+                    <span class="function">print</span>(<span class="string">f"\nNotes : {mes_notes}"</span>)
+                    <span class="function">print</span>(<span class="string">f"Moyenne : {moy:.2f}"</span>)
+                    <span class="function">print</span>(<span class="string">f"Maximum : {trouver_max(mes_notes)}"</span>)
+                    <span class="function">print</span>(<span class="string">f"Appréciation : {appreciations(moy)}"</span>)
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- PARTIE 9 -->
+        <div class="info-content" id="partie9">
+            <h3>📙 9. Les modules prédéfinis</h3>
+            
+            <p>Un <strong>module</strong> est un fichier Python contenant des fonctions et variablesprédéfinies. Python dispose de nombreux modules intégrés (modules standards) prêts à l'emploi.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">📦 Module math</h3>
+            <p>Le module <code>math</code> fournit des fonctions et constantes mathématiques.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Import et utilisation</div>
+                <span class="keyword">import</span> math
+                
+                <span class="comment"># Fonctions</span>
+                <span class="function">print</span>(math.sqrt(<span class="number">16</span>))       <span class="comment"># 4.0 (racine carrée)</span>
+                <span class="function">print</span>(math.pow(<span class="number">2</span>, <span class="number">10</span>))    <span class="comment"># 1024.0 (2^10)</span>
+                <span class="function">print</span>(math.abs(<span class="number">-7</span>))        <span class="comment"># 7 (valeur absolue)</span>
+                <span class="function">print</span>(math.floor(<span class="number">3.7</span>))    <span class="comment"># 3 (partie entière inférieure)</span>
+                <span class="function">print</span>(math.ceil(<span class="number">3.2</span>))     <span class="comment"># 4 (partie entière supérieure)</span>
+                <span class="function">print</span>(math.round(<span class="number">3.5</span>))     <span class="comment"># 4 (arrondi)</span>
+                
+                <span class="comment"># Constantes</span>
+                <span class="function">print</span>(math.pi)              <span class="comment"># 3.141592653589793</span>
+                <span class="function">print</span>(math.e)               <span class="comment"># 2.718281828459045</span>
+                
+                <span class="comment"># Trigonométrie</span>
+                <span class="function">print</span>(math.sin(<span class="number">0</span>))         <span class="comment"># 0.0</span>
+                <span class="function">print</span>(math.cos(<span class="number">0</span>))         <span class="comment"># 1.0</span>
+                <span class="function">print</span>(math.radians(<span class="number">180</span>))   <span class="comment"># 3.141592653589793 (degrés → radians)</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🎲 Module random</h3>
+            <p>Le module <code>random</code> permet de générer des nombres aléatoires.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Génération de nombres aléatoires</div>
+                <span class="keyword">import</span> random
+                
+                <span class="function">print</span>(random.random())              <span class="comment"># Nombre aléatoire entre 0 et 1</span>
+                <span class="function">print</span>(random.randint(<span class="number">1</span>, <span class="number">6</span>))     <span class="comment"># Entier aléatoire entre 1 et 6 (dé)</span>
+                <span class="function">print</span>(random.randrange(<span class="number">0</span>, <span class="number">10</span>, <span class="number">2</span>)) <span class="comment"># PAIR entre 0 et 9</span>
+                <span class="function">print</span>(random.uniform(<span class="number">1</span>, <span class="number">10</span>))   <span class="comment"># Float entre 1 et 10</span>
+                
+                <span class="comment"># Choisir dans une liste</span>
+                fruits = [<span class="string">"pomme"</span>, <span class="string">"banane"</span>, <span class="string">"orange"</span>]
+                <span class="function">print</span>(random.choice(fruits))      <span class="comment"># Un fruit aléatoire</span>
+                
+                <span class="comment"># Mélanger une liste</span>
+                cartes = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+                random.shuffle(cartes)
+                <span class="function">print</span>(cartes)                      <span class="comment"># Liste mélangée</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Pile ou Face</div>
+                <span class="keyword">import</span> random
+                
+                <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="function">range</span>(<span class="number">10</span>):
+                &nbsp;&nbsp;&nbsp;&nbsp;resultat = random.choice([<span class="string">"Pile"</span>, <span class="string">"Face"</span>])
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(resultat, end=<span class="string">" "</span>)
+                <span class="comment"># Output: Pile Face Face Pile Face Face Pile Face Pile Face</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Autres modules utiles</h3>
+            
+            <div class="code-box">
+                <div class="code-title">// Module datetime — Dates et heures</div>
+                <span class="keyword">import</span> datetime
+                
+                <span class="comment"># Date actuelle</span>
+                aujourdhui = datetime.date.today()
+                <span class="function">print</span>(aujourdhui)              <span class="comment"># 2024-03-15</span>
+                
+                <span class="comment"># Créer une date</span>
+                date_naissance = datetime.date(<span class="number">2000</span>, <span class="number">1</span>, <span class="number">15</span>)
+                <span class="function">print</span>(date_naissance)          <span class="comment"># 2000-01-15</span>
+                
+                <span class="comment"># Heure actuelle</span>
+                maintenant = datetime.datetime.now()
+                <span class="function">print</span>(maintenant)              <span class="comment"># 2024-03-15 14:30:45.123456</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Import sélectif</div>
+                <span class="comment"># Importer seulement les fonctions nécessaires</span>
+                <span class="keyword">from</span> math <span class="keyword">import</span> sqrt, pi
+                <span class="keyword">from</span> random <span class="keyword">import</span> randint
+                
+                <span class="function">print</span>(sqrt(<span class="number">25</span>) * pi)    <span class="comment"># 15.707963267948966</span>
+                <span class="function">print</span>(randint(<span class="number">1</span>, <span class="number">100</span>)) <span class="comment"># Nombre entre 1 et 100</span>
+            </div>
+            
+            <div class="example-box">
+                <h4>💡 Exemple : Simulation de lancer de dés</h4>
+                <div class="code-box">
+                    <span class="keyword">import</span> random
+                    
+                    <span class="keyword">def</span> <span class="function">lancer_des</span>(nb_des=<span class="number">2</span>):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"""Lance nb_des dés et retourne la somme"""</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;somme = <span class="number">0</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> _ <span class="keyword">in</span> <span class="function">range</span>(nb_des):
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;somme = somme + random.randint(<span class="number">1</span>, <span class="number">6</span>)
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> somme
+                    
+                    <span class="function">print</span>(<span class="string">"Bienvenue au jeu de dés !"</span>)
+                    <span class="function">print</span>(<span class="string">f"Résultat : {</span><span class="function">lancer_des</span>()<span class="string">}"</span>)
+                    
+                    <span class="comment"># Lancer 3 dés</span>
+                    <span class="function">print</span>(<span class="string">f"Avec 3 dés : {</span><span class="function">lancer_des</span>(<span class="number">3</span>)<span class="string">}"</span>)
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 10 -->
+        <div class="info-content" id="partie10">
+            <h3>📕 10. Exercices pratiques</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">📝 Exercice 1 : Factorielle</h3>
+            <div class="example-box">
+                <h4>Énoncé</h4>
+                <p>Écrire un programme Python qui calcule la factorielle d'un nombre entier positif n (n! = 1 × 2 × 3 × ... × n).</p>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
+                <div class="code-box">
+                    <span class="keyword">def</span> <span class="function">factorielle</span>(n):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n < <span class="number">0</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Erreur: nombre négatif"</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;resultat = <span class="number">1</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resultat = resultat * i
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> resultat
+                    
+                    n = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Entrez un nombre : "</span>))
+                    <span class="function">print</span>(<span class="string">f"{n}! = {</span><span class="function">factorielle</span>(n)<span class="string">}"</span>)
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Exercice 2 : PGCD (Algorithme d'Euclide)</h3>
+            <div class="example-box">
+                <h4>Énoncé</h4>
+                <p>Écrire une fonction qui calcule le PGCD de deux nombres en utilisant l'algorithme d'Euclide.</p>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
+                <div class="code-box">
+                    <span class="keyword">def</span> <span class="function">pgcd</span>(a, b):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span> b != <span class="number">0</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a, b = b, a % b
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> a
+                    
+                    x = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Nombre 1 : "</span>))
+                    y = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Nombre 2 : "</span>))
+                    <span class="function">print</span>(<span class="string">f"PGCD({x}, {y}) = {</span><span class="function">pgcd</span>(x, y)<span class="string">}"</span>)
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Exercice 3 : Nombre premier</h3>
+            <div class="example-box">
+                <h4>Énoncé</h4>
+                <p>Écrire une fonction qui vérifie si un nombre est premier.</p>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
+                <div class="code-box">
+                    <span class="keyword">import</span> math
+                    
+                    <span class="keyword">def</span> <span class="function">est_premier</span>(n):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n <= <span class="number">1</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">False</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n == <span class="number">2</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">True</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">0</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">False</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">3</span>, <span class="function">int</span>(math.sqrt(n)) + <span class="number">1</span>, <span class="number">2</span>):
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> n % i == <span class="number">0</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">False</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">True</span>
+                    
+                    n = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Entrez un nombre : "</span>))
+                    <span class="keyword">if</span> <span class="function">est_premier</span>(n):
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{n} est premier"</span>)
+                    <span class="keyword">else</span>:
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{n} n'est pas premier"</span>)
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Exercice 4 : Tri d'une liste</h3>
+            <div class="example-box">
+                <h4>Énoncé</h4>
+                <p>Écrire un programme qui trie une liste de nombres (algorithme de tri par sélection).</p>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
+                <div class="code-box">
+                    <span class="keyword">def</span> <span class="function">trier_liste</span>(liste):
+                    &nbsp;&nbsp;&nbsp;&nbsp;n = <span class="function">len</span>(liste)
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(n - <span class="number">1</span>):
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min_idx = i
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> j <span class="keyword">in</span> <span class="function">range</span>(i + <span class="number">1</span>, n):
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> liste[j] < liste[min_idx]:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min_idx = j
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;liste[i], liste[min_idx] = liste[min_idx], liste[i]
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> liste
+                    
+                    notes = [<span class="number">15</span>, <span class="number">8</span>, <span class="number">12</span>, <span class="number">17</span>, <span class="number">10</span>]
+                    <span class="function">print</span>(<span class="string">f"Avant tri : {notes}"</span>)
+                    <span class="function">print</span>(<span class="string">f"Après tri : {</span><span class="function">trier_liste</span>(notes.copy())<span class="string">}"</span>)
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Conseils pour l'examen du Bac</h4>
+                <p><strong>1. Comprenez le problème avant de coder :</strong></p>
+                <p>• Lisez attentivement l'énoncé</p>
+                <p>• Identifiez les entrées, les traitements, et les sorties</p>
+                <p>• Décomposez en fonctions si nécessaire</p>
+                
+                <p><strong>2. Gérez les cas limites :</strong></p>
+                <p>• Vérification de la saisie utilisateur</p>
+                <p>• Division par zéro</p>
+                <p>• Listes vides</p>
+                
+                <p><strong>3. Testez votre code :</strong></p>
+                <p>• Cas normaux</p>
+                <p>• Cas limites (zéro, valeurs maximales)</p>
+                <p>• Cas particuliers (valeurs négatives)</p>
+                
+                <p><strong>4. Organisez votre code :</strong></p>
+                <p>• Utilisez des fonctions pour les traitements répétitifs</p>
+                <p>• Ajoutez des commentaires clairs</p>
+                <p>• Utilisez des noms de variables significatifs</p>
             </div>
         </div>
 
@@ -362,13 +1365,12 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/1E88E5/FFFFFF?text=Python+Bases+-+Resume+Complet" alt="Résumé Python">
-                <div class="resume-overlay">
-                    <h3>Les bases de Python</h3>
-                    <p>Variables, conditions, boucles, listes, dictionnaires et fonctions</p>
-                </div>
+               
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/18bgrkrqlxatg5XpUXB4bI1LL1Peiwt0I/view?usp=drive_link" download>
+                    <button>📥 Télécharger la photo</button>
+                </a>
+            <a href="https://drive.google.com/file/d/1Ly1SliIxnRJYdV7BjZFaGKRltmnWb41d/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -377,9 +1379,10 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
-                        width="640" height="360" frameborder="0" allow="autoplay">
-                </iframe>
+                     <button onclick="window.open('https://youtube.com/playlist?list=PLImOoniL6hkfcs74oOM4fGnd8pnYV2sKW&si=mXeELd_df0K4DFjS', '_blank')">
+                    📺 Ouvrir la playlist
+                    </button>
+
             </div>
         </section>
 

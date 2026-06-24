@@ -38,6 +38,15 @@
         .flow-decision { background: #FCE7F3; color: #9D174D; border: 2px solid #EC4899; transform: rotate(0deg); border-radius: 50px; }
         .flow-end { background: #DCFCE7; color: #166534; border: 2px solid #22C55E; }
         .flow-arrow { display: block; color: #6B7280; font-size: 1.2rem; margin: 2px 0; }
+        .history-box { background: linear-gradient(135deg, #FDF2F8, #FCE7F3); border-radius: var(--radius-xl); padding: 20px; margin: 16px 0; border: 1px solid #FBCFE8; }
+        .history-box h4 { color: #9D174D; margin-bottom: 10px; }
+        .history-box p { font-size: 0.9rem; color: #831843; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .comparison-table th { background: var(--primary); color: white; padding: 12px; text-align: left; }
+        .comparison-table td { padding: 10px; border: 1px solid var(--border-light); }
+        .comparison-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .formula-box { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); border-radius: var(--radius-lg); padding: 16px; margin: 12px 0; text-align: center; border: 1px solid #C4B5FD; }
+        .formula-box span { font-family: 'Courier New', monospace; font-size: 1.2rem; color: #5B21B6; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -68,7 +77,7 @@
 
         <!-- HEADER LEÇON -->
         <div class="lesson-header">
-            <h1>Leçon 1 : Algorithmique</h1>
+            <h1>Leçon 1 : Algorithmique — Les Fondamentaux</h1>
             <p class="breadcrumb">Informatique > Leçon 1</p>
         </div>
 
@@ -76,12 +85,13 @@
         <div class="toc">
             <h3>📋 Plan de la leçon</h3>
             <ol>
-                <li><a href="#partie1">Qu'est-ce qu'un algorithme ?</a></li>
+                <li><a href="#partie1">Introduction à l'algorithmique</a></li>
                 <li><a href="#partie2">Les variables et types de données</a></li>
                 <li><a href="#partie3">Les structures conditionnelles</a></li>
-                <li><a href="#partie4">Les boucles</a></li>
-                <li><a href="#partie5">Les fonctions et procédures</a></li>
-                <li><a href="#partie6">Travaux pratiques</a></li>
+                <li><a href="#partie4">Les boucles (structures itératives)</a></li>
+                <li><a href="#partie5">Les tableaux</a></li>
+                <li><a href="#partie6">Les fonctions et procédures</a></li>
+                <li><a href="#partie7">Travaux pratiques et exercices</a></li>
             </ol>
         </div>
 
@@ -89,7 +99,8 @@
         <section class="section-podcast">
             <h2><span class="icon">🎧</span> Podcast — Écouter la leçon</h2>
             <div class="audio-player">
-                <iframe src=""
+                <iframe src="https://drive.google.com/file/d/1JKTNy2lYQM0tIQnxSeoQbgzhyz00HbHi/preview
+"
                         width="600" height="120" frameborder="0" allow="autoplay">
                 </iframe>
             </div>
@@ -97,216 +108,1113 @@
 
         <!-- PARTIE 1 -->
         <div class="info-content" id="partie1">
-            <h3>📘 1. Qu'est-ce qu'un algorithme ?</h3>
-            <p>Un <strong>algorithme</strong> est une suite ordonnée d'instructions permettant de résoudre un problème ou d'accomplir une tâche. Le terme vient du mathématicien persan <strong>Al-Khwarizmi</strong> (IXe siècle).</p>
-            <p>Un algorithme doit être :</p>
+            <h3>📘 1. Introduction à l'algorithmique</h3>
+            
+            <div class="history-box">
+                <h4>📜 Un peu d'histoire</h4>
+                <p>Le mot « algorithme » vient du nom du mathématicien persan <strong>Al-Khwarizmi</strong> (أبو عبد الله محمد بن موسى الخوارزمي), qui vivait au IXe siècle à Bagdad. Il a écrit des traités sur le calcul indien (notre système décimal actuel) et l'algèbre. C'est lui qui a introduit en Occident le système de numération décimal que nous utilisons aujourd'hui.</p>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📖 Qu'est-ce qu'un algorithme ?</h3>
+            <p>Un <strong>algorithme</strong> est une suite ordonnée, finie et non ambiguë d'instructions permettant de résoudre un problème ou d'accomplir une tâche spécifique. En d'autres termes, c'est une « recette de cuisine » pour résoudre un problème informatique.</p>
+            
+            <p>Pour bien comprendre, prenons l'exemple concret d'une recette de cuisine :</p>
+            <div class="example-box">
+                <h4>🍳 Exemple : Faire un thé</h4>
+                <p><strong>Problème :</strong> Préparer un thé</p>
+                <p><strong>Algorithme :</strong></p>
+                <p>1. Faire bouillir de l'eau</p>
+                <p>2. Mettre du thé dans la tasse</p>
+                <p>3. Verser l'eau bouillante sur le thé</p>
+                <p>4. Attendre 3 minutes</p>
+                <p>5. Ajouter du sucre si désiré</p>
+                <p>6. Servir</p>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔑 Propriétés fondamentales d'un algorithme</h3>
+            <p>Un bon algorithme doit respecter les quatre caractéristiques suivantes :</p>
             <div class="key-points">
                 <div class="key-point">
                     <span class="icon">✅</span>
-                    <p><strong>Fini</strong> — Il doit se terminer après un nombre fini d'étapes</p>
+                    <p><strong>Fini</strong> — L'algorithme doit se terminer après un nombre fini d'étapes. Il ne doit jamais boucler indéfiniment.</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">✅</span>
-                    <p><strong>Précis</strong> — Chaque étape est définie sans ambiguïté</p>
+                    <p><strong>Non ambigu</strong> — Chaque étape doit être définie sans aucune ambiguïté. Les instructions doivent être claires et précises.</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">✅</span>
-                    <p><strong>Effectif</strong> — Chaque opération peut être exécutée en temps fini</p>
+                    <p><strong>Effectif</strong> — Chaque opération doit pouvoir être exécutée en un temps fini par un être humain ou une machine.</p>
                 </div>
                 <div class="key-point">
                     <span class="icon">✅</span>
-                    <p><strong>Général</strong> — Il s'applique à un ensemble de données, pas un cas unique</p>
+                    <p><strong>Général</strong> — L'algorithme doit résoudre tous les cas d'un problème, pas seulement un cas particulier.</p>
                 </div>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Pseudocode</h3>
-            <p>Le <strong>pseudocode</strong> est une façon d'écrire un algorithme en langage naturel, proche du code mais lisible par tous. Il sert d'étape intermédiaire entre la réflexion et le code.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Le pseudocode</h3>
+            <p>Le <strong>pseudocode</strong> est une façon d'écrire un algorithme en utilisant un langage naturel structuré, proche du code informatique mais lisible par les humains. Il sert d'étape intermédiaire entre la réflexion et l'écriture du programme final.</p>
+            
+            <p>Le pseudocode utilise des mots-clés conventionnels pour structurer les instructions :</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📦</span>
+                    <p><strong>Début / Fin</strong> — Délimite le début et la fin de l'algorithme</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📥</span>
+                    <p><strong>Lire / Écrire</strong> — Permet d'entrer ou d'afficher des données</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">↔️</span>
+                    <p><strong>←</strong> — Symbole d'affectation (donner une valeur)</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔄</span>
+                    <p><strong>Si / Sinon / FinSi</strong> — Structure conditionnelle</p>
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">💻 Premier algorithme complet</h3>
             <div class="code-box">
-                <div class="code-title">// Exemple : Calculer la moyenne de 2 notes</div>
-                <span class="comment">// Début de l'algorithme</span>
-                <span class="function">Variables</span> note1, note2, moyenne : <span class="function">Réel</span>
-
-                <span class="function">Écrire</span> <span class="string">"Entrez la première note :"</span>
-                <span class="function">Lire</span>(note1)
-
-                <span class="function">Écrire</span> <span class="string">"Entrez la deuxième note :"</span>
-                <span class="function">Lire</span>(note2)
-
-                moyenne ← (note1 + note2) / 2
-
-                <span class="function">Écrire</span> <span class="string">"La moyenne est :", moyenne</span>
-                <span class="comment">// Fin de l'algorithme</span>
+                <div class="code-title">// Exemple : Calculer la moyenne de deux notes</div>
+                <span class="comment">// ========================================</span>
+                <span class="comment">// Algorithme : Calcul de moyenne</span>
+                <span class="comment">// Auteur : From Bac-2-Fac</span>
+                <span class="comment">// Date : 2024</span>
+                <span class="comment">// ========================================</span>
+                
+                <span class="function">Algorithme</span> Calcul_Moyenne
+                <span class="function">Variables</span>
+                    note1, note2, moyenne : <span class="function">Réel</span>
+                <span class="function">Début</span>
+                    <span class="comment">// Demander à l'utilisateur d'entrer les notes</span>
+                    <span class="function">Écrire</span> <span class="string">"Entrez la première note (sur 20) :"</span>
+                    <span class="function">Lire</span>(note1)
+                    
+                    <span class="function">Écrire</span> <span class="string">"Entrez la deuxième note (sur 20) :"</span>
+                    <span class="function">Lire</span>(note2)
+                    
+                    <span class="comment">// Calculer la moyenne</span>
+                    moyenne ← (note1 + note2) / <span class="number">2</span>
+                    
+                    <span class="comment">// Afficher le résultat</span>
+                    <span class="function">Écrire</span> <span class="string">"La moyenne est :", moyenne</span>
+                    
+                    <span class="comment">// Donner une appréciation</span>
+                    <span class="keyword">Si</span> (moyenne >= <span class="number">10</span>) <span class="keyword">Alors</span>
+                        <span class="function">Écrire</span> <span class="string">"Félicitations, vous êtes admis(e) !"</span>
+                    <span class="keyword">Sinon</span>
+                        <span class="function">Écrire</span> <span class="string">"Désolé, vous n'êtes pas admis(e)."</span>
+                    <span class="keyword">FinSi</span>
+                <span class="function">Fin</span>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Différence entre algorithmique et programmation</h4>
+                <p><strong>L'algorithmique</strong> est la réflexion, la logique qu'on applique pour résoudre un problème. C'est la méthode, indépendante du langage.</p>
+                <p><strong>La programmation</strong> est la traduction de cet algorithme dans un langage informatique précis (Python, Java, C++, etc.).</p>
+                <p>Un bon programme commence toujours par un bon algorithme !</p>
             </div>
         </div>
 
         <!-- PARTIE 2 -->
         <div class="info-content" id="partie2">
             <h3>📗 2. Les variables et types de données</h3>
-            <p>Une <strong>variable</strong> est un espace mémoire qui stocke une valeur. Elle possède un <em>nom</em> (identifiant), un <em>type</em> et une <em>valeur</em>.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Types fondamentaux</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">🔨 Qu'est-ce qu'une variable ?</h3>
+            <p>Une <strong>variable</strong> est un espace de stockage dans la mémoire de l'ordinateur. Elle permet de conserver des données qui seront utilisées et modifiées au cours de l'exécution de l'algorithme. Chaque variable possède trois caractéristiques essentielles :</p>
+            
             <div class="key-points">
                 <div class="key-point">
-                    <span class="icon">🔢</span>
-                    <p><strong>Entier (Integer)</strong> — nombres sans virgule : 1, 42, -7</p>
+                    <span class="icon">🏷️</span>
+                    <p><strong>Nom (Identifiant)</strong> — C'est le nom qui permet d'identifier la variable. Il doit être unique et significatif.</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">🔣</span>
-                    <p><strong>Réel (Float)</strong> — nombres décimaux : 3.14, -0.5, 2.718</p>
+                    <span class="icon">📋</span>
+                    <p><strong>Type</strong> — C'est la nature des données que la variable peut contenir (nombre entier, texte, etc.)</p>
                 </div>
                 <div class="key-point">
-                    <span class="icon">🔤</span>
-                    <p><strong>Caractère (Char)</strong> — un seul caractère : 'A', 'z', '?'</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">📝</span>
-                    <p><strong>Chaîne (String)</strong> — texte : "Bonjour", "Tunisie"</p>
-                </div>
-                <div class="key-point">
-                    <span class="icon">✔️</span>
-                    <p><strong>Booléen (Boolean)</strong> — Vrai ou Faux</p>
+                    <span class="icon">💾</span>
+                    <p><strong>Valeur</strong> — C'est le contenu actuel de la variable, qui peut changer au cours de l'exécution</p>
                 </div>
             </div>
-            <div class="code-box">
-                <div class="code-title">// Déclaration et affectation de variables</div>
-                <span class="function">Variables</span>
-                    age      : <span class="function">Entier</span>
-                    nom      : <span class="function">Chaîne</span>
-                    taille   : <span class="function">Réel</span>
-                    estEtudiant : <span class="function">Booléen</span>
-
-                age ← <span class="number">20</span>
-                nom ← <span class="string">"Ahmed"</span>
-                taille ← <span class="number">1.75</span>
-                estEtudiant ← <span class="keyword">Vrai</span>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Règles de nomination des variables</h3>
+            <p>Pour nommer correctement une variable, vous devez respecter les règles suivantes :</p>
+            <div class="example-box">
+                <h4>✅ Règles à respecter</h4>
+                <p>• Le nom doit commencer par une lettre (A-Z, a-z) ou un underscore (_)</p>
+                <p>• Le nom ne peut pas contenir d'espaces</p>
+                <p>• Le nom ne peut pas être un mot réservé du langage (Si, Pour, Fonction, etc.)</p>
+                <p>• Le nom ne peut pas contenir d'accents ni de caractères spéciaux (@, #, $, %, etc.)</p>
+                <p>• Python est sensible à la casse : <code>Age</code>, <code>age</code> et <code>AGE</code> sont trois variables différentes</p>
             </div>
+            
             <div class="warning-box">
-                <h4>⚠️ Règle importante</h4>
-                <p>Le nom d'une variable ne peut pas contenir d'espaces ni commencer par un chiffre. Utilisez des noms explicites : <code>prix_ht</code> plutôt que <code>x</code>.</p>
+                <h4>💡 Bonnes pratiques de nomination</h4>
+                <p>Utilisez des noms <strong>explicites et significatifs</strong> qui décrivent le contenu de la variable :</p>
+                <p>• ✅ Bon : <code>prix_ht</code>, <code>nom_utilisateur</code>, <code>age_eleve</code></p>
+                <p>• ❌ Mauvais : <code>x</code>, <code>a</code>, <code>temp</code>, <code>var1</code></p>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📋 Les types de données fondamentaux</h3>
+            <p>En algorithmique, nous distinguons principalement <strong>cinq types de données</strong> de base :</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Exemples</th>
+                        <th>En Python</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Entier (Integer)</strong></td>
+                        <td>Nombres sans partie décimale, positifs ou négatifs</td>
+                        <td>0, 42, -7, 1000</td>
+                        <td><code>int</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Réel (Float)</strong></td>
+                        <td>Nombres avec partie décimale</td>
+                        <td>3.14, -0.5, 2.71828</td>
+                        <td><code>float</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Caractère (Char)</strong></td>
+                        <td>Un seul caractère (lettre, chiffre, symbole)</td>
+                        <td>'A', 'z', '7', '?'</td>
+                        <td><code>str</code> (1 caractère)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chaîne (String)</strong></td>
+                        <td>Séquence de caractères (texte)</td>
+                        <td>"Bonjour", "Tunisie 2024"</td>
+                        <td><code>str</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Booléen (Boolean)</strong></td>
+                        <td>Valeur logique : vrai ou faux</td>
+                        <td>Vrai, Faux</td>
+                        <td><code>bool</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔄 L'affectation</h3>
+            <p>L'<strong>affectation</strong> est l'opération qui consiste à donner une valeur à une variable. En pseudocode, on utilise le symbole <strong>←</strong> (flèche vers la gauche).</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Syntaxe de l'affectation</div>
+                <span class="comment">// variable ← valeur</span>
+                
+                age ← <span class="number">20</span>           <span class="comment">// La variable "age" reçoit la valeur 20</span>
+                nom ← <span class="string">"Ahmed"</span>     <span class="comment">// La variable "nom" reçoit la chaîne "Ahmed"</span>
+                taille ← <span class="number">1.75</span>       <span class="comment">// La variable "taille" reçoit 1.75</span>
+                estEtudiant ← <span class="keyword">Vrai</span>  <span class="comment">// La variable "estEtudiant" reçoit Vrai</span>
+            </div>
+            
+            <div class="warning-box">
+                <h4>⚠️ Erreurs fréquentes à éviter</h4>
+                <p><strong>Confondre affectation et égalité mathématique :</strong></p>
+                <p>• En算法, <code>x ← 5</code> signifie « x reçoit 5 »</p>
+                <p>• En mathématiques, <code>x = 5</code> signifie « x est égal à 5 »</p>
+                <p><strong>Confondre = et ← :</strong></p>
+                <p>• <code>x = 5</code> est une comparaison (x est-il égal à 5 ?)</p>
+                <p>• <code>x ← 5</code> est une affectation (x reçoit 5)</p>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📖 Lecture et écriture (Entrées/Sorties)</h3>
+            <p>Pour interact with the user, nous utilisons deux opérations fundamentales :</p>
+            
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">📥</span>
+                    <p><strong>Lire(variable)</strong> — Demande à l'utilisateur d'entrer une valeur qui sera stockée dans la variable</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📤</span>
+                    <p><strong>Écrire("texte", variable)</strong> — Affiche du texte et/ou le contenu d'une variable à l'écran</p>
+                </div>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple complet : Déclaration et manipulation de variables</div>
+                <span class="function">Algorithme</span> Exemple_Variables
+                <span class="function">Variables</span>
+                    nom      : <span class="function">Chaîne</span>
+                    prenom   : <span class="function">Chaîne</span>
+                    age      : <span class="function">Entier</span>
+                    taille   : <span class="function">Réel</span>
+                    estActif : <span class="function">Booléen</span>
+                    note1    : <span class="function">Réel</span>
+                    note2    : <span class="function">Réel</span>
+                    moyenne  : <span class="function">Réel</span>
+                <span class="function">Début</span>
+                    <span class="comment">// Saisie des données</span>
+                    <span class="function">Écrire</span> <span class="string">"Entrez votre nom :"</span>
+                    <span class="function">Lire</span>(nom)
+                    
+                    <span class="function">Écrire</span> <span class="string">"Entrez votre prénom :"</span>
+                    <span class="function">Lire</span>(prenom)
+                    
+                    <span class="function">Écrire</span> <span class="string">"Entrez votre âge :"</span>
+                    <span class="function">Lire</span>(age)
+                    
+                    <span class="function">Écrire</span> <span class="string">"Entrez votre taille (en mètres) :"</span>
+                    <span class="function">Lire</span>(taille)
+                    
+                    <span class="comment">// Calcul de la moyenne</span>
+                    <span class="function">Écrire</span> <span class="string">"Entrez la première note :"</span>
+                    <span class="function">Lire</span>(note1)
+                    
+                    <span class="function">Écrire</span> <span class="string">"Entrez la deuxième note :"</span>
+                    <span class="function">Lire</span>(note2)
+                    
+                    moyenne ← (note1 + note2) / <span class="number">2</span>
+                    
+                    <span class="comment">// Affichage des résultats</span>
+                    <span class="function">Écrire</span> <span class="string">"Bonjour ", prenom, " ", nom</span>
+                    <span class="function">Écrire</span> <span class="string">"Vous avez ", age, " ans"</span>
+                    <span class="function">Écrire</span> <span class="string">"Votre moyenne est : ", moyenne</span>
+                <span class="function">Fin</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔢 Les opérateurs arithmétiques</h3>
+            <p>Pour effectuer des calculs mathématiques, nous utilisons les opérateurs suivants :</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Opérateur</th>
+                        <th>Opération</th>
+                        <th>Exemple</th>
+                        <th>Résultat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>+</strong></td>
+                        <td>Addition</td>
+                        <td>5 + 3</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-</strong></td>
+                        <td>Soustraction</td>
+                        <td>5 - 3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong></td>
+                        <td>Multiplication</td>
+                        <td>5 * 3</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td><strong>/</strong></td>
+                        <td>Division réelle</td>
+                        <td>5 / 2</td>
+                        <td>2.5</td>
+                    </tr>
+                    <tr>
+                        <td><strong>//</strong></td>
+                        <td>Division entière</td>
+                        <td>5 // 2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>%</strong></td>
+                        <td>Modulo (reste)</td>
+                        <td>5 % 2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>**</strong></td>
+                        <td>Puissance</td>
+                        <td>2 ** 3</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="example-box">
+                <h4>💡 Exemple : Calcul du discriminant</h4>
+                <p>Pour une équation du second degré ax² + bx + c = 0 :</p>
+                <div class="code-box">
+                    <span class="function">Variables</span> a, b, c, delta : <span class="function">Réel</span>
+                    
+                    <span class="comment">// Calcul du discriminant Δ = b² - 4ac</span>
+                    delta ← b * b - <span class="number">4</span> * a * c
+                    
+                    <span class="function">Écrire</span>(<span class="string">"Le discriminant est :", delta</span>)
+                </div>
             </div>
         </div>
 
         <!-- PARTIE 3 -->
         <div class="info-content" id="partie3">
             <h3>📙 3. Les structures conditionnelles</h3>
-            <p>Les conditions permettent d'exécuter du code différemment selon une situation. C'est le <strong>SI / SINON</strong> de la prise de décision.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">SI simple</h3>
+            
+            <p>Les <strong>structures conditionnelles</strong> permettent d'exécuter différentes instructions selon qu'une condition est vraie ou fausse. C'est le mécanisme de prise de décision dans un algorithme, comparable au « SI... ALORS... SINON » du langage naturel.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔀 Structure SI simple</h3>
+            <p>La forme la plus simple de la condition exécute un bloc d'instructions <strong>uniquement si</strong> la condition est remplie.</p>
+            
             <div class="code-box">
-                <div class="code-title">// Structure SI</div>
+                <div class="code-title">// Structure SI simple — Syntaxe</div>
                 <span class="keyword">Si</span> (condition) <span class="keyword">Alors</span>
-                    <span class="comment">// instructions exécutées si condition est VRAIE</span>
+                    <span class="comment">// Instructions exécutées si la condition est VRAIE</span>
+                    instruction_1
+                    instruction_2
+                    ...
                 <span class="keyword">FinSi</span>
             </div>
+            
             <div class="code-box">
-                <div class="code-title">// SI...SINON</div>
-                <span class="keyword">Si</span> (note >= <span class="number">10</span>) <span class="keyword">Alors</span>
-                    <span class="function">Écrire</span> <span class="string">"Vous êtes admis !"</span>
+                <div class="code-title">// Exemple : Vérifier si un nombre est positif</div>
+                <span class="function">Variables</span> nombre : <span class="function">Entier</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Entrez un nombre :"</span>
+                <span class="function">Lire</span>(nombre)
+                
+                <span class="keyword">Si</span> (nombre > <span class="number">0</span>) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"Le nombre est positif."</span>
+                <span class="keyword">FinSi</span>
+            </div>
+            
+            <div class="flowchart">
+                <div class="flowchart-node flow-start">Début</div>
+                <span class="flow-arrow">↓</span>
+                <div class="flowchart-node flow-process">Lire(nombre)</div>
+                <span class="flow-arrow">↓</span>
+                <div class="flowchart-node flow-decision">nombre > 0 ?</div>
+                <span class="flow-arrow">↓ OUI</span>
+                <div class="flowchart-node flow-process">Écrire "Positif"</div>
+                <span class="flow-arrow">↓</span>
+                <div class="flowchart-node flow-end">Fin</div>
+                <br><span style="color:#6B7280; font-size:0.85rem;">↑ NON</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔀 Structure SI...SINON</h3>
+            <p>Cette structure permet d'exécuter un premier bloc si la condition est vraie, et un second bloc alternatif si elle est fausse.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Structure SI...SINON — Syntaxe</div>
+                <span class="keyword">Si</span> (condition) <span class="keyword">Alors</span>
+                    <span class="comment">// Instructions si VRAIE</span>
                 <span class="keyword">Sinon</span>
-                    <span class="function">Écrire</span> <span class="string">"Désolé, vous n'êtes pas admis."</span>
+                    <span class="comment">// Instructions si FAUSSE</span>
                 <span class="keyword">FinSi</span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">SI multiples (SinonSi)</h3>
+            
             <div class="code-box">
-                <div class="code-title">// SI...SINONSI...SINON</div>
+                <div class="code-title">// Exemple : Vérifier si un étudiant est admis</div>
+                <span class="function">Variables</span> moyenne : <span class="function">Réel</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Entrez votre moyenne :"</span>
+                <span class="function">Lire</span>(moyenne)
+                
+                <span class="keyword">Si</span> (moyenne >= <span class="number">10</span>) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"Vous êtes ADMIS(E) ! 🎉"</span>
+                <span class="keyword">Sinon</span>
+                    <span class="function">Écrire</span> <span class="string">"Vous n'êtes pas admis(e). Réessayez l'année prochaine."</span>
+                <span class="keyword">FinSi</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔀 Structure SI...SINONSI...SINON</h3>
+            <p>Quand il y a plusieurs conditions à tester, on utilise des <strong>SinonSi</strong> (elif en Python) pour chaîner les tests.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Structure SI...SINONSI...SINON — Syntaxe</div>
+                <span class="keyword">Si</span> (condition_1) <span class="keyword">Alors</span>
+                    <span class="comment">// Instructions si condition_1 est VRAIE</span>
+                <span class="keyword">SinonSi</span> (condition_2) <span class="keyword">Alors</span>
+                    <span class="comment">// Instructions si condition_1 est FAUSSE et condition_2 est VRAIE</span>
+                <span class="keyword">SinonSi</span> (condition_3) <span class="keyword">Alors</span>
+                    <span class="comment">// Instructions si les conditions précédentes sont FAUSSES et condition_3 est VRAIE</span>
+                <span class="keyword">Sinon</span>
+                    <span class="comment">// Instructions si toutes les conditions sont FAUSSES</span>
+                <span class="keyword">FinSi</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Attribution d'une mention</div>
+                <span class="function">Variables</span> moyenne : <span class="function">Réel</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Entrez votre moyenne :"</span>
+                <span class="function">Lire</span>(moyenne)
+                
                 <span class="keyword">Si</span> (moyenne >= <span class="number">16</span>) <span class="keyword">Alors</span>
-                    <span class="function">Écrire</span> <span class="string">"Excellent !"</span>
+                    <span class="function">Écrire</span> <span class="string">"Mention Très Bien avec Félicitations du Jury ! 🏆"</span>
                 <span class="keyword">SinonSi</span> (moyenne >= <span class="number">14</span>) <span class="keyword">Alors</span>
-                    <span class="function">Écrire</span> <span class="string">"Très bien !"</span>
+                    <span class="function">Écrire</span> <span class="string">"Mention Très Bien 🥇"</span>
                 <span class="keyword">SinonSi</span> (moyenne >= <span class="number">12</span>) <span class="keyword">Alors</span>
-                    <span class="function">Écrire</span> <span class="string">"Bien !"</span>
+                    <span class="function">Écrire</span> <span class="string">"Mention Bien 🥈"</span>
+                <span class="keyword">SinonSi</span> (moyenne >= <span class="number">10</span>) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"Mention Assez Bien 🥉"</span>
                 <span class="keyword">Sinon</span>
-                    <span class="function">Écrire</span> <span class="string">"Passable"</span>
+                    <span class="function">Écrire</span> <span class="string">"Pas de mention — Recalé"</span>
                 <span class="keyword">FinSi</span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Selon cas (Sélection multiple)</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔗 Les opérateurs logiques</h3>
+            <p>Pour combiner plusieurs conditions, nous utilisons les <strong>opérateurs logiques</strong> :</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Opérateur</th>
+                        <th>Nom</th>
+                        <th>Description</th>
+                        <th>Exemple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ET</strong></td>
+                        <td>Conjunction</td>
+                        <td>VRAI seulement si les deux conditions sont vraies</td>
+                        <td>(age >= 18) <strong>ET</strong> (estCitoyen)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OU</strong></td>
+                        <td>Disjonction</td>
+                        <td>VRAI si au moins une condition est vraie</td>
+                        <td>(estEtudiant) <strong>OU</strong> (estEnseignant)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NON</strong></td>
+                        <td>Négation</td>
+                        <td>Inverse la condition (VRAI → FAUX, FAUX → VRAI)</td>
+                        <td><strong>NON</strong> (estBloque)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <div class="code-box">
-                <div class="code-title">// Selon</div>
-                <span class="keyword">Selon</span> couleur <span class="keyword">Faire</span>
-                    <span class="keyword">Cas</span> <span class="string">"rouge"</span> : <span class="function">Écrire</span> <span class="string">"Arrêt"</span>
-                    <span class="keyword">Cas</span> <span class="string">"orange"</span> : <span class="function">Écrire</span> <span class="string">"Attention"</span>
-                    <span class="keyword">Cas</span> <span class="string">"vert"</span>  : <span class="function">Écrire</span> <span class="string">"Go !"</span>
-                    <span class="keyword">Sinon</span>        : <span class="function">Écrire</span> <span class="string">"Couleur inconnue"</span>
+                <div class="code-title">// Exemple : Conditions composées</div>
+                <span class="comment">// Vérifier si un étudiant peut s'inscrire</span>
+                <span class="keyword">Si</span> (age >= <span class="number">18</span>) <span class="keyword">ET</span> (diplome == <span class="string">"BAC"</span>) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"Vous pouvez vous inscrire."</span>
+                <span class="keyword">Sinon</span>
+                    <span class="function">Écrire</span> <span class="string">"Conditions non remplies."</span>
+                <span class="keyword">FinSi</span>
+                
+                <span class="comment">// Vérifier si une valeur est hors intervalle</span>
+                <span class="keyword">Si</span> (note < <span class="number">0</span>) <span class="keyword">OU</span> (note > <span class="number">20</span>) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"Note invalide !"</span>
+                <span class="keyword">FinSi</span>
+                
+                <span class="comment">// Négation avec NON</span>
+                <span class="keyword">Si</span> <span class="keyword">NON</span> (estExclu) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"L'accès est autorisé."</span>
+                <span class="keyword">FinSi</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📋 Table de vérité</h3>
+            <p>Voici la table de vérité des opérateurs logiques :</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>A ET B</th>
+                        <th>A OU B</th>
+                        <th>NON A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>VRAI</td>
+                        <td>VRAI</td>
+                        <td>VRAI</td>
+                        <td>VRAI</td>
+                        <td>FAUX</td>
+                    </tr>
+                    <tr>
+                        <td>VRAI</td>
+                        <td>FAUX</td>
+                        <td>FAUX</td>
+                        <td>VRAI</td>
+                        <td>FAUX</td>
+                    </tr>
+                    <tr>
+                        <td>FAUX</td>
+                        <td>VRAI</td>
+                        <td>FAUX</td>
+                        <td>VRAI</td>
+                        <td>VRAI</td>
+                    </tr>
+                    <tr>
+                        <td>FAUX</td>
+                        <td>FAUX</td>
+                        <td>FAUX</td>
+                        <td>FAUX</td>
+                        <td>VRAI</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🎯 Structure SELON (Sélection multiple)</h3>
+            <p>Quand une variable peut prendre plusieurs valeurs discrètes, la structure <strong>SELON</strong> est plus lisible que des SI...SINONSI répétés.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Structure SELON — Syntaxe</div>
+                <span class="keyword">Selon</span> variable <span class="keyword">Faire</span>
+                    <span class="keyword">Cas</span> valeur_1 : instructions_1
+                    <span class="keyword">Cas</span> valeur_2 : instructions_2
+                    <span class="keyword">Cas</span> valeur_3 : instructions_3
+                    <span class="keyword">Sinon</span> : instructions_par_defaut
                 <span class="keyword">FinSelon</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Menu de restaurant</div>
+                <span class="function">Variables</span> choix : <span class="function">Entier</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Menu : 1- Pizza, 2- Burger, 3- Salade"</span>
+                <span class="function">Lire</span>(choix)
+                
+                <span class="keyword">Selon</span> choix <span class="keyword">Faire</span>
+                    <span class="keyword">Cas</span> <span class="number">1</span> : <span class="function">Écrire</span> <span class="string">"Pizza en préparation 🍕"</span>
+                    <span class="keyword">Cas</span> <span class="number">2</span> : <span class="function">Écrire</span> <span class="string">"Burger en préparation 🍔"</span>
+                    <span class="keyword">Cas</span> <span class="number">3</span> : <span class="function">Écrire</span> <span class="string">"Salade en préparation 🥗"</span>
+                    <span class="keyword">Sinon</span>   : <span class="function">Écrire</span> <span class="string">"Choix invalide"</span>
+                <span class="keyword">FinSelon</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple : Calculatrice simple</div>
+                <span class="function">Variables</span> a, b, resultat : <span class="function">Réel</span>
+                    operateur : <span class="function">Caractère</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Entrez a, puis l'opérateur (+,-,*,/), puis b :"</span>
+                <span class="function">Lire</span>(a, operateur, b)
+                
+                <span class="keyword">Selon</span> operateur <span class="keyword">Faire</span>
+                    <span class="keyword">Cas</span> <span class="string">'+'</span> : resultat ← a + b
+                    <span class="keyword">Cas</span> <span class="string">'-'</span> : resultat ← a - b
+                    <span class="keyword">Cas</span> <span class="string">'*'</span> : resultat ← a * b
+                    <span class="keyword">Cas</span> <span class="string">'/'</span> : 
+                        <span class="keyword">Si</span> (b <> <span class="number">0</span>) <span class="keyword">Alors</span>
+                            resultat ← a / b
+                        <span class="keyword">Sinon</span>
+                            <span class="function">Écrire</span> <span class="string">"Erreur : division par zéro"</span>
+                        <span class="keyword">FinSi</span>
+                    <span class="keyword">Sinon</span> : <span class="function">Écrire</span> <span class="string">"Opérateur invalide"</span>
+                <span class="keyword">FinSelon</span>
+                
+                <span class="function">Écrire</span>(<span class="string">"Résultat : ", resultat</span>)
             </div>
         </div>
 
         <!-- PARTIE 4 -->
         <div class="info-content" id="partie4">
-            <h3>📕 4. Les boucles</h3>
-            <p>Une <strong>boucle</strong> permet de répéter un bloc d'instructions plusieurs fois. Il existe 3 types principaux.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Boucle POUR (For)</h3>
-            <p>Quand on connaît <strong>à l'avance</strong> le nombre de répétitions.</p>
+            <h3>📕 4. Les boucles (Structures itératives)</h3>
+            
+            <p>Une <strong>boucle</strong> permet de répéter un bloc d'instructions plusieurs fois. C'est une结构 fondamentale en algorithmique qui permet d'automatiser les tâches répétitives.</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔄 Boucle POUR (For)</h3>
+            <p>La boucle <strong>POUR</strong> est utilisée quand on connaît <strong>à l'avance</strong> le nombre exact de répétitions. Le compteur est automatiquement incrémenté à chaque tour.</p>
+            
             <div class="code-box">
-                <div class="code-title">// BOUCLE POUR — afficher les nombres de 1 à 10</div>
-                <span class="function">Variables</span> i : <span class="function">Entier</span>
-
-                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">10</span> <span class="keyword">Faire</span>
-                    <span class="function">Écrire</span>(i)
+                <div class="code-title">// Structure POUR — Syntaxe</div>
+                <span class="keyword">Pour</span> compteur ← <span class="function">valeur_initiale</span> <span class="keyword">à</span> <span class="function">valeur_finale</span> <span class="keyword">Faire</span>
+                    <span class="comment">// Instructions répétées pour chaque valeur du compteur</span>
                 <span class="keyword">FinPour</span>
-
-                <span class="comment">// Résultat : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10</span>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Boucle TANT QUE (While)</h3>
-            <p>On répète <strong>tant que</strong> la condition est vraie. La condition est vérifiée <em>avant</em> chaque itération.</p>
-            <div class="code-box">
-                <div class="code-title">// BOUCLE TANT QUE — saisie contrôlée</div>
-                <span class="function">Variables</span> age : <span class="function">Entier</span>
-
-                <span class="function">Écrire</span> <span class="string">"Entrez votre âge (entre 1 et 120) :"</span>
-                <span class="function">Lire</span>(age)
-
-                <span class="keyword">TantQue</span> (age < <span class="number">1</span> <span class="keyword">OU</span> age > <span class="number">120</span>) <span class="keyword">Faire</span>
-                    <span class="function">Écrire</span> <span class="string">"Âge invalide, réessayez :"</span>
-                    <span class="function">Lire</span>(age)
-                <span class="keyword">FinTantQue</span>
-
-                <span class="function">Écrire</span> <span class="string">"Âge accepté :", age</span>
-            </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Boucle FAIRE...TANT QUE (Do...While)</h3>
-            <p>Similar à TANT QUE, mais la condition est vérifiée <em>après</em> l'exécution — le bloc s'exécute <strong>au moins une fois</strong>.</p>
-            <div class="code-box">
-                <div class="code-title">// BOUCLE FAIRE...TANT QUE</div>
-                <span class="function">Variables</span> reponse : <span class="function">Chaîne</span>
-
-                <span class="keyword">Répéter</span>
-                    <span class="function">Écrire</span> <span class="string">"Voulez-vous continuer ? (oui/non)"</span>
-                    <span class="function">Lire</span>(reponse)
-                <span class="keyword">Jusqu'à</span> (reponse = <span class="string">"non"</span>)
-            </div>
+            
             <div class="flowchart">
-                <div class="flowchart-node flow-start">Début</div>
-                <span class="flow-arrow">↓</span>
-                <div class="flowchart-node flow-process">i ← 1</div>
-                <span class="flow-arrow">↓</span>
-                <div class="flowchart-node flow-process">Écrire i</div>
-                <span class="flow-arrow">↓</span>
-                <div class="flowchart-node flow-process">i ← i + 1</div>
+                <div class="flowchart-node flow-start">i ← 1</div>
                 <span class="flow-arrow">↓</span>
                 <div class="flowchart-node flow-decision">i ≤ 10 ?</div>
                 <span class="flow-arrow">↓ OUI</span>
-                <div class="flowchart-node flow-end">Fin</div>
-                <br><span style="color:#6B7280; font-size:0.85rem;">↑ NON</span>
+                <div class="flowchart-node flow-process">Instructions</div>
+                <span class="flow-arrow">↓</span>
+                <div class="flowchart-node flow-process">i ← i + 1</div>
+                <span class="flow-arrow">↺</span>
+                <span class="flow-arrow">↑ NON</span>
+                <div class="flowchart-node flow-end">Fin boucle</div>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 1 : Afficher les nombres de 1 à 10</div>
+                <span class="function">Variables</span> i : <span class="function">Entier</span>
+                
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">10</span> <span class="keyword">Faire</span>
+                    <span class="function">Écrire</span>(i)
+                <span class="keyword">FinPour</span>
+                <span class="comment">// Résultat : 1 2 3 4 5 6 7 8 9 10</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 2 : Calculer la factorielle de N</div>
+                <span class="function">Variables</span> n, i, factorielle : <span class="function">Entier</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Entrez un nombre :"</span>
+                <span class="function">Lire</span>(n)
+                
+                factorielle ← <span class="number">1</span>
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> n <span class="keyword">Faire</span>
+                    factorielle ← factorielle * i
+                <span class="keyword">FinPour</span>
+                
+                <span class="function">Écrire</span>(n, <span class="string">"! = ", factorielle</span>)
+                <span class="comment">// Si n = 5, le résultat est 120 (1×2×3×4×5)</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 3 : Table de multiplication</div>
+                <span class="function">Variables</span> n, i, resultat : <span class="function">Entier</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Quelle table ? "</span>
+                <span class="function">Lire</span>(n)
+                
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">10</span> <span class="keyword">Faire</span>
+                    resultat ← n * i
+                    <span class="function">Écrire</span>(n, <span class="string">" × ",</span> i, <span class="string">" = ",</span> resultat)
+                <span class="keyword">FinPour</span>
+                <span class="comment">// Affiche la table de multiplication de n</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔄 Boucle TANT QUE (While)</h3>
+            <p>La boucle <strong>TANT QUE</strong> répète les instructions <strong>tant que</strong> la condition est vraie. La condition est évaluée <strong>avant</strong> chaque exécution — si elle est fausse dès le début, le bloc peut ne jamais s'exécuter.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Structure TANT QUE — Syntaxe</div>
+                <span class="keyword">TantQue</span> (condition) <span class="keyword">Faire</span>
+                    <span class="comment">// Instructions répétées tant que la condition est VRAIE</span>
+                    <span class="comment">// ATTENTION : modifier quelque chose qui change la condition !</span>
+                <span class="keyword">FinTantQue</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 1 : Saisie contrôlée (répéter jusqu'à validité)</div>
+                <span class="function">Variables</span> age : <span class="function">Entier</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Entrez votre âge (1 à 120) :"</span>
+                <span class="function">Lire</span>(age)
+                
+                <span class="keyword">TantQue</span> (age < <span class="number">1</span> <span class="keyword">OU</span> age > <span class="number">120</span>) <span class="keyword">Faire</span>
+                    <span class="function">Écrire</span> <span class="string">"Âge invalide. Entrez un âge entre 1 et 120 :"</span>
+                    <span class="function">Lire</span>(age)
+                <span class="keyword">FinTantQue</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Âge accepté :", age</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 2 : Calcul de la somme jusqu'à atteindre 100</div>
+                <span class="function">Variables</span> somme, nombre : <span class="function">Entier</span>
+                
+                somme ← <span class="number">0</span>
+                
+                <span class="keyword">TantQue</span> (somme < <span class="number">100</span>) <span class="keyword">Faire</span>
+                    <span class="function">Écrire</span> <span class="string">"Entrez un nombre à ajouter :"</span>
+                    <span class="function">Lire</span>(nombre)
+                    somme ← somme + nombre
+                    <span class="function">Écrire</span>(<span class="string">"Somme actuelle :", somme</span>)
+                <span class="keyword">FinTantQue</span>
+                
+                <span class="function">Écrire</span> <span class="string">"La somme a dépassé ou atteint 100 !"</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 3 : Deviner un nombre (jeu)</div>
+                <span class="function">Variables</span> secret, guess, tentatives : <span class="function">Entier</span>
+                
+                secret ← <span class="number">42</span>
+                tentatives ← <span class="number">0</span>
+                
+                <span class="function">Écrire</span> <span class="string">"Devinez le nombre (entre 1 et 100) :"</span>
+                
+                <span class="keyword">TantQue</span> (guess <> secret) <span class="keyword">Faire</span>
+                    <span class="function">Lire</span>(guess)
+                    tentatives ← tentatives + <span class="number">1</span>
+                    
+                    <span class="keyword">Si</span> (guess < secret) <span class="keyword">Alors</span>
+                        <span class="function">Écrire</span> <span class="string">"C'est plus grand !"</span>
+                    <span class="keyword">SinonSi</span> (guess > secret) <span class="keyword">Alors</span>
+                        <span class="function">Écrire</span> <span class="string">"C'est plus petit !"</span>
+                    <span class="keyword">FinSi</span>
+                <span class="keyword">FinTantQue</span>
+                
+                <span class="function">Écrire</span>(<span class="string">"Bravo ! Trouvé en ", tentatives, " tentatives"</span>)
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🔄 Boucle FAIRE...TANT QUE (Do...While)</h3>
+            <p>Cette boucle garantit que le bloc d'instructions est exécuté <strong>au moins une fois</strong>, car la condition est vérifiée <strong>après</strong> l'exécution.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Structure FAIRE...TANT QUE — Syntaxe</div>
+                <span class="keyword">Répéter</span>
+                    <span class="comment">// Instructions à exécuter</span>
+                    <span class="comment">// Puis on vérifie la condition</span>
+                <span class="keyword">Jusqu'à</span> (condition)  <span class="comment">// Répéter jusqu'à ce que la condition soit VRAIE</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 1 : Menu de navigation</div>
+                <span class="function">Variables</span> choix : <span class="function">Entier</span>
+                
+                <span class="keyword">Répéter</span>
+                    <span class="function">Écrire</span> <span class="string">"1- Nouvelle partie"</span>
+                    <span class="function">Écrire</span> <span class="string">"2- Charger partie"</span>
+                    <span class="function">Écrire</span> <span class="string">"3- Quitter"</span>
+                    <span class="function">Écrire</span> <span class="string">"Votre choix :"</span>
+                    <span class="function">Lire</span>(choix)
+                <span class="keyword">Jusqu'à</span> (choix = <span class="number">1</span> <span class="keyword">OU</span> choix = <span class="number">2</span> <span class="keyword">OU</span> choix = <span class="number">3</span>)
+                
+                <span class="comment">// Le menu s'affiche au moins une fois, même si le choix est invalide</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 2 : Calcul de moyenne avec quantité inconnue</div>
+                <span class="function">Variables</span> nb_notes, note, somme : <span class="function">Réel</span>
+                    compteur : <span class="function">Entier</span>
+                    reponse : <span class="function">Caractère</span>
+                
+                somme ← <span class="number">0</span>
+                nb_notes ← <span class="number">0</span>
+                
+                <span class="keyword">Répéter</span>
+                    <span class="function">Écrire</span> <span class="string">"Entrez une note (0-20) :"</span>
+                    <span class="function">Lire</span>(note)
+                    somme ← somme + note
+                    nb_notes ← nb_notes + <span class="number">1</span>
+                    
+                    <span class="function">Écrire</span> <span class="string">"Autre note ? (O/N)"</span>
+                    <span class="function">Lire</span>(reponse)
+                <span class="keyword">Jusqu'à</span> (reponse = <span class="string">'N'</span>)
+                
+                <span class="function">Écrire</span>(<span class="string">"Moyenne : ", somme / nb_notes</span>)
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">⚖️ Comparaison des boucles</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Boucle</th>
+                        <th>Quand l'utiliser ?</th>
+                        <th>Condition vérifiée</th>
+                        <th>Garantie d'exécution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>POUR</strong></td>
+                        <td>Nombre de répétitions connu à l'avance</td>
+                        <td>Avant chaque itération</td>
+                        <td>Non (0 fois si borne initiale > borne finale)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TANT QUE</strong></td>
+                        <td>On ne sait pas combien de fois, mais peut-être 0</td>
+                        <td>Avant chaque itération</td>
+                        <td>Non (0 fois possible)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RÉPÉTER</strong></td>
+                        <td>On ne sait pas combien de fois, mais au moins 1</td>
+                        <td>Après chaque itération</td>
+                        <td>Oui (toujours au moins 1 fois)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="warning-box">
+                <h4>⚠️ Boucle infinie — Le danger !</h4>
+                <p>Une boucle <strong>TANT QUE</strong> ou <strong>RÉPÉTER</strong> qui ne se termine jamais est une « boucle infinie ». Elle bloque le programme !</p>
+                <p><strong>Causes fréquentes :</strong></p>
+                <p>• Oublier de modifier la variable de la condition dans la boucle</p>
+                <p>• Condition mal formulée qui reste toujours vraie</p>
+                <p><strong>Exemple d'erreur :</strong></p>
+                <div class="code-box" style="margin:8px 0;">
+                    <span class="comment">// ERREUR : i n'est jamais incrémenté → boucle infinie !</span>
+                    i ← <span class="number">1</span>
+                    <span class="keyword">TantQue</span> (i <= <span class="number">10</span>) <span class="keyword">Faire</span>
+                        <span class="function">Écrire</span>(i)
+                        <span class="comment">// i ← i + 1 est oublié !</span>
+                    <span class="keyword">FinTantQue</span>
+                </div>
             </div>
         </div>
 
         <!-- PARTIE 5 -->
         <div class="info-content" id="partie5">
-            <h3>📒 5. Les fonctions et procédures</h3>
-            <p>Une <strong>fonction</strong> est un bloc de code réutilisable qui effectue une tâche précise. Elle peut recevoir des <em>paramètres</em> et retourner un <em>résultat</em>.</p>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:16px;">Procédure (sans retour)</h3>
+            <h3>📒 5. Les tableaux</h3>
+            
+            <p>Un <strong>tableau</strong> (array en anglais) est une structure de données qui permet de stocker <strong>plusieurs valeurs du même type</strong> dans une seule variable. Chaque valeur est accessible par son <strong>indice</strong> (position).</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📦 Tableau à une dimension (Vecteur)</h3>
+            <p>Un tableau 1D est comme une liste linéaire de valeurs. Chaque élément a un indice commençant par <strong>0</strong> (en algorithmique) ou <strong>1</strong> (selon la convention).</p>
+            
             <div class="code-box">
-                <div class="code-title">// Procédure : afficher un message de bienvenue</div>
-                <span class="keyword">Procédure</span> <span class="function">Bienvenue</span>(nom : <span class="function">Chaîne</span>)
+                <div class="code-title">// Déclaration d'un tableau</div>
+                <span class="comment">// Syntaxe : Variables nom_tableau : Tableau de type [taille]</span>
+                
+                <span class="function">Variables</span>
+                    notes : <span class="function">Tableau</span> [<span class="number">5</span>] <span class="function">d'Entier</span>
+                    noms : <span class="function">Tableau</span> [<span class="number">10</span>] <span class="function">de Chaîne</span>
+                    prix : <span class="function">Tableau</span> [<span class="number">100</span>] <span class="function">de Réel</span>
+                
+                <span class="comment">// Déclaration avec indices explicites</span>
+                <span class="comment">// Indices de 1 à 5 (convention Baccalauréat Tunisien)</span>
+                notes : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">5</span>] <span class="function">d'Entier</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Visualisation d'un tableau de notes</div>
+                <span class="comment">// Indice :   [1]   [2]   [3]   [4]   [5]</span>
+                <span class="comment">// Valeurs :   12    15     8    17    14</span>
+                
+                notes[<span class="number">1</span>] ← <span class="number">12</span>    <span class="comment">// Première note</span>
+                notes[<span class="number">2</span>] ← <span class="number">15</span>    <span class="comment">// Deuxième note</span>
+                notes[<span class="number">3</span>] ← <span class="number">8</span>     <span class="comment">// Troisième note</span>
+                notes[<span class="number">4</span>] ← <span class="number">17</span>    <span class="comment">// Quatrième note</span>
+                notes[<span class="number">5</span>] ← <span class="number">14</span>    <span class="comment">// Cinquième note</span>
+                
+                <span class="function">Écrire</span>(notes[<span class="number">1</span>])   <span class="comment">// Affiche 12</span>
+                <span class="function">Écrire</span>(notes[<span class="number">3</span>])   <span class="comment">// Affiche 8</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📖 Parcours d'un tableau</h3>
+            <p>Pour traiter tous les éléments d'un tableau, on utilise généralement une boucle <strong>POUR</strong> :</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Remplissage d'un tableau</div>
+                <span class="function">Variables</span> notes : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">5</span>] <span class="function">d'Entier</span>
+                    i : <span class="function">Entier</span>
+                
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">5</span> <span class="keyword">Faire</span>
+                    <span class="function">Écrire</span>(<span class="string">"Entrez la note ", i, " :"</span>)
+                    <span class="function">Lire</span>(notes[i])
+                <span class="keyword">FinPour</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Affichage de tous les éléments</div>
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">5</span> <span class="keyword">Faire</span>
+                    <span class="function">Écrire</span>(<span class="string">"Note ", i, " : ", notes[i]</span>)
+                <span class="keyword">FinPour</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">🧮 Opérations classiques sur les tableaux</h3>
+            
+            <div class="code-box">
+                <div class="code-title">// Opération 1 : Calculer la somme</div>
+                <span class="function">Variables</span> notes : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">5</span>] <span class="function">d'Entier</span>
+                    i, somme : <span class="function">Entier</span>
+                
+                <span class="comment">// Remplissage...</span>
+                somme ← <span class="number">0</span>
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">5</span> <span class="keyword">Faire</span>
+                    somme ← somme + notes[i]
+                <span class="keyword">FinPour</span>
+                <span class="function">Écrire</span>(<span class="string">"Somme : ", somme</span>)
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Opération 2 : Calculer la moyenne</div>
+                <span class="function">Variables</span> notes : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">5</span>] <span class="function">d'Entier</span>
+                    i, somme : <span class="function">Entier</span>
+                    moyenne : <span class="function">Réel</span>
+                
+                <span class="comment">// Remplissage...</span>
+                somme ← <span class="number">0</span>
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">5</span> <span class="keyword">Faire</span>
+                    somme ← somme + notes[i]
+                <span class="keyword">FinPour</span>
+                
+                moyenne ← somme / <span class="number">5</span>
+                <span class="function">Écrire</span>(<span class="string">"Moyenne : ", moyenne</span>)
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Opération 3 : Trouver le maximum</div>
+                <span class="function">Variables</span> notes : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">5</span>] <span class="function">d'Entier</span>
+                    i, maximum : <span class="function">Entier</span>
+                
+                maximum ← notes[<span class="number">1</span>]  <span class="comment">// Initialiser avec le premier élément</span>
+                
+                <span class="keyword">Pour</span> i ← <span class="number">2</span> <span class="keyword">à</span> <span class="number">5</span> <span class="keyword">Faire</span>
+                    <span class="keyword">Si</span> (notes[i] > maximum) <span class="keyword">Alors</span>
+                        maximum ← notes[i]
+                    <span class="keyword">FinSi</span>
+                <span class="keyword">FinPour</span>
+                
+                <span class="function">Écrire</span>(<span class="string">"Maximum : ", maximum</span>)
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Opération 4 : Rechercher un élément</div>
+                <span class="function">Variables</span> notes : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">5</span>] <span class="function">d'Entier</span>
+                    i, recherche : <span class="function">Entier</span>
+                    trouve : <span class="function">Booléen</span>
+                
+                trouve ← <span class="keyword">Faux</span>
+                <span class="function">Écrire</span> <span class="string">"Quelle note recherchez-vous ?"</span>
+                <span class="function">Lire</span>(recherche)
+                
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">5</span> <span class="keyword">Faire</span>
+                    <span class="keyword">Si</span> (notes[i] = recherche) <span class="keyword">Alors</span>
+                        trouve ← <span class="keyword">Vrai</span>
+                        <span class="function">Écrire</span>(<span class="string">"Trouvé à la position ", i</span>)
+                    <span class="keyword">FinSi</span>
+                <span class="keyword">FinPour</span>
+                
+                <span class="keyword">Si</span> (trouve = <span class="keyword">Faux</span>) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"Non trouvé."</span>
+                <span class="keyword">FinSi</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Opération 5 : Trier un tableau (Tri par sélection)</div>
+                <span class="function">Variables</span> notes : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">5</span>] <span class="function">d'Entier</span>
+                    i, j, temp, n : <span class="function">Entier</span>
+                
+                n ← <span class="number">5</span>
+                
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> n - <span class="number">1</span> <span class="keyword">Faire</span>
+                    <span class="keyword">Pour</span> j ← i + <span class="number">1</span> <span class="keyword">à</span> n <span class="keyword">Faire</span>
+                        <span class="keyword">Si</span> (notes[i] > notes[j]) <span class="keyword">Alors</span>
+                            temp ← notes[i]
+                            notes[i] ← notes[j]
+                            notes[j] ← temp
+                        <span class="keyword">FinSi</span>
+                    <span class="keyword">FinPour</span>
+                <span class="keyword">FinPour</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📊 Tableau à deux dimensions (Matrice)</h3>
+            <p>Un tableau 2D est une grille avec des <strong>lignes</strong> et des <strong>colonnes</strong>. Très utile pour représenter des matrices mathématiques ou des grilles de jeu.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Déclaration d'une matrice</div>
+                <span class="comment">// Syntaxe : Tableau [lignes..lignes_fin, colonnes..colonnes_fin] de type</span>
+                
+                <span class="function">Variables</span>
+                    matrice : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">3</span>, <span class="number">1</span>..<span class="number">4</span>] <span class="function">d'Entier</span>
+                    <span class="comment">// 3 lignes, 4 colonnes = 12 cases au total</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Visualisation d'une matrice 3×4</div>
+                <span class="comment">//          Col1  Col2  Col3  Col4</span>
+                <span class="comment">// Ligne1   [ 1]  [ 2]  [ 3]  [ 4]</span>
+                <span class="comment">// Ligne2   [ 5]  [ 6]  [ 7]  [ 8]</span>
+                <span class="comment">// Ligne3   [ 9]  [10]  [11]  [12]</span>
+                
+                matrice[<span class="number">1</span>, <span class="number">1</span>] ← <span class="number">1</span>
+                matrice[<span class="number">2</span>, <span class="number">3</span>] ← <span class="number">7</span>
+                matrice[<span class="number">3</span>, <span class="number">4</span>] ← <span class="number">12</span>
+                
+                <span class="function">Écrire</span>(matrice[<span class="number">2</span>, <span class="number">3</span>])  <span class="comment">// Affiche 7</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Remplissage d'une matrice</div>
+                <span class="function">Variables</span> mat : <span class="function">Tableau</span> [<span class="number">1</span>..<span class="number">3</span>, <span class="number">1</span>..<span class="number">4</span>] <span class="function">d'Entier</span>
+                    i, j : <span class="function">Entier</span>
+                
+                <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">3</span> <span class="keyword">Faire</span>
+                    <span class="keyword">Pour</span> j ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">4</span> <span class="keyword">Faire</span>
+                        <span class="function">Écrire</span>(<span class="string">"Élément [", i, ",", j, "] :"</span>)
+                        <span class="function">Lire</span>(mat[i, j])
+                    <span class="keyword">FinPour</span>
+                <span class="keyword">FinPour</span>
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="info-content" id="partie6">
+            <h3>📓 6. Les fonctions et procédures (Sous-programmes)</h3>
+            
+            <p>Un <strong>sous-programme</strong> est un bloc de code réutilisable qui effectue une tâche spécifique. Il existe deux types : les <strong>fonctions</strong> (qui retournent une valeur) et les <strong>procédures</strong> (qui ne retournent rien).</p>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📦 Procédure (sans retour)</h3>
+            <p>Une <strong>procédure</strong> est un sous-programme qui effectue des actions mais <strong>ne retourne pas de résultat</strong>. Elle est utile pour encapsuler des actions répétitives.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Syntaxe d'une procédure</div>
+                <span class="keyword">Procédure</span> <span class="function">Nom_Procedure</span>(param1 : type1, param2 : type2)
+                <span class="comment">// Déclarations locales (si nécessaire)</span>
+                <span class="keyword">Début</span>
+                    <span class="comment">// Instructions de la procédure</span>
+                <span class="keyword">FinProcédure</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 1 : Procédure de salutation</div>
+                <span class="keyword">Procédure</span> <span class="function">Saluer</span>(nom : <span class="function">Chaîne</span>)
                 <span class="keyword">Début</span>
                     <span class="function">Écrire</span> <span class="string">"Bonjour ", nom, " ! Bienvenue sur notre plateforme."</span>
+                    <span class="function">Écrire</span> <span class="string">"Nous sommes ravis de vous accueillir."</span>
                 <span class="keyword">FinProcédure</span>
-
-                <span class="comment">// Appel :</span>
-                <span class="function">Bienvenue</span>(<span class="string">"Ahmed"</span>)
+                
+                <span class="comment">// Appel de la procédure</span>
+                <span class="function">Saluer</span>(<span class="string">"Ahmed"</span>)
+                <span class="function">Saluer</span>(<span class="string">"Sara"</span>)
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Fonction (avec retour)</h3>
+            
             <div class="code-box">
-                <div class="code-title">// Fonction : calculer le factoriel</div>
+                <div class="code-title">// Exemple 2 : Procédure pour afficher un séparateur</div>
+                <span class="keyword">Procédure</span> <span class="function">Afficher_Separateur</span>()
+                <span class="keyword">Début</span>
+                    <span class="function">Écrire</span>(<span class="string">"================================"</span>)
+                <span class="keyword">FinProcédure</span>
+                
+                <span class="comment">// Appel</span>
+                <span class="function">Afficher_Separateur</span>()
+                <span class="function">Écrire</span> <span class="string">"RÉSULTATS DU BAC"</span>
+                <span class="function">Afficher_Separateur</span>()
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 3 : Procédure pour calculer et afficher la moyenne</div>
+                <span class="keyword">Procédure</span> <span class="function">Calculer_Moyenne</span>(n1, n2 : <span class="function">Réel</span>)
+                <span class="function">Variables</span>
+                    moyenne : <span class="function">Réel</span>
+                <span class="keyword">Début</span>
+                    moyenne ← (n1 + n2) / <span class="number">2</span>
+                    
+                    <span class="function">Écrire</span>(<span class="string">"La moyenne est : ", moyenne</span>)
+                    
+                    <span class="keyword">Si</span> (moyenne >= <span class="number">10</span>) <span class="keyword">Alors</span>
+                        <span class="function">Écrire</span> <span class="string">"Statut : Admis(e)"</span>
+                    <span class="keyword">Sinon</span>
+                        <span class="function">Écrire</span> <span class="string">"Statut : Recalé(e)"</span>
+                    <span class="keyword">FinSi</span>
+                <span class="keyword">FinProcédure</span>
+                
+                <span class="comment">// Appel</span>
+                <span class="function">Calculer_Moyenne</span>(<span class="number">15</span>, <span class="number">12</span>)
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📦 Fonction (avec retour)</h3>
+            <p>Une <strong>fonction</strong> est un sous-programme qui <strong>retourne une valeur</strong>. Elle peut être utilisée dans des expressions, comme une valeur mathématique.</p>
+            
+            <div class="code-box">
+                <div class="code-title">// Syntaxe d'une fonction</div>
+                <span class="keyword">Fonction</span> <span class="function">Nom_Fonction</span>(param1 : type1, param2 : type2) : <span class="function">type_retour</span>
+                <span class="comment">// Déclarations locales</span>
+                <span class="keyword">Début</span>
+                    <span class="comment">// Instructions</span>
+                    <span class="keyword">Retourner</span> resultat  <span class="comment">// Retourne la valeur</span>
+                <span class="keyword">FinFonction</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 1 : Fonction qui calcule le factoriel</div>
                 <span class="keyword">Fonction</span> <span class="function">Factoriel</span>(n : <span class="function">Entier</span>) : <span class="function">Entier</span>
-                <span class="keyword">Variables</span> i, resultat : <span class="function">Entier</span>
+                <span class="function">Variables</span>
+                    i, resultat : <span class="function">Entier</span>
                 <span class="keyword">Début</span>
                     resultat ← <span class="number">1</span>
                     <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> n <span class="keyword">Faire</span>
@@ -314,73 +1222,277 @@
                     <span class="keyword">FinPour</span>
                     <span class="keyword">Retourner</span> resultat
                 <span class="keyword">FinFonction</span>
-
-                <span class="comment">// Appel :</span>
-                resultat ← <span class="function">Factoriel</span>(<span class="number">5</span>)  <span class="comment">// → 120</span>
-                <span class="function">Écrire</span>(resultat)
+                
+                <span class="comment">// Utilisation</span>
+                <span class="function">Écrire</span>(<span class="function">Factoriel</span>(<span class="number">5</span>))   <span class="comment">// Affiche 120</span>
+                <span class="function">Écrire</span>(<span class="function">Factoriel</span>(<span class="number">7</span>))   <span class="comment">// Affiche 5040</span>
             </div>
-            <div class="example-box">
-                <h4>💡 Exemple complet : Maximum de 3 nombres</h4>
-                <div class="code-box">
-                    <div class="code-title">// Fonction qui retourne le maximum de 3 nombres</div>
-                    <span class="keyword">Fonction</span> <span class="function">Maximum</span>(a, b, c : <span class="function">Réel</span>) : <span class="function">Réel</span>
-                    <span class="keyword">Début</span>
-                        <span class="keyword">Si</span> (a >= b <span class="keyword">ET</span> a >= c) <span class="keyword">Alors</span>
-                            <span class="keyword">Retourner</span> a
-                        <span class="keyword">SinonSi</span> (b >= c) <span class="keyword">Alors</span>
-                            <span class="keyword">Retourner</span> b
-                        <span class="keyword">Sinon</span>
-                            <span class="keyword">Retourner</span> c
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 2 : Fonction qui retourne le maximum de deux nombres</div>
+                <span class="keyword">Fonction</span> <span class="function">Maximum</span>(a, b : <span class="function">Réel</span>) : <span class="function">Réel</span>
+                <span class="keyword">Début</span>
+                    <span class="keyword">Si</span> (a > b) <span class="keyword">Alors</span>
+                        <span class="keyword">Retourner</span> a
+                    <span class="keyword">Sinon</span>
+                        <span class="keyword">Retourner</span> b
+                    <span class="keyword">FinSi</span>
+                <span class="keyword">FinFonction</span>
+                
+                <span class="comment">// Utilisation dans une expression</span>
+                x ← <span class="function">Maximum</span>(<span class="number">10</span>, <span class="number">20</span>)  <span class="comment">// x = 20</span>
+                y ← <span class="function">Maximum</span>(<span class="number">5</span>, <span class="number">5</span>)    <span class="comment">// y = 5</span>
+            </div>
+            
+            <div class="code-box">
+                <div class="code-title">// Exemple 3 : Fonction qui vérifie si un nombre est premier</div>
+                <span class="keyword">Fonction</span> <span class="function">Est_Premier</span>(n : <span class="function">Entier</span>) : <span class="function">Booléen</span>
+                <span class="function">Variables</span>
+                    i, diviseur : <span class="function">Entier</span>
+                    premier : <span class="function">Booléen</span>
+                <span class="keyword">Début</span>
+                    <span class="keyword">Si</span> (n <= <span class="number">1</span>) <span class="keyword">Alors</span>
+                        <span class="keyword">Retourner</span> <span class="keyword">Faux</span>
+                    <span class="keyword">FinSi</span>
+                    
+                    diviseur ← <span class="number">2</span>
+                    <span class="keyword">TantQue</span> (diviseur <= <span class="function">Racine_Carrée</span>(n)) <span class="keyword">Faire</span>
+                        <span class="keyword">Si</span> (n % diviseur = <span class="number">0</span>) <span class="keyword">Alors</span>
+                            <span class="keyword">Retourner</span> <span class="keyword">Faux</span>
                         <span class="keyword">FinSi</span>
-                    <span class="keyword">FinFonction</span>
-                </div>
+                        diviseur ← diviseur + <span class="number">1</span>
+                    <span class="keyword">FinTantQue</span>
+                    
+                    <span class="keyword">Retourner</span> <span class="keyword">Vrai</span>
+                <span class="keyword">FinFonction</span>
+                
+                <span class="comment">// Utilisation</span>
+                <span class="keyword">Si</span> (<span class="function">Est_Premier</span>(<span class="number">17</span>)) <span class="keyword">Alors</span>
+                    <span class="function">Écrire</span> <span class="string">"17 est premier"</span>
+                <span class="keyword">FinSi</span>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📊 Exemple complet : Gestion de notes avec sous-programmes</h3>
+            <div class="code-box">
+                <div class="code-title">// Programme complet : Gestion de notes avec fonctions</div>
+                <span class="function">Algorithme</span> Gestion_Notes
+                
+                <span class="comment">// Déclaration des fonctions</span>
+                <span class="keyword">Fonction</span> <span class="function">Somme</span>(t : <span class="function">Tableau</span>[<span class="number">1</span>..<span class="number">20</span>], n : <span class="function">Entier</span>) : <span class="function">Réel</span>
+                <span class="function">Variables</span> i, total : <span class="function">Entier</span>
+                <span class="keyword">Début</span>
+                    total ← <span class="number">0</span>
+                    <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> n <span class="keyword">Faire</span>
+                        total ← total + t[i]
+                    <span class="keyword">FinPour</span>
+                    <span class="keyword">Retourner</span> total
+                <span class="keyword">FinFonction</span>
+                
+                <span class="keyword">Fonction</span> <span class="function">Moyenne</span>(t : <span class="function">Tableau</span>[<span class="number">1</span>..<span class="number">20</span>], n : <span class="function">Entier</span>) : <span class="function">Réel</span>
+                <span class="keyword">Début</span>
+                    <span class="keyword">Retourner</span> <span class="function">Somme</span>(t, n) / n
+                <span class="keyword">FinFonction</span>
+                
+                <span class="keyword">Fonction</span> <span class="function">Maximum</span>(t : <span class="function">Tableau</span>[<span class="number">1</span>..<span class="number">20</span>], n : <span class="function">Entier</span>) : <span class="function">Réel</span>
+                <span class="function">Variables</span> i, max : <span class="function">Réel</span>
+                <span class="keyword">Début</span>
+                    max ← t[<span class="number">1</span>]
+                    <span class="keyword">Pour</span> i ← <span class="number">2</span> <span class="keyword">à</span> n <span class="keyword">Faire</span>
+                        <span class="keyword">Si</span> (t[i] > max) <span class="keyword">Alors</span>
+                            max ← t[i]
+                        <span class="keyword">FinSi</span>
+                    <span class="keyword">FinPour</span>
+                    <span class="keyword">Retourner</span> max
+                <span class="keyword">FinFonction</span>
+                
+                <span class="comment">// Programme principal</span>
+                <span class="function">Variables</span>
+                    notes : <span class="function">Tableau</span>[<span class="number">1</span>..<span class="number">20</span>] <span class="function">d'Entier</span>
+                    nb_notes, i : <span class="function">Entier</span>
+                <span class="keyword">Début</span>
+                    <span class="function">Écrire</span> <span class="string">"Combien de notes ?"</span>
+                    <span class="function">Lire</span>(nb_notes)
+                    
+                    <span class="comment">// Saisie des notes</span>
+                    <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> nb_notes <span class="keyword">Faire</span>
+                        <span class="function">Écrire</span>(<span class="string">"Note ", i, " :"</span>)
+                        <span class="function">Lire</span>(notes[i])
+                    <span class="keyword">FinPour</span>
+                    
+                    <span class="comment">// Affichage des résultats</span>
+                    <span class="function">Écrire</span>(<span class="string">"Moyenne : ", </span><span class="function">Moyenne</span>(notes, nb_notes))
+                    <span class="function">Écrire</span>(<span class="string">"Maximum : ", </span><span class="function">Maximum</span>(notes, nb_notes))
+                <span class="keyword">Fin</span>
             </div>
         </div>
 
-        <!-- PARTIE 6 -->
-        <div class="info-content" id="partie6">
-            <h3>📓 6. Travaux pratiques</h3>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:4px;">Exercice 1 : Somme des N premiers nombres</h3>
+        <!-- PARTIE 7 -->
+        <div class="info-content" id="partie7">
+            <h3>📓 7. Travaux pratiques et exercices</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:10px;">📝 Exercice 1 : Somme des N premiers nombres</h3>
             <div class="example-box">
                 <h4>Énoncé</h4>
                 <p>Écrire un algorithme qui calcule la somme des N premiers nombres entiers positifs (1 + 2 + 3 + ... + N).</p>
-                <h4 style="margin-top:10px;">Solution</h4>
+                
+                <h4 style="margin-top:12px;">Analyse</h4>
+                <p>• Entrée : N (un entier positif)</p>
+                <p>• Traitement : Additionner tous les nombres de 1 à N</p>
+                <p>• Sortie : La somme totale</p>
+                
+                <div class="formula-box">
+                    <span>Formule : Somme = N × (N + 1) / 2</span>
+                </div>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
                 <div class="code-box">
+                    <span class="function">Algorithme</span> Somme_N_Premiers
                     <span class="function">Variables</span> N, i, somme : <span class="function">Entier</span>
-
-                    <span class="function">Écrire</span> <span class="string">"Entrez N :"</span>
-                    <span class="function">Lire</span>(N)
-
-                    somme ← <span class="number">0</span>
-                    <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> N <span class="keyword">Faire</span>
-                        somme ← somme + i
-                    <span class="keyword">FinPour</span>
-
-                    <span class="function">Écrire</span> <span class="string">"La somme est :", somme</span>
-                    <span class="comment">// Formule directe : somme = N × (N+1) / 2</span>
+                    <span class="keyword">Début</span>
+                        <span class="function">Écrire</span> <span class="string">"Entrez N :"</span>
+                        <span class="function">Lire</span>(N)
+                        
+                        <span class="comment">// Méthode 1 : Avec une boucle</span>
+                        somme ← <span class="number">0</span>
+                        <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> N <span class="keyword">Faire</span>
+                            somme ← somme + i
+                        <span class="keyword">FinPour</span>
+                        
+                        <span class="comment">// Méthode 2 : Formule directe (plus efficace)</span>
+                        <span class="comment">// somme ← N * (N + 1) div 2</span>
+                        
+                        <span class="function">Écrire</span> <span class="string">"La somme est :", somme</span>
+                    <span class="keyword">Fin</span>
                 </div>
             </div>
-            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">Exercice 2 : Table de multiplication</h3>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Exercice 2 : Recherche dichotomique</h3>
             <div class="example-box">
                 <h4>Énoncé</h4>
-                <p>Écrire un algorithme qui affiche la table de multiplication d'un nombre donné (de 1 à 10).</p>
-                <h4 style="margin-top:10px;">Solution</h4>
+                <p>Écrire un algorithme qui recherche un élément dans un tableau trié par ordre croissant, en utilisant la méthode de recherche dichotomique (plus efficace que la recherche linéaire).</p>
+                
+                <h4 style="margin-top:12px;">Principe</h4>
+                <p>1. Diviser le tableau en deux parties</p>
+                <p>2. Comparer l'élément cherché avec l'élément du milieu</p>
+                <p>3. Éliminer la moitié où l'élément ne peut pas se trouver</p>
+                <p>4. Répéter jusqu'à trouver ou épuiser le tableau</p>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
                 <div class="code-box">
-                    <span class="function">Variables</span> n, i : <span class="function">Entier</span>
-
-                    <span class="function">Écrire</span> <span class="string">"Entrez un nombre :"</span>
-                    <span class="function">Lire</span>(n)
-
-                    <span class="keyword">Pour</span> i ← <span class="number">1</span> <span class="keyword">à</span> <span class="number">10</span> <span class="keyword">Faire</span>
-                        <span class="function">Écrire</span>(n, <span class="string">" × ",</span> i, <span class="string">" = ",</span> n * i)
-                    <span class="keyword">FinPour</span>
+                    <span class="keyword">Fonction</span> <span class="function">Recherche_Dicho</span>(t : <span class="function">Tableau</span>[<span class="number">1</span>..<span class="number">100</span>], n, x : <span class="function">Entier</span>) : <span class="function">Entier</span>
+                    <span class="function">Variables</span>
+                        debut, fin, milieu, pos : <span class="function">Entier</span>
+                        trouve : <span class="function">Booléen</span>
+                    <span class="keyword">Début</span>
+                        debut ← <span class="number">1</span>
+                        fin ← n
+                        trouve ← <span class="keyword">Faux</span>
+                        pos ← -<span class="number">1</span>
+                        
+                        <span class="keyword">TantQue</span> (debut <= fin) <span class="keyword">ET</span> (trouve = <span class="keyword">Faux</span>) <span class="keyword">Faire</span>
+                            milieu ← (debut + fin) // <span class="number">2</span>
+                            
+                            <span class="keyword">Si</span> (t[milieu] = x) <span class="keyword">Alors</span>
+                                trouve ← <span class="keyword">Vrai</span>
+                                pos ← milieu
+                            <span class="keyword">SinonSi</span> (t[milieu] > x) <span class="keyword">Alors</span>
+                                fin ← milieu - <span class="number">1</span>
+                            <span class="keyword">Sinon</span>
+                                debut ← milieu + <span class="number">1</span>
+                            <span class="keyword">FinSi</span>
+                        <span class="keyword">FinTantQue</span>
+                        
+                        <span class="keyword">Retourner</span> pos
+                    <span class="keyword">FinFonction</span>
                 </div>
             </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Exercice 3 : Conversion décimal vers binaire</h3>
+            <div class="example-box">
+                <h4>Énoncé</h4>
+                <p>Écrire un algorithme qui convertit un nombre décimal en son équivalent binaire.</p>
+                
+                <h4 style="margin-top:12px;">Principe</h4>
+                <p>On divise le nombre par 2successivement et on garde les restes. Lecture de bas en haut.</p>
+                
+                <h4 style="margin-top:12px;">Exemple</h4>
+                <p>13 en décimal = 1101 en binaire</p>
+                <p>13 ÷ 2 = 6 reste 1</p>
+                <p>6 ÷ 2 = 3 reste 0</p>
+                <p>3 ÷ 2 = 1 reste 1</p>
+                <p>1 ÷ 2 = 0 reste 1</p>
+                <p>→ Lecture inversée : 1101</p>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
+                <div class="code-box">
+                    <span class="keyword">Fonction</span> <span class="function">Dec_Vers_Binaire</span>(n : <span class="function">Entier</span>) : <span class="function">Chaîne</span>
+                    <span class="function">Variables</span>
+                        reste : <span class="function">Entier</span>
+                        binaire : <span class="function">Chaîne</span>
+                    <span class="keyword">Début</span>
+                        binaire ← <span class="string">""</span>
+                        
+                        <span class="keyword">Si</span> (n = <span class="number">0</span>) <span class="keyword">Alors</span>
+                            <span class="keyword">Retourner</span> <span class="string">"0"</span>
+                        <span class="keyword">FinSi</span>
+                        
+                        <span class="keyword">TantQue</span> (n > <span class="number">0</span>) <span class="keyword">Faire</span>
+                            reste ← n % <span class="number">2</span>
+                            binaire ← <span class="function">Convch</span>(reste) + binaire
+                            n ← n // <span class="number">2</span>
+                        <span class="keyword">FinTantQue</span>
+                        
+                        <span class="keyword">Retourner</span> binaire
+                    <span class="keyword">FinFonction</span>
+                </div>
+            </div>
+            
+            <h3 style="color:var(--accent); font-size:1rem; margin-top:20px;">📝 Exercice 4 :PGCD de deux nombres (Algorithme d'Euclide)</h3>
+            <div class="example-box">
+                <h4>Énoncé</h4>
+                <p>Écrire une fonction qui calcule le PGCD (Plus Grand Commun Diviseur) de deux nombres entiers positifs.</p>
+                
+                <h4 style="margin-top:12px;">Principe (Algorithme d'Euclide)</h4>
+                <p>• On divise a par b</p>
+                <p>• On remplace a par b, et b par le reste</p>
+                <p>• On répète jusqu'à ce que b = 0</p>
+                <p>• Le PGCD est a</p>
+                
+                <h4 style="margin-top:12px;">Solution</h4>
+                <div class="code-box">
+                    <span class="keyword">Fonction</span> <span class="function">PGCD</span>(a, b : <span class="function">Entier</span>) : <span class="function">Entier</span>
+                    <span class="function">Variables</span> r : <span class="function">Entier</span>
+                    <span class="keyword">Début</span>
+                        <span class="keyword">TantQue</span> (b <> <span class="number">0</span>) <span class="keyword">Faire</span>
+                            r ← a % b
+                            a ← b
+                            b ← r
+                        <span class="keyword">FinTantQue</span>
+                        
+                        <span class="keyword">Retourner</span> a
+                    <span class="keyword">FinFonction</span>
+                </div>
+            </div>
+            
             <div class="warning-box">
-                <h4>⚠️ Conseils pour réussir</h4>
-                <p>1. Lisez attentivement l'énoncé et identifiez les données d'entrée et de sortie.</p>
-                <p>2. Décomposez le problème en étapes simples avant d'écrire le code.</p>
-                <p>3. Testez votre algorithme avec des cas normaux, limites et particuliers.</p>
+                <h4>⚠️ Conseils pour réussir vos algorithmes</h4>
+                <p><strong>1. Analysez avant de coder :</strong></p>
+                <p>• Identifiez clairement les entrées (données nécessaires)</p>
+                <p>• Définissez les sorties (résultats attendus)</p>
+                <p>• Décomposez le problème en étapes simples</p>
+                
+                <p><strong>2. Utilisez des noms de variables explicites :</strong></p>
+                <p>• <code>age_etudiant</code> au lieu de <code>x</code></p>
+                <p>• <code>somme_notes</code> au lieu de <code>s</code></p>
+                
+                <p><strong>3. Testez avec plusieurs cas :</strong></p>
+                <p>• Cas normal (ex: note = 15)</p>
+                <p>• Cas limites (ex: note = 0, note = 20)</p>
+                <p>• Cas particuliers (ex: note négative)</p>
+                
+                <p><strong>4. Vérifiez la terminaison :</strong></p>
+                <p>• Assurez-vous que vos boucles se terminent</p>
+                <p>• Vérifiez les conditions d'arrêt</p>
             </div>
         </div>
 
@@ -388,13 +1500,9 @@
         <section class="section-resume">
             <h2><span class="icon">🖼️</span> Résumé visuel</h2>
             <div class="resume-image-container">
-                <img src="https://via.placeholder.com/1200x700/1565C0/FFFFFF?text=Algorithmique+-+Resume+Complet" alt="Résumé de l'algorithmique">
-                <div class="resume-overlay">
-                    <h3>Les bases de l'algorithmique</h3>
-                    <p>Variables, conditions, boucles, fonctions — tout ce qu'il faut savoir</p>
-                </div>
+              
                             <br><br>
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1ByVcN3L7PPAbmwlulhb1xPoaGfGtuYCi/view?usp=drive_link" download>
                     <button>📥 Télécharger la photo</button>
                 </a></div>
         </section>
@@ -403,9 +1511,10 @@
         <section class="section-video">
             <h2><span class="icon">🎬</span> Vidéo explicative</h2>
             <div class="video-container">
-                <iframe src=""
-                        width="640" height="360" frameborder="0" allow="autoplay">
-                </iframe>
+               <button onclick="window.open('https://youtube.com/playlist?list=PLImOoniL6hkfcs74oOM4fGnd8pnYV2sKW&si=mXeELd_df0K4DFjS', '_blank')">
+                📺 Ouvrir la playlist
+                </button>
+
             </div>
         </section>
 
