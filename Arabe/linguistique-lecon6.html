@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درس 6 : منهجية تحليل النص — Méthodologie Bac</title>
+    <link rel="stylesheet" href="../../Shared/style.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        .ar-content { background: var(--bg-white); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 28px; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); text-align: right; }
+        .ar-content h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .ar-content p { margin-bottom: 12px; line-height: 2; color: var(--text-dark); }
+        .example-box { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border-right: 4px solid var(--success); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .example-box h4 { color: #166534; font-size: 0.95rem; margin-bottom: 8px; }
+        .example-box p { margin-bottom: 6px; color: #14532d; }
+        .warning-box { background: linear-gradient(135deg, #FEF9C3, #FEF08A); border-right: 4px solid var(--warning); padding: 18px 22px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 16px 0; }
+        .warning-box h4 { color: #B45309; font-size: 0.95rem; margin-bottom: 8px; }
+        .key-points { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin: 16px 0; }
+        .key-point { background: var(--bg-gray-50); padding: 14px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+        .key-point .icon { font-size: 1.3rem; flex-shrink: 0; }
+        .key-point p { font-size: 0.88rem; margin: 0; line-height: 1.6; }
+        .toc { background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #FCD34D; text-align: right; }
+        .toc h3 { color: #92400E; margin-bottom: 14px; font-size: 1.05rem; }
+        .toc ol { padding-right: 22px; }
+        .toc li { margin-bottom: 8px; color: var(--text-dark); font-size: 0.92rem; }
+        .toc li a { color: var(--primary); font-weight: 500; }
+        .plan-box { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 28px; border: 1px solid #93C5FD; text-align: right; }
+        .plan-box h3 { color: #1E40AF; margin-bottom: 14px; font-size: 1.05rem; }
+        .plan-box p { color: var(--text-dark); line-height: 1.7; }
+        .quote-box { background: linear-gradient(135deg, #ECFDF5, #D1FAE5); border-right: 4px solid #10B981; padding: 16px 20px; border-radius: var(--radius-lg) 0 0 var(--radius-lg); margin: 14px 0; font-style: italic; color: #065F46; }
+        .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .vocab-table th { background: #0891B2; color: white; padding: 12px; text-align: right; border-radius: 8px 8px 0 0; }
+        .vocab-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); }
+        .vocab-table tr:nth-child(even) { background: var(--bg-gray-50); }
+        .vocab-table .ar-word { color: #0891B2; font-weight: 600; }
+        .method-box { background: linear-gradient(135deg, #F5F3FF, #EDE9FE); border-radius: 16px; padding: 20px; margin: 16px 0; border-right: 5px solid #7C3AED; }
+        .method-box h4 { color: #5B21B6; margin: 0 0 12px 0; font-size: 1rem; }
+        .method-box ol { margin: 0; padding-right: 20px; }
+        .method-box li { margin-bottom: 10px; color: #4C1D95; font-size: 0.9rem; line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../imgs/badri.png" alt="Logo" class="logo-image">
+                <span class="logo-text">From Bac-2-Fac</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../../index.html">الرئيسية</a>
+                <a href="../../Mathematiques/math.html">الرياضيات</a>
+                <a href="../../Physique/physique.html">الفيزياء</a>
+                <a href="../../Informatique/informatique.html">الإعلامية</a>
+                <a href="../arabe.html">العربية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="linguistique.html" class="back-btn" style="direction: ltr;">
+            → العودة إلى دروس اللغوية
+        </a>
+
+        <div class="lesson-header">
+            <h1>درس 6 : منهجية تحليل النص — Bac Tunisie</h1>
+            <p class="breadcrumb">اللغوية > الدرس 6</p>
+        </div>
+
+        <div class="plan-box">
+            <h3>📝 ملخص الدرس</h3>
+            <p>هذا الدرس يُقدّم <strong>المنهجية الشاملة</strong> لتحليل النص اللغوي في امتحان البكالوريا التونسية. يتناول قراءة النص، تحليله صرفياً ونحوياً وبلاغياً، ثم الإجابة على الأسئلة بأسلوب علمي منظم. المفتاح: كل إجابة تتضمن <em>تحديداً + تعليلاً + أثراً</em>.</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 خطة الدرس</h3>
+            <ol>
+                <li><a href="#partie1">مراحل قراءة النص وتحليله</a></li>
+                <li><a href="#partie2">التحليل الصرفي</a></li>
+                <li><a href="#partie3">التحليل النحوي والإعرابي</a></li>
+                <li><a href="#partie4">التحليل البلاغي</a></li>
+                <li><a href="#partie5">منهجية الإجابة على أسئلة البكالوريا</a></li>
+                <li><a href="#partie6">تمارين تطبيقية</a></li>
+            </ol>
+        </div>
+
+        <section class="section-podcast">
+            <h2><span class="icon">🎧</span> بودكاست — استمع للدرس</h2>
+            <div class="audio-player">
+                <iframe src=""
+                        width="600" height="120" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- PARTIE 1 -->
+        <div class="ar-content" id="partie1">
+            <h3>📘 1. مراحل قراءة النص وتحليله</h3>
+            <p>قبل الإجابة على أي سؤال، يجب قراءة النص قراءة دقيقة. اتبع هذه المراحل:</p>
+            <div class="method-box">
+                <h4>📖 خطوات قراءة النص</h4>
+                <ol>
+                    <li><strong>القراءة الأولى (سريعة):</strong> خذ فكرة عامة — ما موضوع النص؟ من كاتبه؟ في أي سياق؟</li>
+                    <li><strong>القراءة الثانية (معمّقة):</strong> اقرأ السؤال أولاً ثم عُد للنص تبحث عن الإجابة</li>
+                    <li><strong>القراءة الثالثة (دقيقة):</strong> ابحث عن الأدوات البلاغية والنحوية والصرفية</li>
+                    <li><strong>التحديد:</strong> اكتب إجابتك مع أمثلة نصية مباشرة</li>
+                </ol>
+            </div>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">👁️</span>
+                    <p><strong>لا تقرأ بلا هدف:</strong> اقرأ السؤال قبل النص — هذا يُوجّه انتباهك</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">✏️</span>
+                    <p><strong>حدد:</strong> ما نوع النص؟ أدبي؟ علمي؟ فقهي؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📅</span>
+                    <p><strong>السياق:</strong> من هو المؤلف؟ في أي عصر؟ ما الغرض؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🎯</span>
+                    <p><strong>الربط:</strong> كيف يرتبط النص بالدرس المطلوب؟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="ar-content" id="partie2">
+            <h3>📗 2. التحليل الصرفي</h3>
+            <p>في التحليل الصرفي، ركّز على بنية الكلمات:</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔤</span>
+                    <p><strong>استخرج الجذر:</strong> الحروف الأصلية التي تحمل المعنى</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📐</span>
+                    <p><strong>حدّد الوزن:</strong> الصورة التي رُتّبت فيها الحروف</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔗</span>
+                    <p><strong>حدّد الصيغة:</strong> اسم فاعل؟ اسم مفعول؟ مصدر؟ صفة مشبهة؟</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">🔢</span>
+                    <p><strong>التصريف:</strong> ما الزمن؟ ما الشخص؟ ما العدد؟</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 مثال تطبيقي</h4>
+                <p>الكلمة: <strong>\"مُسْتَخْرِجٌ\"</strong></p>
+                <p>• الجذر: <strong>خ ر ج</strong></p>
+                <p>• الوزن: <strong>مُسْتَفْعِل</strong> (باب استفعل)</p>
+                <p>• الصيغة: <strong>اسم فاعل</strong> من استخرج</p>
+                <p>• المعنى: الذي يخرج شيئاً بطريقة علمية</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="ar-content" id="partie3">
+            <h3>📙 3. التحليل النحوي والإعرابي</h3>
+            <p>في التحليل النحوي، حدّد دور كل كلمة في الجملة:</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>نوع السؤال</th>
+                    <th>ما تبحث عنه</th>
+                    <th>كيف تُجيب</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">إعراب</td>
+                    <td>الحالة الإعرابية + العلامة</td>
+                    <td>حدد الإعراب + العلامة + السبب</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">تحليل جملة</td>
+                    <td>الأركان + التوابع + المفعولات</td>
+                    <td>حدّد ركني الجملة + ما بعدهما</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">نوع الكلمة</td>
+                    <td>اسم / فعل / حرف</td>
+                    <td>استخرج الدليل من النص</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">علاقة نحوية</td>
+                    <td>مضاف ومضاف إليه،etc.</td>
+                    <td>حدّد العلاقة + علّل</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ عند الإجابة على سؤال الإعراب</h4>
+                <p>• اذكر الكلمة + إعرابها + علامتها</p>
+                <p>• ثم اذكر نوع الكلمة (مبتدأ/فاعل/خبر/etc.)</p>
+                <p>• ثم اذكر الدليل (ما الذي يُثبت إعرابها)</p>
+                <p>مثال: الطالبُ — مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة على آخره</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 4 -->
+        <div class="ar-content" id="partie4">
+            <h3>📕 4. التحليل البلاغي</h3>
+            <p>في التحليل البلاغي، حدّد الأسلوب وادعم تحليلك بنص:</p>
+            <div class="method-box">
+                <h4>📝 قاعدة ذهبية: 3 عناصر في كل إجابة بلاغية</h4>
+                <ol>
+                    <li><strong>التحديد:</strong> ما الأسلوب؟ (تشبيه / استعارة / كناية / جناس / طباق)</li>
+                    <li><strong>التعليل:</strong> لماذا؟ (ما وجه الشبه؟ ما الذي حُذف؟)</li>
+                    <li><strong>الأثر:</strong> ما أثره على المتلقي؟ (إقناع / تأثير عاطفي / جمال)</li>
+                </ol>
+            </div>
+            <div class="key-points">
+                <div class="key-point">
+                    <span class="icon">🔍</span>
+                    <p><strong>لاحظ:</strong> نفس الكلمة قد تكون تشبيهاً في سياق واستعارة في سياق آخر</p>
+                </div>
+                <div class="key-point">
+                    <span class="icon">📖</span>
+                    <p><strong>ادعم:</strong> كل إجابة بلاغية يجب أن تتضمن نصاً من النص المُعطى</p>
+                </div>
+            </div>
+            <div class="example-box">
+                <h4>💡 مثال: \"العلمُ نورٌ\"</h4>
+                <p>• <strong>التحديد:</strong> استعارة تصريحية (حُذف المشبّه \"العلم\" وبقي المشبّه به \"نور\")</p>
+                <p>• <strong>التعليل:</strong> لأنّ الكاتب شبّه العلم بالشمس في إضاءة العقل</p>
+                <p>• <strong>الأثر:</strong> يُعمّق فكرة أهمية العلم ويُحرك الوجدان</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 5 -->
+        <div class="ar-content" id="partie5">
+            <h3>📒 5. منهجية الإجابة على أسئلة البكالوريا</h3>
+            <p>كل سؤال في البكالوريا يحتاج منهجية خاصة:</p>
+            <table class="vocab-table">
+                <tr>
+                    <th>نوع السؤال</th>
+                    <th>المنهجية</th>
+                </tr>
+                <tr>
+                    <td class="ar-word">عرّف</td>
+                    <td>أَدّية + خصائص + مثال من النص</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">حدّد</td>
+                    <td>اذكر العنصر + وضّح موقفه في النص</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">علّل</td>
+                    <td>قدّم السبب + اربطه بالنص + اذكر الأثر</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">قارن</td>
+                    <td>اذكر وجه التشابه + وجه الاختلاف + مثال</td>
+                </tr>
+                <tr>
+                    <td class="ar-word">صحّح</td>
+                    <td>اذكر الخطأ + السبب + الصواب</td>
+                </tr>
+            </table>
+            <div class="warning-box">
+                <h4>⚠️ أخطاء شائعة يجب تجنبها</h4>
+                <p>❌ <strong>الحشو:</strong> لا تكتب كل ما تعرفه — أجب عن السؤال فقط</p>
+                <p>❌ <strong>الخروج عن الموضوع:</strong> رجع للسؤال دائماً</p>
+                <p>❌ <strong>نسيان الأمثلة:</strong> كل تحليل يحتاج نصاً داعماً</p>
+                <p>❌ <strong>الإجابة الجزئية:</strong> تأكد أنك أجبت على كل جزء من السؤال</p>
+            </div>
+            <div class="quote-box">
+                « في البكالوريا، الإجابة القصيرة الدقيقة أفضل من الإجابة الطويلة المُبهمة. »
+            </div>
+        </div>
+
+        <!-- PARTIE 6 -->
+        <div class="ar-content" id="partie6">
+            <h3>📓 6. تمارين تطبيقية</h3>
+            <div class="example-box">
+                <h4>💡 نصّ للتطبيق</h4>
+                <p style="font-size:1.05rem; font-weight:600; text-align:center; padding:12px; background:#EFF6FF; border-radius:12px; margin-bottom:12px;">\"العلمُ نورٌ يُضيءُ دروبَ المستقبلِ، والطالبُ المجتهدُ يسعى لاستخراجِ كنوزِهِ.\"</p>
+                <p>1. <strong>استخرج:</strong> الجذر والوزن — \"استخراجِ\"</p>
+                <p>   → الجذر: خ ر ج / الوزن: اِسْتِفْعَال</p>
+                <p>2. <strong>أعرب:</strong> \"العلمُ\"</p>
+                <p>   → مبتدأ مرفوع وعلامة رفعه الضمة</p>
+                <p>3. <strong>حدّد:</strong> الأسلوب البلاغي في \"يُضيءُ دروبَ المستقبلِ\"</p>
+                <p>   → استعارة مكنية (نسب الإضاءة للعلم = شبهه بالشمس)</p>
+                <p>4. <strong>حدّد:</strong> نوع الأسلوب في الجملة الأولى</p>
+                <p>   → أسلوب خبري (جملة اسمية)</p>
+            </div>
+            <div class="warning-box">
+                <h4>⚠️ نصائح للنجاح</h4>
+                <p>✅ ابدأ بالأسئلة السهلة لتكسب الوقت والثقة</p>
+                <p>✅ اكتب بإجابة واضحة ومرتبة — الخط الجيد مهم!</p>
+                <p>✅ لا تترك سؤالاً دون إجابة — حاول حتى لو لم تكن متأكداً</p>
+                <p>✅ خذ وقتك في السؤال الأول — هو الذي يُحدّد الدرجة</p>
+            </div>
+        </div>
+
+        <section class="section-resume">
+            <h2><span class="icon">🖼️</span> ملخص مرئي</h2>
+            <div class="resume-image-container">
+                <img src="https://via.placeholder.com/1200x700/0891B2/FFFFFF?text=%D8%AF%D8%B1%D8%B3+%D9%85%D9%86%D9%87%D8%AC%D9%8A%D8%A9+%D8%A7%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84" alt="ملخص المنهجية">
+                <div class="resume-overlay">
+                    <h3>منهجية تحليل النص</h3>
+                    <p>القراءة، التحليل، الإجابة، المراجعة</p>
+                </div>
+                            <br><br>
+                <a href="" download>
+                    <button>📥 Télécharger la photo</button>
+                </a></div>
+        </section>
+
+        <section class="section-video">
+            <h2><span class="icon">🎬</span> فيديو توضيحي</h2>
+            <div class="video-container">
+                <iframe src=""
+                        width="640" height="360" frameborder="0" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Retour vers le sommaire -->
+        <a href="linguistique.html" class="next-lesson" style="background: linear-gradient(135deg, #0891B2, #06B6D4);">
+            <div>
+                <p class="next-lesson-text">العودة إلى الفهرس</p>
+                <p class="next-lesson-title">دروس اللغوية ←</p>
+            </div>
+            <span class="next-lesson-arrow">←</span>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2027 From Bac-2-Fac - جميع الحقوق محفوظة<br>📧 ahmedaminebadrii@gmail.com | 📞 25080244</p>
+    </footer>
+
+    <script src="../../Shared/script.js"></script>
+</body>
+</html>
